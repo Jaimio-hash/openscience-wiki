@@ -1,0 +1,13 @@
+.translationNote {
+  margin-bottom: 1.25rem;
+  padding: .6rem .9rem;
+  border-inline-start: 2px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-700);
+  font-size: .85rem;
+  line-height: 1.6;
+}
+.translationNote a {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}

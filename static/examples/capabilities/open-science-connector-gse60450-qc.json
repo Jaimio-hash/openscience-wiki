@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "kind": "open-science.connector",
+  "name": "gse60450-qc",
+  "display_name": "GSE60450 QC",
+  "transport": "stdio",
+  "description": "Read-only access to the saved public GSE60450 sample QC table.",
+  "command": "python3",
+  "args": [
+    "/Users/aipoch/Documents/ChatGPT/openscience-wiki/static/examples/capabilities/qc-mcp-server.py",
+    "/Users/aipoch/Documents/ChatGPT/openscience-wiki/static/examples/gse60450/rnaseq-sample-qc.csv"
+  ]
+}

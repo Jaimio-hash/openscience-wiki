@@ -1,0 +1,1593 @@
+{
+  "homepage.steps.install.title": {
+    "message": "Open-Scienceのインストール"
+  },
+  "homepage.steps.install.description": {
+    "message": "お使いのオペレーティングシステムを選択します。"
+  },
+  "homepage.steps.setup.title": {
+    "message": "ワークスペースの設定"
+  },
+  "homepage.steps.setup.description": {
+    "message": "モデルを接続し、ランタイムを準備します。"
+  },
+  "homepage.steps.firstResult.title": {
+    "message": "最初の結果を作成する"
+  },
+  "homepage.steps.firstResult.description": {
+    "message": "入力から保存された出力までのプロジェクトに従ってください。"
+  },
+  "homepage.sections.guides.title": {
+    "message": "ガイド"
+  },
+  "homepage.sections.guides.description": {
+    "message": "プロジェクト、会話、ファイル、ワークスペースの設定。"
+  },
+  "homepage.sections.workflows.title": {
+    "message": "研究ワークフロー"
+  },
+  "homepage.sections.workflows.description": {
+    "message": "実際の研究データで作業した例をフォローしてください。"
+  },
+  "homepage.sections.tools.title": {
+    "message": "ツールを探す"
+  },
+  "homepage.sections.tools.description": {
+    "message": "データベースを見つけ、ファイルを調べ、計算を実行します。"
+  },
+  "homepage.sections.skills.title": {
+    "message": "Skills"
+  },
+  "homepage.sections.skills.description": {
+    "message": "再利用可能な研究方法を見つけ、使用し、作成します。"
+  },
+  "homepage.sections.specialists.title": {
+    "message": "スペシャリスト"
+  },
+  "homepage.sections.specialists.description": {
+    "message": "集中したタスクを委任し、結果を見直します。"
+  },
+  "homepage.sections.reference.title": {
+    "message": "リファレンス"
+  },
+  "homepage.sections.reference.description": {
+    "message": "制御、ファイル形式、CLIとAPIを調べます。"
+  },
+  "homepage.topics.reproducibility": {
+    "message": "再現性"
+  },
+  "homepage.topics.packages": {
+    "message": ".science 研究パッケージ"
+  },
+  "homepage.topics.marketplace": {
+    "message": "Skill マーケットプレイス"
+  },
+  "homepage.meta.title": {
+    "message": "Open-Science ドキュメント"
+  },
+  "homepage.meta.description": {
+    "message": "AIPOCH Open-Scienceの操作、構成および研究の再現性ガイド"
+  },
+  "homepage.eyebrow": {
+    "message": "ドキュメント"
+  },
+  "homepage.introduction": {
+    "message": "ワークスペースを設定し、研究データと連携し、結果を確認・共有します。"
+  },
+  "homepage.readDocs": {
+    "message": "ドキュメントを読む"
+  },
+  "homepage.troubleshooting": {
+    "message": "トラブルシューティング"
+  },
+  "homepage.startHeading": {
+    "message": "はじめに"
+  },
+  "homepage.browseHeading": {
+    "message": "ドキュメントを調べる"
+  },
+  "homepage.topicsHeading": {
+    "message": "さらに詳しく"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "検索結果：{count} 件"
+  },
+  "docs.platform.label": {
+    "message": "プラットフォーム"
+  },
+  "docs.platform.hint": {
+    "message": "チャプターを通してあなたの選択は保たれています。"
+  },
+  "docs.guides.outline.reproducibility.title": {
+    "message": "再現性"
+  },
+  "docs.guides.outline.reproducibility.scope": {
+    "message": "キャプチャした研究ステップを回復し、結果バージョンを比較し、検証レコードを保持します。"
+  },
+  "docs.guides.outline.research-packages.title": {
+    "message": ".science 研究パッケージ"
+  },
+  "docs.guides.outline.research-packages.scope": {
+    "message": "ポータブルな会話ブランチ、ファイル、エビデンスをエクスポート、インポート、検査します。"
+  },
+  "docs.outline.skills.marketplace.title": {
+    "message": "Skill マーケットプレイス"
+  },
+  "docs.outline.skills.marketplace.scope": {
+    "message": "市場からの研究方法を見つけてインストールし、更新し、管理します。"
+  },
+  "docs.guides.outline.bookmarks.title": {
+    "message": "個人用の読書ブックマーク"
+  },
+  "docs.guides.outline.bookmarks.scope": {
+    "message": "個人的な読書通路とPDF地域を保存し、メモを管理し、ソースに戻る。"
+  },
+  "docs.outline.reference.v0300.title": {
+    "message": "v0.30.0"
+  },
+  "docs.outline.reference.v0300.scope": {
+    "message": "プライベートブックマーク、独立したSide Chatタブ、設定検索と抽出されたPDF証拠。"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "パンくずリストのナビゲーション"
+  },
+  "docs.sections.label": {
+    "message": "ドキュメントセクション"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "検索：{query}"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "検索したい語句を入力してください。"
+  },
+  "docs.ui.searchIndex": {
+    "message": "Open-Science / ドキュメントインデックス"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "すべての場所"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "結果が見つかりません。"
+  },
+  "docs.ui.moreResults": {
+    "message": "より多くの結果を表示"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "エラーが発生しました"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "先頭へ戻る"
+  },
+  "theme.blog.archive.title": {
+    "message": "アーカイブ"
+  },
+  "theme.blog.archive.description": {
+    "message": "アーカイブ"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "ブログ記事一覧のナビゲーション"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "新しい記事"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "過去の記事"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "全てのタグを見る"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "ブログ記事のナビゲーション"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "新しい記事"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "過去の記事"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "システムモード"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "ライトモード"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "ダークモード"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "ダークモードを切り替える(現在は{mode})"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "ドキュメントページ"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "前へ"
+  },
+  "theme.docs.paginator.next": {
+    "message": "次へ"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "{count}記事"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "「{tagName}」タグのついた{nDocsTagged}"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "バージョン: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "これはリリース前のバージョン{versionLabel}の{siteTitle}のドキュメントです。"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "これはバージョン{versionLabel}の{siteTitle}のドキュメントで現在はメンテナンスされていません"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "最新のドキュメントは{latestVersionLink} ({versionLabel}) を見てください"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "最新バージョン"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "{heading} への直接リンク"
+  },
+  "theme.common.editThisPage": {
+    "message": "このページを編集"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": "{date}に"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": "{user}が"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "{atDate}{byUser}最終更新"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "他のバージョン"
+  },
+  "theme.NotFound.title": {
+    "message": "ページが見つかりません"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "タグ:"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "閉じる"
+  },
+  "theme.admonition.caution": {
+    "message": "注意"
+  },
+  "theme.admonition.danger": {
+    "message": "危険"
+  },
+  "theme.admonition.info": {
+    "message": "備考"
+  },
+  "theme.admonition.note": {
+    "message": "注記"
+  },
+  "theme.admonition.tip": {
+    "message": "ヒント"
+  },
+  "theme.admonition.warning": {
+    "message": "警告"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "最近のブログ記事のナビゲーション"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "'{label}'の目次を開く"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "'{label}'の目次を隠す"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(新しいタブで開きます)",
+    "description": "The ARIA label for the external link icon"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "メインナビゲーション"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "他の言語"
+  },
+  "theme.NotFound.p1": {
+    "message": "お探しのページが見つかりませんでした"
+  },
+  "theme.NotFound.p2": {
+    "message": "このページにリンクしているサイトの所有者にリンクが壊れていることを伝えてください"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "このページの見出し"
+  },
+  "theme.blog.post.readMore": {
+    "message": "もっと見る"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "{title}についてもっと見る"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "約{readingTime}分"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "コピー"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "コピーしました"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "クリップボードにコードをコピー"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "折り返し"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "ホームページ"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "サイドバーを隠す"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "サイドバーを隠す"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "ドキュメントのサイドバー"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "ドロップダウンを拡大する",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "ドロップダウンを崩壊させる",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "ナビゲーションバーを閉じる"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← メインメニューに戻る"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "ナビゲーションバーを開く"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "サイドバーを開く"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "サイドバーを開く"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "結果が見つかりません。"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "「{context}」以外のすべての結果を見る"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "「{context}」のすべての結果を見る"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "すべての結果を見る"
+  },
+  "theme.SearchBar.label": {
+    "message": "検索"
+  },
+  "theme.blog.post.plurals": {
+    "message": "{count}件"
+  },
+  "theme.blog.tagTitle": {
+    "message": "「{tagName}」タグの記事が{nPosts}件あります"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "著者一覧"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "すべての著者を見る"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "この著者による投稿はまだありません。"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "非公開のページ"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "このページは非公開です。 検索対象外となり、このページのリンクに直接アクセスできるユーザーのみに公開されます。"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "下書きのページ"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "このページは下書きです。開発環境でのみ表示され、本番環境のビルドには含まれません。"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "{count}項目"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "もう一度試してください"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "メインコンテンツまでスキップ"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "タグ"
+  },
+  "docs.guides.outline.overview": {
+    "message": "Open-Scienceの概要"
+  },
+  "docs.guides.outline.group.start": {
+    "message": "はじめに"
+  },
+  "docs.guides.outline.capabilities.title": {
+    "message": "能力とサポートされた入力"
+  },
+  "docs.guides.outline.capabilities.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.capabilities.topic.capabilities.title": {
+    "message": "Open-Scienceができること"
+  },
+  "docs.guides.outline.capabilities.topic.capabilities.scope": {
+    "message": "リサーチ活動、ローカルワークスペースモデル、各入力またはゴール開始場所をサポート。"
+  },
+  "docs.guides.outline.capabilities.topic.source-types.title": {
+    "message": "サポートされているファイルとデータ"
+  },
+  "docs.guides.outline.capabilities.topic.source-types.scope": {
+    "message": "入力、読みやすいversus実行可能なフォーマット、およびインポート前の準備を受け入れる。"
+  },
+  "docs.guides.outline.installation.title": {
+    "message": "インストールとアップデート"
+  },
+  "docs.guides.outline.installation.scope": {
+    "message": "システム要件、デスクトップのインストール、ソースビルド、更新チェック、バージョン選択。"
+  },
+  "docs.guides.outline.onboarding.title": {
+    "message": "初回設定"
+  },
+  "docs.guides.outline.onboarding.scope": {
+    "message": "環境チェック、データロケーション、エージェントのランタイム、モデルアクセス、ウィザードオーダーのNotebookセットアップ。"
+  },
+  "docs.guides.outline.first-project.title": {
+    "message": "最初のプロジェクトと結果"
+  },
+  "docs.guides.outline.first-project.scope": {
+    "message": "プロジェクト作成から保存された出力とクリアな成功チェックまでの小さな最初のタスク。"
+  },
+  "docs.guides.outline.group.workspace": {
+    "message": "ワークスペース"
+  },
+  "docs.guides.outline.navigation.title": {
+    "message": "ナビゲーションと検索"
+  },
+  "docs.guides.outline.navigation.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.navigation.topic.navigation.title": {
+    "message": "ホーム&ナビゲーション"
+  },
+  "docs.guides.outline.navigation.topic.navigation.scope": {
+    "message": "ホームエントリー、ワークスペースレイアウト、サイドバーパネル、リサイズ、プロジェクトに戻る。"
+  },
+  "docs.guides.outline.navigation.topic.search.title": {
+    "message": "プロジェクト、セッション、ファイルを見つける"
+  },
+  "docs.guides.outline.navigation.topic.search.scope": {
+    "message": "グローバルな検索、結果タイプ、結果の開き、パネルレベルのフィルタの違い。"
+  },
+  "docs.guides.outline.projects.title": {
+    "message": "プロジェクトとソースフォルダ"
+  },
+  "docs.guides.outline.projects.scope": {
+    "message": "プロジェクトの作成と編集、プロジェクトの説明とエージェントのコンテキスト、フォルダの選択、アクセススコープ。"
+  },
+  "docs.guides.outline.sessions.title": {
+    "message": "セッションとブランチ"
+  },
+  "docs.guides.outline.sessions.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.sessions.topic.sessions.title": {
+    "message": "セッションの作成と管理"
+  },
+  "docs.guides.outline.sessions.topic.sessions.scope": {
+    "message": "開始、スイッチ、名前変更およびピン セッション; 会話からプロジェクトを区別します。"
+  },
+  "docs.guides.outline.sessions.topic.revisions.title": {
+    "message": "メッセージの修正とブランチ"
+  },
+  "docs.guides.outline.sessions.topic.revisions.scope": {
+    "message": "以前のメッセージを編集し、リビジョンを参照し、会話を分岐し、保持されたコンテキストを理解します。"
+  },
+  "docs.guides.outline.composer.title": {
+    "message": "会話と送信待ちのリクエスト"
+  },
+  "docs.guides.outline.composer.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.composer.topic.composer.title": {
+    "message": "プロンプト、添付ファイル、および言及"
+  },
+  "docs.guides.outline.composer.topic.composer.scope": {
+    "message": "リクエストをコンパイルし、入力を添付し、Skillsを選択し、送信前にファイルやセッションを参照します。"
+  },
+  "docs.guides.outline.composer.topic.follow-ups.title": {
+    "message": "フォローアップとタスクキュー"
+  },
+  "docs.guides.outline.composer.topic.follow-ups.scope": {
+    "message": "キュー、編集、リオーダー、送信、および停止リクエスト; 中断後に続くことを説明する。"
+  },
+  "docs.guides.outline.group.files": {
+    "message": "ファイル、文献、結果"
+  },
+  "docs.guides.outline.files.title": {
+    "message": "ファイル、アーティファクト、バージョン"
+  },
+  "docs.guides.outline.files.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.files.topic.files.title": {
+    "message": "プロジェクトファイルとアップロード"
+  },
+  "docs.guides.outline.files.topic.files.scope": {
+    "message": "versusフォルダ参照、ファイル検索、レイアウト、プロジェクトコピー、ダウンロードの場所をアップロードします。"
+  },
+  "docs.guides.outline.files.topic.artifacts.title": {
+    "message": "アーティファクトとファイルバージョン"
+  },
+  "docs.guides.outline.files.topic.artifacts.scope": {
+    "message": "アップロードと生成されたアーティファクトを区別する。 保存されたリビジョンを調べ、サポートされている管理されたファイルを編集し、サポートされているテキストやマークダウンの変更を比較し、結果をエクスポートします。"
+  },
+  "docs.guides.outline.previews.title": {
+    "message": "ファイルの開きとプレビュー"
+  },
+  "docs.guides.outline.previews.scope": {
+    "message": "分割およびフルスクリーンのプレビュー、サポートされている視聴者、タブ、およびフォーマット固有の制御。"
+  },
+  "docs.guides.outline.library.title": {
+    "message": "文学ライブラリと引用"
+  },
+  "docs.guides.outline.library.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.library.topic.library.title": {
+    "message": "参考文献とコレクション"
+  },
+  "docs.guides.outline.library.topic.library.scope": {
+    "message": "レコード、コレクション、プロジェクトリンク、タグ、重複、ゴミ箱、および復元を追加およびインポートします。"
+  },
+  "docs.guides.outline.library.topic.reading.title": {
+    "message": "読書用紙と引用"
+  },
+  "docs.guides.outline.library.topic.reading.scope": {
+    "message": "PDF 添付ファイル、メタデータ、全文検索、読み込み状態、引用スタイル、コピー、エクスポート。"
+  },
+  "docs.guides.outline.notebook.title": {
+    "message": "Notebookと実行証拠"
+  },
+  "docs.guides.outline.notebook.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.notebook.topic.notebook.title": {
+    "message": "セッションNotebook"
+  },
+  "docs.guides.outline.notebook.topic.notebook.scope": {
+    "message": "Python、R、Bashユニット、出力、変数、カーネル、停止、ノートブックのエクスポートを実行しました。"
+  },
+  "docs.guides.outline.notebook.topic.provenance.title": {
+    "message": "工芸品の実績を調べる"
+  },
+  "docs.guides.outline.notebook.topic.provenance.scope": {
+    "message": "ソースメッセージ、コード、ノートブックの実行とバージョンの証拠をレビューする利用可能なリンクを調べます。 欠落した証拠と形式に依存しないカバレッジを説明してください。"
+  },
+  "docs.guides.outline.group.models": {
+    "message": "モデルとエージェント"
+  },
+  "docs.guides.outline.models.title": {
+    "message": "モデルとタスクポリシー"
+  },
+  "docs.guides.outline.models.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.models.topic.models.title": {
+    "message": "モデルとプロバイダ"
+  },
+  "docs.guides.outline.models.topic.models.scope": {
+    "message": "プロバイダー、モデル、エージェントフレームワーク、およびSpecialistの区別。 アクティブなモデルと努力を選択します。"
+  },
+  "docs.guides.outline.models.topic.scenario-models.title": {
+    "message": "異なるタスクのモデル"
+  },
+  "docs.guides.outline.models.topic.scenario-models.scope": {
+    "message": "Main、サブエージェント、レビュアー、ビジョン、セッションの詳細ポリシー、継承、互換性のある選択。"
+  },
+  "docs.guides.outline.providers.title": {
+    "message": "プロバイダーとローカルモデルのセットアップ"
+  },
+  "docs.guides.outline.providers.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.providers.topic.providers.title": {
+    "message": "モデルプロバイダの接続"
+  },
+  "docs.guides.outline.providers.topic.providers.scope": {
+    "message": "プロバイダープリセット、サブスクリプションサインインまたはAPIアクセス、カスタムエンドポイント、必要なフィールド、および接続テスト。"
+  },
+  "docs.guides.outline.providers.topic.local-models.title": {
+    "message": "ローカルモデルの利用"
+  },
+  "docs.guides.outline.providers.topic.local-models.scope": {
+    "message": "対応するローカルエンドポイント、モデル識別子、機能制限、接続検証。"
+  },
+  "docs.guides.outline.frameworks.title": {
+    "message": "エージェントのインストールと切り替え"
+  },
+  "docs.guides.outline.frameworks.scope": {
+    "message": "フレームワークのインストール、検出、認証、アクティベーション、スイッチング、修理、削除。"
+  },
+  "docs.guides.outline.usage.title": {
+    "message": "トークンの使用と活動"
+  },
+  "docs.guides.outline.usage.scope": {
+    "message": "レポートされたトークンのカテゴリ、タイムフィルタ、チャート、プロジェクト/セッション数、および欠落したテレメトリー。"
+  },
+  "docs.guides.outline.group.control": {
+    "message": "研究制御とコンテキスト"
+  },
+  "docs.guides.outline.approval-modes.title": {
+    "message": "許可と承認"
+  },
+  "docs.guides.outline.approval-modes.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.approval-modes.topic.approval-modes.title": {
+    "message": "許可モードと承認"
+  },
+  "docs.guides.outline.approval-modes.topic.approval-modes.scope": {
+    "message": "回答、自動承認された編集、およびフルアクセス。 具体的な要求を点検し、許可するか、または否定して下さい。"
+  },
+  "docs.guides.outline.approval-modes.topic.remembered-permissions.title": {
+    "message": "保存済みの権限"
+  },
+  "docs.guides.outline.approval-modes.topic.remembered-permissions.scope": {
+    "message": "セッション、プロジェクト、グローバルスコープ スコープの混乱なしでデフォルトを点検し、逆行し、そして元通りにして下さい。"
+  },
+  "docs.guides.outline.planning.title": {
+    "message": "実行前の計画"
+  },
+  "docs.guides.outline.planning.scope": {
+    "message": "計画ファーストエントリー、提案された計画、フィードバック、承認、および継続的な実行のレビュー。"
+  },
+  "docs.guides.outline.delegation.title": {
+    "message": "タスクの委派と Side Chat"
+  },
+  "docs.guides.outline.delegation.scope": {
+    "message": "フレームワークをサポートした委任、サブエージェントのアクティビティ、Side Chatのアドバイスを点検します。 Specialistの作成、機能結合および査読者の細部は専門家セクションに属します。"
+  },
+  "docs.guides.outline.memory.title": {
+    "message": "記憶と会話のコンテキスト"
+  },
+  "docs.guides.outline.memory.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.memory.topic.memory.title": {
+    "message": "記憶および再使用可能な文脈"
+  },
+  "docs.guides.outline.memory.topic.memory.scope": {
+    "message": "グローバルおよびプロジェクトノート、カテゴリ、自動リコール、手動編集、および無効な場合の保持。"
+  },
+  "docs.guides.outline.memory.topic.context.title": {
+    "message": "コンテキスト、コンパクト、およびハンドオフ"
+  },
+  "docs.guides.outline.memory.topic.context.scope": {
+    "message": "コンテキストの使用を点検し、保持された歴史および圧縮を理解し、継続または手渡を準備して下さい。"
+  },
+  "docs.guides.outline.group.runtime": {
+    "message": "実行時間と接続"
+  },
+  "docs.guides.outline.runtimes.title": {
+    "message": "PythonとRのランタイム"
+  },
+  "docs.guides.outline.runtimes.scope": {
+    "message": "管理し、外部の通訳者、インストール、有効化、パッケージアクセス、および影響を再構築する。"
+  },
+  "docs.guides.outline.connectors.title": {
+    "message": "コネクターおよび資格情報"
+  },
+  "docs.guides.outline.connectors.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.connectors.topic.connectors.title": {
+    "message": "ツールとデータサービスを接続する"
+  },
+  "docs.guides.outline.connectors.topic.connectors.scope": {
+    "message": "組み込みおよびカスタムMCPセットアップ、ツールの可用性とポリシー、認証結合、および接続健康。"
+  },
+  "docs.guides.outline.connectors.topic.credentials.title": {
+    "message": "認証およびサービスアカウント"
+  },
+  "docs.guides.outline.connectors.topic.credentials.scope": {
+    "message": "デバイスの資格情報、研究連絡先の詳細、APIキー、トークン、OAuth、再利用、削除。"
+  },
+  "docs.guides.outline.network.title": {
+    "message": "ネットワーク、プロキシ、パッケージミラー"
+  },
+  "docs.guides.outline.network.scope": {
+    "message": "ネットワークチェック、Notebook許可ドメイン、プロキシモード、パッケージミラー、および証明書バンドル。"
+  },
+  "docs.guides.outline.remote-compute.title": {
+    "message": "SSHホストとSlurmセットアップ"
+  },
+  "docs.guides.outline.remote-compute.scope": {
+    "message": "ホスト認証、ダイレクト対スケジューラモード、リソースディスカバリー、スクラッチパス、およびコンカレント。"
+  },
+  "docs.guides.outline.remote-access.title": {
+    "message": "リモートブラウザーアクセス"
+  },
+  "docs.guides.outline.remote-access.scope": {
+    "message": "Remote.It前提条件、アクセスモード、ペアリング、信頼できるブラウザ、および取消。"
+  },
+  "docs.guides.outline.group.preferences": {
+    "message": "パーソナライズし、維持"
+  },
+  "docs.guides.outline.appearance.title": {
+    "message": "外観と通知"
+  },
+  "docs.guides.outline.appearance.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.appearance.topic.appearance.title": {
+    "message": "外観と言語"
+  },
+  "docs.guides.outline.appearance.topic.appearance.scope": {
+    "message": "システム/ライト/ダーク外観, 明示的なインターフェイス言語, スタートアップ言語の動作."
+  },
+  "docs.guides.outline.appearance.topic.notifications.title": {
+    "message": "メッセージと通知"
+  },
+  "docs.guides.outline.appearance.topic.notifications.scope": {
+    "message": "アプリ内メッセージ、デスクトップタスク通知、コンテンツの可視性、配信テスト、OS権限。"
+  },
+  "docs.guides.outline.tags.title": {
+    "message": "タグを整理する"
+  },
+  "docs.guides.outline.tags.scope": {
+    "message": "タグの作成と編集, 外観, リソースの割り当て, フィルタリング, 重複名, 削除."
+  },
+  "docs.guides.outline.storage.title": {
+    "message": "貯蔵およびアーカイブされた仕事"
+  },
+  "docs.guides.outline.storage.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.storage.topic.storage.title": {
+    "message": "データの場所およびディスク使用量"
+  },
+  "docs.guides.outline.storage.topic.storage.scope": {
+    "message": "ストレージカテゴリ、リフレッシュ、ディレクトリ境界、リロケーション、環境再構築、および回復。"
+  },
+  "docs.guides.outline.storage.topic.archived.title": {
+    "message": "アーカイブ、復元、削除"
+  },
+  "docs.guides.outline.storage.topic.archived.scope": {
+    "message": "プロジェクトのアーカイブと復元、永久的な削除、保持されたフォルダ、および確認境界。"
+  },
+  "docs.guides.outline.group.help": {
+    "message": "ヘルプとトラブルシューティング"
+  },
+  "docs.guides.outline.shortcuts.title": {
+    "message": "キーボードショートカット"
+  },
+  "docs.guides.outline.shortcuts.scope": {
+    "message": "プラットフォームの違いによるナビゲーション、検索、コンポーザー、プレビューのショートカット。"
+  },
+  "docs.guides.outline.troubleshooting.title": {
+    "message": "トラブルシューティングと一般的な質問"
+  },
+  "docs.guides.outline.troubleshooting.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.guides.outline.troubleshooting.topic.troubleshooting.title": {
+    "message": "トラブルシューティングと診断"
+  },
+  "docs.guides.outline.troubleshooting.topic.troubleshooting.scope": {
+    "message": "スタートアップ、モデル、ランタイム、ファイル、ネットワークのSymptomベースのチェック。 有用な診断を集めて下さい。"
+  },
+  "docs.guides.outline.troubleshooting.topic.faq.title": {
+    "message": "よくある質問"
+  },
+  "docs.guides.outline.troubleshooting.topic.faq.scope": {
+    "message": "データの所有権、アカウントの要件、コスト、オフライン使用、および回復に関する明確な回答。 詳しいガイドへのリンク。"
+  },
+  "docs.outline.workflows.overview": {
+    "message": "Open-Scienceの概要"
+  },
+  "docs.outline.workflows.scope": {
+    "message": "定義された開始点および成果物が付いている研究の状況; インターフェイス操作は各シナリオに所属します。"
+  },
+  "docs.outline.workflows.group.start": {
+    "message": "ワークフローを選択"
+  },
+  "docs.outline.workflows.cookbook.title": {
+    "message": "ワークフローの料理本"
+  },
+  "docs.outline.workflows.cookbook.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.cookbook.topic.cookbook.title": {
+    "message": "ワークフローの料理本"
+  },
+  "docs.outline.workflows.cookbook.topic.cookbook.scope": {
+    "message": "研究の質問、入力タイプ、予想される出力および利用できる資源によって選んで下さい。"
+  },
+  "docs.outline.workflows.cookbook.topic.first-analysis.title": {
+    "message": "あなたの最初の再現性分析"
+  },
+  "docs.outline.workflows.cookbook.topic.first-analysis.scope": {
+    "message": "インポートから検査、実行、保存された図、再実行検証までの小さなCSV例。"
+  },
+  "docs.outline.workflows.group.library": {
+    "message": "リサーチコレクションの構築"
+  },
+  "docs.outline.workflows.build-library.title": {
+    "message": "新しい研究トピックのためのコア読書リストを作成する"
+  },
+  "docs.outline.workflows.build-library.scope": {
+    "message": "不慣れなトピックを始めるとき、種子紙を収集し、重要なテーマをマップし、プロジェクトにリンクされているキュレーションされた読書リストを保存します。 インポートとタグ付けは、このシナリオ内のステップです。"
+  },
+  "docs.outline.workflows.import-library.title": {
+    "message": "紙の収集を繰り返し、整理する"
+  },
+  "docs.outline.workflows.import-library.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.import-library.topic.import-library.title": {
+    "message": "以前の研究者の文献コレクションを引き継ぎます"
+  },
+  "docs.outline.workflows.import-library.topic.import-library.scope": {
+    "message": "以前の研究者から PDF や引用のエクスポート, 使用可能なプロジェクトライブラリを再構築し、欠落またはあいまいなレコードのリストを生成する."
+  },
+  "docs.outline.workflows.import-library.topic.repair-metadata.title": {
+    "message": "折り紙のコレクションを再び使用可能にする"
+  },
+  "docs.outline.workflows.import-library.topic.repair-metadata.scope": {
+    "message": "混合されたフォルダ、不完全な引用と欠落の添付ファイル、レコードを再構成し、完全なテキストを明示的に解決されていない項目のリストとトピックコレクションにまとめました。"
+  },
+  "docs.outline.workflows.organize-library.title": {
+    "message": "検討プロジェクトのための検索バッチの統合"
+  },
+  "docs.outline.workflows.organize-library.scope": {
+    "message": "複数の検索やデータベースから重複した候補セットにレコードを結合し、検索の実績と文書化されたスクリーニングハンドオフを保持します。"
+  },
+  "docs.outline.workflows.review-inbox.title": {
+    "message": "ジャーナルクラブのための集中した読書パックを用意する"
+  },
+  "docs.outline.workflows.review-inbox.scope": {
+    "message": "今後のジャーナルクラブでは、1つの質問の周りの紙を選択し、代理店の提案を見直し、利用可能な完全なテキストを収集し、ディスカッションの質問で読書注文を準備します。"
+  },
+  "docs.outline.workflows.deduplicate-library.title": {
+    "message": "既存の証拠ベースを拡張する"
+  },
+  "docs.outline.workflows.deduplicate-library.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.deduplicate-library.title": {
+    "message": "関連する研究質問のための文献ベースを再利用する"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.deduplicate-library.scope": {
+    "message": "関連するプロジェクトが始まると、既存のライブラリの関連論文を識別し、レコードを複製したり、新しい質問に固有の証拠ギャップを文書化することなくリンクします。"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.attach-full-text.title": {
+    "message": "プロジェクトのマイルストーンの前に証拠ベースをリフレッシュ"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.attach-full-text.scope": {
+    "message": "提案または進捗レビューの前に、新鮮な検索を実行し、保存されたコレクションで新しい検索結果を比較し、日付の追加とギャップノートを用意します。 これは、スケジュールされた監視ではなく、手動のワークフローです。"
+  },
+  "docs.outline.workflows.group.evidence": {
+    "message": "文学と証拠"
+  },
+  "docs.outline.workflows.literature-review.title": {
+    "message": "証拠表への文献レビュー"
+  },
+  "docs.outline.workflows.literature-review.scope": {
+    "message": "質問、検索、画面レコードを定義し、エビデンス、サイトソースを抽出し、アクセスギャップを報告します。"
+  },
+  "docs.outline.workflows.paper-reading.title": {
+    "message": "論文を読み、クレームを検証する"
+  },
+  "docs.outline.workflows.paper-reading.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.paper-reading.topic.paper-reading.title": {
+    "message": "紙を読んで比較する"
+  },
+  "docs.outline.workflows.paper-reading.topic.paper-reading.scope": {
+    "message": "提供された紙から方法、人口、発見および制限を抽出して下さい; ページレベルの証拠を保持します。"
+  },
+  "docs.outline.workflows.paper-reading.topic.pdf-evidence.title": {
+    "message": "紙が請求をサポートしているかどうかをチェックする"
+  },
+  "docs.outline.workflows.paper-reading.topic.pdf-evidence.scope": {
+    "message": "ドラフトまたはミーティングノートにクレームを与え、関連するPDFの通路と方法を見つけ、ページ証拠を保持し、サポートされた、資格のある、またはサポートされていない検索を生成します。"
+  },
+  "docs.outline.workflows.database-search.title": {
+    "message": "科学的記録のクロスチェック"
+  },
+  "docs.outline.workflows.database-search.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.database-search.topic.database-search.title": {
+    "message": "科学データベースを検索する"
+  },
+  "docs.outline.workflows.database-search.topic.database-search.scope": {
+    "message": "データソースを選択し、境界クエリを生成し、識別子を解決し、追跡可能なレコードを保存します。"
+  },
+  "docs.outline.workflows.database-search.topic.cross-source-evidence.title": {
+    "message": "紙とデータベースの不一致を解決する"
+  },
+  "docs.outline.workflows.database-search.topic.cross-source-evidence.scope": {
+    "message": "論文とデータベースが遺伝子、化合物、または試験について解約する場合、識別子とバージョンを再構成し、未解決のままの文書を記述します。"
+  },
+  "docs.outline.workflows.indication-dossier.title": {
+    "message": "徴候のdossierを造ります"
+  },
+  "docs.outline.workflows.indication-dossier.scope": {
+    "message": "生物学、疫学、試験および治療の証拠をソースの日付と未解決のギャップと組み合わせる。"
+  },
+  "docs.outline.workflows.format-bibliography.title": {
+    "message": "投稿のための参照を用意する"
+  },
+  "docs.outline.workflows.format-bibliography.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.format-bibliography.topic.format-bibliography.title": {
+    "message": "標的ジャーナルに伝記を適応させる"
+  },
+  "docs.outline.workflows.format-bibliography.topic.format-bibliography.scope": {
+    "message": "信頼できるライブラリ項目IDおよびサポートされたCSL様式を使用して下さい。 表形式の引用符, ドキックスと皮切り引用符, オーバーリーフ互換LaTeXバンドル; 出力フィールドとスタイルの要件を確認します。"
+  },
+  "docs.outline.workflows.format-bibliography.topic.restore-library.title": {
+    "message": "投稿前の原稿の参照を監査する"
+  },
+  "docs.outline.workflows.format-bibliography.topic.restore-library.scope": {
+    "message": "原稿とそのソースライブラリ、引用されたレコード、書誌フィールド、重複とアクセス可能な証拠を交換し、修正された書誌と例外リストを作成します。"
+  },
+  "docs.outline.workflows.group.analysis": {
+    "message": "データの解析と再生"
+  },
+  "docs.outline.workflows.data-quality.title": {
+    "message": "遺伝子計算行列のサンプル品質をチェックする"
+  },
+  "docs.outline.workflows.data-quality.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.data-quality.topic.data-quality.title": {
+    "message": "データセットの監査と清掃"
+  },
+  "docs.outline.workflows.data-quality.topic.data-quality.scope": {
+    "message": "種類、欠損、重複、ユニットをチェックします。 生の入力を保存し、除外を記録します。"
+  },
+  "docs.outline.workflows.data-quality.topic.python-r.title": {
+    "message": "PythonとRで分析"
+  },
+  "docs.outline.workflows.data-quality.topic.python-r.scope": {
+    "message": "実行時間を用意し、変数を調べ、増分的に実行し、エラーを回復し、再使用可能なスクリプトを保存します。"
+  },
+  "docs.outline.workflows.statistics.title": {
+    "message": "統計分析と検証"
+  },
+  "docs.outline.workflows.statistics.scope": {
+    "message": "状態の仮定は方法を選び、診断を点検し、不確実性を報告し、実行可能なコードを保持します。"
+  },
+  "docs.outline.workflows.reproduce.title": {
+    "message": "公開された結果を再生成する"
+  },
+  "docs.outline.workflows.reproduce.scope": {
+    "message": "紙、コードおよびデータ。 受諾基準を定義し、パイロットを実行し、逸脱からマッチを区別します。"
+  },
+  "docs.outline.workflows.extend-analysis.title": {
+    "message": "インストールしたSpecialistで解析を拡張する"
+  },
+  "docs.outline.workflows.extend-analysis.scope": {
+    "message": "既存の方法、QC PCA、マトリックスおよび証拠計画例。"
+  },
+  "docs.outline.workflows.group.biology": {
+    "message": "シーケンス、細胞、分子"
+  },
+  "docs.outline.workflows.sequence-qc.title": {
+    "message": "シーケンス品質とアノテーション"
+  },
+  "docs.outline.workflows.sequence-qc.scope": {
+    "message": "FASTAレコード、アルファベット、長さを調べる。 アノテーションのソースを解決し、失敗したレコードを保存します。"
+  },
+  "docs.outline.workflows.single-cell.title": {
+    "message": "単一セル解析"
+  },
+  "docs.outline.workflows.single-cell.scope": {
+    "message": "式入力とメタデータをチェックし、必要に応じてscGPTまたはscvi-toolsを選択し、出力を検証します。 互換性のある単一セル入力、構成されたPython環境および選択したSkill依存関係が必要です。 科学的な実行は保留中のままです。"
+  },
+  "docs.outline.workflows.structure-prediction.title": {
+    "message": "タンパク質と複雑な予測"
+  },
+  "docs.outline.workflows.structure-prediction.scope": {
+    "message": "利用可能な予測Skillを選択し、入力と計算の要件を確認し、自信と制限を調べます。 選択されたパッケージ、モデル重量および適したローカルまたはリモート・コンプトを要求して下さい; Skill の一覧は予測の実行を検証しません。"
+  },
+  "docs.outline.workflows.molecular-analysis.title": {
+    "message": "分子構造とドッキング"
+  },
+  "docs.outline.workflows.molecular-analysis.scope": {
+    "message": "分子を検証し、プロパティと構造を検査し、アフィニティでスコアを装備することなくドッキングポーズを見直します。 ローカル分子ビューア、オンライン化学源およびDiffDockの実行を分けて下さい; ドッキングには、独自の依存関係とコンピュート検証が必要です。"
+  },
+  "docs.outline.workflows.group.deliver": {
+    "message": "図、レポート、および修正"
+  },
+  "docs.outline.workflows.figures.title": {
+    "message": "トレーサブルな証拠で数字を作成する"
+  },
+  "docs.outline.workflows.figures.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.figures.topic.figures.title": {
+    "message": "科学的な数字を作曲し、検証する"
+  },
+  "docs.outline.workflows.figures.topic.figures.scope": {
+    "message": "トレーサブルなデータからパネルを作成し、ラベルとビジュアルの忠実性を確認し、出版物資産をエクスポートします。"
+  },
+  "docs.outline.workflows.figures.topic.trace-result.title": {
+    "message": "数値の結果がどこから来たのかを説明する"
+  },
+  "docs.outline.workflows.figures.topic.trace-result.scope": {
+    "message": "共同作業者が図を問いかけた場合は、その実行と入力にアーティファクトをトレースし、バージョンを検証し、計算のエビデンスバックされた説明を準備します。"
+  },
+  "docs.outline.workflows.manuscript.title": {
+    "message": "研究報告書の作成と見直し"
+  },
+  "docs.outline.workflows.manuscript.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.manuscript.topic.manuscript.title": {
+    "message": "レポートや原稿の物語を作成する"
+  },
+  "docs.outline.workflows.manuscript.topic.manuscript.scope": {
+    "message": "検証済みの検索結果、図順、メソッド、引用をつなげる。 未サポートのクレームをフラグします。"
+  },
+  "docs.outline.workflows.manuscript.topic.revise-artifact.title": {
+    "message": "査読者のフィードバックの後で図かレポートを見直して下さい"
+  },
+  "docs.outline.workflows.manuscript.topic.revise-artifact.scope": {
+    "message": "保存された出力にフィードバックをマップし、サポートされている編集を行い、リビジョンを比較し、各変更を改良されたアーティファクトにリンクする応答を用意します。"
+  },
+  "docs.outline.workflows.recover-notebook.title": {
+    "message": "ソースデータが変化した後の解析を解除する"
+  },
+  "docs.outline.workflows.recover-notebook.scope": {
+    "message": "更新されたデータセットを与え、ノートブックの出力を識別し、依存関係を再実行し、以前の成果物と材料の変更を説明するために新しい結果を比較します。"
+  },
+  "docs.outline.workflows.group.compute": {
+    "message": "長いタスクとリモートコンピューティング"
+  },
+  "docs.outline.workflows.ssh-analysis.title": {
+    "message": "リモート分析を実行し、回復する"
+  },
+  "docs.outline.workflows.ssh-analysis.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.ssh-analysis.title": {
+    "message": "SSHホスト上で解析を実行"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.ssh-analysis.scope": {
+    "message": "ホストポリシーと読みやすさ、ステージ入力、モニター実行、およびプロジェクトの出力を回復します。 ユーザ認証可能な SSH ホストとテスト済み認証情報が必要です。 現在の監査でリモートジョブが検証されていない。"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.slurm-jobs.title": {
+    "message": "Slurmジョブの送信と回復"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.slurm-jobs.scope": {
+    "message": "スケジュール要件を確認し、境界ジョブを送信し、領収書を追跡し、取り消しまたは回復し、ファイルを検証します。 実際のSlurmクラスター、アカウント、スケジューラの設定が必要です。 スケジューラの実行はローカル モード制御によって確認されません。"
+  },
+  "docs.outline.workflows.parallel-review.title": {
+    "message": "リサーチ業務の委任・検討"
+  },
+  "docs.outline.workflows.parallel-review.scope": {
+    "message": "サポートされているフレームワークと作業モデルを使用して、境界タスクを分割し、Specialist 機能を設定し、委任されたアクティビティと承認を検査し、返された証拠を再度確認します。 並列実行を主張する前に委任を検証します。"
+  },
+  "docs.outline.workflows.group.continue": {
+    "message": "研究開発を続け、手渡する"
+  },
+  "docs.outline.workflows.plan-research.title": {
+    "message": "計画と調査を再開"
+  },
+  "docs.outline.workflows.plan-research.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.plan-research.topic.plan-research.title": {
+    "message": "コンピュートをコミットする前にパイロット学習をスコープ化"
+  },
+  "docs.outline.workflows.plan-research.topic.plan-research.scope": {
+    "message": "広範な質問と限られたリソースを、インプット、成果物、ストップコンディション、受諾チェックで小さなパイロットプランに変えて、分析を拡大します。"
+  },
+  "docs.outline.workflows.plan-research.topic.persistent-goal.title": {
+    "message": "セッションプランで未完成の勉強を再開"
+  },
+  "docs.outline.workflows.plan-research.topic.persistent-goal.scope": {
+    "message": "承認されたセッションプラン、記録されたステップの状態および保存された結果からユーザーの開始された仕事を再開して下さい。 残業メモを保ちましょう。 計画は、意図しないスケジューリングや個別の永続的ゴール機能を意味しません。"
+  },
+  "docs.outline.workflows.plan-research.topic.continue-context.title": {
+    "message": "決定を失うことなく休憩後に勉強を再開"
+  },
+  "docs.outline.workflows.plan-research.topic.continue-context.scope": {
+    "message": "事前セッション、プロジェクトメモリ、保存したファイルからパユースされた学習を再構築し、さらに解析前に検証済みの最新のメモを作成します。"
+  },
+  "docs.outline.workflows.compare-branches.title": {
+    "message": "同じデータセットで2つの解析方法を比較する"
+  },
+  "docs.outline.workflows.compare-branches.scope": {
+    "message": "メソッドを選択すると、共有開始点からブランチを選択し、文書化された仮定で実行し、結果と制限の比較を生成します。"
+  },
+  "docs.outline.workflows.save-method.title": {
+    "message": "検証済みの分析を新しいデータセットで再利用"
+  },
+  "docs.outline.workflows.save-method.scope": {
+    "message": "成功した分析を再利用可能なSkillに変換し、宣言された入力を適応させ、古い仮定を介することなく新しいデータセットでメソッドを検証します。"
+  },
+  "docs.outline.workflows.handoff.title": {
+    "message": "再現性のある研究パッケージを外す"
+  },
+  "docs.outline.workflows.handoff.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.workflows.handoff.topic.handoff.title": {
+    "message": "再現可能なハンドオフのパッケージ"
+  },
+  "docs.outline.workflows.handoff.topic.handoff.scope": {
+    "message": "入力、スクリプト、環境、結果、制限を収集します。 パッケージを新鮮な状態から確認します。"
+  },
+  "docs.outline.workflows.handoff.topic.export-handoff.title": {
+    "message": "共同作業者に未完成の分析を手渡する"
+  },
+  "docs.outline.workflows.handoff.topic.export-handoff.scope": {
+    "message": "選択された会話証拠、結果ファイル、決定、環境要件、および残りの質問をレビュー可能なハンドオフパッケージとして準備します。"
+  },
+  "docs.outline.tools.overview": {
+    "message": "Open-Scienceの概要"
+  },
+  "docs.outline.tools.scope": {
+    "message": "機能によってツールを見つけます。 カタログや個々の操作は、幅広い章の表として計画されています。"
+  },
+  "docs.outline.tools.group.find": {
+    "message": "ツールを探す"
+  },
+  "docs.outline.tools.overview.title": {
+    "message": "ツールを探す"
+  },
+  "docs.outline.tools.overview.scope": {
+    "message": "組み込みツール、科学ソフトウェア、データベースコネクタ、ビューアから選択できます。 テーブル内のアクセスと読みやすさを比較します。"
+  },
+  "docs.outline.tools.built-in.title": {
+    "message": "作り付けの研究用具"
+  },
+  "docs.outline.tools.built-in.scope": {
+    "message": "ファイル、ノートブック、文学、メモリ、計画、および委任操作の表、入力、出力および許可。"
+  },
+  "docs.outline.tools.catalog.title": {
+    "message": "科学ツールカタログ"
+  },
+  "docs.outline.tools.catalog.scope": {
+    "message": "Skillsをバンドルし、ランタイムパッケージを検査したソフトウェアのドキュメントテーブル。目的、依存関係、可用性。 カタログエントリは、すべてのプリインストールされたソフトウェアまたは別々のアプリ内カタログではありません。"
+  },
+  "docs.outline.tools.scientific.title": {
+    "message": "科学ツール"
+  },
+  "docs.outline.tools.scientific.scope": {
+    "message": "Notebook のランタイムまたは構成された Compute のホストによる実行を記述して下さい、パッケージの取付け、入出力点検および失敗の診断を使って。 各ソフトウェアの例のためのローカル versus の遠隔条件を録音して下さい。"
+  },
+  "docs.outline.tools.group.data": {
+    "message": "データとビューア"
+  },
+  "docs.outline.tools.databases.title": {
+    "message": "科学データベース"
+  },
+  "docs.outline.tools.databases.scope": {
+    "message": "23のデータソースコネクタの分類されたテーブル:ソースカバレッジ、正確な操作、識別子、資格情報と制限。 Molecule Viewer は、科学的ビューアーの下で文書化されています。"
+  },
+  "docs.outline.tools.tables.title": {
+    "message": "テーブルとデータセット"
+  },
+  "docs.outline.tools.tables.scope": {
+    "message": "サポートされている表形式、プレビュー制御、データ検査、変数処理、エクスポート、およびテーブルのサイズ制限を比較します。"
+  },
+  "docs.outline.tools.viewers.title": {
+    "message": "科学ビューア"
+  },
+  "docs.outline.tools.viewers.scope": {
+    "message": "PDF、オフィス、画像、FASTA、PDB、分子フォーマットの実際のプレビューレジストリを使用します。 オフラインのOpenChemLib Molecule Viewerとその検証ツールを含む。 編集や科学的な計算からの眺めを区別します。"
+  },
+  "docs.outline.tools.group.connect": {
+    "message": "接続と拡張"
+  },
+  "docs.outline.tools.mcp.title": {
+    "message": "コネクタと MCP"
+  },
+  "docs.outline.tools.mcp.scope": {
+    "message": "組み込みおよびカスタムコネクタ、輸送、発見、有効化およびエラーを比較します。 設定手順をガイドにリンクします。"
+  },
+  "docs.outline.tools.credentials.title": {
+    "message": "サービス資格情報"
+  },
+  "docs.outline.tools.credentials.scope": {
+    "message": "クレデンシャルタイプ、バインディング、必要なスコープ、バリデーション、アクセス障害をカバーするサービス・ツー・クレデンシャル・テーブル。"
+  },
+  "docs.outline.tools.custom.title": {
+    "message": "カスタムMCPツールを接続する"
+  },
+  "docs.outline.tools.custom.scope": {
+    "message": "ローカルstdioまたはサポートされたリモートトランスポートを介して、既存のまたは外部に実装されたMCPサーバーを接続し、発見されたツールとテストの認証情報と権限を調べます。 ツールの実装は外部の前提条件です。"
+  },
+  "docs.outline.skills.overview": {
+    "message": "Open-Scienceの概要"
+  },
+  "docs.outline.skills.scope": {
+    "message": "再利用可能な手順を選択し、使用し、維持します。 Skills をバンドルした個体は、チャプターテーブルにある。"
+  },
+  "docs.outline.skills.group.use": {
+    "message": "Skillsを使う"
+  },
+  "docs.outline.skills.overview.title": {
+    "message": "Skills"
+  },
+  "docs.outline.skills.overview.scope": {
+    "message": "Skills 対ツールとスペシャリストの説明 検索、有効化、選択、指示を検査し、Skillが利用可能であることを確認します。"
+  },
+  "docs.outline.skills.directory.title": {
+    "message": "Skillディレクトリ"
+  },
+  "docs.outline.skills.directory.scope": {
+    "message": "すべての 23 の 1 つのテーブルは Skills を束ねました、研究目的によって、入力、依存関係、出力および確認の状態と分けました。"
+  },
+  "docs.outline.skills.recipes.title": {
+    "message": "Skillのレシピ"
+  },
+  "docs.outline.skills.recipes.scope": {
+    "message": "表ベースのレシピは、研究目標、選択されたSkills、サンプル入力、要求、期待された出力とフルワークフローを接続します。"
+  },
+  "docs.outline.skills.group.maintain": {
+    "message": "作成と維持"
+  },
+  "docs.outline.skills.create.title": {
+    "message": "Skill とその対応ファイルを作成する"
+  },
+  "docs.outline.skills.create.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.skills.create.topic.create.title": {
+    "message": "Skill を作成する"
+  },
+  "docs.outline.skills.create.topic.create.scope": {
+    "message": "個人的な Skill を書くか、会話から再利用可能な方法を抽出します。 入力、ステップ、チェック、境界を定義します。"
+  },
+  "docs.outline.skills.create.topic.files.title": {
+    "message": "ファイルの指示とサポート"
+  },
+  "docs.outline.skills.create.topic.files.scope": {
+    "message": "パッケージコンテンツテーブルと検証チェックリストを使用して、SKILL.mdフィールド、スクリプト、アセット、参照を記述します。"
+  },
+  "docs.outline.skills.manage.title": {
+    "message": "Skillsの管理と検証"
+  },
+  "docs.outline.skills.manage.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.skills.manage.topic.manage.title": {
+    "message": "インポート、エクスポート、および更新 Skills"
+  },
+  "docs.outline.skills.manage.topic.manage.scope": {
+    "message": "グループインポートソース, プレビュー, 競合処理, 編集, エクスポート, 削除と動作によるバージョンチェック."
+  },
+  "docs.outline.skills.manage.topic.validate.title": {
+    "message": "Skillsのテストとトラブルシューティング"
+  },
+  "docs.outline.skills.manage.topic.validate.scope": {
+    "message": "新鮮な入力を検証し、不足しているパッケージ、重量、資格情報、ツールを診断し、サポートされたversusのテストされた動作を記録します。"
+  },
+  "docs.outline.reference.overview": {
+    "message": "参考文献"
+  },
+  "docs.outline.reference.scope": {
+    "message": "プロジェクトのセットアップと CLI の統合は、まず、AIPOCH 固有の技術リファレンスと Changelog が続きます。"
+  },
+  "docs.outline.reference.group.product": {
+    "message": "プロダクト参照"
+  },
+  "docs.outline.reference.configuration.title": {
+    "message": "構成とコンテキスト"
+  },
+  "docs.outline.reference.configuration.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.reference.configuration.topic.configuration.title": {
+    "message": "設定"
+  },
+  "docs.outline.reference.configuration.topic.configuration.scope": {
+    "message": "サポートされているアプリの設定、スコープ、デフォルト、ストレージおよびフレームワークの互換性の表。 操作手順をガイドにリンクします。"
+  },
+  "docs.outline.reference.configuration.topic.instructions.title": {
+    "message": "プロジェクトコンテキストと指示"
+  },
+  "docs.outline.reference.configuration.topic.instructions.scope": {
+    "message": "プロジェクトの Agent コンテキストフィールドで起動します。 メモリーノート、Skill の指示と Specialist の指示から区別します。 フレームワークの命令ファイル動作は、一つのユニバーサル・プロジェクト・ファイル・メカニズムではなく、フレームワークごとに文書化する必要があります。"
+  },
+  "docs.outline.reference.permissions.title": {
+    "message": "許可および制御"
+  },
+  "docs.outline.reference.permissions.scope": {
+    "message": "参照の承認モード、スコープの優先順位、記憶された助成金、ネットワークの制限および取消のセマンティクス。"
+  },
+  "docs.outline.reference.controls.title": {
+    "message": "制御およびキーボードの参照"
+  },
+  "docs.outline.reference.controls.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.reference.controls.topic.controls.title": {
+    "message": "ページと管理のインデックス"
+  },
+  "docs.outline.reference.controls.topic.controls.scope": {
+    "message": "ボタンと入力ラベル用のページビューアップテーブル、結果の状態と検証ステータス。"
+  },
+  "docs.outline.reference.controls.topic.commands.title": {
+    "message": "Skill ショートカット、言及、キーボード制御"
+  },
+  "docs.outline.reference.controls.topic.commands.scope": {
+    "message": "実際のコンポーザーがトリガーする: / Skills, @ 参照ファイルやアーティファクト, # 参照セッションを選択します。 サポートされているキーボード操作とコンテキスト制限をリストします。"
+  },
+  "docs.outline.reference.formats.title": {
+    "message": "ファイルフォーマットと制限"
+  },
+  "docs.outline.reference.formats.scope": {
+    "message": "サポートされているプレビュー、ライブラリのインポート、引用エクスポート、ファイルサイズ制限、サポートされていないケースの表。"
+  },
+  "docs.outline.reference.packages.title": {
+    "message": "Skill、Specialist、MCPフォーマット"
+  },
+  "docs.outline.reference.packages.scope": {
+    "message": "Skillパッケージ、SpecialistパッケージとMCPの設定用の別々のスキーマテーブル、フィールドとアーカイブ制約。"
+  },
+  "docs.outline.reference.example-data.title": {
+    "message": "データと期待される結果の例"
+  },
+  "docs.outline.reference.example-data.scope": {
+    "message": "パブリックソースファイル、チェックサム、および期待される例の出力。"
+  },
+  "docs.outline.reference.connector-operations.title": {
+    "message": "Connectorの操作の参照"
+  },
+  "docs.outline.reference.connector-operations.scope": {
+    "message": "Connector による入力、デフォルト、および例の呼び出しを実行します。"
+  },
+  "docs.outline.reference.group.integration": {
+    "message": "CLIおよび操作"
+  },
+  "docs.outline.reference.cli.title": {
+    "message": "CLIと構造化された出力"
+  },
+  "docs.outline.reference.cli.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.reference.cli.topic.cli.title": {
+    "message": "CLI リファレンス"
+  },
+  "docs.outline.reference.cli.topic.cli.scope": {
+    "message": "実際の open-science コマンドツリー、フラグ、デフォルト、終了状態、およびリポジトリの CLI コントラクトからの例を文書化します。"
+  },
+  "docs.outline.reference.cli.topic.automation.title": {
+    "message": "オートメーションとJSON出力"
+  },
+  "docs.outline.reference.cli.topic.automation.scope": {
+    "message": "カバーは、タスクの送信、ポーリング、JSONおよびJSONLの出力、エラーおよびキャンセルを支持しました; 組み込みスケジューラを暗くしないでください。"
+  },
+  "docs.outline.reference.api.title": {
+    "message": "タスクSDKとローカルAPI"
+  },
+  "docs.outline.reference.api.scope": {
+    "message": "サポートされているタスクとセッション API、認証、イベント、互換性をマップします。 内部ホスト API からパブリックコントラクトを区別します。"
+  },
+  "docs.outline.reference.server.title": {
+    "message": "ヘッドレスサービスおよびブラウザアクセス"
+  },
+  "docs.outline.reference.server.scope": {
+    "message": "参照サービス開始/ステータス/停止、認証されたURL、ローカルディスカバリー、実際のCLIからリモートアクセス境界。"
+  },
+  "docs.outline.reference.diagnostics.title": {
+    "message": "建築および診断"
+  },
+  "docs.outline.reference.diagnostics.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.reference.diagnostics.topic.diagnostics.title": {
+    "message": "エラーと診断"
+  },
+  "docs.outline.reference.diagnostics.topic.diagnostics.scope": {
+    "message": "地図は原因、診断証拠およびリンクされた回復ガイドに間違いを観察しました; CLIとコネクタの故障を含みます。"
+  },
+  "docs.outline.reference.diagnostics.topic.architecture.title": {
+    "message": "建築・データフロー"
+  },
+  "docs.outline.reference.diagnostics.topic.architecture.scope": {
+    "message": "デスクトップ、サービス、フレームワーク、ストレージ、および実行境界を記述します。これらは、アーティファクトの実証とクレデンシャル処理を含みます。"
+  },
+  "docs.outline.reference.diagnostics.topic.verification.title": {
+    "message": "ドキュメントの検証レコード"
+  },
+  "docs.outline.reference.diagnostics.topic.verification.scope": {
+    "message": "レコードソースバージョン、英語UIキャプチャ、実行制御、条件付きテスト、優れた検証ギャップ。"
+  },
+  "docs.outline.reference.group.changelog": {
+    "message": "変更履歴"
+  },
+  "docs.outline.reference.v0290.title": {
+    "message": "v0.29.0"
+  },
+  "docs.outline.reference.v0290.scope": {
+    "message": "Skillの市場、調査のパッケージ、PDF抽出および外的なRのパッケージの取付け。"
+  },
+  "docs.outline.reference.v0280.title": {
+    "message": "v0.28.0"
+  },
+  "docs.outline.reference.v0280.scope": {
+    "message": "結果の再生チェック、グローバル検索、プライバシー変更、および管理されたCodexアップグレード。"
+  },
+  "docs.outline.reference.v0270.title": {
+    "message": "v0.27.0"
+  },
+  "docs.outline.reference.v0270.scope": {
+    "message": "文学のインポート、背景タスク、Skills と統合の更新が必要です。"
+  },
+  "docs.outline.reference.v0260.title": {
+    "message": "v0.26.0"
+  },
+  "docs.outline.reference.v0260.scope": {
+    "message": "既存のバージョン履歴。"
+  },
+  "docs.outline.reference.v0251.title": {
+    "message": "v0.25.1"
+  },
+  "docs.outline.reference.v0251.scope": {
+    "message": "既存のバージョン履歴。"
+  },
+  "docs.outline.specialists.overview": {
+    "message": "Open-Scienceの概要"
+  },
+  "docs.outline.specialists.scope": {
+    "message": "Skillカタログの独自に研究の役割を作成、装備し、委任し、維持して下さい。"
+  },
+  "docs.outline.specialists.group.use": {
+    "message": "専門家の出会いと使用"
+  },
+  "docs.outline.specialists.overview.title": {
+    "message": "スペシャリストと利用可能な役割"
+  },
+  "docs.outline.specialists.overview.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.specialists.overview.topic.overview.title": {
+    "message": "スペシャリストの概要"
+  },
+  "docs.outline.specialists.overview.topic.overview.scope": {
+    "message": "Main エージェント、スペシャリスト、組み込みレビュアー、Skills の説明 役割と適切なタスクをテーブルで比較します。"
+  },
+  "docs.outline.specialists.overview.topic.directory.title": {
+    "message": "Specialistディレクトリとマーケットプレイス"
+  },
+  "docs.outline.specialists.overview.topic.directory.scope": {
+    "message": "ビルトイン非構成レビュアー、個人的役割、オンラインマーケットプレースパッケージを区別します。 バンドルスペシャリストのマニフェストは空です。 リモートリスト、署名、インストール、および依存性の信頼性は、別のチェックを必要とします。"
+  },
+  "docs.outline.specialists.delegate.title": {
+    "message": "作業の委任と検証"
+  },
+  "docs.outline.specialists.delegate.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.specialists.delegate.topic.delegate.title": {
+    "message": "委任・審査業務"
+  },
+  "docs.outline.specialists.delegate.topic.delegate.scope": {
+    "message": "フレームワークの委任サポートとモデルアクセスを確認します。 サブタスクを委任する主要な会話のSpecialistを切り替えることを区別します。 進行状況、介入、および返された証拠を点検して下さい。"
+  },
+  "docs.outline.specialists.delegate.topic.troubleshoot.title": {
+    "message": "テストとトラブルシューティングスペシャリスト"
+  },
+  "docs.outline.specialists.delegate.topic.troubleshoot.scope": {
+    "message": "限界のあるテストタスクを実行し、欠落した機能、モデル障害、拒否された要求、不完全なハンドオフを診断します。"
+  },
+  "docs.outline.specialists.group.create": {
+    "message": "作成と設定"
+  },
+  "docs.outline.specialists.identity.title": {
+    "message": "Specialistの作成と指示"
+  },
+  "docs.outline.specialists.identity.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.specialists.identity.topic.identity.title": {
+    "message": "Specialist を作成する"
+  },
+  "docs.outline.specialists.identity.topic.identity.scope": {
+    "message": "フィールド参照テーブルで、アイデンティティフィールド、アイコン、色、説明、作成モード、プレビューを計画します。"
+  },
+  "docs.outline.specialists.identity.topic.instructions.title": {
+    "message": "Specialist の指示を書く"
+  },
+  "docs.outline.specialists.identity.topic.instructions.scope": {
+    "message": "責任を定義し、証拠、成果物、条件の停止を認めた。 チャプターでロールテンプレートを使う。"
+  },
+  "docs.outline.specialists.capabilities.title": {
+    "message": "Skillsおよびコネクターを割り当てて下さい"
+  },
+  "docs.outline.specialists.capabilities.scope": {
+    "message": "明示的な機能結合とフルアクセスの相続を比較します。 add/remove 制御と準備チェックを説明します。"
+  },
+  "docs.outline.specialists.reviewer.title": {
+    "message": "レビュアーとオートレビュー"
+  },
+  "docs.outline.specialists.reviewer.scope": {
+    "message": "ビルトイン・レビュアー、モデル・ポリシー、レビュー・トリガー、表示された決定、および自動化されたレビューの制限を記述します。"
+  },
+  "docs.outline.specialists.group.maintain": {
+    "message": "管理と共有"
+  },
+  "docs.outline.specialists.manage.title": {
+    "message": "スペシャリストの管理と共有"
+  },
+  "docs.outline.specialists.manage.scope": {
+    "message": "含まれたトピックとその計画範囲を以下で確認します。"
+  },
+  "docs.outline.specialists.manage.topic.manage.title": {
+    "message": "スペシャリストの組織と維持"
+  },
+  "docs.outline.specialists.manage.topic.manage.scope": {
+    "message": "検索、フィルタ、タグ、有効化、編集、重複してロールを削除。 変更と機能の可用性を確認します。"
+  },
+  "docs.outline.specialists.manage.topic.packages.title": {
+    "message": "Specialistパッケージのインポートとエクスポート"
+  },
+  "docs.outline.specialists.manage.topic.packages.scope": {
+    "message": "パッケージ内容のプレビュー、SkillsとConnectorバインディングのチェック、コンフリクトの処理、インポートされたロールの検証"
+  },
+  "docs.outline.availableNotice": {
+    "message": "チャプターインデックス"
+  },
+  "docs.outline.count": {
+    "message": "{groups}グループ・{chapters}章"
+  },
+  "docs.outline.current": {
+    "message": "関連する既存の文書を見る"
+  },
+  "docs.preferenceScreenshot.notifications": {
+    "message": "タスク通知制御と報告されたテストステータス"
+  },
+  "docs.preferenceScreenshot.theme": {
+    "message": "{theme}モードのテーマと言語制御"
+  },
+  "docs.preferenceScreenshot.preview": {
+    "message": "スクリーンショットプレビュー"
+  },
+  "docs.preferenceScreenshot.choose": {
+    "message": "テーマスクリーンショットを選択"
+  },
+  "docs.preferenceScreenshot.open": {
+    "message": "{label}; フルスクリーンショットを開く"
+  },
+  "docs.preferenceScreenshot.caption": {
+    "message": "英語アプリのスクリーンショット・画像を選択して、全体で表示"
+  },
+  "docs.translation.note": {
+    "message": "自動翻訳版です。手順がわかりにくい場合は、英語の原文を確認してください。"
+  },
+  "docs.outline.reference.v0301.title": {
+    "message": "v0.30.1"
+  },
+  "docs.outline.reference.v0301.scope": {
+    "message": "Side Chat の下書き、Skill 更新の確認、研究パッケージの文献 PDF、復旧ツール。"
+  }
+}

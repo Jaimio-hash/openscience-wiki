@@ -1,0 +1,13 @@
+model,term,estimate,std_error_hc1,ci_95_lower,ci_95_upper,p_value,n,outcome_unit
+Unadjusted,const,4.554802,0.340204,3.888015,5.221590,0.000000,445,thousands of dollars
+Unadjusted,train,1.794343,0.670825,0.479551,3.109135,0.007477,445,thousands of dollars
+Adjusted,const,0.785068,3.297291,-5.677504,7.247640,0.811808,445,thousands of dollars
+Adjusted,train,1.676343,0.676734,0.349969,3.002717,0.013245,445,thousands of dollars
+Adjusted,age,0.055317,0.041286,-0.025602,0.136235,0.180295,445,thousands of dollars
+Adjusted,educ,0.395734,0.197343,0.008948,0.782520,0.044930,445,thousands of dollars
+Adjusted,black,-2.159522,1.011814,-4.142642,-0.176403,0.032818,445,thousands of dollars
+Adjusted,hisp,0.164030,1.366909,-2.515062,2.843123,0.904482,445,thousands of dollars
+Adjusted,married,-0.138724,0.873451,-1.850657,1.573209,0.873809,445,thousands of dollars
+Adjusted,nodegree,-0.070682,1.026725,-2.083026,1.941662,0.945115,445,thousands of dollars
+Adjusted,re74,0.082141,0.106873,-0.127325,0.291608,0.442136,445,thousands of dollars
+Adjusted,re75,0.052764,0.124181,-0.190626,0.296154,0.670914,445,thousands of dollars

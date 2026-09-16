@@ -1,0 +1,8 @@
+{
+  "label": "設定",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "モデル、エージェント、機能、権限、ランタイム、ストレージ、リモートコントロールを構成します。"
+  }
+}

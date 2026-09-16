@@ -1,15 +1,16 @@
-# Open Science Wiki
+# Open-Science Wiki
 
-This repository contains the official operating and reproducibility documentation for [AIPOCH Open Science](https://github.com/aipoch/open-science). The site uses [Docusaurus](https://docusaurus.io/), and AIPOCH.com can sync the current Wiki pages and product screenshots from this repository.
+This repository contains the official operating and reproducibility documentation for [AIPOCH Open-Science](https://github.com/aipoch/open-science), built with [Docusaurus](https://docusaurus.io/).
 
-English is the default language and is served from `/docs/`. Simplified Chinese is available at `/docs/zh-Hans/`. The locale registry and translation layout allow maintainers to add more languages without changing existing document URLs.
+English is the default language at `/docs/`; Simplified Chinese is available at `/docs/zh-Hans/`. Nine locales share the content framework. English and Simplified Chinese are the reviewed source editions; six additional editions remain automatic translation drafts. See [translation status and maintenance](i18n/README.md) and [contribution instructions](CONTRIBUTING.md).
 
 ## Content structure
 
 - `docs/` contains the English documentation source; `docs/intro.mdx` is served at `/docs/intro/`.
 - `i18n/<locale>/docusaurus-plugin-content-docs/current/` contains translated documentation with the same file structure as `docs/`.
-- Each `_category_.json` file sets a sidebar section label and description.
-- `static/img/open-science/` contains screenshots captured from a running Open Science installation.
+- `sidebars.js` organizes documents into Guides, Workflows, Explore tools, Skills, Specialists, and Reference, with one section per document and stable document and category URLs.
+- `src/theme/DocSidebarItems/` renders the desktop and mobile section switcher. Section labels are translated in each locale's `docusaurus-plugin-content-docs/current.json`.
+- `static/img/open-science/` contains screenshots captured from a running Open-Science installation.
 - `src/pages/` and `src/css/` contain the localized home page and AIPOCH theme changes.
 - `i18n.config.mjs` defines the default language and every published locale.
 - `scripts/check-english.mjs` keeps the README and default source content in English.
@@ -20,16 +21,25 @@ English is the default language and is served from `/docs/`. Simplified Chinese 
 Use Node.js 20 or later.
 
 ```bash
-npm install
+npm ci
 npm start
 ```
 
-The development server opens [http://localhost:3000/docs/](http://localhost:3000/docs/). Use a locale-specific development command when you only need one language:
+The development server opens [http://localhost:3000/docs/](http://localhost:3000/docs/). Development commands serve one language at a time: `npm start` and `start:en` serve English; `start:zh` serves Simplified Chinese. The other language is unavailable on that development port.
 
 ```bash
 npm run start:en
 npm run start:zh
 ```
+
+For a preview with working language switching and search, build all configured languages and serve them together. Stop any development preview already using port 3025 first:
+
+```bash
+npm run build
+npm run serve -- --host 127.0.0.1 --port 3025 --no-open
+```
+
+Open [English](http://127.0.0.1:3025/docs/intro/) or [Simplified Chinese](http://127.0.0.1:3025/docs/zh-Hans/intro/). Do not add `--locale` to this build. After editing content, rebuild and refresh the page to update this preview.
 
 Test all published languages before releasing:
 
@@ -47,32 +57,37 @@ python3 tests/nginx-seo.py --nginx /absolute/path/to/nginx
 ```
 
 This test uses a temporary directory and loopback port to check relative
-redirects, the legacy sitemap and multilingual index endpoints, and every
-sitemap page response.
+redirects, the legacy sitemap and multilingual index endpoints, and every sitemap page response.
 
-## Run the production container
+## Main-site integration and release boundary
 
-Build and start the Nginx runtime with Docker Compose:
+The Wiki owns only `/docs` and `/docs/...` on the shared AIPOCH origin. Keep `baseUrl` at `/docs/`, docs `routeBasePath` at `/`, and use Wiki routing only inside this boundary. The navbar logo returns to the current origin's `/` through normal document navigation. Client storage must remain namespaced; the Wiki does not share the main site's router or application state. See [the integration contract](AGENTS.md).
 
-```bash
-docker compose up --build -d
-```
+Contribute through a review branch and a pull request to `main`. The existing container workflow publishes only from `main`. Branch review and local builds do not deploy; merging, publishing and live configuration changes follow the authorization process in `AGENTS.md`.
 
-The generated multilingual sitemap index is available as an XML API at
-`http://localhost:3002/sitemap-index`. The existing `/sitemap` endpoint serves
-the English sitemap. Set `PORT` to publish the container on a
-different host port. The repository-managed Nginx configuration serves this
-endpoint directly without a redirect.
+The inherited Docker/Nginx runtime retains `/sitemap` for the English sitemap and `/sitemap-index` for the generated multilingual index. The new locale-sitemap plugin generates `build/sitemap-index.xml` from the locale registry. Local Docusaurus preview checks do not establish production gateway behavior.
 
 ## Edit documentation
 
-Add or update a Markdown file under `docs/`, then set its `sidebar_position` in front matter. Keep sibling positions unique. Store product captures in `static/img/open-science/` and reference them with a public path:
+Add or update a Markdown file under `docs/`, then register its document ID in the appropriate section of `sidebars.js`. Store product captures in `static/img/open-science/` and reference them with a public path:
 
 ```md
 ![Describe the visible application state](/img/open-science/example.png)
 ```
 
 Run `npm run check` before committing. The production build runs the same checks and stops when default source content contains Chinese text, a translated document is missing, or a required interface translation is absent.
+
+## Local full-text search
+
+The navbar search indexes document titles, headings, and body text in each configured
+documentation language. Results stay within the current documentation locale;
+sidebar draft outlines are not indexed as finished articles. Use Cmd+K or
+Ctrl+K to focus search, and open the full results page for additional matches.
+
+Search indexes are generated by `npm run build`, so rebuild after content edits
+and use `npm run serve` to test search locally. No search service account is
+required. Run `node --test tests/*.test.mjs` after building to validate body
+matches, locale isolation, and target routes.
 
 ## SEO metadata maintenance
 
@@ -83,15 +98,10 @@ dates. Explicit dates are required because Docker builds do not contain Git
 history. Generated category pages and the React home page omit `lastmod`
 when no explicit source date is available; the sitemap never queries Git.
 
-`/docs/sitemap-index.xml` lists the English and Chinese generated sitemaps.
-The container's `/sitemap-index` endpoint serves this index, copied from
-`static/sitemap-index.xml` during the build. The existing `/sitemap` endpoint
-continues to serve `/docs/sitemap.xml`. If the main website
-aggregates Docs separately, it must discover this index (or both child
-sitemaps), rather than importing only `/docs/sitemap.xml`.
+`/docs/sitemap-index.xml` lists all configured locale sitemaps. The build generates this index from `i18n.config.mjs`; no static list needs to be maintained. The container's `/sitemap-index` endpoint serves it, while `/sitemap` continues to serve `/docs/sitemap.xml`. A main-site sitemap consumer must discover the multilingual index or its child sitemaps to include every language.
 
 After a production build, verify that canonical, hreflang, Open Graph URLs,
-and both locale sitemaps consistently use HTTPS URLs with trailing slashes.
+and all locale sitemaps consistently use HTTPS URLs with trailing slashes.
 Check a fresh container build without Git history to verify document `lastmod`
 values. At the public origin, check that a slashless Docs URL redirects directly
 to the HTTPS trailing-slash URL, and that every sitemap URL returns HTTP 200.
@@ -102,10 +112,42 @@ to the HTTPS trailing-slash URL, and that every sitemap URL returns HTTP 200.
 2. Run `npm run write-translations -- --locale <locale>` to create the shared interface files.
 3. Copy `docs/` to `i18n/<locale>/docusaurus-plugin-content-docs/current/` and keep every relative path unchanged.
 4. Translate the copied documents and interface message values.
-5. Add the locale sitemap URL to `static/sitemap-index.xml`.
+5. Verify the generated `build/sitemap-index.xml` includes the new locale sitemap.
 6. Build the site and inspect the new locale locally before publishing.
+
+## Content ownership and editorial checks
+
+Keep one primary explanation for each operation in both languages. Other
+articles should link to that explanation and describe only their own task.
+
+| Content | Primary article |
+| --- | --- |
+| Connector setup, bindings and configuration transfer | `guides/connectors` |
+| Choosing a built-in, local or remote integration | `tools/mcp` |
+| Creating and managing service secrets | `tools/credentials` |
+| Choosing a scientific data source | `tools/databases` |
+| Exact built-in operation fields and examples | `reference/connector-operations` |
+| File ownership, editing and saved revisions | `guides/files` |
+| Common preview controls and ordinary document readers | `guides/previews` |
+| Table interpretation and full-dataset checks | `tools/tables` |
+| Sequence, structure and molecule viewing | `tools/viewers` |
+| Specialist installation, import, export and maintenance | `specialists/manage` |
+| Methods, PCA, matrix and reanalysis examples | `workflows/extend-analysis` |
+| Public example inputs, hashes and QC baselines | `reference/example-data` |
+
+Write the user's action, expected result and recovery steps before example
+evidence. Keep test chronology in the internal audit records. Preserve actual
+limitations; a source review or a successful preview does not prove execution.
+Introduce shared example data once, then link to it. Keep product release
+history in Changelog rather than repeating version announcements in tutorials.
+
+Retired articles belong in `src/data/legacy-doc-redirects.json`, not in duplicate
+Markdown pages. Moved section bookmarks belong in
+`src/data/moved-doc-fragments.json`. Rebuild all locales and run
+`node --test tests/search-index.test.mjs` to check search ownership, legacy
+redirects and moved section destinations.
 
 ## Related repositories
 
-- [AIPOCH Open Science](https://github.com/aipoch/open-science)
-- [Open Science Wiki](https://github.com/aipoch/openscience-wiki)
+- [AIPOCH Open-Science](https://github.com/aipoch/open-science)
+- [Open-Science Wiki](https://github.com/aipoch/openscience-wiki)

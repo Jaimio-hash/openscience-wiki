@@ -1,0 +1,38 @@
+{
+  "link.title.Documentation": {
+    "message": "Dokumentation",
+    "description": "The title of the footer links column with title=Documentation in the footer"
+  },
+  "link.title.Project": {
+    "message": "Projekt",
+    "description": "The title of the footer links column with title=Project in the footer"
+  },
+  "link.title.AIPOCH": {
+    "message": "AIPOCH",
+    "description": "The title of the footer links column with title=AIPOCH in the footer"
+  },
+  "link.item.label.Open-Science": {
+    "message": "Open-Science",
+    "description": "The label of footer link with label=Open-Science linking to https://github.com/aipoch/open-science"
+  },
+  "link.item.label.Control index": {
+    "message": "Kontrollindex",
+    "description": "The label of footer link with label=Control index linking to reference/control-index"
+  },
+  "link.item.label.Wiki source": {
+    "message": "Wiki-Quelle",
+    "description": "The label of footer link with label=Wiki source linking to https://github.com/aipoch/openscience-wiki"
+  },
+  "link.item.label.Report an issue": {
+    "message": "Melden Sie ein Problem",
+    "description": "The label of footer link with label=Report an issue linking to https://github.com/aipoch/open-science/issues"
+  },
+  "link.item.label.Website": {
+    "message": "Webseite",
+    "description": "The label of footer link with label=Website linking to https://aipoch.com"
+  },
+  "copyright": {
+    "message": "© 2026 AIPOCH · Alle Rechte vorbehalten.",
+    "description": "The footer copyright"
+  }
+}

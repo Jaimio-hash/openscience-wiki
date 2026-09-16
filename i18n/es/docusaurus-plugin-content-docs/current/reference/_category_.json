@@ -1,0 +1,8 @@
+{
+  "label": "Referencia y solución de problemas",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Formatos de archivo, atajos, índice de control, arquitectura y solución de problemas."
+  }
+}

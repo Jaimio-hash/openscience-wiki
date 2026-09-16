@@ -1,0 +1,8 @@
+.figure { margin: 1.5rem 0 2rem; }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: .6rem; font-size: .8rem; color: var(--ifm-color-content-secondary); }
+.toolbar div { display: flex; gap: .25rem; }
+.toolbar button { font: inherit; padding: .35rem .8rem; border: 1px solid var(--aip-line-2); background: transparent; color: var(--ifm-font-color-base); cursor: pointer; }
+.toolbar button[aria-pressed='true'] { background: var(--ifm-font-color-base); color: var(--ifm-background-color); }
+.toolbar button:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 3px; }
+.figure > [data-doc-screenshot] {margin: 0;}
+.figure figcaption { margin-top: .5rem; font-size: .75rem; color: var(--ifm-color-content-secondary); }

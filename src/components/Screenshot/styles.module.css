@@ -1,0 +1,32 @@
+.frame {
+  display: block;
+  box-sizing: border-box;
+  --screenshot-padding: clamp(16px, 3vw, 32px);
+  max-width: calc(var(--screenshot-width, 100%) + var(--screenshot-padding) * 2 + 2px);
+  margin: 1.5rem 0 2rem;
+  padding: var(--screenshot-padding);
+  border: 1px solid var(--aip-line-2);
+  background: var(--aip-bg-2);
+}
+
+.window {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 16%), 0 1px 4px rgb(0 0 0 / 8%);
+}
+
+/* Override the general Markdown image border; the outer frame owns it. */
+.frame .image {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+}
+
+.frame .positioned {position: absolute;}
+.window:focus-visible {outline: 2px solid var(--aip-ink); outline-offset: 4px;}

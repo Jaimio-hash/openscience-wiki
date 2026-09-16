@@ -1,0 +1,27 @@
+.selector {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0 32px;
+  padding: 14px 0;
+  border-block: 1px solid var(--aip-line-2);
+}
+.label {font-size: .85rem; color: var(--ifm-color-content-secondary);}
+.options {display: flex; gap: 4px;}
+.option, .active {
+  position: relative;
+  cursor: pointer;
+  padding: 6px 14px;
+  font-size: .9rem;
+  border: 1px solid transparent;
+}
+.active {background: var(--ifm-color-content); color: var(--ifm-background-color);}
+.option:hover {background: var(--ifm-hover-overlay);}
+.options input {position: absolute; opacity: 0; width: 1px; height: 1px;}
+.options label:has(input:focus-visible) {outline: 2px solid var(--ifm-color-content); outline-offset: 3px;}
+.hint {font-size: .8rem; color: var(--ifm-color-content-secondary);}
+@media (max-width: 480px) {
+  .hint {flex-basis: 100%;}
+  .option, .active {padding: 6px 10px;}
+}

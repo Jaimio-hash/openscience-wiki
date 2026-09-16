@@ -2,12 +2,12 @@
 sidebar_position: 1
 title: Settings overview
 last_update:
-  date: '2026-09-03'
+  date: '2026-09-15'
 ---
 
 # Settings overview
 
-Open Settings from the lower-left corner of the workspace. The navigation is divided into Capabilities and Workspace, followed by Archived. The top bar contains browsing history, maximize, and close controls.
+Open **Settings** from the lower-left corner of the workspace. Its 17 panels are organized into four groups: **Intelligence**, **Connections**, **Workspace** and **System**. Choose a panel by purpose, or search from the header. In these guides, **Settings → Model**, for example, refers to the Model panel inside Intelligence.
 
 | Global control | Behavior |
 | --- | --- |
@@ -18,29 +18,38 @@ Open Settings from the lower-left corner of the workspace. The navigation is div
 | `Dismiss settings error` | Close the error banner; the failed operation is not retried automatically |
 | Mobile navigation button | Open or close the Settings navigation drawer |
 
-![Maximized Model settings](/img/open-science/settings-model-maximized.png)
+## Find a setting
+
+1. Open Settings and focus **Search settings** in the header. **⌘K** on macOS or **Ctrl+K** on Windows/Linux focuses this search while Settings is active.
+2. Enter a panel name or task, such as `Package mirror`, `Main model` or `Diagnostics`.
+3. Use **Up/Down** to choose a result and **Enter** to open its panel, or click the result. The destination panel is highlighted briefly; locate the named setting there.
+4. Use **Back** to return. Clear the query to search for another setting. A panel's own search filters its list rather than searching all settings.
+
+This search covers representative settings across every panel, not every field or research document. If a term does not match, use the panel name or the navigation groups below. To search conversations or files, close Settings and use [global search](../guides/navigation.md).
 
 ## The 17 main panels
 
 | Group | Panel | What it manages |
 | --- | --- | --- |
-| Capabilities | Skills | Skill packages, enable switches, search, import, and creation |
-|  | Connectors | Built-in and custom MCP connectors, OAuth, import, and export |
-|  | Specialists | Specialist identities, instructions, and Skill/Connector access |
-|  | Memory | Opt-in project-scoped facts recalled across sessions |
-|  | Compute | Local and SSH hosts, resources, scratch space, and concurrency limits |
-|  | Network | Network status, global proxy, package mirrors, and Notebook domain allowlist |
-| Workspace | Model | Provider and scenario models for main, subagent, reviewer, vision, and session details |
-|  | Agent | OpenCode, Claude, Codex, and CodeBuddy runtimes, including switch, install, and repair operations |
-|  | Tags | Cross-resource tags and Favorites ordering |
-|  | Permissions | Default mode and saved scope grants |
-|  | Credentials | Device-wide keys, tokens, OAuth sign-ins, health, and recovery |
-|  | Runtimes | Python and R environments, package installation, and environment management |
-|  | Storage | Configuration write access, data-root migration, and disk usage |
-|  | Remote | Browser access, pairing, Remote.It, and trusted devices |
-|  | Usage | Token, call, run, project, and artifact analytics |
-|  | General | Notifications, theme, language, app icon, close behavior, diagnostics, and version |
-| — | Archived | Restore or permanently delete archived projects and sessions |
+| Intelligence | [Model](../guides/models.md) | Provider and scenario models |
+|  | [Agent](../guides/frameworks.md) | Agent framework installation, switching and repair |
+|  | [Skills](../skills/overview.md) | Reusable research methods and their availability |
+|  | [Specialists](../specialists/overview.md) | Specialist roles and capability access |
+|  | [Memory](../guides/memory.md) | Opt-in global and project notes |
+| Connections | [Connectors](../guides/connectors.md) | Data services, custom MCP connections and imports |
+|  | [Network](../guides/network.md) | Proxy, package mirrors and Notebook domain access |
+|  | [Remote](../guides/remote-access.md) | Browser access, pairing and trusted devices |
+|  | [Credentials](../tools/credentials.md) | Keys, tokens, OAuth and credential recovery |
+| Workspace | [Tags](../guides/tags.md) | Tags and Favorites ordering |
+|  | [Permissions](../guides/approval-modes.md) | Default mode and saved grants |
+|  | [Runtimes](../guides/runtimes.md) | Python/R environments and packages |
+|  | [Storage](../guides/storage.md) | Data location, write access and disk usage |
+|  | [Compute](../guides/remote-compute.md) | Local and SSH compute resources |
+|  | [Usage](../guides/usage.md) | Token, call and research activity statistics |
+|  | [Archived](../guides/storage.md) | Restore or permanently delete archived work |
+| System | [General](../guides/appearance.md) | Appearance, notifications, diagnostics and version |
+
+**Feedback** remains a separate entry at the bottom of Settings.
 
 :::info[How settings are saved]
 Some switches are saved immediately. Longer forms use `Save`, `Add`, or `Import`. Do not close the application while `Saving…`, `Testing…`, or `Installing…` is shown. Migration, uninstall, deletion, and broad-permission actions require confirmation.

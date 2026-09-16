@@ -1,0 +1,105 @@
+{
+  "accession": "GSE60450",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60450",
+  "genes": 27179,
+  "sample_count": 12,
+  "samples": [
+    {
+      "compact_sample": "MCL1-DG",
+      "original_column_name": "MCL1-DG_BC2CTUACXX_ACTTGA_L002_R1",
+      "total_raw_counts": "23227641",
+      "zero_count_genes": "8664",
+      "detected_genes_count_gt_0": "18515",
+      "median_count_among_detected_genes": "237"
+    },
+    {
+      "compact_sample": "MCL1-DH",
+      "original_column_name": "MCL1-DH_BC2CTUACXX_CAGATC_L002_R1",
+      "total_raw_counts": "21777891",
+      "zero_count_genes": "8792",
+      "detected_genes_count_gt_0": "18387",
+      "median_count_among_detected_genes": "223"
+    },
+    {
+      "compact_sample": "MCL1-DI",
+      "original_column_name": "MCL1-DI_BC2CTUACXX_ACAGTG_L002_R1",
+      "total_raw_counts": "24100765",
+      "zero_count_genes": "8646",
+      "detected_genes_count_gt_0": "18533",
+      "median_count_among_detected_genes": "213"
+    },
+    {
+      "compact_sample": "MCL1-DJ",
+      "original_column_name": "MCL1-DJ_BC2CTUACXX_CGATGT_L002_R1",
+      "total_raw_counts": "22665371",
+      "zero_count_genes": "8706",
+      "detected_genes_count_gt_0": "18473",
+      "median_count_among_detected_genes": "194"
+    },
+    {
+      "compact_sample": "MCL1-DK",
+      "original_column_name": "MCL1-DK_BC2CTUACXX_TTAGGC_L002_R1",
+      "total_raw_counts": "21529331",
+      "zero_count_genes": "9082",
+      "detected_genes_count_gt_0": "18097",
+      "median_count_among_detected_genes": "188"
+    },
+    {
+      "compact_sample": "MCL1-DL",
+      "original_column_name": "MCL1-DL_BC2CTUACXX_ATCACG_L002_R1",
+      "total_raw_counts": "20015386",
+      "zero_count_genes": "9169",
+      "detected_genes_count_gt_0": "18010",
+      "median_count_among_detected_genes": "190.0"
+    },
+    {
+      "compact_sample": "MCL1-LA",
+      "original_column_name": "MCL1-LA_BC2CTUACXX_GATCAG_L001_R1",
+      "total_raw_counts": "20392113",
+      "zero_count_genes": "9247",
+      "detected_genes_count_gt_0": "17932",
+      "median_count_among_detected_genes": "257.0"
+    },
+    {
+      "compact_sample": "MCL1-LB",
+      "original_column_name": "MCL1-LB_BC2CTUACXX_TGACCA_L001_R1",
+      "total_raw_counts": "21708152",
+      "zero_count_genes": "8828",
+      "detected_genes_count_gt_0": "18351",
+      "median_count_among_detected_genes": "252"
+    },
+    {
+      "compact_sample": "MCL1-LC",
+      "original_column_name": "MCL1-LC_BC2CTUACXX_GCCAAT_L001_R1",
+      "total_raw_counts": "22241607",
+      "zero_count_genes": "9803",
+      "detected_genes_count_gt_0": "17376",
+      "median_count_among_detected_genes": "191.0"
+    },
+    {
+      "compact_sample": "MCL1-LD",
+      "original_column_name": "MCL1-LD_BC2CTUACXX_GGCTAC_L001_R1",
+      "total_raw_counts": "21988240",
+      "zero_count_genes": "9904",
+      "detected_genes_count_gt_0": "17275",
+      "median_count_among_detected_genes": "176"
+    },
+    {
+      "compact_sample": "MCL1-LE",
+      "original_column_name": "MCL1-LE_BC2CTUACXX_TAGCTT_L001_R1",
+      "total_raw_counts": "24723827",
+      "zero_count_genes": "10478",
+      "detected_genes_count_gt_0": "16701",
+      "median_count_among_detected_genes": "138"
+    },
+    {
+      "compact_sample": "MCL1-LF",
+      "original_column_name": "MCL1-LF_BC2CTUACXX_CTTGTA_L001_R1",
+      "total_raw_counts": "24657293",
+      "zero_count_genes": "10434",
+      "detected_genes_count_gt_0": "16745",
+      "median_count_among_detected_genes": "135"
+    }
+  ],
+  "scope": "Descriptive raw-count QC; no normalization or differential-expression test."
+}

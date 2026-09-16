@@ -1,0 +1,8 @@
+{
+  "label": "Empieza.",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Instala Open-Science, completa la configuración de primera vez y crea tu primer proyecto de investigación."
+  }
+}

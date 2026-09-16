@@ -1,0 +1,5 @@
+ID,group,geo_accession,cell_type,developmental_stage,source_url
+MCL1-DG_BC2CTUACXX_ACTTGA_L002_R1,Control,GSM1480297,basal,virgin,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1480297
+MCL1-DH_BC2CTUACXX_CAGATC_L002_R1,Control,GSM1480298,basal,virgin,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1480298
+MCL1-DK_BC2CTUACXX_TTAGGC_L002_R1,Case,GSM1480301,basal,2 day lactation,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1480301
+MCL1-DL_BC2CTUACXX_ATCACG_L002_R1,Case,GSM1480302,basal,2 day lactation,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1480302

@@ -1,0 +1,8 @@
+{
+  "label": "參考與排錯",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "檔案格式、快捷操作、完整控制元件索引、架構與故障排查。"
+  }
+}

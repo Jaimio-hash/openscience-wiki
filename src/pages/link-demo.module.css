@@ -1,0 +1,28 @@
+.page{max-width:900px;margin:0 auto;padding:40px 32px 56px;color:var(--aip-ink-2);}
+.header{margin-bottom:30px;}
+.header h1{font:400 36px/1.25 var(--aip-serif);color:var(--aip-ink);margin:0 0 12px;}
+.header p{font-size:14px;margin:0;}
+.example{padding:26px 0 28px;border-top:1px solid var(--aip-line);}
+.example h2{font:600 17px/1.5 var(--aip-sans);margin:0 0 6px;color:var(--aip-ink);}
+.example h2 span{display:inline-block;width:32px;font:22px var(--aip-serif);}
+.note{font-size:12px;margin:0 0 20px;color:var(--aip-muted);}
+.sample{font-size:16px;line-height:2;}
+.sample p{margin:0 0 14px;}
+.sample ul{margin:0;padding-left:22px;}
+.sample li{padding-left:2px;margin:4px 0;}
+.sample a{font-weight:600;transition:background-color .15s,color .15s;text-underline-offset:4px;text-decoration-skip-ink:auto;}
+.a .sample a{color:var(--aip-ink);text-decoration:underline;text-decoration-thickness:1.5px;text-decoration-color:var(--aip-ink);}
+.a .sample a:hover{color:var(--aip-ink);text-decoration-thickness:2.5px;}
+.b .sample a{color:#796300;text-decoration:underline;text-decoration-thickness:1.5px;}
+.b .sample a:hover{color:#554500;background:#f4eab1;}
+.c .sample a{color:var(--aip-ink);background:#f4edc4;text-decoration:none;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+.c .sample a:hover{color:#111;background:#ecd44c;text-decoration:underline;text-decoration-thickness:1.5px;}
+.sample a:focus-visible{outline:2px solid var(--aip-ink);outline-offset:4px;}
+:global([data-theme='dark']) .b .sample a{color:#ecd44c;}
+:global([data-theme='dark']) .b .sample a:hover{color:#f7e78e;background:#39351c;}
+:global([data-theme='dark']) .c .sample a{background:#494023;color:#fff1af;}
+:global([data-theme='dark']) .c .sample a:hover{background:#ecd44c;color:#111;}
+.footer{border-top:1px solid var(--aip-line);padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;}
+.footer a{text-decoration:underline;text-underline-offset:3px;}
+@media(max-width:600px){.page{padding:28px 20px;}.header h1{font-size:29px;}.sample{font-size:15px;}}
+@media(prefers-reduced-motion:reduce){.sample a{transition:none;}}

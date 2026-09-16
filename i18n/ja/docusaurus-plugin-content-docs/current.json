@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "次へ",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Guides": {
+    "message": "ガイド",
+    "description": "The label for category 'Guides' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Workflows": {
+    "message": "研究ワークフロー",
+    "description": "The label for category 'Workflows' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Explore tools": {
+    "message": "ツールを探す",
+    "description": "The label for category 'Explore tools' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Skills": {
+    "message": "Skills",
+    "description": "The label for category 'Skills' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Specialists": {
+    "message": "スペシャリスト",
+    "description": "The label for category 'Specialists' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Reference": {
+    "message": "リファレンス",
+    "description": "The label for category 'Reference' in sidebar 'tutorialSidebar'"
+  }
+}

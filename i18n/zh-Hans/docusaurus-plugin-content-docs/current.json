@@ -8,7 +8,7 @@
     "description": "The label for category 'Get started' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Get started.link.generated-index.description": {
-    "message": "安装 Open Science，完成首次引导并创建第一个科研项目。",
+    "message": "安装 Open-Science，完成首次引导并创建第一个科研项目。",
     "description": "The generated-index page description for category 'Get started' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Workspace and research": {
@@ -34,5 +34,51 @@
   "sidebar.tutorialSidebar.category.Reference and troubleshooting.link.generated-index.description": {
     "message": "文件格式、快捷操作、完整控件索引、架构与故障排查。",
     "description": "The generated-index page description for category 'Reference and troubleshooting' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Guides": {
+    "message": "指南",
+    "description": "The label for category 'Guides' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Workflows": {
+    "message": "科研工作流",
+    "description": "The label for category 'Workflows' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Explore tools": {
+    "message": "探索工具",
+    "description": "The label for category 'Explore tools' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Skills": {
+    "message": "Skills",
+    "description": "The label for category 'Skills' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Reference": {
+    "message": "参考",
+    "description": "The label for category 'Reference' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Research and evidence": {
+    "message": "研究与证据",
+    "description": "The label for category 'Research and evidence' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Plan and collaborate": {
+    "message": "规划与协作",
+    "description": "The label for category 'Plan and collaborate' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Data and viewers": {
+    "message": "数据与预览",
+    "description": "The label for category 'Data and viewers' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Connect and compute": {
+    "message": "连接与计算",
+    "description": "The label for category 'Connect and compute' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Changelog": {
+    "message": "更新日志",
+    "description": "The label for category 'Changelog' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Use Skills": {
+    "message": "使用 Skills"
+  },
+  "sidebar.tutorialSidebar.category.Specialists": {
+    "message": "专家"
   }
 }

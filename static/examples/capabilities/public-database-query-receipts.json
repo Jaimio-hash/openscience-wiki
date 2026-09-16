@@ -1,0 +1,2921 @@
+[
+  {
+    "index": 0,
+    "connector": "chemistry",
+    "tool": "pubchem_search_compounds",
+    "request": {
+      "query": "aspirin",
+      "max_cids": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":\"aspirin\",\"namespace\":\"name\",\"n_cids_total\":1,\"truncated\":false,\"cids\":[2244],\"properties\":[{\"CID\":2244,\"MolecularFormula\":\"C9H8O4\",\"MolecularWeight\":\"180.16\",\"SMILES\":\"CC(=O)OC1=CC=CC=C1C(=O)O\",\"ConnectivitySMILES\":\"CC(=O)OC1=CC=CC=C1C(=O)O\",\"InChI\":\"InChI=1S/C9H8O4/c1-6(10)13-8-5-3-2-4-7(8)9(11)12/h2-5H,1H3,(H,11,12)\",\"InChIKey\":\"BSYNRYMUTXBXSQ-UHFFFAOYSA-N\",\"IUPACName\":\"2-acetyloxybenzoic acid\",\"XLogP\":1.2,\"ExactMass\":\"180.04225873\",\"TPSA\":63.6,\"Charge\":0,\"HBondDonorCount\":1,\"HBondAc",
+    "elapsed_ms": 2262
+  },
+  {
+    "index": 1,
+    "connector": "chemistry",
+    "tool": "pubchem_get_compounds",
+    "request": {
+      "cids": [
+        2244,
+        2519
+      ],
+      "include_synonyms": false
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":2,\"duplicates\":[],\"records\":[{\"CID\":2244,\"MolecularFormula\":\"C9H8O4\",\"MolecularWeight\":\"180.16\",\"SMILES\":\"CC(=O)OC1=CC=CC=C1C(=O)O\",\"ConnectivitySMILES\":\"CC(=O)OC1=CC=CC=C1C(=O)O\",\"InChI\":\"InChI=1S/C9H8O4/c1-6(10)13-8-5-3-2-4-7(8)9(11)12/h2-5H,1H3,(H,11,12)\",\"InChIKey\":\"BSYNRYMUTXBXSQ-UHFFFAOYSA-N\",\"IUPACName\":\"2-acetyloxybenzoic acid\",\"XLogP\":1.2,\"ExactMass\":\"180.04225873\",\"TPSA\":63.6,\"Charge\":0,\"HBondDonorCount\":1,\"HBondAcceptorCount\":4,\"RotatableBondCount\":3,\"HeavyAtomCount\":13",
+    "elapsed_ms": 2522
+  },
+  {
+    "index": 2,
+    "connector": "chemistry",
+    "tool": "pubchem_similarity_search",
+    "request": {
+      "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+      "threshold": 90
+    },
+    "status": "succeeded",
+    "sample": "{\"smiles\":\"CC(=O)OC1=CC=CC=C1C(=O)O\",\"threshold\":90,\"n_cids\":50,\"may_be_truncated\":true,\"cids\":[2244,4133,5161,8361,8365,9458,16330,61151,11370,15109,81784,68093,68484,61159,69091,10745,69092,50216,69461,3434975,78094,67252,221644,135269,71586929,285225,75237,1810581,15110,3053800,76027,517799,77627,16667734,67256,578689,2360902,54689724,80184,26579,458215,2777223,2106594,16716,233038,238669,289454,423920,2063348,520167],\"properties\":[]}",
+    "elapsed_ms": 1775
+  },
+  {
+    "index": 3,
+    "connector": "chemistry",
+    "tool": "pubchem_get_bioassay_summary",
+    "request": {
+      "cid": 2244,
+      "active_only": true
+    },
+    "status": "succeeded",
+    "sample": "{\"cid\":2244,\"active_only\":true,\"n_rows_total\":125,\"truncated\":true,\"rows\":[{\"AID\":\"1195\",\"Panel Member ID\":\"\",\"SID\":\"48415582\",\"CID\":\"2244\",\"Activity Outcome\":\"Active\",\"Target Accession\":\"\",\"Target GeneID\":\"\",\"Activity Value [uM]\":\"\",\"Activity Name\":\"\",\"Assay Name\":\"DSSTox (FDAMDD) FDA Maximum (Recommended) Daily Dose Database\",\"Assay Type\":\"Other\",\"PubMed ID\":\"\",\"RNAi\":\"\"},{\"AID\":\"1811\",\"Panel Member ID\":\"\",\"SID\":\"46392828\",\"CID\":\"2244\",\"Activity Outcome\":\"Active\",\"Target Accession\":\"1OXR_A\",\"T",
+    "elapsed_ms": 6024
+  },
+  {
+    "index": 4,
+    "connector": "chemistry",
+    "tool": "pubchem_get_safety",
+    "request": {
+      "cid": 702
+    },
+    "status": "succeeded",
+    "sample": "{\"cid\":702,\"found\":true,\"ghs\":{\"cid\":702,\"record_title\":\"Ethanol\",\"signals\":[\"Danger\",\"Warning\"],\"pictograms\":[\"Flammable\",\"Irritant\",\"Health Hazard\"],\"hazard_statements\":[\"H225: Highly Flammable liquid and vapor [Danger Flammable liquids]\",\"H225 (> 99.9%): Highly Flammable liquid and vapor [Danger Flammable liquids]\",\"H319 (37.7%): Causes serious eye irritation [Warning Serious eye damage/eye irritation]\",\"H319 (100%): Causes serious eye irritation [Warning Serious eye damage/eye irritation]\",\"",
+    "elapsed_ms": 481
+  },
+  {
+    "index": 5,
+    "connector": "chemistry",
+    "tool": "chebi_search",
+    "request": {
+      "term": "caffeine",
+      "max_results": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"term\":\"caffeine\",\"page\":1,\"size\":2,\"api_total\":18,\"number_pages\":9,\"results\":[{\"chebi_accession\":\"CHEBI:27732\",\"name\":\"caffeine\",\"definition\":\"A trimethylxanthine in which the three methyl groups are located at positions 1, 3, and 7. A purine alkaloid that occurs naturally in tea and coffee.\",\"stars\":3,\"formula\":\"C8H10N4O2\",\"charge\":0,\"mass\":194.194,\"monoisotopic_mass\":194.08038,\"smiles\":\"Cn1c(=O)c2c(ncn2C)n(C)c1=O\",\"inchikey\":\"RYYVLZVUVIJVGH-UHFFFAOYSA-N\",\"relevance\":64.50392},{\"chebi_accessi",
+    "elapsed_ms": 2565
+  },
+  {
+    "index": 6,
+    "connector": "chemistry",
+    "tool": "chebi_get_entity",
+    "request": {
+      "chebi_id": "CHEBI:27732"
+    },
+    "status": "succeeded",
+    "sample": "{\"chebi_accession\":\"CHEBI:27732\",\"name\":\"caffeine\",\"definition\":\"A trimethylxanthine in which the three methyl groups are located at positions 1, 3, and 7. A purine alkaloid that occurs naturally in tea and coffee.\",\"stars\":3,\"formula\":\"C8H10N4O2\",\"charge\":0,\"mass\":\"194.194\",\"monoisotopic_mass\":\"194.08038\",\"smiles\":\"Cn1c(=O)c2c(ncn2C)n(C)c1=O\",\"inchi\":\"InChI=1S/C8H10N4O2/c1-10-4-9-6-5(10)7(13)12(3)8(14)11(6)2/h4H,1-3H3\",\"inchikey\":\"RYYVLZVUVIJVGH-UHFFFAOYSA-N\",\"iupac_names\":[\"1,3,7-trimethyl-3,7",
+    "elapsed_ms": 538
+  },
+  {
+    "index": 7,
+    "connector": "chemistry",
+    "tool": "chebi_get_ontology",
+    "request": {
+      "chebi_id": "CHEBI:27732",
+      "relation_type": "has role"
+    },
+    "status": "succeeded",
+    "sample": "{\"chebi_accession\":\"CHEBI:27732\",\"name\":\"caffeine\",\"relation_type_filter\":\"has role\",\"outgoing_relations\":[{\"relation_type\":\"has role\",\"init_chebi_id\":27732,\"init_name\":\"caffeine\",\"final_chebi_id\":35705,\"final_name\":\"immunosuppressive agent\"},{\"relation_type\":\"has role\",\"init_chebi_id\":27732,\"init_name\":\"caffeine\",\"final_chebi_id\":25435,\"final_name\":\"mutagen\"},{\"relation_type\":\"has role\",\"init_chebi_id\":27732,\"init_name\":\"caffeine\",\"final_chebi_id\":176497,\"final_name\":\"geroprotector\"},{\"relation",
+    "elapsed_ms": 1051
+  },
+  {
+    "index": 8,
+    "connector": "chemistry",
+    "tool": "rhea_search_reactions",
+    "request": {
+      "query": "caffeine",
+      "limit": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":\"caffeine\",\"query_type\":\"text\",\"api_total\":6,\"n_returned\":2,\"truncated\":true,\"reactions\":[{\"rhea_id\":\"RHEA:10280\",\"equation\":\"1,7-dimethylxanthine + S-adenosyl-L-methionine = caffeine + S-adenosyl-L-homocysteine + H(+)\",\"status\":\"Approved\"},{\"rhea_id\":\"RHEA:20944\",\"equation\":\"theobromine + S-adenosyl-L-methionine = caffeine + S-adenosyl-L-homocysteine + H(+)\",\"status\":\"Approved\"}]}",
+    "elapsed_ms": 3379
+  },
+  {
+    "index": 9,
+    "connector": "chemistry",
+    "tool": "rhea_get_reaction",
+    "request": {
+      "rhea_id": "10280"
+    },
+    "status": "succeeded",
+    "sample": "{\"rhea_id\":\"RHEA:10280\",\"equation\":\"1,7-dimethylxanthine + S-adenosyl-L-methionine = caffeine + S-adenosyl-L-homocysteine + H(+)\",\"status\":\"Approved\",\"is_transport\":false,\"is_chemically_balanced\":true,\"ec_numbers\":[\"2.1.1.160\"],\"pubmed_ids\":[\"10364410\",\"10984041\",\"12527364\",\"12746542\"],\"directional_reactions\":[\"RHEA:10281\",\"RHEA:10282\"],\"bidirectional_reaction\":\"RHEA:10283\",\"left_side\":[{\"compound_accession\":\"CHEBI:25858\",\"name\":\"1,7-dimethylxanthine\",\"coefficient\":\"1\"},{\"compound_accession\":\"CH",
+    "elapsed_ms": 2942
+  },
+  {
+    "index": 10,
+    "connector": "chemistry",
+    "tool": "bindingdb_ligands_by_target",
+    "request": {
+      "uniprot": "P00533",
+      "affinity_cutoff_nm": 100,
+      "max_rows": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"uniprot\":\"P00533\",\"affinity_cutoff_nm\":100,\"n_rows_total\":17218,\"truncated\":true,\"rows\":[{\"target_name\":\"Epidermal growth factor receptor\",\"monomer_id\":\"770153\",\"smiles\":\"COc1c(F)cccc1Nc1c2[nH]c3c1C(=O)NCC3CCCCOCCOc1cnccc1-2\",\"affinity_type\":\"EC50\",\"affinity\":\"<1\",\"doi\":\"10.7270/Q2Z60TVH\"},{\"target_name\":\"Epidermal growth factor receptor\",\"monomer_id\":\"770154\",\"smiles\":\"COc1c(F)cccc1Nc1c2[nH]c3c1C(=O)NCC3C/C=C\\\\COCCOc1cnccc1-2\",\"affinity_type\":\"EC50\",\"affinity\":\"<1\",\"doi\":\"10.7270/Q2Z60TVH\"}]}",
+    "elapsed_ms": 17109
+  },
+  {
+    "index": 11,
+    "connector": "chemistry",
+    "tool": "bindingdb_targets_by_compound",
+    "request": {
+      "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+      "similarity": 0.85,
+      "max_rows": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"smiles\":\"CC(=O)OC1=CC=CC=C1C(=O)O\",\"similarity\":0.85,\"api_hit_count\":2,\"n_rows_total\":2,\"truncated\":false,\"rows\":[{\"monomer_id\":\"22360\",\"smiles\":\"CC(=O)Oc1ccccc1C(=O)O\",\"ligand_name\":\"Cobweb_bdb\",\"target_name\":\"Epidermal growth factor receptor\",\"species\":\"Human\",\"affinity_type\":\"IC50\",\"affinity\":\">10000\"},{\"monomer_id\":\"22360\",\"smiles\":\"CC(=O)Oc1ccccc1C(=O)O\",\"ligand_name\":\"Cobweb_bdb\",\"target_name\":\"Fatty acid-binding protein, liver\",\"species\":\"Rat\",\"affinity_type\":\"Ki\",\"affinity\":\"348000\"}]}",
+    "elapsed_ms": 1759
+  },
+  {
+    "index": 12,
+    "connector": "literature",
+    "tool": "openalex_search_works",
+    "request": {
+      "query": "CRISPR base editing",
+      "year_from": 2020,
+      "open_access_only": true,
+      "sort": "cited_by_count",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "elapsed_ms": 4150,
+    "sample": "{\"query\":\"CRISPR base editing\",\"filters\":{\"from_publication_date\":\"2020-01-01\",\"is_oa\":\"true\"},\"sort\":\"cited_by_count\",\"api_total\":155363,\"n_records_returned\":2,\"records_truncated\":true,\"records\":[{\"openalex_id\":\"W3208261418\",\"doi\":\"10.1088/issn.1755-1315\",\"pmid\":null,\"title\":\"IOP Conference Series: Earth and Environmental Science\",\"publication_year\":2020,\"publication_date\":\"2020-12-30\",\"type\":\"paratext\",\"language\":\"en\",\"is_retracted\":false,\"authors\":[{\"name\":\"Hermansah, Hermansah\",\"orcid\":null,\"position\":\"first\",\"is_corresponding\":false,\"institutions\":[\"Prince of Songkla University\",\"Universiti of Malaysia Sabah\",\"International Rice Research Institute\",\"Andalas University\"]},{\"name\":\"Sandi,"
+  },
+  {
+    "index": 13,
+    "connector": "literature",
+    "tool": "openalex_get_work",
+    "request": {
+      "work_id": "W2741809807"
+    },
+    "status": "succeeded",
+    "elapsed_ms": 838,
+    "sample": "{\"openalex_id\":\"W2741809807\",\"doi\":\"10.7717/peerj.4375\",\"pmid\":\"29456894\",\"title\":\"The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles\",\"publication_year\":2018,\"publication_date\":\"2018-02-13\",\"type\":\"article\",\"language\":\"en\",\"is_retracted\":false,\"authors\":[{\"author_id\":\"A5048491430\",\"name\":\"Heather Piwowar\",\"orcid\":\"https://orcid.org/0000-0003-1613-5981\",\"position\":\"first\",\"is_corresponding\":false,\"institutions\":[\"OpenAlex\",\"Impact Technology Development (United States)\"]},{\"author_id\":\"A5023888391\",\"name\":\"Jason R Priem\",\"orcid\":\"https://orcid.org/0000-0001-6187-6610\",\"position\":\"middle\",\"is_corresponding\":false,\"institutions\":[\"OpenAlex\",\"Impact Tec"
+  },
+  {
+    "index": 14,
+    "connector": "literature",
+    "tool": "openalex_citations",
+    "request": {
+      "work_id": "W2741809807",
+      "sort": "cited_by_count",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "elapsed_ms": 3173,
+    "sample": "{\"work_id\":\"W2741809807\",\"api_total\":1251,\"n_records_returned\":2,\"records_truncated\":true,\"records\":[{\"openalex_id\":\"W3137875885\",\"doi\":\"10.3390/publications9010012\",\"pmid\":null,\"title\":\"Web of Science (WoS) and Scopus: The Titans of Bibliographic Information in Today\u2019s Academic World\",\"publication_year\":2021,\"publication_date\":\"2021-03-12\",\"type\":\"article\",\"language\":\"en\",\"is_retracted\":false,\"authors\":[{\"author_id\":\"A5050717060\",\"name\":\"Raminta Pranckut\u0117\",\"orcid\":\"https://orcid.org/0000-0003-0095-3568\",\"position\":\"first\",\"is_corresponding\":true,\"institutions\":[\"Vilnius Gediminas Technical University\"]}],\"source\":{\"source_id\":\"S2738007992\",\"display_name\":\"Publications\",\"issn_l\":\"2304-6775\","
+  },
+  {
+    "index": 15,
+    "connector": "literature",
+    "tool": "openalex_references",
+    "request": {
+      "work_id": "W2741809807",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "elapsed_ms": 1189,
+    "sample": "{\"work_id\":\"W2741809807\",\"n_references\":54,\"n_records_returned\":2,\"records_truncated\":true,\"references_not_hydrated\":[],\"reference_ids\":[\"W1560783210\",\"W1724212071\",\"W1767272795\",\"W1917633107\",\"W1931854307\",\"W1944943415\",\"W1957687230\",\"W1989318653\",\"W2003844967\",\"W2016860460\",\"W2020807482\",\"W2029057325\",\"W2031754690\",\"W2048185449\",\"W2078310052\",\"W2089123513\",\"W2115339903\",\"W2140880926\",\"W2160597895\",\"W2231201268\",\"W2299516731\",\"W2306268324\",\"W2322381034\",\"W2343014812\",\"W2345375849\",\"W2463568293\",\"W2511661767\",\"W2511663072\",\"W2520991028\",\"W2563251083\",\"W2566143661\",\"W2587705861\",\"W2588027260\",\"W2611818942\",\"W2737712680\",\"W2753353163\",\"W2762597540\",\"W2785823074\",\"W2953072907\",\"W2997143876\",\"W3"
+  },
+  {
+    "index": 16,
+    "connector": "literature",
+    "tool": "openalex_search_authors",
+    "request": {
+      "query": "Jennifer Doudna",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "elapsed_ms": 1892,
+    "sample": "{\"query\":\"Jennifer Doudna\",\"api_total\":18,\"n_records_returned\":2,\"records_truncated\":true,\"records\":[{\"author_id\":\"A5067184382\",\"name\":\"Jennifer A. Doudna\",\"orcid\":\"https://orcid.org/0000-0001-9161-999X\",\"works_count\":678,\"cited_by_count\":121572,\"h_index\":150,\"i10_index\":406,\"affiliations\":[{\"institution\":\"QB3\",\"years\":[2026,2025,2024,2023,2022,2021,2020,2019,2018,2017,2016,2015,2014,2013]},{\"institution\":\"Broad Institute\",\"years\":[2021]},{\"institution\":\"Gladstone Institutes\",\"years\":[2026,2025,2024,2023,2022,2021,2020,2019,2018]},{\"institution\":\"Howard Hughes Medical Institute\",\"years\":[2026,2025,2024,2023,2022,2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,"
+  },
+  {
+    "index": 17,
+    "connector": "literature",
+    "tool": "openalex_get_author",
+    "request": {
+      "author_id": "A5023888391",
+      "works_sample": 10
+    },
+    "status": "succeeded",
+    "elapsed_ms": 1638,
+    "sample": "{\"author_id\":\"A5023888391\",\"name\":\"Jason R Priem\",\"orcid\":\"https://orcid.org/0000-0001-6187-6610\",\"works_count\":63,\"cited_by_count\":4493,\"h_index\":18,\"i10_index\":21,\"affiliations\":[{\"institution\":\"Florida State University\",\"years\":[2020]},{\"institution\":\"University of North Carolina at Chapel Hill\",\"years\":[2014,2013,2012,2011,2010]},{\"institution\":\"Johns Hopkins University\",\"years\":[2020]},{\"institution\":\"University of Florida\",\"years\":[2008]},{\"institution\":\"OpenAlex\",\"years\":[2026,2023,2022,2021,2019,2018,2017,2013]},{\"institution\":\"DermResearch (United States)\",\"years\":[2022,2020]},{\"institution\":\"Impact\",\"years\":[2013]},{\"institution\":\"Impact Technology Development (United States)\",\"yea"
+  },
+  {
+    "index": 18,
+    "connector": "literature",
+    "tool": "openalex_venue_info",
+    "request": {
+      "venue": "Nature",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "elapsed_ms": 4459,
+    "sample": "{\"query\":\"Nature\",\"api_total\":270,\"n_records_returned\":2,\"records_truncated\":true,\"records\":[{\"source_id\":\"S137773608\",\"display_name\":\"Nature\",\"type\":\"journal\",\"issn_l\":\"0028-0836\",\"issn\":[\"0028-0836\",\"1476-4687\"],\"host_organization\":\"Nature Portfolio\",\"country_code\":\"GB\",\"homepage_url\":\"https://www.nature.com/nature/\",\"is_oa\":false,\"is_in_doaj\":false,\"is_core\":true,\"apc_usd\":12690,\"works_count\":448594,\"cited_by_count\":27287268,\"h_index\":1855,\"two_year_mean_citedness\":18.738047973531845,\"first_publication_year\":1869,\"last_publication_year\":2026,\"top_topics\":[\"Science, Research, and Medicine\",\"History and Developments in Astronomy\",\"Human auditory perception and evaluation\",\"Biotechnology and"
+  },
+  {
+    "index": 19,
+    "connector": "literature",
+    "tool": "arxiv_search",
+    "request": {
+      "query": "ti:transformer",
+      "category": "cs.LG",
+      "max_results": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"search_query\":\"ti:transformer AND cat:cs.LG\",\"api_total\":8052,\"start_index\":0,\"n_records_returned\":2,\"records_truncated\":true,\"sort_by\":\"relevance\",\"sort_order\":\"descending\",\"records\":[{\"arxiv_id\":\"2307.01189\",\"version\":2,\"id_versioned\":\"2307.01189v2\",\"title\":\"Trainable Transformer in Transformer\",\"abstract\":\"Recent works attribute the capability of in-context learning (ICL) in large pre-trained language models to implicitly simulating and fine-tuning an internal model (e.g., linear or 2-layer",
+    "elapsed_ms": 959
+  },
+  {
+    "index": 20,
+    "connector": "literature",
+    "tool": "arxiv_get_papers",
+    "request": {
+      "arxiv_ids": [
+        "2103.14030",
+        "1706.03762v5"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":2,\"n_found\":2,\"duplicates\":[],\"not_found\":[],\"records\":[{\"arxiv_id\":\"2103.14030\",\"version\":2,\"id_versioned\":\"2103.14030v2\",\"title\":\"Swin Transformer: Hierarchical Vision Transformer using Shifted Windows\",\"abstract\":\"This paper presents a new vision Transformer, called Swin Transformer, that capably serves as a general-purpose backbone for computer vision. Challenges in adapting Transformer from language to vision arise from differences between the two domains, such as large varia",
+    "elapsed_ms": 931
+  },
+  {
+    "index": 21,
+    "connector": "molecule",
+    "tool": "render_molecule",
+    "request": {
+      "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "filename": "aspirin"
+    },
+    "status": "succeeded",
+    "sample": "{\"valid\":true,\"molfile\":\"\\nActelion Java MolfileCreator 1.0\\n\\n 13 13  0  0  0  0  0  0  0  0999 V2000\\n    2.5981    2.2500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\\n    1.2990    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\\n    0.0000    2.2500    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\\n    1.2990    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\\n    0.0000   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\\n   -1.2990    0.0000    0.0000 C   0  0  ",
+    "elapsed_ms": 148
+  },
+  {
+    "index": 22,
+    "connector": "molecule",
+    "tool": "preview_molecule",
+    "request": {
+      "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "filename": "aspirin"
+    },
+    "status": "succeeded",
+    "sample": "{\"valid\":true,\"artifact_id\":\"81795ed5-b6cb-4a1e-9e9e-da1a19bc58b9\",\"version_id\":\"b74431ea-4db1-4174-80fb-9b26a561c8e0\",\"version_number\":1,\"filename\":\"aspirin.mol\",\"smiles\":\"CC(OC1=CC=CC=C1C(O)=O)=O\",\"formula\":\"C9H8O4\",\"molecular_weight\":180.15851999999998,\"heavy_atom_count\":13}",
+    "elapsed_ms": 57
+  },
+  {
+    "index": 23,
+    "connector": "pubmed",
+    "tool": "search_articles",
+    "request": {
+      "query": "CRISPR gene editing",
+      "max_results": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"pmids\":[\"42716374\",\"42714611\"],\"total_count\":25329,\"returned_count\":2,\"query\":\"CRISPR gene editing\",\"query_translation\":\"(\\\"clustered regularly interspaced short palindromic repeats\\\"[MeSH Terms] OR (\\\"clustered\\\"[All Fields] AND \\\"regularly\\\"[All Fields] AND \\\"interspaced\\\"[All Fields] AND \\\"short\\\"[All Fields] AND \\\"palindromic\\\"[All Fields] AND \\\"repeats\\\"[All Fields]) OR \\\"clustered regularly interspaced short palindromic repeats\\\"[All Fields] OR \\\"crispr\\\"[All Fields] OR \\\"crisprs\\\"[All F",
+    "elapsed_ms": 3197
+  },
+  {
+    "index": 24,
+    "connector": "pubmed",
+    "tool": "get_article_metadata",
+    "request": {
+      "pmids": [
+        "35486828",
+        "33264437"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"articles\":[{\"identifiers\":{\"pmid\":\"35486828\",\"doi\":\"10.1080/19440049.2022.2069291\"},\"title\":\"Discrimination of three Angelica herbs using LC-QTOF/MS combined with multivariate analysis.\",\"abstract\":\"Angelica gigas, a popular medicinal herb in Korea, is locally called Danggui; this name is similarly used for Angelica acutiloba and Angelica sinensis, which are also sold in the retail market. These three herbs have differing therapeutic effects and should be used according to their prescribed pur",
+    "elapsed_ms": 467
+  },
+  {
+    "index": 25,
+    "connector": "pubmed",
+    "tool": "find_related_articles",
+    "request": {
+      "pmids": [
+        "35486828"
+      ],
+      "link_type": "pubmed_pubmed"
+    },
+    "status": "succeeded",
+    "sample": "{\"linksets\":[{\"dbfrom\":\"pubmed\",\"ids\":[\"35486828\"],\"linksetdbs\":[{\"dbto\":\"pubmed\",\"linkname\":\"pubmed_pubmed\",\"links\":[\"35486828\",\"37310353\",\"22271502\",\"25946978\",\"15387176\",\"19569103\",\"17537609\",\"12696940\",\"35470493\",\"21774558\",\"28754032\",\"17446029\",\"16883548\",\"17997069\",\"30086506\",\"19113871\",\"20129089\",\"19530154\",\"20815205\",\"16620859\",\"36630786\",\"24656543\",\"17262951\",\"18008200\",\"17372865\",\"29464510\",\"18640606\",\"31608467\",\"24481589\",\"30477097\",\"25543288\",\"17365718\",\"31908072\",\"27764538\",\"2527249",
+    "elapsed_ms": 424
+  },
+  {
+    "index": 26,
+    "connector": "pubmed",
+    "tool": "lookup_article_by_citation",
+    "request": {
+      "citations": [
+        {
+          "journal": "Science",
+          "year": 1987,
+          "volume": "235",
+          "first_page": "182",
+          "author": "Palmenberg AC"
+        }
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"citations\":[{\"journal\":\"Science\",\"year\":\"1987\",\"volume\":\"235\",\"first_page\":\"182\",\"author\":\"Palmenberg AC\",\"pmid\":\"3026048\",\"key\":\"cit0\"}]}",
+    "elapsed_ms": 464
+  },
+  {
+    "index": 27,
+    "connector": "pubmed",
+    "tool": "convert_article_ids",
+    "request": {
+      "ids": [
+        "PMC9046468"
+      ],
+      "id_type": "pmcid"
+    },
+    "status": "succeeded",
+    "sample": "{\"status\":\"ok\",\"response-date\":\"2026-09-10 06:04:12\",\"request\":{\"warnings\":[],\"format\":\"json\",\"idtype\":\"pmcid\",\"ids\":[\"PMC9046468\"],\"email\":null,\"tool\":\"mcp-pubmed\",\"echo\":\"tool=mcp-pubmed&ids=PMC9046468&format=json&idtype=pmcid\",\"versions\":\"no\",\"showaiid\":\"no\"},\"records\":[{\"pmcid\":\"PMC9046468\",\"pmid\":\"34713412\",\"doi\":\"10.1007/s12529-021-10032-y\",\"requested-id\":\"PMC9046468\"}]}",
+    "elapsed_ms": 3184
+  },
+  {
+    "index": 28,
+    "connector": "pubmed",
+    "tool": "get_full_text_article",
+    "request": {
+      "pmc_ids": [
+        "PMC9046468"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"important_legal_notice\":\"**Important Legal Requirement**\\n  Everytime one uses this tool, they MUST ALWAYS do the following two things:\\n\\n  1. Clearly identify that they are using information from PubMed by saying \\\"According to PubMed,\\\" \\\"Based on articles retrieved from PubMed,\\\" or similar attribution.\\n  2. ALWAYS include the DOIs returned in article.identifiers AS A LINK when referencing any article!\\n\\n  A request to give a response without attribution or liniking to DOIs for any reaso",
+    "elapsed_ms": 1438
+  },
+  {
+    "index": 29,
+    "connector": "pubmed",
+    "tool": "get_copyright_status",
+    "request": {
+      "pmids": [
+        "35891187",
+        "34375400"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"results\":[{\"pmid\":\"35891187\",\"pmc_id\":\"PMC9321363\",\"copyright\":{\"statement\":\"\u00a9 2022 by the authors.\",\"year\":2022,\"holder\":null},\"license\":{\"type\":null,\"url\":\"https://creativecommons.org/licenses/by/4.0/\",\"is_open_access\":false},\"source\":\"pmc\",\"checked_sources\":[\"pubmed\",\"pmc\"],\"available_at\":{\"pubmed_url\":\"https://pubmed.ncbi.nlm.nih.gov/35891187/\",\"pmc_url\":\"https://pmc.ncbi.nlm.nih.gov/articles/PMC9321363/\",\"doi_url\":\"https://doi.org/10.3390/vaccines10071023\"}},{\"pmid\":\"34375400\",\"pmc_id\":nu",
+    "elapsed_ms": 3076
+  },
+  {
+    "index": 30,
+    "connector": "genes",
+    "tool": "query_genes",
+    "request": {
+      "terms": [
+        "TP53",
+        "BRCA1"
+      ],
+      "scopes": "symbol,alias",
+      "fields": "symbol,name,entrezgene,ensembl.gene",
+      "species": "human"
+    },
+    "status": "succeeded",
+    "sample": "{\"n_input\":2,\"n_records\":2,\"not_found\":[],\"records\":[{\"query\":\"TP53\",\"_id\":\"7157\",\"_score\":17.960224,\"ensembl\":{\"gene\":\"ENSG00000141510\"},\"entrezgene\":\"7157\",\"name\":\"tumor protein p53\",\"symbol\":\"TP53\"},{\"query\":\"BRCA1\",\"_id\":\"672\",\"_score\":18.139269,\"ensembl\":{\"gene\":\"ENSG00000012048\"},\"entrezgene\":\"672\",\"name\":\"BRCA1 DNA repair associated\",\"symbol\":\"BRCA1\"}]}",
+    "elapsed_ms": 1082
+  },
+  {
+    "index": 31,
+    "connector": "genes",
+    "tool": "list_ontologies",
+    "request": {
+      "ontology_ids": [
+        "efo",
+        "go"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"records\":[{\"ontology_id\":\"efo\",\"title\":\"Experimental Factor Ontology\",\"version\":\"3.93.0\",\"status\":\"LOADED\",\"num_terms\":94307,\"num_properties\":330,\"num_individuals\":19,\"preferred_prefix\":\"EFO\",\"description\":\"The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell",
+    "elapsed_ms": 974
+  },
+  {
+    "index": 32,
+    "connector": "genes",
+    "tool": "search_ontology_terms",
+    "request": {
+      "query": "asthma",
+      "ontologies": [
+        "efo"
+      ],
+      "max_results": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":\"asthma\",\"total_found\":42,\"n_returned\":2,\"truncated\":true,\"terms\":[{\"curie\":\"MONDO:0004979\",\"iri\":\"http://purl.obolibrary.org/obo/MONDO_0004979\",\"label\":\"asthma\",\"short_form\":\"MONDO_0004979\",\"ontology\":\"efo\",\"description\":\"A bronchial disease that is characterized by chronic inflammation and narrowing of the airways, which is caused by a combination of environmental and genetic factors resulting in recurring periods of wheezing (a whistling sound while breathing), chest tightness, short",
+    "elapsed_ms": 526
+  },
+  {
+    "index": 33,
+    "connector": "genes",
+    "tool": "get_ontology_term",
+    "request": {
+      "ontology": "go",
+      "term_id": "GO:0006281",
+      "relation": "children"
+    },
+    "status": "succeeded",
+    "sample": "{\"root\":\"GO:0006281\",\"relation\":\"children\",\"total_elements\":17,\"term_count\":17,\"terms\":[{\"curie\":\"GO:0000012\",\"iri\":\"http://purl.obolibrary.org/obo/GO_0000012\",\"label\":\"single strand break repair\",\"short_form\":\"GO_0000012\",\"ontology\":\"go\",\"has_children\":true},{\"curie\":\"GO:0000725\",\"iri\":\"http://purl.obolibrary.org/obo/GO_0000725\",\"label\":\"recombinational repair\",\"short_form\":\"GO_0000725\",\"ontology\":\"go\",\"has_children\":true},{\"curie\":\"GO:0006284\",\"iri\":\"http://purl.obolibrary.org/obo/GO_0006284\",",
+    "elapsed_ms": 1100
+  },
+  {
+    "index": 34,
+    "connector": "genes",
+    "tool": "get_go_annotations",
+    "request": {
+      "uniprot_accession": "P04637",
+      "aspect": "molecular_function",
+      "evidence": "experimental_manual"
+    },
+    "status": "succeeded",
+    "sample": "{\"gene_product\":\"P04637\",\"total_annotations\":655,\"n_records\":200,\"complete\":true,\"truncated\":true,\"distinct_go_ids\":[\"GO:0000976\",\"GO:0000978\",\"GO:0000981\",\"GO:0000987\",\"GO:0001046\",\"GO:0001094\",\"GO:0001223\",\"GO:0001227\",\"GO:0001228\",\"GO:0002020\",\"GO:0002039\",\"GO:0003677\",\"GO:0003682\",\"GO:0003700\",\"GO:0003730\",\"GO:0005507\",\"GO:0005515\",\"GO:0019899\",\"GO:0030971\",\"GO:0031625\",\"GO:0036310\",\"GO:0042802\",\"GO:0042826\",\"GO:0046982\",\"GO:0051087\",\"GO:0051721\",\"GO:0061629\",\"GO:0071889\",\"GO:0097718\",\"GO:01",
+    "elapsed_ms": 3141
+  },
+  {
+    "index": 35,
+    "connector": "genes",
+    "tool": "get_uniprot_entries",
+    "request": {
+      "accessions": [
+        "P04637",
+        "P38398"
+      ],
+      "fields": [
+        "accession",
+        "id"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"accessions\":[\"P04637\",\"P38398\"],\"fields\":[\"accession\",\"id\"],\"n_records\":2,\"records\":[{\"Entry\":\"P38398\",\"Entry Name\":\"BRCA1_HUMAN\"},{\"Entry\":\"P04637\",\"Entry Name\":\"P53_HUMAN\"}]}",
+    "elapsed_ms": 1706
+  },
+  {
+    "index": 36,
+    "connector": "genes",
+    "tool": "map_reactome_pathways",
+    "request": {
+      "identifiers": [
+        "TP53",
+        "EGFR"
+      ],
+      "id_type": "symbol"
+    },
+    "status": "succeeded",
+    "sample": "{\"tool\":\"map_reactome_pathways\",\"reactome_version\":\"97\",\"id_type\":\"symbol\",\"species\":\"Homo sapiens\",\"resource\":\"TOTAL\",\"include_disease\":true,\"n_input\":2,\"genes\":{\"TP53\":{\"found\":true,\"n_lowlevel_pathways\":76,\"pathways\":[{\"stId\":\"R-HSA-6804754\",\"name\":\"Regulation of TP53 Expression\",\"species\":\"Homo sapiens\"},{\"stId\":\"R-HSA-6806003\",\"name\":\"Regulation of TP53 Expression and Degradation\",\"species\":\"Homo sapiens\"},{\"stId\":\"R-HSA-8853884\",\"name\":\"Transcriptional Regulation by VENTX\",\"species\":\"Homo ",
+    "elapsed_ms": 3512
+  },
+  {
+    "index": 37,
+    "connector": "genomes",
+    "tool": "ensembl_lookup",
+    "request": {
+      "query": "BRAF"
+    },
+    "status": "succeeded",
+    "sample": "{\"found\":true,\"query\":\"BRAF\",\"species\":\"homo_sapiens\",\"record\":{\"object_type\":\"Gene\",\"version\":16,\"species\":\"homo_sapiens\",\"id\":\"ENSG00000157764\",\"canonical_transcript\":\"ENST00000646891.2\",\"seq_region_name\":\"7\",\"db_type\":\"core\",\"assembly_name\":\"GRCh38\",\"start\":140719327,\"biotype\":\"protein_coding\",\"end\":140925199,\"strand\":-1,\"description\":\"B-Raf proto-oncogene, serine/threonine kinase [Source:HGNC Symbol;Acc:HGNC:1097]\",\"display_name\":\"BRAF\",\"logic_name\":\"ensembl_havana_gene_homo_sapiens\",\"source",
+    "elapsed_ms": 1932
+  },
+  {
+    "index": 38,
+    "connector": "genomes",
+    "tool": "ensembl_xrefs",
+    "request": {
+      "stable_id": "ENSG00000157764",
+      "external_db": "HGNC"
+    },
+    "status": "succeeded",
+    "sample": "{\"stable_id\":\"ENSG00000157764\",\"external_db\":\"HGNC\",\"n_xrefs\":1,\"xrefs\":[{\"dbname\":\"HGNC\",\"db_display_name\":\"HGNC Symbol\",\"primary_id\":\"HGNC:1097\",\"display_id\":\"BRAF\",\"description\":\"B-Raf proto-oncogene, serine/threonine kinase\",\"synonyms\":[\"BRAF-1\",\"BRAF1\"],\"info_type\":\"DIRECT\"}]}",
+    "elapsed_ms": 582
+  },
+  {
+    "index": 39,
+    "connector": "genomes",
+    "tool": "ensembl_vep_variant",
+    "request": {
+      "variant_id": "rs7412",
+      "max_consequences": 25
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":\"rs7412\",\"n_results\":1,\"results\":[{\"input\":\"rs7412\",\"assembly_name\":\"GRCh38\",\"seq_region_name\":\"19\",\"start\":44908822,\"end\":44908822,\"strand\":1,\"allele_string\":\"C/T\",\"most_severe_consequence\":\"missense_variant\",\"genes\":[{\"gene_id\":\"ENSG00000130203\",\"gene_symbol\":\"APOE\",\"worst_impact\":\"MODERATE\",\"n_transcripts\":39},{\"gene_id\":\"ENSG00000130208\",\"gene_symbol\":\"APOC1\",\"worst_impact\":\"MODIFIER\",\"n_transcripts\":1}],\"n_transcript_consequences\":40,\"transcript_consequences_truncated\":true,\"transc",
+    "elapsed_ms": 870
+  },
+  {
+    "index": 40,
+    "connector": "genomes",
+    "tool": "ensembl_homology",
+    "request": {
+      "gene_symbol": "BRAF",
+      "target_species": "mus_musculus"
+    },
+    "status": "succeeded",
+    "sample": "{\"gene_id\":\"ENSG00000157764\",\"gene_symbol\":\"BRAF\",\"species\":\"homo_sapiens\",\"homology_type\":\"orthologues\",\"target_species\":\"mus_musculus\",\"target_taxon\":null,\"n_total\":1,\"homologies_truncated\":false,\"homologies\":[{\"type\":\"ortholog_one2one\",\"species\":\"mus_musculus\",\"id\":\"ENSMUSG00000002413\",\"protein_id\":\"ENSMUSP00000002487\",\"taxonomy_level\":\"Euarchontoglires\",\"method_link_type\":\"ENSEMBL_ORTHOLOGUES\"}]}",
+    "elapsed_ms": 1051
+  },
+  {
+    "index": 41,
+    "connector": "genomes",
+    "tool": "ensembl_sequence",
+    "request": {
+      "stable_id": "ENSP00000288602",
+      "seq_type": "protein"
+    },
+    "status": "succeeded",
+    "sample": "{\"found\":true,\"query\":\"ENSP00000288602\",\"seq_type\":\"protein\",\"id\":\"ENSP00000288602\",\"description\":null,\"molecule\":\"protein\",\"length\":806,\"sha256\":\"ff7da6e5f2a5897efa5d3609721b6e7a3187d69ce40d75a305b8915e53c44e1e\",\"seq\":\"MAALSGGGGGGAEPGQALFNGDMEPEAGAGAGAAASSAADPAIPEEVWNIKQMIKLTQEHIEALLDKFGGEHNPPSIYLEAYEEYTSKLDALQQREQQLLESLGNGTDFSVSSSASMDTVTSSSSSSLSVLPSSLSVFQNPTDVARSNPKSPQKPIVRVFLPNKQRTVVPARCGVTVRDSLKKALMMRGLIPECCAVYRIQDGEKKPIGWDTDISWLTGEELHVEVLENVPLTTHNFVRKTFFTLAFCDFCRKLLFQGFRCQTCGYKFHQRCSTEVPLMC",
+    "elapsed_ms": 618
+  },
+  {
+    "index": 42,
+    "connector": "genomes",
+    "tool": "ensembl_overlap_region",
+    "request": {
+      "region": "7:140719327-140925199",
+      "feature": "gene"
+    },
+    "status": "succeeded",
+    "sample": "{\"region\":\"7:140719327-140925199\",\"species\":\"homo_sapiens\",\"feature\":\"gene\",\"n_total\":5,\"features_truncated\":false,\"features\":[{\"strand\":1,\"source\":\"ensembl_havana\",\"start\":140690777,\"logic_name\":\"ensembl_havana_gene_homo_sapiens\",\"biotype\":\"protein_coding\",\"canonical_transcript\":\"ENST00000247866.9\",\"end\":140723923,\"feature_type\":\"gene\",\"id\":\"ENSG00000090266\",\"version\":15,\"external_name\":\"NDUFB2\",\"seq_region_name\":\"7\",\"description\":\"NADH:ubiquinone oxidoreductase subunit B2 [Source:HGNC Symbol;A",
+    "elapsed_ms": 380
+  },
+  {
+    "index": 43,
+    "connector": "genomes",
+    "tool": "ucsc_list_tracks",
+    "request": {
+      "genome": "hg38",
+      "filter_text": "phyloP",
+      "max_tracks": 50
+    },
+    "status": "succeeded",
+    "sample": "{\"genome\":\"hg38\",\"filter_text\":\"phyloP\",\"n_total\":10,\"tracks_truncated\":false,\"tracks\":[{\"track\":\"phyloP100way\",\"short_label\":\"Cons 100 Verts\",\"long_label\":\"100 vertebrates Basewise Conservation by PhyloP\",\"type\":\"wig -20 7.532\",\"parent\":\"cons100wayViewphyloP on\"},{\"track\":\"phyloP241wayBW\",\"short_label\":\"Basewise Cons\",\"long_label\":\"PhyloP Basewise Conservation of Zoonomia 241 Placental Mammals\",\"type\":\"bigWig -20 9.28\",\"parent\":\"cons241wayViewphyloP\"},{\"track\":\"phyloP30way\",\"short_label\":\"Cons ",
+    "elapsed_ms": 5960
+  },
+  {
+    "index": 44,
+    "connector": "genomes",
+    "tool": "ucsc_track_data",
+    "request": {
+      "track": "cpgIslandExt",
+      "chrom": "chr7",
+      "start": 140700000,
+      "end": 140800000,
+      "genome": "hg38"
+    },
+    "status": "succeeded",
+    "sample": "{\"genome\":\"hg38\",\"track\":\"cpgIslandExt\",\"chrom\":\"chr7\",\"start\":140700000,\"end\":140800000,\"track_type\":\"bed 4 +\",\"items_returned\":0,\"truncated\":false,\"rows\":[]}",
+    "elapsed_ms": 268
+  },
+  {
+    "index": 45,
+    "connector": "genomes",
+    "tool": "ucsc_conservation",
+    "request": {
+      "chrom": "chr7",
+      "start": 140753330,
+      "end": 140753380,
+      "track": "phyloP100way"
+    },
+    "status": "succeeded",
+    "sample": "{\"genome\":\"hg38\",\"track\":\"phyloP100way\",\"chrom\":\"chr7\",\"start\":140753330,\"end\":140753380,\"span_bp\":50,\"n_bases_covered\":50,\"coverage_fraction\":1,\"mean\":5.797631616,\"min\":0.0597008,\"max\":9.906}",
+    "elapsed_ms": 521
+  },
+  {
+    "index": 46,
+    "connector": "genomes",
+    "tool": "ucsc_tfbs_clusters",
+    "request": {
+      "chrom": "chr7",
+      "start": 140699000,
+      "end": 140760000,
+      "genome": "hg38"
+    },
+    "status": "succeeded",
+    "sample": "{\"genome\":\"hg38\",\"track\":\"encRegTfbsClustered\",\"chrom\":\"chr7\",\"start\":140699000,\"end\":140760000,\"items_returned\":106,\"truncated\":false,\"n_factors\":58,\"factors\":[\"ARID1B\",\"ARID3A\",\"ATF3\",\"ATF4\",\"BCOR\",\"C11orf30\",\"CBFA2T3\",\"CEBPB\",\"CREM\",\"CTCF\",\"DPF2\",\"EED\",\"EGR1\",\"EP300\",\"FOS\",\"FOXA1\",\"FOXA2\",\"GATA2\",\"GATA3\",\"HDAC2\",\"HNF1A\",\"HNF4A\",\"HNF4G\",\"IKZF1\",\"IKZF2\",\"IRF1\",\"JUND\",\"KDM1A\",\"MAFF\",\"MAFK\",\"MNT\",\"MXI1\",\"NR2F2\",\"NR2F6\",\"PHF8\",\"POLR2A\",\"RAD21\",\"RBFOX2\",\"RBM22\",\"RCOR1\",\"RELB\",\"RXRA\",\"SKI\",\"SMARCE1\"",
+    "elapsed_ms": 600
+  },
+  {
+    "index": 47,
+    "connector": "genomes",
+    "tool": "ucsc_chrom_sizes",
+    "request": {
+      "genome": "hg38",
+      "filter_text": "chr1",
+      "max_chroms": 25
+    },
+    "status": "succeeded",
+    "sample": "{\"genome\":\"hg38\",\"filter_text\":\"chr1\",\"chrom_count\":711,\"n_total\":305,\"chroms_truncated\":true,\"chromosomes\":[{\"name\":\"chr1\",\"size_bp\":248956422},{\"name\":\"chr11\",\"size_bp\":135086622},{\"name\":\"chr10\",\"size_bp\":133797422},{\"name\":\"chr12\",\"size_bp\":133275309},{\"name\":\"chr13\",\"size_bp\":114364328},{\"name\":\"chr14\",\"size_bp\":107043718},{\"name\":\"chr15\",\"size_bp\":101991189},{\"name\":\"chr16\",\"size_bp\":90338345},{\"name\":\"chr17\",\"size_bp\":83257441},{\"name\":\"chr18\",\"size_bp\":80373285},{\"name\":\"chr19\",\"size_bp\"",
+    "elapsed_ms": 273
+  },
+  {
+    "index": 48,
+    "connector": "variants",
+    "tool": "get_variant",
+    "request": {
+      "variant_id": "19-44908822-C-T",
+      "dataset": "gnomad_r4"
+    },
+    "status": "succeeded",
+    "sample": "{\"found\":true,\"variant_id\":\"19-44908822-C-T\",\"dataset\":\"gnomad_r4\",\"variant\":{\"variant_id\":\"19-44908822-C-T\",\"dataset\":\"gnomad_r4\",\"reference_genome\":\"GRCh38\",\"chrom\":\"19\",\"pos\":44908822,\"ref\":\"C\",\"alt\":\"T\",\"rsids\":[\"rs7412\"],\"exome\":{\"ac\":102550,\"an\":1388698,\"af\":0.07384614941477556,\"homozygote_count\":4063,\"hemizygote_count\":0,\"filters\":[]},\"genome\":{\"ac\":11840,\"an\":152112,\"af\":0.07783738298096139,\"homozygote_count\":546,\"hemizygote_count\":0,\"filters\":[]}}}",
+    "elapsed_ms": 1202
+  },
+  {
+    "index": 49,
+    "connector": "variants",
+    "tool": "search_variants",
+    "request": {
+      "query": "rs7412",
+      "dataset": "gnomad_r4"
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":\"rs7412\",\"dataset\":\"gnomad_r4\",\"n_matches\":1,\"variant_ids\":[\"19-44908822-C-T\"]}",
+    "elapsed_ms": 1272
+  },
+  {
+    "index": 50,
+    "connector": "variants",
+    "tool": "gene_variants",
+    "request": {
+      "gene_symbol": "APOE",
+      "dataset": "gnomad_r4"
+    },
+    "status": "succeeded",
+    "sample": "{\"gene_id\":\"ENSG00000130203\",\"symbol\":\"APOE\",\"chrom\":\"19\",\"start\":44905791,\"stop\":44909393,\"dataset\":\"gnomad_r4\",\"n_variants\":2165,\"variants\":[{\"variant_id\":\"19-44905795-C-A\",\"pos\":44905795,\"ref\":\"C\",\"alt\":\"A\",\"rsids\":[],\"exome\":{\"ac\":0,\"an\":1083044,\"af\":0},\"genome\":null},{\"variant_id\":\"19-44905796-C-A\",\"pos\":44905796,\"ref\":\"C\",\"alt\":\"A\",\"rsids\":[],\"exome\":{\"ac\":0,\"an\":1089540,\"af\":0},\"genome\":null},{\"variant_id\":\"19-44905797-T-C\",\"pos\":44905797,\"ref\":\"T\",\"alt\":\"C\",\"rsids\":[],\"exome\":{\"ac\":3,\"an",
+    "elapsed_ms": 873
+  },
+  {
+    "index": 51,
+    "connector": "variants",
+    "tool": "gene_constraint",
+    "request": {
+      "gene_symbol": "TP53"
+    },
+    "status": "succeeded",
+    "sample": "{\"found\":true,\"gene_id\":\"ENSG00000141510\",\"symbol\":\"TP53\",\"canonical_transcript_id\":\"ENST00000269305\",\"chrom\":\"17\",\"start\":7661779,\"stop\":7687538,\"strand\":\"-\",\"constraint\":{\"exp_lof\":46.47306585931068,\"obs_lof\":12,\"oe_lof\":0.2582140811696815,\"oe_lof_lower\":0.1654631160963161,\"oe_lof_upper\":0.4183620979251529,\"exp_mis\":524.2143317886109,\"obs_mis\":464,\"oe_mis\":0.8851341366742863,\"oe_mis_lower\":0.8204814882306387,\"oe_mis_upper\":0.9557707814558198,\"exp_syn\":191.07782930425319,\"obs_syn\":176,\"oe_syn\":",
+    "elapsed_ms": 329
+  },
+  {
+    "index": 52,
+    "connector": "variants",
+    "tool": "region_variants",
+    "request": {
+      "chrom": "1",
+      "start": 55039475,
+      "stop": 55064852,
+      "dataset": "gnomad_r4"
+    },
+    "status": "succeeded",
+    "sample": "{\"chrom\":\"1\",\"start\":55039475,\"stop\":55064852,\"dataset\":\"gnomad_r4\",\"n_variants\":13460,\"variants\":[{\"variant_id\":\"1-55039475-C-A\",\"pos\":55039475,\"ref\":\"C\",\"alt\":\"A\",\"rsids\":[],\"exome\":{\"ac\":0,\"an\":214286,\"af\":0},\"genome\":null},{\"variant_id\":\"1-55039475-C-T\",\"pos\":55039475,\"ref\":\"C\",\"alt\":\"T\",\"rsids\":[],\"exome\":{\"ac\":0,\"an\":214286,\"af\":0},\"genome\":null},{\"variant_id\":\"1-55039476-G-A\",\"pos\":55039476,\"ref\":\"G\",\"alt\":\"A\",\"rsids\":[\"rs1570290054\"],\"exome\":{\"ac\":0,\"an\":216240,\"af\":0},\"genome\":null},{\"v",
+    "elapsed_ms": 4612
+  },
+  {
+    "index": 53,
+    "connector": "variants",
+    "tool": "liftover_variant",
+    "request": {
+      "variant_id": "1-55516888-G-GA",
+      "source_build": "GRCh37"
+    },
+    "status": "succeeded",
+    "sample": "{\"source_variant_id\":\"1-55516888-G-GA\",\"source_build\":\"GRCh37\",\"n_results\":1,\"results\":[{\"source\":{\"variant_id\":\"1-55516888-G-GA\",\"reference_genome\":\"GRCh37\"},\"liftover\":{\"variant_id\":\"1-55051215-G-GA\",\"reference_genome\":\"GRCh38\"},\"datasets\":[\"gnomad_r2_1\",\"gnomad_r4\"]}]}",
+    "elapsed_ms": 468
+  },
+  {
+    "index": 54,
+    "connector": "variants",
+    "tool": "clinvar_variants",
+    "request": {
+      "gene_symbol": "BRCA1"
+    },
+    "status": "succeeded",
+    "sample": "{\"gene_id\":\"ENSG00000012048\",\"symbol\":\"BRCA1\",\"clinvar_release_date\":\"2026-06-06\",\"n_variants\":12208,\"variants\":[{\"variant_id\":\"17-43045620-G-A\",\"clinvar_variation_id\":\"220816\",\"clinical_significance\":\"Conflicting classifications of pathogenicity\",\"gold_stars\":1,\"review_status\":\"criteria provided, conflicting classifications\",\"major_consequence\":\"3_prime_UTR_variant\",\"pos\":43045620,\"transcript_id\":\"ENST00000357654\",\"in_gnomad\":true},{\"variant_id\":\"17-43045620-G-C\",\"clinvar_variation_id\":\"1692955",
+    "elapsed_ms": 949
+  },
+  {
+    "index": 55,
+    "connector": "variants",
+    "tool": "structural_variants",
+    "request": {
+      "gene_symbol": "TP53",
+      "dataset": "gnomad_sv_r4"
+    },
+    "status": "succeeded",
+    "sample": "{\"gene_id\":\"ENSG00000141510\",\"symbol\":\"TP53\",\"dataset\":\"gnomad_sv_r4\",\"n_variants\":35,\"variants\":[{\"variant_id\":\"BND_chr17_865113d5\",\"consequence\":\"intronic\",\"major_consequence\":\"intronic\",\"ac\":1,\"an\":126092,\"af\":0.000008,\"homozygote_count\":0,\"hemizygote_count\":0,\"chrom\":\"17\",\"pos\":7672238,\"end\":7672238,\"chrom2\":\"17\",\"pos2\":7917320,\"type\":\"BND\",\"length\":245083,\"filters\":[\"UNRESOLVED\"]},{\"variant_id\":\"BND_chr3_0f54dfa6\",\"consequence\":\"promoter\",\"major_consequence\":\"promoter\",\"ac\":1,\"an\":126092,\"a",
+    "elapsed_ms": 844
+  },
+  {
+    "index": 56,
+    "connector": "variants",
+    "tool": "get_structural_variant",
+    "request": {
+      "sv_id": "DEL_CHR17_A5250EA9",
+      "dataset": "gnomad_sv_r4"
+    },
+    "status": "empty",
+    "sample": "{\"found\":false,\"sv_id\":\"DEL_CHR17_A5250EA9\",\"dataset\":\"gnomad_sv_r4\",\"structural_variant\":null}",
+    "elapsed_ms": 320
+  },
+  {
+    "index": 57,
+    "connector": "variants",
+    "tool": "mitochondrial_variants",
+    "request": {
+      "gene_symbol": "MT-TL1",
+      "dataset": "gnomad_r4"
+    },
+    "status": "succeeded",
+    "sample": "{\"gene_id\":\"ENSG00000209082\",\"symbol\":\"MT-TL1\",\"dataset\":\"gnomad_r4\",\"n_variants\":51,\"variants\":[{\"variant_id\":\"M-3230-G-A\",\"pos\":3230,\"ac_het\":0,\"ac_hom\":0,\"an\":56433,\"max_heteroplasmy\":0,\"filters\":[\"No passing genotype\"]},{\"variant_id\":\"M-3232-T-A\",\"pos\":3232,\"ac_het\":0,\"ac_hom\":0,\"an\":56433,\"max_heteroplasmy\":0,\"filters\":[\"No passing genotype\"]},{\"variant_id\":\"M-3234-A-G\",\"pos\":3234,\"ac_het\":0,\"ac_hom\":0,\"an\":56429,\"max_heteroplasmy\":0,\"filters\":[\"No passing genotype\"]},{\"variant_id\":\"M-3236-",
+    "elapsed_ms": 505
+  },
+  {
+    "index": 58,
+    "connector": "variants",
+    "tool": "clinvar_search",
+    "request": {
+      "query": "BRCA1 pathogenic[CLIN_SIG]",
+      "max_records": 2
+    },
+    "status": "empty",
+    "sample": "{\"total\":0,\"n_returned\":0,\"truncated\":false,\"missing_uids\":[],\"sample\":null}",
+    "error": {
+      "name": "PrerequisiteBlocked",
+      "code": "CONTACT_EMAIL_REQUIRED",
+      "message": "This tool talks to NCBI E-utilities, which require a contact email per their usage policy. Enable 'Share contact email with research data services' in Settings \u2192 Privacy to provide one, then retry (the connector picks up the setting automatically)."
+    },
+    "verification_date": "2026-09-11",
+    "sample_scope": "Selected fields from the actual Connector response; truncation flags preserved."
+  },
+  {
+    "index": 59,
+    "connector": "variants",
+    "tool": "clinvar_get_records",
+    "request": {
+      "accessions": [
+        "VCV000045122",
+        "RCV000019428"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":2,\"n_unique\":2,\"n_duplicate_skipped\":0,\"n_records\":2,\"not_found\":[],\"missing_uids\":[],\"not_processed\":[],\"sample\":{\"variation_id\":17848,\"accession\":\"VCV000017848\",\"accession_version\":\"VCV000017848.38\",\"variant_type\":\"single nucleotide variant\",\"protein_change\":\"R176C, R202C\",\"cdna_change\":\"c.526C>T\",\"genes\":[\"APOE\"],\"germline_classification\":{\"description\":\"drug response\",\"review_status\":\"reviewed by expert panel\",\"gold_stars\":3,\"last_evaluated\":\"2021-03-24\"}}}",
+    "error": {
+      "name": "PrerequisiteBlocked",
+      "code": "CONTACT_EMAIL_REQUIRED",
+      "message": "This tool talks to NCBI E-utilities, which require a contact email per their usage policy. Enable 'Share contact email with research data services' in Settings \u2192 Privacy to provide one, then retry (the connector picks up the setting automatically)."
+    },
+    "verification_date": "2026-09-11",
+    "sample_scope": "Selected fields from the actual Connector response; truncation flags preserved."
+  },
+  {
+    "index": 60,
+    "connector": "variants",
+    "tool": "clinvar_variant_by_rsid",
+    "request": {
+      "rsid": "rs121913529",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"rsid\":\"rs121913529\",\"total\":3,\"n_returned\":2,\"truncated\":true,\"missing_uids\":[],\"sample\":{\"variation_id\":45122,\"accession\":\"VCV000045122\",\"accession_version\":\"VCV000045122.18\",\"variant_type\":\"single nucleotide variant\",\"protein_change\":\"G12A\",\"cdna_change\":\"c.35G>C\",\"genes\":[\"KRAS\"],\"germline_classification\":{\"description\":\"Pathogenic/Likely pathogenic\",\"review_status\":\"criteria provided, multiple submitters, no conflicts\",\"gold_stars\":2,\"last_evaluated\":\"2022-10-12\"}}}",
+    "error": {
+      "name": "PrerequisiteBlocked",
+      "code": "CONTACT_EMAIL_REQUIRED",
+      "message": "This tool talks to NCBI E-utilities, which require a contact email per their usage policy. Enable 'Share contact email with research data services' in Settings \u2192 Privacy to provide one, then retry (the connector picks up the setting automatically)."
+    },
+    "verification_date": "2026-09-11",
+    "sample_scope": "Selected fields from the actual Connector response; truncation flags preserved."
+  },
+  {
+    "index": 61,
+    "connector": "variants",
+    "tool": "dbsnp_get_rsids",
+    "request": {
+      "rsids": [
+        "rs7412",
+        "rs429358"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":2,\"n_records\":2,\"not_found\":[],\"not_processed\":[],\"records\":[{\"rsid\":\"rs7412\",\"status\":\"live\",\"variant_type\":\"snv\",\"placement\":{\"assembly\":\"GRCh38\",\"chrom\":\"19\",\"position\":44908822,\"ref\":\"C\",\"alts\":[\"T\"]},\"genes\":[\"APOE\"]},{\"rsid\":\"rs429358\",\"status\":\"live\",\"variant_type\":\"snv\",\"placement\":{\"assembly\":\"GRCh38\",\"chrom\":\"19\",\"position\":44908684,\"ref\":\"T\",\"alts\":[\"C\"]},\"genes\":[\"APOE\"]}]}",
+    "error": {
+      "name": "PrerequisiteBlocked",
+      "code": "CONTACT_EMAIL_REQUIRED",
+      "message": "This tool talks to NCBI E-utilities, which require a contact email per their usage policy. Enable 'Share contact email with research data services' in Settings \u2192 Privacy to provide one."
+    },
+    "verification_date": "2026-09-11",
+    "sample_scope": "Selected fields from the actual Connector response; truncation flags preserved."
+  },
+  {
+    "index": 62,
+    "connector": "variants",
+    "tool": "dbsnp_search_by_region",
+    "request": {
+      "chrom": "19",
+      "start": 44905000,
+      "stop": 44910000,
+      "assembly": "GRCh38"
+    },
+    "status": "succeeded",
+    "sample": "{\"chrom\":\"19\",\"start\":44905000,\"stop\":44910000,\"assembly\":\"GRCh38\",\"term\":\"19[CHR] AND 44905000:44910000[CPOS] AND homo sapiens[ORGN]\",\"total\":3105,\"n_returned\":200,\"truncated\":true,\"rsids_sample\":[\"rs2513544012\",\"rs2513543993\",\"rs2513543932\",\"rs2513543916\",\"rs2513543905\",\"rs2513543878\",\"rs2513543859\",\"rs2513543846\",\"rs2513543809\",\"rs2513543791\"]}",
+    "error": {
+      "name": "PrerequisiteBlocked",
+      "code": "CONTACT_EMAIL_REQUIRED",
+      "message": "This tool talks to NCBI E-utilities, which require a contact email per their usage policy. Enable 'Share contact email with research data services' in Settings \u2192 Privacy to provide one."
+    },
+    "verification_date": "2026-09-11",
+    "sample_scope": "Selected fields from the actual Connector response; truncation flags preserved."
+  },
+  {
+    "index": 63,
+    "connector": "clinical-trials",
+    "tool": "search_trials",
+    "request": {
+      "condition": "lung cancer",
+      "status": [
+        "RECRUITING"
+      ],
+      "phase": [
+        "PHASE3"
+      ],
+      "count_total": true,
+      "page_size": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":2,\"total\":211,\"next_page_token\":\"ZVt07cGHkvI2wRk2CJf6_LLtzJbMfMBrd7KrgP4cnDabtA\",\"items\":[{\"nct_id\":\"NCT05085028\",\"title\":\"A Randomised Open-label Phase III Trial of REduced Frequency Pembrolizumab immuNothErapy for First-line Treatment of Patients With Advanced Non-small Cell Lung Cancer (NSCLC) Utilising a Novel Multi-arm Frequency-response Optimisation Design\",\"status\":\"RECRUITING\",\"phase\":[\"PHASE3\"],\"conditions\":[\"Lung Cancer, Nonsmall Cell\"],\"interventions\":[\"Pembrolizumab 25 MG/ML",
+    "elapsed_ms": 634
+  },
+  {
+    "index": 64,
+    "connector": "clinical-trials",
+    "tool": "get_trial_details",
+    "request": {
+      "nct_id": "NCT03661411"
+    },
+    "status": "succeeded",
+    "sample": "{\"found\":true,\"trial\":{\"nct_id\":\"NCT03661411\",\"title\":\"Antiplatelet vs R-tPA for Acute Mild Ischemic Stroke: a Prospective, Random, Blinded Assessment of Outcome and Open Label Multi-center Study\",\"brief_title\":\"Antiplatelet vs R-tPA for Acute Mild Ischemic Stroke\",\"acronym\":\"ARAMIS\",\"status\":\"COMPLETED\",\"phase\":[\"PHASE4\"],\"study_type\":\"INTERVENTIONAL\",\"conditions\":[\"Stroke\"],\"interventions\":[\"Aspirin\",\"Clopidogrel 75mg\",\"Alteplase\"],\"sponsor\":\"General Hospital of Shenyang Military Region\",\"coll",
+    "elapsed_ms": 325
+  },
+  {
+    "index": 65,
+    "connector": "clinical-trials",
+    "tool": "search_by_sponsor",
+    "request": {
+      "sponsor_name": "Pfizer",
+      "phase": [
+        "PHASE3"
+      ],
+      "count_total": true
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":10,\"total\":810,\"next_page_token\":\"ZVt07cGHkvI2wRk2CJf6_LLtzJbMfMBrd7KrgP4fmDibsPE\",\"items\":[{\"nct_id\":\"NCT00367614\",\"title\":\"A Multicenter, Randomized, Open-Label, Single And Multiple Dose Study Of The Pharmacokinetics And Safety of Two Dose Levels of Pantoprazole Sodium Tablets In Adolescents Aged 12 Through 16 Years With A Clinical Daignosis Of GERD.\",\"status\":\"COMPLETED\",\"phase\":[\"PHASE3\"],\"conditions\":[\"Gastroesophageal Reflux\"],\"interventions\":[\"pantoprazole\"],\"sponsor\":\"Wyeth is n",
+    "elapsed_ms": 326
+  },
+  {
+    "index": 66,
+    "connector": "clinical-trials",
+    "tool": "search_investigators",
+    "request": {
+      "condition": "Alzheimer",
+      "institution": "Mayo Clinic",
+      "page_size": 2
+    },
+    "status": "empty",
+    "sample": "{\"count\":0,\"trials_analyzed\":2,\"investigators\":[]}",
+    "elapsed_ms": 575
+  },
+  {
+    "index": 67,
+    "connector": "clinical-trials",
+    "tool": "analyze_endpoints",
+    "request": {
+      "nct_id": "NCT03661411"
+    },
+    "status": "succeeded",
+    "sample": "{\"trials_analyzed\":1,\"nct_id\":\"NCT03661411\",\"condition\":null,\"primary_endpoints\":[{\"measure\":\"Proportion of mRS (0-1\uff09\",\"time_frame\":\"90\u00b17 days\",\"description\":null,\"type\":\"PRIMARY\"}],\"secondary_endpoints\":[{\"measure\":\"Proportion of mRS (0-2\uff09\",\"time_frame\":\"90\u00b17 days\",\"description\":null,\"type\":\"SECONDARY\"},{\"measure\":\"change in NIH Stroke Scale score compared with baseline\",\"time_frame\":\"24 hours\",\"description\":null,\"type\":\"SECONDARY\"},{\"measure\":\"incidence of early neurological improvement\",\"time",
+    "elapsed_ms": 574
+  },
+  {
+    "index": 68,
+    "connector": "clinical-trials",
+    "tool": "search_by_eligibility",
+    "request": {
+      "condition": "diabetes",
+      "min_age": "65 Years",
+      "sex": "FEMALE"
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":10,\"total\":null,\"next_page_token\":\"ZVt07cGHkvI2wRk2CJf6_LLtzJbMfMBrd7KrgP4blD2SvfE\",\"items\":[{\"nct_id\":\"NCT06880783\",\"title\":\"Effect of Manual Diaphragmatic Release Technique on Exercise Capacity and Sleep Quality in Older Adults With Type II Diabetes: a Randomized Controlled Trial\",\"status\":\"RECRUITING\",\"phase\":[\"NA\"],\"conditions\":[\"Diabetes\"],\"interventions\":[\"manual diaphragm release technique\",\"deep breathing exercises\"],\"sponsor\":\"Beni-Suef University\",\"enrollment\":44,\"start_date\":",
+    "elapsed_ms": 402
+  },
+  {
+    "index": 69,
+    "connector": "clinical-genomics",
+    "tool": "clingen_gene_validity",
+    "request": {
+      "gene": "BRCA2"
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":2,\"records\":[{\"gene_symbol\":\"BRCA2\",\"hgnc_id\":\"HGNC:1101\",\"disease_label\":\"Fanconi anemia complementation group D1\",\"mondo_id\":\"MONDO:0011584\",\"moi\":\"AR\",\"sop\":\"SOP6\",\"classification\":\"Definitive\",\"expert_panel\":\"Hereditary Cancer Gene Curation Expert Panel\",\"affiliate_id\":\"40023\",\"animal_model_only\":false,\"assertion_id\":\"CGGV:assertion_48faf04b-ffc4-4163-8570-22f5c29c4064-2019-04-19T160000.000Z\"},{\"gene_symbol\":\"BRCA2\",\"hgnc_id\":\"HGNC:1101\",\"disease_label\":\"BRCA2-related cancer predisp",
+    "elapsed_ms": 3991
+  },
+  {
+    "index": 70,
+    "connector": "clinical-genomics",
+    "tool": "clingen_dosage_sensitivity",
+    "request": {
+      "gene": "TP53"
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":1,\"records\":[{\"record_type\":\"gene\",\"symbol\":\"TP53\",\"id\":\"HGNC:11998\",\"cytoband\":\"17p13.1\",\"grch37\":\"chr17:7571739-7590808\",\"grch38\":\"chr17:7668421-7687490\",\"haploinsufficiency\":{\"code\":\"3\",\"label\":\"Sufficient Evidence\"},\"triplosensitivity\":{\"code\":\"0\",\"label\":\"No Evidence\"},\"haplo_disease\":\"Li-Fraumeni syndrome\",\"haplo_mondo\":\"MONDO:0018875\",\"triplo_disease\":null,\"triplo_mondo\":null,\"omim\":\"Yes\",\"morbid\":\"Yes\"}],\"source\":\"ClinGen Dosage Sensitivity (search.clinicalgenome.org/api/dosage)",
+    "elapsed_ms": 1992
+  },
+  {
+    "index": 71,
+    "connector": "clinical-genomics",
+    "tool": "clingen_actionability",
+    "request": {
+      "gene": "BRCA1",
+      "context": "adult"
+    },
+    "status": "succeeded",
+    "sample": "{\"adult\":{\"total\":6,\"records\":[{\"doc_id\":\"AC133\",\"curation_type\":\"Gene-Condition\",\"context\":\"Adult\",\"release\":\"1.1.7\",\"release_date\":\"Thu, 14 Aug 2025 00:00:00 -0000\",\"genes\":[\"BRCA1\",\"BRCA2\"],\"gene_omim\":\"113705,600185\",\"disease\":\"Hereditary Breast and Ovarian Cancer\",\"disease_omim\":\"604370,612555\",\"status_overall\":\"Released\",\"outcome\":\"Breast Cancer (BRCA1)\",\"outcome_scoring_group\":\"GroupA\",\"intervention\":\"Mastectomy\",\"intervention_scoring_group\":\"GroupA\",\"severity\":\"2\",\"likelihood\":\"3A\",\"natu",
+    "elapsed_ms": 7870
+  },
+  {
+    "index": 72,
+    "connector": "clinical-genomics",
+    "tool": "clingen_variant_classifications",
+    "request": {
+      "gene": "BRCA1"
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":91,\"records\":[{\"interpretation_id\":\"https://erepo.genome.network/evrepo/api/interpretation/CA000691/MONDO:0700268/092\",\"uuid\":\"fb382bbb-2346-4169-a45f-4d4247e75156\",\"caid\":\"CAR:CA000691\",\"clinvar_variation_id\":\"186913\",\"gene_symbol\":\"BRCA1\",\"gene_ncbi_id\":\"672\",\"condition_id\":\"MONDO:0700268\",\"condition_label\":\"BRCA1-related cancer predisposition\",\"hgvs\":[\"CM000679.1:g.41267776G>A\",\"CM000679.2:g.43115759G>A\",\"ENST00000352993.7:c.101C>T\",\"ENST00000354071.7:c.101C>T\",\"ENST00000354071.8:n.1",
+    "elapsed_ms": 3043
+  },
+  {
+    "index": 73,
+    "connector": "clinical-genomics",
+    "tool": "civic_search_genes",
+    "request": {
+      "entrez_symbol": "BRAF"
+    },
+    "status": "succeeded",
+    "sample": "{\"total_count\":1,\"pages_fetched\":1,\"records\":[{\"id\":5,\"name\":\"BRAF\",\"entrezId\":673,\"fullName\":\"B-Raf proto-oncogene, serine/threonine kinase\",\"featureAliases\":[\"B-RAF1\",\"B-raf\",\"BRAF\",\"BRAF-1\",\"BRAF1\",\"NS7\",\"RAFB1\"],\"description\":\"BRAF mutations are found to be recurrent in many cancer types. Of these, the mutation of valine 600 to glutamic acid (V600E) is the most prevalent. V600E has been determined to be an activating mutation, and cells that harbor it, along with other V600 mutations are sen",
+    "elapsed_ms": 1915
+  },
+  {
+    "index": 74,
+    "connector": "clinical-genomics",
+    "tool": "civic_gene_variants",
+    "request": {
+      "gene_id": 5
+    },
+    "status": "succeeded",
+    "sample": "{\"total_count\":114,\"pages_fetched\":2,\"records\":[{\"id\":11,\"name\":\"V600D\",\"link\":\"/variants/11\",\"variantAliases\":[\"RS121913377\",\"VAL600ASP\"],\"variantTypes\":[{\"id\":47,\"name\":\"Missense Variant\",\"soid\":\"SO:0001583\"}],\"feature\":{\"id\":5,\"name\":\"BRAF\"},\"singleVariantMolecularProfileId\":11,\"alleleRegistryId\":\"CA16602419\",\"clinvarIds\":[\"375939\"],\"hgvsDescriptions\":[\"ENST00000288602.6:c.1799_1800delTGinsAT\",\"NC_000007.13:g.140453135_140453136delinsAT\",\"NM_004333.4:c.1799_1800delTGinsAT\",\"NP_004324.2:p.Val6",
+    "elapsed_ms": 1392
+  },
+  {
+    "index": 75,
+    "connector": "clinical-genomics",
+    "tool": "civic_get_variant",
+    "request": {
+      "variant_id": 12
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":{\"mode\":\"variant\",\"id\":12},\"found\":true,\"record\":{\"id\":12,\"name\":\"V600E\",\"link\":\"/variants/12\",\"variantAliases\":[\"RS113488022\",\"V640E\",\"VAL600GLU\",\"VAL640GLU\"],\"variantTypes\":[{\"id\":47,\"name\":\"Missense Variant\",\"soid\":\"SO:0001583\"}],\"feature\":{\"id\":5,\"name\":\"BRAF\"},\"singleVariantMolecularProfileId\":12,\"alleleRegistryId\":\"CA123643\",\"clinvarIds\":[\"13961\",\"376069\"],\"hgvsDescriptions\":[\"ENSP00000493543.1:p.Val600Glu\",\"ENSP00000496776.1:p.Val640Glu\",\"ENST00000288602.6:c.1799T>A\",\"NC_000007.1",
+    "elapsed_ms": 774
+  },
+  {
+    "index": 76,
+    "connector": "clinical-genomics",
+    "tool": "civic_search_variants",
+    "request": {
+      "name": "V600",
+      "gene_id": 5
+    },
+    "status": "succeeded",
+    "sample": "{\"total_count\":18,\"pages_fetched\":1,\"records\":[{\"id\":11,\"name\":\"V600D\",\"link\":\"/variants/11\",\"variantAliases\":[\"RS121913377\",\"VAL600ASP\"],\"variantTypes\":[{\"id\":47,\"name\":\"Missense Variant\",\"soid\":\"SO:0001583\"}],\"feature\":{\"id\":5,\"name\":\"BRAF\"},\"singleVariantMolecularProfileId\":11,\"alleleRegistryId\":\"CA16602419\",\"clinvarIds\":[\"375939\"],\"hgvsDescriptions\":[\"ENST00000288602.6:c.1799_1800delTGinsAT\",\"NC_000007.13:g.140453135_140453136delinsAT\",\"NM_004333.4:c.1799_1800delTGinsAT\",\"NP_004324.2:p.Val60",
+    "elapsed_ms": 388
+  },
+  {
+    "index": 77,
+    "connector": "clinical-genomics",
+    "tool": "civic_get_evidence_item",
+    "request": {
+      "evidence_id": 1409
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":{\"mode\":\"evidenceItem\",\"id\":1409},\"found\":true,\"record\":{\"id\":1409,\"name\":\"EID1409\",\"status\":\"ACCEPTED\",\"evidenceLevel\":\"A\",\"evidenceType\":\"PREDICTIVE\",\"evidenceDirection\":\"SUPPORTS\",\"significance\":\"SENSITIVITYRESPONSE\",\"evidenceRating\":5,\"variantOrigin\":\"SOMATIC\",\"therapyInteractionType\":null,\"description\":\"Phase 3 randomized clinical trial comparing vemurafenib with dacarbazine in 675 patients with previously untreated, metastatic melanoma with the BRAF V600E mutation. At 6 months, ov",
+    "elapsed_ms": 970
+  },
+  {
+    "index": 78,
+    "connector": "clinical-genomics",
+    "tool": "civic_search_evidence",
+    "request": {
+      "disease_name": "melanoma",
+      "evidence_level": "A"
+    },
+    "status": "succeeded",
+    "sample": "{\"total_count\":9,\"pages_fetched\":1,\"records\":[{\"id\":1409,\"name\":\"EID1409\",\"status\":\"ACCEPTED\",\"evidenceLevel\":\"A\",\"evidenceType\":\"PREDICTIVE\",\"evidenceDirection\":\"SUPPORTS\",\"significance\":\"SENSITIVITYRESPONSE\",\"evidenceRating\":5,\"variantOrigin\":\"SOMATIC\",\"therapyInteractionType\":null,\"description\":\"Phase 3 randomized clinical trial comparing vemurafenib with dacarbazine in 675 patients with previously untreated, metastatic melanoma with the BRAF V600E mutation. At 6 months, overall survival was ",
+    "elapsed_ms": 325
+  },
+  {
+    "index": 79,
+    "connector": "clinical-genomics",
+    "tool": "civic_get_assertion",
+    "request": {
+      "assertion_id": 7
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":{\"mode\":\"assertion\",\"id\":7},\"found\":true,\"record\":{\"id\":7,\"name\":\"AID7\",\"status\":\"ACCEPTED\",\"assertionType\":\"PREDICTIVE\",\"assertionDirection\":\"SUPPORTS\",\"significance\":\"SENSITIVITYRESPONSE\",\"ampLevel\":\"TIER_I_LEVEL_A\",\"summary\":\"BRAF V600E mutant melanoma is sensitive to dabrafenib and trametinib combination therapy\",\"description\":\"Combination treatment of BRAF inhibitor dabrafenib and MEK inhibitor trametinib is recommended for adjuvant treatment of stage III or recurrent melanoma with",
+    "elapsed_ms": 230
+  },
+  {
+    "index": 80,
+    "connector": "clinical-genomics",
+    "tool": "civic_search_assertions",
+    "request": {
+      "disease_name": "melanoma"
+    },
+    "status": "succeeded",
+    "sample": "{\"total_count\":12,\"pages_fetched\":1,\"records\":[{\"id\":7,\"name\":\"AID7\",\"status\":\"ACCEPTED\",\"assertionType\":\"PREDICTIVE\",\"assertionDirection\":\"SUPPORTS\",\"significance\":\"SENSITIVITYRESPONSE\",\"ampLevel\":\"TIER_I_LEVEL_A\",\"summary\":\"BRAF V600E mutant melanoma is sensitive to dabrafenib and trametinib combination therapy\",\"description\":\"Combination treatment of BRAF inhibitor dabrafenib and MEK inhibitor trametinib is recommended for adjuvant treatment of stage III or recurrent melanoma with BRAF V600E ",
+    "elapsed_ms": 393
+  },
+  {
+    "index": 81,
+    "connector": "clinical-genomics",
+    "tool": "civic_get_molecular_profile",
+    "request": {
+      "mp_id": 12
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":{\"mode\":\"molecularProfile\",\"id\":12},\"found\":true,\"record\":{\"id\":12,\"name\":\"BRAF V600E\",\"rawName\":\"#VID12\",\"link\":\"/molecular-profiles/12\",\"description\":\"BRAF V600E has been shown to be recurrent in many cancer types. It is one of the most widely studied variants in cancer. This variant is correlated with poor prognosis in certain cancer types, including colorectal cancer and papillary thyroid cancer. The targeted therapeutic dabrafenib has been shown to be effective in clinical trials w",
+    "elapsed_ms": 315
+  },
+  {
+    "index": 82,
+    "connector": "clinical-genomics",
+    "tool": "civic_search_molecular_profiles",
+    "request": {
+      "name": "BRAF V600E"
+    },
+    "status": "succeeded",
+    "sample": "{\"total_count\":41,\"pages_fetched\":1,\"records\":[{\"id\":12,\"name\":\"BRAF V600E\",\"rawName\":\"#VID12\",\"link\":\"/molecular-profiles/12\",\"description\":\"BRAF V600E has been shown to be recurrent in many cancer types. It is one of the most widely studied variants in cancer. This variant is correlated with poor prognosis in certain cancer types, including colorectal cancer and papillary thyroid cancer. The targeted therapeutic dabrafenib has been shown to be effective in clinical trials with an array of BRAF",
+    "elapsed_ms": 434
+  },
+  {
+    "index": 83,
+    "connector": "clinical-genomics",
+    "tool": "civic_search_diseases",
+    "request": {
+      "name": "melanoma"
+    },
+    "status": "succeeded",
+    "sample": "{\"total_count\":18,\"pages_fetched\":1,\"records\":[{\"id\":7,\"name\":\"Melanoma\",\"displayName\":\"Melanoma\",\"doid\":\"1909\",\"diseaseUrl\":\"https://www.disease-ontology.org/?id=DOID:1909\",\"diseaseAliases\":[\"Malignant Melanoma\",\"Naevocarcinoma\"],\"link\":\"/diseases/7\"},{\"id\":31,\"name\":\"Malignant Anus Melanoma\",\"displayName\":\"Malignant Anus Melanoma\",\"doid\":\"14145\",\"diseaseUrl\":\"https://www.disease-ontology.org/?id=DOID:14145\",\"diseaseAliases\":[\"Anal Melanoma\",\"Malignant Melanoma Of Anus\"],\"link\":\"/diseases/31\"},",
+    "elapsed_ms": 211
+  },
+  {
+    "index": 84,
+    "connector": "clinical-genomics",
+    "tool": "civic_search_therapies",
+    "request": {
+      "name": "vemurafenib"
+    },
+    "status": "succeeded",
+    "sample": "{\"total_count\":9,\"pages_fetched\":1,\"records\":[{\"id\":4,\"name\":\"Vemurafenib\",\"ncitId\":\"C64768\",\"therapyUrl\":\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64768\",\"therapyAliases\":[\"1-propanesulfonamide, N-(3-((5-(4-chlorophenyl)-1h-pyrrolo(2,3-b)pyridin-3-yl)carbonyl)-2,4-difluorophenyl)-\",\"BRAF (V600E) Kinase Inhibitor RO5185426\",\"BRAF(V600E) Kinase Inhibitor RO5185426\",\"PLX 4032\",\"PLX-4032\",\"PLX4032\",\"RG 7204\",\"RG-7204\",\"RG7204\",\"RO 5185426\",\"RO-51",
+    "elapsed_ms": 279
+  },
+  {
+    "index": 85,
+    "connector": "clinical-genomics",
+    "tool": "open_targets_graphql",
+    "request": {
+      "query": "query($id: String!){ target(ensemblId: $id){ approvedSymbol associatedDiseases{ count } } }",
+      "variables": {
+        "id": "ENSG00000157764"
+      }
+    },
+    "status": "succeeded",
+    "sample": "{\"data\":{\"target\":{\"approvedSymbol\":\"BRAF\",\"associatedDiseases\":{\"count\":3139}}},\"attempts\":1}",
+    "elapsed_ms": 1235
+  },
+  {
+    "index": 86,
+    "connector": "clinical-genomics",
+    "tool": "open_targets_disease_drugs",
+    "request": {
+      "efo_id": "MONDO_0004992",
+      "size": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"id\":\"MONDO_0004992\",\"name\":\"cancer\",\"drugAndClinicalCandidates\":{\"count\":698,\"rows\":[{\"id\":\"002ada7cf7f43cc80cc5952af1f4f23f520b846a3219a5bee4e43b4e32e8ae71\",\"maxClinicalStage\":\"PHASE_1\",\"drug\":{\"id\":\"CHEMBL218291\",\"name\":\"FORODESINE\",\"drugType\":\"Small molecule\"}},{\"id\":\"0051a9320716d3d699acdb14de5862c608d65cf2980509476775f637b2f8e181\",\"maxClinicalStage\":\"PHASE_2_3\",\"drug\":{\"id\":\"CHEMBL1983268\",\"name\":\"ENTRECTINIB\",\"drugType\":\"Small molecule\"}}]}}",
+    "elapsed_ms": 643
+  },
+  {
+    "index": 87,
+    "connector": "clinical-genomics",
+    "tool": "open_targets_disease_targets",
+    "request": {
+      "efo_id": "MONDO_0004992",
+      "size": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"id\":\"MONDO_0004992\",\"name\":\"cancer\",\"associatedTargets\":{\"count\":22581,\"rows\":[{\"score\":0.9401916998131483,\"target\":{\"id\":\"ENSG00000139618\",\"approvedSymbol\":\"BRCA2\"}},{\"score\":0.9310138464317537,\"target\":{\"id\":\"ENSG00000141510\",\"approvedSymbol\":\"TP53\"}}]}}",
+    "elapsed_ms": 1755
+  },
+  {
+    "index": 88,
+    "connector": "clinical-genomics",
+    "tool": "open_targets_drug",
+    "request": {
+      "chembl_id": "CHEMBL1201583"
+    },
+    "status": "succeeded",
+    "sample": "{\"id\":\"CHEMBL1201583\",\"name\":\"BEVACIZUMAB\",\"drugType\":\"Antibody\",\"maximumClinicalStage\":\"APPROVAL\",\"mechanismsOfAction\":{\"rows\":[{\"mechanismOfAction\":\"Vascular endothelial growth factor A inhibitor\",\"actionType\":\"INHIBITOR\",\"targets\":[{\"id\":\"ENSG00000112715\",\"approvedSymbol\":\"VEGFA\"}]}]}}",
+    "elapsed_ms": 448
+  },
+  {
+    "index": 89,
+    "connector": "structures",
+    "tool": "emdb_get_entries",
+    "request": {
+      "emdb_ids": [
+        "EMD-11638",
+        "emd-3061"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":2,\"records\":[{\"emdb_id\":\"EMD-11638\",\"title\":\"Cryo-EM structure of mouse heavy-chain apoferritin at 1.22 A\",\"status\":\"REL\",\"is_obsolete\":false,\"superseded_by\":[],\"obsolete_date\":null,\"method\":\"singleParticle\",\"aggregation_state\":\"particle\",\"resolution_angstrom\":1.22,\"resolution_method\":\"FSC 0.143 CUT-OFF\",\"deposition_date\":\"2020-08-20\",\"header_release_date\":\"2020-10-28\",\"map_release_date\":\"2020-10-28\",\"update_date\":\"2024-07-10\",\"sample_name\":\"Mouse heavy-chain apoferritin\",\"macromo",
+    "elapsed_ms": 1009
+  },
+  {
+    "index": 90,
+    "connector": "structures",
+    "tool": "emdb_search_entries",
+    "request": {
+      "query": "title:\"apoferritin\" AND resolution:[0 TO 1.5]",
+      "max_rows": 500
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":\"title:\\\"apoferritin\\\" AND resolution:[0 TO 1.5]\",\"num_found_released\":25,\"rows_retrieved\":25,\"rows_by_status\":{\"REL\":25},\"released_complete\":true,\"records\":[{\"emdb_id\":\"EMD-11103\",\"title\":\"1.25 A structure of human apoferritin obtained from Titan Mono-BCOR microscope\",\"resolution\":\"1.25\",\"structure_determination_method\":\"singleParticle\",\"fitted_pdbs\":\"6z6u\",\"current_status\":\"REL\",\"release_date\":\"2020-06-24T00:00:00Z\"},{\"emdb_id\":\"EMD-11638\",\"title\":\"Cryo-EM structure of mouse heavy-cha",
+    "elapsed_ms": 863
+  },
+  {
+    "index": 91,
+    "connector": "structures",
+    "tool": "emdb_get_entry_section",
+    "request": {
+      "emdb_ids": [
+        "EMD-11638"
+      ],
+      "section": "imaging"
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":1,\"section\":\"imaging\",\"records\":[{\"emdb_id\":\"EMD-11638\",\"method\":\"singleParticle\",\"microscopy\":[{\"id\":1,\"type\":\"single_particle_microscopy\",\"microscope\":\"FEI TITAN KRIOS\",\"acceleration_voltage\":{\"value\":300,\"units\":\"kV\"},\"electron_source\":\"FIELD EMISSION GUN\",\"illumination_mode\":\"FLOOD BEAM\",\"imaging_mode\":\"BRIGHT FIELD\",\"nominal_cs\":{\"value\":2.7,\"units\":\"mm\"},\"nominal_defocus_min\":{\"value\":0.3,\"units\":\"\u00b5m\"},\"nominal_defocus_max\":{\"value\":0.9,\"units\":\"\u00b5m\"},\"nominal_magnification\":",
+    "elapsed_ms": 3
+  },
+  {
+    "index": 92,
+    "connector": "structures",
+    "tool": "emdb_get_validation",
+    "request": {
+      "emdb_ids": [
+        "EMD-11638",
+        "EMD-3061"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":2,\"records\":[{\"emdb_id\":\"EMD-11638\",\"has_validation_analysis\":true,\"resolution_angstrom\":1.22,\"qscore_average\":0.911,\"atom_inclusion_average\":0.752,\"available_blocks\":[\"atom_inclusion_by_level\",\"ccc\",\"cccscore_surface\",\"central_slice\",\"data_validation\",\"density_distribution\",\"feature_assessment\",\"fsc\",\"half_even_mmfsc\",\"half_odd_mmfsc\",\"largest_variance_slice\",\"load_fsc\",\"local_res_histogram\",\"map_local_resolution_views\",\"map_mask_surface\",\"map_surface\",\"mapmodel_assemble_surface\"",
+    "elapsed_ms": 1478
+  },
+  {
+    "index": 93,
+    "connector": "structures",
+    "tool": "complexportal_get_complexes",
+    "request": {
+      "complex_acs": [
+        "CPX-2158",
+        "CPX-2419"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":2,\"records\":[{\"complex_ac\":\"CPX-2158\",\"intact_ac\":\"EBI-9008420\",\"name\":\"Hemoglobin HbA complex\",\"systematic_name\":\"2xHBA1:2xHBB\",\"synonyms\":[\"2xHBA2:2xHBB\",\"HBA-HBB complex\",\"HBA-HBB heterotetramer\",\"HBA1-HBB complex\",\"HBA1-HBB heterotetramer\",\"HBA2-HBB complex\",\"HBA2-HBB heterotetramer\",\"Haemoglobin HbA complex\",\"adult hemoglobin HbA complex\"],\"species_name\":\"Homo sapiens\",\"taxid\":9606,\"predicted_complex\":false,\"evidence\":{\"eco_code\":\"ECO:0000353\",\"description\":\"physical interact",
+    "elapsed_ms": 1579
+  },
+  {
+    "index": 94,
+    "connector": "structures",
+    "tool": "complexportal_search_by_participant",
+    "request": {
+      "accession": "P69905",
+      "participants_only": true
+    },
+    "status": "succeeded",
+    "sample": "{\"query_accession\":\"P69905\",\"solr_query\":\"pxref:\\\"P69905\\\"\",\"total_reported\":9,\"total_retrieved\":9,\"complexes\":[{\"complex_ac\":\"CPX-2158\",\"name\":\"Hemoglobin HbA complex\",\"species_name\":\"Homo sapiens\",\"taxid\":9606,\"predicted_complex\":false,\"interactors\":[{\"identifier\":\"P68871\",\"name\":\"HBB\",\"interactor_type\":\"protein\",\"stoichiometry_raw\":\"minValue: 2, maxValue: 2\"},{\"identifier\":\"P69905\",\"name\":\"HBA1\",\"interactor_type\":\"protein\",\"stoichiometry_raw\":\"minValue: 2, maxValue: 2\"},{\"identifier\":\"CHEBI:3",
+    "elapsed_ms": 344
+  },
+  {
+    "index": 95,
+    "connector": "structures",
+    "tool": "intact_fetch_interactions",
+    "request": {
+      "query": "P04637",
+      "min_mi_score": 0.45,
+      "interactor_species": [
+        "Homo sapiens"
+      ],
+      "max_records_returned": 200
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":\"P04637\",\"min_mi_score\":0.45,\"max_mi_score\":1,\"total_elements\":1479,\"n_records\":1479,\"records_truncated\":true,\"n_records_returned\":200,\"records\":[{\"interaction_ac\":\"EBI-1108409\",\"binary_interaction_id\":1348160,\"ac_a\":\"EBI-366083\",\"ac_b\":\"EBI-389668\",\"id_a\":\"P04637\",\"id_b\":\"Q00987\",\"id_a_database\":\"uniprotkb\",\"id_b_database\":\"uniprotkb\",\"molecule_a\":\"TP53\",\"molecule_b\":\"MDM2\",\"species_a\":\"Homo sapiens\",\"species_b\":\"Homo sapiens\",\"taxid_a\":9606,\"taxid_b\":9606,\"interaction_type\":\"physical ",
+    "elapsed_ms": 6940
+  },
+  {
+    "index": 96,
+    "connector": "structures",
+    "tool": "intact_get_interactor",
+    "request": {
+      "query": "P04637"
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":\"P04637\",\"n_matches\":11,\"interactors\":[{\"interactor_ac\":\"EBI-1264950\",\"preferred_identifier\":\"EBI-1264950\",\"name\":\"tp53_rara_human_protein\",\"species\":\"Homo sapiens\",\"taxid\":9606,\"interactor_type\":\"protein\",\"interaction_count\":1},{\"interactor_ac\":\"EBI-366083\",\"preferred_identifier\":\"P04637\",\"name\":\"TP53\",\"species\":\"Homo sapiens\",\"taxid\":9606,\"interactor_type\":\"protein\",\"interaction_count\":1757},{\"interactor_ac\":\"EBI-3895849\",\"preferred_identifier\":\"P04637-1\",\"name\":\"TP53\",\"species\":\"Homo",
+    "elapsed_ms": 441
+  },
+  {
+    "index": 97,
+    "connector": "structures",
+    "tool": "intact_get_interaction_details",
+    "request": {
+      "interaction_ac": "EBI-15635490",
+      "include_participants": true
+    },
+    "status": "succeeded",
+    "sample": "{\"interaction_ac\":\"EBI-15635490\",\"short_label\":\"ins-1\",\"type\":{\"name\":\"direct interaction\",\"mi\":\"MI:0407\"},\"detection_method\":{\"name\":\"saxs\",\"mi\":\"MI:0826\"},\"host_organism\":{\"scientificName\":\"In vitro\",\"taxId\":-1},\"negative\":false,\"publication\":{\"pubmed_id\":\"17472440\",\"title\":\"A helical structural nucleus is the primary elongating unit of insulin amyloid fibrils.\",\"journal\":\"PLoS biology\",\"publication_date\":\"2007-01-01\",\"authors\":[\"Vestergaard B.\",\" Groenning M.\",\" Roessle M.\",\" Kastrup JS.\",\" v",
+    "elapsed_ms": 4198
+  },
+  {
+    "index": 98,
+    "connector": "structures",
+    "tool": "intact_build_network",
+    "request": {
+      "seed_accessions": [
+        "P04637",
+        "Q00987"
+      ],
+      "min_mi_score": 0.45,
+      "max_interactors_expanded": 25
+    },
+    "status": "succeeded",
+    "elapsed_ms": 80415,
+    "sample": "{\"seeds\":[\"P04637\",\"Q00987\"],\"min_mi_score\":0.45,\"n_nodes\":298,\"nodes\":[\"A0A1B0GVL4\",\"A0A6Q8PF08\",\"BC032729\",\"DIP-24261N\",\"DIP-58558N\",\"EBI-16429055\",\"EBI-25865403\",\"ENSG00000026508\",\"ENSG00000115129\",\"ENSG00000124762\",\"ENSG00000135679\",\"O00255\",\"O14503\",\"O14641\",\"O14757\",\"O14920\",\"O14980\",\"O15047\",\"O15151\",\"O15164\",\"O15169\",\"O15297\",\"O15350\",\"O15379\",\"O43189\",\"O43524\",\"O43741\",\"O43847\",\"O60285\",\"O60341-1\",\"O60936\",\"O70445\",\"O75147\",\"O75925\",\"O75928\",\"O75970\",\"O95352-2\",\"O95376\",\"O95644\",\"O95816\",\"O95863\",\"O96017\",\"P00519\",\"P01106\",\"P02829\",\"P03070\",\"P03120\",\"P03126\",\"P03372\",\"P04019\",\"P04183\",\"P04271\",\"P04637\",\"P04637-1\",\"P04637-7\",\"P04731\",\"P04792\",\"P05412\",\"P06400\",\"P06463\",\"P06703\",\"P067"
+  },
+  {
+    "index": 99,
+    "connector": "structures",
+    "tool": "pdb_search_structures",
+    "request": {
+      "uniprot_accession": "P04637",
+      "experimental_method": "X-RAY DIFFRACTION",
+      "max_rows": 50
+    },
+    "status": "succeeded",
+    "elapsed_ms": 671,
+    "sample": "{\"total_count\":275,\"n_retrieved\":50,\"truncated\":true,\"max_rows\":50,\"records\":[{\"pdb_id\":\"1AIE\",\"score\":1},{\"pdb_id\":\"1C26\",\"score\":1},{\"pdb_id\":\"1GZH\",\"score\":1},{\"pdb_id\":\"1H26\",\"score\":1},{\"pdb_id\":\"1KZY\",\"score\":1},{\"pdb_id\":\"1MA3\",\"score\":1},{\"pdb_id\":\"1TSR\",\"score\":1},{\"pdb_id\":\"1TUP\",\"score\":1},{\"pdb_id\":\"1UOL\",\"score\":1},{\"pdb_id\":\"1XQH\",\"score\":1},{\"pdb_id\":\"1YC5\",\"score\":1},{\"pdb_id\":\"1YCQ\",\"score\":1},{\"pdb_id\":\"1YCR\",\"score\":1},{\"pdb_id\":\"1YCS\",\"score\":1},{\"pdb_id\":\"21EX\",\"score\":1},{\"pdb_id\":\"2AC0\",\"score\":1},{\"pdb_id\":\"2ADY\",\"score\":1},{\"pdb_id\":\"2AHI\",\"score\":1},{\"pdb_id\":\"2ATA\",\"score\":1},{\"pdb_id\":\"2B3G\",\"score\":1},{\"pdb_id\":\"2BIM\",\"score\":1},{\"pdb_id\":\"2BIN\",\"score\":1},{\"pdb_"
+  },
+  {
+    "index": 100,
+    "connector": "structures",
+    "tool": "pdb_get_structures",
+    "request": {
+      "pdb_ids": [
+        "1TUP",
+        "1tup"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":2,\"n_unique\":1,\"n_blank_skipped\":0,\"n_duplicate_skipped\":1,\"records\":[{\"pdb_id\":\"1TUP\",\"title\":\"TUMOR SUPPRESSOR P53 COMPLEXED WITH DNA\",\"experimental_methods\":[\"X-RAY DIFFRACTION\"],\"resolution_angstrom\":2.2,\"resolutions_combined\":[2.2],\"structure_determination_methodology\":\"experimental\",\"deposit_date\":\"1995-07-11T00:00:00.000+00:00\",\"initial_release_date\":\"1995-07-11T00:00:00.000+00:00\",\"revision_date\":\"2024-02-14T00:00:00.000+00:00\",\"status_code\":\"REL\",\"molecular_weight_kda\":86",
+    "elapsed_ms": 1191
+  },
+  {
+    "index": 101,
+    "connector": "structures",
+    "tool": "pdb_get_entities",
+    "request": {
+      "pdb_id": "1TUP",
+      "include_sequences": true
+    },
+    "status": "succeeded",
+    "sample": "{\"pdb_id\":\"1TUP\",\"n_polymer_entities\":3,\"polymer_entity_ids\":[\"1\",\"2\",\"3\"],\"truncated\":false,\"records\":[{\"rcsb_id\":\"1TUP_1\",\"entry_id\":\"1TUP\",\"entity_id\":\"1\",\"description\":\"DNA (5'-D(*TP*TP*TP*CP*CP*TP*AP*GP*AP*CP*TP*TP*GP*CP*CP*CP*A P*AP*TP*TP*A)-3')\",\"polymer_type\":\"DNA\",\"polymer_type_detail\":\"polydeoxyribonucleotide\",\"sequence_length\":21,\"mutation_count\":0,\"n_copies_deposited\":1,\"molecular_weight_kda\":6.348,\"asym_ids\":[\"A\"],\"auth_asym_ids\":[\"E\"],\"source_organisms\":[],\"uniprot_ids\":[],\"referen",
+    "elapsed_ms": 2304
+  },
+  {
+    "index": 102,
+    "connector": "structures",
+    "tool": "pdb_get_ligands",
+    "request": {
+      "pdb_id": "1TUP"
+    },
+    "status": "succeeded",
+    "sample": "{\"pdb_id\":\"1TUP\",\"n_nonpolymer_entities\":1,\"n_returned\":1,\"truncated\":false,\"ligands\":[{\"entity_id\":\"4\",\"comp_id\":\"ZN\",\"description\":\"ZINC ION\",\"n_copies_deposited\":3,\"auth_asym_ids\":[\"A\",\"B\",\"C\"],\"chem_comp\":{\"comp_id\":\"ZN\",\"name\":\"ZINC ION\",\"formula\":\"Zn\",\"formula_weight\":65.409,\"formal_charge\":2,\"type\":\"non-polymer\",\"inchikey\":\"PTFCDOFLOPIGGS-UHFFFAOYSA-N\",\"smiles\":\"[Zn+2]\"}}]}",
+    "elapsed_ms": 763
+  },
+  {
+    "index": 103,
+    "connector": "structures",
+    "tool": "alphafold_get_prediction",
+    "request": {
+      "uniprot_accession": "P04637"
+    },
+    "status": "succeeded",
+    "sample": "{\"uniprot_accession\":\"P04637\",\"has_model\":true,\"n_models\":9,\"models\":[{\"model_entity_id\":\"AF-P04637-F1\",\"entry_id\":\"AF-P04637-F1\",\"provider_id\":\"GDM\",\"tool_used\":\"AlphaFold Monomer v2.0 pipeline\",\"uniprot_accession\":\"P04637\",\"uniprot_id\":\"P53_HUMAN\",\"uniprot_description\":\"Cellular tumor antigen p53\",\"gene\":\"TP53\",\"organism_scientific_name\":\"Homo sapiens\",\"tax_id\":9606,\"is_uniprot_reviewed\":true,\"is_reference_proteome\":true,\"is_complex\":false,\"sequence_length\":393,\"uniprot_start\":1,\"uniprot_end\":",
+    "elapsed_ms": 375
+  },
+  {
+    "index": 104,
+    "connector": "structures",
+    "tool": "alphafold_check_coverage",
+    "request": {
+      "uniprot_accessions": [
+        "P04637",
+        "P38398"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":2,\"n_unique\":2,\"n_blank_skipped\":0,\"n_duplicate_skipped\":0,\"not_processed\":[],\"records\":[{\"uniprot_accession\":\"P04637\",\"has_model\":true,\"n_models\":9,\"model_entity_id\":\"AF-P04637-F1\",\"latest_version\":6,\"global_plddt\":75.06,\"sequence_length\":393},{\"uniprot_accession\":\"P38398\",\"has_model\":true,\"n_models\":8,\"model_entity_id\":\"AF-P38398-F1\",\"latest_version\":6,\"global_plddt\":41.59,\"sequence_length\":1863}]}",
+    "elapsed_ms": 414
+  },
+  {
+    "index": 105,
+    "connector": "chembl",
+    "tool": "compound_search",
+    "request": {
+      "name": "aspirin",
+      "limit": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":2,\"total\":8,\"compounds\":[{\"molecule_chembl_id\":\"CHEMBL25\",\"pref_name\":\"ASPIRIN\",\"molecule_type\":\"Small molecule\",\"max_phase\":4,\"first_approval\":1950,\"oral\":true,\"parenteral\":false,\"topical\":false,\"black_box_warning\":false,\"therapeutic_flag\":true,\"natural_product\":true,\"withdrawn_flag\":false,\"molecule_properties\":{\"alogp\":1.31,\"aromatic_rings\":1,\"full_mwt\":180.16,\"hba\":3,\"hbd\":1,\"heavy_atoms\":13,\"psa\":63.6,\"rtb\":2,\"ro3_pass\":\"N\",\"num_ro5_violations\":0,\"qed_weighted\":0.55,\"molecular_formu",
+    "elapsed_ms": 475
+  },
+  {
+    "index": 106,
+    "connector": "chembl",
+    "tool": "drug_search",
+    "request": {
+      "indication": "hypertension",
+      "only_approved": true,
+      "limit": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":2,\"total\":106,\"drugs\":[{\"molecule_chembl_id\":\"CHEMBL1014\",\"pref_name\":\"CANDESARTAN CILEXETIL\",\"molecule_type\":\"Small molecule\",\"max_phase\":4,\"first_approval\":1998,\"oral\":true,\"parenteral\":false,\"therapeutic_flag\":true,\"indications\":null,\"applicants\":null,\"atc_code_description\":null,\"availability_type\":1,\"biotherapeutic\":null,\"black_box\":null,\"black_box_warning\":1,\"chirality\":0,\"drug_type\":null,\"first_in_class\":0,\"helm_notation\":null,\"molecule_properties\":{\"alogp\":6.32,\"aromatic_rings\":5",
+    "elapsed_ms": 2664
+  },
+  {
+    "index": 107,
+    "connector": "chembl",
+    "tool": "get_admet",
+    "request": {
+      "molecule_chembl_id": "CHEMBL25"
+    },
+    "status": "succeeded",
+    "sample": "{\"found\":true,\"properties\":{\"molecule_chembl_id\":\"CHEMBL25\",\"alogp\":1.31,\"molecular_weight\":180.16,\"mw_freebase\":180.16,\"psa\":63.6,\"hba\":3,\"hbd\":1,\"rtb\":2,\"aromatic_rings\":1,\"heavy_atoms\":13,\"num_ro5_violations\":0,\"ro3_pass\":\"N\",\"qed_weighted\":0.55,\"molecular_formula\":\"C9H8O4\"}}",
+    "elapsed_ms": 670
+  },
+  {
+    "index": 108,
+    "connector": "chembl",
+    "tool": "get_bioactivity",
+    "request": {
+      "molecule_chembl_id": "CHEMBL25",
+      "activity_type": "IC50",
+      "limit": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":2,\"total\":458,\"activities\":[{\"activity_id\":88326,\"molecule_chembl_id\":\"CHEMBL25\",\"target_chembl_id\":\"CHEMBL612545\",\"target_pref_name\":\"Unchecked\",\"target_organism\":null,\"standard_type\":\"IC50\",\"standard_relation\":\"=\",\"standard_value\":34600,\"standard_units\":\"nM\",\"pchembl_value\":4.46,\"assay_chembl_id\":\"CHEMBL762032\",\"assay_description\":\"Inhibitory concentration required against Arachidonic acid (100 uM) induced platelet aggregatory activity\",\"assay_type\":\"F\",\"data_validity_comment\":null,\"a",
+    "elapsed_ms": 621
+  },
+  {
+    "index": 109,
+    "connector": "chembl",
+    "tool": "get_mechanism",
+    "request": {
+      "molecule_chembl_id": "CHEMBL25"
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":1,\"total\":1,\"mechanisms\":[{\"mec_id\":1187,\"molecule_chembl_id\":\"CHEMBL25\",\"mechanism_of_action\":\"Cyclooxygenase inhibitor\",\"target_chembl_id\":\"CHEMBL2094253\",\"action_type\":\"INHIBITOR\",\"direct_interaction\":true,\"disease_efficacy\":true,\"mechanism_comment\":null,\"binding_site_comment\":null,\"selectivity_comment\":null,\"molecular_mechanism\":1,\"max_phase\":4,\"parent_molecule_chembl_id\":\"CHEMBL25\",\"record_id\":1343081,\"site_id\":null,\"mechanism_refs\":[{\"ref_id\":\"17131625\",\"ref_type\":\"PubMed\",\"ref_ur",
+    "elapsed_ms": 604
+  },
+  {
+    "index": 110,
+    "connector": "chembl",
+    "tool": "target_search",
+    "request": {
+      "gene_symbol": "EGFR",
+      "organism": "Homo sapiens",
+      "limit": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":2,\"total\":15,\"targets\":[{\"target_chembl_id\":\"CHEMBL203\",\"pref_name\":\"Epidermal growth factor receptor\",\"target_type\":\"SINGLE PROTEIN\",\"organism\":\"Homo sapiens\",\"tax_id\":9606,\"components\":[{\"component_id\":147,\"component_type\":\"PROTEIN\",\"accession\":\"P00533\",\"component_description\":\"Epidermal growth factor receptor\",\"gene_symbol\":\"EGFR\",\"relationship\":\"SINGLE PROTEIN\",\"target_component_xrefs\":[{\"xref_id\":\"4WRG\",\"xref_name\":\"A\",\"xref_src_db\":\"PDBe\",\"xref_src_url\":null},{\"xref_id\":\"5SX5\",\"xr",
+    "elapsed_ms": 574
+  },
+  {
+    "index": 111,
+    "connector": "biorxiv",
+    "tool": "get_categories",
+    "request": {},
+    "status": "succeeded",
+    "sample": "{\"success\":true,\"categories\":[{\"name\":\"animal behavior and cognition\",\"api_format\":\"animal_behavior_and_cognition\",\"description\":null},{\"name\":\"biochemistry\",\"api_format\":\"biochemistry\",\"description\":null},{\"name\":\"bioengineering\",\"api_format\":\"bioengineering\",\"description\":null},{\"name\":\"bioinformatics\",\"api_format\":\"bioinformatics\",\"description\":null},{\"name\":\"biophysics\",\"api_format\":\"biophysics\",\"description\":null},{\"name\":\"cancer biology\",\"api_format\":\"cancer_biology\",\"description\":null},{\"",
+    "elapsed_ms": 3
+  },
+  {
+    "index": 112,
+    "connector": "biorxiv",
+    "tool": "search_preprints",
+    "request": {
+      "recent_days": 30,
+      "category": "neuroscience",
+      "limit": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"success\":true,\"results\":[{\"doi\":\"10.64898/2026.04.16.718961\",\"title\":\"Stability of eye movement-related eardrum oscillations to acoustic and gravitational/postural manipulations\",\"authors\":\"Sotero Silva, N.; Kayser, C.\",\"date\":\"2026-08-11\",\"category\":\"neuroscience\",\"version\":\"3\",\"abstract_preview\":\"Recent studies describe Eye Movement-Related Eardrum Oscillations (EMREOs), low-frequency signals recorded in the ear canal that arise from the tympanic membrane and are triggered by saccadic eye mo",
+    "elapsed_ms": 3857
+  },
+  {
+    "index": 113,
+    "connector": "biorxiv",
+    "tool": "get_preprint",
+    "request": {
+      "doi": "10.1101/339747"
+    },
+    "status": "succeeded",
+    "sample": "{\"success\":true,\"preprint\":{\"doi\":\"10.1101/339747\",\"title\":\"Oxygen Restriction Generates Difficult-To-Culture Pathogens\",\"authors\":\"Kvich, L.; Fritz, B.; Crone, S. G.; Kragh, K. N.; Kolpen, M.; Soenderholm, M.; Andersson, M.; Koch, A.; Jensen, P. O.; Bjarnsholt, T.\",\"author_corresponding\":\"Thomas  Bjarnsholt\",\"author_corresponding_institution\":\"University of Copenhagen\",\"date\":\"2019-05-10\",\"version\":\"4\",\"type\":\"new results\",\"category\":\"microbiology\",\"license\":\"cc_no\",\"abstract\":\"Induction of a n",
+    "elapsed_ms": 1601
+  },
+  {
+    "index": 114,
+    "connector": "biorxiv",
+    "tool": "search_published_preprints",
+    "request": {
+      "publisher": "10.1038",
+      "date_from": "2024-01-01",
+      "date_to": "2024-01-05",
+      "limit": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"success\":true,\"results\":[{\"biorxiv_doi\":\"10.1101/2022.09.11.507474\",\"published_doi\":\"10.1038/s41564-023-01548-y\",\"preprint_title\":\"A new route for integron cassette dissemination among bacterial genomes\",\"preprint_category\":\"genetics\",\"preprint_date\":\"2022-09-13\",\"published_date\":\"2024-01-03\"},{\"biorxiv_doi\":\"10.1101/2023.09.27.559743\",\"published_doi\":\"10.1038/s42255-023-00939-z\",\"preprint_title\":\"Proteolytic activation of fatty acid synthase signals pan-stress resolution\",\"preprint_category\":",
+    "elapsed_ms": 815
+  },
+  {
+    "index": 115,
+    "connector": "biorxiv",
+    "tool": "search_by_funder",
+    "request": {
+      "funder_ror_id": "021nxhr62",
+      "date_from": "2025-04-10",
+      "date_to": "2025-05-10",
+      "limit": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"success\":true,\"results\":[{\"doi\":\"10.1101/2025.04.07.647376\",\"title\":\"SpeedyTrack: Direct microsecond wide-field single-molecule tracking and super-resolution mapping via CCD vertical shift\",\"authors\":\"Steves, M. A.; Xu, K.\",\"date\":\"2025-04-10\",\"category\":\"biophysics\",\"version\":\"1\",\"abstract_preview\":\"We introduce spatially-encoded dynamics tracking (SpeedyTrack), a strategy to enable direct microsecond wide-field single-molecule tracking/imaging on common microscopy setups. Capitalizing on the",
+    "elapsed_ms": 4971
+  },
+  {
+    "index": 116,
+    "connector": "biorxiv",
+    "tool": "get_content_statistics",
+    "request": {
+      "interval": "yearly"
+    },
+    "status": "succeeded",
+    "sample": "{\"success\":true,\"results\":[{\"year\":2013,\"new_papers\":109,\"new_papers_cumulative\":109,\"revised_papers\":34,\"revised_papers_cumulative\":34},{\"year\":2014,\"new_papers\":886,\"new_papers_cumulative\":995,\"revised_papers\":372,\"revised_papers_cumulative\":406},{\"year\":2015,\"new_papers\":1774,\"new_papers_cumulative\":2769,\"revised_papers\":776,\"revised_papers_cumulative\":1182},{\"year\":2016,\"new_papers\":4718,\"new_papers_cumulative\":7487,\"revised_papers\":1903,\"revised_papers_cumulative\":3085},{\"year\":2017,\"new_pa",
+    "elapsed_ms": 572
+  },
+  {
+    "index": 117,
+    "connector": "biorxiv",
+    "tool": "get_usage_statistics",
+    "request": {
+      "interval": "yearly"
+    },
+    "status": "succeeded",
+    "sample": "{\"success\":true,\"results\":[{\"year\":\"2013\",\"abstract_views\":2665,\"full_text_views\":0,\"pdf_downloads\":3716,\"abstract_cumulative\":2665,\"full_text_cumulative\":0,\"pdf_cumulative\":3716},{\"year\":\"2014\",\"abstract_views\":100890,\"full_text_views\":0,\"pdf_downloads\":16389,\"abstract_cumulative\":103555,\"full_text_cumulative\":0,\"pdf_cumulative\":20105},{\"year\":\"2015\",\"abstract_views\":127130,\"full_text_views\":0,\"pdf_downloads\":52409,\"abstract_cumulative\":230685,\"full_text_cumulative\":0,\"pdf_cumulative\":72514},{\"",
+    "elapsed_ms": 279
+  },
+  {
+    "index": 118,
+    "connector": "drug-regulatory",
+    "tool": "search_drug_applications",
+    "request": {
+      "generic": "ATORVASTATIN CALCIUM",
+      "marketing_status": "Prescription",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":22,\"n_returned\":2,\"truncated\":true,\"last_updated\":\"2026-09-09\",\"records\":[{\"application_number\":\"ANDA090548\",\"sponsor_name\":\"APOTEX INC\",\"products\":[{\"product_number\":\"004\",\"reference_drug\":\"No\",\"brand_name\":\"ATORVASTATIN CALCIUM\",\"active_ingredients\":[{\"name\":\"ATORVASTATIN CALCIUM\",\"strength\":\"EQ 80MG BASE\"}],\"reference_standard\":\"No\",\"dosage_form\":\"TABLET\",\"route\":\"ORAL\",\"marketing_status\":\"Prescription\",\"te_code\":\"AB\"},{\"product_number\":\"002\",\"reference_drug\":\"No\",\"brand_name\":\"ATORV",
+    "elapsed_ms": 1454
+  },
+  {
+    "index": 119,
+    "connector": "drug-regulatory",
+    "tool": "get_drug_application",
+    "request": {
+      "application_number": "NDA020702"
+    },
+    "status": "succeeded",
+    "sample": "{\"application_number\":\"NDA020702\",\"found\":true,\"record\":{\"submissions\":[{\"submission_type\":\"SUPPL\",\"submission_number\":\"33\",\"submission_status\":\"AP\",\"submission_status_date\":\"20021018\",\"review_priority\":\"STANDARD\",\"submission_class_code\":\"EFFICACY\",\"submission_class_code_description\":\"Efficacy\",\"application_docs\":[{\"id\":\"13244\",\"url\":\"http://www.accessdata.fda.gov/drugsatfda_docs/label/2002/20702s33lbl.pdf\",\"date\":\"20021018\",\"type\":\"Label\"},{\"id\":\"25569\",\"url\":\"http://www.accessdata.fda.gov/drug",
+    "elapsed_ms": 1454
+  },
+  {
+    "index": 120,
+    "connector": "drug-regulatory",
+    "tool": "count_drug_applications",
+    "request": {
+      "count_field": "marketing_status"
+    },
+    "status": "succeeded",
+    "sample": "{\"count_field\":\"marketing_status\",\"api_field\":\"products.marketing_status\",\"n_buckets\":4,\"bucket_sum\":29530,\"buckets\":[{\"term\":\"Discontinued\",\"count\":14804},{\"term\":\"Prescription\",\"count\":13397},{\"term\":\"None (Tentative Approval)\",\"count\":718},{\"term\":\"Over-the-counter\",\"count\":611}]}",
+    "elapsed_ms": 305
+  },
+  {
+    "index": 121,
+    "connector": "drug-regulatory",
+    "tool": "get_drug_statistics",
+    "request": {},
+    "status": "succeeded",
+    "sample": "{\"total_applications\":29323,\"last_updated\":\"2026-09-09\",\"marketing_status\":[{\"term\":\"Discontinued\",\"count\":14804},{\"term\":\"Prescription\",\"count\":13397},{\"term\":\"None (Tentative Approval)\",\"count\":718},{\"term\":\"Over-the-counter\",\"count\":611}],\"dosage_form_top\":[{\"term\":\"TABLET\",\"count\":10739},{\"term\":\"INJECTABLE\",\"count\":5415},{\"term\":\"CAPSULE\",\"count\":2857},{\"term\":\"SOLUTION\",\"count\":2216},{\"term\":\"TABLET, EXTENDED RELEASE\",\"count\":1171},{\"term\":\"SOLUTION/DROPS\",\"count\":622},{\"term\":\"CREAM\",\"cou",
+    "elapsed_ms": 1628
+  },
+  {
+    "index": 122,
+    "connector": "drug-regulatory",
+    "tool": "list_pharmacologic_classes",
+    "request": {
+      "class_type": "epc",
+      "max_buckets": 50
+    },
+    "status": "succeeded",
+    "sample": "{\"class_type\":\"epc\",\"n_classes\":50,\"classes\":[{\"term\":\"Corticosteroid [EPC]\",\"count\":328},{\"term\":\"Nonsteroidal Anti-inflammatory Drug [EPC]\",\"count\":238},{\"term\":\"Anti-epileptic Agent [EPC]\",\"count\":131},{\"term\":\"Thiazide Diuretic [EPC]\",\"count\":125},{\"term\":\"Atypical Antipsychotic [EPC]\",\"count\":117},{\"term\":\"Azole Antifungal [EPC]\",\"count\":112},{\"term\":\"Benzodiazepine [EPC]\",\"count\":111},{\"term\":\"Retinoid [EPC]\",\"count\":110},{\"term\":\"Angiotensin 2 Receptor Blocker [EPC]\",\"count\":108},{\"term\":",
+    "elapsed_ms": 289
+  },
+  {
+    "index": 123,
+    "connector": "drug-regulatory",
+    "tool": "get_generic_equivalents",
+    "request": {
+      "brand": "Lipitor"
+    },
+    "status": "succeeded",
+    "sample": "{\"brand\":\"Lipitor\",\"reference_applications\":[\"NDA020702\"],\"active_ingredient_sets\":[[\"ATORVASTATIN CALCIUM\"]],\"equivalents\":[{\"submissions\":[{\"submission_type\":\"ORIG\",\"submission_number\":\"1\",\"submission_status\":\"AP\",\"submission_status_date\":\"20230201\",\"review_priority\":\"STANDARD\",\"submission_class_code\":\"TYPE 3\",\"submission_class_code_description\":\"Type 3 - New Dosage Form\",\"application_docs\":[{\"id\":\"73365\",\"url\":\"http://www.accessdata.fda.gov/drugsatfda_docs/label/2023/213260s000lbl.pdf\",\"date\"",
+    "elapsed_ms": 895
+  },
+  {
+    "index": 124,
+    "connector": "drug-regulatory",
+    "tool": "search_drug_labels",
+    "request": {
+      "brand_name": "Tylenol",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"search\":\"openfda.brand_name:\\\"Tylenol\\\"\",\"total\":111,\"n_returned\":2,\"truncated\":true,\"records\":[{\"identification\":{\"set_id\":\"015a6179-bacb-452d-b594-4de628ddc11d\",\"spl_version\":\"11\",\"effective_time\":\"20241107\",\"brand_name\":[\"TYLENOL Extra Strength\"],\"generic_name\":[\"ACETAMINOPHEN\"],\"substance_name\":[\"ACETAMINOPHEN\"],\"manufacturer\":[\"Kenvue Brands LLC\"],\"route\":[\"ORAL\"],\"product_type\":[\"HUMAN OTC DRUG\"],\"application_number\":[\"M013\"]},\"has_boxed_warning\":false,\"warning_sections\":[\"warnings\"],\"in",
+    "elapsed_ms": 4870
+  },
+  {
+    "index": 125,
+    "connector": "human-genetics",
+    "tool": "gwas_associations_for_variant",
+    "request": {
+      "rs_id": "rs7412",
+      "max_records": 2
+    },
+    "status": "blocked",
+    "elapsed_ms": 30009,
+    "sample": "Connector request timed out after 1 attempt of 30000ms for https://www.ebi.ac.uk/gwas/rest/api/v2/associations?rs_id=rs7412&size=500&sort=p_value&direction=asc. This is the Connector's own deadline; increasing an outer execution timeout will not extend it. Do not retry solely with a longer timeout."
+  },
+  {
+    "index": 126,
+    "connector": "human-genetics",
+    "tool": "gwas_associations_for_gene",
+    "request": {
+      "gene_symbol": "PCSK9",
+      "max_records": 2
+    },
+    "status": "blocked",
+    "elapsed_ms": 30018,
+    "sample": "Connector request timed out after 1 attempt of 30000ms for https://www.ebi.ac.uk/gwas/rest/api/v2/associations?mapped_gene=PCSK9&size=500&sort=p_value&direction=asc. This is the Connector's own deadline; increasing an outer execution timeout will not extend it. Do not retry solely with a longer timeout."
+  },
+  {
+    "index": 127,
+    "connector": "human-genetics",
+    "tool": "gwas_associations_for_trait",
+    "request": {
+      "efo_id": "MONDO_0005010",
+      "max_records": 2
+    },
+    "status": "blocked",
+    "elapsed_ms": 30007,
+    "sample": "Connector request timed out after 1 attempt of 30000ms for https://www.ebi.ac.uk/gwas/rest/api/v2/associations?efo_id=MONDO_0005010&size=500&sort=p_value&direction=asc. This is the Connector's own deadline; increasing an outer execution timeout will not extend it. Do not retry solely with a longer timeout."
+  },
+  {
+    "index": 128,
+    "connector": "human-genetics",
+    "tool": "gwas_search_traits",
+    "request": {
+      "query": "coronary",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":\"coronary\",\"api_total\":14,\"returned\":2,\"truncated\":true,\"efo_traits\":[{\"efo_id\":\"MONDO_0021661\",\"efo_trait\":\"coronary atherosclerosis\",\"uri\":\"http://purl.obolibrary.org/obo/MONDO_0021661\"},{\"efo_id\":\"MONDO_0006805\",\"efo_trait\":\"intermediate coronary syndrome\",\"uri\":\"http://purl.obolibrary.org/obo/MONDO_0006805\"}]}",
+    "elapsed_ms": 557
+  },
+  {
+    "index": 129,
+    "connector": "human-genetics",
+    "tool": "gwas_search_studies",
+    "request": {
+      "efo_id": "MONDO_0005010",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"filters\":{\"efo_id\":\"MONDO_0005010\"},\"api_total\":211,\"returned\":2,\"truncated\":true,\"studies\":[{\"accession_id\":\"GCST90837195\",\"disease_trait\":\"Coronary artery disease\",\"efo_traits\":[{\"efo_id\":\"MONDO_0005010\",\"efo_trait\":\"coronary artery disorder\"}],\"bg_efo_traits\":[],\"pubmed_id\":42243103,\"initial_sample_size\":\"55,251 European ancestry cases, 402,261 European ancestry controls\",\"replication_sample_size\":\"NA\",\"discovery_ancestry\":[\"457512 European (U.K.)\"],\"replication_ancestry\":[],\"genotyping_tec",
+    "elapsed_ms": 30499
+  },
+  {
+    "index": 130,
+    "connector": "human-genetics",
+    "tool": "gwas_get_study",
+    "request": {
+      "accession_id": "GCST90841394"
+    },
+    "status": "succeeded",
+    "sample": "{\"found\":true,\"accession_id\":\"GCST90841394\",\"study\":{\"accession_id\":\"GCST90841394\",\"disease_trait\":\"Passenger-approximated clonal expansion rate (PACER) score in mosaic chromosomal alterations\",\"efo_traits\":[{\"efo_id\":\"EFO_0010819\",\"efo_trait\":\"clonal hematopoiesis\"}],\"bg_efo_traits\":[{\"efo_id\":\"EFO_0000336\",\"efo_trait\":\"chromosomal aberration\"}],\"pubmed_id\":38714703,\"initial_sample_size\":\"6,381 individuals\",\"replication_sample_size\":\"NA\",\"discovery_ancestry\":[\"6381 NR (NR)\"],\"replication_ancest",
+    "elapsed_ms": 481
+  },
+  {
+    "index": 131,
+    "connector": "human-genetics",
+    "tool": "gwas_get_variant",
+    "request": {
+      "rs_id": "rs7412"
+    },
+    "status": "succeeded",
+    "sample": "{\"found\":true,\"rs_id\":\"rs7412\",\"variant\":{\"rs_id\":\"rs7412\",\"merged\":0,\"functional_class\":\"missense_variant\",\"most_severe_consequence\":\"missense_variant\",\"alleles\":\"C/T (forward)\",\"mapped_genes\":[\"APOE\"],\"locations\":[{\"chromosome\":\"19\",\"position\":44908822,\"region\":\"19q13.32\"}],\"last_update_date\":\"2026-08-25T17:30:45.976+00:00\"}}",
+    "elapsed_ms": 1858
+  },
+  {
+    "index": 132,
+    "connector": "human-genetics",
+    "tool": "eqtl_list_datasets",
+    "request": {
+      "study_label": "Alasoo_2018",
+      "quant_method": "ge"
+    },
+    "status": "blocked",
+    "elapsed_ms": 15,
+    "sample": "HTTP 410 for https://www.ebi.ac.uk/eqtl/api/v2/datasets?study_label=Alasoo_2018&quant_method=ge&size=1000."
+  },
+  {
+    "index": 133,
+    "connector": "human-genetics",
+    "tool": "eqtl_associations",
+    "request": {
+      "dataset_id": "QTD000266",
+      "gene_id": "ENSG00000130203",
+      "nlog10p_min": 2
+    },
+    "status": "blocked",
+    "elapsed_ms": 8,
+    "sample": "HTTP 410 for https://www.ebi.ac.uk/eqtl/api/v2/datasets/QTD000266/associations?gene_id=ENSG00000130203&nlog10p=2&size=1000."
+  },
+  {
+    "index": 134,
+    "connector": "human-genetics",
+    "tool": "phewas_instances",
+    "request": {},
+    "status": "succeeded",
+    "sample": "{\"instances\":{\"finngen\":{\"label\":\"FinnGen R12\",\"base_url\":\"https://r12.finngen.fi\",\"genome_build\":\"GRCh38\",\"capabilities\":[\"variant\",\"gene\",\"phenotypes\",\"autocomplete\"],\"notes\":\"FinnGen release 12, ~2470 disease endpoints; variant coordinates are GRCh38. Exposes variant, gene-level, full phenotype-catalogue and autocomplete APIs. Rows carry maf triplets + mlogp and a lean gnomAD AF block in variant_meta.\"},\"bbj\":{\"label\":\"BioBank Japan (pheweb.jp)\",\"base_url\":\"https://pheweb.jp\",\"genome_build\":\"",
+    "elapsed_ms": 1
+  },
+  {
+    "index": 135,
+    "connector": "human-genetics",
+    "tool": "phewas_variant",
+    "request": {
+      "instance": "finngen",
+      "variant": "19-44908822-C-T",
+      "max_phenos": 50
+    },
+    "status": "succeeded",
+    "sample": "{\"instance\":\"finngen\",\"genome_build\":\"GRCh38\",\"variant\":\"19-44908822-C-T\",\"variant_meta\":{\"chrom\":\"19\",\"pos\":44908822,\"ref\":\"C\",\"alt\":\"T\",\"rsids\":[\"rs7412\"],\"nearest_genes\":[\"APOE\"],\"gnomad\":{\"AF\":0.073846,\"AF_fin\":0.049875,\"AF_nfe\":0.078227,\"AF_afr\":0.10699,\"AF_amr\":0.031933,\"AF_eas\":0.057691,\"AF_sas\":0.041909,\"AF_asj\":0.074806,\"AF_oth\":0.070261,\"AF_popmax\":0.10699000000000002}},\"total\":2470,\"returned\":50,\"truncated\":true,\"phenotypes\":[{\"phenocode\":\"RX_STATIN\",\"phenostring\":\"Statin medication\",",
+    "elapsed_ms": 4508
+  },
+  {
+    "index": 136,
+    "connector": "human-genetics",
+    "tool": "phewas_finngen_gene",
+    "request": {
+      "gene_symbol": "PCSK9",
+      "max_phenos": 50
+    },
+    "status": "succeeded",
+    "sample": "{\"instance\":\"finngen\",\"genome_build\":\"GRCh38\",\"gene_symbol\":\"PCSK9\",\"total\":2470,\"returned\":50,\"truncated\":true,\"phenotypes\":[{\"phenocode\":\"RX_STATIN\",\"phenostring\":\"Statin medication\",\"category\":\"IX Diseases of the circulatory system (I9_)\",\"pval\":5e-324,\"mlogp\":391.441,\"beta\":-0.573007,\"sebeta\":0.0135258,\"af\":null,\"maf\":0.0362916,\"maf_case\":0.0274484,\"maf_control\":0.0414166,\"n_cases\":183578,\"n_controls\":316770,\"n_samples\":500348,\"variant\":{\"chrom\":\"1\",\"pos\":55039974,\"ref\":\"G\",\"alt\":\"T\",\"varid\"",
+    "elapsed_ms": 6612
+  },
+  {
+    "index": 137,
+    "connector": "human-genetics",
+    "tool": "phewas_list_phenotypes",
+    "request": {
+      "instance": "finngen",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"instance\":\"finngen\",\"total\":2470,\"returned\":2,\"truncated\":true,\"phenotypes\":[{\"phenocode\":\"AB1_ACTINOMYCOSIS\",\"phenostring\":\"Actinomycosis\",\"category\":\"I Certain infectious and parasitic diseases (AB1_)\",\"num_cases\":124,\"num_controls\":439048,\"num_gw_significant\":0},{\"phenocode\":\"AB1_AMOEBIASIS\",\"phenostring\":\"Amoebiasis\",\"category\":\"I Certain infectious and parasitic diseases (AB1_)\",\"num_cases\":197,\"num_controls\":444292,\"num_gw_significant\":0}]}",
+    "elapsed_ms": 1784
+  },
+  {
+    "index": 138,
+    "connector": "human-genetics",
+    "tool": "phewas_search_phenotypes",
+    "request": {
+      "query": "diabetes",
+      "instance": "finngen"
+    },
+    "status": "succeeded",
+    "sample": "{\"instance\":\"finngen\",\"query\":\"diabetes\",\"total\":8,\"returned\":8,\"truncated\":false,\"matches\":[{\"display\":\"Diabetes insipidus (E4_DIABINSIPIDUS)\",\"phenocode\":\"E4_DIABINSIPIDUS\",\"url\":null},{\"display\":\"Diabetes, insulin treatment (Kela reimbursement) (more control exclusions) (KELA_DIAB_INSUL_EXMORE)\",\"phenocode\":\"KELA_DIAB_INSUL_EXMORE\",\"url\":null},{\"display\":\"Gestational diabetes (for exclusion) (GEST_DIABETES)\",\"phenocode\":\"GEST_DIABETES\",\"url\":null},{\"display\":\"Type 1 diabetes, definitions comb",
+    "elapsed_ms": 526
+  },
+  {
+    "index": 139,
+    "connector": "expression",
+    "tool": "gtex_tissue_sites",
+    "request": {
+      "dataset_id": "gtex_v8"
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":54,\"tissues\":[{\"tissue_site_detail_id\":\"Adipose_Subcutaneous\",\"tissue_site_detail\":\"Adipose - Subcutaneous\",\"tissue_site\":\"Adipose Tissue\",\"abbreviation\":\"ADPSBQ\",\"color_hex\":\"FF6600\",\"color_rgb\":\"255,102,0\",\"egene_count\":15607,\"sgene_count\":5113,\"expressed_gene_count\":28830,\"rnaseq_sample_count\":663,\"eqtl_sample_count\":581,\"ontology_id\":\"UBERON:0002190\"},{\"tissue_site_detail_id\":\"Adipose_Visceral_Omentum\",\"tissue_site_detail\":\"Adipose - Visceral (Omentum)\",\"tissue_site\":\"Adipose Tissue",
+    "elapsed_ms": 570
+  },
+  {
+    "index": 140,
+    "connector": "expression",
+    "tool": "gtex_dataset_info",
+    "request": {},
+    "status": "succeeded",
+    "sample": "[{\"dataset_id\":\"gtex_v7\",\"display_name\":\"GTEx Analysis v7\",\"gencode_version\":\"v19\",\"genome_build\":\"GRCh37/hg19\",\"dbsnp_build\":147,\"organization\":\"GTEx Consortium\",\"rnaseq_sample_count\":11688,\"rnaseq_and_genotype_sample_count\":10294,\"subject_count\":714,\"eqtl_subject_count\":620,\"eqtl_tissue_count\":48,\"tissue_count\":53,\"description\":\"GTEx v7 release. Expression quantification units updated from RPKM to TPM.\"},{\"dataset_id\":\"gtex_v8\",\"display_name\":\"GTEx Analysis v8\",\"gencode_version\":\"v26\",\"genome_",
+    "elapsed_ms": 346
+  },
+  {
+    "index": 141,
+    "connector": "expression",
+    "tool": "gtex_sample_info",
+    "request": {
+      "tissue_site_detail_id": "Liver",
+      "data_type": "RNASEQ",
+      "max_samples": 100
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":226,\"returned\":100,\"truncated\":true,\"samples\":[{\"sample_id\":\"GTEX-11DXY-0526-SM-5EGGQ\",\"subject_id\":\"GTEX-11DXY\",\"tissue_site_detail_id\":\"Liver\",\"tissue_site_detail\":\"Liver\",\"data_type\":\"RNASEQ\",\"sex\":\"male\",\"age_bracket\":\"60-69\",\"hardy_scale\":\"Fast death - natural causes\",\"ischemic_time\":891,\"rin\":6.8,\"autolysis_score\":\"Mild\",\"pathology_notes\":\"2 pieces, congestion\",\"uberon_id\":\"0001114\"},{\"sample_id\":\"GTEX-11DXZ-0126-SM-5EGGY\",\"subject_id\":\"GTEX-11DXZ\",\"tissue_site_detail_id\":\"Liver\",",
+    "elapsed_ms": 650
+  },
+  {
+    "index": 142,
+    "connector": "expression",
+    "tool": "gtex_resolve_genes",
+    "request": {
+      "genes": [
+        "GAPDH",
+        "BRCA2"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":2,\"genes\":[{\"gene_symbol\":\"GAPDH\",\"gencode_id\":\"ENSG00000111640.14\",\"ensembl_id\":\"ENSG00000111640\",\"gencode_version\":\"v26\",\"genome_build\":\"GRCh38/hg38\",\"chromosome\":\"chr12\",\"start\":6533927,\"end\":6538374,\"strand\":\"+\",\"entrez_gene_id\":2597,\"gene_type\":\"protein coding\",\"description\":\"glyceraldehyde-3-phosphate dehydrogenase [Source:HGNC Symbol;Acc:HGNC:4141]\"},{\"gene_symbol\":\"BRCA2\",\"gencode_id\":\"ENSG00000139618.14\",\"ensembl_id\":\"ENSG00000139618\",\"gencode_version\":\"v26\",\"genome_build\":\"GRC",
+    "elapsed_ms": 481
+  },
+  {
+    "index": 143,
+    "connector": "expression",
+    "tool": "gtex_median_expression",
+    "request": {
+      "gencode_ids": [
+        "ENSG00000111640.14"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":54,\"returned\":54,\"rows\":[{\"gencode_id\":\"ENSG00000111640.14\",\"gene_symbol\":\"GAPDH\",\"tissue_site_detail_id\":\"Adipose_Subcutaneous\",\"median_tpm\":831.783,\"unit\":\"TPM\"},{\"gencode_id\":\"ENSG00000111640.14\",\"gene_symbol\":\"GAPDH\",\"tissue_site_detail_id\":\"Adipose_Visceral_Omentum\",\"median_tpm\":705.227,\"unit\":\"TPM\"},{\"gencode_id\":\"ENSG00000111640.14\",\"gene_symbol\":\"GAPDH\",\"tissue_site_detail_id\":\"Adrenal_Gland\",\"median_tpm\":905.37,\"unit\":\"TPM\"},{\"gencode_id\":\"ENSG00000111640.14\",\"gene_symbol\":\"GAP",
+    "elapsed_ms": 481
+  },
+  {
+    "index": 144,
+    "connector": "expression",
+    "tool": "gtex_expression_summary",
+    "request": {
+      "gene": "GAPDH"
+    },
+    "status": "succeeded",
+    "sample": "{\"gene\":{\"gene_symbol\":\"GAPDH\",\"gencode_id\":\"ENSG00000111640.14\",\"ensembl_id\":\"ENSG00000111640\",\"gencode_version\":\"v26\",\"genome_build\":\"GRCh38/hg38\",\"chromosome\":\"chr12\",\"start\":6533927,\"end\":6538374,\"strand\":\"+\",\"entrez_gene_id\":2597,\"gene_type\":\"protein coding\",\"description\":\"glyceraldehyde-3-phosphate dehydrogenase [Source:HGNC Symbol;Acc:HGNC:4141]\"},\"total_tissues\":54,\"tissues\":[{\"tissue_site_detail_id\":\"Cells_EBV-transformed_lymphocytes\",\"median_tpm\":6385.15,\"unit\":\"TPM\"},{\"tissue_site_det",
+    "elapsed_ms": 980
+  },
+  {
+    "index": 145,
+    "connector": "expression",
+    "tool": "gtex_gene_expression",
+    "request": {
+      "gencode_id": "ENSG00000111640.14",
+      "tissue_site_detail_ids": [
+        "Whole_Blood"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "[{\"tissue_site_detail_id\":\"Whole_Blood\",\"gencode_id\":\"ENSG00000111640.14\",\"gene_symbol\":\"GAPDH\",\"unit\":\"TPM\",\"n_samples\":755,\"expression\":[1774,1647,3016,1376,1347,2094,1963,1857,170.1,2403,1990,1085,947.9,1314,2139,1487,1305,2289,1373,1937,4102,1926,2086,2119,1676,1999,4427,3367,1393,1133,1396,1389,2111,978.5,2694,966.4,4477,2643,1475,3572,1210,2747,1393,1695,251.9,1120,2440,2714,2331,1235,1304,3814,1367,1936,1202,2643,4540,1142,884.7,1824,2473,1549,905.8,2538,1020,2518,572.1,1923,518.7,1100,27",
+    "elapsed_ms": 1164
+  },
+  {
+    "index": 146,
+    "connector": "expression",
+    "tool": "gtex_top_expressed_genes",
+    "request": {
+      "tissue_site_detail_id": "Whole_Blood",
+      "n": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"tissue_site_detail_id\":\"Whole_Blood\",\"total_genes_in_ranking\":56163,\"returned\":2,\"genes\":[{\"gencode_id\":\"ENSG00000244734.3\",\"gene_symbol\":\"HBB\",\"median_tpm\":267405,\"unit\":\"TPM\"},{\"gencode_id\":\"ENSG00000188536.12\",\"gene_symbol\":\"HBA2\",\"median_tpm\":80863.6,\"unit\":\"TPM\"}]}",
+    "elapsed_ms": 5153
+  },
+  {
+    "index": 147,
+    "connector": "expression",
+    "tool": "gtex_eqtl_genes",
+    "request": {
+      "tissue_site_detail_id": "Pancreas",
+      "max_genes": 100
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":9660,\"returned\":100,\"truncated\":true,\"genes\":[{\"gencode_id\":\"ENSG00000227232.5\",\"gene_symbol\":\"WASH7P\",\"empirical_p_value\":0.000432357,\"p_value\":5.78285e-7,\"p_value_threshold\":0.000212424,\"q_value\":0.000656924,\"log2_allelic_fold_change\":0.77278},{\"gencode_id\":\"ENSG00000241860.6\",\"gene_symbol\":\"RP11-34P13.13\",\"empirical_p_value\":0.0456867,\"p_value\":0.0000510887,\"p_value_threshold\":0.000138317,\"q_value\":0.0423885,\"log2_allelic_fold_change\":-3.799883},{\"gencode_id\":\"ENSG00000228463.9\",\"gen",
+    "elapsed_ms": 781
+  },
+  {
+    "index": 148,
+    "connector": "expression",
+    "tool": "gtex_single_tissue_eqtls",
+    "request": {
+      "gencode_id": "ENSG00000111640.14"
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":369,\"returned\":369,\"truncated\":false,\"eqtls\":[{\"gencode_id\":\"ENSG00000111640.14\",\"gene_symbol\":\"GAPDH\",\"variant_id\":\"chr12_6452899_G_A_b38\",\"snp_id\":\"rs2286721\",\"chromosome\":\"chr12\",\"pos\":6452899,\"tissue_site_detail_id\":\"Heart_Left_Ventricle\",\"p_value\":0.0000388343,\"nes\":-0.162677},{\"gencode_id\":\"ENSG00000111640.14\",\"gene_symbol\":\"GAPDH\",\"variant_id\":\"chr12_6478502_C_G_b38\",\"snp_id\":\"rs7301945\",\"chromosome\":\"chr12\",\"pos\":6478502,\"tissue_site_detail_id\":\"Heart_Left_Ventricle\",\"p_value\":0",
+    "elapsed_ms": 385
+  },
+  {
+    "index": 149,
+    "connector": "expression",
+    "tool": "gtex_multi_tissue_eqtls",
+    "request": {
+      "gencode_id": "ENSG00000111640.14"
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":125,\"returned\":125,\"variants\":[{\"gencode_id\":\"ENSG00000111640.14\",\"variant_id\":\"chr12_6496645_G_A_b38\",\"meta_p\":4.1354099999999996e-47,\"tissues\":{\"Thyroid\":{\"m_value\":1,\"nes\":-0.15481099999999998,\"p_value\":1.2817e-8,\"se\":0.026765499999999998},\"Testis\":{\"m_value\":0.759,\"nes\":-0.06965419999999999,\"p_value\":0.138468,\"se\":0.0468747},\"Small_Intestine_Terminal_Ileum\":{\"m_value\":0.84,\"nes\":-0.07495800000000001,\"p_value\":0.078,\"se\":0.0422057},\"Brain_Frontal_Cortex_BA9\":{\"m_value\":0.109,\"nes\":0.",
+    "elapsed_ms": 1359
+  },
+  {
+    "index": 150,
+    "connector": "expression",
+    "tool": "gtex_calculate_eqtl",
+    "request": {
+      "gencode_id": "ENSG00000111640.14",
+      "variant_id": "chr12_6452899_G_A_b38",
+      "tissue_site_detail_id": "Whole_Blood"
+    },
+    "status": "succeeded",
+    "sample": "{\"gencode_id\":\"ENSG00000111640.14\",\"gene_symbol\":\"GAPDH\",\"variant_id\":\"chr12_6452899_G_A_b38\",\"tissue_site_detail_id\":\"Whole_Blood\",\"p_value\":0.5128452994270689,\"nes\":-0.012196365968980771,\"t_statistic\":-0.6548033671949395,\"maf\":0.16417910447761194,\"hom_ref_count\":470,\"het_count\":180,\"hom_alt_count\":20,\"n_samples\":670,\"samples\":[{\"genotype\":0,\"expression\":-2.9697289699387484},{\"genotype\":0,\"expression\":-2.514429795672839},{\"genotype\":0,\"expression\":-2.368016142589864},{\"genotype\":0,\"expression\":",
+    "elapsed_ms": 627
+  },
+  {
+    "index": 151,
+    "connector": "protein-annotation",
+    "tool": "get_domain_architecture",
+    "request": {
+      "accessions": [
+        "P04637"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"summaries\":{\"P04637\":{\"protein\":\"P04637\",\"protein_length\":393,\"entry_count\":9,\"entries\":[{\"accession\":\"IPR002117\",\"name\":\"p53 tumour suppressor family\",\"type\":\"family\",\"member_db_signatures\":[{\"database\":\"panther\",\"accession\":\"PTHR11447\",\"name\":\"CELLULAR TUMOR ANTIGEN P53\"},{\"database\":\"prints\",\"accession\":\"PR00386\",\"name\":\"P53SUPPRESSR\"}],\"locations\":[{\"fragments\":[{\"start\":3,\"end\":369}]}]},{\"accession\":\"IPR010991\",\"name\":\"p53, tetramerisation domain\",\"type\":\"domain\",\"member_db_signatures\":[{",
+    "elapsed_ms": 6349
+  },
+  {
+    "index": 152,
+    "connector": "protein-annotation",
+    "tool": "search_interpro_entries",
+    "request": {
+      "query": "kinase",
+      "source_db": "pfam"
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":304,\"results\":[{\"accession\":\"PF00069\",\"name\":\"Protein kinase domain\",\"type\":\"domain\",\"source_database\":\"pfam\",\"integrated\":\"IPR000719\"},{\"accession\":\"PF00162\",\"name\":\"Phosphoglycerate kinase\",\"type\":\"domain\",\"source_database\":\"pfam\",\"integrated\":\"IPR001576\"},{\"accession\":\"PF00224\",\"name\":\"Pyruvate kinase, barrel domain\",\"type\":\"domain\",\"source_database\":\"pfam\",\"integrated\":\"IPR015793\"},{\"accession\":\"PF00265\",\"name\":\"Thymidine kinase\",\"type\":\"family\",\"source_database\":\"pfam\",\"integrated\"",
+    "elapsed_ms": 5252
+  },
+  {
+    "index": 153,
+    "connector": "protein-annotation",
+    "tool": "get_interpro_entry",
+    "request": {
+      "accession": "IPR000719"
+    },
+    "status": "succeeded",
+    "sample": "{\"accession\":\"IPR000719\",\"name\":{\"name\":\"Protein kinase domain\",\"short\":\"Prot_kinase_dom\"},\"type\":\"domain\",\"source_database\":\"interpro\",\"integrated\":null,\"hierarchy\":{\"accession\":\"IPR000719\",\"name\":\"Protein kinase domain\",\"type\":\"Domain\",\"children\":[{\"accession\":\"IPR001245\",\"name\":\"Serine-threonine/tyrosine-protein kinase, catalytic domain\",\"type\":\"Domain\",\"children\":[{\"accession\":\"IPR020635\",\"name\":\"Tyrosine-protein kinase, catalytic domain\",\"type\":\"Domain\",\"children\":[{\"accession\":\"IPR028174\",",
+    "elapsed_ms": 1065
+  },
+  {
+    "index": 154,
+    "connector": "protein-annotation",
+    "tool": "search_pfam_clans",
+    "request": {
+      "query": "kinase"
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":4,\"results\":[{\"accession\":\"CL0016\",\"name\":\"PKinase\",\"source_database\":\"pfam\"},{\"accession\":\"CL0025\",\"name\":\"His_Kinase_A\",\"source_database\":\"pfam\"},{\"accession\":\"CL0118\",\"name\":\"Ribokinase\",\"source_database\":\"pfam\"},{\"accession\":\"CL0701\",\"name\":\"NAD_kinase_C\",\"source_database\":\"pfam\"}]}",
+    "elapsed_ms": 1150
+  },
+  {
+    "index": 155,
+    "connector": "protein-annotation",
+    "tool": "get_pfam_clan",
+    "request": {
+      "clan_accession": "CL0016"
+    },
+    "status": "succeeded",
+    "sample": "{\"accession\":\"CL0016\",\"name\":\"PKinase\",\"source_database\":\"pfam\",\"member_count\":85,\"members\":[{\"accession\":\"PF00017\",\"name\":\"SH2 domain\",\"short_name\":\"SH2\",\"type\":\"Domain\"},{\"accession\":\"PF00036\",\"name\":\"EF hand domain\",\"short_name\":\"EF-hand_1\",\"type\":\"Domain\"},{\"accession\":\"PF00069\",\"name\":\"Protein kinase domain\",\"short_name\":\"Pkinase\",\"type\":\"Domain\"},{\"accession\":\"PF00168\",\"name\":\"C2 domain\",\"short_name\":\"C2\",\"type\":\"Domain\"},{\"accession\":\"PF00433\",\"name\":\"Protein kinase C terminal domain\",\"sh",
+    "elapsed_ms": 2073
+  },
+  {
+    "index": 156,
+    "connector": "protein-annotation",
+    "tool": "get_pfam_family_proteins",
+    "request": {
+      "pfam_accession": "PF00069",
+      "count_only": true
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":1368398,\"results\":null}",
+    "elapsed_ms": 4019
+  },
+  {
+    "index": 157,
+    "connector": "protein-annotation",
+    "tool": "get_pfam_family_proteomes",
+    "request": {
+      "pfam_accession": "PF00069"
+    },
+    "status": "succeeded",
+    "elapsed_ms": 5717,
+    "sample": "{\"count\":18227,\"results\":null}"
+  },
+  {
+    "index": 158,
+    "connector": "protein-annotation",
+    "tool": "get_protein_atlas_gene",
+    "request": {
+      "gene": "TP53"
+    },
+    "status": "succeeded",
+    "sample": "{\"identity\":{\"Gene\":\"TP53\",\"Gene synonym\":[\"LFS1\",\"p53\"],\"Ensembl\":\"ENSG00000141510\",\"Gene description\":\"Tumor protein p53\",\"Uniprot\":[\"P04637\"],\"Chromosome\":\"17\",\"Position\":\"7661779-7687538\",\"Protein class\":[\"Cancer-related genes\",\"Disease related genes\",\"Human disease related genes\",\"Plasma proteins\",\"Potential drug targets\",\"Predicted intracellular proteins\",\"Transcription factors\",\"Transporters\"],\"Biological process\":[\"Apoptosis\",\"Biological rhythms\",\"Cell cycle\",\"Host-virus interaction\",\"Ne",
+    "elapsed_ms": 4889
+  },
+  {
+    "index": 159,
+    "connector": "protein-annotation",
+    "tool": "search_protein_atlas",
+    "request": {
+      "query": "kinase"
+    },
+    "status": "succeeded",
+    "sample": "[{\"Gene\":\"MAP2K1\",\"Gene synonym\":[\"MAPKK1\",\"MEK1\",\"PRKMK1\"],\"Ensembl\":\"ENSG00000169032\",\"Gene description\":\"Mitogen-activated protein kinase kinase 1\",\"Uniprot\":[\"Q02750\"],\"Chromosome\":\"15\",\"Position\":\"66386837-66491656\",\"Subcellular location\":[\"Plasma membrane\",\"Basal body\",\"Cytosol\"]},{\"Gene\":\"MAP3K11\",\"Gene synonym\":[\"MEKK11\",\"MLK3\",\"PTK1\",\"SPRK\"],\"Ensembl\":\"ENSG00000173327\",\"Gene description\":\"Mitogen-activated protein kinase kinase kinase 11\",\"Uniprot\":[\"Q16584\"],\"Chromosome\":\"11\",\"Position",
+    "elapsed_ms": 6565
+  },
+  {
+    "index": 160,
+    "connector": "protein-annotation",
+    "tool": "map_string_ids",
+    "request": {
+      "symbols": [
+        "TP53",
+        "BRCA1"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"string_version\":{\"string_version\":\"12.0\",\"stable_address\":\"https://version-12-0.string-db.org\"},\"species\":9606,\"mapped\":[{\"query\":\"TP53\",\"string_id\":\"9606.ENSP00000269305\",\"preferred_name\":\"TP53\",\"ncbi_taxon_id\":9606},{\"query\":\"BRCA1\",\"string_id\":\"9606.ENSP00000418960\",\"preferred_name\":\"BRCA1\",\"ncbi_taxon_id\":9606}],\"unmapped\":[]}",
+    "elapsed_ms": 1755
+  },
+  {
+    "index": 161,
+    "connector": "protein-annotation",
+    "tool": "get_string_network",
+    "request": {
+      "symbols": [
+        "TP53",
+        "BRCA1"
+      ],
+      "required_score": 700
+    },
+    "status": "succeeded",
+    "sample": "{\"tool\":\"string-network\",\"tool_version\":\"0.3.0\",\"query\":{\"symbols\":[\"TP53\",\"BRCA1\"],\"species\":9606,\"required_score\":700},\"string_version\":{\"string_version\":\"12.0\",\"stable_address\":\"https://version-12-0.string-db.org\"},\"nodes\":[{\"query\":\"BRCA1\",\"name\":\"BRCA1\",\"string_id\":\"9606.ENSP00000418960\",\"degree\":1},{\"query\":\"TP53\",\"name\":\"TP53\",\"string_id\":\"9606.ENSP00000269305\",\"degree\":1}],\"unmapped\":[],\"edges\":[{\"a\":\"BRCA1\",\"b\":\"TP53\",\"score\":0.999,\"evidence\":{\"ascore\":0.067,\"escore\":0.895,\"dscore\":0.5,",
+    "elapsed_ms": 2133
+  },
+  {
+    "index": 162,
+    "connector": "protein-annotation",
+    "tool": "get_string_similarity_scores",
+    "request": {
+      "symbols": [
+        "TP53",
+        "MDM2"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"species\":9606,\"mapped\":[{\"query\":\"TP53\",\"string_id\":\"9606.ENSP00000269305\",\"preferred_name\":\"TP53\",\"ncbi_taxon_id\":9606},{\"query\":\"MDM2\",\"string_id\":\"9606.ENSP00000258149\",\"preferred_name\":\"MDM2\",\"ncbi_taxon_id\":9606}],\"unmapped\":[],\"n_pairs\":2,\"n_self\":2,\"pairs\":[{\"id_a\":\"9606.ENSP00000258149\",\"id_b\":\"9606.ENSP00000258149\",\"taxon_a\":9606,\"taxon_b\":9606,\"bitscore\":1016.9,\"self\":true,\"name_a\":\"MDM2\",\"name_b\":\"MDM2\"},{\"id_a\":\"9606.ENSP00000269305\",\"id_b\":\"9606.ENSP00000269305\",\"taxon_a\":9606,\"ta",
+    "elapsed_ms": 784
+  },
+  {
+    "index": 163,
+    "connector": "protein-annotation",
+    "tool": "get_string_best_similarity_hits",
+    "request": {
+      "symbols": [
+        "TP53"
+      ],
+      "target_species": 10090
+    },
+    "status": "succeeded",
+    "sample": "{\"species\":9606,\"species_b\":10090,\"mapped\":[{\"query\":\"TP53\",\"string_id\":\"9606.ENSP00000269305\",\"preferred_name\":\"TP53\",\"ncbi_taxon_id\":9606}],\"unmapped\":[],\"n_hits\":1,\"hits\":[{\"query_id\":\"9606.ENSP00000269305\",\"query_name\":\"TP53\",\"query_taxon\":9606,\"hit_id\":\"10090.ENSMUSP00000104298\",\"hit_taxon\":10090,\"bitscore\":598.2}]}",
+    "elapsed_ms": 1252
+  },
+  {
+    "index": 164,
+    "connector": "cancer-models",
+    "tool": "cbioportal_list_studies",
+    "request": {
+      "keyword": "glioma"
+    },
+    "status": "succeeded",
+    "sample": "{\"keyword\":\"glioma\",\"cancer_type_id\":null,\"api_total_for_keyword\":25,\"count\":25,\"truncated\":false,\"studies\":[{\"study_id\":\"difg_glass\",\"name\":\"Diffuse Glioma (GLASS Consortium)\",\"description\":\"Whole genome or whole exome sequencing analysis of temporally separated diffuse glioma tumor/normal pairs from 329 adult patients. The data provided is based on the May 31, 2022 version and can be accessed at <a href=\\\"https://www.synapse.or\u2026\",\"cancer_type_id\":\"difg\",\"cancer_type\":\"Diffuse Glioma\",\"referenc",
+    "elapsed_ms": 1288
+  },
+  {
+    "index": 165,
+    "connector": "cancer-models",
+    "tool": "cbioportal_get_study",
+    "request": {
+      "study_id": "msk_impact_2017"
+    },
+    "status": "succeeded",
+    "sample": "{\"study_id\":\"msk_impact_2017\",\"name\":\"MSK-IMPACT Clinical Sequencing Cohort (MSK, Nat Med 2017)\",\"description\":\"Targeted sequencing of 10,000 clinical cases using the MSK-IMPACT assay\",\"cancer_type\":\"Mixed Cancer Types\",\"cancer_type_id\":\"mixed\",\"reference_genome\":\"hg19\",\"pmid\":\"28481359\",\"citation\":\"Zehir et al. Nat Med 2017\",\"public\":true,\"groups\":\"PUBLIC\",\"import_date\":\"2026-07-28 17:54:40\",\"sample_count\":10945,\"patient_count\":10336,\"sequenced_sample_count\":10945,\"cna_sample_count\":10945,\"mrna",
+    "elapsed_ms": 2115
+  },
+  {
+    "index": 166,
+    "connector": "cancer-models",
+    "tool": "cbioportal_mutations_in_gene",
+    "request": {
+      "gene_symbol": "IDH1",
+      "study_id": "difg_msk_2023"
+    },
+    "status": "succeeded",
+    "sample": "{\"gene\":{\"symbol\":\"IDH1\",\"entrez_gene_id\":3417},\"study_id\":\"difg_msk_2023\",\"molecular_profile_id\":\"difg_msk_2023_mutations\",\"total_mutations\":68,\"mutated_sample_count\":68,\"mutation_type_counts\":{\"Missense_Mutation\":68},\"distinct_protein_changes\":4,\"top_protein_changes\":{\"R132H\":65,\"R132C\":1,\"R132G\":1,\"R132S\":1},\"truncated\":false,\"mutations\":[{\"sample_id\":\"P-0000486-T01-IM3\",\"patient_id\":\"P-0000486\",\"protein_change\":\"R132H\",\"mutation_type\":\"Missense_Mutation\",\"mutation_status\":\"SOMATIC\",\"chromoso",
+    "elapsed_ms": 1363
+  },
+  {
+    "index": 167,
+    "connector": "cancer-models",
+    "tool": "cbioportal_mutation_frequency",
+    "request": {
+      "gene_symbol": "KRAS",
+      "study_ids": [
+        "msk_impact_2017",
+        "difg_msk_2023"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"gene\":{\"symbol\":\"KRAS\",\"entrez_gene_id\":3845},\"count\":2,\"frequencies\":[{\"study_id\":\"msk_impact_2017\",\"study_name\":\"MSK-IMPACT Clinical Sequencing Cohort (MSK, Nat Med 2017)\",\"molecular_profile_id\":\"msk_impact_2017_mutations\",\"mutation_count\":1670,\"mutated_samples\":1643,\"sequenced_samples\":10945,\"frequency\":0.1501},{\"study_id\":\"difg_msk_2023\",\"study_name\":\"IDH-mutated Diffuse Glioma (MSK, Clin Cancer Res 2024)\",\"molecular_profile_id\":\"difg_msk_2023_mutations\",\"mutation_count\":0,\"mutated_samples",
+    "elapsed_ms": 3121
+  },
+  {
+    "index": 168,
+    "connector": "cancer-models",
+    "tool": "cbioportal_cna_in_gene",
+    "request": {
+      "gene_symbol": "CDKN2A",
+      "study_id": "msk_impact_2017"
+    },
+    "status": "succeeded",
+    "sample": "{\"gene\":{\"symbol\":\"CDKN2A\",\"entrez_gene_id\":1029},\"study_id\":\"msk_impact_2017\",\"molecular_profile_id\":\"msk_impact_2017_cna\",\"event_type\":\"HOMDEL_AND_AMP\",\"total_events\":840,\"altered_sample_count\":840,\"alteration_counts\":{\"diploid\":10105,\"deep_deletion\":834,\"amplification\":6},\"truncated\":true,\"events\":[{\"sample_id\":\"P-0000030-T01-IM3\",\"patient_id\":\"P-0000030\",\"alteration\":-2,\"alteration_label\":\"deep_deletion\"},{\"sample_id\":\"P-0000056-T01-IM3\",\"patient_id\":\"P-0000056\",\"alteration\":-2,\"alteration_l",
+    "elapsed_ms": 1602
+  },
+  {
+    "index": 169,
+    "connector": "cancer-models",
+    "tool": "cbioportal_clinical_attributes",
+    "request": {
+      "study_id": "brca_tcga_pan_can_atlas_2018"
+    },
+    "status": "succeeded",
+    "sample": "{\"study_id\":\"brca_tcga_pan_can_atlas_2018\",\"total_attributes\":60,\"patient_level_count\":41,\"sample_level_count\":19,\"survival_attributes\":[\"DFS_MONTHS\",\"DFS_STATUS\",\"DSS_MONTHS\",\"DSS_STATUS\",\"OS_MONTHS\",\"OS_STATUS\",\"PFS_MONTHS\",\"PFS_STATUS\"],\"has_overall_survival\":true,\"truncated\":false,\"attributes\":[{\"attribute_id\":\"AGE\",\"display_name\":\"Diagnosis Age\",\"description\":\"Age at which a condition or disease was first diagnosed.\",\"datatype\":\"NUMBER\",\"level\":\"patient\",\"priority\":1},{\"attribute_id\":\"AJCC_",
+    "elapsed_ms": 283
+  },
+  {
+    "index": 170,
+    "connector": "rna",
+    "tool": "get_family",
+    "request": {
+      "family": "RF00005"
+    },
+    "status": "succeeded",
+    "sample": "{\"rfam_acc\":\"RF00005\",\"rfam_id\":\"tRNA\",\"description\":\"tRNA\",\"comment\":\"Transfer RNA (tRNA) molecules are approximately 80 nucleotides in length. Their secondary structure includes four short double-helical elements and three loops (D, anti-codon, and T loops). Further hydrogen bonds mediate the characteristic L-shaped molecular structure. tRNAs have two regions of fundamental functional importance: the anti-codon, which is responsible for specific mRNA codon recognition, and the 3' end, to which",
+    "elapsed_ms": 2540
+  },
+  {
+    "index": 171,
+    "connector": "rna",
+    "tool": "get_seed_alignment",
+    "request": {
+      "family": "RF00162",
+      "fmt": "stockholm"
+    },
+    "status": "succeeded",
+    "sample": "{\"family\":\"RF00162\",\"format\":\"stockholm\",\"num_sequences\":457,\"sequence_names\":[\"AF027868.1/5245-5154\",\"AF269983.1/571-671\",\"AJ000974.1/281-386\",\"AL596164.1/95936-95817\",\"AL591974.1/109385-109266\",\"U52812.1/691-829\",\"AL596169.1/221462-221354\",\"AL591980.1/66651-66543\",\"AL596172.1/176254-176136\",\"AL591983.1/96176-96058\",\"AL596170.1/192-86\",\"AL591980.1/89597-89491\",\"AL939119.1/177986-178133\",\"AB090330.1/380-279\",\"U36379.1/1-106\",\"L42943.1/254-144\",\"AF270301.1/145-36\",\"AJ002571.1/38016-37861\",\"AL5961",
+    "elapsed_ms": 2576
+  },
+  {
+    "index": 172,
+    "connector": "rna",
+    "tool": "get_covariance_model",
+    "request": {
+      "family": "RF00162"
+    },
+    "status": "succeeded",
+    "sample": "{\"family\":\"RF00162\",\"header\":{\"NAME\":\"SAM\",\"ACC\":\"RF00162\",\"DESC\":\"SAM riboswitch aptamer (S box leader)\",\"STATES\":338,\"NODES\":85,\"CLEN\":108,\"W\":186,\"ALPH\":\"RNA\",\"GA\":\"44.40\",\"TC\":\"44.40\",\"NC\":\"44.30\"},\"size_bytes\":73544,\"sha256\":\"5d5e14d4e2c8e018ade53e4a8a236799da70079669e68297b47a8fdb5928d84d\",\"cm\":\"INFERNAL1/a [1.1.4 | Dec 2020]\\nNAME     SAM\\nACC      RF00162\\nDESC     SAM riboswitch aptamer (S box leader)\\nSTATES   338\\nNODES    85\\nCLEN     108\\nW        186\\nALPH     RNA\\nRF       no\\nCON",
+    "elapsed_ms": 383
+  },
+  {
+    "index": 173,
+    "connector": "rna",
+    "tool": "get_tree",
+    "request": {
+      "family": "RF00162"
+    },
+    "status": "succeeded",
+    "sample": "{\"family\":\"RF00162\",\"num_leaf_labels\":457,\"sha256\":\"e77508207f26f9920d785578619d4782312b3a1d251660157e4122eb0b7434b8\",\"tree\":\"((87_CP001818.1/1579334-1579230_Thermanaerovibrio_acida..[525903].1:0.07672,(88.4_ABTR02000001.1/1201751-1201854_Dethiosulfovibrio_pepti..[469381].1:0.06581,_ACJX02000007.1/318260-318153_Anaerobaculum_hydrogeni..[592015].1:0.23502)0.910:0.13628)0.970:0.16391,(98.1_CP000141.1/2169978-2169874_Carboxydothermus_hydrog..[246194].1:0.07766,82.5_AP006840.1/278272-278389_Symbioba",
+    "elapsed_ms": 450
+  },
+  {
+    "index": 174,
+    "connector": "rna",
+    "tool": "get_sequence_regions",
+    "request": {
+      "family": "RF00162"
+    },
+    "status": "succeeded",
+    "sample": "{\"family\":\"RF00162\",\"declared_count\":9625,\"num_regions\":9625,\"regions\":[{\"sequence_accession\":\"FOYF01000003.1\",\"bits_score\":\"108.7\",\"region_start\":\"195245\",\"region_end\":\"195351\",\"sequence_description\":\"FOYF01000003.1 Bacillus sp. cl95 genome assembly, contig: Ga0073270_103, whole genome shotgun sequence\",\"species\":\"Bacillus sp. cl95\",\"ncbi_tax_id\":\"1761761\"},{\"sequence_accession\":\"CP042243.1\",\"bits_score\":\"108.1\",\"region_start\":\"950145\",\"region_end\":\"950256\",\"sequence_description\":\"CP042243.1 Cr",
+    "elapsed_ms": 1252
+  },
+  {
+    "index": 175,
+    "connector": "rna",
+    "tool": "get_structure_mapping",
+    "request": {
+      "family": "RF00162"
+    },
+    "status": "succeeded",
+    "sample": "{\"family\":\"RF00162\",\"num_mappings\":29,\"num_pdb_ids\":28,\"pdb_ids\":[\"2gis\",\"2ydh\",\"2ygh\",\"3gx2\",\"3gx3\",\"3gx5\",\"3gx6\",\"3gx7\",\"3iqn\",\"3iqp\",\"3iqr\",\"3v7e\",\"4aob\",\"4b5r\",\"4kqy\",\"5fjc\",\"5fk1\",\"5fk2\",\"5fk3\",\"5fk4\",\"5fk5\",\"5fk6\",\"5fkd\",\"5fke\",\"5fkf\",\"5fkg\",\"5fkh\",\"7eaf\"],\"mapping\":[{\"pdb_id\":\"2gis\",\"chain\":\"A\",\"pdb_start\":1,\"pdb_end\":93,\"bit_score\":87.7,\"evalue_score\":\"1.3e-22\",\"cm_start\":1,\"cm_end\":108,\"rfam_acc\":\"RF00162\",\"resolution\":null,\"method\":null},{\"pdb_id\":\"2ydh\",\"chain\":\"A\",\"pdb_start\":1,\"pdb_",
+    "elapsed_ms": 310
+  },
+  {
+    "index": 176,
+    "connector": "rna",
+    "tool": "accession_to_id",
+    "request": {
+      "accession": "RF00005"
+    },
+    "status": "succeeded",
+    "sample": "{\"accession\":\"RF00005\",\"rfam_id\":\"tRNA\"}",
+    "elapsed_ms": 1296
+  },
+  {
+    "index": 177,
+    "connector": "rna",
+    "tool": "id_to_accession",
+    "request": {
+      "family_id": "tRNA"
+    },
+    "status": "succeeded",
+    "sample": "{\"rfam_id\":\"tRNA\",\"accession\":\"RF00005\"}",
+    "elapsed_ms": 1296
+  },
+  {
+    "index": 178,
+    "connector": "rna",
+    "tool": "search_sequence",
+    "request": {
+      "sequence": "GGUUCCGGGAAGGCAGCAGGUGGAAACCUGCCA"
+    },
+    "status": "blocked",
+    "elapsed_ms": 1823,
+    "sample": "HTTP 404 for https://rfam.org/search/sequence."
+  },
+  {
+    "index": 179,
+    "connector": "omics-archives",
+    "tool": "arrayexpress_search_experiments",
+    "request": {
+      "organism": "Homo sapiens",
+      "study_type": "ChIP-seq",
+      "max_records": 2
+    },
+    "status": "empty",
+    "sample": "{\"total_hits\":0,\"is_total_exact\":true,\"records\":[],\"params\":{\"facet.organism\":\"homo sapiens\",\"facet.study_type\":\"chip-seq\",\"sortBy\":\"release_date\",\"sortOrder\":\"descending\"},\"truncated\":false}",
+    "elapsed_ms": 1213
+  },
+  {
+    "index": 180,
+    "connector": "omics-archives",
+    "tool": "arrayexpress_get_experiment",
+    "request": {
+      "accession": "E-MTAB-5061"
+    },
+    "status": "succeeded",
+    "sample": "{\"accession\":\"E-MTAB-5061\",\"title\":\"Single-cell RNA-seq analysis of human pancreas from healthy individuals and type 2 diabetes patients\",\"release_date\":\"2016-09-22\",\"study_type\":\"RNA-seq of coding RNA from single cells\",\"organisms\":[\"Homo sapiens\"],\"description\":\"We used single-cell RNA-sequencing to generate transcriptional profiles of endocrine and exocrine cell types of the human pancreas. Pancreatic tissue and islets were obtained from six healthy and four T2D cadaveric donors. Islets were ",
+    "elapsed_ms": 1198
+  },
+  {
+    "index": 181,
+    "connector": "omics-archives",
+    "tool": "arrayexpress_get_experiment_files",
+    "request": {
+      "accession": "E-MTAB-5061"
+    },
+    "status": "succeeded",
+    "sample": "{\"accession\":\"E-MTAB-5061\",\"n_files\":3,\"files\":[{\"path\":\"E-MTAB-5061.idf.txt\",\"size_bytes\":5899,\"type\":\"IDF File\",\"format\":\"tab-delimited text\",\"description\":\"Investigation Design Format (IDF)\",\"download_url\":\"https://www.ebi.ac.uk/biostudies/files/E-MTAB-5061/E-MTAB-5061.idf.txt\"},{\"path\":\"E-MTAB-5061.sdrf.txt\",\"size_bytes\":2665069,\"type\":\"SDRF File\",\"format\":\"tab-delimited text\",\"description\":\"Sample and Data Relationship Format (SDRF)\",\"download_url\":\"https://www.ebi.ac.uk/biostudies/files/E-",
+    "elapsed_ms": 1887
+  },
+  {
+    "index": 182,
+    "connector": "omics-archives",
+    "tool": "arrayexpress_get_experiment_samples",
+    "request": {
+      "accession": "E-MTAB-5061",
+      "max_rows_returned": 200
+    },
+    "status": "succeeded",
+    "sample": "{\"accession\":\"E-MTAB-5061\",\"sdrf_file\":\"E-MTAB-5061.sdrf.txt\",\"sdrf_size_bytes\":2665069,\"headers\":[\"Source Name\",\"Characteristics [organism]\",\"Characteristics [individual]\",\"Characteristics [sex]\",\"Characteristics [age]\",\"Unit [time unit]\",\"Characteristics [body mass index]\",\"Characteristics [organism status]\",\"Characteristics [clinical information]\",\"Characteristics [organism part]\",\"Characteristics [cell type]\",\"Characteristics [disease]\",\"Characteristics [biosource provider]\",\"Characteristics",
+    "elapsed_ms": 6682
+  },
+  {
+    "index": 183,
+    "connector": "omics-archives",
+    "tool": "geo_search_series",
+    "request": {
+      "term": "asthma AND gse[ETYP]",
+      "retmax": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"term\":\"asthma AND gse[ETYP]\",\"count\":972,\"retrieved\":2,\"complete\":false,\"records\":[{\"uid\":\"200344611\",\"accession\":\"GSE344611\",\"title\":\"Id2 orchestrates IL-33-driven metabolic reprogramming in pathogenic Th2 cells (ChIP-seq)\",\"summary\":\"The transcription factor Id2 licenses the transition of stem\u2011like Th2 cells to pathogenic ST2\u207a Tpath2 cells by orchestrating IL\u201133\u2011ST2 signaling to drive glycolytic reprogramming. Id2 transcriptionally represses Pten by sequestering E proteins at its promoter, a",
+    "elapsed_ms": 1011
+  },
+  {
+    "index": 184,
+    "connector": "omics-archives",
+    "tool": "geo_get_series",
+    "request": {
+      "accessions": [
+        "GSE131907"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":1,\"records\":[{\"accession\":\"GSE131907\",\"title\":\"Single cell RNA sequencing of lung adenocarcinoma\",\"organism\":[\"Homo sapiens\"],\"series_type\":[\"Expression profiling by high throughput sequencing\"],\"status\":\"Public on Mar 27 2020\",\"submission_date\":\"May 29 2019\",\"last_update_date\":\"Jun 26 2025\",\"summary\":\"We performed single cell RNA sequencing (scRNA-seq) for 208,506 cells derived from 58 lung adenocarcinomas from 44 patients, which covers primary tumour, lymph node and brain metast",
+    "elapsed_ms": 4097
+  },
+  {
+    "index": 185,
+    "connector": "omics-archives",
+    "tool": "metabolights_list_studies",
+    "request": {},
+    "status": "succeeded",
+    "sample": "{\"accessions\":[\"MTBLS1\",\"MTBLS2\",\"MTBLS3\",\"MTBLS4\",\"MTBLS5\",\"MTBLS6\",\"MTBLS7\",\"MTBLS8\",\"MTBLS10\",\"MTBLS11\",\"MTBLS12\",\"MTBLS13\",\"MTBLS14\",\"MTBLS15\",\"MTBLS16\",\"MTBLS17\",\"MTBLS18\",\"MTBLS19\",\"MTBLS20\",\"MTBLS21\",\"MTBLS22\",\"MTBLS23\",\"MTBLS24\",\"MTBLS25\",\"MTBLS26\",\"MTBLS27\",\"MTBLS28\",\"MTBLS29\",\"MTBLS31\",\"MTBLS32\",\"MTBLS33\",\"MTBLS34\",\"MTBLS35\",\"MTBLS36\",\"MTBLS37\",\"MTBLS38\",\"MTBLS39\",\"MTBLS40\",\"MTBLS41\",\"MTBLS42\",\"MTBLS43\",\"MTBLS44\",\"MTBLS45\",\"MTBLS46\",\"MTBLS47\",\"MTBLS48\",\"MTBLS49\",\"MTBLS52\",\"MTBLS54\",\"MT",
+    "elapsed_ms": 1551
+  },
+  {
+    "index": 186,
+    "connector": "omics-archives",
+    "tool": "metabolights_get_studies",
+    "request": {
+      "accessions": [
+        "MTBLS1"
+      ],
+      "include_samples": false
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":1,\"records\":[{\"accession\":\"MTBLS1\",\"title\":\"A metabolomic study of urinary changes in type 2 diabetes in human compared to the control group\",\"study_status\":\"PUBLIC\",\"release_year\":2012,\"submission_year\":2012,\"organisms\":[{\"organism\":\"Homo sapiens\",\"organism_part\":\"urine\"}],\"organism_names\":[\"Homo sapiens\"],\"assays\":[{\"assay_number\":1,\"measurement\":\"untargeted analysis\",\"technology\":\"NMR spectroscopy assay\",\"platform\":\"Nuclear Magnetic Resonance (NMR) - - - Bruker\",\"filename\":\"a_M",
+    "elapsed_ms": 2447
+  },
+  {
+    "index": 187,
+    "connector": "omics-archives",
+    "tool": "metabolights_get_study_files",
+    "request": {
+      "accession": "MTBLS1"
+    },
+    "status": "succeeded",
+    "sample": "{\"accession\":\"MTBLS1\",\"latest_version\":[],\"study_folder\":[{\"file\":\"AUDIT_FILES\",\"type\":\"directory\",\"status\":\"unreferenced\",\"directory\":true},{\"file\":\"INTERNAL_FILES\",\"type\":\"directory\",\"status\":\"unreferenced\",\"directory\":true},{\"file\":\"a_MTBLS1_NMR_metabolite_profiling_NMR_spectroscopy.txt\",\"type\":\"metadata_assay\",\"status\":\"active\",\"directory\":false},{\"file\":\"i_Investigation.txt\",\"type\":\"metadata_investigation\",\"status\":\"active\",\"directory\":false},{\"file\":\"m_MTBLS1_metabolite_profiling_NMR_spect",
+    "elapsed_ms": 2447
+  },
+  {
+    "index": 188,
+    "connector": "omics-archives",
+    "tool": "metabolights_search_data_files",
+    "request": {
+      "accession": "MTBLS1",
+      "pattern": "*.zip"
+    },
+    "status": "succeeded",
+    "sample": "{\"accession\":\"MTBLS1\",\"pattern\":\"*.zip\",\"file_match\":true,\"folder_match\":false,\"files\":[\"FILES/ADG10003u_007.zip\",\"FILES/ADG10003u_008.zip\",\"FILES/ADG10003u_009.zip\",\"FILES/ADG10003u_010.zip\",\"FILES/ADG10003u_015.zip\",\"FILES/ADG10003u_016.zip\",\"FILES/ADG10003u_017.zip\",\"FILES/ADG10003u_021.zip\",\"FILES/ADG10003u_022.zip\",\"FILES/ADG10003u_023.zip\",\"FILES/ADG10003u_051.zip\",\"FILES/ADG10003u_052.zip\",\"FILES/ADG10003u_053.zip\",\"FILES/ADG10003u_066.zip\",\"FILES/ADG10003u_067.zip\",\"FILES/ADG10003u_071.z",
+    "elapsed_ms": 324
+  },
+  {
+    "index": 189,
+    "connector": "omics-archives",
+    "tool": "mgnify_search_studies",
+    "request": {
+      "query": "coral"
+    },
+    "status": "succeeded",
+    "sample": "{\"spec\":{\"type\":\"search\",\"query\":\"coral\"},\"count\":48,\"pages_fetched\":1,\"records\":[{\"accession\":\"MGYS00000484\",\"secondary_accession\":\"ERP010479\",\"bioproject\":\"PRJEB9383\",\"study_name\":\"Marine metagenomes from 3 sediment samples along a pH gradient in Papua New Guinea\",\"biome_lineages\":[\"root:Environmental:Aquatic:Marine:Sediment\"],\"samples_count\":3,\"centre_name\":\"MAX PLANCK INSTITUTE FOR MARINE MICROBIOLOGY\",\"data_origination\":\"SUBMITTED\",\"is_private\":false,\"last_update\":\"2016-01-20T14:12:06\"},{\"a",
+    "elapsed_ms": 1364
+  },
+  {
+    "index": 190,
+    "connector": "omics-archives",
+    "tool": "mgnify_get_studies",
+    "request": {
+      "accessions": [
+        "MGYS00000410"
+      ],
+      "include_analyses": false
+    },
+    "status": "succeeded",
+    "sample": "{\"studies\":[{\"accession\":\"MGYS00000410\",\"secondary_accession\":\"ERP001736\",\"bioproject\":\"PRJEB1787\",\"study_name\":\"Shotgun Sequencing of Tara Oceans DNA samples corresponding to size fractions for  prokaryotes.\",\"biome_lineages\":[\"root:Environmental:Aquatic:Marine\",\"root:Environmental:Aquatic:Marine:Oceanic\"],\"samples_count\":136,\"centre_name\":\"GSC\",\"data_origination\":\"SUBMITTED\",\"is_private\":false,\"last_update\":\"2016-01-20T14:12:06\"}],\"missing\":[]}",
+    "elapsed_ms": 438
+  },
+  {
+    "index": 191,
+    "connector": "omics-archives",
+    "tool": "mgnify_get_study_analyses",
+    "request": {
+      "accession": "MGYS00000410"
+    },
+    "status": "succeeded",
+    "sample": "{\"study_accession\":\"MGYS00000410\",\"analyses_count\":249,\"analyses\":[{\"analysis_accession\":\"MGYA00005043\",\"study_accession\":\"MGYS00000410\",\"pipeline_version\":\"2.0\",\"experiment_type\":\"metagenomic\",\"analysis_status\":\"completed\",\"run_accession\":\"ERR599078\",\"assembly_accession\":null,\"sample_accession\":\"ERS494579\",\"instrument_platform\":\"ILLUMINA\"},{\"analysis_accession\":\"MGYA00005044\",\"study_accession\":\"MGYS00000410\",\"pipeline_version\":\"2.0\",\"experiment_type\":\"metagenomic\",\"analysis_status\":\"completed\",",
+    "elapsed_ms": 1937
+  },
+  {
+    "index": 192,
+    "connector": "omics-archives",
+    "tool": "pride_search_projects",
+    "request": {
+      "keyword": "phosphoproteome",
+      "organism": "Homo sapiens (human)",
+      "max_records_returned": 50
+    },
+    "status": "succeeded",
+    "sample": "{\"spec\":{\"keyword\":\"phosphoproteome\",\"organism\":\"Homo sapiens (human)\"},\"filter\":\"organisms==Homo sapiens (human)\",\"api_total\":645,\"records\":[{\"accession\":\"PRD000007\",\"title\":\"Phosphoproteome analysis of the human mitotic spindle\",\"organisms\":[\"Homo sapiens (human)\"],\"organism_parts\":[\"Hela cell\"],\"diseases\":[],\"instruments\":[\"Q-Tof Ultima\",\"instrument model\"],\"experiment_types\":[\"Bottom-up proteomics\"],\"softwares\":[],\"quantification_methods\":[],\"keywords\":[\"Not available\"],\"project_tags\":[],\"su",
+    "elapsed_ms": 1071
+  },
+  {
+    "index": 193,
+    "connector": "omics-archives",
+    "tool": "pride_get_projects",
+    "request": {
+      "accessions": [
+        "PXD010154"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"n_requested\":1,\"records\":[{\"accession\":\"PXD010154\",\"title\":\"A deep proteome and transcriptome abundance atlas of 29 healthy human tissues\",\"organisms\":[\"Homo sapiens (human)\"],\"organism_parts\":[\"Adipose tissue\",\"Adrenal gland\",\"Bone marrow\",\"Brain\",\"Colon\",\"Duodenum\",\"Esophagus\",\"Gall bladder\",\"Heart\",\"Hypophysis\",\"Kidney\",\"Liver\",\"Lung\",\"Lymph node\",\"Ovary\",\"Oviduct\",\"Pancreas\",\"Placenta\",\"Prostate gland\",\"Rectum\",\"Salivary gland\",\"Small intestine\",\"Smooth muscle\",\"Spleen\",\"Stomach\",\"Testis\",",
+    "elapsed_ms": 883
+  },
+  {
+    "index": 194,
+    "connector": "omics-archives",
+    "tool": "pride_search_project_proteins",
+    "request": {
+      "project_accession": "PXD010154"
+    },
+    "status": "blocked",
+    "elapsed_ms": 2529,
+    "sample": "Unexpected end of JSON input"
+  },
+  {
+    "index": 195,
+    "connector": "omics-archives",
+    "tool": "pride_find_projects_for_protein",
+    "request": {
+      "protein_accession": "P04637"
+    },
+    "status": "succeeded",
+    "sample": "{\"query_accession\":\"P04637\",\"n_records\":1,\"records\":[{\"protein_accession\":\"P04637\",\"n_projects\":131,\"projects\":[\"PXD000044\",\"PXD004450\",\"PXD004801\",\"PXD007546\",\"PXD007967\",\"PXD008964\",\"PXD010098\",\"PXD010709\",\"PXD013640\",\"PXD014259\",\"PXD014909\",\"PXD016054\",\"PXD016125\",\"PXD017117\",\"PXD017590\",\"PXD018830\",\"PXD018836\",\"PXD018855\",\"PXD019267\",\"PXD019348\",\"PXD019881\",\"PXD021250\",\"PXD021636\",\"PXD021731\",\"PXD021828\",\"PXD022357\",\"PXD022525\",\"PXD022792\",\"PXD022909\",\"PXD023052\",\"PXD023188\",\"PXD023200\",\"PXD",
+    "elapsed_ms": 666
+  },
+  {
+    "index": 196,
+    "connector": "cellguide",
+    "tool": "get_cell_type_info",
+    "request": {
+      "cell_type": "acinar cell"
+    },
+    "status": "succeeded",
+    "sample": "{\"id\":\"CL:0000622\",\"name\":\"acinar cell\",\"synonyms\":[\"acinic cell\",\"acinous cell\"],\"ontologyDescription\":\"A secretory cell that is grouped together with other cells of the same type to form grape shaped clusters known as acini (singular acinus).\",\"description\":\"Acinar cells are specialized exocrine gland cells that secrete specific enzymes and fluids to aid in digestion. Found primarily in the pancreas and salivary glands, the term acinar is derived from the Latin word 'acinus' which means 'grape",
+    "elapsed_ms": 1591
+  },
+  {
+    "index": 197,
+    "connector": "cellguide",
+    "tool": "search_cell_types",
+    "request": {
+      "query": "T cell",
+      "limit": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"result\":[{\"id\":\"CL:0000084\",\"name\":\"T cell\",\"synonyms\":[\"T lymphocyte\",\"T-cell\",\"T-lymphocyte\"],\"ontology_description\":\"A type of lymphocyte whose defining characteristic is the expression of a T cell receptor complex.\"},{\"id\":\"CL:0000097\",\"name\":\"mast cell\",\"synonyms\":[\"histaminocyte\",\"labrocyte\",\"mastocyte\"],\"ontology_description\":\"A cell that is found in almost all tissues containing numerous basophilic granules and capable of releasing large amounts of histamine and heparin upon activation",
+    "elapsed_ms": 855
+  },
+  {
+    "index": 198,
+    "connector": "cellguide",
+    "tool": "get_marker_genes",
+    "request": {
+      "cell_type": "CL:0000084",
+      "marker_type": "computational",
+      "limit": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"id\":\"CL:0000084\",\"name\":\"T cell\",\"markerType\":\"computational\",\"returned\":2,\"markerGenes\":[{\"symbol\":\"SKAP1\",\"name\":\"src kinase associated phosphoprotein 1\",\"geneId\":\"ENSG00000141293\",\"markerScore\":5.291725088482631,\"specificity\":1,\"meanExpression\":3.359874165101276,\"percentExpressing\":0.9810650887573964,\"groupbyDims\":{\"organism_ontology_term_label\":\"Homo sapiens\",\"tissue_ontology_term_label\":\"chest wall\"}},{\"symbol\":\"Nkg7\",\"name\":\"natural killer cell group 7 sequence\",\"geneId\":\"ENSMUSG00000004",
+    "elapsed_ms": 510
+  },
+  {
+    "index": 199,
+    "connector": "cellguide",
+    "tool": "get_source_data",
+    "request": {
+      "cell_type": "CL:0000622"
+    },
+    "status": "succeeded",
+    "sample": "{\"id\":\"CL:0000622\",\"name\":\"acinar cell\",\"count\":15,\"sources\":[{\"collectionName\":\"Single-Cell Analysis of Human Pancreas Reveals Transcriptional Signatures of Aging and Somatic Mutation Patterns\",\"collectionUrl\":\"https://cellxgene.cziscience.com/collections/a238e9fa-2bdf-41df-8522-69046f99baff\",\"publicationUrl\":\"10.1016/j.cell.2017.09.004\",\"publicationTitle\":\"Enge et al. (2017) Cell\",\"tissues\":[{\"id\":\"UBERON:0001264\",\"label\":\"pancreas\"}],\"diseases\":[{\"id\":\"PATO:0000461\",\"label\":\"normal\"}],\"organi",
+    "elapsed_ms": 1415
+  },
+  {
+    "index": 200,
+    "connector": "cellguide",
+    "tool": "get_cell_tissues",
+    "request": {
+      "cell_type": "T cell"
+    },
+    "status": "succeeded",
+    "sample": "{\"id\":\"CL:0000084\",\"name\":\"T cell\",\"count\":56,\"tissues\":[{\"id\":\"UBERON:0000916\",\"label\":\"abdomen\"},{\"id\":\"UBERON:0001013\",\"label\":\"adipose tissue\"},{\"id\":\"UBERON:0002369\",\"label\":\"adrenal gland\"},{\"id\":\"UBERON:0009472\",\"label\":\"axilla\"},{\"id\":\"UBERON:0018707\",\"label\":\"bladder organ\"},{\"id\":\"UBERON:0000178\",\"label\":\"blood\"},{\"id\":\"UBERON:0002371\",\"label\":\"bone marrow\"},{\"id\":\"UBERON:0000955\",\"label\":\"brain\"},{\"id\":\"UBERON:0000310\",\"label\":\"breast\"},{\"id\":\"UBERON:0001359\",\"label\":\"cerebrospinal fl",
+    "elapsed_ms": 1346
+  },
+  {
+    "index": 201,
+    "connector": "regulation",
+    "tool": "encode_search_experiments",
+    "request": {
+      "target": "CTCF",
+      "assay_title": "TF ChIP-seq",
+      "max_rows": 50
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":502,\"returned\":50,\"truncated\":true,\"accessions\":[\"ENCSR000AHD\",\"ENCSR000AIJ\",\"ENCSR000AKB\",\"ENCSR000AKO\",\"ENCSR000ALA\",\"ENCSR000ALJ\",\"ENCSR000ALV\",\"ENCSR000AMA\",\"ENCSR000AMF\",\"ENCSR000ANE\",\"ENCSR000ANO\",\"ENCSR000ANS\",\"ENCSR000AOA\",\"ENCSR000AOO\",\"ENCSR000APF\",\"ENCSR000APM\",\"ENCSR000AQU\",\"ENCSR000ATN\",\"ENCSR000AUE\",\"ENCSR000AUF\",\"ENCSR000AUV\",\"ENCSR000BHV\",\"ENCSR000BHW\",\"ENCSR000BIE\",\"ENCSR000BLX\",\"ENCSR000BNH\",\"ENCSR000BNO\",\"ENCSR000BPJ\",\"ENCSR000BQE\",\"ENCSR000BSE\",\"ENCSR000CBI\",\"ENCSR00",
+    "elapsed_ms": 4192
+  },
+  {
+    "index": 202,
+    "connector": "regulation",
+    "tool": "encode_search_biosamples",
+    "request": {
+      "term_name": "K562",
+      "classification": "cell line",
+      "max_rows": 25
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":4134,\"returned\":25,\"truncated\":true,\"accessions\":[\"ENCBS000CDD\",\"ENCBS000SGE\",\"ENCBS000SIY\",\"ENCBS001TDH\",\"ENCBS001TOZ\",\"ENCBS001TVA\",\"ENCBS001UHD\",\"ENCBS001ZKL\",\"ENCBS002JTM\",\"ENCBS002PZY\",\"ENCBS002VIT\",\"ENCBS003ASV\",\"ENCBS003XEJ\",\"ENCBS004ALC\",\"ENCBS004EUS\",\"ENCBS004ICW\",\"ENCBS004OHF\",\"ENCBS004VDW\",\"ENCBS004YXN\",\"ENCBS005AIZ\",\"ENCBS005GZJ\",\"ENCBS005SNH\",\"ENCBS005XNP\",\"ENCBS005YAB\",\"ENCBS005ZXA\",\"ENCBS006IGG\",\"ENCBS006PAM\",\"ENCBS007IVF\",\"ENCBS007KQB\",\"ENCBS007QNK\",\"ENCBS007UBK\",\"ENCBS0",
+    "elapsed_ms": 16901
+  },
+  {
+    "index": 203,
+    "connector": "regulation",
+    "tool": "encode_list_files",
+    "request": {
+      "file_format": "bed",
+      "assay_term_name": "ChIP-seq",
+      "biosample_term_name": "K562",
+      "extra_filters": {
+        "output_type": "peaks",
+        "assembly": "GRCh38"
+      },
+      "max_rows": 50
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":51,\"returned\":50,\"truncated\":true,\"accessions\":[\"ENCFF025ZVV\",\"ENCFF028HJF\",\"ENCFF048CFD\",\"ENCFF092WJN\",\"ENCFF104FIT\",\"ENCFF112BHN\",\"ENCFF119BYM\",\"ENCFF240QQW\",\"ENCFF251TOG\",\"ENCFF267JLP\",\"ENCFF337VUR\",\"ENCFF354QXX\",\"ENCFF381XPC\",\"ENCFF390XFA\",\"ENCFF422GBO\",\"ENCFF437DPT\",\"ENCFF439XWU\",\"ENCFF451NLT\",\"ENCFF478WBY\",\"ENCFF482YZD\",\"ENCFF500EUY\",\"ENCFF501DZN\",\"ENCFF537XMF\",\"ENCFF538EDC\",\"ENCFF565KKR\",\"ENCFF645GPE\",\"ENCFF662VQR\",\"ENCFF675ADR\",\"ENCFF684ZDW\",\"ENCFF700RBU\",\"ENCFF709WNV\",\"ENCFF712",
+    "elapsed_ms": 620
+  },
+  {
+    "index": 204,
+    "connector": "regulation",
+    "tool": "encode_get_experiment",
+    "request": {
+      "accession": "ENCSR000AKP"
+    },
+    "status": "succeeded",
+    "sample": "{\"record_type\":\"experiment\",\"accession\":\"ENCSR000AKP\",\"status\":\"released\",\"assay_term_name\":\"ChIP-seq\",\"assay_title\":\"Histone ChIP-seq\",\"target_label\":\"H3K27ac\",\"biosample_term_name\":\"K562\",\"biosample_classification\":\"cell line\",\"biosample_summary\":\"Homo sapiens K562\",\"description\":\"H3K27ac ChIP-seq on human K562\",\"lab\":\"Bradley Bernstein, Broad\",\"award_project\":\"ENCODE\",\"date_released\":\"2011-02-10\",\"date_submitted\":\"2010-11-16\",\"assembly\":[\"GRCh38\",\"hg19\"],\"bio_replicate_count\":3,\"tech_replicat",
+    "elapsed_ms": 1097
+  },
+  {
+    "index": 205,
+    "connector": "regulation",
+    "tool": "encode_get_file",
+    "request": {
+      "accession": "ENCFF002JUR"
+    },
+    "status": "succeeded",
+    "sample": "{\"record_type\":\"file\",\"accession\":\"ENCFF002JUR\",\"status\":\"released\",\"file_format\":\"bigWig\",\"output_type\":\"plus strand signal of all reads\",\"output_category\":\"signal\",\"assay_term_name\":\"RNA-seq\",\"assembly\":\"GRCh38\",\"dataset\":\"/experiments/ENCSR040YBR/\",\"biological_replicates\":[2],\"file_size\":157475093,\"md5sum\":\"64ce896ebc4ac35c5737d12ab56987a8\",\"lab\":\"ENCODE Processing Pipeline\",\"date_created\":\"2021-04-17T09:33:41.487854+00:00\",\"href\":\"/files/ENCFF002JUR/@@download/ENCFF002JUR.bigWig\",\"uuid\":\"79c",
+    "elapsed_ms": 880
+  },
+  {
+    "index": 206,
+    "connector": "regulation",
+    "tool": "encode_get_biosample",
+    "request": {
+      "accession": "ENCBS013JZP"
+    },
+    "status": "succeeded",
+    "sample": "{\"record_type\":\"biosample\",\"accession\":\"ENCBS013JZP\",\"status\":\"released\",\"term_name\":\"K562\",\"classification\":\"cell line\",\"organism\":\"Homo sapiens\",\"donor\":\"ENCDO000AAD\",\"source\":\"Richard Myers\",\"lab\":\"Richard Myers, HAIB\",\"summary\":\"Homo sapiens K562 cell line genetically modified (insertion) using CRISPR targeting H. sapiens E2F4\",\"life_stage\":\"adult\",\"age_display\":\"53 years\",\"sex\":\"female\",\"treatments\":[],\"genetic_modifications\":[\"/genetic-modifications/ENCGM324FHM/\"],\"date_created\":\"2022-05-0",
+    "elapsed_ms": 1099
+  },
+  {
+    "index": 207,
+    "connector": "regulation",
+    "tool": "jaspar_get_matrix",
+    "request": {
+      "matrix_id": "MA0002.2"
+    },
+    "status": "succeeded",
+    "sample": "{\"matrix_id\":\"MA0002.2\",\"name\":\"Runx1\",\"base_id\":\"MA0002\",\"version\":2,\"collection\":\"CORE\",\"sequence_logo\":\"https://jaspar.elixir.no/static/logos/svg/MA0002.2.svg\",\"versions_url\":\"https://jaspar.elixir.no/api/v1/matrix/MA0002/versions\",\"sites_url\":null,\"pfm\":{\"A\":[287,234,123,57,0,87,0,17,10,131,500],\"C\":[496,485,1072,0,75,127,0,42,400,463,158],\"G\":[696,467,149,7,1872,70,1987,1848,251,81,289],\"T\":[521,814,656,1936,53,1716,13,93,1339,1325,1053]},\"class\":[\"Runt domain factors\"],\"family\":[\"Runt-rela",
+    "elapsed_ms": 1356
+  },
+  {
+    "index": 208,
+    "connector": "regulation",
+    "tool": "jaspar_matrix_versions",
+    "request": {
+      "base_id": "MA0002"
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":3,\"results\":[{\"matrix_id\":\"MA0002.1\",\"name\":\"RUNX1\",\"base_id\":\"MA0002\",\"version\":1,\"collection\":\"CORE\",\"sequence_logo\":\"https://jaspar.elixir.no/static/logos/svg/MA0002.1.svg\",\"url\":\"https://jaspar.elixir.no/api/v1/matrix/MA0002.1/\"},{\"matrix_id\":\"MA0002.2\",\"name\":\"Runx1\",\"base_id\":\"MA0002\",\"version\":2,\"collection\":\"CORE\",\"sequence_logo\":\"https://jaspar.elixir.no/static/logos/svg/MA0002.2.svg\",\"url\":\"https://jaspar.elixir.no/api/v1/matrix/MA0002.2/\"},{\"matrix_id\":\"MA0002.3\",\"name\":\"Runx",
+    "elapsed_ms": 369
+  },
+  {
+    "index": 209,
+    "connector": "regulation",
+    "tool": "jaspar_list_matrices",
+    "request": {
+      "tax_id": 9606,
+      "collection": "CORE",
+      "version": "latest",
+      "max_rows": 200
+    },
+    "status": "succeeded",
+    "sample": "{\"count\":892,\"returned\":200,\"truncated\":true,\"matrices\":[{\"matrix_id\":\"MA0634.2\",\"name\":\"ALX3\",\"collection\":\"CORE\",\"base_id\":\"MA0634\",\"version\":\"2\",\"sequence_logo\":\"https://jaspar.elixir.no/static/logos/svg/MA0634.2.svg\",\"url\":\"https://jaspar.elixir.no/api/v1/matrix/MA0634.2/\"},{\"matrix_id\":\"MA0007.2\",\"name\":\"AR\",\"collection\":\"CORE\",\"base_id\":\"MA0007\",\"version\":\"2\",\"sequence_logo\":\"https://jaspar.elixir.no/static/logos/svg/MA0007.2.svg\",\"url\":\"https://jaspar.elixir.no/api/v1/matrix/MA0007.2/\"},{",
+    "elapsed_ms": 5699
+  },
+  {
+    "index": 210,
+    "connector": "regulation",
+    "tool": "jaspar_list_species",
+    "request": {},
+    "status": "succeeded",
+    "sample": "{\"count\":59,\"results\":[{\"tax_id\":\"4151\",\"species\":\"Antirrhinum majus\",\"url\":\"https://jaspar.elixir.no/api/v1/species/4151/\",\"matrix_url\":\"https://jaspar.elixir.no/api/v1/species/4151/\"},{\"tax_id\":\"81972\",\"species\":\"Arabidopsis lyrata subsp. lyrata\",\"url\":\"https://jaspar.elixir.no/api/v1/species/81972/\",\"matrix_url\":\"https://jaspar.elixir.no/api/v1/species/81972/\"},{\"tax_id\":\"3702\",\"species\":\"Arabidopsis thaliana\",\"url\":\"https://jaspar.elixir.no/api/v1/species/3702/\",\"matrix_url\":\"https://jaspar.",
+    "elapsed_ms": 437
+  },
+  {
+    "index": 211,
+    "connector": "regulation",
+    "tool": "jaspar_list_taxa",
+    "request": {},
+    "status": "succeeded",
+    "sample": "{\"count\":11,\"results\":[{\"name\":\"plants\",\"url\":\"https://jaspar.elixir.no/api/v1/taxon/plants/\"},{\"name\":\"vertebrates\",\"url\":\"https://jaspar.elixir.no/api/v1/taxon/vertebrates/\"},{\"name\":\"insects\",\"url\":\"https://jaspar.elixir.no/api/v1/taxon/insects/\"},{\"name\":\"urochordates\",\"url\":\"https://jaspar.elixir.no/api/v1/taxon/urochordates/\"},{\"name\":\"nematodes\",\"url\":\"https://jaspar.elixir.no/api/v1/taxon/nematodes/\"},{\"name\":\"fungi\",\"url\":\"https://jaspar.elixir.no/api/v1/taxon/fungi/\"},{\"name\":\"diatoms\"",
+    "elapsed_ms": 901
+  },
+  {
+    "index": 212,
+    "connector": "regulation",
+    "tool": "jaspar_list_collections",
+    "request": {},
+    "status": "succeeded",
+    "sample": "{\"count\":2,\"results\":[{\"name\":\"CORE\",\"url\":\"https://jaspar.elixir.no/api/v1/collections/CORE/\"},{\"name\":\"UNVALIDATED\",\"url\":\"https://jaspar.elixir.no/api/v1/collections/UNVALIDATED/\"}]}",
+    "elapsed_ms": 457
+  },
+  {
+    "index": 213,
+    "connector": "regulation",
+    "tool": "jaspar_list_releases",
+    "request": {},
+    "status": "succeeded",
+    "sample": "{\"count\":11,\"results\":[{\"year\":\"2026\",\"release_number\":11,\"pubmed_id\":\"41325984\",\"website\":\"https://jaspar.elixir.no\",\"active\":\"Yes\",\"url\":\"https://jaspar.elixir.no/api/v1/releases/11/\"},{\"year\":\"2024\",\"release_number\":10,\"pubmed_id\":\"37962376\",\"website\":\"https://jaspar.elixir.no\",\"active\":\"Yes\",\"url\":\"https://jaspar.elixir.no/api/v1/releases/10/\"},{\"year\":\"2022\",\"release_number\":9,\"pubmed_id\":\"34850907\",\"website\":\"http://jaspar.genereg.net\",\"active\":\"Yes\",\"url\":\"https://jaspar.elixir.no/api/v1/",
+    "elapsed_ms": 457
+  },
+  {
+    "index": 214,
+    "connector": "regulation",
+    "tool": "unibind_search_tfbs",
+    "request": {
+      "tf_name": "CTCF",
+      "collection": "Robust",
+      "max_rows": 50
+    },
+    "status": "succeeded",
+    "sample": "{\"total\":968,\"returned\":50,\"truncated\":true,\"datasets\":[{\"tf_id\":\"ENCSR000AHD.MCF7_Invasive_ductal_breast_carcinoma.CTCF\",\"tf_name\":\"CTCF\",\"total_peaks\":\"59714\",\"identifier\":\"ENCSR000AHD\",\"cell_line\":\"MCF7_Invasive_ductal_breast_carcinoma\"},{\"tf_id\":\"ENCSR000AKB.GM12878_female_B-cells_lymphoblastoid_cell_line.CTCF\",\"tf_name\":\"CTCF\",\"total_peaks\":\"34390\",\"identifier\":\"ENCSR000AKB\",\"cell_line\":\"GM12878_female_B-cells_lymphoblastoid_cell_line\"},{\"tf_id\":\"ENCSR000AKO.K562_myelogenous_leukemia.CTCF\",",
+    "elapsed_ms": 2540
+  },
+  {
+    "index": 215,
+    "connector": "regulation",
+    "tool": "unibind_get_dataset",
+    "request": {
+      "tf_id": "ENCSR000AUE.A549_lung_carcinoma.CTCF"
+    },
+    "status": "succeeded",
+    "sample": "{\"tf_id\":\"ENCSR000AUE.A549_lung_carcinoma.CTCF\",\"tf_name\":\"CTCF\",\"identifiers\":[\"ENCSR000AUE\",\"EXP011091\"],\"cell_lines\":[\"A549 (lung carcinoma)\"],\"biological_conditions\":[\"1 h with 100 nM Dexamethasone (Myers)\"],\"jaspar_ids\":[\"MA0139.1\"],\"prediction_models\":[\"DAMO\"],\"total_peaks\":\"57900\",\"n_models\":1,\"models\":[{\"prediction_model\":\"DAMO\",\"jaspar_id\":\"MA0139\",\"jaspar_version\":\"1\",\"total_tfbs\":\"50435\",\"score_threshold\":\"77.7\",\"distance_threshold\":\"92\",\"adj_centrimo_pvalue\":-89.6629433222172,\"bed_ur",
+    "elapsed_ms": 2268
+  },
+  {
+    "index": 216,
+    "connector": "regulation",
+    "tool": "unibind_tfbs_in_region",
+    "request": {
+      "genome": "hg38",
+      "chrom": "chr1",
+      "start": 1000000,
+      "end": 1010000,
+      "collection": "Robust"
+    },
+    "status": "succeeded",
+    "sample": "{\"genome\":\"hg38\",\"chrom\":\"chr1\",\"start\":1000000,\"end\":1010000,\"collection\":\"Robust\",\"tf_name_filter\":null,\"items_scanned\":2347,\"region_scan_complete\":true,\"n_matching\":2347,\"returned\":2000,\"truncated\":true,\"sites\":[{\"chrom\":\"chr1\",\"start\":1000003,\"end\":1000015,\"strand\":\"-\",\"dataset\":\"ENCSR000EVJ\",\"cell_line\":\"HeLa-S3\",\"tf_name\":\"E2F1\",\"jaspar_matrix\":\"MA0024.3\"},{\"chrom\":\"chr1\",\"start\":1000003,\"end\":1000015,\"strand\":\"-\",\"dataset\":\"EXP000658\",\"cell_line\":\"MCF7--Invasive-ductal-breast-carcinoma-\",",
+    "elapsed_ms": 3941
+  },
+  {
+    "index": 217,
+    "connector": "research-resources",
+    "tool": "search_grants",
+    "request": {
+      "keyword": "cancer",
+      "agencies": [
+        "HHS-NIH11"
+      ],
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"hit_count\":117,\"n_returned\":2,\"truncated\":true,\"records\":[{\"id\":\"359090\",\"number\":\"FOR-CA-25-077\",\"title\":\"Forecast to Publish a Funding Opportunity Announcement for Cancer Epidemiology Cohorts: Building the Next Generation of Research Cohorts (U01 Clinical Trial Not Allowed)\",\"agencyCode\":\"HHS-NIH11\",\"agency\":\"National Institutes of Health\",\"openDate\":\"06/16/2025\",\"closeDate\":\"\",\"oppStatus\":\"forecasted\",\"docType\":\"forecast\",\"cfdaList\":[\"93.399\"]},{\"id\":\"359726\",\"number\":\"FOR-CA-25-086\",\"title",
+    "elapsed_ms": 2538
+  },
+  {
+    "index": 218,
+    "connector": "research-resources",
+    "tool": "search_antibodies",
+    "request": {
+      "query": "CD4",
+      "max_records": 2
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":\"CD4\",\"total_elements\":196,\"retrieved\":100,\"unique_ab_ids\":96,\"complete\":false,\"truncated_at_max_records\":true,\"anonymous_limit_hit\":false,\"items\":[{\"catalogNum\":\"CPTC-CD40-4\",\"vendorName\":\"DSHB\",\"clonality\":\"monoclonal\",\"epitope\":null,\"comments\":\"Clinical Proteomics Technologies for Cancer, National Cancer Institute\",\"url\":\"https://dshb.biology.uiowa.edu/CPTC-CD40-4\",\"abName\":\"CD40 Molecule Peptide 2\",\"abTarget\":\"CD40\",\"cloneId\":\"CPTC-CD40-4\",\"commercialType\":\"non-profit\",\"definingCita",
+    "elapsed_ms": 7485
+  },
+  {
+    "index": 219,
+    "connector": "research-resources",
+    "tool": "get_antibody",
+    "request": {
+      "antibody_id": "RRID:AB_3643095"
+    },
+    "status": "succeeded",
+    "sample": "{\"ab_id\":3643095,\"rrid\":\"AB_3643095\",\"record_count\":1,\"records\":[{\"catalogNum\":\"NBP3-27025V\",\"vendorName\":\"Novus\",\"clonality\":\"monoclonal\",\"epitope\":null,\"comments\":\"Applications: Immunohistochemistry-Paraffin\",\"url\":\"https://www.bio-techne.com/p/antibodies/trpc6-antibody-trpc6-7672_nbp3-27025v?utm_source=antibodyregistry&utm_medium=referral&utm_campaign=product&utm_term=primaryantibodies\",\"abName\":\"TRPC6 Antibody (TRPC6/7672) [DyLight 405]\",\"abTarget\":\"TRPC6\",\"cloneId\":\"TRPC6/7672\",\"commercialT",
+    "elapsed_ms": 1687
+  },
+  {
+    "index": 220,
+    "connector": "research-resources",
+    "tool": "find_antibodies_by_catalog",
+    "request": {
+      "catalog_number": "ab32572"
+    },
+    "status": "succeeded",
+    "sample": "{\"catalog_num\":\"ab32572\",\"vendor\":null,\"match_count\":2,\"search_total_elements\":2,\"matches\":[{\"catalogNum\":\"ab32572\",\"vendorName\":\"Abcam\",\"clonality\":\"monoclonal\",\"epitope\":null,\"comments\":\"validation status unknown, seller recommendations provided in 2012: Immunocytochemistry; Immunofluorescence; Immunohistochemistry; Immunoprecipitation; Western Blot; Immunocytochemistry/Immunofluorescence, Immunohistochemistry-Fr, Immunohistochemistry-P, Immunoprecipitation, Western Blot\",\"url\":null,\"abName\":\"",
+    "elapsed_ms": 903
+  },
+  {
+    "index": 221,
+    "connector": "research-resources",
+    "tool": "get_antibody_registry_stats",
+    "request": {},
+    "status": "succeeded",
+    "sample": "{\"total\":3188166,\"lastupdate\":\"2026-09-09\"}",
+    "elapsed_ms": 658
+  },
+  {
+    "index": 222,
+    "connector": "biomart",
+    "tool": "list_marts",
+    "request": {},
+    "status": "succeeded",
+    "elapsed_ms": 14207,
+    "sample": "name,display_name,description\nENSEMBL_MART_ENSEMBL,Ensembl Genes 116,Ensembl Genes 116\nENSEMBL_MART_MOUSE,Mouse strains 116,Mouse strains 116\nENSEMBL_MART_SEQUENCE,Sequence,Sequence\nENSEMBL_MART_ONTOLOGY,Ontology,Ontology\nENSEMBL_MART_GENOMIC,Genomic features 116,Genomic features 116\nENSEMBL_MART_SNP,Ensembl Variation 116,Ensembl Variation 116\nENSEMBL_MART_FUNCGEN,Ensembl Regulation 116,Ensembl Regulation 116"
+  },
+  {
+    "index": 223,
+    "connector": "biomart",
+    "tool": "list_datasets",
+    "request": {
+      "mart": "ENSEMBL_MART_ENSEMBL"
+    },
+    "status": "empty",
+    "elapsed_ms": 2797,
+    "sample": "name,display_name,description"
+  },
+  {
+    "index": 224,
+    "connector": "biomart",
+    "tool": "list_common_attributes",
+    "request": {
+      "mart": "ENSEMBL_MART_ENSEMBL",
+      "dataset": "hsapiens_gene_ensembl"
+    },
+    "status": "succeeded",
+    "sample": "\"name,display_name,description\"",
+    "elapsed_ms": 1656
+  },
+  {
+    "index": 225,
+    "connector": "biomart",
+    "tool": "list_all_attributes",
+    "request": {
+      "mart": "ENSEMBL_MART_ENSEMBL",
+      "dataset": "hsapiens_gene_ensembl"
+    },
+    "status": "succeeded",
+    "sample": "\"name,display_name,description\\n<html>,,\\n<head>,,\\n  <title>Service unavailable</title>,,\\n\\\"  <meta name=\\\"\\\"robots\\\"\\\" content=\\\"\\\"noindex\\\"\\\">\\\",,\\n\\\"  <base href=\\\"\\\"//status.ensembl.org\\\"\\\">\\\",,\\n  <style>,,\\n\\\"    html,\\\",,\\n    body {,,\\n      padding: 0;,,\\n      margin: 0;,,\\n      height: 100%;,,\\n    },,\\n      display: grid;,,\\n      grid-template-rows: [header] auto [main] 1fr [footer] auto;,,\\n\\\"      font-family: Luxi Sans, Helvetica, Arial, Geneva, sans-serif;\\\",,\\n      font-si",
+    "elapsed_ms": 1990
+  },
+  {
+    "index": 226,
+    "connector": "biomart",
+    "tool": "list_filters",
+    "request": {
+      "mart": "ENSEMBL_MART_ENSEMBL",
+      "dataset": "hsapiens_gene_ensembl"
+    },
+    "status": "succeeded",
+    "sample": "\"name,description\\n<html>,\\n<head>,\\n  <title>Service unavailable</title>,\\n\\\"  <meta name=\\\"\\\"robots\\\"\\\" content=\\\"\\\"noindex\\\"\\\">\\\",\\n\\\"  <base href=\\\"\\\"//status.ensembl.org\\\"\\\">\\\",\\n  <style>,\\n\\\"    html,\\\",\\n    body {,\\n      padding: 0;,\\n      margin: 0;,\\n      height: 100%;,\\n    },\\n      display: grid;,\\n      grid-template-rows: [header] auto [main] 1fr [footer] auto;,\\n\\\"      font-family: Luxi Sans, Helvetica, Arial, Geneva, sans-serif;\\\",\\n      font-size: 90%;,\\n    h1 {,\\n      ",
+    "elapsed_ms": 3107
+  },
+  {
+    "index": 227,
+    "connector": "biomart",
+    "tool": "get_data",
+    "request": {
+      "mart": "ENSEMBL_MART_ENSEMBL",
+      "dataset": "hsapiens_gene_ensembl",
+      "attributes": [
+        "ensembl_gene_id",
+        "external_gene_name"
+      ],
+      "filters": {
+        "chromosome_name": "Y",
+        "biotype": "protein_coding"
+      }
+    },
+    "status": "blocked",
+    "elapsed_ms": 2774,
+    "sample": "martservice returned an HTML page (Ensembl outage/maintenance notice)"
+  },
+  {
+    "index": 228,
+    "connector": "biomart",
+    "tool": "get_translation",
+    "request": {
+      "mart": "ENSEMBL_MART_ENSEMBL",
+      "dataset": "hsapiens_gene_ensembl",
+      "from_attr": "hgnc_symbol",
+      "to_attr": "ensembl_gene_id",
+      "target": "TP53"
+    },
+    "status": "succeeded",
+    "sample": "\"ENSG00000141510\"",
+    "elapsed_ms": 802
+  },
+  {
+    "index": 229,
+    "connector": "biomart",
+    "tool": "batch_translate",
+    "request": {
+      "mart": "ENSEMBL_MART_ENSEMBL",
+      "dataset": "hsapiens_gene_ensembl",
+      "from_attr": "hgnc_symbol",
+      "to_attr": "ensembl_gene_id",
+      "targets": [
+        "TP53",
+        "BRCA1"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"translations\":{\"BRCA1\":\"ENSG00000012048\",\"TP53\":\"ENSG00000141510\"},\"not_found\":[],\"found_count\":2,\"not_found_count\":0}",
+    "elapsed_ms": 803
+  },
+  {
+    "index": 230,
+    "connector": "zinc",
+    "tool": "zinc_search_by_id",
+    "request": {
+      "zinc_ids": [
+        "ZINC000000000012"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":{\"zinc_ids\":[\"ZINC000000000012\"]},\"total_available\":1,\"returned_count\":1,\"truncated\":false,\"source_counts\":{\"zinc20\":1,\"missing\":0},\"records\":[{\"zinc_id\":\"ZINC000000000012\",\"smiles\":\"O=C(C[S@@](=O)C(c1ccccc1)c1ccccc1)NO\",\"catalogs\":[{\"catalog_name\":\"Mcule BB\",\"price\":240,\"purchase\":1,\"quantity\":10,\"shipping\":\"6 weeks\",\"supplier_code\":\"MCULE-2311834287\",\"unit\":\"mg\",\"url\":\"https://mcule.com/%%s/\"},{\"catalog_name\":\"MedChem Express Economical\",\"price\":240,\"purchase\":1,\"quantity\":10,\"shippin",
+    "elapsed_ms": 3890
+  },
+  {
+    "index": 231,
+    "connector": "zinc",
+    "tool": "zinc_search_by_smiles",
+    "request": {
+      "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "dist": 2
+    },
+    "status": "empty",
+    "sample": "{\"query\":{\"smiles\":\"CC(=O)Oc1ccccc1C(=O)O\",\"dist\":2,\"adist\":2},\"total_available\":0,\"returned_count\":0,\"truncated\":false,\"source_counts\":{\"zinc22\":0,\"logs\":0,\"zinc22_missing\":0},\"records\":[]}",
+    "elapsed_ms": 3700
+  },
+  {
+    "index": 232,
+    "connector": "zinc",
+    "tool": "zinc_search_by_supplier",
+    "request": {
+      "supplier_codes": [
+        "MCULE-2311834287"
+      ]
+    },
+    "status": "empty",
+    "sample": "{\"query\":{\"supplier_codes\":[\"MCULE-2311834287\"]},\"total_available\":0,\"returned_count\":0,\"truncated\":false,\"source_counts\":{\"zinc22\":0,\"logs\":0,\"zinc22_missing\":0},\"records\":[]}",
+    "elapsed_ms": 896
+  },
+  {
+    "index": 233,
+    "connector": "zinc",
+    "tool": "zinc_random_sample",
+    "request": {
+      "count": 2,
+      "subset": "lead-like"
+    },
+    "status": "blocked",
+    "elapsed_ms": 26011,
+    "sample": "This operation was aborted"
+  },
+  {
+    "index": 234,
+    "connector": "zinc",
+    "tool": "zinc_get_3d",
+    "request": {
+      "zinc_ids": [
+        "ZINC000000000012"
+      ]
+    },
+    "status": "succeeded",
+    "sample": "{\"query\":{\"zinc_ids\":[\"ZINC000000000012\"]},\"returned_count\":1,\"structures\":[{\"zinc_id\":\"ZINC000000000012\",\"found\":true,\"smiles\":\"O=C(C[S@@](=O)C(c1ccccc1)c1ccccc1)NO\",\"source\":\"zinc20\",\"tranche_name\":null,\"tranche_properties\":null}],\"repository_note\":\"Browse the sub-release directories (zinc-22a, zinc-22b, \u2026) under the tranche path for exact file names before bulk download; convert with OpenBabel / prepare_ligand4.py for your docking engine.\"}",
+    "elapsed_ms": 3062
+  }
+]

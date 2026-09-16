@@ -1,0 +1,50 @@
+---
+sidebar_position: 1
+slug: /intro
+title: "Open-Science 文件"
+description: "透過原始碼核對的指南和真實研究實操學習 Open-Science。"
+last_update:
+  date: '2026-09-16'
+---
+
+# Open-Science {/* #open-science */}
+
+使用 Open-Science 整理研究資料、與代理協作、執行分析並檢查儲存後的結果。
+
+## 從這裡開始 {/* #从这里开始 */}
+
+1. [能力與支援的輸入](./guides/capabilities.md)：根據檔案或研究問題選擇路徑。
+2. [安裝](./guides/installation.md)與[首次設定](./guides/onboarding.md)：準備應用、代理、模型和執行時。
+3. [第一個專案與結果](./guides/first-project.md)：建立專案，用一份小表格生成並重新開啟說明報告。
+4. [權限與審批](./guides/approval-modes.md)：檢查操作請求，管理記住的授權。
+5. [Notebook 與執行證據](./guides/notebook.md)：檢視程式碼、變數和產物來源。
+
+## 跟隨真實研究任務 {/* #跟随真实研究任务 */}
+
+| 目標 | 工作流 | 已演示結果 |
+| --- | --- | --- |
+| 準備閱讀集合 | [搭建核心閱讀清單](./workflows/core-reading-list.md) | 文獻庫中核對的三篇 PRISMA 論文、集合及出版方 PDF |
+| 檢查並彙總資料 | [從原始資料得到可復現分析](./workflows/data-quality.md) | GSE60450 基因表達矩陣檢查、十二樣本質控 CSV、原始計數圖和方法報告 |
+
+![Open-Science 中真實的 GSE60450 RNA-seq 圖及生成程式碼](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+
+## 按所需細節查詢 {/* #按所需细节查找 */}
+
+| 分割槽 | 內容 |
+| --- | --- |
+| **Guides** | 頁面控制元件、設定和日常操作 |
+| **Workflows** | 包含輸入、決策、交付物和驗收檢查的研究場景 |
+| **Explore tools** | 工具大類、科學服務和接入選擇 |
+| **Skills** | 可複用方法、目錄和包管理 |
+| **Specialists** | 角色、能力分配、委派和稽核 |
+| **Reference** | 精確限制、配置規則、包格式、CLI/API 約定和 Changelog |
+
+使用 **Search** 或 **⌘K / Ctrl+K** 搜尋當前語言文件的標題、章節和正文。應用自身搜尋的範圍與文件不同。
+
+## 執行示例前 {/* #运行示例前 */}
+
+本地示例使用公開 PRISMA 論文和 GSE60450 RNA-seq 矩陣。下載章節中的輸入檔案，確認任務所需的模型、執行時和權限。
+
+[遠端計算](./guides/remote-compute.md)已包含 Direct SSH RNA-seq 分析、結果回收、重啟恢復和取消實操。Slurm 終態監控需要可用的記賬查詢，GPU 推理需要相容的軟體環境。
+
+技術限制和配置查詢見 [Reference](./reference/index.md)，版本變化見 [Changelog](./changelog/v0.30.1.md)。

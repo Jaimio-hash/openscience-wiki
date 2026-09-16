@@ -1,0 +1,50 @@
+---
+sidebar_position: 1
+slug: /intro
+title: "Open-Science Documentation"
+description: "Aprenda Open-Science con guías verificados por fuentes y verdaderos avances de investigación."
+last_update:
+  date: '2026-09-16'
+---
+
+# Open-Science {/* #open-science */}
+
+Utilice Open-Science para organizar fuentes de investigación, trabajar con un agente, realizar análisis e inspeccionar resultados guardados.
+
+## Empieza aquí. {/* #start-here */}
+
+1. [Capacidades y insumos compatibles](./guides/capabilities.md): Elija un camino para sus archivos o pregunta de investigación.
+2. [Instalación](./guides/installation.md) y [configuración por primera vez](./guides/onboarding.md): preparar la aplicación, agente, modelo y tiempo de ejecución.
+3. [Su primer proyecto y resultado](./guides/first-project.md): abrir una pequeña mesa de datos públicos y guardar un resumen comprobado.
+4. [Permisos](./guides/approval-modes.md): inspeccionar las acciones solicitadas y gestionar el acceso recordado.
+5. [Notebook y pruebas de ejecución](./guides/notebook.md): examinar el código, las variables y la procedencia del resultado.
+
+## Seguir una tarea de investigación real {/* #follow-a-real-research-task */}
+
+| Objetivo | Caminad | Resultado demostrado |
+| --- | --- | --- |
+| Preparar una colección de lectura | [Construir una lista de lectura básica](./workflows/core-reading-list.md) | Tres documentos PRISMA revisados en la Biblioteca, una colección y un editor adjunto PDF |
+| Revisar y resumir un conjunto de datos | [Convertir datos brutos en un análisis reproducible](./workflows/data-quality.md) | Controles de matriz de expresión de genes GSE60450, 12 muestreos QC CSV, informe de cifras y métodos de contabilidad en bruto |
+
+![Actual GSE60450 RNA-seq figura y código de producto en Open-Science](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+
+## Encontrar el nivel adecuado de detalle {/* #find-the-right-level-of-detail */}
+
+| Sección | Léalo para |
+| --- | --- |
+| **Guías** | Controles de página, configuración y operaciones diarias |
+| **Flujos de investigación** | Escenarios de investigación con insumos, decisiones, entregables y comprobaciones de aceptación |
+| **Explorar herramientas** | Familias de herramientas, servicios científicos y opciones de integración |
+| **Skills** | Métodos reutilizables, el directorio y la gestión de paquetes |
+| **Especialistas** | Funciones, capacidades asignadas, delegación y examen |
+| **Reference** | Limitaciones de salida, reglas de configuración, formatos de paquete, contratos CLI/API y Changelog |
+
+Utilice **Search** o **XXXK / Ctrl+K** para buscar los títulos, títulos y texto corporal de esta documentación. La propia búsqueda de la aplicación tiene un alcance diferente.
+
+## Antes de ejecutar un ejemplo {/* #before-running-an-example */}
+
+Los caminantes locales utilizan papeles PRISMA públicos y la matriz GSE60450 RNA-seq. Descargue las entradas enlazadas y confirme el modelo, el tiempo de ejecución y los permisos requeridos por cada tarea.
+
+[Computación remota](./guides/remote-compute.md) incluye un análisis Direct SSH RNA-seq, la colección de salida, la recuperación de reiniciar y la cancelación. Slurm terminal monitoring needs working accounting; La inferencia GPU necesita un entorno de software compatible.
+
+Utilice [Referencia](./reference/index.md) para límites técnicos y configuración, y [Cambio](./changelog/v0.30.1.md) para la historia de la liberación.

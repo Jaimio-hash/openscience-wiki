@@ -1,0 +1,8 @@
+{
+  "label": "はじめる",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Open-Scienceをインストールし、初回設定を完了し、最初の研究プロジェクトを作成します。"
+  }
+}

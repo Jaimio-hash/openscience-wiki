@@ -1,36 +1,93 @@
 {
-  "homepage.tagline": {
-    "message": "面向可复现科研的本地优先 AI 工作台"
+  "homepage.eyebrow": {
+    "message": "使用文档"
+  },
+  "homepage.introduction": {
+    "message": "配置研究工作区，处理科研数据，检查并分享你的研究结果。"
   },
   "homepage.readDocs": {
-    "message": "阅读完整文档"
+    "message": "阅读文档"
   },
-  "homepage.guides.gettingStarted.title": {
-    "message": "开始使用"
+  "homepage.troubleshooting": {
+    "message": "故障排查"
   },
-  "homepage.guides.gettingStarted.description": {
-    "message": "安装桌面应用，配置 Agent、模型、Notebook 与数据目录。"
+  "homepage.startHeading": {
+    "message": "从这里开始"
   },
-  "homepage.guides.workspace.title": {
-    "message": "研究工作区"
+  "homepage.browseHeading": {
+    "message": "按主题浏览"
   },
-  "homepage.guides.workspace.description": {
-    "message": "逐项掌握对话、附件、文件预览、权限、Notebook 和 Provenance。"
+  "homepage.topicsHeading": {
+    "message": "深入了解"
   },
-  "homepage.guides.settings.title": {
-    "message": "设置与参考"
+  "homepage.steps.install.title": {
+    "message": "安装 Open-Science"
   },
-  "homepage.guides.settings.description": {
-    "message": "配置全部 17 个设置面板，并按控件索引快速查找操作。"
+  "homepage.steps.install.description": {
+    "message": "选择你使用的操作系统。"
+  },
+  "homepage.steps.setup.title": {
+    "message": "完成首次设置"
+  },
+  "homepage.steps.setup.description": {
+    "message": "连接模型，准备运行环境。"
+  },
+  "homepage.steps.firstResult.title": {
+    "message": "创建第一个结果"
+  },
+  "homepage.steps.firstResult.description": {
+    "message": "从输入材料到保存结果，完成一个项目。"
+  },
+  "homepage.sections.guides.title": {
+    "message": "使用指南"
+  },
+  "homepage.sections.guides.description": {
+    "message": "了解项目、对话、文件和工作区设置。"
+  },
+  "homepage.sections.workflows.title": {
+    "message": "科研工作流"
+  },
+  "homepage.sections.workflows.description": {
+    "message": "跟随真实研究数据的案例完成操作。"
+  },
+  "homepage.sections.tools.title": {
+    "message": "探索工具"
+  },
+  "homepage.sections.tools.description": {
+    "message": "查询数据库、查看文件并运行计算。"
+  },
+  "homepage.sections.skills.title": {
+    "message": "Skills"
+  },
+  "homepage.sections.skills.description": {
+    "message": "查找、使用和创建可复用的科研方法。"
+  },
+  "homepage.sections.specialists.title": {
+    "message": "专家"
+  },
+  "homepage.sections.specialists.description": {
+    "message": "委派专项任务，并审核完成的结果。"
+  },
+  "homepage.sections.reference.title": {
+    "message": "参考"
+  },
+  "homepage.sections.reference.description": {
+    "message": "查阅控件、文件格式、CLI 和 API。"
+  },
+  "homepage.topics.reproducibility": {
+    "message": "可复现性"
+  },
+  "homepage.topics.packages": {
+    "message": ".science 研究包"
+  },
+  "homepage.topics.marketplace": {
+    "message": "Skill 市场"
   },
   "homepage.meta.title": {
-    "message": "Open Science 文档"
+    "message": "Open-Science 文档"
   },
   "homepage.meta.description": {
-    "message": "AIPOCH Open Science 的完整操作、配置与科研复现指南"
-  },
-  "homepage.openGuide": {
-    "message": "打开指南 →"
+    "message": "AIPOCH Open-Science 的完整操作、配置与科研复现指南"
   },
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",
@@ -358,5 +415,2128 @@
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"
+  },
+  "docs.sections.label": {
+    "message": "文档分区",
+    "description": "Accessible label for documentation section navigation"
+  },
+  "docs.guides.outline.group.start": {
+    "message": "开始使用"
+  },
+  "docs.guides.outline.capabilities.title": {
+    "message": "功能与支持的输入"
+  },
+  "docs.guides.outline.capabilities.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.source-types.title": {
+    "message": "支持的文件与数据"
+  },
+  "docs.guides.outline.source-types.scope": {
+    "message": "输入类型、可读取与可执行格式的区别，以及导入前的准备。"
+  },
+  "docs.guides.outline.installation.title": {
+    "message": "安装与更新"
+  },
+  "docs.guides.outline.installation.scope": {
+    "message": "系统要求、桌面安装、源码运行、检查更新与版本选择。"
+  },
+  "docs.guides.outline.onboarding.title": {
+    "message": "首次设置"
+  },
+  "docs.guides.outline.onboarding.scope": {
+    "message": "按引导顺序完成环境检查、数据目录、代理框架、模型和 Notebook 配置。"
+  },
+  "docs.guides.outline.first-project.title": {
+    "message": "第一个项目与结果"
+  },
+  "docs.guides.outline.first-project.scope": {
+    "message": "从创建项目到保存产物的最小任务，以及明确的成功检查。"
+  },
+  "docs.guides.outline.group.workspace": {
+    "message": "项目与会话"
+  },
+  "docs.guides.outline.navigation.title": {
+    "message": "导航与搜索"
+  },
+  "docs.guides.outline.navigation.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.projects.title": {
+    "message": "项目与源文件夹"
+  },
+  "docs.guides.outline.projects.scope": {
+    "message": "创建编辑项目、描述与 Agent Context、源目录选择和访问范围。"
+  },
+  "docs.guides.outline.sessions.title": {
+    "message": "会话与分支"
+  },
+  "docs.guides.outline.sessions.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.composer.title": {
+    "message": "对话与排队请求"
+  },
+  "docs.guides.outline.composer.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.follow-ups.title": {
+    "message": "追问与任务队列"
+  },
+  "docs.guides.outline.follow-ups.scope": {
+    "message": "排队、编辑、排序、立即发送和停止请求，以及中断后的状态。"
+  },
+  "docs.guides.outline.revisions.title": {
+    "message": "消息修订与分支"
+  },
+  "docs.guides.outline.revisions.scope": {
+    "message": "编辑历史消息、查看版本、创建分支，以及上下文保留范围。"
+  },
+  "docs.guides.outline.search.title": {
+    "message": "查找项目、会话与文件"
+  },
+  "docs.guides.outline.search.scope": {
+    "message": "全局搜索、结果类型、打开结果，以及与面板筛选的区别。"
+  },
+  "docs.guides.outline.group.files": {
+    "message": "文件、文献与结果"
+  },
+  "docs.guides.outline.files.title": {
+    "message": "文件、产物与版本"
+  },
+  "docs.guides.outline.files.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.previews.title": {
+    "message": "打开与预览文件"
+  },
+  "docs.guides.outline.previews.scope": {
+    "message": "分栏与全屏预览、支持的查看器、标签页及各格式操作。"
+  },
+  "docs.guides.outline.artifacts.title": {
+    "message": "产物与文件版本"
+  },
+  "docs.guides.outline.artifacts.scope": {
+    "message": "区分上传文件与生成产物；查看保存版本、编辑支持的托管文件、对比支持的文本或 Markdown 变更并导出结果。"
+  },
+  "docs.guides.outline.library.title": {
+    "message": "文献库与引用"
+  },
+  "docs.guides.outline.library.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.reading.title": {
+    "message": "论文阅读与引用"
+  },
+  "docs.guides.outline.reading.scope": {
+    "message": "PDF 附件、元数据与全文获取、阅读状态、引用样式、复制与导出。"
+  },
+  "docs.guides.outline.notebook.title": {
+    "message": "Notebook 与执行证据"
+  },
+  "docs.guides.outline.notebook.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.provenance.title": {
+    "message": "检查产物来源"
+  },
+  "docs.guides.outline.provenance.scope": {
+    "message": "检查某一版本可用的来源消息、代码、Notebook 执行和审查证据链接，说明缺失证据与格式覆盖差异。"
+  },
+  "docs.guides.outline.group.models": {
+    "message": "模型与代理"
+  },
+  "docs.guides.outline.models.title": {
+    "message": "模型与任务策略"
+  },
+  "docs.guides.outline.models.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.providers.title": {
+    "message": "提供商与本地模型配置"
+  },
+  "docs.guides.outline.providers.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.local-models.title": {
+    "message": "使用本地模型"
+  },
+  "docs.guides.outline.local-models.scope": {
+    "message": "兼容的本地端点、模型标识、能力限制与连接验证。"
+  },
+  "docs.guides.outline.frameworks.title": {
+    "message": "安装与切换代理框架"
+  },
+  "docs.guides.outline.frameworks.scope": {
+    "message": "框架安装、检测、认证、启用、切换、修复与移除。"
+  },
+  "docs.guides.outline.scenario-models.title": {
+    "message": "不同任务的模型配置"
+  },
+  "docs.guides.outline.scenario-models.scope": {
+    "message": "主模型、Subagent、Reviewer、Vision、Session details 的策略与继承关系。"
+  },
+  "docs.guides.outline.usage.title": {
+    "message": "Token 用量与活动"
+  },
+  "docs.guides.outline.usage.scope": {
+    "message": "已报告 token 分类、周期筛选、图表、项目会话计数与统计缺失。"
+  },
+  "docs.guides.outline.group.control": {
+    "message": "研究控制与上下文"
+  },
+  "docs.guides.outline.approval-modes.title": {
+    "message": "权限与审批"
+  },
+  "docs.guides.outline.approval-modes.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.remembered-permissions.title": {
+    "message": "已记忆的权限"
+  },
+  "docs.guides.outline.remembered-permissions.scope": {
+    "message": "会话、项目和全局范围，查看、撤销与恢复默认授权。"
+  },
+  "docs.guides.outline.planning.title": {
+    "message": "执行前规划"
+  },
+  "docs.guides.outline.planning.scope": {
+    "message": "规划入口、审阅计划、反馈、批准和继续执行。"
+  },
+  "docs.guides.outline.delegation.title": {
+    "message": "任务委派与 Side Chat"
+  },
+  "docs.guides.outline.delegation.scope": {
+    "message": "检查当前框架支持的委派、子智能体活动和 Side Chat 建议；专家创建、能力绑定与 Reviewer 详情统一归入 Specialists。"
+  },
+  "docs.guides.outline.memory.title": {
+    "message": "记忆与对话上下文"
+  },
+  "docs.guides.outline.memory.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.context.title": {
+    "message": "上下文、压缩与交接"
+  },
+  "docs.guides.outline.context.scope": {
+    "message": "查看上下文用量、历史保留与压缩，以及准备续接或交接。"
+  },
+  "docs.guides.outline.group.runtime": {
+    "message": "运行环境与连接"
+  },
+  "docs.guides.outline.runtimes.title": {
+    "message": "Python 与 R 运行环境"
+  },
+  "docs.guides.outline.runtimes.scope": {
+    "message": "托管与外部解释器、安装、启用、包访问及重建影响。"
+  },
+  "docs.guides.outline.connectors.title": {
+    "message": "连接器与凭据"
+  },
+  "docs.guides.outline.connectors.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.credentials.title": {
+    "message": "凭据与服务账号"
+  },
+  "docs.guides.outline.credentials.scope": {
+    "message": "设备凭据、研究联系信息、API key、token、OAuth、复用与移除。"
+  },
+  "docs.guides.outline.network.title": {
+    "message": "网络、代理与包镜像"
+  },
+  "docs.guides.outline.network.scope": {
+    "message": "网络检查、Notebook 域名、代理模式、软件包镜像和证书包。"
+  },
+  "docs.guides.outline.remote-compute.title": {
+    "message": "SSH 主机与 Slurm 配置"
+  },
+  "docs.guides.outline.remote-compute.scope": {
+    "message": "主机认证、直接执行与调度模式、资源检测、临时目录和并发配置。"
+  },
+  "docs.guides.outline.remote-access.title": {
+    "message": "远程浏览器访问"
+  },
+  "docs.guides.outline.remote-access.scope": {
+    "message": "Remote.It 前提、访问模式、配对、可信浏览器与撤销。"
+  },
+  "docs.guides.outline.group.preferences": {
+    "message": "个性化与维护"
+  },
+  "docs.guides.outline.appearance.title": {
+    "message": "外观与通知"
+  },
+  "docs.guides.outline.appearance.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.notifications.title": {
+    "message": "消息与通知"
+  },
+  "docs.guides.outline.notifications.scope": {
+    "message": "应用内消息、桌面任务通知、内容可见性、送达测试与系统权限。"
+  },
+  "docs.guides.outline.tags.title": {
+    "message": "使用标签组织内容"
+  },
+  "docs.guides.outline.tags.scope": {
+    "message": "创建编辑标签、外观、资源关联、筛选、重名校验与删除。"
+  },
+  "docs.guides.outline.storage.title": {
+    "message": "存储与归档内容"
+  },
+  "docs.guides.outline.storage.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.archived.title": {
+    "message": "归档、恢复与删除"
+  },
+  "docs.guides.outline.archived.scope": {
+    "message": "项目会话归档恢复、永久删除、保留目录和确认边界。"
+  },
+  "docs.guides.outline.group.help": {
+    "message": "帮助与排错"
+  },
+  "docs.guides.outline.shortcuts.title": {
+    "message": "键盘快捷键"
+  },
+  "docs.guides.outline.shortcuts.scope": {
+    "message": "导航、搜索、输入与预览快捷键，以及平台差异。"
+  },
+  "docs.guides.outline.troubleshooting.title": {
+    "message": "故障排查与常见问题"
+  },
+  "docs.guides.outline.troubleshooting.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.faq.title": {
+    "message": "常见问题"
+  },
+  "docs.guides.outline.faq.scope": {
+    "message": "数据归属、账号要求、费用、离线使用与恢复的常见问题，链接到详细章节。"
+  },
+  "docs.guides.outline.notice": {
+    "message": "目录规划 · 待批准"
+  },
+  "docs.guides.outline.description": {
+    "message": "展开章节查看拟覆盖内容；正文将在批准后编写。"
+  },
+  "docs.guides.outline.overview": {
+    "message": "Open-Science 概览"
+  },
+  "docs.guides.outline.current": {
+    "message": "查看现有相关文档"
+  },
+  "docs.guides.outline.count": {
+    "message": "8 个分组 · 46 个章节（含概览）"
+  },
+  "docs.outline.workflows.scope": {
+    "message": "每章对应明确研究情境、起点与交付物；界面操作放进场景步骤中。"
+  },
+  "docs.outline.workflows.group.start": {
+    "message": "选择工作流"
+  },
+  "docs.outline.workflows.cookbook.title": {
+    "message": "工作流示例集"
+  },
+  "docs.outline.workflows.cookbook.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.first-analysis.title": {
+    "message": "第一个可复现分析"
+  },
+  "docs.outline.workflows.first-analysis.scope": {
+    "message": "用小型 CSV 完成导入、检查、执行、保存图表和重新运行验证。"
+  },
+  "docs.outline.workflows.group.evidence": {
+    "message": "文献与证据"
+  },
+  "docs.outline.workflows.literature-review.title": {
+    "message": "文献综述与证据表"
+  },
+  "docs.outline.workflows.literature-review.scope": {
+    "message": "确定问题、检索筛选、提取证据、引用来源并报告访问缺口。"
+  },
+  "docs.outline.workflows.paper-reading.title": {
+    "message": "阅读论文并核查论断"
+  },
+  "docs.outline.workflows.paper-reading.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.database-search.title": {
+    "message": "交叉核对科学记录"
+  },
+  "docs.outline.workflows.database-search.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.indication-dossier.title": {
+    "message": "构建适应证研究档案"
+  },
+  "docs.outline.workflows.indication-dossier.scope": {
+    "message": "整合生物学、流行病学、试验与治疗证据，保留日期及未解决问题。"
+  },
+  "docs.outline.workflows.group.analysis": {
+    "message": "数据分析与复现"
+  },
+  "docs.outline.workflows.data-quality.title": {
+    "message": "检查基因计数矩阵的样本质量"
+  },
+  "docs.outline.workflows.data-quality.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.python-r.title": {
+    "message": "Python 与 R 分析"
+  },
+  "docs.outline.workflows.python-r.scope": {
+    "message": "准备环境、查看变量、分步执行、恢复错误并保存可复用脚本。"
+  },
+  "docs.outline.workflows.statistics.title": {
+    "message": "统计分析与验证"
+  },
+  "docs.outline.workflows.statistics.scope": {
+    "message": "说明假设、选择方法、检查诊断、报告不确定性并保留代码。"
+  },
+  "docs.outline.workflows.reproduce.title": {
+    "message": "复现已发表结果"
+  },
+  "docs.outline.workflows.reproduce.scope": {
+    "message": "清点论文代码数据，定义验收标准，试运行并区分吻合与偏差。"
+  },
+  "docs.outline.workflows.group.biology": {
+    "message": "序列、细胞与分子"
+  },
+  "docs.outline.workflows.sequence-qc.title": {
+    "message": "序列质控与注释"
+  },
+  "docs.outline.workflows.sequence-qc.scope": {
+    "message": "检查 FASTA 记录、字符和长度，核对注释来源并保留失败记录。"
+  },
+  "docs.outline.workflows.single-cell.title": {
+    "message": "单细胞分析"
+  },
+  "docs.outline.workflows.single-cell.scope": {
+    "message": "检查表达数据与元数据，按需要选择 scGPT 或 scvi-tools 并验证输出。 需兼容的单细胞输入、已配置 Python 环境和所选 Skill 依赖；科学计算尚待实测。"
+  },
+  "docs.outline.workflows.structure-prediction.title": {
+    "message": "蛋白与复合物结构预测"
+  },
+  "docs.outline.workflows.structure-prediction.scope": {
+    "message": "选择预测 Skill、检查输入与算力需求，查看置信度及局限。 需所选软件包、模型权重及适用的本地或远程算力；目录中存在 Skill 不等于已验证预测运行。"
+  },
+  "docs.outline.workflows.molecular-analysis.title": {
+    "message": "分子结构与对接"
+  },
+  "docs.outline.workflows.molecular-analysis.scope": {
+    "message": "验证分子、检查属性和结构，审阅对接姿态并区分评分与亲和力。 区分本地分子查看器、在线化学数据源与 DiffDock 执行；对接需另行验证依赖和算力。"
+  },
+  "docs.outline.workflows.group.deliver": {
+    "message": "图表、报告与修订"
+  },
+  "docs.outline.workflows.figures.title": {
+    "message": "制作可追溯证据的科研图表"
+  },
+  "docs.outline.workflows.figures.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.manuscript.title": {
+    "message": "撰写与修订研究报告"
+  },
+  "docs.outline.workflows.manuscript.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.handoff.title": {
+    "message": "交接可复现的研究资料包"
+  },
+  "docs.outline.workflows.handoff.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.group.compute": {
+    "message": "长任务与远程计算"
+  },
+  "docs.outline.workflows.ssh-analysis.title": {
+    "message": "运行与恢复远程分析"
+  },
+  "docs.outline.workflows.ssh-analysis.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.slurm-jobs.title": {
+    "message": "提交与回收 Slurm 作业"
+  },
+  "docs.outline.workflows.slurm-jobs.scope": {
+    "message": "确认调度要求、提交限定作业、跟踪记录、取消恢复并验证文件。 需真实 Slurm 集群、账号与调度配置；本地模式控件不能证明调度执行成功。"
+  },
+  "docs.outline.workflows.parallel-review.title": {
+    "message": "委派与审查研究任务"
+  },
+  "docs.outline.workflows.parallel-review.scope": {
+    "message": "在支持委派的框架和可用模型下拆分限定任务，配置专家能力，检查委派活动与审批并核对返回证据；声称并行执行前先实测委派。"
+  },
+  "docs.outline.tools.scope": {
+    "message": "按能力查找工具；具体工具和操作在大类章节内以表格呈现。"
+  },
+  "docs.outline.tools.group.built-in": {
+    "message": "工作区工具"
+  },
+  "docs.outline.tools.files.title": {
+    "message": "文件与产物操作"
+  },
+  "docs.outline.tools.files.scope": {
+    "message": "读取搜索、复制保存、比较导出文件，区分上传与生成版本。"
+  },
+  "docs.outline.tools.notebooks.title": {
+    "message": "Python、R 与 Bash 执行"
+  },
+  "docs.outline.tools.notebooks.scope": {
+    "message": "执行入口、输入输出、实时变量、内核状态及执行证据。"
+  },
+  "docs.outline.tools.literature.title": {
+    "message": "资料库与引用工具"
+  },
+  "docs.outline.tools.literature.scope": {
+    "message": "条目搜索、元数据、PDF 阅读、引用格式及逐工具控制。"
+  },
+  "docs.outline.tools.memory.title": {
+    "message": "记忆工具"
+  },
+  "docs.outline.tools.memory.scope": {
+    "message": "分类和笔记检索、范围、写入，以及记忆进入上下文的条件。"
+  },
+  "docs.outline.tools.group.viewers": {
+    "message": "文件查看器"
+  },
+  "docs.outline.tools.tables.title": {
+    "message": "表格与数据集"
+  },
+  "docs.outline.tools.tables.scope": {
+    "message": "用表格对照数据格式、预览操作、数据检查、变量处理、导出与大小限制。"
+  },
+  "docs.outline.tools.documents.title": {
+    "message": "PDF、Office 与 Markdown"
+  },
+  "docs.outline.tools.documents.scope": {
+    "message": "阅读、翻页、文档预览、证据选择和下载。"
+  },
+  "docs.outline.tools.images.title": {
+    "message": "图片与科研图表"
+  },
+  "docs.outline.tools.images.scope": {
+    "message": "图片浏览与缩放、格式支持及保存图表的检查。"
+  },
+  "docs.outline.tools.structures.title": {
+    "message": "三维结构与序列"
+  },
+  "docs.outline.tools.structures.scope": {
+    "message": "PDB 表示控制与序列查看器、输入格式及预览限制。"
+  },
+  "docs.outline.tools.group.connectors": {
+    "message": "科学数据库连接器"
+  },
+  "docs.outline.tools.group.compute": {
+    "message": "计算能力"
+  },
+  "docs.outline.tools.runtimes.title": {
+    "message": "运行环境与软件包能力"
+  },
+  "docs.outline.tools.runtimes.scope": {
+    "message": "托管与外部运行时能力、依赖要求，链接到统一配置教程。"
+  },
+  "docs.outline.tools.remote.title": {
+    "message": "SSH 与 Slurm 能力"
+  },
+  "docs.outline.tools.remote.scope": {
+    "message": "执行模式、作业跟踪、资源检测及输出回收边界。"
+  },
+  "docs.outline.tools.group.extend": {
+    "message": "扩展工具接入"
+  },
+  "docs.outline.tools.custom-mcp.title": {
+    "message": "自定义 MCP 服务"
+  },
+  "docs.outline.tools.custom-mcp.scope": {
+    "message": "本地远程传输、工具发现、认证与兼容性；配置步骤归属 Guides。"
+  },
+  "docs.outline.tools.readiness.title": {
+    "message": "工具可用性与限制"
+  },
+  "docs.outline.tools.readiness.scope": {
+    "message": "区分已列出、已启用、已认证、可访问和已成功执行。"
+  },
+  "docs.outline.skills.scope": {
+    "message": "选择、使用与维护可复用方法；内置 Skill 条目放在章节表格中。"
+  },
+  "docs.outline.skills.group.use": {
+    "message": "使用 Skills"
+  },
+  "docs.outline.skills.start.title": {
+    "message": "Skills 概览与目录"
+  },
+  "docs.outline.skills.start.scope": {
+    "message": "区分 Skill、工具和专家角色，浏览目录并按输入或目标选择。"
+  },
+  "docs.outline.skills.select.title": {
+    "message": "选择与加载 Skill"
+  },
+  "docs.outline.skills.select.scope": {
+    "message": "搜索、启用、在输入区选择、查看指令并验证可用性。"
+  },
+  "docs.outline.skills.recipes.title": {
+    "message": "Skill 使用示例"
+  },
+  "docs.outline.skills.recipes.scope": {
+    "message": "用示例表关联研究目标、所选 Skill、样例输入、请求、预期结果和完整工作流。"
+  },
+  "docs.outline.skills.group.literature": {
+    "message": "文献与图表 Skills"
+  },
+  "docs.outline.skills.group.structure": {
+    "message": "结构与序列设计 Skills"
+  },
+  "docs.outline.skills.group.omics": {
+    "message": "基因组与单细胞 Skills"
+  },
+  "docs.outline.skills.group.environments": {
+    "message": "环境与定制 Skills"
+  },
+  "docs.outline.skills.group.author": {
+    "message": "编写与维护 Skills"
+  },
+  "docs.outline.skills.write.title": {
+    "message": "编写个人 Skill"
+  },
+  "docs.outline.skills.write.scope": {
+    "message": "定义输入、过程、输出和检查点，预览并保存本地方法包。"
+  },
+  "docs.outline.skills.resources.title": {
+    "message": "指令与支持文件"
+  },
+  "docs.outline.skills.resources.scope": {
+    "message": "SKILL.md 元数据、引用文件、打包限制及指令与数据边界。"
+  },
+  "docs.outline.skills.imports.title": {
+    "message": "导入、导出与更新 Skills"
+  },
+  "docs.outline.skills.imports.scope": {
+    "message": "文件仓库导入、包检查、导出编辑删除与版本追踪。"
+  },
+  "docs.outline.skills.specialists.title": {
+    "message": "创建与打包专家角色"
+  },
+  "docs.outline.skills.specialists.scope": {
+    "message": "身份、指令、能力绑定，以及复制、导入导出和管理角色包。"
+  },
+  "docs.outline.reference.scope": {
+    "message": "先按项目配置与 CLI 集成组织，再补充 AIPOCH 技术参考和更新日志。"
+  },
+  "docs.outline.reference.group.lookup": {
+    "message": "产品参考"
+  },
+  "docs.outline.reference.controls.title": {
+    "message": "控件与键盘参考"
+  },
+  "docs.outline.reference.controls.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.reference.formats.title": {
+    "message": "文件格式与限制"
+  },
+  "docs.outline.reference.formats.scope": {
+    "message": "用表格列预览、文献导入、引用导出、文件大小限制和不支持情况。"
+  },
+  "docs.outline.reference.models.title": {
+    "message": "模型与框架兼容性"
+  },
+  "docs.outline.reference.models.scope": {
+    "message": "提供商格式、图像支持、推理选项、场景策略与框架限制。"
+  },
+  "docs.outline.reference.permissions.title": {
+    "message": "权限与控制"
+  },
+  "docs.outline.reference.permissions.scope": {
+    "message": "查阅审批模式、范围优先级、记忆授权、网络限制与撤销语义。"
+  },
+  "docs.outline.reference.limits.title": {
+    "message": "字段与包限制"
+  },
+  "docs.outline.reference.limits.scope": {
+    "message": "源码确认的字段长度、标识、文件包限制及校验规则。"
+  },
+  "docs.outline.reference.glossary.title": {
+    "message": "术语与概念"
+  },
+  "docs.outline.reference.glossary.scope": {
+    "message": "项目、会话、产物、运行环境、Skill、专家、连接器和溯源的定义。"
+  },
+  "docs.outline.reference.group.formats": {
+    "message": "配置与交换格式"
+  },
+  "docs.outline.reference.skill-format.title": {
+    "message": "Skill 包格式"
+  },
+  "docs.outline.reference.skill-format.scope": {
+    "message": "元数据结构、指令文件、支持资源、压缩包结构与校验。"
+  },
+  "docs.outline.reference.specialist-format.title": {
+    "message": "Specialist 包格式"
+  },
+  "docs.outline.reference.specialist-format.scope": {
+    "message": "角色身份、指令、能力引用、可移植性与导入诊断。"
+  },
+  "docs.outline.reference.mcp-config.title": {
+    "message": "MCP 配置格式"
+  },
+  "docs.outline.reference.mcp-config.scope": {
+    "message": "Connector 与 mcpServers 交换格式、凭据占位符和传输字段。"
+  },
+  "docs.outline.reference.citations.title": {
+    "message": "文献导入与引用格式"
+  },
+  "docs.outline.reference.citations.scope": {
+    "message": "BibTeX、RIS、NBIB、CSL 的边界、标识、元数据映射与重复策略。"
+  },
+  "docs.outline.reference.group.technical": {
+    "message": "产品与包格式参考"
+  },
+  "docs.outline.reference.architecture.title": {
+    "message": "架构与数据流"
+  },
+  "docs.outline.reference.architecture.scope": {
+    "message": "说明桌面端、服务、框架、存储和执行边界，以及产物追溯和凭据处理。"
+  },
+  "docs.outline.reference.storage.title": {
+    "message": "存储与证据生命周期"
+  },
+  "docs.outline.reference.storage.scope": {
+    "message": "托管目录、原始文件、上传、产物版本、保留与删除边界。"
+  },
+  "docs.outline.reference.cli.title": {
+    "message": "CLI 与结构化输出"
+  },
+  "docs.outline.reference.cli.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.reference.errors.title": {
+    "message": "错误消息与诊断"
+  },
+  "docs.outline.reference.errors.scope": {
+    "message": "将常见错误映射到原因、诊断材料与对应排错教程。"
+  },
+  "docs.outline.reference.verification.title": {
+    "message": "文档验证记录"
+  },
+  "docs.outline.reference.verification.scope": {
+    "message": "记录源码版本、英文截图、已操作控件、条件测试和待验证缺口。"
+  },
+  "docs.outline.reference.group.changelog": {
+    "message": "更新日志"
+  },
+  "docs.outline.reference.v0-26-0.title": {
+    "message": "v0.26.0"
+  },
+  "docs.outline.reference.v0-26-0.scope": {
+    "message": "现有版本记录，归入 Changelog 并保留原链接。"
+  },
+  "docs.outline.reference.v0-25-1.title": {
+    "message": "v0.25.1"
+  },
+  "docs.outline.reference.v0-25-1.scope": {
+    "message": "现有版本记录，归入 Changelog 并保留原链接。"
+  },
+  "docs.outline.tools.connector-pubmed.title": {
+    "message": "PubMed"
+  },
+  "docs.outline.tools.connector-pubmed.scope": {
+    "message": "PubMed、PMC、Europe PMC：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-literature.title": {
+    "message": "Literature Graph"
+  },
+  "docs.outline.tools.connector-literature.scope": {
+    "message": "OpenAlex、arXiv：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-biorxiv.title": {
+    "message": "bioRxiv"
+  },
+  "docs.outline.tools.connector-biorxiv.scope": {
+    "message": "bioRxiv、medRxiv：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-clinical-trials.title": {
+    "message": "Clinical Trials"
+  },
+  "docs.outline.tools.connector-clinical-trials.scope": {
+    "message": "ClinicalTrials.gov：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-chemistry.title": {
+    "message": "Chemistry"
+  },
+  "docs.outline.tools.connector-chemistry.scope": {
+    "message": "PubChem、ChEBI、Rhea、BindingDB：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-chembl.title": {
+    "message": "ChEMBL"
+  },
+  "docs.outline.tools.connector-chembl.scope": {
+    "message": "ChEMBL：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-molecule.title": {
+    "message": "Molecule Viewer"
+  },
+  "docs.outline.tools.connector-molecule.scope": {
+    "message": "OpenChemLib：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-zinc.title": {
+    "message": "ZINC"
+  },
+  "docs.outline.tools.connector-zinc.scope": {
+    "message": "ZINC22：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-genes.title": {
+    "message": "Genes & Ontologies"
+  },
+  "docs.outline.tools.connector-genes.scope": {
+    "message": "MyGene、UniProt、OLS、QuickGO、Reactome：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-genomes.title": {
+    "message": "Genomes"
+  },
+  "docs.outline.tools.connector-genomes.scope": {
+    "message": "Ensembl、UCSC：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-biomart.title": {
+    "message": "BioMart"
+  },
+  "docs.outline.tools.connector-biomart.scope": {
+    "message": "Ensembl BioMart：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-variants.title": {
+    "message": "Variants"
+  },
+  "docs.outline.tools.connector-variants.scope": {
+    "message": "gnomAD、ClinVar、dbSNP：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-human-genetics.title": {
+    "message": "Human Genetics"
+  },
+  "docs.outline.tools.connector-human-genetics.scope": {
+    "message": "GWAS Catalog、eQTL Catalogue、PheWeb：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-clinical-genomics.title": {
+    "message": "Clinical Genomics"
+  },
+  "docs.outline.tools.connector-clinical-genomics.scope": {
+    "message": "ClinGen、CIViC、Open Targets：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-cancer-models.title": {
+    "message": "Cancer Models"
+  },
+  "docs.outline.tools.connector-cancer-models.scope": {
+    "message": "cBioPortal：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-drug-regulatory.title": {
+    "message": "Drug Regulatory"
+  },
+  "docs.outline.tools.connector-drug-regulatory.scope": {
+    "message": "openFDA：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-expression.title": {
+    "message": "Expression"
+  },
+  "docs.outline.tools.connector-expression.scope": {
+    "message": "GTEx：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-cellguide.title": {
+    "message": "CellGuide"
+  },
+  "docs.outline.tools.connector-cellguide.scope": {
+    "message": "CELLxGENE CellGuide：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-omics-archives.title": {
+    "message": "Omics Archives"
+  },
+  "docs.outline.tools.connector-omics-archives.scope": {
+    "message": "ArrayExpress、GEO、MetaboLights、MGnify、PRIDE：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-protein-annotation.title": {
+    "message": "Protein Annotation"
+  },
+  "docs.outline.tools.connector-protein-annotation.scope": {
+    "message": "InterPro、Pfam、Human Protein Atlas、STRING：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-regulation.title": {
+    "message": "Regulation"
+  },
+  "docs.outline.tools.connector-regulation.scope": {
+    "message": "ENCODE、JASPAR、UniBind：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-rna.title": {
+    "message": "RNA"
+  },
+  "docs.outline.tools.connector-rna.scope": {
+    "message": "Rfam：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-structures.title": {
+    "message": "Structures & Interactions"
+  },
+  "docs.outline.tools.connector-structures.scope": {
+    "message": "PDB、AlphaFold、EMDB、Complex Portal、IntAct：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.tools.connector-research-resources.title": {
+    "message": "Research Resources"
+  },
+  "docs.outline.tools.connector-research-resources.scope": {
+    "message": "Grants.gov、Antibody Registry：数据范围、工具操作、输入标识、输出字段、访问前提和失败边界。"
+  },
+  "docs.outline.skills.indication-dossier.title": {
+    "message": "Indication Dossier"
+  },
+  "docs.outline.skills.indication-dossier.scope": {
+    "message": "整理适应症资料，覆盖流行病学、生物学、标准治疗、监管与临床试验。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.literature-review.title": {
+    "message": "Literature Review"
+  },
+  "docs.outline.skills.literature-review.scope": {
+    "message": "检索、核验并综合科学文献。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.figure-composer.title": {
+    "message": "Figure Composer"
+  },
+  "docs.outline.skills.figure-composer.scope": {
+    "message": "围绕结论和可追溯数据规划、组合多面板图。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.figure-style.title": {
+    "message": "Figure Style"
+  },
+  "docs.outline.skills.figure-style.scope": {
+    "message": "检查交付科研图的数据忠实度与可读性。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.paper-narrative.title": {
+    "message": "Paper Narrative"
+  },
+  "docs.outline.skills.paper-narrative.scope": {
+    "message": "审查整篇论文图组的顺序与论证。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.env-management.title": {
+    "message": "Environment & Packages"
+  },
+  "docs.outline.skills.env-management.scope": {
+    "message": "通过 Notebook 运行时工具检查和管理 Python/R 软件包。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.compute-env-setup.title": {
+    "message": "Compute Environment Setup"
+  },
+  "docs.outline.skills.compute-env-setup.scope": {
+    "message": "准备并验证 SSH 或 Slurm 计算主机上的命名软件环境。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.remote-compute-ssh.title": {
+    "message": "Remote Compute (SSH)"
+  },
+  "docs.outline.skills.remote-compute-ssh.scope": {
+    "message": "评估远程资源、执行 SSH 作业并收集结果。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.customize.title": {
+    "message": "Customize"
+  },
+  "docs.outline.skills.customize.scope": {
+    "message": "通过对话式 Customize 入口创建或修改 Skill、Specialist。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.alphafold2.title": {
+    "message": "AlphaFold2"
+  },
+  "docs.outline.skills.alphafold2.scope": {
+    "message": "通过 ColabFold 预测单体或多聚体蛋白结构。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.boltz.title": {
+    "message": "Boltz"
+  },
+  "docs.outline.skills.boltz.scope": {
+    "message": "通过 Boltz-2 预测蛋白、核酸与小分子复合物结构。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.chai1.title": {
+    "message": "Chai-1"
+  },
+  "docs.outline.skills.chai1.scope": {
+    "message": "通过 Chai-1 预测蛋白、核酸与配体复合物结构。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.diffdock.title": {
+    "message": "DiffDock"
+  },
+  "docs.outline.skills.diffdock.scope": {
+    "message": "生成并排序小分子结合姿态；姿态预测不等于亲和力测量。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.esmfold2.title": {
+    "message": "ESMFold2"
+  },
+  "docs.outline.skills.esmfold2.scope": {
+    "message": "使用 ESMFold2 共折叠及相关蛋白表征模型。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.fair-esm2.title": {
+    "message": "ESM-2"
+  },
+  "docs.outline.skills.fair-esm2.scope": {
+    "message": "通过 ESM-2 提取蛋白序列表征、掩码语言模型评分与接触预测。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.ligandmpnn.title": {
+    "message": "LigandMPNN"
+  },
+  "docs.outline.skills.ligandmpnn.scope": {
+    "message": "在配体、核酸或金属上下文中根据骨架设计序列。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.openfold3.title": {
+    "message": "OpenFold3"
+  },
+  "docs.outline.skills.openfold3.scope": {
+    "message": "通过 OpenFold3 实现预测复合物结构。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.proteinmpnn.title": {
+    "message": "ProteinMPNN"
+  },
+  "docs.outline.skills.proteinmpnn.scope": {
+    "message": "针对蛋白骨架设计氨基酸序列。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.solublempnn.title": {
+    "message": "SolubleMPNN"
+  },
+  "docs.outline.skills.solublempnn.scope": {
+    "message": "使用基于可溶蛋白训练的 MPNN 模型设计序列。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.borzoi.title": {
+    "message": "Borzoi"
+  },
+  "docs.outline.skills.borzoi.scope": {
+    "message": "预测基因组功能轨迹，研究调控变异影响。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.evo2.title": {
+    "message": "Evo 2"
+  },
+  "docs.outline.skills.evo2.scope": {
+    "message": "通过 Evo 2 对 DNA 序列评分、提取表征及生成序列。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.scgpt.title": {
+    "message": "scGPT"
+  },
+  "docs.outline.skills.scgpt.scope": {
+    "message": "通过 scGPT 对单细胞表达数据提取表征并注释。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.skills.scvi-tools.title": {
+    "message": "scvi-tools"
+  },
+  "docs.outline.skills.scvi-tools.scope": {
+    "message": "使用概率模型进行单细胞整合、标签迁移与差异表达。 规划输入、运行时/权重/账号、示例请求、输出文件、验证与局限。"
+  },
+  "docs.outline.notice": {
+    "message": "目录规划 · 待批准"
+  },
+  "docs.outline.count": {
+    "message": "{groups} 个分组 · {chapters} 个章节"
+  },
+  "docs.outline.description": {
+    "message": "展开章节查看拟覆盖内容；正文将在批准后编写。"
+  },
+  "docs.outline.current": {
+    "message": "查看现有相关文档"
+  },
+  "docs.outline.tools.group.literature-clinical": {
+    "message": "文献、临床与研究资源"
+  },
+  "docs.outline.tools.group.genomics-omics": {
+    "message": "基因组与组学数据源"
+  },
+  "docs.outline.tools.group.molecular-sources": {
+    "message": "分子、蛋白与结构数据源"
+  },
+  "docs.outline.workflows.group.library": {
+    "message": "建立课题资料库"
+  },
+  "docs.outline.workflows.build-library.title": {
+    "message": "为新课题建立核心阅读文献库"
+  },
+  "docs.outline.workflows.build-library.scope": {
+    "message": "刚进入陌生课题时，从种子论文梳理关键主题，形成与项目关联的核心阅读清单；导入和标签是其中的操作步骤。"
+  },
+  "docs.outline.workflows.import-library.title": {
+    "message": "接手与整理课题文献"
+  },
+  "docs.outline.workflows.import-library.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.organize-library.title": {
+    "message": "为综述项目汇总多批检索文献"
+  },
+  "docs.outline.workflows.organize-library.scope": {
+    "message": "把多次检索或多个数据库的文献汇成去重后的候选集，保留检索来源并形成待筛选交接记录。"
+  },
+  "docs.outline.workflows.review-inbox.title": {
+    "message": "为组会准备专题阅读包"
+  },
+  "docs.outline.workflows.review-inbox.scope": {
+    "message": "围绕即将举行的组会主题，审核智能体推荐、筛选论文、收集可获取全文，形成阅读顺序和讨论问题。"
+  },
+  "docs.outline.workflows.deduplicate-library.title": {
+    "message": "扩展已有课题的文献积累"
+  },
+  "docs.outline.workflows.deduplicate-library.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.attach-full-text.title": {
+    "message": "在开题或中期汇报前补齐最新证据"
+  },
+  "docs.outline.workflows.attach-full-text.scope": {
+    "message": "开题或中期汇报前重新检索，对照已有文献判断新增证据，形成带日期的补充与缺口说明；这是手动工作流，不是定时监测。"
+  },
+  "docs.outline.workflows.repair-metadata.title": {
+    "message": "把零散失序的论文资料整理成可用课题库"
+  },
+  "docs.outline.workflows.repair-metadata.scope": {
+    "message": "面对混杂文件夹、残缺引用和缺失附件，核对条目与全文，整理成专题集合并交付未解决问题清单。"
+  },
+  "docs.outline.workflows.restore-library.title": {
+    "message": "在投稿前核对稿件参考文献"
+  },
+  "docs.outline.workflows.restore-library.scope": {
+    "message": "拿到稿件和来源文献库后，核对引用条目、书目信息、重复项与可访问证据，产出修正后的参考文献和待确认清单。"
+  },
+  "docs.outline.workflows.group.extra-evidence": {
+    "message": "证据任务"
+  },
+  "docs.outline.workflows.pdf-evidence.title": {
+    "message": "核查论文是否支持某个关键论断"
+  },
+  "docs.outline.workflows.pdf-evidence.scope": {
+    "message": "针对草稿或会议记录中的关键论断，查找 PDF 原文与方法，保留页码证据并判断支持、部分支持或不支持。"
+  },
+  "docs.outline.workflows.cross-source-evidence.title": {
+    "message": "处理论文与数据库记录不一致的问题"
+  },
+  "docs.outline.workflows.cross-source-evidence.scope": {
+    "message": "当论文与数据库对基因、化合物或试验的记录不一致时，核对标识符和版本，说明仍未解决的差异。"
+  },
+  "docs.outline.workflows.format-bibliography.title": {
+    "message": "准备投稿参考文献"
+  },
+  "docs.outline.workflows.format-bibliography.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.group.continue": {
+    "message": "持续研究与交接"
+  },
+  "docs.outline.workflows.plan-research.title": {
+    "message": "规划与接续研究"
+  },
+  "docs.outline.workflows.plan-research.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.workflows.persistent-goal.title": {
+    "message": "用 Session Plan 接续未完成课题"
+  },
+  "docs.outline.workflows.persistent-goal.scope": {
+    "message": "由用户继续已批准的 Session Plan，结合步骤状态与结果恢复工作，维护剩余任务记录；不将计划等同于无人值守定时执行或独立持续目标功能。"
+  },
+  "docs.outline.workflows.compare-branches.title": {
+    "message": "用同一数据集比较两种分析方法"
+  },
+  "docs.outline.workflows.compare-branches.scope": {
+    "message": "需要选择分析方法时，从相同起点分支，记录假设并分别运行，形成结果与局限对照。"
+  },
+  "docs.outline.workflows.continue-context.title": {
+    "message": "中断一段时间后恢复课题并找回决策依据"
+  },
+  "docs.outline.workflows.continue-context.scope": {
+    "message": "从历史会话、项目记忆和文件重建暂停课题的状态，核实既有决定后再继续分析。"
+  },
+  "docs.outline.workflows.save-method.title": {
+    "message": "把已验证分析方法应用到新数据集"
+  },
+  "docs.outline.workflows.save-method.scope": {
+    "message": "将成功分析提炼为 Skill，调整声明的输入并在新数据上验证，检查旧假设是否仍成立。"
+  },
+  "docs.outline.workflows.export-handoff.title": {
+    "message": "把未完成分析交接给协作者"
+  },
+  "docs.outline.workflows.export-handoff.scope": {
+    "message": "把选定对话证据、结果文件、决策、环境要求与未解决问题整理成交接包，供协作者审查接续。"
+  },
+  "docs.outline.workflows.group.extra-results": {
+    "message": "结果"
+  },
+  "docs.outline.workflows.trace-result.title": {
+    "message": "回答图表结论是如何得到的"
+  },
+  "docs.outline.workflows.trace-result.scope": {
+    "message": "协作者质疑图表时，从产物追溯执行和输入，核对版本并用证据说明计算过程。"
+  },
+  "docs.outline.workflows.revise-artifact.title": {
+    "message": "根据审稿意见修订图表或报告"
+  },
+  "docs.outline.workflows.revise-artifact.scope": {
+    "message": "将审稿意见对应到已保存结果，完成支持的编辑、对比版本，并说明每项意见对应的产物修改。"
+  },
+  "docs.outline.workflows.recover-notebook.title": {
+    "message": "原始数据更新后重跑并核对分析"
+  },
+  "docs.outline.workflows.recover-notebook.scope": {
+    "message": "收到更新的数据集后，识别过期 Notebook 结果，按依赖重跑，与旧交付结果对照并解释主要变化。"
+  },
+  "docs.outline.tools.group.find": {
+    "message": "查找工具"
+  },
+  "docs.outline.tools.overview.title": {
+    "message": "工具概览"
+  },
+  "docs.outline.tools.overview.scope": {
+    "message": "用对照表区分内置工具、科学软件、数据库连接器和查看器，以及访问与可用状态。"
+  },
+  "docs.outline.tools.built-in.title": {
+    "message": "内置研究工具"
+  },
+  "docs.outline.tools.built-in.scope": {
+    "message": "以表格列出文件、Notebook、文献、记忆、计划和委派操作及输入、输出和权限。"
+  },
+  "docs.outline.tools.catalog.title": {
+    "message": "科学工具目录"
+  },
+  "docs.outline.tools.catalog.scope": {
+    "message": "文档内以表格列内置 Skill 引用的软件和已检查的运行环境软件包，说明用途、依赖与可用性；目录条目不代表全部预装，也不暗示应用内另有科学软件目录页面。"
+  },
+  "docs.outline.tools.scientific.title": {
+    "message": "科学计算工具"
+  },
+  "docs.outline.tools.scientific.scope": {
+    "message": "说明通过 Notebook 运行时或已配置计算主机执行，包括软件包安装、输入输出检查与失败排查，并按软件示例记录本地和远程要求。"
+  },
+  "docs.outline.tools.group.data": {
+    "message": "数据与查看器"
+  },
+  "docs.outline.tools.databases.title": {
+    "message": "科学数据库"
+  },
+  "docs.outline.tools.databases.scope": {
+    "message": "以分类表记录 23 个数据源连接器的来源覆盖、实际操作、标识符、凭据与限制；本地 Molecule Viewer 归入科学查看器。"
+  },
+  "docs.outline.tools.viewers.title": {
+    "message": "科学查看器"
+  },
+  "docs.outline.tools.viewers.scope": {
+    "message": "按实际预览注册表列 PDF、Office、图片、FASTA、PDB 与分子格式，包含离线 OpenChemLib 分子查看器及验证工具，区分预览、编辑和科学计算。"
+  },
+  "docs.outline.tools.group.connect": {
+    "message": "连接与扩展"
+  },
+  "docs.outline.tools.mcp.title": {
+    "message": "连接器与 MCP"
+  },
+  "docs.outline.tools.mcp.scope": {
+    "message": "对照内置与自定义连接器、传输、发现、启用和错误，配置步骤链接 Guides。"
+  },
+  "docs.outline.tools.credentials.title": {
+    "message": "服务凭据"
+  },
+  "docs.outline.tools.credentials.scope": {
+    "message": "以服务与凭据对照表说明凭据类型、绑定、所需权限、验证与访问失败。"
+  },
+  "docs.outline.tools.custom.title": {
+    "message": "接入自定义 MCP 工具"
+  },
+  "docs.outline.tools.custom.scope": {
+    "message": "通过本地 stdio 或支持的远程传输接入现有或外部编写的 MCP 服务，检查发现的工具并测试凭据与权限；工具实现本身属于外部准备工作。"
+  },
+  "docs.outline.skills.overview.title": {
+    "message": "Skills 概览与使用"
+  },
+  "docs.outline.skills.overview.scope": {
+    "message": "区分 Skill、工具和专家；搜索、启用、选择、检查指令并验证可用性。"
+  },
+  "docs.outline.skills.directory.title": {
+    "message": "Skill 目录"
+  },
+  "docs.outline.skills.directory.scope": {
+    "message": "将全部 23 个内置 Skill 按研究用途放入一张目录表，列输入、依赖、输出和验证状态。"
+  },
+  "docs.outline.skills.group.maintain": {
+    "message": "创建与维护"
+  },
+  "docs.outline.skills.create.title": {
+    "message": "创建 Skill 与支持文件"
+  },
+  "docs.outline.skills.create.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.skills.files.title": {
+    "message": "指令与支持文件"
+  },
+  "docs.outline.skills.files.scope": {
+    "message": "用包内容表说明 SKILL.md 字段、脚本、资源和引用文件及验证要求。"
+  },
+  "docs.outline.skills.manage.title": {
+    "message": "管理与验证 Skills"
+  },
+  "docs.outline.skills.manage.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.skills.validate.title": {
+    "message": "测试与排查 Skills"
+  },
+  "docs.outline.skills.validate.scope": {
+    "message": "用新输入验证，排查软件包、权重、凭据和工具缺失，记录支持状态与实测状态。"
+  },
+  "docs.outline.specialists.group.use": {
+    "message": "认识与使用专家"
+  },
+  "docs.outline.specialists.overview.title": {
+    "message": "专家与可用角色"
+  },
+  "docs.outline.specialists.overview.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.specialists.directory.title": {
+    "message": "专家目录与市场"
+  },
+  "docs.outline.specialists.directory.scope": {
+    "message": "区分内置且不可配置的 Reviewer、个人角色和在线市场包。内置专家清单为空；远程列表、签名、安装和依赖可用性需分别验证。"
+  },
+  "docs.outline.specialists.delegate.title": {
+    "message": "委派与验证工作"
+  },
+  "docs.outline.specialists.delegate.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.specialists.group.create": {
+    "message": "创建与配置"
+  },
+  "docs.outline.specialists.identity.title": {
+    "message": "创建专家并编写指令"
+  },
+  "docs.outline.specialists.identity.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.specialists.instructions.title": {
+    "message": "编写专家指令"
+  },
+  "docs.outline.specialists.instructions.scope": {
+    "message": "定义职责、证据范围、交付物和停止条件，章节内提供角色模板。"
+  },
+  "docs.outline.specialists.capabilities.title": {
+    "message": "分配 Skills 与连接器"
+  },
+  "docs.outline.specialists.capabilities.scope": {
+    "message": "对照完整继承与明确能力绑定，说明增删控制与可用性检查。"
+  },
+  "docs.outline.specialists.reviewer.title": {
+    "message": "Reviewer 与自动审查"
+  },
+  "docs.outline.specialists.reviewer.scope": {
+    "message": "说明内置 Reviewer、模型策略、审查触发、界面决定和自动审查的边界。"
+  },
+  "docs.outline.specialists.group.maintain": {
+    "message": "管理与分享"
+  },
+  "docs.outline.specialists.manage.title": {
+    "message": "管理与分享专家"
+  },
+  "docs.outline.specialists.manage.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.specialists.packages.title": {
+    "message": "导入与导出专家包"
+  },
+  "docs.outline.specialists.packages.scope": {
+    "message": "预览包内容、检查附带 Skill 与连接器绑定，处理冲突并验证导入角色。"
+  },
+  "docs.outline.specialists.troubleshoot.title": {
+    "message": "测试与排查专家"
+  },
+  "docs.outline.specialists.troubleshoot.scope": {
+    "message": "运行限定测试任务，排查能力缺失、模型失败、请求拒绝和不完整交接。"
+  },
+  "docs.outline.specialists.scope": {
+    "message": "独立管理研究角色的创建、能力配置、任务委派与维护。"
+  },
+  "docs.outline.reference.group.setup": {
+    "message": "项目配置"
+  },
+  "docs.outline.reference.instructions.title": {
+    "message": "项目上下文与指令"
+  },
+  "docs.outline.reference.instructions.scope": {
+    "message": "以项目 Agent Context 字段为起点，区分 Memory 笔记、Skill 指令与专家指令；框架指令文件行为按框架记录，不概括为统一项目文件机制。"
+  },
+  "docs.outline.reference.configuration.title": {
+    "message": "配置与上下文"
+  },
+  "docs.outline.reference.configuration.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.outline.reference.commands.title": {
+    "message": "Skill 快捷输入、提及与键盘操作"
+  },
+  "docs.outline.reference.commands.scope": {
+    "message": "记录实际输入区触发方式：/ 选择 Skill，@ 引用文件或产物，# 引用会话；列出支持的键盘操作与上下文限制。"
+  },
+  "docs.outline.reference.group.cli": {
+    "message": "CLI 与集成"
+  },
+  "docs.outline.reference.automation.title": {
+    "message": "自动化与 JSON 输出"
+  },
+  "docs.outline.reference.automation.scope": {
+    "message": "说明支持的任务提交、轮询、JSON 与 JSONL 输出、错误和取消，不暗示内置定时调度。"
+  },
+  "docs.outline.reference.api.title": {
+    "message": "Task SDK 与本地 API"
+  },
+  "docs.outline.reference.api.scope": {
+    "message": "梳理任务和会话 API、认证、事件和兼容性，区分公开约定与内部 Host API。"
+  },
+  "docs.outline.reference.server.title": {
+    "message": "无界面服务与浏览器访问"
+  },
+  "docs.outline.reference.server.scope": {
+    "message": "依据实际 CLI 记录服务启停与状态、认证 URL、本地发现和远程访问边界。"
+  },
+  "docs.outline.reference.packages.title": {
+    "message": "Skill、专家与 MCP 格式"
+  },
+  "docs.outline.reference.packages.scope": {
+    "message": "为 Skill 包、专家包与 MCP 配置分别列格式表，说明字段和归档限制。"
+  },
+  "docs.outline.reference.diagnostics.title": {
+    "message": "架构与诊断"
+  },
+  "docs.outline.reference.diagnostics.scope": {
+    "message": "查看下方合并后的主题及各自拟覆盖范围。"
+  },
+  "docs.guides.outline.capabilities.topic.capabilities.title": {
+    "message": "功能与支持的输入"
+  },
+  "docs.guides.outline.capabilities.topic.capabilities.scope": {
+    "message": "涵盖：功能与支持的输入、支持的文件与数据。"
+  },
+  "docs.guides.outline.capabilities.topic.source-types.title": {
+    "message": "支持的文件与数据"
+  },
+  "docs.guides.outline.capabilities.topic.source-types.scope": {
+    "message": "输入类型、可读取与可执行格式的区别，以及导入前的准备。"
+  },
+  "docs.guides.outline.navigation.topic.navigation.title": {
+    "message": "导航与搜索"
+  },
+  "docs.guides.outline.navigation.topic.navigation.scope": {
+    "message": "涵盖：导航与搜索、查找项目、会话与文件。"
+  },
+  "docs.guides.outline.navigation.topic.search.title": {
+    "message": "查找项目、会话与文件"
+  },
+  "docs.guides.outline.navigation.topic.search.scope": {
+    "message": "全局搜索、结果类型、打开结果，以及与面板筛选的区别。"
+  },
+  "docs.guides.outline.sessions.topic.sessions.title": {
+    "message": "会话与分支"
+  },
+  "docs.guides.outline.sessions.topic.sessions.scope": {
+    "message": "涵盖：会话与分支、消息修订与分支。"
+  },
+  "docs.guides.outline.sessions.topic.revisions.title": {
+    "message": "消息修订与分支"
+  },
+  "docs.guides.outline.sessions.topic.revisions.scope": {
+    "message": "编辑历史消息、查看版本、创建分支，以及上下文保留范围。"
+  },
+  "docs.guides.outline.composer.topic.composer.title": {
+    "message": "对话与排队请求"
+  },
+  "docs.guides.outline.composer.topic.composer.scope": {
+    "message": "涵盖：对话与排队请求、追问与任务队列。"
+  },
+  "docs.guides.outline.composer.topic.follow-ups.title": {
+    "message": "追问与任务队列"
+  },
+  "docs.guides.outline.composer.topic.follow-ups.scope": {
+    "message": "排队、编辑、排序、立即发送和停止请求，以及中断后的状态。"
+  },
+  "docs.guides.outline.files.topic.files.title": {
+    "message": "文件、产物与版本"
+  },
+  "docs.guides.outline.files.topic.files.scope": {
+    "message": "涵盖：文件、产物与版本、产物与文件版本。"
+  },
+  "docs.guides.outline.files.topic.artifacts.title": {
+    "message": "产物与文件版本"
+  },
+  "docs.guides.outline.files.topic.artifacts.scope": {
+    "message": "区分上传文件与生成产物；查看保存版本、编辑支持的托管文件、对比支持的文本或 Markdown 变更并导出结果。"
+  },
+  "docs.guides.outline.library.topic.library.title": {
+    "message": "文献库与引用"
+  },
+  "docs.guides.outline.library.topic.library.scope": {
+    "message": "涵盖：文献库与引用、论文阅读与引用。"
+  },
+  "docs.guides.outline.library.topic.reading.title": {
+    "message": "论文阅读与引用"
+  },
+  "docs.guides.outline.library.topic.reading.scope": {
+    "message": "PDF 附件、元数据与全文获取、阅读状态、引用样式、复制与导出。"
+  },
+  "docs.guides.outline.notebook.topic.notebook.title": {
+    "message": "Notebook 与执行证据"
+  },
+  "docs.guides.outline.notebook.topic.notebook.scope": {
+    "message": "涵盖：Notebook 与执行证据、检查产物来源。"
+  },
+  "docs.guides.outline.notebook.topic.provenance.title": {
+    "message": "检查产物来源"
+  },
+  "docs.guides.outline.notebook.topic.provenance.scope": {
+    "message": "检查某一版本可用的来源消息、代码、Notebook 执行和审查证据链接，说明缺失证据与格式覆盖差异。"
+  },
+  "docs.guides.outline.models.topic.models.title": {
+    "message": "模型与任务策略"
+  },
+  "docs.guides.outline.models.topic.models.scope": {
+    "message": "涵盖：模型与任务策略、不同任务的模型配置。"
+  },
+  "docs.guides.outline.models.topic.scenario-models.title": {
+    "message": "不同任务的模型配置"
+  },
+  "docs.guides.outline.models.topic.scenario-models.scope": {
+    "message": "主模型、Subagent、Reviewer、Vision、Session details 的策略与继承关系。"
+  },
+  "docs.guides.outline.providers.topic.providers.title": {
+    "message": "提供商与本地模型配置"
+  },
+  "docs.guides.outline.providers.topic.providers.scope": {
+    "message": "涵盖：提供商与本地模型配置、使用本地模型。"
+  },
+  "docs.guides.outline.providers.topic.local-models.title": {
+    "message": "使用本地模型"
+  },
+  "docs.guides.outline.providers.topic.local-models.scope": {
+    "message": "兼容的本地端点、模型标识、能力限制与连接验证。"
+  },
+  "docs.guides.outline.approval-modes.topic.approval-modes.title": {
+    "message": "权限与审批"
+  },
+  "docs.guides.outline.approval-modes.topic.approval-modes.scope": {
+    "message": "涵盖：权限与审批、已记忆的权限。"
+  },
+  "docs.guides.outline.approval-modes.topic.remembered-permissions.title": {
+    "message": "已记忆的权限"
+  },
+  "docs.guides.outline.approval-modes.topic.remembered-permissions.scope": {
+    "message": "会话、项目和全局范围，查看、撤销与恢复默认授权。"
+  },
+  "docs.guides.outline.memory.topic.memory.title": {
+    "message": "记忆与对话上下文"
+  },
+  "docs.guides.outline.memory.topic.memory.scope": {
+    "message": "涵盖：记忆与对话上下文、上下文、压缩与交接。"
+  },
+  "docs.guides.outline.memory.topic.context.title": {
+    "message": "上下文、压缩与交接"
+  },
+  "docs.guides.outline.memory.topic.context.scope": {
+    "message": "查看上下文用量、历史保留与压缩，以及准备续接或交接。"
+  },
+  "docs.guides.outline.connectors.topic.connectors.title": {
+    "message": "连接器与凭据"
+  },
+  "docs.guides.outline.connectors.topic.connectors.scope": {
+    "message": "涵盖：连接器与凭据、凭据与服务账号。"
+  },
+  "docs.guides.outline.connectors.topic.credentials.title": {
+    "message": "凭据与服务账号"
+  },
+  "docs.guides.outline.connectors.topic.credentials.scope": {
+    "message": "设备凭据、研究联系信息、API key、token、OAuth、复用与移除。"
+  },
+  "docs.guides.outline.appearance.topic.appearance.title": {
+    "message": "外观与通知"
+  },
+  "docs.guides.outline.appearance.topic.appearance.scope": {
+    "message": "涵盖：外观与通知、消息与通知。"
+  },
+  "docs.guides.outline.appearance.topic.notifications.title": {
+    "message": "消息与通知"
+  },
+  "docs.guides.outline.appearance.topic.notifications.scope": {
+    "message": "应用内消息、桌面任务通知、内容可见性、送达测试与系统权限。"
+  },
+  "docs.guides.outline.storage.topic.storage.title": {
+    "message": "存储与归档内容"
+  },
+  "docs.guides.outline.storage.topic.storage.scope": {
+    "message": "涵盖：存储与归档内容、归档、恢复与删除。"
+  },
+  "docs.guides.outline.storage.topic.archived.title": {
+    "message": "归档、恢复与删除"
+  },
+  "docs.guides.outline.storage.topic.archived.scope": {
+    "message": "项目会话归档恢复、永久删除、保留目录和确认边界。"
+  },
+  "docs.guides.outline.troubleshooting.topic.troubleshooting.title": {
+    "message": "故障排查与常见问题"
+  },
+  "docs.guides.outline.troubleshooting.topic.troubleshooting.scope": {
+    "message": "涵盖：故障排查与常见问题、常见问题。"
+  },
+  "docs.guides.outline.troubleshooting.topic.faq.title": {
+    "message": "常见问题"
+  },
+  "docs.guides.outline.troubleshooting.topic.faq.scope": {
+    "message": "数据归属、账号要求、费用、离线使用与恢复的常见问题，链接到详细章节。"
+  },
+  "docs.outline.workflows.cookbook.topic.cookbook.title": {
+    "message": "工作流示例集"
+  },
+  "docs.outline.workflows.cookbook.topic.cookbook.scope": {
+    "message": "涵盖：工作流示例集、第一个可复现分析。"
+  },
+  "docs.outline.workflows.cookbook.topic.first-analysis.title": {
+    "message": "第一个可复现分析"
+  },
+  "docs.outline.workflows.cookbook.topic.first-analysis.scope": {
+    "message": "用小型 CSV 完成导入、检查、执行、保存图表和重新运行验证。"
+  },
+  "docs.outline.workflows.import-library.topic.import-library.title": {
+    "message": "接手与整理课题文献"
+  },
+  "docs.outline.workflows.import-library.topic.import-library.scope": {
+    "message": "涵盖：接手与整理课题文献、把零散失序的论文资料整理成可用课题库。"
+  },
+  "docs.outline.workflows.import-library.topic.repair-metadata.title": {
+    "message": "把零散失序的论文资料整理成可用课题库"
+  },
+  "docs.outline.workflows.import-library.topic.repair-metadata.scope": {
+    "message": "面对混杂文件夹、残缺引用和缺失附件，核对条目与全文，整理成专题集合并交付未解决问题清单。"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.deduplicate-library.title": {
+    "message": "扩展已有课题的文献积累"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.deduplicate-library.scope": {
+    "message": "涵盖：扩展已有课题的文献积累、在开题或中期汇报前补齐最新证据。"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.attach-full-text.title": {
+    "message": "在开题或中期汇报前补齐最新证据"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.attach-full-text.scope": {
+    "message": "开题或中期汇报前重新检索，对照已有文献判断新增证据，形成带日期的补充与缺口说明；这是手动工作流，不是定时监测。"
+  },
+  "docs.outline.workflows.paper-reading.topic.paper-reading.title": {
+    "message": "阅读论文并核查论断"
+  },
+  "docs.outline.workflows.paper-reading.topic.paper-reading.scope": {
+    "message": "涵盖：阅读论文并核查论断、核查论文是否支持某个关键论断。"
+  },
+  "docs.outline.workflows.paper-reading.topic.pdf-evidence.title": {
+    "message": "核查论文是否支持某个关键论断"
+  },
+  "docs.outline.workflows.paper-reading.topic.pdf-evidence.scope": {
+    "message": "针对草稿或会议记录中的关键论断，查找 PDF 原文与方法，保留页码证据并判断支持、部分支持或不支持。"
+  },
+  "docs.outline.workflows.database-search.topic.database-search.title": {
+    "message": "交叉核对科学记录"
+  },
+  "docs.outline.workflows.database-search.topic.database-search.scope": {
+    "message": "涵盖：交叉核对科学记录、处理论文与数据库记录不一致的问题。"
+  },
+  "docs.outline.workflows.database-search.topic.cross-source-evidence.title": {
+    "message": "处理论文与数据库记录不一致的问题"
+  },
+  "docs.outline.workflows.database-search.topic.cross-source-evidence.scope": {
+    "message": "当论文与数据库对基因、化合物或试验的记录不一致时，核对标识符和版本，说明仍未解决的差异。"
+  },
+  "docs.outline.workflows.format-bibliography.topic.format-bibliography.title": {
+    "message": "准备投稿参考文献"
+  },
+  "docs.outline.workflows.format-bibliography.topic.format-bibliography.scope": {
+    "message": "涵盖：准备投稿参考文献、在投稿前核对稿件参考文献。"
+  },
+  "docs.outline.workflows.format-bibliography.topic.restore-library.title": {
+    "message": "在投稿前核对稿件参考文献"
+  },
+  "docs.outline.workflows.format-bibliography.topic.restore-library.scope": {
+    "message": "拿到稿件和来源文献库后，核对引用条目、书目信息、重复项与可访问证据，产出修正后的参考文献和待确认清单。"
+  },
+  "docs.outline.workflows.data-quality.topic.data-quality.title": {
+    "message": "检查基因计数矩阵的样本质量"
+  },
+  "docs.outline.workflows.data-quality.topic.data-quality.scope": {
+    "message": "涵盖：检查基因计数矩阵的样本质量、Python 与 R 分析。"
+  },
+  "docs.outline.workflows.data-quality.topic.python-r.title": {
+    "message": "Python 与 R 分析"
+  },
+  "docs.outline.workflows.data-quality.topic.python-r.scope": {
+    "message": "准备环境、查看变量、分步执行、恢复错误并保存可复用脚本。"
+  },
+  "docs.outline.workflows.figures.topic.figures.title": {
+    "message": "制作可追溯证据的科研图表"
+  },
+  "docs.outline.workflows.figures.topic.figures.scope": {
+    "message": "涵盖：制作可追溯证据的科研图表、回答图表结论是如何得到的。"
+  },
+  "docs.outline.workflows.figures.topic.trace-result.title": {
+    "message": "回答图表结论是如何得到的"
+  },
+  "docs.outline.workflows.figures.topic.trace-result.scope": {
+    "message": "协作者质疑图表时，从产物追溯执行和输入，核对版本并用证据说明计算过程。"
+  },
+  "docs.outline.workflows.manuscript.topic.manuscript.title": {
+    "message": "撰写与修订研究报告"
+  },
+  "docs.outline.workflows.manuscript.topic.manuscript.scope": {
+    "message": "涵盖：撰写与修订研究报告、根据审稿意见修订图表或报告。"
+  },
+  "docs.outline.workflows.manuscript.topic.revise-artifact.title": {
+    "message": "根据审稿意见修订图表或报告"
+  },
+  "docs.outline.workflows.manuscript.topic.revise-artifact.scope": {
+    "message": "将审稿意见对应到已保存结果，完成支持的编辑、对比版本，并说明每项意见对应的产物修改。"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.ssh-analysis.title": {
+    "message": "运行与恢复远程分析"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.ssh-analysis.scope": {
+    "message": "涵盖：运行与恢复远程分析、提交与回收 Slurm 作业。"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.slurm-jobs.title": {
+    "message": "提交与回收 Slurm 作业"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.slurm-jobs.scope": {
+    "message": "确认调度要求、提交限定作业、跟踪记录、取消恢复并验证文件。 需真实 Slurm 集群、账号与调度配置；本地模式控件不能证明调度执行成功。"
+  },
+  "docs.outline.workflows.plan-research.topic.plan-research.title": {
+    "message": "规划与接续研究"
+  },
+  "docs.outline.workflows.plan-research.topic.plan-research.scope": {
+    "message": "涵盖：规划与接续研究、用 Session Plan 接续未完成课题、中断一段时间后恢复课题并找回决策依据。"
+  },
+  "docs.outline.workflows.plan-research.topic.persistent-goal.title": {
+    "message": "用 Session Plan 接续未完成课题"
+  },
+  "docs.outline.workflows.plan-research.topic.persistent-goal.scope": {
+    "message": "由用户继续已批准的 Session Plan，结合步骤状态与结果恢复工作，维护剩余任务记录；不将计划等同于无人值守定时执行或独立持续目标功能。"
+  },
+  "docs.outline.workflows.plan-research.topic.continue-context.title": {
+    "message": "中断一段时间后恢复课题并找回决策依据"
+  },
+  "docs.outline.workflows.plan-research.topic.continue-context.scope": {
+    "message": "从历史会话、项目记忆和文件重建暂停课题的状态，核实既有决定后再继续分析。"
+  },
+  "docs.outline.workflows.handoff.topic.handoff.title": {
+    "message": "交接可复现的研究资料包"
+  },
+  "docs.outline.workflows.handoff.topic.handoff.scope": {
+    "message": "涵盖：交接可复现的研究资料包、把未完成分析交接给协作者。"
+  },
+  "docs.outline.workflows.handoff.topic.export-handoff.title": {
+    "message": "把未完成分析交接给协作者"
+  },
+  "docs.outline.workflows.handoff.topic.export-handoff.scope": {
+    "message": "把选定对话证据、结果文件、决策、环境要求与未解决问题整理成交接包，供协作者审查接续。"
+  },
+  "docs.outline.skills.create.topic.create.title": {
+    "message": "创建 Skill 与支持文件"
+  },
+  "docs.outline.skills.create.topic.create.scope": {
+    "message": "涵盖：创建 Skill 与支持文件、指令与支持文件。"
+  },
+  "docs.outline.skills.create.topic.files.title": {
+    "message": "指令与支持文件"
+  },
+  "docs.outline.skills.create.topic.files.scope": {
+    "message": "用包内容表说明 SKILL.md 字段、脚本、资源和引用文件及验证要求。"
+  },
+  "docs.outline.skills.manage.topic.manage.title": {
+    "message": "管理与验证 Skills"
+  },
+  "docs.outline.skills.manage.topic.manage.scope": {
+    "message": "涵盖：管理与验证 Skills、测试与排查 Skills。"
+  },
+  "docs.outline.skills.manage.topic.validate.title": {
+    "message": "测试与排查 Skills"
+  },
+  "docs.outline.skills.manage.topic.validate.scope": {
+    "message": "用新输入验证，排查软件包、权重、凭据和工具缺失，记录支持状态与实测状态。"
+  },
+  "docs.outline.specialists.overview.topic.overview.title": {
+    "message": "专家与可用角色"
+  },
+  "docs.outline.specialists.overview.topic.overview.scope": {
+    "message": "涵盖：专家与可用角色、专家目录与市场。"
+  },
+  "docs.outline.specialists.overview.topic.directory.title": {
+    "message": "专家目录与市场"
+  },
+  "docs.outline.specialists.overview.topic.directory.scope": {
+    "message": "区分内置且不可配置的 Reviewer、个人角色和在线市场包。内置专家清单为空；远程列表、签名、安装和依赖可用性需分别验证。"
+  },
+  "docs.outline.specialists.delegate.topic.delegate.title": {
+    "message": "委派与验证工作"
+  },
+  "docs.outline.specialists.delegate.topic.delegate.scope": {
+    "message": "涵盖：委派与验证工作、测试与排查专家。"
+  },
+  "docs.outline.specialists.delegate.topic.troubleshoot.title": {
+    "message": "测试与排查专家"
+  },
+  "docs.outline.specialists.delegate.topic.troubleshoot.scope": {
+    "message": "运行限定测试任务，排查能力缺失、模型失败、请求拒绝和不完整交接。"
+  },
+  "docs.outline.specialists.identity.topic.identity.title": {
+    "message": "创建专家并编写指令"
+  },
+  "docs.outline.specialists.identity.topic.identity.scope": {
+    "message": "涵盖：创建专家并编写指令、编写专家指令。"
+  },
+  "docs.outline.specialists.identity.topic.instructions.title": {
+    "message": "编写专家指令"
+  },
+  "docs.outline.specialists.identity.topic.instructions.scope": {
+    "message": "定义职责、证据范围、交付物和停止条件，章节内提供角色模板。"
+  },
+  "docs.outline.specialists.manage.topic.manage.title": {
+    "message": "管理与分享专家"
+  },
+  "docs.outline.specialists.manage.topic.manage.scope": {
+    "message": "涵盖：管理与分享专家、导入与导出专家包。"
+  },
+  "docs.outline.specialists.manage.topic.packages.title": {
+    "message": "导入与导出专家包"
+  },
+  "docs.outline.specialists.manage.topic.packages.scope": {
+    "message": "预览包内容、检查附带 Skill 与连接器绑定，处理冲突并验证导入角色。"
+  },
+  "docs.outline.reference.group.product": {
+    "message": "产品参考"
+  },
+  "docs.outline.reference.configuration.topic.configuration.title": {
+    "message": "配置与上下文"
+  },
+  "docs.outline.reference.configuration.topic.configuration.scope": {
+    "message": "涵盖：配置与上下文、项目上下文与指令。"
+  },
+  "docs.outline.reference.configuration.topic.instructions.title": {
+    "message": "项目上下文与指令"
+  },
+  "docs.outline.reference.configuration.topic.instructions.scope": {
+    "message": "以项目 Agent Context 字段为起点，区分 Memory 笔记、Skill 指令与专家指令；框架指令文件行为按框架记录，不概括为统一项目文件机制。"
+  },
+  "docs.outline.reference.controls.topic.controls.title": {
+    "message": "控件与键盘参考"
+  },
+  "docs.outline.reference.controls.topic.controls.scope": {
+    "message": "涵盖：控件与键盘参考、Skill 快捷输入、提及与键盘操作。"
+  },
+  "docs.outline.reference.controls.topic.commands.title": {
+    "message": "Skill 快捷输入、提及与键盘操作"
+  },
+  "docs.outline.reference.controls.topic.commands.scope": {
+    "message": "记录实际输入区触发方式：/ 选择 Skill，@ 引用文件或产物，# 引用会话；列出支持的键盘操作与上下文限制。"
+  },
+  "docs.outline.reference.group.integration": {
+    "message": "CLI 与运行参考"
+  },
+  "docs.outline.reference.cli.topic.cli.title": {
+    "message": "CLI 与结构化输出"
+  },
+  "docs.outline.reference.cli.topic.cli.scope": {
+    "message": "涵盖：CLI 与结构化输出、自动化与 JSON 输出。"
+  },
+  "docs.outline.reference.cli.topic.automation.title": {
+    "message": "自动化与 JSON 输出"
+  },
+  "docs.outline.reference.cli.topic.automation.scope": {
+    "message": "说明支持的任务提交、轮询、JSON 与 JSONL 输出、错误和取消，不暗示内置定时调度。"
+  },
+  "docs.outline.reference.diagnostics.topic.diagnostics.title": {
+    "message": "架构与诊断"
+  },
+  "docs.outline.reference.diagnostics.topic.diagnostics.scope": {
+    "message": "涵盖：架构与诊断、架构与数据流、文档验证记录。"
+  },
+  "docs.outline.reference.diagnostics.topic.architecture.title": {
+    "message": "架构与数据流"
+  },
+  "docs.outline.reference.diagnostics.topic.architecture.scope": {
+    "message": "说明桌面端、服务、框架、存储和执行边界，以及产物追溯和凭据处理。"
+  },
+  "docs.outline.reference.diagnostics.topic.verification.title": {
+    "message": "文档验证记录"
+  },
+  "docs.outline.reference.diagnostics.topic.verification.scope": {
+    "message": "记录源码版本、英文截图、已操作控件、条件测试和待验证缺口。"
+  },
+  "docs.outline.reference.overview": {
+    "message": "参考总览"
+  },
+  "docs.outline.topics": {
+    "message": "包含的主题"
+  },
+  "docs.outline.review": {
+    "message": "查看规划范围"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "共找到 {count} 条结果",
+    "description": "Count matching sections and excerpts, not unique articles."
+  },
+  "docs.ui.documentation": {
+    "message": "文档"
+  },
+  "docs.ui.chapters": {
+    "message": "章节目录"
+  },
+  "docs.ui.section.guides": {
+    "message": "指南"
+  },
+  "docs.ui.section.workflows": {
+    "message": "科研工作流"
+  },
+  "docs.ui.section.tools": {
+    "message": "探索工具"
+  },
+  "docs.ui.section.skills": {
+    "message": "Skills"
+  },
+  "docs.ui.section.specialists": {
+    "message": "专家"
+  },
+  "docs.ui.section.reference": {
+    "message": "参考"
+  },
+  "docs.ui.searchIndex": {
+    "message": "Open-Science / 文档检索"
+  },
+  "docs.ui.moreResults": {
+    "message": "显示更多结果"
+  },
+  "docs.demo.title": {
+    "message": "导航演示"
+  },
+  "docs.demo.levels": {
+    "message": "分区 → 分组 → 章节 → 章内主题"
+  },
+  "docs.demo.back": {
+    "message": "返回当前文档"
+  },
+  "docs.demo.sections": {
+    "message": "文档分区"
+  },
+  "docs.demo.index": {
+    "message": "章节目录"
+  },
+  "docs.demo.close": {
+    "message": "关闭目录"
+  },
+  "docs.demo.overview": {
+    "message": "分区总览"
+  },
+  "docs.demo.planning": {
+    "message": "章节内容制作中"
+  },
+  "docs.demo.groups": {
+    "message": "分组与章节"
+  },
+  "docs.demo.location": {
+    "message": "当前位置"
+  },
+  "docs.demo.chapter": {
+    "message": "章节"
+  },
+  "docs.demo.previewNote": {
+    "message": "本演示使用现有内容规划，展示已选定的导航方向。章节正文尚待编写；下方链接可打开现有文档。"
+  },
+  "docs.demo.topics": {
+    "message": "章内主题"
+  },
+  "docs.demo.existing": {
+    "message": "现有文档"
+  },
+  "docs.demo.read": {
+    "message": "阅读现有文档"
+  },
+  "docs.demo.chapterNavigation": {
+    "message": "章节导航"
+  },
+  "docs.demo.previous": {
+    "message": "上一章"
+  },
+  "docs.demo.next": {
+    "message": "下一章"
+  },
+  "docs.demo.chapters": {
+    "message": "个章节"
+  },
+  "docs.outline.productionNotice": {
+    "message": "章节内容制作中"
+  },
+  "docs.outline.productionDescription": {
+    "message": "已完成章节可直接打开；其他章节可展开查看后续覆盖范围。"
+  },
+  "docs.demo.readyNote": {
+    "message": "本章详细正文已完成。通过下方链接阅读实操步骤与验证证据。"
+  },
+  "docs.demo.readChapter": {
+    "message": "阅读本章"
+  },
+  "docs.outline.availableNotice": {
+    "message": "章节索引"
+  },
+  "docs.outline.availableDescription": {
+    "message": "全部章节均可阅读；每篇分别说明实测范围与尚未验证的限制。"
+  },
+  "docs.preferenceScreenshot.notifications": {
+    "message": "任务通知控件与应用返回的测试状态"
+  },
+  "docs.preferenceScreenshot.theme": {
+    "message": "{theme} 主题下的 Theme 与 Language 控件"
+  },
+  "docs.preferenceScreenshot.preview": {
+    "message": "截图预览"
+  },
+  "docs.preferenceScreenshot.choose": {
+    "message": "选择主题截图"
+  },
+  "docs.preferenceScreenshot.open": {
+    "message": "{label}，打开完整截图"
+  },
+  "docs.preferenceScreenshot.caption": {
+    "message": "英文应用实拍 · 点击查看完整截图"
+  },
+  "docs.outline.reference.v0270.title": {
+    "message": "v0.27.0"
+  },
+  "docs.outline.reference.v0270.scope": {
+    "message": "文献导入、后台任务、必需 Skills 与集成管理更新。"
+  },
+  "docs.outline.reference.example-data.title": {
+    "message": "示例数据与预期结果"
+  },
+  "docs.outline.reference.connector-operations.title": {
+    "message": "Connector 操作参数参考"
+  },
+  "docs.outline.workflows.extend-analysis.title": {
+    "message": "使用已安装 Specialist 扩展分析"
+  },
+  "docs.outline.reference.example-data.scope": {
+    "message": "公开来源文件、校验值与示例预期输出。"
+  },
+  "docs.outline.reference.connector-operations.scope": {
+    "message": "按 Connector 查询准确输入、默认值与调用示例。"
+  },
+  "docs.outline.workflows.extend-analysis.scope": {
+    "message": "已有 Methods、QC PCA、矩阵处理与证据规划案例。"
+  },
+  "docs.textLinkDemo.title": {
+    "message": "三个文字超链接样式"
+  },
+  "docs.textLinkDemo.intro": {
+    "message": "保持相同的段落和列表，只比较文字链接本身。"
+  },
+  "docs.textLinkDemo.a": {
+    "message": "深色下划线"
+  },
+  "docs.textLinkDemo.aNote": {
+    "message": "深色文字配清晰下划线，悬停时下划线加粗。"
+  },
+  "docs.textLinkDemo.b": {
+    "message": "暗金色下划线"
+  },
+  "docs.textLinkDemo.bNote": {
+    "message": "暗金色文字与下划线，悬停时出现淡黄色衬底。"
+  },
+  "docs.textLinkDemo.c": {
+    "message": "淡黄色标记"
+  },
+  "docs.textLinkDemo.cNote": {
+    "message": "深色文字配淡黄色衬底，悬停时加深底色并显示下划线。"
+  },
+  "docs.textLinkDemo.see": {
+    "message": "分别参阅"
+  },
+  "docs.textLinkDemo.models": {
+    "message": "模型接入"
+  },
+  "docs.textLinkDemo.runtimes": {
+    "message": "Python 和 R 运行时"
+  },
+  "docs.textLinkDemo.network": {
+    "message": "网络设置"
+  },
+  "docs.textLinkDemo.prisma": {
+    "message": "PRISMA 阅读集合"
+  },
+  "docs.textLinkDemo.prismaText": {
+    "message": "：三篇真实论文、核对后的文献记录，以及出版方 PDF。"
+  },
+  "docs.textLinkDemo.rna": {
+    "message": "GSE60450 RNA-seq 分析"
+  },
+  "docs.textLinkDemo.rnaText": {
+    "message": "：基因计数矩阵、样本质控指标和图表。"
+  },
+  "docs.textLinkDemo.hint": {
+    "message": "悬停或按 Tab 比较反馈；点击文字在新标签页打开对应教程。"
+  },
+  "docs.textLinkDemo.back": {
+    "message": "返回当前文章"
+  },
+  "docs.textLinkDemo.separator": {
+    "message": "、"
+  },
+  "docs.textLinkDemo.period": {
+    "message": "。"
+  },
+  "docs.platform.label": {
+    "message": "阅读平台"
+  },
+  "docs.platform.hint": {
+    "message": "选择会在章节间保留。"
+  },
+  "docs.outline.reference.v0290.title": {
+    "message": "v0.29.0"
+  },
+  "docs.outline.reference.v0290.scope": {
+    "message": "Skill 市场、研究包、PDF 提取与外部 R 包安装。"
+  },
+  "docs.outline.reference.v0280.title": {
+    "message": "v0.28.0"
+  },
+  "docs.outline.reference.v0280.scope": {
+    "message": "结果复现检查、全局搜索、隐私规则与应用管理的 Codex 升级。"
+  },
+  "docs.guides.outline.reproducibility.title": {
+    "message": "可复现性"
+  },
+  "docs.guides.outline.reproducibility.scope": {
+    "message": "重新运行捕获的研究步骤，比较结果版本并保留验证记录。"
+  },
+  "docs.guides.outline.research-packages.title": {
+    "message": ".science 研究包"
+  },
+  "docs.guides.outline.research-packages.scope": {
+    "message": "导出、导入和查看可交接的会话分支、文件与证据。"
+  },
+  "docs.outline.skills.marketplace.title": {
+    "message": "Skill 市场"
+  },
+  "docs.outline.skills.marketplace.scope": {
+    "message": "从市场查找、安装、更新和管理科研方法。"
+  },
+  "docs.guides.outline.bookmarks.title": {
+    "message": "私人阅读书签"
+  },
+  "docs.guides.outline.bookmarks.scope": {
+    "message": "保存私人阅读段落与 PDF 区域，管理备注并返回来源。"
+  },
+  "docs.outline.reference.v0300.title": {
+    "message": "v0.30.0"
+  },
+  "docs.outline.reference.v0300.scope": {
+    "message": "私人书签、独立 Side Chat 标签、设置搜索与 PDF 提取证据。"
+  },
+  "docs.outline.reference.v0301.title": {
+    "message": "v0.30.1"
+  },
+  "docs.outline.reference.v0301.scope": {
+    "message": "Side Chat 草稿、Skill 更新审核、研究包文献 PDF 与恢复工具。"
   }
 }

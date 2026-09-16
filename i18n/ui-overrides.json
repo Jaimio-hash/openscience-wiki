@@ -1,0 +1,32 @@
+{
+  "zh-Hant": {
+    "theme.SearchPage.documentsFound.plurals": "找到 {count} 項結果"
+  },
+  "ja": {
+    "theme.SearchPage.documentsFound.plurals": "検索結果：{count} 件",
+    "theme.NavBar.navAriaLabel": "メインナビゲーション"
+  },
+  "ko": {
+    "theme.SearchPage.documentsFound.plurals": "검색 결과 {count}개",
+    "theme.NavBar.navAriaLabel": "기본 탐색"
+  },
+  "fr": {
+    "theme.SearchPage.documentsFound.plurals": "{count} résultat trouvé|{count} résultats trouvés",
+    "theme.NavBar.navAriaLabel": "Navigation principale"
+  },
+  "de": {
+    "theme.SearchPage.documentsFound.plurals": "{count} Ergebnis gefunden|{count} Ergebnisse gefunden",
+    "theme.NavBar.navAriaLabel": "Hauptnavigation",
+    "theme.docs.breadcrumbs.navAriaLabel": "Brotkrumennavigation",
+    "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": "Untermenü öffnen",
+    "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": "Untermenü schließen"
+  },
+  "es": {
+    "theme.SearchPage.documentsFound.plurals": "{count} resultado encontrado|{count} resultados encontrados",
+    "theme.NavBar.navAriaLabel": "Navegación principal"
+  },
+  "ru": {
+    "theme.SearchPage.documentsFound.plurals": "Найден {count} результат|Найдено {count} результата|Найдено {count} результатов",
+    "theme.NavBar.navAriaLabel": "Основная навигация"
+  }
+}

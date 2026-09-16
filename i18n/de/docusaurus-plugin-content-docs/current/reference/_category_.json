@@ -1,0 +1,8 @@
+{
+  "label": "Referenz und Fehlerbehebung",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Dateiformate, Verknüpfungen, Kontrollindex, Architektur und Fehlersuche."
+  }
+}

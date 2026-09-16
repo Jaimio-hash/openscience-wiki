@@ -1,0 +1,80 @@
+---
+title: "Modelos y políticas de tareas"
+last_update:
+  date: '2026-09-10'
+---
+
+# Modelos y políticas de tareas {/* #models-and-task-policies */}
+
+Elija un modelo para el trabajo que debe realizar, a continuación, comprobar qué ajustes son heredados. Un **Provider** proporciona acceso modelo; un **Agent** ejecuta la conversación y las herramientas; a **Specialist** proporciona un papel reutilizable y capacidades seleccionadas. Cambiar uno no instala o configura los otros.
+
+Utilice las siguientes políticas de tareas cuando Main, Subagent, Reviewer, Vision o Session los detalles necesitan diferentes modelos. Revise el proveedor y el modelo en la tarea resultante, especialmente cuando varios proveedores ofrecen el mismo nombre de modelo.
+
+## Seleccione el modelo principal {/* #select-the-main-model */}
+
+1. Abre **Settings → Model**. En un espacio de trabajo, la entrada **Select model** del Compositor también expone las opciones de modelo.
+2. Abra **Main model** y seleccione un modelo disponible bajo su proveedor configurado. Una entrada de catálogo no es prueba de que la cuenta puede utilizarla.
+3. Seleccione **Reasoning effort**. Utilice las opciones realmente mostradas para ese modelo. Este modelo inspeccionado ofrece Default, Low, Medium, High, XHigh y Ultra; otros modelos tienen diferentes escaleras.
+4. Cerrar y reabrir Modelo para comprobar la selección guardada. Comience una pequeña solicitud e inspeccione su resultado antes de un análisis largo.
+
+![Modelo Main y proveedor conectado](/img/open-science/guides-walkthrough/10-model-main.png)
+
+Los cambios se aplican a las solicitudes posteriores. No cambian retroactivamente el modelo detrás de una respuesta existente. Cuando los modelos cambian, la aplicación intenta preservar la fuerza relativa de razonamiento; un backend puede aproximarse a un esfuerzo sin apoyo. El esfuerzo más alto puede aumentar el tiempo y el uso de token y no es una garantía de corrección.
+
+## Asignar modelos a tareas específicas {/* #assign-models-to-specific-tasks */}
+
+Seleccione una fila de escenario para ampliarla. Abrir otra fila se derrumba el anterior. Lea el resumen colapsado después de hacer un cambio: distingue la herencia, un modelo fijo y una selección indisponible.
+
+| Escenario | Opción modelo | Qué verificar |
+| --- | --- | --- |
+| **Subagent** | Igual que el modelo principal, o un modelo separado compatible | El control de esfuerzo coincidente está deshabilitado mientras sigue Main. También se debe habilitar a la delegación. |
+| **Reviewer** | Siga el modelo principal o un modelo de revisión configurado | Una política modelo por sí sola no permite la revisión automática o crear un registro de revisión. |
+| **Vision** | Un modelo configurado de imagen | No está configurado significa que no hay una selección de Visión dedicada. Si se necesita un relé depende del soporte de imagen del backend activo. |
+| **Session details** | Siga Main o elija un modelo compatible; inspeccionar su esfuerzo y su capacidad | Esto genera el título de sesión/descripción utilizando una llamada restringida. Está separado de la tarea científica y de sus artefactos. |
+
+![Subagent inheritance and disabled effort control](/img/open-science/guides-walkthrough/11-model-scenarios.png)
+
+El selector de detalles de sesión filtra los modelos de suscripción Codex. Un modelo visible en Main o Vision puede por lo tanto estar ausente aquí. Con un proveedor local compatible y OpenCode seleccionado, el modelo local se puso a disposición como opción fija. **Not supported** junto a su esfuerzo de razonamiento significa que el control de esfuerzo no está disponible; es diferente de si el modelo puede recibir una solicitud de texto.
+
+Para un escenario marcado, seleccione el proveedor/modelo y luego el esfuerzo soportado. Regrese a la opción de la herencia cuando desea futuros cambios Main para propagarse. Un resumen **Unavailable** puede retener el nombre anterior del modelo incluso después de que su proveedor sea eliminado o ya no elegible; seleccione un reemplazo válido.
+
+### Lea un gráfico con un modelo de Visión separado {/* #read-a-chart-with-a-separate-vision-model */}
+
+Use Vision cuando el modelo Main de la conversación no puede aceptar imágenes. Un modelo Main que ya acepta imágenes puede leerlas directamente.
+
+<p className="example-label"><strong>Ejemplo práctico</strong> Verificar etiquetas en un gráfico de cuenta de muestra</p>
+
+1. Ampliar **Settings → Model → Vision** y elegir un modelo disponible de imagen. Seleccione un esfuerzo de razonamiento compatible si el control está habilitado.
+2. Mantenga el modelo de texto indicado seleccionado en la conversación. La visión cambiante no sustituye a Main.
+3. Utilice **+ → Attach files** para adjuntar el gráfico. Confirme que su nombre de archivo aparece en el Compositor antes de enviar.
+4. Solicitar información visible específica, como el título, etiquetas de eje, unidades y número de muestras trazadas. Solicite una indicación explícita cuando una etiqueta no esté legible.
+5. Compare la respuesta con la imagen original. Utilice la tabla fuente para comparaciones numéricas exactas: en este ejemplo, dos etiquetas redondeadas a **24.7M** no prueban que sus conteos subyacentes son iguales.
+6. Vuelva Visión a **Not configured** cuando ya no desea un modelo de imagen separado. Esto no elimina al proveedor de modelos.
+
+![Selección de Visión Separada junto con el modelo Main texto](/img/open-science/sept11-completion/vision-configuration.png)
+
+![Marcas de gráficos y los límites de los valores redondeados](/img/open-science/sept11-completion/vision-result.png)
+
+El relé de imagen actual excluye a los proveedores de suscripción de Codex aunque puedan aparecer en el selector de Visión. Si un modelo Main solo de texto todavía rechaza una imagen después de esa selección, elija otro proveedor de Visión elegible o un modelo Main de imagen. No trate un valor de selector guardado como una solicitud de imagen exitosa.
+
+### Confirma que se generaron detalles de la sesión {/* #confirm-that-session-details-were-generated */}
+
+Después de elegir **Same as main model** o un modelo fijo compatible bajo **Session details**, crear una conversación. Espera que el primer inconveniente se convierta en un título conciso, y luego inspecciona la descripción guardada. Una copia truncada del impulso no establece una generación exitosa.
+
+Compruebe el título y la descripción guardados después de la solicitud auxiliar termina. Si el título sigue siendo un impulso acortado, inspeccione la compatibilidad del modelo, la carga del servidor local y el estado final de la llamada. Un tiempo auxiliar puede retener ese retroceso. La generación de título de sesión utiliza su propia política modelo y no ejecuta el cálculo científico de la conversación.
+
+## Controles de proveedores y cheques de fallos {/* #provider-controls-and-failure-checks */}
+
+| Control/estado | Siguiente acción |
+| --- | --- |
+| **Add provider** | Seguir [Configuración del proveedor](./providers.md), incluyendo sus requisitos de autenticación y punta final. |
+| **Check Codex login** | Revisar el estado de inicio de suscripción; esto no tiene una tarea de investigación. |
+| **Re-import Codex login** | Importar un nuevo login existente a través del flujo de la aplicación. |
+| **Edit** | Configuración del proveedor de revisión. Preserve la configuración de trabajo hasta que se verifique un reemplazo. |
+| Deshabilitado **Delete** | El proveedor actual no puede ser eliminado en este estado; elegir otra configuración válida primero. |
+| Advertencia de compatibilidad | Revise el formato activo de agente y proveedor API antes de reintentar repetidamente. |
+| No hay opciones de escenario | Configure un proveedor/modelo elegible primero; un selector en blanco no es una solicitud para escribir un nombre de modelo arbitrario. |
+
+Utilice [Configuración del agente](./frameworks.md) para el backend de ejecución y [Uso](./usage.md) para la actividad reportada. Precedencia de configuración exacta está en [Referencia](../reference/configuration.md).
+
+Fuentes: [selección modelo](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/ActiveModelSelect.tsx), [políticas de hipótesis](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/ScenarioModelList.tsx).

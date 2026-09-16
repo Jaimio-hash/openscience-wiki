@@ -1,0 +1,2465 @@
+{
+  "homepage.eyebrow": {
+    "message": "使用文件"
+  },
+  "homepage.introduction": {
+    "message": "配置研究工作區，處理科研資料，檢查並分享你的研究結果。"
+  },
+  "homepage.readDocs": {
+    "message": "閱讀文件"
+  },
+  "homepage.troubleshooting": {
+    "message": "故障排查"
+  },
+  "homepage.startHeading": {
+    "message": "從這裡開始"
+  },
+  "homepage.browseHeading": {
+    "message": "按主題瀏覽"
+  },
+  "homepage.topicsHeading": {
+    "message": "深入瞭解"
+  },
+  "homepage.steps.install.title": {
+    "message": "安裝 Open-Science"
+  },
+  "homepage.steps.install.description": {
+    "message": "選擇你使用的作業系統。"
+  },
+  "homepage.steps.setup.title": {
+    "message": "完成首次設定"
+  },
+  "homepage.steps.setup.description": {
+    "message": "連線模型，準備執行環境。"
+  },
+  "homepage.steps.firstResult.title": {
+    "message": "建立第一個結果"
+  },
+  "homepage.steps.firstResult.description": {
+    "message": "從輸入材料到儲存結果，完成一個專案。"
+  },
+  "homepage.sections.guides.title": {
+    "message": "使用指南"
+  },
+  "homepage.sections.guides.description": {
+    "message": "瞭解專案、對話、檔案和工作區設定。"
+  },
+  "homepage.sections.workflows.title": {
+    "message": "科研工作流"
+  },
+  "homepage.sections.workflows.description": {
+    "message": "跟隨真實研究資料的案例完成操作。"
+  },
+  "homepage.sections.tools.title": {
+    "message": "探索工具"
+  },
+  "homepage.sections.tools.description": {
+    "message": "查詢資料庫、檢視檔案並執行計算。"
+  },
+  "homepage.sections.skills.title": {
+    "message": "Skills"
+  },
+  "homepage.sections.skills.description": {
+    "message": "查詢、使用和建立可複用的科研方法。"
+  },
+  "homepage.sections.specialists.title": {
+    "message": "專家"
+  },
+  "homepage.sections.specialists.description": {
+    "message": "委派專項任務，並稽核完成的結果。"
+  },
+  "homepage.sections.reference.title": {
+    "message": "參考"
+  },
+  "homepage.sections.reference.description": {
+    "message": "查閱控制元件、檔案格式、CLI 和 API。"
+  },
+  "homepage.topics.reproducibility": {
+    "message": "可復現性"
+  },
+  "homepage.topics.packages": {
+    "message": ".science 研究包"
+  },
+  "homepage.topics.marketplace": {
+    "message": "Skill 市場"
+  },
+  "homepage.meta.title": {
+    "message": "Open-Science 文件"
+  },
+  "homepage.meta.description": {
+    "message": "AIPOCH Open-Science 的完整操作、配置與科研復現指南"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "此頁已當機。"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "回到頂部"
+  },
+  "theme.blog.archive.title": {
+    "message": "歷史文章"
+  },
+  "theme.blog.archive.description": {
+    "message": "歷史文章"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "部落格文章列表分頁導覽"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "較新的文章"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "較舊的文章"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "部落格文章分頁導覽"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "較新一篇"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "較舊一篇"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "檢視所有標籤"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "系統模式",
+    "description": "The name for the system color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "淺色模式"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "深色模式"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "切換淺色/深色模式（當前為{mode}）"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "頁面路徑"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "文件選項卡"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "上一頁"
+  },
+  "theme.docs.paginator.next": {
+    "message": "下一頁"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "版本：{versionLabel}"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "{count} 篇文件帶有標籤"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged}「{tagName}」"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "此為 {siteTitle} {versionLabel} 版尚未發行的文件。"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "此為 {siteTitle} {versionLabel} 版的文件，現已不再積極維護。"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "最新的文件請參閱 {latestVersionLink} ({versionLabel})。"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "最新版本"
+  },
+  "theme.common.editThisPage": {
+    "message": "編輯此頁"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "{heading}的直接連結"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": "於 {date} "
+  },
+  "theme.lastUpdated.byUser": {
+    "message": "由 {user} "
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "最後{byUser}{atDate}更新"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "選擇版本"
+  },
+  "theme.NotFound.title": {
+    "message": "找不到頁面"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "標籤："
+  },
+  "theme.admonition.caution": {
+    "message": "警告"
+  },
+  "theme.admonition.danger": {
+    "message": "危險"
+  },
+  "theme.admonition.info": {
+    "message": "資訊"
+  },
+  "theme.admonition.note": {
+    "message": "備註"
+  },
+  "theme.admonition.tip": {
+    "message": "提示"
+  },
+  "theme.admonition.warning": {
+    "message": "注意"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "關閉"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "最近部落格文章導覽"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "展開側邊欄分類 '{label}'"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "收起側邊欄分類 '{label}'"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "（在新標籤頁中開啟）",
+    "description": "The ARIA label for the external link icon"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "主導航"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "選擇語言"
+  },
+  "theme.NotFound.p1": {
+    "message": "我們沒有您要找的頁面。"
+  },
+  "theme.NotFound.p2": {
+    "message": "請聯絡原始連結來源網站的所有者，並通知他們連結已毀損。"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "本頁導覽"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "閱讀時間約 {readingTime} 分鐘"
+  },
+  "theme.blog.post.readMore": {
+    "message": "閱讀更多"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "閱讀 {title} 全文"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "複製"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "複製成功"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "複製程式碼至剪貼簿"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "切換自動換行"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "主頁面"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "收起側邊欄"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "收起側邊欄"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "文件側邊欄"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "關閉導覽列"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← 回到主選單"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "切換導覽列"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "展開下拉選單",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "收起下拉選單",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "展開側邊欄"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "展開側邊欄"
+  },
+  "theme.blog.post.plurals": {
+    "message": "{count} 篇文章"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} 含有標籤「{tagName}」"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "作者列表"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "檢視所有作者"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "此作者尚未撰寫任何文章。"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "未列出頁"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "此頁面未列出。搜索引擎不會對其索引，只有擁有直接連結的用戶才能訪問。"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "草稿頁"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "此頁面為草稿，僅在開發環境中可見，不會包含於正式版本中。"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "{count} 個項目"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "重試"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "跳至主要内容"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "標籤"
+  },
+  "docs.sections.label": {
+    "message": "文件分割槽",
+    "description": "Accessible label for documentation section navigation"
+  },
+  "docs.guides.outline.group.start": {
+    "message": "開始使用"
+  },
+  "docs.guides.outline.capabilities.title": {
+    "message": "功能與支援的輸入"
+  },
+  "docs.guides.outline.capabilities.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.source-types.title": {
+    "message": "支援的檔案與資料"
+  },
+  "docs.guides.outline.source-types.scope": {
+    "message": "輸入型別、可讀取與可執行格式的區別，以及匯入前的準備。"
+  },
+  "docs.guides.outline.installation.title": {
+    "message": "安裝與更新"
+  },
+  "docs.guides.outline.installation.scope": {
+    "message": "系統要求、桌面安裝、原始碼執行、檢查更新與版本選擇。"
+  },
+  "docs.guides.outline.onboarding.title": {
+    "message": "首次設定"
+  },
+  "docs.guides.outline.onboarding.scope": {
+    "message": "按引導順序完成環境檢查、資料目錄、代理框架、模型和 Notebook 配置。"
+  },
+  "docs.guides.outline.first-project.title": {
+    "message": "第一個專案與結果"
+  },
+  "docs.guides.outline.first-project.scope": {
+    "message": "從建立專案到儲存產物的最小任務，以及明確的成功檢查。"
+  },
+  "docs.guides.outline.group.workspace": {
+    "message": "專案與會話"
+  },
+  "docs.guides.outline.navigation.title": {
+    "message": "導航與搜尋"
+  },
+  "docs.guides.outline.navigation.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.projects.title": {
+    "message": "專案與原始檔夾"
+  },
+  "docs.guides.outline.projects.scope": {
+    "message": "建立編輯專案、描述與 Agent Context、源目錄選擇和訪問範圍。"
+  },
+  "docs.guides.outline.sessions.title": {
+    "message": "會話與分支"
+  },
+  "docs.guides.outline.sessions.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.composer.title": {
+    "message": "對話與排隊請求"
+  },
+  "docs.guides.outline.composer.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.follow-ups.title": {
+    "message": "追問與任務佇列"
+  },
+  "docs.guides.outline.follow-ups.scope": {
+    "message": "排隊、編輯、排序、立即傳送和停止請求，以及中斷後的狀態。"
+  },
+  "docs.guides.outline.revisions.title": {
+    "message": "訊息修訂與分支"
+  },
+  "docs.guides.outline.revisions.scope": {
+    "message": "編輯歷史訊息、檢視版本、建立分支，以及上下文保留範圍。"
+  },
+  "docs.guides.outline.search.title": {
+    "message": "查詢專案、會話與檔案"
+  },
+  "docs.guides.outline.search.scope": {
+    "message": "全域搜尋、結果型別、開啟結果，以及與面板篩選的區別。"
+  },
+  "docs.guides.outline.group.files": {
+    "message": "檔案、文獻與結果"
+  },
+  "docs.guides.outline.files.title": {
+    "message": "檔案、產物與版本"
+  },
+  "docs.guides.outline.files.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.previews.title": {
+    "message": "開啟與預覽檔案"
+  },
+  "docs.guides.outline.previews.scope": {
+    "message": "分欄與全屏預覽、支援的檢視器、標籤頁及各格式操作。"
+  },
+  "docs.guides.outline.artifacts.title": {
+    "message": "產物與檔案版本"
+  },
+  "docs.guides.outline.artifacts.scope": {
+    "message": "區分上傳檔案與生成產物；檢視儲存版本、編輯支援的託管檔案、對比支援的文字或 Markdown 變更並匯出結果。"
+  },
+  "docs.guides.outline.library.title": {
+    "message": "文獻庫與引用"
+  },
+  "docs.guides.outline.library.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.reading.title": {
+    "message": "論文閱讀與引用"
+  },
+  "docs.guides.outline.reading.scope": {
+    "message": "PDF 附件、後設資料與全文獲取、閱讀狀態、引用樣式、複製與匯出。"
+  },
+  "docs.guides.outline.notebook.title": {
+    "message": "Notebook 與執行證據"
+  },
+  "docs.guides.outline.notebook.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.provenance.title": {
+    "message": "檢查產物來源"
+  },
+  "docs.guides.outline.provenance.scope": {
+    "message": "檢查某一版本可用的來源訊息、程式碼、Notebook 執行和審查證據連結，說明缺失證據與格式覆蓋差異。"
+  },
+  "docs.guides.outline.group.models": {
+    "message": "模型與代理"
+  },
+  "docs.guides.outline.models.title": {
+    "message": "模型與任務策略"
+  },
+  "docs.guides.outline.models.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.providers.title": {
+    "message": "提供商與本地模型配置"
+  },
+  "docs.guides.outline.providers.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.local-models.title": {
+    "message": "使用本地模型"
+  },
+  "docs.guides.outline.local-models.scope": {
+    "message": "相容的本地端點、模型標識、能力限制與連線驗證。"
+  },
+  "docs.guides.outline.frameworks.title": {
+    "message": "安裝與切換代理框架"
+  },
+  "docs.guides.outline.frameworks.scope": {
+    "message": "框架安裝、檢測、認證、啟用、切換、修復與移除。"
+  },
+  "docs.guides.outline.scenario-models.title": {
+    "message": "不同任務的模型配置"
+  },
+  "docs.guides.outline.scenario-models.scope": {
+    "message": "主模型、Subagent、Reviewer、Vision、Session details 的策略與繼承關係。"
+  },
+  "docs.guides.outline.usage.title": {
+    "message": "Token 用量與活動"
+  },
+  "docs.guides.outline.usage.scope": {
+    "message": "已報告 token 分類、週期篩選、圖表、專案會話計數與統計缺失。"
+  },
+  "docs.guides.outline.group.control": {
+    "message": "研究控制與上下文"
+  },
+  "docs.guides.outline.approval-modes.title": {
+    "message": "權限與審批"
+  },
+  "docs.guides.outline.approval-modes.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.remembered-permissions.title": {
+    "message": "已記憶的權限"
+  },
+  "docs.guides.outline.remembered-permissions.scope": {
+    "message": "會話、專案和全域範圍，檢視、撤銷與恢復預設授權。"
+  },
+  "docs.guides.outline.planning.title": {
+    "message": "執行前規劃"
+  },
+  "docs.guides.outline.planning.scope": {
+    "message": "規劃入口、審閱計劃、反饋、批准和繼續執行。"
+  },
+  "docs.guides.outline.delegation.title": {
+    "message": "任務委派與 Side Chat"
+  },
+  "docs.guides.outline.delegation.scope": {
+    "message": "檢查當前框架支援的委派、子智慧體活動和 Side Chat 建議；專家建立、能力繫結與 Reviewer 詳情統一歸入 Specialists。"
+  },
+  "docs.guides.outline.memory.title": {
+    "message": "記憶與對話上下文"
+  },
+  "docs.guides.outline.memory.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.context.title": {
+    "message": "上下文、壓縮與交接"
+  },
+  "docs.guides.outline.context.scope": {
+    "message": "檢視上下文用量、歷史保留與壓縮，以及準備續接或交接。"
+  },
+  "docs.guides.outline.group.runtime": {
+    "message": "執行環境與連線"
+  },
+  "docs.guides.outline.runtimes.title": {
+    "message": "Python 與 R 執行環境"
+  },
+  "docs.guides.outline.runtimes.scope": {
+    "message": "託管與外部直譯器、安裝、啟用、包訪問及重建影響。"
+  },
+  "docs.guides.outline.connectors.title": {
+    "message": "聯結器與憑據"
+  },
+  "docs.guides.outline.connectors.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.credentials.title": {
+    "message": "憑據與服務賬號"
+  },
+  "docs.guides.outline.credentials.scope": {
+    "message": "裝置憑據、研究聯絡資訊、API key、token、OAuth、複用與移除。"
+  },
+  "docs.guides.outline.network.title": {
+    "message": "網路、代理與包映象"
+  },
+  "docs.guides.outline.network.scope": {
+    "message": "網路檢查、Notebook 域名、代理模式、軟體包映象和證書包。"
+  },
+  "docs.guides.outline.remote-compute.title": {
+    "message": "SSH 主機與 Slurm 配置"
+  },
+  "docs.guides.outline.remote-compute.scope": {
+    "message": "主機認證、直接執行與排程模式、資源檢測、臨時目錄和併發配置。"
+  },
+  "docs.guides.outline.remote-access.title": {
+    "message": "遠端瀏覽器訪問"
+  },
+  "docs.guides.outline.remote-access.scope": {
+    "message": "Remote.It 前提、訪問模式、配對、可信瀏覽器與撤銷。"
+  },
+  "docs.guides.outline.group.preferences": {
+    "message": "個性化與維護"
+  },
+  "docs.guides.outline.appearance.title": {
+    "message": "外觀與通知"
+  },
+  "docs.guides.outline.appearance.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.notifications.title": {
+    "message": "訊息與通知"
+  },
+  "docs.guides.outline.notifications.scope": {
+    "message": "應用內訊息、桌面任務通知、內容可見性、送達測試與系統權限。"
+  },
+  "docs.guides.outline.tags.title": {
+    "message": "使用標籤組織內容"
+  },
+  "docs.guides.outline.tags.scope": {
+    "message": "建立編輯標籤、外觀、資源關聯、篩選、重名校驗與刪除。"
+  },
+  "docs.guides.outline.storage.title": {
+    "message": "儲存與歸檔內容"
+  },
+  "docs.guides.outline.storage.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.archived.title": {
+    "message": "歸檔、恢復與刪除"
+  },
+  "docs.guides.outline.archived.scope": {
+    "message": "專案會話歸檔恢復、永久刪除、保留目錄和確認邊界。"
+  },
+  "docs.guides.outline.group.help": {
+    "message": "幫助與排錯"
+  },
+  "docs.guides.outline.shortcuts.title": {
+    "message": "鍵盤快捷鍵"
+  },
+  "docs.guides.outline.shortcuts.scope": {
+    "message": "導航、搜尋、輸入與預覽快捷鍵，以及平臺差異。"
+  },
+  "docs.guides.outline.troubleshooting.title": {
+    "message": "故障排查與常見問題"
+  },
+  "docs.guides.outline.troubleshooting.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.faq.title": {
+    "message": "常見問題"
+  },
+  "docs.guides.outline.faq.scope": {
+    "message": "資料歸屬、賬號要求、費用、離線使用與恢復的常見問題，連結到詳細章節。"
+  },
+  "docs.guides.outline.notice": {
+    "message": "目錄規劃 · 待批准"
+  },
+  "docs.guides.outline.description": {
+    "message": "展開章節檢視擬覆蓋內容；正文將在批准後編寫。"
+  },
+  "docs.guides.outline.overview": {
+    "message": "Open-Science 概覽"
+  },
+  "docs.guides.outline.current": {
+    "message": "檢視現有相關文件"
+  },
+  "docs.guides.outline.count": {
+    "message": "8 個分組 · 46 個章節（含概覽）"
+  },
+  "docs.outline.workflows.scope": {
+    "message": "每章對應明確研究情境、起點與交付物；介面操作放進場景步驟中。"
+  },
+  "docs.outline.workflows.group.start": {
+    "message": "選擇工作流"
+  },
+  "docs.outline.workflows.cookbook.title": {
+    "message": "工作流示例集"
+  },
+  "docs.outline.workflows.cookbook.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.first-analysis.title": {
+    "message": "第一個可復現分析"
+  },
+  "docs.outline.workflows.first-analysis.scope": {
+    "message": "用小型 CSV 完成匯入、檢查、執行、儲存圖表和重新執行驗證。"
+  },
+  "docs.outline.workflows.group.evidence": {
+    "message": "文獻與證據"
+  },
+  "docs.outline.workflows.literature-review.title": {
+    "message": "文獻綜述與證據表"
+  },
+  "docs.outline.workflows.literature-review.scope": {
+    "message": "確定問題、檢索篩選、提取證據、引用來源並報告訪問缺口。"
+  },
+  "docs.outline.workflows.paper-reading.title": {
+    "message": "閱讀論文並核查論斷"
+  },
+  "docs.outline.workflows.paper-reading.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.database-search.title": {
+    "message": "交叉核對科學記錄"
+  },
+  "docs.outline.workflows.database-search.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.indication-dossier.title": {
+    "message": "構建適應證研究檔案"
+  },
+  "docs.outline.workflows.indication-dossier.scope": {
+    "message": "整合生物學、流行病學、試驗與治療證據，保留日期及未解決問題。"
+  },
+  "docs.outline.workflows.group.analysis": {
+    "message": "資料分析與復現"
+  },
+  "docs.outline.workflows.data-quality.title": {
+    "message": "檢查基因計數矩陣的樣本質量"
+  },
+  "docs.outline.workflows.data-quality.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.python-r.title": {
+    "message": "Python 與 R 分析"
+  },
+  "docs.outline.workflows.python-r.scope": {
+    "message": "準備環境、檢視變數、分步執行、恢復錯誤並儲存可複用指令碼。"
+  },
+  "docs.outline.workflows.statistics.title": {
+    "message": "統計分析與驗證"
+  },
+  "docs.outline.workflows.statistics.scope": {
+    "message": "說明假設、選擇方法、檢查診斷、報告不確定性並保留程式碼。"
+  },
+  "docs.outline.workflows.reproduce.title": {
+    "message": "復現已發表結果"
+  },
+  "docs.outline.workflows.reproduce.scope": {
+    "message": "清點論文程式碼資料，定義驗收標準，試執行並區分吻合與偏差。"
+  },
+  "docs.outline.workflows.group.biology": {
+    "message": "序列、細胞與分子"
+  },
+  "docs.outline.workflows.sequence-qc.title": {
+    "message": "序列質控與註釋"
+  },
+  "docs.outline.workflows.sequence-qc.scope": {
+    "message": "檢查 FASTA 記錄、字元和長度，核對註釋來源並保留失敗記錄。"
+  },
+  "docs.outline.workflows.single-cell.title": {
+    "message": "單細胞分析"
+  },
+  "docs.outline.workflows.single-cell.scope": {
+    "message": "檢查表達資料與後設資料，按需要選擇 scGPT 或 scvi-tools 並驗證輸出。 需相容的單細胞輸入、已配置 Python 環境和所選 Skill 依賴；科學計算尚待實測。"
+  },
+  "docs.outline.workflows.structure-prediction.title": {
+    "message": "蛋白與複合物結構預測"
+  },
+  "docs.outline.workflows.structure-prediction.scope": {
+    "message": "選擇預測 Skill、檢查輸入與算力需求，檢視置信度及侷限。 需所選軟體包、模型權重及適用的本地或遠端算力；目錄中存在 Skill 不等於已驗證預測執行。"
+  },
+  "docs.outline.workflows.molecular-analysis.title": {
+    "message": "分子結構與對接"
+  },
+  "docs.outline.workflows.molecular-analysis.scope": {
+    "message": "驗證分子、檢查屬性和結構，審閱對接姿態並區分評分與親和力。 區分本地分子檢視器、線上化學資料來源與 DiffDock 執行；對接需另行驗證依賴和算力。"
+  },
+  "docs.outline.workflows.group.deliver": {
+    "message": "圖表、報告與修訂"
+  },
+  "docs.outline.workflows.figures.title": {
+    "message": "製作可追溯證據的科研圖表"
+  },
+  "docs.outline.workflows.figures.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.manuscript.title": {
+    "message": "撰寫與修訂研究報告"
+  },
+  "docs.outline.workflows.manuscript.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.handoff.title": {
+    "message": "交接可復現的研究資料包"
+  },
+  "docs.outline.workflows.handoff.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.group.compute": {
+    "message": "長任務與遠端計算"
+  },
+  "docs.outline.workflows.ssh-analysis.title": {
+    "message": "執行與恢復遠端分析"
+  },
+  "docs.outline.workflows.ssh-analysis.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.slurm-jobs.title": {
+    "message": "提交與回收 Slurm 作業"
+  },
+  "docs.outline.workflows.slurm-jobs.scope": {
+    "message": "確認排程要求、提交限定作業、跟蹤記錄、取消恢復並驗證檔案。 需真實 Slurm 叢集、賬號與排程配置；本地模式控制元件不能證明排程執行成功。"
+  },
+  "docs.outline.workflows.parallel-review.title": {
+    "message": "委派與審查研究任務"
+  },
+  "docs.outline.workflows.parallel-review.scope": {
+    "message": "在支援委派的框架和可用模型下拆分限定任務，配置專家能力，檢查委派活動與審批並核對返回證據；聲稱並行執行前先實測委派。"
+  },
+  "docs.outline.tools.scope": {
+    "message": "按能力查詢工具；具體工具和操作在大類章節內以表格呈現。"
+  },
+  "docs.outline.tools.group.built-in": {
+    "message": "工作區工具"
+  },
+  "docs.outline.tools.files.title": {
+    "message": "檔案與產物操作"
+  },
+  "docs.outline.tools.files.scope": {
+    "message": "讀取搜尋、複製儲存、比較匯出檔案，區分上傳與生成版本。"
+  },
+  "docs.outline.tools.notebooks.title": {
+    "message": "Python、R 與 Bash 執行"
+  },
+  "docs.outline.tools.notebooks.scope": {
+    "message": "執行入口、輸入輸出、實時變數、核心狀態及執行證據。"
+  },
+  "docs.outline.tools.literature.title": {
+    "message": "資料庫與引用工具"
+  },
+  "docs.outline.tools.literature.scope": {
+    "message": "條目搜尋、後設資料、PDF 閱讀、引用格式及逐工具控制。"
+  },
+  "docs.outline.tools.memory.title": {
+    "message": "記憶工具"
+  },
+  "docs.outline.tools.memory.scope": {
+    "message": "分類和筆記檢索、範圍、寫入，以及記憶進入上下文的條件。"
+  },
+  "docs.outline.tools.group.viewers": {
+    "message": "檔案檢視器"
+  },
+  "docs.outline.tools.tables.title": {
+    "message": "表格與資料集"
+  },
+  "docs.outline.tools.tables.scope": {
+    "message": "用表格對照資料格式、預覽操作、資料檢查、變數處理、匯出與大小限制。"
+  },
+  "docs.outline.tools.documents.title": {
+    "message": "PDF、Office 與 Markdown"
+  },
+  "docs.outline.tools.documents.scope": {
+    "message": "閱讀、翻頁、文件預覽、證據選擇和下載。"
+  },
+  "docs.outline.tools.images.title": {
+    "message": "圖片與科研圖表"
+  },
+  "docs.outline.tools.images.scope": {
+    "message": "圖片瀏覽與縮放、格式支援及儲存圖表的檢查。"
+  },
+  "docs.outline.tools.structures.title": {
+    "message": "三維結構與序列"
+  },
+  "docs.outline.tools.structures.scope": {
+    "message": "PDB 表示控制與序列檢視器、輸入格式及預覽限制。"
+  },
+  "docs.outline.tools.group.connectors": {
+    "message": "科學資料庫聯結器"
+  },
+  "docs.outline.tools.group.compute": {
+    "message": "計算能力"
+  },
+  "docs.outline.tools.runtimes.title": {
+    "message": "執行環境與軟體包能力"
+  },
+  "docs.outline.tools.runtimes.scope": {
+    "message": "託管與外部執行時能力、依賴要求，連結到統一配置教程。"
+  },
+  "docs.outline.tools.remote.title": {
+    "message": "SSH 與 Slurm 能力"
+  },
+  "docs.outline.tools.remote.scope": {
+    "message": "執行模式、作業跟蹤、資源檢測及輸出回收邊界。"
+  },
+  "docs.outline.tools.group.extend": {
+    "message": "擴充套件工具接入"
+  },
+  "docs.outline.tools.custom-mcp.title": {
+    "message": "自定義 MCP 服務"
+  },
+  "docs.outline.tools.custom-mcp.scope": {
+    "message": "本地遠端傳輸、工具發現、認證與相容性；配置步驟歸屬 Guides。"
+  },
+  "docs.outline.tools.readiness.title": {
+    "message": "工具可用性與限制"
+  },
+  "docs.outline.tools.readiness.scope": {
+    "message": "區分已列出、已啟用、已認證、可訪問和已成功執行。"
+  },
+  "docs.outline.skills.scope": {
+    "message": "選擇、使用與維護可複用方法；內建 Skill 條目放在章節表格中。"
+  },
+  "docs.outline.skills.group.use": {
+    "message": "使用 Skills"
+  },
+  "docs.outline.skills.start.title": {
+    "message": "Skills 概覽與目錄"
+  },
+  "docs.outline.skills.start.scope": {
+    "message": "區分 Skill、工具和專家角色，瀏覽目錄並按輸入或目標選擇。"
+  },
+  "docs.outline.skills.select.title": {
+    "message": "選擇與載入 Skill"
+  },
+  "docs.outline.skills.select.scope": {
+    "message": "搜尋、啟用、在輸入區選擇、檢視指令並驗證可用性。"
+  },
+  "docs.outline.skills.recipes.title": {
+    "message": "Skill 使用示例"
+  },
+  "docs.outline.skills.recipes.scope": {
+    "message": "用示例表關聯研究目標、所選 Skill、樣例輸入、請求、預期結果和完整工作流。"
+  },
+  "docs.outline.skills.group.literature": {
+    "message": "文獻與圖表 Skills"
+  },
+  "docs.outline.skills.group.structure": {
+    "message": "結構與序列設計 Skills"
+  },
+  "docs.outline.skills.group.omics": {
+    "message": "基因組與單細胞 Skills"
+  },
+  "docs.outline.skills.group.environments": {
+    "message": "環境與定製 Skills"
+  },
+  "docs.outline.skills.group.author": {
+    "message": "編寫與維護 Skills"
+  },
+  "docs.outline.skills.write.title": {
+    "message": "編寫個人 Skill"
+  },
+  "docs.outline.skills.write.scope": {
+    "message": "定義輸入、過程、輸出和檢查點，預覽並儲存本地方法包。"
+  },
+  "docs.outline.skills.resources.title": {
+    "message": "指令與支援檔案"
+  },
+  "docs.outline.skills.resources.scope": {
+    "message": "SKILL.md 後設資料、引用檔案、打包限制及指令與資料邊界。"
+  },
+  "docs.outline.skills.imports.title": {
+    "message": "匯入、匯出與更新 Skills"
+  },
+  "docs.outline.skills.imports.scope": {
+    "message": "檔案倉庫匯入、包檢查、匯出編輯刪除與版本追蹤。"
+  },
+  "docs.outline.skills.specialists.title": {
+    "message": "建立與打包專家角色"
+  },
+  "docs.outline.skills.specialists.scope": {
+    "message": "身份、指令、能力繫結，以及複製、匯入匯出和管理角色包。"
+  },
+  "docs.outline.reference.scope": {
+    "message": "先按專案配置與 CLI 整合組織，再補充 AIPOCH 技術參考和更新日誌。"
+  },
+  "docs.outline.reference.group.lookup": {
+    "message": "產品參考"
+  },
+  "docs.outline.reference.controls.title": {
+    "message": "控制元件與鍵盤參考"
+  },
+  "docs.outline.reference.controls.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.reference.formats.title": {
+    "message": "檔案格式與限制"
+  },
+  "docs.outline.reference.formats.scope": {
+    "message": "用表格列預覽、文獻匯入、引用匯出、檔案大小限制和不支援情況。"
+  },
+  "docs.outline.reference.models.title": {
+    "message": "模型與框架相容性"
+  },
+  "docs.outline.reference.models.scope": {
+    "message": "提供商格式、影象支援、推理選項、場景策略與框架限制。"
+  },
+  "docs.outline.reference.permissions.title": {
+    "message": "權限與控制"
+  },
+  "docs.outline.reference.permissions.scope": {
+    "message": "查閱審批模式、範圍優先順序、記憶授權、網路限制與撤銷語義。"
+  },
+  "docs.outline.reference.limits.title": {
+    "message": "欄位與包限制"
+  },
+  "docs.outline.reference.limits.scope": {
+    "message": "原始碼確認的欄位長度、標識、檔案包限制及校驗規則。"
+  },
+  "docs.outline.reference.glossary.title": {
+    "message": "術語與概念"
+  },
+  "docs.outline.reference.glossary.scope": {
+    "message": "專案、會話、產物、執行環境、Skill、專家、聯結器和溯源的定義。"
+  },
+  "docs.outline.reference.group.formats": {
+    "message": "配置與交換格式"
+  },
+  "docs.outline.reference.skill-format.title": {
+    "message": "Skill 包格式"
+  },
+  "docs.outline.reference.skill-format.scope": {
+    "message": "後設資料結構、指令檔案、支援資源、壓縮包結構與校驗。"
+  },
+  "docs.outline.reference.specialist-format.title": {
+    "message": "Specialist 包格式"
+  },
+  "docs.outline.reference.specialist-format.scope": {
+    "message": "角色身份、指令、能力引用、可移植性與匯入診斷。"
+  },
+  "docs.outline.reference.mcp-config.title": {
+    "message": "MCP 配置格式"
+  },
+  "docs.outline.reference.mcp-config.scope": {
+    "message": "Connector 與 mcpServers 交換格式、憑據佔位符和傳輸欄位。"
+  },
+  "docs.outline.reference.citations.title": {
+    "message": "文獻匯入與引用格式"
+  },
+  "docs.outline.reference.citations.scope": {
+    "message": "BibTeX、RIS、NBIB、CSL 的邊界、標識、後設資料對映與重複策略。"
+  },
+  "docs.outline.reference.group.technical": {
+    "message": "產品與包格式參考"
+  },
+  "docs.outline.reference.architecture.title": {
+    "message": "架構與資料流"
+  },
+  "docs.outline.reference.architecture.scope": {
+    "message": "說明桌面端、服務、框架、儲存和執行邊界，以及產物追溯和憑據處理。"
+  },
+  "docs.outline.reference.storage.title": {
+    "message": "儲存與證據生命週期"
+  },
+  "docs.outline.reference.storage.scope": {
+    "message": "託管目錄、原始檔案、上傳、產物版本、保留與刪除邊界。"
+  },
+  "docs.outline.reference.cli.title": {
+    "message": "CLI 與結構化輸出"
+  },
+  "docs.outline.reference.cli.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.reference.errors.title": {
+    "message": "錯誤訊息與診斷"
+  },
+  "docs.outline.reference.errors.scope": {
+    "message": "將常見錯誤對映到原因、診斷材料與對應排錯教程。"
+  },
+  "docs.outline.reference.verification.title": {
+    "message": "文件驗證記錄"
+  },
+  "docs.outline.reference.verification.scope": {
+    "message": "記錄原始碼版本、英文截圖、已操作控制元件、條件測試和待驗證缺口。"
+  },
+  "docs.outline.reference.group.changelog": {
+    "message": "更新日誌"
+  },
+  "docs.outline.reference.v0-26-0.title": {
+    "message": "v0.26.0"
+  },
+  "docs.outline.reference.v0-26-0.scope": {
+    "message": "現有版本記錄，歸入 Changelog 並保留原連結。"
+  },
+  "docs.outline.reference.v0-25-1.title": {
+    "message": "v0.25.1"
+  },
+  "docs.outline.reference.v0-25-1.scope": {
+    "message": "現有版本記錄，歸入 Changelog 並保留原連結。"
+  },
+  "docs.outline.tools.connector-pubmed.title": {
+    "message": "PubMed"
+  },
+  "docs.outline.tools.connector-pubmed.scope": {
+    "message": "PubMed、PMC、Europe PMC：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-literature.title": {
+    "message": "Literature Graph"
+  },
+  "docs.outline.tools.connector-literature.scope": {
+    "message": "OpenAlex、arXiv：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-biorxiv.title": {
+    "message": "bioRxiv"
+  },
+  "docs.outline.tools.connector-biorxiv.scope": {
+    "message": "bioRxiv、medRxiv：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-clinical-trials.title": {
+    "message": "Clinical Trials"
+  },
+  "docs.outline.tools.connector-clinical-trials.scope": {
+    "message": "ClinicalTrials.gov：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-chemistry.title": {
+    "message": "Chemistry"
+  },
+  "docs.outline.tools.connector-chemistry.scope": {
+    "message": "PubChem、ChEBI、Rhea、BindingDB：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-chembl.title": {
+    "message": "ChEMBL"
+  },
+  "docs.outline.tools.connector-chembl.scope": {
+    "message": "ChEMBL：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-molecule.title": {
+    "message": "Molecule Viewer"
+  },
+  "docs.outline.tools.connector-molecule.scope": {
+    "message": "OpenChemLib：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-zinc.title": {
+    "message": "ZINC"
+  },
+  "docs.outline.tools.connector-zinc.scope": {
+    "message": "ZINC22：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-genes.title": {
+    "message": "Genes & Ontologies"
+  },
+  "docs.outline.tools.connector-genes.scope": {
+    "message": "MyGene、UniProt、OLS、QuickGO、Reactome：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-genomes.title": {
+    "message": "Genomes"
+  },
+  "docs.outline.tools.connector-genomes.scope": {
+    "message": "Ensembl、UCSC：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-biomart.title": {
+    "message": "BioMart"
+  },
+  "docs.outline.tools.connector-biomart.scope": {
+    "message": "Ensembl BioMart：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-variants.title": {
+    "message": "Variants"
+  },
+  "docs.outline.tools.connector-variants.scope": {
+    "message": "gnomAD、ClinVar、dbSNP：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-human-genetics.title": {
+    "message": "Human Genetics"
+  },
+  "docs.outline.tools.connector-human-genetics.scope": {
+    "message": "GWAS Catalog、eQTL Catalogue、PheWeb：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-clinical-genomics.title": {
+    "message": "Clinical Genomics"
+  },
+  "docs.outline.tools.connector-clinical-genomics.scope": {
+    "message": "ClinGen、CIViC、Open Targets：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-cancer-models.title": {
+    "message": "Cancer Models"
+  },
+  "docs.outline.tools.connector-cancer-models.scope": {
+    "message": "cBioPortal：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-drug-regulatory.title": {
+    "message": "Drug Regulatory"
+  },
+  "docs.outline.tools.connector-drug-regulatory.scope": {
+    "message": "openFDA：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-expression.title": {
+    "message": "Expression"
+  },
+  "docs.outline.tools.connector-expression.scope": {
+    "message": "GTEx：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-cellguide.title": {
+    "message": "CellGuide"
+  },
+  "docs.outline.tools.connector-cellguide.scope": {
+    "message": "CELLxGENE CellGuide：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-omics-archives.title": {
+    "message": "Omics Archives"
+  },
+  "docs.outline.tools.connector-omics-archives.scope": {
+    "message": "ArrayExpress、GEO、MetaboLights、MGnify、PRIDE：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-protein-annotation.title": {
+    "message": "Protein Annotation"
+  },
+  "docs.outline.tools.connector-protein-annotation.scope": {
+    "message": "InterPro、Pfam、Human Protein Atlas、STRING：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-regulation.title": {
+    "message": "Regulation"
+  },
+  "docs.outline.tools.connector-regulation.scope": {
+    "message": "ENCODE、JASPAR、UniBind：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-rna.title": {
+    "message": "RNA"
+  },
+  "docs.outline.tools.connector-rna.scope": {
+    "message": "Rfam：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-structures.title": {
+    "message": "Structures & Interactions"
+  },
+  "docs.outline.tools.connector-structures.scope": {
+    "message": "PDB、AlphaFold、EMDB、Complex Portal、IntAct：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.tools.connector-research-resources.title": {
+    "message": "Research Resources"
+  },
+  "docs.outline.tools.connector-research-resources.scope": {
+    "message": "Grants.gov、Antibody Registry：資料範圍、工具操作、輸入標識、輸出欄位、訪問前提和失敗邊界。"
+  },
+  "docs.outline.skills.indication-dossier.title": {
+    "message": "Indication Dossier"
+  },
+  "docs.outline.skills.indication-dossier.scope": {
+    "message": "整理適應症資料，覆蓋流行病學、生物學、標準治療、監管與臨床試驗。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.literature-review.title": {
+    "message": "Literature Review"
+  },
+  "docs.outline.skills.literature-review.scope": {
+    "message": "檢索、核驗並綜合科學文獻。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.figure-composer.title": {
+    "message": "Figure Composer"
+  },
+  "docs.outline.skills.figure-composer.scope": {
+    "message": "圍繞結論和可追溯資料規劃、組合多面板圖。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.figure-style.title": {
+    "message": "Figure Style"
+  },
+  "docs.outline.skills.figure-style.scope": {
+    "message": "檢查交付科研圖的資料忠實度與可讀性。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.paper-narrative.title": {
+    "message": "Paper Narrative"
+  },
+  "docs.outline.skills.paper-narrative.scope": {
+    "message": "審查整篇論文圖組的順序與論證。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.env-management.title": {
+    "message": "Environment & Packages"
+  },
+  "docs.outline.skills.env-management.scope": {
+    "message": "透過 Notebook 執行時工具檢查和管理 Python/R 軟體包。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.compute-env-setup.title": {
+    "message": "Compute Environment Setup"
+  },
+  "docs.outline.skills.compute-env-setup.scope": {
+    "message": "準備並驗證 SSH 或 Slurm 計算主機上的命名軟體環境。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.remote-compute-ssh.title": {
+    "message": "Remote Compute (SSH)"
+  },
+  "docs.outline.skills.remote-compute-ssh.scope": {
+    "message": "評估遠端資源、執行 SSH 作業並收集結果。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.customize.title": {
+    "message": "Customize"
+  },
+  "docs.outline.skills.customize.scope": {
+    "message": "透過對話式 Customize 入口建立或修改 Skill、Specialist。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.alphafold2.title": {
+    "message": "AlphaFold2"
+  },
+  "docs.outline.skills.alphafold2.scope": {
+    "message": "透過 ColabFold 預測單體或多聚體蛋白結構。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.boltz.title": {
+    "message": "Boltz"
+  },
+  "docs.outline.skills.boltz.scope": {
+    "message": "透過 Boltz-2 預測蛋白、核酸與小分子複合物結構。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.chai1.title": {
+    "message": "Chai-1"
+  },
+  "docs.outline.skills.chai1.scope": {
+    "message": "透過 Chai-1 預測蛋白、核酸與配體複合物結構。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.diffdock.title": {
+    "message": "DiffDock"
+  },
+  "docs.outline.skills.diffdock.scope": {
+    "message": "生成並排序小分子結合姿態；姿態預測不等於親和力測量。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.esmfold2.title": {
+    "message": "ESMFold2"
+  },
+  "docs.outline.skills.esmfold2.scope": {
+    "message": "使用 ESMFold2 共摺疊及相關蛋白表徵模型。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.fair-esm2.title": {
+    "message": "ESM-2"
+  },
+  "docs.outline.skills.fair-esm2.scope": {
+    "message": "透過 ESM-2 提取蛋白序列表徵、掩碼語言模型評分與接觸預測。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.ligandmpnn.title": {
+    "message": "LigandMPNN"
+  },
+  "docs.outline.skills.ligandmpnn.scope": {
+    "message": "在配體、核酸或金屬上下文中根據骨架設計序列。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.openfold3.title": {
+    "message": "OpenFold3"
+  },
+  "docs.outline.skills.openfold3.scope": {
+    "message": "透過 OpenFold3 實現預測複合物結構。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.proteinmpnn.title": {
+    "message": "ProteinMPNN"
+  },
+  "docs.outline.skills.proteinmpnn.scope": {
+    "message": "針對蛋白骨架設計氨基酸序列。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.solublempnn.title": {
+    "message": "SolubleMPNN"
+  },
+  "docs.outline.skills.solublempnn.scope": {
+    "message": "使用基於可溶蛋白訓練的 MPNN 模型設計序列。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.borzoi.title": {
+    "message": "Borzoi"
+  },
+  "docs.outline.skills.borzoi.scope": {
+    "message": "預測基因組功能軌跡，研究調控變異影響。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.evo2.title": {
+    "message": "Evo 2"
+  },
+  "docs.outline.skills.evo2.scope": {
+    "message": "透過 Evo 2 對 DNA 序列評分、提取表徵及生成序列。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.scgpt.title": {
+    "message": "scGPT"
+  },
+  "docs.outline.skills.scgpt.scope": {
+    "message": "透過 scGPT 對單細胞表達資料提取表徵並註釋。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.skills.scvi-tools.title": {
+    "message": "scvi-tools"
+  },
+  "docs.outline.skills.scvi-tools.scope": {
+    "message": "使用機率模型進行單細胞整合、標籤遷移與差異表達。 規劃輸入、執行時/權重/賬號、示例請求、輸出檔案、驗證與侷限。"
+  },
+  "docs.outline.notice": {
+    "message": "目錄規劃 · 待批准"
+  },
+  "docs.outline.count": {
+    "message": "{groups} 個分組 · {chapters} 個章節"
+  },
+  "docs.outline.description": {
+    "message": "展開章節檢視擬覆蓋內容；正文將在批准後編寫。"
+  },
+  "docs.outline.current": {
+    "message": "檢視現有相關文件"
+  },
+  "docs.outline.tools.group.literature-clinical": {
+    "message": "文獻、臨床與研究資源"
+  },
+  "docs.outline.tools.group.genomics-omics": {
+    "message": "基因組與組學資料來源"
+  },
+  "docs.outline.tools.group.molecular-sources": {
+    "message": "分子、蛋白與結構資料來源"
+  },
+  "docs.outline.workflows.group.library": {
+    "message": "建立課題資料庫"
+  },
+  "docs.outline.workflows.build-library.title": {
+    "message": "為新課題建立核心閱讀文獻庫"
+  },
+  "docs.outline.workflows.build-library.scope": {
+    "message": "剛進入陌生課題時，從種子論文梳理關鍵主題，形成與專案關聯的核心閱讀清單；匯入和標籤是其中的操作步驟。"
+  },
+  "docs.outline.workflows.import-library.title": {
+    "message": "接手與整理課題文獻"
+  },
+  "docs.outline.workflows.import-library.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.organize-library.title": {
+    "message": "為綜述專案彙總多批檢索文獻"
+  },
+  "docs.outline.workflows.organize-library.scope": {
+    "message": "把多次檢索或多個資料庫的文獻匯成去重後的候選集，保留檢索來源並形成待篩選交接記錄。"
+  },
+  "docs.outline.workflows.review-inbox.title": {
+    "message": "為組會準備專題閱讀包"
+  },
+  "docs.outline.workflows.review-inbox.scope": {
+    "message": "圍繞即將舉行的組會主題，稽核智慧體推薦、篩選論文、收集可獲取全文，形成閱讀順序和討論問題。"
+  },
+  "docs.outline.workflows.deduplicate-library.title": {
+    "message": "擴充套件已有課題的文獻積累"
+  },
+  "docs.outline.workflows.deduplicate-library.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.attach-full-text.title": {
+    "message": "在開題或中期彙報前補齊最新證據"
+  },
+  "docs.outline.workflows.attach-full-text.scope": {
+    "message": "開題或中期彙報前重新檢索，對照已有文獻判斷新增證據，形成帶日期的補充與缺口說明；這是手動工作流，不是定時監測。"
+  },
+  "docs.outline.workflows.repair-metadata.title": {
+    "message": "把零散失序的論文資料整理成可用課題庫"
+  },
+  "docs.outline.workflows.repair-metadata.scope": {
+    "message": "面對混雜資料夾、殘缺引用和缺失附件，核對條目與全文，整理成專題集合並交付未解決問題清單。"
+  },
+  "docs.outline.workflows.restore-library.title": {
+    "message": "在投稿前核對稿件參考文獻"
+  },
+  "docs.outline.workflows.restore-library.scope": {
+    "message": "拿到稿件和來源文獻庫後，核對引用條目、書目資訊、重複項與可訪問證據，產出修正後的參考文獻和待確認清單。"
+  },
+  "docs.outline.workflows.group.extra-evidence": {
+    "message": "證據任務"
+  },
+  "docs.outline.workflows.pdf-evidence.title": {
+    "message": "核查論文是否支援某個關鍵論斷"
+  },
+  "docs.outline.workflows.pdf-evidence.scope": {
+    "message": "針對草稿或會議記錄中的關鍵論斷，查詢 PDF 原文與方法，保留頁碼證據並判斷支援、部分支援或不支援。"
+  },
+  "docs.outline.workflows.cross-source-evidence.title": {
+    "message": "處理論文與資料庫記錄不一致的問題"
+  },
+  "docs.outline.workflows.cross-source-evidence.scope": {
+    "message": "當論文與資料庫對基因、化合物或試驗的記錄不一致時，核對識別符號和版本，說明仍未解決的差異。"
+  },
+  "docs.outline.workflows.format-bibliography.title": {
+    "message": "準備投稿參考文獻"
+  },
+  "docs.outline.workflows.format-bibliography.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.group.continue": {
+    "message": "持續研究與交接"
+  },
+  "docs.outline.workflows.plan-research.title": {
+    "message": "規劃與接續研究"
+  },
+  "docs.outline.workflows.plan-research.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.workflows.persistent-goal.title": {
+    "message": "用 Session Plan 接續未完成課題"
+  },
+  "docs.outline.workflows.persistent-goal.scope": {
+    "message": "由使用者繼續已批准的 Session Plan，結合步驟狀態與結果恢復工作，維護剩餘任務記錄；不將計劃等同於無人值守定時執行或獨立持續目標功能。"
+  },
+  "docs.outline.workflows.compare-branches.title": {
+    "message": "用同一資料集比較兩種分析方法"
+  },
+  "docs.outline.workflows.compare-branches.scope": {
+    "message": "需要選擇分析方法時，從相同起點分支，記錄假設並分別執行，形成結果與侷限對照。"
+  },
+  "docs.outline.workflows.continue-context.title": {
+    "message": "中斷一段時間後恢復課題並找回決策依據"
+  },
+  "docs.outline.workflows.continue-context.scope": {
+    "message": "從歷史會話、專案記憶和檔案重建暫停課題的狀態，核實既有決定後再繼續分析。"
+  },
+  "docs.outline.workflows.save-method.title": {
+    "message": "把已驗證分析方法應用到新資料集"
+  },
+  "docs.outline.workflows.save-method.scope": {
+    "message": "將成功分析提煉為 Skill，調整宣告的輸入並在新資料上驗證，檢查舊假設是否仍成立。"
+  },
+  "docs.outline.workflows.export-handoff.title": {
+    "message": "把未完成分析交接給協作者"
+  },
+  "docs.outline.workflows.export-handoff.scope": {
+    "message": "把選定對話證據、結果檔案、決策、環境要求與未解決問題整理成交接包，供協作者審查接續。"
+  },
+  "docs.outline.workflows.group.extra-results": {
+    "message": "結果"
+  },
+  "docs.outline.workflows.trace-result.title": {
+    "message": "回答圖表結論是如何得到的"
+  },
+  "docs.outline.workflows.trace-result.scope": {
+    "message": "協作者質疑圖表時，從產物追溯執行和輸入，核對版本並用證據說明計算過程。"
+  },
+  "docs.outline.workflows.revise-artifact.title": {
+    "message": "根據審稿意見修訂圖表或報告"
+  },
+  "docs.outline.workflows.revise-artifact.scope": {
+    "message": "將審稿意見對應到已儲存結果，完成支援的編輯、對比版本，並說明每項意見對應的產物修改。"
+  },
+  "docs.outline.workflows.recover-notebook.title": {
+    "message": "原始資料更新後重跑並核對分析"
+  },
+  "docs.outline.workflows.recover-notebook.scope": {
+    "message": "收到更新的資料集後，識別過期 Notebook 結果，按依賴重跑，與舊交付結果對照並解釋主要變化。"
+  },
+  "docs.outline.tools.group.find": {
+    "message": "查詢工具"
+  },
+  "docs.outline.tools.overview.title": {
+    "message": "工具概覽"
+  },
+  "docs.outline.tools.overview.scope": {
+    "message": "用對照表區分內建工具、科學軟體、資料庫聯結器和檢視器，以及訪問與可用狀態。"
+  },
+  "docs.outline.tools.built-in.title": {
+    "message": "內建研究工具"
+  },
+  "docs.outline.tools.built-in.scope": {
+    "message": "以表格列出檔案、Notebook、文獻、記憶、計劃和委派操作及輸入、輸出和權限。"
+  },
+  "docs.outline.tools.catalog.title": {
+    "message": "科學工具目錄"
+  },
+  "docs.outline.tools.catalog.scope": {
+    "message": "文件內以表格列內建 Skill 引用的軟體和已檢查的執行環境軟體包，說明用途、依賴與可用性；目錄條目不代表全部預裝，也不暗示應用內另有科學軟體目錄頁面。"
+  },
+  "docs.outline.tools.scientific.title": {
+    "message": "科學計算工具"
+  },
+  "docs.outline.tools.scientific.scope": {
+    "message": "說明透過 Notebook 執行時或已配置計算主機執行，包括軟體包安裝、輸入輸出檢查與失敗排查，並按軟體示例記錄本地和遠端要求。"
+  },
+  "docs.outline.tools.group.data": {
+    "message": "資料與檢視器"
+  },
+  "docs.outline.tools.databases.title": {
+    "message": "科學資料庫"
+  },
+  "docs.outline.tools.databases.scope": {
+    "message": "以分類表記錄 23 個資料來源聯結器的來源覆蓋、實際操作、識別符號、憑據與限制；本地 Molecule Viewer 歸入科學檢視器。"
+  },
+  "docs.outline.tools.viewers.title": {
+    "message": "科學檢視器"
+  },
+  "docs.outline.tools.viewers.scope": {
+    "message": "按實際預覽登錄檔列 PDF、Office、圖片、FASTA、PDB 與分子格式，包含離線 OpenChemLib 分子檢視器及驗證工具，區分預覽、編輯和科學計算。"
+  },
+  "docs.outline.tools.group.connect": {
+    "message": "連線與擴充套件"
+  },
+  "docs.outline.tools.mcp.title": {
+    "message": "聯結器與 MCP"
+  },
+  "docs.outline.tools.mcp.scope": {
+    "message": "對照內建與自定義聯結器、傳輸、發現、啟用和錯誤，配置步驟連結 Guides。"
+  },
+  "docs.outline.tools.credentials.title": {
+    "message": "服務憑據"
+  },
+  "docs.outline.tools.credentials.scope": {
+    "message": "以服務與憑據對照表說明憑據型別、繫結、所需權限、驗證與訪問失敗。"
+  },
+  "docs.outline.tools.custom.title": {
+    "message": "接入自定義 MCP 工具"
+  },
+  "docs.outline.tools.custom.scope": {
+    "message": "透過本地 stdio 或支援的遠端傳輸接入現有或外部編寫的 MCP 服務，檢查發現的工具並測試憑據與權限；工具實現本身屬於外部準備工作。"
+  },
+  "docs.outline.skills.overview.title": {
+    "message": "Skills 概覽與使用"
+  },
+  "docs.outline.skills.overview.scope": {
+    "message": "區分 Skill、工具和專家；搜尋、啟用、選擇、檢查指令並驗證可用性。"
+  },
+  "docs.outline.skills.directory.title": {
+    "message": "Skill 目錄"
+  },
+  "docs.outline.skills.directory.scope": {
+    "message": "將全部 23 個內建 Skill 按研究用途放入一張目錄表，列輸入、依賴、輸出和驗證狀態。"
+  },
+  "docs.outline.skills.group.maintain": {
+    "message": "建立與維護"
+  },
+  "docs.outline.skills.create.title": {
+    "message": "建立 Skill 與支援檔案"
+  },
+  "docs.outline.skills.create.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.skills.files.title": {
+    "message": "指令與支援檔案"
+  },
+  "docs.outline.skills.files.scope": {
+    "message": "用包內容表說明 SKILL.md 欄位、指令碼、資源和引用檔案及驗證要求。"
+  },
+  "docs.outline.skills.manage.title": {
+    "message": "管理與驗證 Skills"
+  },
+  "docs.outline.skills.manage.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.skills.validate.title": {
+    "message": "測試與排查 Skills"
+  },
+  "docs.outline.skills.validate.scope": {
+    "message": "用新輸入驗證，排查軟體包、權重、憑據和工具缺失，記錄支援狀態與實測狀態。"
+  },
+  "docs.outline.specialists.group.use": {
+    "message": "認識與使用專家"
+  },
+  "docs.outline.specialists.overview.title": {
+    "message": "專家與可用角色"
+  },
+  "docs.outline.specialists.overview.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.specialists.directory.title": {
+    "message": "專家目錄與市場"
+  },
+  "docs.outline.specialists.directory.scope": {
+    "message": "區分內建且不可配置的 Reviewer、個人角色和線上市場包。內建專家清單為空；遠端列表、簽名、安裝和依賴可用性需分別驗證。"
+  },
+  "docs.outline.specialists.delegate.title": {
+    "message": "委派與驗證工作"
+  },
+  "docs.outline.specialists.delegate.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.specialists.group.create": {
+    "message": "建立與配置"
+  },
+  "docs.outline.specialists.identity.title": {
+    "message": "建立專家並編寫指令"
+  },
+  "docs.outline.specialists.identity.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.specialists.instructions.title": {
+    "message": "編寫專家指令"
+  },
+  "docs.outline.specialists.instructions.scope": {
+    "message": "定義職責、證據範圍、交付物和停止條件，章節內提供角色模板。"
+  },
+  "docs.outline.specialists.capabilities.title": {
+    "message": "分配 Skills 與聯結器"
+  },
+  "docs.outline.specialists.capabilities.scope": {
+    "message": "對照完整繼承與明確能力繫結，說明增刪控制與可用性檢查。"
+  },
+  "docs.outline.specialists.reviewer.title": {
+    "message": "Reviewer 與自動審查"
+  },
+  "docs.outline.specialists.reviewer.scope": {
+    "message": "說明內建 Reviewer、模型策略、審查觸發、介面決定和自動審查的邊界。"
+  },
+  "docs.outline.specialists.group.maintain": {
+    "message": "管理與分享"
+  },
+  "docs.outline.specialists.manage.title": {
+    "message": "管理與分享專家"
+  },
+  "docs.outline.specialists.manage.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.specialists.packages.title": {
+    "message": "匯入與匯出專家包"
+  },
+  "docs.outline.specialists.packages.scope": {
+    "message": "預覽包內容、檢查附帶 Skill 與聯結器繫結，處理衝突並驗證匯入角色。"
+  },
+  "docs.outline.specialists.troubleshoot.title": {
+    "message": "測試與排查專家"
+  },
+  "docs.outline.specialists.troubleshoot.scope": {
+    "message": "執行限定測試任務，排查能力缺失、模型失敗、請求拒絕和不完整交接。"
+  },
+  "docs.outline.specialists.scope": {
+    "message": "獨立管理研究角色的建立、能力配置、任務委派與維護。"
+  },
+  "docs.outline.reference.group.setup": {
+    "message": "專案配置"
+  },
+  "docs.outline.reference.instructions.title": {
+    "message": "專案上下文與指令"
+  },
+  "docs.outline.reference.instructions.scope": {
+    "message": "以專案 Agent Context 欄位為起點，區分 Memory 筆記、Skill 指令與專家指令；框架指令檔案行為按框架記錄，不概括為統一專案檔案機制。"
+  },
+  "docs.outline.reference.configuration.title": {
+    "message": "配置與上下文"
+  },
+  "docs.outline.reference.configuration.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.outline.reference.commands.title": {
+    "message": "Skill 快捷輸入、提及與鍵盤操作"
+  },
+  "docs.outline.reference.commands.scope": {
+    "message": "記錄實際輸入區觸發方式：/ 選擇 Skill，@ 引用檔案或產物，# 引用會話；列出支援的鍵盤操作與上下文限制。"
+  },
+  "docs.outline.reference.group.cli": {
+    "message": "CLI 與整合"
+  },
+  "docs.outline.reference.automation.title": {
+    "message": "自動化與 JSON 輸出"
+  },
+  "docs.outline.reference.automation.scope": {
+    "message": "說明支援的任務提交、輪詢、JSON 與 JSONL 輸出、錯誤和取消，不暗示內建定時排程。"
+  },
+  "docs.outline.reference.api.title": {
+    "message": "Task SDK 與本地 API"
+  },
+  "docs.outline.reference.api.scope": {
+    "message": "梳理任務和會話 API、認證、事件和相容性，區分公開約定與內部 Host API。"
+  },
+  "docs.outline.reference.server.title": {
+    "message": "無介面服務與瀏覽器訪問"
+  },
+  "docs.outline.reference.server.scope": {
+    "message": "依據實際 CLI 記錄服務啟停與狀態、認證 URL、本地發現和遠端訪問邊界。"
+  },
+  "docs.outline.reference.packages.title": {
+    "message": "Skill、專家與 MCP 格式"
+  },
+  "docs.outline.reference.packages.scope": {
+    "message": "為 Skill 包、專家包與 MCP 配置分別列格式表，說明欄位和歸檔限制。"
+  },
+  "docs.outline.reference.diagnostics.title": {
+    "message": "架構與診斷"
+  },
+  "docs.outline.reference.diagnostics.scope": {
+    "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
+  },
+  "docs.guides.outline.capabilities.topic.capabilities.title": {
+    "message": "功能與支援的輸入"
+  },
+  "docs.guides.outline.capabilities.topic.capabilities.scope": {
+    "message": "涵蓋：功能與支援的輸入、支援的檔案與資料。"
+  },
+  "docs.guides.outline.capabilities.topic.source-types.title": {
+    "message": "支援的檔案與資料"
+  },
+  "docs.guides.outline.capabilities.topic.source-types.scope": {
+    "message": "輸入型別、可讀取與可執行格式的區別，以及匯入前的準備。"
+  },
+  "docs.guides.outline.navigation.topic.navigation.title": {
+    "message": "導航與搜尋"
+  },
+  "docs.guides.outline.navigation.topic.navigation.scope": {
+    "message": "涵蓋：導航與搜尋、查詢專案、會話與檔案。"
+  },
+  "docs.guides.outline.navigation.topic.search.title": {
+    "message": "查詢專案、會話與檔案"
+  },
+  "docs.guides.outline.navigation.topic.search.scope": {
+    "message": "全域搜尋、結果型別、開啟結果，以及與面板篩選的區別。"
+  },
+  "docs.guides.outline.sessions.topic.sessions.title": {
+    "message": "會話與分支"
+  },
+  "docs.guides.outline.sessions.topic.sessions.scope": {
+    "message": "涵蓋：會話與分支、訊息修訂與分支。"
+  },
+  "docs.guides.outline.sessions.topic.revisions.title": {
+    "message": "訊息修訂與分支"
+  },
+  "docs.guides.outline.sessions.topic.revisions.scope": {
+    "message": "編輯歷史訊息、檢視版本、建立分支，以及上下文保留範圍。"
+  },
+  "docs.guides.outline.composer.topic.composer.title": {
+    "message": "對話與排隊請求"
+  },
+  "docs.guides.outline.composer.topic.composer.scope": {
+    "message": "涵蓋：對話與排隊請求、追問與任務佇列。"
+  },
+  "docs.guides.outline.composer.topic.follow-ups.title": {
+    "message": "追問與任務佇列"
+  },
+  "docs.guides.outline.composer.topic.follow-ups.scope": {
+    "message": "排隊、編輯、排序、立即傳送和停止請求，以及中斷後的狀態。"
+  },
+  "docs.guides.outline.files.topic.files.title": {
+    "message": "檔案、產物與版本"
+  },
+  "docs.guides.outline.files.topic.files.scope": {
+    "message": "涵蓋：檔案、產物與版本、產物與檔案版本。"
+  },
+  "docs.guides.outline.files.topic.artifacts.title": {
+    "message": "產物與檔案版本"
+  },
+  "docs.guides.outline.files.topic.artifacts.scope": {
+    "message": "區分上傳檔案與生成產物；檢視儲存版本、編輯支援的託管檔案、對比支援的文字或 Markdown 變更並匯出結果。"
+  },
+  "docs.guides.outline.library.topic.library.title": {
+    "message": "文獻庫與引用"
+  },
+  "docs.guides.outline.library.topic.library.scope": {
+    "message": "涵蓋：文獻庫與引用、論文閱讀與引用。"
+  },
+  "docs.guides.outline.library.topic.reading.title": {
+    "message": "論文閱讀與引用"
+  },
+  "docs.guides.outline.library.topic.reading.scope": {
+    "message": "PDF 附件、後設資料與全文獲取、閱讀狀態、引用樣式、複製與匯出。"
+  },
+  "docs.guides.outline.notebook.topic.notebook.title": {
+    "message": "Notebook 與執行證據"
+  },
+  "docs.guides.outline.notebook.topic.notebook.scope": {
+    "message": "涵蓋：Notebook 與執行證據、檢查產物來源。"
+  },
+  "docs.guides.outline.notebook.topic.provenance.title": {
+    "message": "檢查產物來源"
+  },
+  "docs.guides.outline.notebook.topic.provenance.scope": {
+    "message": "檢查某一版本可用的來源訊息、程式碼、Notebook 執行和審查證據連結，說明缺失證據與格式覆蓋差異。"
+  },
+  "docs.guides.outline.models.topic.models.title": {
+    "message": "模型與任務策略"
+  },
+  "docs.guides.outline.models.topic.models.scope": {
+    "message": "涵蓋：模型與任務策略、不同任務的模型配置。"
+  },
+  "docs.guides.outline.models.topic.scenario-models.title": {
+    "message": "不同任務的模型配置"
+  },
+  "docs.guides.outline.models.topic.scenario-models.scope": {
+    "message": "主模型、Subagent、Reviewer、Vision、Session details 的策略與繼承關係。"
+  },
+  "docs.guides.outline.providers.topic.providers.title": {
+    "message": "提供商與本地模型配置"
+  },
+  "docs.guides.outline.providers.topic.providers.scope": {
+    "message": "涵蓋：提供商與本地模型配置、使用本地模型。"
+  },
+  "docs.guides.outline.providers.topic.local-models.title": {
+    "message": "使用本地模型"
+  },
+  "docs.guides.outline.providers.topic.local-models.scope": {
+    "message": "相容的本地端點、模型標識、能力限制與連線驗證。"
+  },
+  "docs.guides.outline.approval-modes.topic.approval-modes.title": {
+    "message": "權限與審批"
+  },
+  "docs.guides.outline.approval-modes.topic.approval-modes.scope": {
+    "message": "涵蓋：權限與審批、已記憶的權限。"
+  },
+  "docs.guides.outline.approval-modes.topic.remembered-permissions.title": {
+    "message": "已記憶的權限"
+  },
+  "docs.guides.outline.approval-modes.topic.remembered-permissions.scope": {
+    "message": "會話、專案和全域範圍，檢視、撤銷與恢復預設授權。"
+  },
+  "docs.guides.outline.memory.topic.memory.title": {
+    "message": "記憶與對話上下文"
+  },
+  "docs.guides.outline.memory.topic.memory.scope": {
+    "message": "涵蓋：記憶與對話上下文、上下文、壓縮與交接。"
+  },
+  "docs.guides.outline.memory.topic.context.title": {
+    "message": "上下文、壓縮與交接"
+  },
+  "docs.guides.outline.memory.topic.context.scope": {
+    "message": "檢視上下文用量、歷史保留與壓縮，以及準備續接或交接。"
+  },
+  "docs.guides.outline.connectors.topic.connectors.title": {
+    "message": "聯結器與憑據"
+  },
+  "docs.guides.outline.connectors.topic.connectors.scope": {
+    "message": "涵蓋：聯結器與憑據、憑據與服務賬號。"
+  },
+  "docs.guides.outline.connectors.topic.credentials.title": {
+    "message": "憑據與服務賬號"
+  },
+  "docs.guides.outline.connectors.topic.credentials.scope": {
+    "message": "裝置憑據、研究聯絡資訊、API key、token、OAuth、複用與移除。"
+  },
+  "docs.guides.outline.appearance.topic.appearance.title": {
+    "message": "外觀與通知"
+  },
+  "docs.guides.outline.appearance.topic.appearance.scope": {
+    "message": "涵蓋：外觀與通知、訊息與通知。"
+  },
+  "docs.guides.outline.appearance.topic.notifications.title": {
+    "message": "訊息與通知"
+  },
+  "docs.guides.outline.appearance.topic.notifications.scope": {
+    "message": "應用內訊息、桌面任務通知、內容可見性、送達測試與系統權限。"
+  },
+  "docs.guides.outline.storage.topic.storage.title": {
+    "message": "儲存與歸檔內容"
+  },
+  "docs.guides.outline.storage.topic.storage.scope": {
+    "message": "涵蓋：儲存與歸檔內容、歸檔、恢復與刪除。"
+  },
+  "docs.guides.outline.storage.topic.archived.title": {
+    "message": "歸檔、恢復與刪除"
+  },
+  "docs.guides.outline.storage.topic.archived.scope": {
+    "message": "專案會話歸檔恢復、永久刪除、保留目錄和確認邊界。"
+  },
+  "docs.guides.outline.troubleshooting.topic.troubleshooting.title": {
+    "message": "故障排查與常見問題"
+  },
+  "docs.guides.outline.troubleshooting.topic.troubleshooting.scope": {
+    "message": "涵蓋：故障排查與常見問題、常見問題。"
+  },
+  "docs.guides.outline.troubleshooting.topic.faq.title": {
+    "message": "常見問題"
+  },
+  "docs.guides.outline.troubleshooting.topic.faq.scope": {
+    "message": "資料歸屬、賬號要求、費用、離線使用與恢復的常見問題，連結到詳細章節。"
+  },
+  "docs.outline.workflows.cookbook.topic.cookbook.title": {
+    "message": "工作流示例集"
+  },
+  "docs.outline.workflows.cookbook.topic.cookbook.scope": {
+    "message": "涵蓋：工作流示例集、第一個可復現分析。"
+  },
+  "docs.outline.workflows.cookbook.topic.first-analysis.title": {
+    "message": "第一個可復現分析"
+  },
+  "docs.outline.workflows.cookbook.topic.first-analysis.scope": {
+    "message": "用小型 CSV 完成匯入、檢查、執行、儲存圖表和重新執行驗證。"
+  },
+  "docs.outline.workflows.import-library.topic.import-library.title": {
+    "message": "接手與整理課題文獻"
+  },
+  "docs.outline.workflows.import-library.topic.import-library.scope": {
+    "message": "涵蓋：接手與整理課題文獻、把零散失序的論文資料整理成可用課題庫。"
+  },
+  "docs.outline.workflows.import-library.topic.repair-metadata.title": {
+    "message": "把零散失序的論文資料整理成可用課題庫"
+  },
+  "docs.outline.workflows.import-library.topic.repair-metadata.scope": {
+    "message": "面對混雜資料夾、殘缺引用和缺失附件，核對條目與全文，整理成專題集合並交付未解決問題清單。"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.deduplicate-library.title": {
+    "message": "擴充套件已有課題的文獻積累"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.deduplicate-library.scope": {
+    "message": "涵蓋：擴充套件已有課題的文獻積累、在開題或中期彙報前補齊最新證據。"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.attach-full-text.title": {
+    "message": "在開題或中期彙報前補齊最新證據"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.attach-full-text.scope": {
+    "message": "開題或中期彙報前重新檢索，對照已有文獻判斷新增證據，形成帶日期的補充與缺口說明；這是手動工作流，不是定時監測。"
+  },
+  "docs.outline.workflows.paper-reading.topic.paper-reading.title": {
+    "message": "閱讀論文並核查論斷"
+  },
+  "docs.outline.workflows.paper-reading.topic.paper-reading.scope": {
+    "message": "涵蓋：閱讀論文並核查論斷、核查論文是否支援某個關鍵論斷。"
+  },
+  "docs.outline.workflows.paper-reading.topic.pdf-evidence.title": {
+    "message": "核查論文是否支援某個關鍵論斷"
+  },
+  "docs.outline.workflows.paper-reading.topic.pdf-evidence.scope": {
+    "message": "針對草稿或會議記錄中的關鍵論斷，查詢 PDF 原文與方法，保留頁碼證據並判斷支援、部分支援或不支援。"
+  },
+  "docs.outline.workflows.database-search.topic.database-search.title": {
+    "message": "交叉核對科學記錄"
+  },
+  "docs.outline.workflows.database-search.topic.database-search.scope": {
+    "message": "涵蓋：交叉核對科學記錄、處理論文與資料庫記錄不一致的問題。"
+  },
+  "docs.outline.workflows.database-search.topic.cross-source-evidence.title": {
+    "message": "處理論文與資料庫記錄不一致的問題"
+  },
+  "docs.outline.workflows.database-search.topic.cross-source-evidence.scope": {
+    "message": "當論文與資料庫對基因、化合物或試驗的記錄不一致時，核對識別符號和版本，說明仍未解決的差異。"
+  },
+  "docs.outline.workflows.format-bibliography.topic.format-bibliography.title": {
+    "message": "準備投稿參考文獻"
+  },
+  "docs.outline.workflows.format-bibliography.topic.format-bibliography.scope": {
+    "message": "涵蓋：準備投稿參考文獻、在投稿前核對稿件參考文獻。"
+  },
+  "docs.outline.workflows.format-bibliography.topic.restore-library.title": {
+    "message": "在投稿前核對稿件參考文獻"
+  },
+  "docs.outline.workflows.format-bibliography.topic.restore-library.scope": {
+    "message": "拿到稿件和來源文獻庫後，核對引用條目、書目資訊、重複項與可訪問證據，產出修正後的參考文獻和待確認清單。"
+  },
+  "docs.outline.workflows.data-quality.topic.data-quality.title": {
+    "message": "檢查基因計數矩陣的樣本質量"
+  },
+  "docs.outline.workflows.data-quality.topic.data-quality.scope": {
+    "message": "涵蓋：檢查基因計數矩陣的樣本質量、Python 與 R 分析。"
+  },
+  "docs.outline.workflows.data-quality.topic.python-r.title": {
+    "message": "Python 與 R 分析"
+  },
+  "docs.outline.workflows.data-quality.topic.python-r.scope": {
+    "message": "準備環境、檢視變數、分步執行、恢復錯誤並儲存可複用指令碼。"
+  },
+  "docs.outline.workflows.figures.topic.figures.title": {
+    "message": "製作可追溯證據的科研圖表"
+  },
+  "docs.outline.workflows.figures.topic.figures.scope": {
+    "message": "涵蓋：製作可追溯證據的科研圖表、回答圖表結論是如何得到的。"
+  },
+  "docs.outline.workflows.figures.topic.trace-result.title": {
+    "message": "回答圖表結論是如何得到的"
+  },
+  "docs.outline.workflows.figures.topic.trace-result.scope": {
+    "message": "協作者質疑圖表時，從產物追溯執行和輸入，核對版本並用證據說明計算過程。"
+  },
+  "docs.outline.workflows.manuscript.topic.manuscript.title": {
+    "message": "撰寫與修訂研究報告"
+  },
+  "docs.outline.workflows.manuscript.topic.manuscript.scope": {
+    "message": "涵蓋：撰寫與修訂研究報告、根據審稿意見修訂圖表或報告。"
+  },
+  "docs.outline.workflows.manuscript.topic.revise-artifact.title": {
+    "message": "根據審稿意見修訂圖表或報告"
+  },
+  "docs.outline.workflows.manuscript.topic.revise-artifact.scope": {
+    "message": "將審稿意見對應到已儲存結果，完成支援的編輯、對比版本，並說明每項意見對應的產物修改。"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.ssh-analysis.title": {
+    "message": "執行與恢復遠端分析"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.ssh-analysis.scope": {
+    "message": "涵蓋：執行與恢復遠端分析、提交與回收 Slurm 作業。"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.slurm-jobs.title": {
+    "message": "提交與回收 Slurm 作業"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.slurm-jobs.scope": {
+    "message": "確認排程要求、提交限定作業、跟蹤記錄、取消恢復並驗證檔案。 需真實 Slurm 叢集、賬號與排程配置；本地模式控制元件不能證明排程執行成功。"
+  },
+  "docs.outline.workflows.plan-research.topic.plan-research.title": {
+    "message": "規劃與接續研究"
+  },
+  "docs.outline.workflows.plan-research.topic.plan-research.scope": {
+    "message": "涵蓋：規劃與接續研究、用 Session Plan 接續未完成課題、中斷一段時間後恢復課題並找回決策依據。"
+  },
+  "docs.outline.workflows.plan-research.topic.persistent-goal.title": {
+    "message": "用 Session Plan 接續未完成課題"
+  },
+  "docs.outline.workflows.plan-research.topic.persistent-goal.scope": {
+    "message": "由使用者繼續已批准的 Session Plan，結合步驟狀態與結果恢復工作，維護剩餘任務記錄；不將計劃等同於無人值守定時執行或獨立持續目標功能。"
+  },
+  "docs.outline.workflows.plan-research.topic.continue-context.title": {
+    "message": "中斷一段時間後恢復課題並找回決策依據"
+  },
+  "docs.outline.workflows.plan-research.topic.continue-context.scope": {
+    "message": "從歷史會話、專案記憶和檔案重建暫停課題的狀態，核實既有決定後再繼續分析。"
+  },
+  "docs.outline.workflows.handoff.topic.handoff.title": {
+    "message": "交接可復現的研究資料包"
+  },
+  "docs.outline.workflows.handoff.topic.handoff.scope": {
+    "message": "涵蓋：交接可復現的研究資料包、把未完成分析交接給協作者。"
+  },
+  "docs.outline.workflows.handoff.topic.export-handoff.title": {
+    "message": "把未完成分析交接給協作者"
+  },
+  "docs.outline.workflows.handoff.topic.export-handoff.scope": {
+    "message": "把選定對話證據、結果檔案、決策、環境要求與未解決問題整理成交接包，供協作者審查接續。"
+  },
+  "docs.outline.skills.create.topic.create.title": {
+    "message": "建立 Skill 與支援檔案"
+  },
+  "docs.outline.skills.create.topic.create.scope": {
+    "message": "涵蓋：建立 Skill 與支援檔案、指令與支援檔案。"
+  },
+  "docs.outline.skills.create.topic.files.title": {
+    "message": "指令與支援檔案"
+  },
+  "docs.outline.skills.create.topic.files.scope": {
+    "message": "用包內容表說明 SKILL.md 欄位、指令碼、資源和引用檔案及驗證要求。"
+  },
+  "docs.outline.skills.manage.topic.manage.title": {
+    "message": "管理與驗證 Skills"
+  },
+  "docs.outline.skills.manage.topic.manage.scope": {
+    "message": "涵蓋：管理與驗證 Skills、測試與排查 Skills。"
+  },
+  "docs.outline.skills.manage.topic.validate.title": {
+    "message": "測試與排查 Skills"
+  },
+  "docs.outline.skills.manage.topic.validate.scope": {
+    "message": "用新輸入驗證，排查軟體包、權重、憑據和工具缺失，記錄支援狀態與實測狀態。"
+  },
+  "docs.outline.specialists.overview.topic.overview.title": {
+    "message": "專家與可用角色"
+  },
+  "docs.outline.specialists.overview.topic.overview.scope": {
+    "message": "涵蓋：專家與可用角色、專家目錄與市場。"
+  },
+  "docs.outline.specialists.overview.topic.directory.title": {
+    "message": "專家目錄與市場"
+  },
+  "docs.outline.specialists.overview.topic.directory.scope": {
+    "message": "區分內建且不可配置的 Reviewer、個人角色和線上市場包。內建專家清單為空；遠端列表、簽名、安裝和依賴可用性需分別驗證。"
+  },
+  "docs.outline.specialists.delegate.topic.delegate.title": {
+    "message": "委派與驗證工作"
+  },
+  "docs.outline.specialists.delegate.topic.delegate.scope": {
+    "message": "涵蓋：委派與驗證工作、測試與排查專家。"
+  },
+  "docs.outline.specialists.delegate.topic.troubleshoot.title": {
+    "message": "測試與排查專家"
+  },
+  "docs.outline.specialists.delegate.topic.troubleshoot.scope": {
+    "message": "執行限定測試任務，排查能力缺失、模型失敗、請求拒絕和不完整交接。"
+  },
+  "docs.outline.specialists.identity.topic.identity.title": {
+    "message": "建立專家並編寫指令"
+  },
+  "docs.outline.specialists.identity.topic.identity.scope": {
+    "message": "涵蓋：建立專家並編寫指令、編寫專家指令。"
+  },
+  "docs.outline.specialists.identity.topic.instructions.title": {
+    "message": "編寫專家指令"
+  },
+  "docs.outline.specialists.identity.topic.instructions.scope": {
+    "message": "定義職責、證據範圍、交付物和停止條件，章節內提供角色模板。"
+  },
+  "docs.outline.specialists.manage.topic.manage.title": {
+    "message": "管理與分享專家"
+  },
+  "docs.outline.specialists.manage.topic.manage.scope": {
+    "message": "涵蓋：管理與分享專家、匯入與匯出專家包。"
+  },
+  "docs.outline.specialists.manage.topic.packages.title": {
+    "message": "匯入與匯出專家包"
+  },
+  "docs.outline.specialists.manage.topic.packages.scope": {
+    "message": "預覽包內容、檢查附帶 Skill 與聯結器繫結，處理衝突並驗證匯入角色。"
+  },
+  "docs.outline.reference.group.product": {
+    "message": "產品參考"
+  },
+  "docs.outline.reference.configuration.topic.configuration.title": {
+    "message": "配置與上下文"
+  },
+  "docs.outline.reference.configuration.topic.configuration.scope": {
+    "message": "涵蓋：配置與上下文、專案上下文與指令。"
+  },
+  "docs.outline.reference.configuration.topic.instructions.title": {
+    "message": "專案上下文與指令"
+  },
+  "docs.outline.reference.configuration.topic.instructions.scope": {
+    "message": "以專案 Agent Context 欄位為起點，區分 Memory 筆記、Skill 指令與專家指令；框架指令檔案行為按框架記錄，不概括為統一專案檔案機制。"
+  },
+  "docs.outline.reference.controls.topic.controls.title": {
+    "message": "控制元件與鍵盤參考"
+  },
+  "docs.outline.reference.controls.topic.controls.scope": {
+    "message": "涵蓋：控制元件與鍵盤參考、Skill 快捷輸入、提及與鍵盤操作。"
+  },
+  "docs.outline.reference.controls.topic.commands.title": {
+    "message": "Skill 快捷輸入、提及與鍵盤操作"
+  },
+  "docs.outline.reference.controls.topic.commands.scope": {
+    "message": "記錄實際輸入區觸發方式：/ 選擇 Skill，@ 引用檔案或產物，# 引用會話；列出支援的鍵盤操作與上下文限制。"
+  },
+  "docs.outline.reference.group.integration": {
+    "message": "CLI 與執行參考"
+  },
+  "docs.outline.reference.cli.topic.cli.title": {
+    "message": "CLI 與結構化輸出"
+  },
+  "docs.outline.reference.cli.topic.cli.scope": {
+    "message": "涵蓋：CLI 與結構化輸出、自動化與 JSON 輸出。"
+  },
+  "docs.outline.reference.cli.topic.automation.title": {
+    "message": "自動化與 JSON 輸出"
+  },
+  "docs.outline.reference.cli.topic.automation.scope": {
+    "message": "說明支援的任務提交、輪詢、JSON 與 JSONL 輸出、錯誤和取消，不暗示內建定時排程。"
+  },
+  "docs.outline.reference.diagnostics.topic.diagnostics.title": {
+    "message": "架構與診斷"
+  },
+  "docs.outline.reference.diagnostics.topic.diagnostics.scope": {
+    "message": "涵蓋：架構與診斷、架構與資料流、文件驗證記錄。"
+  },
+  "docs.outline.reference.diagnostics.topic.architecture.title": {
+    "message": "架構與資料流"
+  },
+  "docs.outline.reference.diagnostics.topic.architecture.scope": {
+    "message": "說明桌面端、服務、框架、儲存和執行邊界，以及產物追溯和憑據處理。"
+  },
+  "docs.outline.reference.diagnostics.topic.verification.title": {
+    "message": "文件驗證記錄"
+  },
+  "docs.outline.reference.diagnostics.topic.verification.scope": {
+    "message": "記錄原始碼版本、英文截圖、已操作控制元件、條件測試和待驗證缺口。"
+  },
+  "docs.outline.reference.overview": {
+    "message": "參考總覽"
+  },
+  "docs.outline.topics": {
+    "message": "包含的主題"
+  },
+  "docs.outline.review": {
+    "message": "檢視規劃範圍"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "找到 {count} 項結果"
+  },
+  "docs.ui.documentation": {
+    "message": "文件"
+  },
+  "docs.ui.chapters": {
+    "message": "章節目錄"
+  },
+  "docs.ui.section.guides": {
+    "message": "指南"
+  },
+  "docs.ui.section.workflows": {
+    "message": "科研工作流"
+  },
+  "docs.ui.section.tools": {
+    "message": "探索工具"
+  },
+  "docs.ui.section.skills": {
+    "message": "Skills"
+  },
+  "docs.ui.section.specialists": {
+    "message": "專家"
+  },
+  "docs.ui.section.reference": {
+    "message": "參考"
+  },
+  "docs.ui.searchIndex": {
+    "message": "Open-Science / 文件檢索"
+  },
+  "docs.ui.moreResults": {
+    "message": "顯示更多結果"
+  },
+  "docs.demo.title": {
+    "message": "導航演示"
+  },
+  "docs.demo.levels": {
+    "message": "分割槽 → 分組 → 章節 → 章內主題"
+  },
+  "docs.demo.back": {
+    "message": "返回當前文件"
+  },
+  "docs.demo.sections": {
+    "message": "文件分割槽"
+  },
+  "docs.demo.index": {
+    "message": "章節目錄"
+  },
+  "docs.demo.close": {
+    "message": "關閉目錄"
+  },
+  "docs.demo.overview": {
+    "message": "分割槽總覽"
+  },
+  "docs.demo.planning": {
+    "message": "章節內容製作中"
+  },
+  "docs.demo.groups": {
+    "message": "分組與章節"
+  },
+  "docs.demo.location": {
+    "message": "當前位置"
+  },
+  "docs.demo.chapter": {
+    "message": "章節"
+  },
+  "docs.demo.previewNote": {
+    "message": "本演示使用現有內容規劃，展示已選定的導航方向。章節正文尚待編寫；下方連結可開啟現有文件。"
+  },
+  "docs.demo.topics": {
+    "message": "章內主題"
+  },
+  "docs.demo.existing": {
+    "message": "現有文件"
+  },
+  "docs.demo.read": {
+    "message": "閱讀現有文件"
+  },
+  "docs.demo.chapterNavigation": {
+    "message": "章節導航"
+  },
+  "docs.demo.previous": {
+    "message": "上一章"
+  },
+  "docs.demo.next": {
+    "message": "下一章"
+  },
+  "docs.demo.chapters": {
+    "message": "個章節"
+  },
+  "docs.outline.productionNotice": {
+    "message": "章節內容製作中"
+  },
+  "docs.outline.productionDescription": {
+    "message": "已完成章節可直接開啟；其他章節可展開檢視後續覆蓋範圍。"
+  },
+  "docs.demo.readyNote": {
+    "message": "本章詳細正文已完成。透過下方連結閱讀實操步驟與驗證證據。"
+  },
+  "docs.demo.readChapter": {
+    "message": "閱讀本章"
+  },
+  "docs.outline.availableNotice": {
+    "message": "章節索引"
+  },
+  "docs.outline.availableDescription": {
+    "message": "全部章節均可閱讀；每篇分別說明實測範圍與尚未驗證的限制。"
+  },
+  "docs.preferenceScreenshot.notifications": {
+    "message": "任務通知控制元件與應用返回的測試狀態"
+  },
+  "docs.preferenceScreenshot.theme": {
+    "message": "{theme} 主題下的 Theme 與 Language 控制元件"
+  },
+  "docs.preferenceScreenshot.preview": {
+    "message": "截圖預覽"
+  },
+  "docs.preferenceScreenshot.choose": {
+    "message": "選擇主題截圖"
+  },
+  "docs.preferenceScreenshot.open": {
+    "message": "{label}，開啟完整截圖"
+  },
+  "docs.preferenceScreenshot.caption": {
+    "message": "英文應用實拍 · 點選檢視完整截圖"
+  },
+  "docs.outline.reference.v0270.title": {
+    "message": "v0.27.0"
+  },
+  "docs.outline.reference.v0270.scope": {
+    "message": "文獻匯入、後臺任務、必需 Skills 與整合管理更新。"
+  },
+  "docs.outline.reference.example-data.title": {
+    "message": "示例資料與預期結果"
+  },
+  "docs.outline.reference.connector-operations.title": {
+    "message": "Connector 操作引數參考"
+  },
+  "docs.outline.workflows.extend-analysis.title": {
+    "message": "使用已安裝 Specialist 擴充套件分析"
+  },
+  "docs.outline.reference.example-data.scope": {
+    "message": "公開來原始檔、校驗值與示例預期輸出。"
+  },
+  "docs.outline.reference.connector-operations.scope": {
+    "message": "按 Connector 查詢準確輸入、預設值與呼叫示例。"
+  },
+  "docs.outline.workflows.extend-analysis.scope": {
+    "message": "已有 Methods、QC PCA、矩陣處理與證據規劃案例。"
+  },
+  "docs.textLinkDemo.title": {
+    "message": "三個文字超連結樣式"
+  },
+  "docs.textLinkDemo.intro": {
+    "message": "保持相同的段落和列表，只比較文字連結本身。"
+  },
+  "docs.textLinkDemo.a": {
+    "message": "深色下劃線"
+  },
+  "docs.textLinkDemo.aNote": {
+    "message": "深色文字配清晰下劃線，懸停時下劃線加粗。"
+  },
+  "docs.textLinkDemo.b": {
+    "message": "暗金色下劃線"
+  },
+  "docs.textLinkDemo.bNote": {
+    "message": "暗金色文字與下劃線，懸停時出現淡黃色襯底。"
+  },
+  "docs.textLinkDemo.c": {
+    "message": "淡黃色標記"
+  },
+  "docs.textLinkDemo.cNote": {
+    "message": "深色文字配淡黃色襯底，懸停時加深底色並顯示下劃線。"
+  },
+  "docs.textLinkDemo.see": {
+    "message": "分別參閱"
+  },
+  "docs.textLinkDemo.models": {
+    "message": "模型接入"
+  },
+  "docs.textLinkDemo.runtimes": {
+    "message": "Python 和 R 執行時"
+  },
+  "docs.textLinkDemo.network": {
+    "message": "網路設定"
+  },
+  "docs.textLinkDemo.prisma": {
+    "message": "PRISMA 閱讀集合"
+  },
+  "docs.textLinkDemo.prismaText": {
+    "message": "：三篇真實論文、核對後的文獻記錄，以及出版方 PDF。"
+  },
+  "docs.textLinkDemo.rna": {
+    "message": "GSE60450 RNA-seq 分析"
+  },
+  "docs.textLinkDemo.rnaText": {
+    "message": "：基因計數矩陣、樣本質控指標和圖表。"
+  },
+  "docs.textLinkDemo.hint": {
+    "message": "懸停或按 Tab 比較反饋；點選文字在新標籤頁開啟對應教程。"
+  },
+  "docs.textLinkDemo.back": {
+    "message": "返回當前文章"
+  },
+  "docs.textLinkDemo.separator": {
+    "message": "、"
+  },
+  "docs.textLinkDemo.period": {
+    "message": "。"
+  },
+  "docs.platform.label": {
+    "message": "閱讀平臺"
+  },
+  "docs.platform.hint": {
+    "message": "選擇會在章節間保留。"
+  },
+  "docs.outline.reference.v0290.title": {
+    "message": "v0.29.0"
+  },
+  "docs.outline.reference.v0290.scope": {
+    "message": "Skill 市場、研究包、PDF 提取與外部 R 包安裝。"
+  },
+  "docs.outline.reference.v0280.title": {
+    "message": "v0.28.0"
+  },
+  "docs.outline.reference.v0280.scope": {
+    "message": "結果復現檢查、全域搜尋、隱私規則與應用管理的 Codex 升級。"
+  },
+  "docs.guides.outline.reproducibility.title": {
+    "message": "可復現性"
+  },
+  "docs.guides.outline.reproducibility.scope": {
+    "message": "重新執行捕獲的研究步驟，比較結果版本並保留驗證記錄。"
+  },
+  "docs.guides.outline.research-packages.title": {
+    "message": ".science 研究包"
+  },
+  "docs.guides.outline.research-packages.scope": {
+    "message": "匯出、匯入和檢視可交接的會話分支、檔案與證據。"
+  },
+  "docs.outline.skills.marketplace.title": {
+    "message": "Skill 市場"
+  },
+  "docs.outline.skills.marketplace.scope": {
+    "message": "從市場查詢、安裝、更新和管理科研方法。"
+  },
+  "docs.guides.outline.bookmarks.title": {
+    "message": "私人閱讀書籤"
+  },
+  "docs.guides.outline.bookmarks.scope": {
+    "message": "儲存私人閱讀段落與 PDF 區域，管理備註並返回來源。"
+  },
+  "docs.outline.reference.v0300.title": {
+    "message": "v0.30.0"
+  },
+  "docs.outline.reference.v0300.scope": {
+    "message": "私人書籤、獨立 Side Chat 標籤、設定搜尋與 PDF 提取證據。"
+  },
+  "docs.outline.reference.v0301.title": {
+    "message": "v0.30.1"
+  },
+  "docs.outline.reference.v0301.scope": {
+    "message": "Side Chat 草稿、Skill 更新審核、研究包文獻 PDF 與復原工具。"
+  }
+}

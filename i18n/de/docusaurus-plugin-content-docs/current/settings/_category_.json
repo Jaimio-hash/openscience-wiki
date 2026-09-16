@@ -1,0 +1,8 @@
+{
+  "label": "Einstellungen",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Konfigurieren Sie Modelle, Agenten, Fähigkeiten, Berechtigungen, Laufzeiten, Speicher und Fernsteuerung."
+  }
+}

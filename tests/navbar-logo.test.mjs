@@ -1,18 +1,19 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import test from 'node:test';
+import {resolve, join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+
+const build = resolve(process.env.DOCS_BUILD_DIR || fileURLToPath(new URL('../build', import.meta.url)));
 
 const pages = [
   [
     'English',
-    new URL('../build/getting-started/installation/index.html', import.meta.url),
+    join(build, 'guides/installation/index.html'),
   ],
   [
     'Simplified Chinese',
-    new URL(
-      '../build/zh-Hans/getting-started/installation/index.html',
-      import.meta.url,
-    ),
+    join(build, 'zh-Hans/guides/installation/index.html'),
   ],
 ];
 

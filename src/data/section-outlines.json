@@ -1,0 +1,1555 @@
+{
+  "workflows": {
+    "id": "workflows",
+    "title": "Workflows",
+    "scope": "Research situations with a defined starting point and deliverable; interface operations belong inside each scenario.",
+    "groups": [
+      {
+        "id": "start",
+        "title": "Choose a workflow",
+        "chapters": [
+          {
+            "id": "cookbook",
+            "title": "Workflow cookbook",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "intro",
+            "proposedUrl": "/docs/workflows/cookbook/",
+            "topics": [
+              {
+                "id": "cookbook",
+                "title": "Workflow cookbook",
+                "scope": "Choose by research question, input type, expected output, and available resources.",
+                "currentDoc": "intro",
+                "proposedUrl": "/docs/workflows/cookbook/"
+              },
+              {
+                "id": "first-analysis",
+                "title": "Your first reproducible analysis",
+                "scope": "A small CSV example from import to inspection, execution, saved figure, and rerun verification.",
+                "currentDoc": "guides/notebook",
+                "proposedUrl": "/docs/workflows/first-analysis/"
+              }
+            ],
+            "relatedDocs": [
+              "intro",
+              "guides/notebook"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "library",
+        "title": "Build your research collection",
+        "chapters": [
+          {
+            "id": "build-library",
+            "title": "Build a core reading list for a new research topic",
+            "scope": "When starting an unfamiliar topic, collect seed papers, map key themes and save a curated reading list linked to the project. Import and tagging are steps within this scenario.",
+            "currentDoc": "workflows/core-reading-list",
+            "proposedUrl": "/docs/workflows/core-reading-list/",
+            "relatedDocs": [
+              "guides/library"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "import-library",
+            "title": "Take over and organize a paper collection",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "workflows/inherit-literature",
+            "proposedUrl": "/docs/workflows/inherit-literature/",
+            "topics": [
+              {
+                "id": "import-library",
+                "title": "Take over a previous researcher's literature collection",
+                "scope": "Given PDFs and citation exports from a previous researcher, reconstruct a usable project library and produce a list of missing or ambiguous records.",
+                "currentDoc": "workflows/inherit-literature",
+                "proposedUrl": "/docs/workflows/inherit-literature/",
+                "contentStatus": "written"
+              },
+              {
+                "id": "repair-metadata",
+                "title": "Make a fragmented paper collection usable again",
+                "scope": "Given mixed folders, incomplete citations and missing attachments, reconcile records and full text into topic collections with an explicit unresolved-items list.",
+                "currentDoc": "guides/library",
+                "proposedUrl": "/docs/workflows/recover-paper-collection/"
+              }
+            ],
+            "relatedDocs": [
+              "guides/library"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "organize-library",
+            "title": "Consolidate search batches for a review project",
+            "scope": "Combine records from several searches or databases into a deduplicated candidate set, retaining search provenance and a documented screening handoff.",
+            "currentDoc": "guides/library",
+            "proposedUrl": "/docs/workflows/review-search-batches/",
+            "relatedDocs": [
+              "guides/library"
+            ]
+          },
+          {
+            "id": "review-inbox",
+            "title": "Prepare a focused reading pack for a journal club",
+            "scope": "For an upcoming journal club, select papers around one question, review agent suggestions, collect available full text and prepare a reading order with discussion questions.",
+            "currentDoc": "workflows/journal-club",
+            "proposedUrl": "/docs/workflows/journal-club/",
+            "relatedDocs": [
+              "guides/library"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "deduplicate-library",
+            "title": "Extend an existing evidence base",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "guides/library",
+            "proposedUrl": "/docs/workflows/related-project-evidence/",
+            "topics": [
+              {
+                "id": "deduplicate-library",
+                "title": "Reuse a literature base for a related research question",
+                "scope": "When a related project starts, identify relevant papers in the existing library, link them without duplicating records and document evidence gaps specific to the new question.",
+                "currentDoc": "guides/library",
+                "proposedUrl": "/docs/workflows/related-project-evidence/"
+              },
+              {
+                "id": "attach-full-text",
+                "title": "Refresh the evidence base before a project milestone",
+                "scope": "Before a proposal or progress review, run a fresh search, compare new findings with the saved collection and prepare a dated additions-and-gaps note. This is a manual workflow, not scheduled monitoring.",
+                "currentDoc": "guides/library",
+                "proposedUrl": "/docs/workflows/milestone-evidence-update/"
+              }
+            ],
+            "relatedDocs": [
+              "guides/library"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "evidence",
+        "title": "Literature and evidence",
+        "chapters": [
+          {
+            "id": "literature-review",
+            "title": "Literature review to evidence table",
+            "scope": "Define a question, search and screen records, extract evidence, cite sources, and report access gaps.",
+            "currentDoc": "workflows/literature-review",
+            "proposedUrl": "/docs/workflows/literature-review/",
+            "relatedDocs": [
+              "guides/library"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "paper-reading",
+            "title": "Read papers and verify claims",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "workflows/pdf-evidence",
+            "proposedUrl": "/docs/workflows/pdf-evidence/",
+            "topics": [
+              {
+                "id": "paper-reading",
+                "title": "Read and compare papers",
+                "scope": "Extract methods, populations, findings and limitations from provided papers; retain page-level evidence.",
+                "currentDoc": "guides/library",
+                "proposedUrl": "/docs/workflows/paper-reading/"
+              },
+              {
+                "id": "pdf-evidence",
+                "title": "Check whether a paper supports a claim",
+                "scope": "Given a claim in a draft or meeting note, locate the relevant PDF passages and methods, retain page evidence and produce a supported, qualified or unsupported finding.",
+                "currentDoc": "workflows/pdf-evidence",
+                "proposedUrl": "/docs/workflows/pdf-evidence/",
+                "contentStatus": "written"
+              }
+            ],
+            "relatedDocs": [
+              "guides/library",
+              "guides/previews"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "database-search",
+            "title": "Cross-check scientific records",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "guides/connectors",
+            "proposedUrl": "/docs/workflows/database-search/",
+            "topics": [
+              {
+                "id": "database-search",
+                "title": "Search scientific databases",
+                "scope": "Select a data source, formulate bounded queries, resolve identifiers, and save traceable records.",
+                "currentDoc": "guides/connectors",
+                "proposedUrl": "/docs/workflows/database-search/"
+              },
+              {
+                "id": "cross-source-evidence",
+                "title": "Resolve a mismatch between a paper and a database",
+                "scope": "When a paper and a database disagree about a gene, compound or trial, reconcile identifiers and versions and document what remains unresolved.",
+                "currentDoc": "guides/connectors",
+                "proposedUrl": "/docs/workflows/cross-source-evidence/"
+              }
+            ],
+            "relatedDocs": [
+              "guides/connectors"
+            ]
+          },
+          {
+            "id": "indication-dossier",
+            "title": "Build an indication dossier",
+            "scope": "Combine biology, epidemiology, trials and treatment evidence with source dates and unresolved gaps.",
+            "currentDoc": "skills/directory",
+            "proposedUrl": "/docs/workflows/indication-dossier/",
+            "relatedDocs": [
+              "skills/directory"
+            ]
+          },
+          {
+            "id": "format-bibliography",
+            "title": "Prepare references for submission",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "guides/library",
+            "proposedUrl": "/docs/workflows/format-bibliography/",
+            "topics": [
+              {
+                "id": "format-bibliography",
+                "title": "Adapt a bibliography to a target journal",
+                "scope": "Use trusted Library item IDs and supported CSL styles. Cover formatted citations, DOCX with semantic citation markers, and an Overleaf-compatible LaTeX bundle; verify output fields and style requirements.",
+                "currentDoc": "guides/library",
+                "proposedUrl": "/docs/workflows/format-bibliography/"
+              },
+              {
+                "id": "restore-library",
+                "title": "Audit a manuscript's references before submission",
+                "scope": "Given a manuscript and its source library, reconcile cited records, bibliographic fields, duplicates and accessible evidence, then produce a corrected bibliography and an exceptions list.",
+                "currentDoc": "guides/library",
+                "proposedUrl": "/docs/workflows/submission-reference-audit/"
+              }
+            ],
+            "relatedDocs": [
+              "guides/library"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "analysis",
+        "title": "Data analysis and reproduction",
+        "chapters": [
+          {
+            "id": "data-quality",
+            "title": "Check sample quality in a gene-count matrix",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "workflows/data-quality",
+            "proposedUrl": "/docs/workflows/data-quality/",
+            "topics": [
+              {
+                "id": "data-quality",
+                "title": "Audit and clean a dataset",
+                "scope": "Check types, missingness, duplicates and units; preserve raw inputs and record exclusions.",
+                "currentDoc": "guides/files",
+                "proposedUrl": "/docs/workflows/data-quality/"
+              },
+              {
+                "id": "python-r",
+                "title": "Analyze with Python and R",
+                "scope": "Prepare runtimes, inspect variables, execute incrementally, recover errors and save reusable scripts.",
+                "currentDoc": "guides/notebook",
+                "proposedUrl": "/docs/workflows/python-r/"
+              }
+            ],
+            "relatedDocs": [
+              "guides/files",
+              "guides/notebook"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "statistics",
+            "title": "Statistical analysis and validation",
+            "scope": "State assumptions, select a method, check diagnostics, report uncertainty, and retain runnable code.",
+            "currentDoc": "workflows/statistics",
+            "proposedUrl": "/docs/workflows/statistics/",
+            "relatedDocs": [
+              "guides/notebook"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "reproduce",
+            "title": "Reproduce a published result",
+            "scope": "Inventory paper, code and data; define acceptance criteria, run a pilot and distinguish matches from deviations.",
+            "currentDoc": "guides/notebook",
+            "proposedUrl": "/docs/workflows/reproduce/",
+            "relatedDocs": [
+              "guides/notebook"
+            ]
+          },
+          {
+            "id": "extend-analysis",
+            "title": "Extend an analysis with an installed Specialist",
+            "scope": "Existing Methods, QC PCA, matrix and evidence-planning examples.",
+            "currentDoc": "workflows/extend-analysis",
+            "contentStatus": "written"
+          }
+        ]
+      },
+      {
+        "id": "biology",
+        "title": "Sequences, cells, and molecules",
+        "chapters": [
+          {
+            "id": "sequence-qc",
+            "title": "Sequence quality and annotation",
+            "scope": "Inspect FASTA records, alphabets and lengths; resolve annotation sources and preserve failed records.",
+            "currentDoc": "guides/previews",
+            "proposedUrl": "/docs/workflows/sequence-qc/",
+            "relatedDocs": [
+              "guides/previews"
+            ]
+          },
+          {
+            "id": "single-cell",
+            "title": "Single-cell analysis",
+            "scope": "Check expression inputs and metadata, choose scGPT or scvi-tools where appropriate, and validate outputs. Requires compatible single-cell input, a configured Python environment and the selected Skill dependencies; scientific execution remains pending.",
+            "currentDoc": "skills/directory",
+            "proposedUrl": "/docs/workflows/single-cell/",
+            "relatedDocs": [
+              "skills/directory"
+            ]
+          },
+          {
+            "id": "structure-prediction",
+            "title": "Protein and complex prediction",
+            "scope": "Choose an available prediction Skill, check inputs and compute requirements, then inspect confidence and limitations. Requires the selected package, model weights and suitable local or remote compute; listing a Skill does not verify prediction execution.",
+            "currentDoc": "skills/directory",
+            "proposedUrl": "/docs/workflows/structure-prediction/",
+            "relatedDocs": [
+              "skills/directory"
+            ]
+          },
+          {
+            "id": "molecular-analysis",
+            "title": "Molecular structures and docking",
+            "scope": "Validate molecules, inspect properties and structures, and review docking poses without equating scores with affinity. Separate the local molecule viewer, online chemistry sources and DiffDock execution; docking requires its own dependencies and compute validation.",
+            "currentDoc": "skills/directory",
+            "proposedUrl": "/docs/workflows/molecular-analysis/",
+            "relatedDocs": [
+              "skills/directory"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "deliver",
+        "title": "Figures, reports, and revisions",
+        "chapters": [
+          {
+            "id": "figures",
+            "title": "Create figures with traceable evidence",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "workflows/figures",
+            "proposedUrl": "/docs/workflows/figures/",
+            "topics": [
+              {
+                "id": "figures",
+                "title": "Compose and validate scientific figures",
+                "scope": "Create panels from traceable data, check labels and visual fidelity, and export publication assets.",
+                "currentDoc": "workflows/figures",
+                "proposedUrl": "/docs/workflows/figures/",
+                "contentStatus": "written"
+              },
+              {
+                "id": "trace-result",
+                "title": "Explain where a figure's result came from",
+                "scope": "When a collaborator questions a figure, trace the artifact to its execution and inputs, verify versions and prepare an evidence-backed explanation of the calculation.",
+                "currentDoc": "guides/notebook",
+                "proposedUrl": "/docs/workflows/trace-result/"
+              }
+            ],
+            "relatedDocs": [
+              "skills/directory",
+              "guides/notebook"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "manuscript",
+            "title": "Write and revise a research report",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "skills/directory",
+            "proposedUrl": "/docs/workflows/manuscript/",
+            "topics": [
+              {
+                "id": "manuscript",
+                "title": "Build a report or manuscript narrative",
+                "scope": "Connect verified findings, figure order, methods and citations; flag unsupported claims.",
+                "currentDoc": "skills/directory",
+                "proposedUrl": "/docs/workflows/manuscript/"
+              },
+              {
+                "id": "revise-artifact",
+                "title": "Revise a figure or report after reviewer feedback",
+                "scope": "Map feedback to saved outputs, make supported edits, compare revisions and prepare a response linking each change to the revised artifact.",
+                "currentDoc": "guides/files",
+                "proposedUrl": "/docs/workflows/revise-artifact/"
+              }
+            ],
+            "relatedDocs": [
+              "skills/directory",
+              "guides/files"
+            ]
+          },
+          {
+            "id": "recover-notebook",
+            "title": "Rerun an analysis after the source data changes",
+            "scope": "Given an updated dataset, identify stale notebook outputs, rerun dependencies and compare new results with the previous deliverable to explain material changes.",
+            "currentDoc": "guides/notebook",
+            "proposedUrl": "/docs/workflows/recover-notebook/",
+            "relatedDocs": [
+              "guides/notebook"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compute",
+        "title": "Long tasks and remote compute",
+        "chapters": [
+          {
+            "id": "ssh-analysis",
+            "title": "Run and recover remote analyses",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "guides/remote-compute",
+            "proposedUrl": "/docs/workflows/ssh-analysis/",
+            "topics": [
+              {
+                "id": "ssh-analysis",
+                "title": "Run an analysis on an SSH host",
+                "scope": "Check host policy and readiness, stage inputs, monitor execution, and recover outputs into the project. Requires a user-provided reachable SSH host and tested credentials; no remote job has been verified in the current audit.",
+                "currentDoc": "guides/remote-compute",
+                "proposedUrl": "/docs/workflows/ssh-analysis/"
+              },
+              {
+                "id": "slurm-jobs",
+                "title": "Submit and recover Slurm jobs",
+                "scope": "Confirm scheduler requirements, submit a bounded job, track its receipt, cancel or recover, and verify files. Requires an actual Slurm cluster, account and scheduler configuration; scheduler execution is not verified by local mode controls.",
+                "currentDoc": "guides/remote-compute",
+                "proposedUrl": "/docs/workflows/slurm-jobs/"
+              }
+            ],
+            "relatedDocs": [
+              "guides/remote-compute"
+            ]
+          },
+          {
+            "id": "parallel-review",
+            "title": "Delegate and review research work",
+            "scope": "With a supported framework and working models, split a bounded task, configure Specialist capabilities, inspect delegated activity and approvals, and reconcile returned evidence. Verify delegation before claiming parallel execution.",
+            "currentDoc": "guides/delegation",
+            "proposedUrl": "/docs/workflows/parallel-review/",
+            "relatedDocs": [
+              "guides/delegation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "continue",
+        "title": "Continue and hand off research",
+        "chapters": [
+          {
+            "id": "plan-research",
+            "title": "Plan and resume an investigation",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "guides/approval-modes",
+            "proposedUrl": "/docs/workflows/plan-research/",
+            "topics": [
+              {
+                "id": "plan-research",
+                "title": "Scope a pilot study before committing compute",
+                "scope": "Turn a broad question and limited resources into a small pilot plan with inputs, deliverables, stop conditions and acceptance checks before expanding the analysis.",
+                "currentDoc": "guides/approval-modes",
+                "proposedUrl": "/docs/workflows/plan-research/"
+              },
+              {
+                "id": "persistent-goal",
+                "title": "Resume an unfinished study with a Session Plan",
+                "scope": "Resume user-initiated work from an approved Session Plan, recorded step status and saved results. Keep a remaining-work note; the plan does not imply unattended scheduling or a separate persistent-goal feature.",
+                "currentDoc": "guides/delegation",
+                "proposedUrl": "/docs/workflows/persistent-goal/"
+              },
+              {
+                "id": "continue-context",
+                "title": "Resume a study after a break without losing decisions",
+                "scope": "Reconstruct a paused study from prior sessions, project memory and saved files, then produce a verified current-state note before further analysis.",
+                "currentDoc": "guides/delegation",
+                "proposedUrl": "/docs/workflows/continue-context/"
+              }
+            ],
+            "relatedDocs": [
+              "guides/approval-modes",
+              "guides/delegation"
+            ]
+          },
+          {
+            "id": "compare-branches",
+            "title": "Compare two analysis methods on the same dataset",
+            "scope": "When choosing between methods, branch from a shared starting point, run both with documented assumptions and produce a comparison of results and limitations.",
+            "currentDoc": "guides/composer",
+            "proposedUrl": "/docs/workflows/compare-branches/",
+            "relatedDocs": [
+              "guides/composer"
+            ]
+          },
+          {
+            "id": "save-method",
+            "title": "Reuse a validated analysis on a new dataset",
+            "scope": "Convert a successful analysis into a reusable Skill, adapt declared inputs and verify the method on a new dataset without silently carrying over old assumptions.",
+            "currentDoc": "skills/overview",
+            "proposedUrl": "/docs/workflows/save-method/",
+            "relatedDocs": [
+              "skills/overview"
+            ]
+          },
+          {
+            "id": "handoff",
+            "title": "Hand off a reproducible research package",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "guides/notebook",
+            "proposedUrl": "/docs/workflows/handoff/",
+            "topics": [
+              {
+                "id": "handoff",
+                "title": "Package a reproducible handoff",
+                "scope": "Collect inputs, scripts, environments, results and limitations; verify the package from a fresh state.",
+                "currentDoc": "guides/notebook",
+                "proposedUrl": "/docs/workflows/handoff/"
+              },
+              {
+                "id": "export-handoff",
+                "title": "Hand an unfinished analysis to a collaborator",
+                "scope": "Prepare selected conversation evidence, result files, decisions, environment requirements and remaining questions as a reviewable handoff package.",
+                "currentDoc": "guides/delegation",
+                "proposedUrl": "/docs/workflows/export-handoff/"
+              }
+            ],
+            "relatedDocs": [
+              "guides/notebook",
+              "guides/delegation"
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "production-in-progress"
+  },
+  "tools": {
+    "id": "tools",
+    "title": "Explore tools",
+    "scope": "Find tools by capability; catalogs and individual operations are planned as tables inside broad chapters.",
+    "groups": [
+      {
+        "id": "find",
+        "title": "Find a tool",
+        "chapters": [
+          {
+            "id": "overview",
+            "title": "Explore tools",
+            "scope": "Choose between built-in tools, scientific software, database connectors and viewers; compare access and readiness in a table.",
+            "currentDoc": "tools/overview",
+            "proposedUrl": "/docs/tools/overview/",
+            "contentStatus": "written"
+          },
+          {
+            "id": "built-in",
+            "title": "Built-in research tools",
+            "scope": "A table of file, notebook, literature, memory, planning and delegation operations with inputs, outputs and permissions.",
+            "currentDoc": "tools/built-in",
+            "proposedUrl": "/docs/tools/built-in/",
+            "contentStatus": "written"
+          },
+          {
+            "id": "catalog",
+            "title": "Scientific tool catalog",
+            "scope": "A documentation table of software referenced by bundled Skills and inspected runtime packages, with purpose, dependencies and availability. Catalog entries are not all preinstalled software or a separate in-app catalog.",
+            "currentDoc": "tools/catalog",
+            "proposedUrl": "/docs/tools/catalog/",
+            "contentStatus": "written"
+          },
+          {
+            "id": "scientific",
+            "title": "Scientific tools",
+            "scope": "Explain execution through Notebook runtimes or configured Compute Hosts, with package installation, input/output checks and failure diagnosis. Record local versus remote requirements for each software example.",
+            "currentDoc": "tools/scientific",
+            "proposedUrl": "/docs/tools/scientific/",
+            "contentStatus": "written"
+          }
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Data and viewers",
+        "chapters": [
+          {
+            "id": "databases",
+            "title": "Scientific databases",
+            "scope": "A categorized table for the 23 data-source connectors: source coverage, exact operations, identifiers, credentials and limitations. The local Molecule Viewer is documented under Scientific viewers.",
+            "currentDoc": "tools/databases",
+            "proposedUrl": "/docs/tools/databases/",
+            "contentStatus": "written"
+          },
+          {
+            "id": "tables",
+            "title": "Tables and datasets",
+            "scope": "Compare supported tabular formats, preview controls, data inspection, variable handling, exports and size limits in tables.",
+            "currentDoc": "tools/tables",
+            "proposedUrl": "/docs/tools/tables/",
+            "contentStatus": "written"
+          },
+          {
+            "id": "viewers",
+            "title": "Scientific viewers",
+            "scope": "Use the actual preview registry for PDF, Office, images, FASTA, PDB and molecular formats. Include the offline OpenChemLib Molecule Viewer and its validation tools; distinguish viewing from editing or scientific computation.",
+            "currentDoc": "tools/viewers",
+            "proposedUrl": "/docs/tools/viewers/",
+            "contentStatus": "written"
+          }
+        ]
+      },
+      {
+        "id": "connect",
+        "title": "Connect and extend",
+        "chapters": [
+          {
+            "id": "mcp",
+            "title": "Connectors and MCP",
+            "scope": "Compare built-in and custom connectors, transports, discovery, enablement and errors; link configuration steps to Guides.",
+            "currentDoc": "tools/mcp",
+            "proposedUrl": "/docs/tools/mcp/",
+            "contentStatus": "written"
+          },
+          {
+            "id": "credentials",
+            "title": "Service credentials",
+            "scope": "A service-to-credential table covering credential types, bindings, required scopes, validation and access failures.",
+            "currentDoc": "tools/credentials",
+            "proposedUrl": "/docs/tools/credentials/",
+            "contentStatus": "written"
+          },
+          {
+            "id": "custom",
+            "title": "Connect a custom MCP tool",
+            "scope": "Connect an existing or externally implemented MCP server through local stdio or supported remote transport, inspect discovered tools and test credentials and permissions. Tool implementation is an external prerequisite.",
+            "currentDoc": "tools/custom",
+            "proposedUrl": "/docs/tools/custom/",
+            "contentStatus": "written"
+          }
+        ]
+      }
+    ],
+    "tablePlans": [
+      {
+        "chapter": "databases",
+        "columns": [
+          "Connector",
+          "Research domain",
+          "Source coverage",
+          "Operations",
+          "Inputs and identifiers",
+          "Authentication",
+          "Outputs",
+          "Limitations",
+          "Verification status"
+        ],
+        "rows": [
+          {
+            "id": "connector-pubmed",
+            "title": "PubMed",
+            "scope": "PubMed, PMC, Europe PMC: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-literature",
+            "title": "Literature Graph",
+            "scope": "OpenAlex, arXiv: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-biorxiv",
+            "title": "bioRxiv",
+            "scope": "bioRxiv, medRxiv: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-clinical-trials",
+            "title": "Clinical Trials",
+            "scope": "ClinicalTrials.gov: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-clinical-genomics",
+            "title": "Clinical Genomics",
+            "scope": "ClinGen, CIViC, Open Targets: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-cancer-models",
+            "title": "Cancer Models",
+            "scope": "cBioPortal: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-drug-regulatory",
+            "title": "Drug Regulatory",
+            "scope": "openFDA: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-research-resources",
+            "title": "Research Resources",
+            "scope": "Grants.gov, Antibody Registry: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-genes",
+            "title": "Genes & Ontologies",
+            "scope": "MyGene, UniProt, OLS, QuickGO, Reactome: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-genomes",
+            "title": "Genomes",
+            "scope": "Ensembl, UCSC: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-biomart",
+            "title": "BioMart",
+            "scope": "Ensembl BioMart: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-variants",
+            "title": "Variants",
+            "scope": "gnomAD, ClinVar, dbSNP: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-human-genetics",
+            "title": "Human Genetics",
+            "scope": "GWAS Catalog, eQTL Catalogue, PheWeb: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-expression",
+            "title": "Expression",
+            "scope": "GTEx: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-cellguide",
+            "title": "CellGuide",
+            "scope": "CELLxGENE CellGuide: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-omics-archives",
+            "title": "Omics Archives",
+            "scope": "ArrayExpress, GEO, MetaboLights, MGnify, PRIDE: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-regulation",
+            "title": "Regulation",
+            "scope": "ENCODE, JASPAR, UniBind: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-rna",
+            "title": "RNA",
+            "scope": "Rfam: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-chemistry",
+            "title": "Chemistry",
+            "scope": "PubChem, ChEBI, Rhea, BindingDB: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-chembl",
+            "title": "ChEMBL",
+            "scope": "ChEMBL: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-zinc",
+            "title": "ZINC",
+            "scope": "ZINC22: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-protein-annotation",
+            "title": "Protein Annotation",
+            "scope": "InterPro, Pfam, Human Protein Atlas, STRING: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          },
+          {
+            "id": "connector-structures",
+            "title": "Structures & Interactions",
+            "scope": "PDB, AlphaFold, EMDB, Complex Portal, IntAct: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          }
+        ]
+      },
+      {
+        "chapter": "viewers",
+        "columns": [
+          "Viewer",
+          "Local implementation",
+          "Supported formats",
+          "Operations",
+          "Limits",
+          "Verification status"
+        ],
+        "rows": [
+          {
+            "id": "connector-molecule",
+            "title": "Molecule Viewer",
+            "scope": "OpenChemLib: source coverage, tool operations, input identifiers, output fields, access requirements and failure limits.",
+            "currentDoc": "guides/connectors"
+          }
+        ]
+      }
+    ],
+    "status": "written"
+  },
+  "skills": {
+    "id": "skills",
+    "title": "Skills",
+    "scope": "Choose, use, and maintain reusable procedures; individual bundled Skills belong in chapter tables.",
+    "groups": [
+      {
+        "id": "use",
+        "title": "Use Skills",
+        "chapters": [
+          {
+            "id": "overview",
+            "title": "Skills",
+            "scope": "Explain Skills versus tools and Specialists; search, enable, select, inspect instructions and verify a Skill is available.",
+            "currentDoc": "skills/overview",
+            "proposedUrl": "/docs/skills/overview/",
+            "relatedDocs": [
+              "skills/overview"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "marketplace",
+            "title": "Skill marketplace",
+            "scope": "Find, install, update and manage research methods from the marketplace.",
+            "currentDoc": "skills/marketplace",
+            "proposedUrl": "/docs/skills/marketplace/",
+            "relatedDocs": [
+              "skills/marketplace"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "directory",
+            "title": "Skill directory",
+            "scope": "One table of all 23 bundled Skills, grouped by research purpose, with inputs, dependencies, outputs and verification status.",
+            "currentDoc": "skills/directory",
+            "proposedUrl": "/docs/skills/directory/",
+            "relatedDocs": [
+              "skills/directory"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "recipes",
+            "title": "Skill recipes",
+            "scope": "Table-based recipes connect research goals, selected Skills, sample inputs, requests, expected outputs and full Workflows.",
+            "currentDoc": "skills/recipes",
+            "proposedUrl": "/docs/skills/recipes/",
+            "relatedDocs": [
+              "skills/overview"
+            ],
+            "contentStatus": "written"
+          }
+        ]
+      },
+      {
+        "id": "maintain",
+        "title": "Create and maintain",
+        "chapters": [
+          {
+            "id": "create",
+            "title": "Create a Skill and its supporting files",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "skills/create",
+            "proposedUrl": "/docs/skills/create/",
+            "topics": [
+              {
+                "id": "create",
+                "title": "Create a Skill",
+                "scope": "Write a personal Skill or extract a reusable method from a conversation; define inputs, steps, checks and boundaries.",
+                "currentDoc": "skills/create",
+                "proposedUrl": "/docs/skills/create/"
+              },
+              {
+                "id": "files",
+                "title": "Instructions and supporting files",
+                "scope": "Describe SKILL.md fields, scripts, assets and references using a package-contents table and a validation checklist.",
+                "currentDoc": "skills/create",
+                "proposedUrl": "/docs/skills/create/"
+              }
+            ],
+            "relatedDocs": [
+              "skills/overview"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "manage",
+            "title": "Manage and validate Skills",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "skills/manage",
+            "proposedUrl": "/docs/skills/manage/",
+            "topics": [
+              {
+                "id": "manage",
+                "title": "Import, export, and update Skills",
+                "scope": "Group import sources, preview, conflict handling, editing, exports, deletion and version checks by operation.",
+                "currentDoc": "skills/manage",
+                "proposedUrl": "/docs/skills/manage/"
+              },
+              {
+                "id": "validate",
+                "title": "Test and troubleshoot Skills",
+                "scope": "Validate a fresh input, diagnose missing packages, weights, credentials and tools, and record supported versus tested behavior.",
+                "currentDoc": "skills/manage",
+                "proposedUrl": "/docs/skills/manage/"
+              }
+            ],
+            "relatedDocs": [
+              "skills/overview"
+            ],
+            "contentStatus": "written"
+          }
+        ]
+      }
+    ],
+    "tablePlans": [
+      {
+        "chapter": "directory",
+        "columns": [
+          "Skill",
+          "Research purpose",
+          "Inputs",
+          "Dependencies and access",
+          "Outputs",
+          "Usage example",
+          "Verification status"
+        ],
+        "rows": [
+          {
+            "id": "indication-dossier",
+            "title": "Indication Dossier",
+            "scope": "Build a dossier on a therapeutic indication, including epidemiology, biology, standard of care, regulation, and trials. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "literature-review",
+            "title": "Literature Review",
+            "scope": "Find, verify, and synthesize scientific literature. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "figure-composer",
+            "title": "Figure Composer",
+            "scope": "Plan and compose a multi-panel figure from a claim and traceable data artifacts. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "figure-style",
+            "title": "Figure Style",
+            "scope": "Check data fidelity and readability of a final scientific figure. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "paper-narrative",
+            "title": "Paper Narrative",
+            "scope": "Review the order and argument of a paper\u2019s figure deck. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "alphafold2",
+            "title": "AlphaFold2",
+            "scope": "Predict monomer/multimer protein structures using the ColabFold runner. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "boltz",
+            "title": "Boltz",
+            "scope": "Predict structures of protein, nucleic-acid, and small-molecule complexes with Boltz-2. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "chai1",
+            "title": "Chai-1",
+            "scope": "Predict protein/nucleic-acid/ligand complex structures with Chai-1. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "diffdock",
+            "title": "DiffDock",
+            "scope": "Generate and rank small-molecule binding poses. Pose prediction is not an affinity measurement. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "esmfold2",
+            "title": "ESMFold2",
+            "scope": "Use ESMFold2 co-folding and associated protein representation models. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "fair-esm2",
+            "title": "ESM-2",
+            "scope": "Extract protein sequence embeddings, masked-language-model scores, and contact predictions with ESM-2. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "ligandmpnn",
+            "title": "LigandMPNN",
+            "scope": "Design sequences from backbones with ligand, nucleic-acid, or metal context. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "openfold3",
+            "title": "OpenFold3",
+            "scope": "Predict complex structures with the OpenFold3 implementation. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "proteinmpnn",
+            "title": "ProteinMPNN",
+            "scope": "Design amino-acid sequences for a protein backbone. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "solublempnn",
+            "title": "SolubleMPNN",
+            "scope": "Design sequences using an MPNN model trained on soluble proteins. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "borzoi",
+            "title": "Borzoi",
+            "scope": "Predict genomic functional tracks and investigate regulatory variant effects. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "evo2",
+            "title": "Evo 2",
+            "scope": "Score, embed, and generate DNA sequences with Evo 2. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "scgpt",
+            "title": "scGPT",
+            "scope": "Embed and annotate single-cell expression data with scGPT. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "scvi-tools",
+            "title": "scvi-tools",
+            "scope": "Use probabilistic models for integration, label transfer, and differential expression. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "env-management",
+            "title": "Environment & Packages",
+            "scope": "Inspect and manage Python/R packages through the Notebook runtime tools. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "compute-env-setup",
+            "title": "Compute Environment Setup",
+            "scope": "Prepare and validate a named software environment on an SSH or Slurm Compute Host. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "remote-compute-ssh",
+            "title": "Remote Compute (SSH)",
+            "scope": "Evaluate remote resources, run SSH jobs, and collect results. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          },
+          {
+            "id": "customize",
+            "title": "Customize",
+            "scope": "Create or revise a Skill or Specialist through the conversational Customize entry. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "currentDoc": "skills/directory"
+          }
+        ]
+      }
+    ],
+    "status": "written"
+  },
+  "reference": {
+    "id": "reference",
+    "title": "Reference",
+    "scope": "Project setup and CLI integrations first, followed by AIPOCH-specific technical reference and Changelog.",
+    "groups": [
+      {
+        "id": "product",
+        "title": "Product reference",
+        "chapters": [
+          {
+            "id": "configuration",
+            "title": "Configuration and context",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "reference/configuration",
+            "proposedUrl": "/docs/reference/configuration/",
+            "topics": [
+              {
+                "id": "configuration",
+                "title": "Configuration",
+                "scope": "Tables of supported app settings, scope, defaults, storage and framework compatibility; link operating steps to Guides.",
+                "currentDoc": "settings/overview",
+                "proposedUrl": "/docs/reference/configuration/"
+              },
+              {
+                "id": "instructions",
+                "title": "Project context and instructions",
+                "scope": "Start with the project's Agent Context field; distinguish it from Memory notes, Skill instructions and Specialist instructions. Framework instruction-file behavior must be documented per framework, not as one universal project-file mechanism.",
+                "currentDoc": "guides/memory",
+                "proposedUrl": "/docs/reference/instructions/"
+              }
+            ],
+            "relatedDocs": [
+              "settings/overview",
+              "guides/memory"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "permissions",
+            "title": "Permissions and control",
+            "scope": "Reference approval modes, scope precedence, remembered grants, network restrictions and revocation semantics.",
+            "currentDoc": "reference/permissions",
+            "proposedUrl": "/docs/reference/permissions/",
+            "relatedDocs": [
+              "guides/approval-modes"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "controls",
+            "title": "Controls and keyboard reference",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "reference/controls",
+            "proposedUrl": "/docs/reference/controls/",
+            "topics": [
+              {
+                "id": "controls",
+                "title": "Page and control index",
+                "scope": "A page-by-page lookup table for button and input labels, resulting states and verification status.",
+                "currentDoc": "reference/control-index",
+                "proposedUrl": "/docs/reference/controls/"
+              },
+              {
+                "id": "commands",
+                "title": "Skill shortcuts, mentions, and keyboard controls",
+                "scope": "Document the actual composer triggers: / selects Skills, @ references files or artifacts, and # references sessions; list supported keyboard actions and context limits.",
+                "currentDoc": "guides/shortcuts",
+                "proposedUrl": "/docs/reference/commands/"
+              }
+            ],
+            "relatedDocs": [
+              "reference/control-index",
+              "guides/shortcuts"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "formats",
+            "title": "File formats and limits",
+            "scope": "Tables for supported previews, library imports, citation exports, file size limits and unsupported cases.",
+            "currentDoc": "reference/formats",
+            "proposedUrl": "/docs/reference/formats/",
+            "relatedDocs": [
+              "reference/formats"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "packages",
+            "title": "Skill, Specialist, and MCP formats",
+            "scope": "Separate schema tables for Skill packages, Specialist packages and MCP configuration, with field and archive constraints.",
+            "currentDoc": "reference/packages",
+            "proposedUrl": "/docs/reference/packages/",
+            "relatedDocs": [
+              "specialists/overview"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "example-data",
+            "title": "Example data and expected results",
+            "scope": "Public source files, checksums and expected example outputs.",
+            "currentDoc": "reference/example-data",
+            "contentStatus": "written"
+          },
+          {
+            "id": "connector-operations",
+            "title": "Connector operation reference",
+            "scope": "Exact inputs, defaults and example calls by Connector.",
+            "currentDoc": "reference/connector-operations",
+            "contentStatus": "written"
+          }
+        ]
+      },
+      {
+        "id": "integration",
+        "title": "CLI and operations",
+        "chapters": [
+          {
+            "id": "cli",
+            "title": "CLI and structured output",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "reference/cli",
+            "proposedUrl": "/docs/reference/cli/",
+            "topics": [
+              {
+                "id": "cli",
+                "title": "CLI reference",
+                "scope": "Document the actual open-science command tree, flags, defaults, exit states and examples from the repository CLI contract.",
+                "currentDoc": "reference/diagnostics",
+                "proposedUrl": "/docs/reference/cli/"
+              },
+              {
+                "id": "automation",
+                "title": "Automation and JSON output",
+                "scope": "Cover supported task submission, polling, JSON and JSONL output, errors and cancellation; avoid implying a built-in scheduler.",
+                "currentDoc": "reference/diagnostics",
+                "proposedUrl": "/docs/reference/automation/"
+              }
+            ],
+            "relatedDocs": [
+              "reference/diagnostics"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "api",
+            "title": "Task SDK and local API",
+            "scope": "Map supported task and session APIs, authentication, events and compatibility; distinguish public contracts from internal host APIs.",
+            "currentDoc": "reference/api",
+            "proposedUrl": "/docs/reference/api/",
+            "relatedDocs": [
+              "reference/diagnostics"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "server",
+            "title": "Headless service and browser access",
+            "scope": "Reference service start/status/stop, authenticated URLs, local discovery and remote-access boundaries from the actual CLI.",
+            "currentDoc": "reference/server",
+            "proposedUrl": "/docs/reference/server/",
+            "relatedDocs": [
+              "guides/remote-access"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "diagnostics",
+            "title": "Architecture and diagnostics",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "reference/diagnostics",
+            "proposedUrl": "/docs/reference/diagnostics/",
+            "topics": [
+              {
+                "id": "diagnostics",
+                "title": "Errors and diagnostics",
+                "scope": "Map observed errors to causes, diagnostic evidence and linked recovery guides; include CLI and connector failures.",
+                "currentDoc": "guides/troubleshooting",
+                "proposedUrl": "/docs/reference/diagnostics/"
+              },
+              {
+                "id": "architecture",
+                "title": "Architecture and data flow",
+                "scope": "Explain desktop, service, framework, storage and execution boundaries, including artifact provenance and credential handling.",
+                "currentDoc": "reference/diagnostics",
+                "proposedUrl": "/docs/reference/architecture/"
+              },
+              {
+                "id": "verification",
+                "title": "Documentation verification record",
+                "scope": "Record source versions, English UI captures, executed controls, conditional tests and outstanding verification gaps.",
+                "currentDoc": "reference/control-index",
+                "proposedUrl": "/docs/reference/verification/"
+              }
+            ],
+            "relatedDocs": [
+              "guides/troubleshooting",
+              "reference/diagnostics",
+              "reference/control-index"
+            ],
+            "contentStatus": "written"
+          }
+        ]
+      },
+      {
+        "id": "changelog",
+        "title": "Changelog",
+        "chapters": [
+          {
+            "id": "v0301",
+            "title": "v0.30.1",
+            "scope": "Side Chat drafts, reviewed Skill updates, literature PDFs in packages and recovery tools.",
+            "currentDoc": "changelog/v0-30-1",
+            "proposedUrl": "/docs/changelog/v0-30-1/",
+            "kind": "existing",
+            "relatedDocs": [
+              "changelog/v0-30-1"
+            ]
+          },
+          {
+            "id": "v0300",
+            "title": "v0.30.0",
+            "scope": "Private bookmarks, independent Side Chat tabs, settings search and extracted PDF evidence.",
+            "currentDoc": "changelog/v0-30-0",
+            "proposedUrl": "/docs/changelog/v0-30-0/",
+            "kind": "existing",
+            "relatedDocs": [
+              "changelog/v0-30-0"
+            ]
+          },
+          {
+            "id": "v0290",
+            "title": "v0.29.0",
+            "scope": "Skill marketplace, research packages, PDF extraction and external R package installation.",
+            "currentDoc": "changelog/v0-29-0",
+            "proposedUrl": "/docs/changelog/v0-29-0/",
+            "kind": "existing",
+            "relatedDocs": [
+              "changelog/v0-29-0"
+            ]
+          },
+          {
+            "id": "v0280",
+            "title": "v0.28.0",
+            "scope": "Result reproduction checks, global search, privacy changes and managed Codex upgrades.",
+            "currentDoc": "changelog/v0-28-0",
+            "proposedUrl": "/docs/changelog/v0-28-0/",
+            "kind": "existing",
+            "relatedDocs": [
+              "changelog/v0-28-0"
+            ]
+          },
+          {
+            "id": "v0270",
+            "title": "v0.27.0",
+            "scope": "Literature imports, background tasks, required Skills and integration updates.",
+            "currentDoc": "changelog/v0-27-0",
+            "proposedUrl": "/docs/changelog/v0-27-0/",
+            "kind": "existing",
+            "relatedDocs": [
+              "changelog/v0-27-0"
+            ]
+          },
+          {
+            "id": "v0260",
+            "title": "v0.26.0",
+            "scope": "Existing version history.",
+            "currentDoc": "changelog/v0-26-0",
+            "proposedUrl": "/docs/changelog/v0-26-0/",
+            "kind": "existing",
+            "relatedDocs": [
+              "changelog/v0-26-0"
+            ]
+          },
+          {
+            "id": "v0251",
+            "title": "v0.25.1",
+            "scope": "Existing version history.",
+            "currentDoc": "changelog/v0-25-1",
+            "proposedUrl": "/docs/changelog/v0-25-1/",
+            "kind": "existing",
+            "relatedDocs": [
+              "changelog/v0-25-1"
+            ]
+          }
+        ]
+      }
+    ],
+    "overviewDoc": "reference",
+    "overviewTitle": "Reference overview",
+    "status": "production-in-progress"
+  },
+  "specialists": {
+    "id": "specialists",
+    "title": "Specialists",
+    "scope": "Create, equip, delegate to, and maintain research roles independently of the Skill catalog.",
+    "groups": [
+      {
+        "id": "use",
+        "title": "Meet and use Specialists",
+        "chapters": [
+          {
+            "id": "overview",
+            "title": "Specialists and available roles",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "specialists/overview",
+            "proposedUrl": "/docs/specialists/overview/",
+            "topics": [
+              {
+                "id": "overview",
+                "title": "Specialists overview",
+                "scope": "Explain Main Agent, Specialists, built-in Reviewer and Skills; compare roles and suitable tasks in a table.",
+                "currentDoc": "specialists/overview",
+                "proposedUrl": "/docs/specialists/overview/"
+              },
+              {
+                "id": "directory",
+                "title": "Specialist directory and marketplace",
+                "scope": "Distinguish the built-in non-configurable Reviewer, personal roles and online Marketplace packages. The bundled Specialists manifest is empty; remote listing, signing, installation and dependency readiness require separate checks.",
+                "currentDoc": "specialists/overview",
+                "proposedUrl": "/docs/specialists/overview/"
+              }
+            ],
+            "relatedDocs": [
+              "specialists/overview"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "delegate",
+            "title": "Delegate and verify work",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "specialists/delegate",
+            "proposedUrl": "/docs/specialists/delegate/",
+            "topics": [
+              {
+                "id": "delegate",
+                "title": "Delegate and review work",
+                "scope": "Verify framework delegation support and model access; distinguish switching the main conversation's Specialist from delegating a subtask. Inspect progress, interventions and returned evidence.",
+                "currentDoc": "specialists/delegate",
+                "proposedUrl": "/docs/specialists/delegate/"
+              },
+              {
+                "id": "troubleshoot",
+                "title": "Test and troubleshoot Specialists",
+                "scope": "Run a bounded test task and diagnose missing capabilities, model failures, denied requests and incomplete handoffs.",
+                "currentDoc": "specialists/delegate",
+                "proposedUrl": "/docs/specialists/delegate/"
+              }
+            ],
+            "relatedDocs": [
+              "guides/delegation",
+              "specialists/overview"
+            ],
+            "contentStatus": "written"
+          }
+        ]
+      },
+      {
+        "id": "create",
+        "title": "Create and configure",
+        "chapters": [
+          {
+            "id": "identity",
+            "title": "Create and instruct a Specialist",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "specialists/identity",
+            "proposedUrl": "/docs/specialists/identity/",
+            "topics": [
+              {
+                "id": "identity",
+                "title": "Create a Specialist",
+                "scope": "Plan identity fields, icons, colors, descriptions, creation modes and preview, with a field reference table.",
+                "currentDoc": "specialists/identity",
+                "proposedUrl": "/docs/specialists/identity/"
+              },
+              {
+                "id": "instructions",
+                "title": "Write Specialist instructions",
+                "scope": "Define responsibilities, allowed evidence, deliverables and stopping conditions; use role templates in the chapter.",
+                "currentDoc": "specialists/identity",
+                "proposedUrl": "/docs/specialists/identity/"
+              }
+            ],
+            "relatedDocs": [
+              "specialists/overview"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "capabilities",
+            "title": "Assign Skills and Connectors",
+            "scope": "Compare full-access inheritance with explicit capability bindings; explain add/remove controls and readiness checks.",
+            "currentDoc": "specialists/capabilities",
+            "proposedUrl": "/docs/specialists/capabilities/",
+            "relatedDocs": [
+              "specialists/overview"
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "reviewer",
+            "title": "Reviewer and Auto-review",
+            "scope": "Describe the built-in Reviewer, model policy, review triggers, displayed decisions and the limits of automated review.",
+            "currentDoc": "specialists/reviewer",
+            "proposedUrl": "/docs/specialists/reviewer/",
+            "relatedDocs": [
+              "guides/models"
+            ],
+            "contentStatus": "written"
+          }
+        ]
+      },
+      {
+        "id": "maintain",
+        "title": "Manage and share",
+        "chapters": [
+          {
+            "id": "manage",
+            "title": "Manage and share Specialists",
+            "scope": "Review the included topics and their planned scope below.",
+            "currentDoc": "specialists/manage",
+            "proposedUrl": "/docs/specialists/manage/",
+            "topics": [
+              {
+                "id": "manage",
+                "title": "Organize and maintain Specialists",
+                "scope": "Search, filter, tag, enable, edit, duplicate and delete roles; verify changes and capability availability.",
+                "currentDoc": "specialists/manage",
+                "proposedUrl": "/docs/specialists/manage/"
+              },
+              {
+                "id": "packages",
+                "title": "Import and export Specialist packages",
+                "scope": "Preview package contents, inspect bundled Skills and Connector bindings, handle conflicts and validate imported roles.",
+                "currentDoc": "specialists/manage",
+                "proposedUrl": "/docs/specialists/manage/"
+              }
+            ],
+            "relatedDocs": [
+              "specialists/overview"
+            ],
+            "contentStatus": "written"
+          }
+        ]
+      }
+    ],
+    "status": "written"
+  }
+}
