@@ -1,0 +1,16 @@
+[
+  {
+    "file": "1UBQ.pdb",
+    "source": "https://files.rcsb.org/download/1UBQ.pdb",
+    "bytes": 78570,
+    "sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+    "first_line": "HEADER    CHROMOSOMAL PROTEIN                     02-JAN-87   1UBQ              "
+  },
+  {
+    "file": "P04637.fasta",
+    "source": "https://rest.uniprot.org/uniprotkb/P04637.fasta",
+    "bytes": 490,
+    "sha256": "59aace7211b64e5918ef6547fc48d6419a134fa91f158415d598d3416882f063",
+    "first_line": ">sp|P04637|P53_HUMAN Cellular tumor antigen p53 OS=Homo sapiens OX=9606 GN=TP53 PE=1 SV=4"
+  }
+]

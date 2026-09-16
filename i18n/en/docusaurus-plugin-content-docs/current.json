@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Workflows": {
+    "message": "Workflows",
+    "description": "The label for category 'Workflows' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Explore tools": {
+    "message": "Explore tools",
+    "description": "The label for category 'Explore tools' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Skills": {
+    "message": "Skills",
+    "description": "The label for category 'Skills' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Specialists": {
+    "message": "Specialists",
+    "description": "The label for category 'Specialists' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Reference": {
+    "message": "Reference",
+    "description": "The label for category 'Reference' in sidebar 'tutorialSidebar'"
+  }
+}

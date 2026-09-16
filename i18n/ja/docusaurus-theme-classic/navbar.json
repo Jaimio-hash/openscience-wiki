@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "AIPOCH",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "AIPOCH",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Open-Science": {
+    "message": "Open-Science",
+    "description": "Navbar item with label Open-Science"
+  },
+  "item.label.Install": {
+    "message": "インストール",
+    "description": "Navbar item with label Install"
+  },
+  "item.label.Troubleshooting": {
+    "message": "トラブルシューティング",
+    "description": "Navbar item with label Troubleshooting"
+  },
+  "item.label.Open-Science GitHub": {
+    "message": "Open-Science GitHub",
+    "description": "Navbar item with label Open-Science GitHub"
+  }
+}

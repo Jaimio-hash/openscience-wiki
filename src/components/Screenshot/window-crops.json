@@ -1,0 +1,202 @@
+{
+  "/img/open-science/walkthrough-2026-09-08/02-data-location.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/56-package-mirror.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/57-permission-modes.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/63-remote-off.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/walkthrough-2026-09-08/67-connector-local-command.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/feature-guides-2026-09/marketplace-browse.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/feature-guides-2026-09/marketplace-detail.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/feature-guides-2026-09/reproducibility-evidence.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  },
+  "/img/open-science/feature-guides-2026-09/research-package-export.png": {
+    "originalWidth": 1392,
+    "originalHeight": 1072,
+    "x": 56,
+    "y": 38,
+    "width": 1280,
+    "height": 960
+  }
+}

@@ -1,0 +1,663 @@
+{
+  "status": "written",
+  "overviewDoc": "intro",
+  "groups": [
+    {
+      "id": "start",
+      "title": "Start here",
+      "chapters": [
+        {
+          "id": "capabilities",
+          "title": "Capabilities and supported inputs",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/capabilities",
+          "proposedUrl": "/docs/guides/capabilities/",
+          "topics": [
+            {
+              "id": "capabilities",
+              "title": "What Open-Science can do",
+              "scope": "Supported research activities, the local workspace model, and where to start for each input or goal.",
+              "currentDoc": "intro",
+              "proposedUrl": "/docs/guides/capabilities/"
+            },
+            {
+              "id": "source-types",
+              "title": "Supported files and data",
+              "scope": "Accepted inputs, readable versus executable formats, and preparation before import.",
+              "currentDoc": "reference/formats",
+              "proposedUrl": "/docs/guides/source-types/"
+            }
+          ],
+          "relatedDocs": [
+            "intro",
+            "reference/formats"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "installation",
+          "title": "Installation and updates",
+          "scope": "System requirements, desktop installation, source builds, update checks, and version selection.",
+          "currentDoc": "guides/installation",
+          "proposedUrl": "/docs/guides/installation/",
+          "relatedDocs": [
+            "guides/installation"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "onboarding",
+          "title": "First-time setup",
+          "scope": "Environment checks, data location, agent runtime, model access, and Notebook setup in wizard order.",
+          "currentDoc": "guides/onboarding",
+          "proposedUrl": "/docs/guides/onboarding/",
+          "relatedDocs": [
+            "guides/onboarding"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "first-project",
+          "title": "Your first project and result",
+          "scope": "A small first task from project creation to a saved output and a clear success check.",
+          "currentDoc": "guides/first-project",
+          "proposedUrl": "/docs/guides/first-project/",
+          "relatedDocs": [
+            "guides/first-project"
+          ],
+          "contentStatus": "written"
+        }
+      ]
+    },
+    {
+      "id": "workspace",
+      "title": "Your workspace",
+      "chapters": [
+        {
+          "id": "navigation",
+          "title": "Navigation and search",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/navigation",
+          "proposedUrl": "/docs/guides/navigation/",
+          "topics": [
+            {
+              "id": "navigation",
+              "title": "Home and navigation",
+              "scope": "Home entries, workspace layout, sidebar panels, resizing, and returning to projects.",
+              "currentDoc": "guides/navigation",
+              "proposedUrl": "/docs/guides/navigation/"
+            },
+            {
+              "id": "search",
+              "title": "Finding projects, sessions, and files",
+              "scope": "Global search, result types, opening a result, and the difference from panel-level filters.",
+              "currentDoc": "guides/navigation",
+              "proposedUrl": "/docs/guides/search/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/navigation"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "projects",
+          "title": "Projects and source folders",
+          "scope": "Create and edit projects, project descriptions and Agent Context, folder selection, and access scope.",
+          "currentDoc": "guides/projects",
+          "proposedUrl": "/docs/guides/projects/",
+          "relatedDocs": [
+            "guides/first-project"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "sessions",
+          "title": "Sessions and branches",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/sessions",
+          "proposedUrl": "/docs/guides/sessions/",
+          "topics": [
+            {
+              "id": "sessions",
+              "title": "Creating and managing sessions",
+              "scope": "Start, switch, rename, and pin sessions; distinguish a project from its conversations.",
+              "currentDoc": "guides/delegation",
+              "proposedUrl": "/docs/guides/sessions/"
+            },
+            {
+              "id": "revisions",
+              "title": "Message revisions and branches",
+              "scope": "Edit a previous message, browse revisions, branch a conversation, and understand retained context.",
+              "currentDoc": "guides/composer",
+              "proposedUrl": "/docs/guides/revisions/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/delegation",
+            "guides/composer"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "bookmarks",
+          "title": "Private reading bookmarks",
+          "scope": "Save personal reading passages and PDF regions, manage notes and return to their source.",
+          "currentDoc": "guides/bookmarks",
+          "proposedUrl": "/docs/guides/bookmarks/",
+          "relatedDocs": [
+            "guides/bookmarks"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "composer",
+          "title": "Conversations and queued requests",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/composer",
+          "proposedUrl": "/docs/guides/composer/",
+          "topics": [
+            {
+              "id": "composer",
+              "title": "Prompts, attachments, and mentions",
+              "scope": "Compose a request, attach inputs, select Skills, and reference files or sessions before sending.",
+              "currentDoc": "guides/composer",
+              "proposedUrl": "/docs/guides/composer/"
+            },
+            {
+              "id": "follow-ups",
+              "title": "Follow-ups and the task queue",
+              "scope": "Queue, edit, reorder, send, and stop requests; explain what continues after interruption.",
+              "currentDoc": "guides/composer",
+              "proposedUrl": "/docs/guides/follow-ups/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/composer"
+          ],
+          "contentStatus": "written"
+        }
+      ]
+    },
+    {
+      "id": "files",
+      "title": "Files, literature, and results",
+      "chapters": [
+        {
+          "id": "files",
+          "title": "Files, artifacts, and versions",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/files",
+          "proposedUrl": "/docs/guides/files/",
+          "topics": [
+            {
+              "id": "files",
+              "title": "Project files and uploads",
+              "scope": "Upload versus folder reference, file search and layouts, project copies, and download locations.",
+              "currentDoc": "guides/files",
+              "proposedUrl": "/docs/guides/files/"
+            },
+            {
+              "id": "artifacts",
+              "title": "Artifacts and file versions",
+              "scope": "Distinguish uploads and generated artifacts; inspect saved revisions, edit supported managed files, compare supported text or Markdown changes, and export results.",
+              "currentDoc": "guides/files",
+              "proposedUrl": "/docs/guides/artifacts/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/files"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "previews",
+          "title": "Opening and previewing files",
+          "scope": "Split and full-screen previews, supported viewers, tabs, and format-specific controls.",
+          "currentDoc": "guides/previews",
+          "proposedUrl": "/docs/guides/previews/",
+          "relatedDocs": [
+            "guides/previews"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "library",
+          "title": "Literature library and citations",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/library",
+          "proposedUrl": "/docs/guides/library/",
+          "topics": [
+            {
+              "id": "library",
+              "title": "References and collections",
+              "scope": "Add and import records, collections, project links, tags, duplicates, Trash, and restoration.",
+              "currentDoc": "guides/library",
+              "proposedUrl": "/docs/guides/library/"
+            },
+            {
+              "id": "reading",
+              "title": "Reading papers and citations",
+              "scope": "PDF attachments, metadata and full-text retrieval, reading state, citation styles, copy and export.",
+              "currentDoc": "guides/library",
+              "proposedUrl": "/docs/guides/reading/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/library"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "notebook",
+          "title": "Notebook and execution evidence",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/notebook",
+          "proposedUrl": "/docs/guides/notebook/",
+          "topics": [
+            {
+              "id": "notebook",
+              "title": "The Session Notebook",
+              "scope": "Executed Python, R, and Bash units, outputs, variables, kernels, stopping, and notebook export.",
+              "currentDoc": "guides/notebook",
+              "proposedUrl": "/docs/guides/notebook/"
+            },
+            {
+              "id": "provenance",
+              "title": "Inspecting artifact provenance",
+              "scope": "Inspect available links to source messages, code, notebook runs and review evidence for a version; explain missing evidence and format-dependent coverage.",
+              "currentDoc": "guides/notebook",
+              "proposedUrl": "/docs/guides/provenance/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/notebook"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "reproducibility",
+          "title": "Reproducibility",
+          "scope": "Rerun captured research steps, compare result versions and retain verification records.",
+          "currentDoc": "guides/reproducibility",
+          "proposedUrl": "/docs/guides/reproducibility/",
+          "relatedDocs": [
+            "guides/reproducibility"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "research-packages",
+          "title": ".science research packages",
+          "scope": "Export, import and inspect portable conversation branches, files and evidence.",
+          "currentDoc": "guides/research-packages",
+          "proposedUrl": "/docs/guides/research-packages/",
+          "relatedDocs": [
+            "guides/research-packages"
+          ],
+          "contentStatus": "written"
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "title": "Models and agents",
+      "chapters": [
+        {
+          "id": "models",
+          "title": "Models and task policies",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/models",
+          "proposedUrl": "/docs/guides/models/",
+          "topics": [
+            {
+              "id": "models",
+              "title": "Models and providers",
+              "scope": "Provider, model, agent framework, and Specialist distinctions; select an active model and effort.",
+              "currentDoc": "guides/models",
+              "proposedUrl": "/docs/guides/models/"
+            },
+            {
+              "id": "scenario-models",
+              "title": "Models for different tasks",
+              "scope": "Main, Subagent, Reviewer, Vision, and Session details policies, inheritance, and compatible choices.",
+              "currentDoc": "guides/models",
+              "proposedUrl": "/docs/guides/scenario-models/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/models"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "providers",
+          "title": "Provider and local model setup",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/providers",
+          "proposedUrl": "/docs/guides/providers/",
+          "topics": [
+            {
+              "id": "providers",
+              "title": "Connecting a model provider",
+              "scope": "Provider presets, subscription sign-in or API access, custom endpoints, required fields, and connection tests.",
+              "currentDoc": "guides/providers",
+              "proposedUrl": "/docs/guides/providers/"
+            },
+            {
+              "id": "local-models",
+              "title": "Using local models",
+              "scope": "Compatible local endpoints, model identifiers, capability limits, and connection verification.",
+              "currentDoc": "guides/providers",
+              "proposedUrl": "/docs/guides/local-models/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/providers"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "frameworks",
+          "title": "Installing and switching agents",
+          "scope": "Framework installation, detection, authentication, activation, switching, repair, and removal.",
+          "currentDoc": "guides/frameworks",
+          "proposedUrl": "/docs/guides/frameworks/",
+          "relatedDocs": [
+            "guides/models"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "usage",
+          "title": "Token usage and activity",
+          "scope": "Reported token categories, time filters, charts, project/session counts, and missing telemetry.",
+          "currentDoc": "guides/usage",
+          "proposedUrl": "/docs/guides/usage/",
+          "relatedDocs": [
+            "tools/credentials"
+          ],
+          "contentStatus": "written"
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "title": "Research controls and context",
+      "chapters": [
+        {
+          "id": "approval-modes",
+          "title": "Permissions and approvals",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/approval-modes",
+          "proposedUrl": "/docs/guides/approval-modes/",
+          "topics": [
+            {
+              "id": "approval-modes",
+              "title": "Permission modes and approvals",
+              "scope": "Ask, auto-approve edits, and full access; inspect, allow, or deny a concrete request.",
+              "currentDoc": "guides/approval-modes",
+              "proposedUrl": "/docs/guides/approval-modes/"
+            },
+            {
+              "id": "remembered-permissions",
+              "title": "Remembered permissions",
+              "scope": "Session, project, and global scopes; inspect, revoke, and restore defaults without scope confusion.",
+              "currentDoc": "guides/approval-modes",
+              "proposedUrl": "/docs/guides/remembered-permissions/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/approval-modes",
+            "guides/approval-modes"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "planning",
+          "title": "Planning before execution",
+          "scope": "Plan-first entry, reviewing a proposed plan, feedback, approval, and continuing execution.",
+          "currentDoc": "guides/planning",
+          "proposedUrl": "/docs/guides/planning/",
+          "relatedDocs": [
+            "guides/approval-modes"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "delegation",
+          "title": "Delegation and Side Chat",
+          "scope": "Inspect framework-supported delegation, subagent activity and Side Chat advice. Specialist creation, capability binding and Reviewer details belong to the Specialists section.",
+          "currentDoc": "guides/delegation",
+          "proposedUrl": "/docs/guides/delegation/",
+          "relatedDocs": [
+            "guides/delegation"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "memory",
+          "title": "Memory and conversation context",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/memory",
+          "proposedUrl": "/docs/guides/memory/",
+          "topics": [
+            {
+              "id": "memory",
+              "title": "Memory and reusable context",
+              "scope": "Global and project notes, categories, auto-recall, manual editing, and retention when disabled.",
+              "currentDoc": "guides/memory",
+              "proposedUrl": "/docs/guides/memory/"
+            },
+            {
+              "id": "context",
+              "title": "Context, compaction, and handoffs",
+              "scope": "Inspect context use, understand retained history and compaction, and prepare a continuation or handoff.",
+              "currentDoc": "guides/delegation",
+              "proposedUrl": "/docs/guides/context/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/memory",
+            "guides/delegation"
+          ],
+          "contentStatus": "written"
+        }
+      ]
+    },
+    {
+      "id": "runtime",
+      "title": "Runtimes and connections",
+      "chapters": [
+        {
+          "id": "runtimes",
+          "title": "Python and R runtimes",
+          "scope": "Managed and external interpreters, installation, enablement, package access, and rebuild impact.",
+          "currentDoc": "guides/runtimes",
+          "proposedUrl": "/docs/guides/runtimes/",
+          "relatedDocs": [
+            "guides/runtimes"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "connectors",
+          "title": "Connectors and credentials",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/connectors",
+          "proposedUrl": "/docs/guides/connectors/",
+          "topics": [
+            {
+              "id": "connectors",
+              "title": "Connecting tools and data services",
+              "scope": "Built-in and custom MCP setup, tool availability and policy, credential binding, and connection health.",
+              "currentDoc": "guides/connectors",
+              "proposedUrl": "/docs/guides/connectors/"
+            },
+            {
+              "id": "credentials",
+              "title": "Credentials and service accounts",
+              "scope": "Device credentials, research contact details, API keys, tokens, OAuth, reuse, and removal.",
+              "currentDoc": "tools/credentials",
+              "proposedUrl": "/docs/guides/credentials/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/connectors",
+            "tools/credentials"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "network",
+          "title": "Network, proxies, and package mirrors",
+          "scope": "Network checks, Notebook allowed domains, proxy modes, package mirrors, and certificate bundles.",
+          "currentDoc": "guides/network",
+          "proposedUrl": "/docs/guides/network/",
+          "relatedDocs": [
+            "guides/remote-compute"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "remote-compute",
+          "title": "SSH hosts and Slurm setup",
+          "scope": "Host authentication, direct versus scheduler mode, resource discovery, scratch paths, and concurrency.",
+          "currentDoc": "guides/remote-compute",
+          "proposedUrl": "/docs/guides/remote-compute/",
+          "relatedDocs": [
+            "guides/remote-compute"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "remote-access",
+          "title": "Remote browser access",
+          "scope": "Remote.It prerequisites, access modes, pairing, trusted browsers, and revocation.",
+          "currentDoc": "guides/remote-access",
+          "proposedUrl": "/docs/guides/remote-access/",
+          "relatedDocs": [
+            "guides/remote-access"
+          ],
+          "contentStatus": "written"
+        }
+      ]
+    },
+    {
+      "id": "preferences",
+      "title": "Personalize and maintain",
+      "chapters": [
+        {
+          "id": "appearance",
+          "title": "Appearance and notifications",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/appearance",
+          "proposedUrl": "/docs/guides/appearance/",
+          "topics": [
+            {
+              "id": "appearance",
+              "title": "Appearance and language",
+              "scope": "System/light/dark appearance, explicit interface language, and startup language behavior.",
+              "currentDoc": "guides/storage",
+              "proposedUrl": "/docs/guides/appearance/"
+            },
+            {
+              "id": "notifications",
+              "title": "Messages and notifications",
+              "scope": "In-app messages, desktop task notifications, content visibility, delivery tests, and OS permissions.",
+              "currentDoc": "guides/storage",
+              "proposedUrl": "/docs/guides/notifications/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/storage"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "tags",
+          "title": "Organizing with tags",
+          "scope": "Create and edit tags, appearance, resource assignment, filtering, duplicate names, and deletion.",
+          "currentDoc": "guides/tags",
+          "proposedUrl": "/docs/guides/tags/",
+          "relatedDocs": [
+            "guides/tags"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "storage",
+          "title": "Storage and archived work",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/storage",
+          "proposedUrl": "/docs/guides/storage/",
+          "topics": [
+            {
+              "id": "storage",
+              "title": "Data location and disk usage",
+              "scope": "Storage categories, refresh, directory boundaries, relocation, environment rebuilds, and recovery.",
+              "currentDoc": "guides/storage",
+              "proposedUrl": "/docs/guides/storage/"
+            },
+            {
+              "id": "archived",
+              "title": "Archive, restore, and delete",
+              "scope": "Project/session archive and restore, permanent deletion, retained folders, and confirmation boundaries.",
+              "currentDoc": "guides/remote-access",
+              "proposedUrl": "/docs/guides/archived/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/storage",
+            "guides/remote-access"
+          ],
+          "contentStatus": "written"
+        }
+      ]
+    },
+    {
+      "id": "help",
+      "title": "Help and troubleshooting",
+      "chapters": [
+        {
+          "id": "shortcuts",
+          "title": "Keyboard shortcuts",
+          "scope": "Navigation, search, composer, and preview shortcuts with platform differences.",
+          "currentDoc": "guides/shortcuts",
+          "proposedUrl": "/docs/guides/shortcuts/",
+          "relatedDocs": [
+            "guides/shortcuts"
+          ],
+          "contentStatus": "written"
+        },
+        {
+          "id": "troubleshooting",
+          "title": "Troubleshooting and common questions",
+          "scope": "Review the included topics and their planned scope below.",
+          "currentDoc": "guides/troubleshooting",
+          "proposedUrl": "/docs/guides/troubleshooting/",
+          "topics": [
+            {
+              "id": "troubleshooting",
+              "title": "Troubleshooting and diagnostics",
+              "scope": "Symptom-based checks for startup, models, runtimes, files and network; collect useful diagnostics.",
+              "currentDoc": "guides/troubleshooting",
+              "proposedUrl": "/docs/guides/troubleshooting/"
+            },
+            {
+              "id": "faq",
+              "title": "Frequently asked questions",
+              "scope": "Clear answers about data ownership, account requirements, costs, offline use, and recovery; link to detailed guides.",
+              "currentDoc": "guides/troubleshooting",
+              "proposedUrl": "/docs/guides/faq/"
+            }
+          ],
+          "relatedDocs": [
+            "guides/troubleshooting"
+          ],
+          "contentStatus": "written"
+        }
+      ]
+    }
+  ]
+}

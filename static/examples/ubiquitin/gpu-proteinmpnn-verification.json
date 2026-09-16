@@ -1,0 +1,33 @@
+{
+  "input": "RCSB PDB 1UBQ, chain A",
+  "source_url": "https://files.rcsb.org/download/1UBQ.pdb",
+  "model": "ProteinMPNN vanilla v_48_020",
+  "repository_commit": "8907e6671bfbfc92303b5f79c4b5e6ce47cdef57",
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "torch": "2.5.1+cu124",
+  "model_parameter_device": "cuda:0",
+  "seed": 42,
+  "sampling_temperature": 0.1,
+  "batch_size": 1,
+  "candidate_count": 1,
+  "model_reported_generation_seconds": 0.1949,
+  "model_exit_code": 0,
+  "independent_validation_exit_code": 0,
+  "native_chain": "A",
+  "native_length": 76,
+  "native_sequence": "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG",
+  "candidate_length": 76,
+  "candidate_sequence": "MTIKVEFEDGTTLTLEVSPEDTIAELKAKIQEKTGIPPEEQRLIYKGKVLEDDKTLADYGIKEGDTIRLELVPKGG",
+  "alphabet_valid": true,
+  "matches": 42,
+  "sequence_recovery_recomputed": 0.5526315789473685,
+  "header_metrics": {
+    "score": 0.8568,
+    "global_score": 0.8568,
+    "seq_recovery": 0.5526
+  },
+  "pdb_sha256_before": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+  "pdb_sha256_after": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+  "pdb_unchanged": true,
+  "scope": "Backbone-conditioned sequence design. No folding, stability, expression or functional validation. Remote files are not automatically complete local Notebook provenance."
+}

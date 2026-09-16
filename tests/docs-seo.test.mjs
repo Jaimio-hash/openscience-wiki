@@ -6,7 +6,7 @@ import test from 'node:test';
 
 import {defaultLocale, locales} from '../i18n.config.mjs';
 
-// Run after a complete two-locale build. The override also tests Git-free builds.
+// Run after a complete all-locale build. The override also tests Git-free builds.
 const root = fileURLToPath(new URL('../', import.meta.url));
 const build = resolve(process.env.DOCS_SEO_BUILD_DIR || join(root, 'build'));
 const origin = 'https://aipoch.com';
@@ -79,6 +79,7 @@ for (const locale of locales) {
     const directory = join(root, locale === defaultLocale ? 'docs' : `i18n/${locale}/docusaurus-plugin-content-docs/current`);
     const xml = sitemaps.get(`${origin}${localeBase(locale)}sitemap.xml`);
     const entries = new Map([...xml.matchAll(/<url>(.*?)<\/url>/gs)].map(([, entry]) => [locations(entry)[0], entry]));
+    assert.ok(entries.has(`${origin}${localeBase(locale)}`), 'the documentation homepage must appear in the sitemap');
     assert.doesNotMatch(entries.get(`${origin}${localeBase(locale)}`), /<lastmod>/, 'home pages must not fall back to Git or build dates');
     for (const [url, entry] of entries) {
       if (url.includes('/category/')) assert.doesNotMatch(entry, /<lastmod>/, url);

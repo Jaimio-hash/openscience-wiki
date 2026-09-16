@@ -1,0 +1,3 @@
+# Basal lactation versus virgin sample mapping
+
+Four selected raw-count columns are mapped from the GEO sample descriptions and the primary workflow paper https://f1000research.com/articles/5-1438/v2. Control: MCL1-DG and MCL1-DH, basal virgin. Case: MCL1-DK and MCL1-DL, basal 2-day lactation. All four belong to the same basal population and sequencing lane L002; biological groups must not be inferred from count magnitude. This is a small two-versus-two exploratory contrast, not a complete factorial reanalysis or a clinically validated finding. Preserve the full original twelve-sample matrix separately.

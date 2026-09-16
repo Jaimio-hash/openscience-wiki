@@ -1,0 +1,8 @@
+{
+  "label": "Référence et dépannage",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Formats de fichiers, raccourcis, index de contrôle, architecture et dépannage."
+  }
+}

@@ -4,6 +4,7 @@ import {extname, join, relative} from 'node:path';
 const repositoryRoot = process.cwd();
 const ignoredDirectories = new Set([
   '.docusaurus',
+  '.docusaurus-build',
   '.git',
   '.playwright-cli',
   'build',
@@ -30,6 +31,8 @@ const hanCharacters = /[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]/u;
 const failures = [];
 
 async function inspectDirectory(directory) {
+  // Exported colleague handoff kits are localized artifacts, not English site sources.
+  if (relative(repositoryRoot, directory).replaceAll('\\', '/') === 'output/handoffs') return;
   const entries = await readdir(directory, {withFileTypes: true});
 
   for (const entry of entries) {

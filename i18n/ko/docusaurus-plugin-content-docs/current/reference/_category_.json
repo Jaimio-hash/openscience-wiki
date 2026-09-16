@@ -1,0 +1,8 @@
+{
+  "label": "참고 및 문제 해결",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "파일 형식, 단축키, 제어 색인, 아키텍처, 문제 해결."
+  }
+}

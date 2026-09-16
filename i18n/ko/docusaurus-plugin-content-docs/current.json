@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "다음",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Guides": {
+    "message": "사용 가이드",
+    "description": "The label for category 'Guides' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Workflows": {
+    "message": "연구 워크플로",
+    "description": "The label for category 'Workflows' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Explore tools": {
+    "message": "도구 살펴보기",
+    "description": "The label for category 'Explore tools' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Skills": {
+    "message": "Skills",
+    "description": "The label for category 'Skills' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Specialists": {
+    "message": "스페셜리스트",
+    "description": "The label for category 'Specialists' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Reference": {
+    "message": "참고 자료",
+    "description": "The label for category 'Reference' in sidebar 'tutorialSidebar'"
+  }
+}

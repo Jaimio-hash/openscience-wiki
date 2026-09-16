@@ -1,0 +1,9 @@
+# Bounded Discussion draft
+
+The completed analysis to date supports only a descriptive statement about sample-level QC variation. PCA of total raw counts, zero-count genes, and median count among detected genes retained all 12 GSE60450 samples and explained 72.03%, 21.53%, and 6.44% of standardized QC-metric variance across PC1–PC3. The largest absolute PC1 positions occurred for MCL1-LE, MCL1-LF, and MCL1-LA, but PCA position alone is not an exclusion criterion and does not identify a batch or biological effect.
+
+The retrieved literature establishes that mouse mammary epithelium is transcriptionally heterogeneous across basal/luminal compartments and developmental or reproductive stages. Single-cell studies spanning postnatal development and adult reproductive states provide relevant context for interpreting a bulk sorted-cell experiment, but they differ in platform, sampling, resolution, and developmental coverage. They therefore cannot be treated as direct replication of GSE60450.
+
+A useful next analysis would test the immunophenotype-by-stage interaction in the original counts with a count-aware factorial model. edgeR quasi-likelihood provides a plausible primary route, while voom/limma using the same design offers a method-sensitivity analysis. The requested log2(x+1) export, when available, should remain an exploratory visualization matrix and should not replace library-size normalization, mean–variance modeling, or count-based inference.
+
+The main limitations are the small apparent replicate structure, dependence on accurate sample annotation, lack of an executed expression analysis, and the bounded evidence search. No gene-level result, pathway, developmental mechanism, differential-expression claim, or clinical conclusion has been produced. Any future signal should be reported with effect sizes, uncertainty, multiplicity control, influence diagnostics, and—where possible—validation in a genuinely comparable public cohort.

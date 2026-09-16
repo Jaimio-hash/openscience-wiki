@@ -1,0 +1,8 @@
+{
+  "label": "Paramètres",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Configurer les modèles, les agents, les capacités, les permissions, les temps d'exécution, le stockage et la télécommande."
+  }
+}

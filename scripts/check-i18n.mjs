@@ -1,4 +1,4 @@
-import {existsSync, readdirSync, statSync} from 'node:fs';
+import {existsSync, readdirSync, statSync, readFileSync} from 'node:fs';
 import {dirname, relative, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -51,6 +51,20 @@ for (const locale of locales.filter((candidate) => candidate !== defaultLocale))
   ]) {
     if (!existsSync(resolve(localeRoot, requiredFile))) {
       failures.push(`[${locale}] missing interface translation: ${requiredFile}`);
+    }
+  }
+
+  // Substitution fields are code contracts, even when the surrounding copy changes.
+  for (const file of ['code.json', 'docusaurus-theme-classic/navbar.json', 'docusaurus-theme-classic/footer.json']) {
+    const sourcePath = resolve(repositoryRoot, 'i18n', defaultLocale, file);
+    const targetPath = resolve(localeRoot, file);
+    if (!existsSync(sourcePath) || !existsSync(targetPath)) continue;
+    const source = JSON.parse(readFileSync(sourcePath, 'utf8'));
+    const target = JSON.parse(readFileSync(targetPath, 'utf8'));
+    for (const [key, entry] of Object.entries(target)) {
+      if (!source[key] || key.endsWith('.plurals')) continue;
+      const fields = (text) => [...new Set(text.match(/\{\w+\}/g) ?? [])].sort().join(',');
+      if (fields(source[key].message) !== fields(entry.message)) failures.push(`[${locale}] changed substitution fields: ${file}:${key}`);
     }
   }
 }

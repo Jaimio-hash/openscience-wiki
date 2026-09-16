@@ -1,0 +1,29 @@
+{
+  "title": {
+    "message": "AIPOCH",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "AIPOCH",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Open-Science Docs": {
+    "message": "Open-Science 文件",
+    "description": "Navbar item with label Open-Science Docs"
+  },
+  "item.label.Install": {
+    "message": "安裝",
+    "description": "Navbar item with label Install"
+  },
+  "item.label.Troubleshooting": {
+    "message": "故障排查",
+    "description": "Navbar item with label Troubleshooting"
+  },
+  "item.label.Open-Science GitHub": {
+    "message": "Open-Science GitHub",
+    "description": "Navbar item with label Open-Science GitHub"
+  },
+  "item.label.Open-Science": {
+    "message": "Open-Science"
+  }
+}

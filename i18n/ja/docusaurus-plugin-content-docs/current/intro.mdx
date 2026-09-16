@@ -1,0 +1,50 @@
+---
+sidebar_position: 1
+slug: /intro
+title: "Open-Science ドキュメント"
+description: "ソースチェックガイドと実際の研究ウォークスルーでOpen-Scienceを学びます。"
+last_update:
+  date: '2026-09-16'
+---
+
+# Open-Science {/* #open-science */}
+
+Open-Scienceを使用して、研究ソースを整理し、エージェントと連携し、分析を実行し、保存した結果を検査します。
+
+## はじめに {/* #start-here */}
+
+1. [能力とサポートされた入力](./guides/capabilities.md):ファイルや研究の質問のパスを選択します。
+2. [導入事例](./guides/installation.md)と[初回設定](./guides/onboarding.md):アプリ、エージェント、モデル、ランタイムを用意します。
+3. [最初のプロジェクトと結果](./guides/first-project.md):小さなパブリックデータテーブルを開き、チェックされた要約を保存します。
+4. [権限](./guides/approval-modes.md):要求された行動を点検し、記憶されたアクセスを管理して下さい。
+5. [Notebookと実行証拠](./guides/notebook.md):コード、変数および結果の証明を調べて下さい。
+
+## 実際の研究タスクに従う {/* #follow-a-real-research-task */}
+
+| ゴール | ウォークスルー | 実証結果 |
+| --- | --- | --- |
+| 読書コレクションの準備 | [コア読書リストを作成する](./workflows/core-reading-list.md) | ライブラリ、コレクション、および添付パブリッシャーPDFでレビューされた3つのPRISMA論文 |
+| データセットの確認と要約 | [生データを再現可能な分析に変える](./workflows/data-quality.md) | GSE60450 遺伝子発現行列チェック, 12-sample QC CSV, 生計算図と方法報告 |
+
+![実際のGSE60450 RNA-seq図とOpen-Scienceのプロデューサーコード](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+
+## 細部の正しいレベルを見つける {/* #find-the-right-level-of-detail */}
+
+| セクション | それを読む |
+| --- | --- |
+| **ガイド** | ページ管理、設定、日常業務 |
+| **研究ワークフロー** | インプット、決定、成果物、受入チェックによる研究シナリオ |
+| **ツールを探す** | ツールファミリー、科学サービス、統合選択 |
+| **Skills** | 再使用可能な方法、ディレクトリおよびパッケージ管理 |
+| **スペシャリスト** | 役割、割り当てられた機能、委任およびレビュー |
+| **Reference** | 正確な制限、設定ルール、パッケージ形式、CLI/API契約および変更ログ |
+
+**Search** または **⌘K / Ctrl+K** を使用して、このドキュメントのタイトル、見出し、および本文のテキストを検索します。 アプリケーション独自の検索には、異なるスコープがあります。
+
+## 例を実行する前に {/* #before-running-an-example */}
+
+ローカルウォークスルーは、パブリックPRISMA紙とGSE60450 RNA-seqマトリックスを使用します。 リンクされた入力をダウンロードし、各タスクで必要なモデル、ランタイム、権限を確認します。
+
+[遠隔計算](./guides/remote-compute.md)は、完成したDirect SSH RNA-seq分析、出力コレクション、回復を再起動し、キャンセルを含みます。 Slurmターミナル監視は働く経理を必要とします; GPU 推論は、互換性のあるソフトウェア環境を必要とします。
+
+[リファレンス](./reference/index.md)は、技術限界と構成、リリース履歴の[変更履歴](./changelog/v0.30.1.md)に使用します。

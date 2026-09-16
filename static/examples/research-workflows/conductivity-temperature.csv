@@ -1,0 +1,27 @@
+material,temperature_K,conductivity_S_m,reported_sd_S_m,source_sheet,source_row
+AZO,275,2847,142.35,Supplementary Fig.6a,3
+AZO,280,3608,180.4,Supplementary Fig.6a,4
+AZO,290,4345,217.25,Supplementary Fig.6a,5
+AZO,300,5477,273.85,Supplementary Fig.6a,6
+AZO,310,4800,240,Supplementary Fig.6a,7
+AZO,320,5000,250,Supplementary Fig.6a,8
+AZO,330,5100,255,Supplementary Fig.6a,9
+AZO,340,5230,261.5,Supplementary Fig.6a,10
+AZO,350,6300,315,Supplementary Fig.6a,11
+AZO,360,7800,390,Supplementary Fig.6a,12
+AZO,370,8500,425,Supplementary Fig.6a,13
+AZO,380,9125,456.25,Supplementary Fig.6a,14
+AZO,390,10700,535,Supplementary Fig.6a,15
+CuI,275,1184,59.2,Supplementary Fig.6b,3
+CuI,280,1202,60.1,Supplementary Fig.6b,4
+CuI,290,1300,65,Supplementary Fig.6b,5
+CuI,300,1300,65,Supplementary Fig.6b,6
+CuI,310,1700,85,Supplementary Fig.6b,7
+CuI,320,1800,90,Supplementary Fig.6b,8
+CuI,330,2040,102,Supplementary Fig.6b,9
+CuI,340,2100,105,Supplementary Fig.6b,10
+CuI,350,2685,134.25,Supplementary Fig.6b,11
+CuI,360,3850,192.5,Supplementary Fig.6b,12
+CuI,370,4898,244.9,Supplementary Fig.6b,13
+CuI,380,5170,258.5,Supplementary Fig.6b,14
+CuI,390,6832,341.6,Supplementary Fig.6b,15

@@ -6,6 +6,7 @@
 
 # Generated files
 .docusaurus
+.docusaurus-build
 .playwright-cli
 .cache-loader
 
@@ -19,3 +20,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local verification material and internal handoffs.
+/output/
+
+# Credentials and personal application state must never be committed.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.open-science/

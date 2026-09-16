@@ -1,0 +1,8 @@
+{
+  "label": "Configuración",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Configurar modelos, agentes, capacidades, permisos, tiempos de ejecución, almacenamiento y control remoto."
+  }
+}

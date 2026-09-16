@@ -1,24 +1,33 @@
 ---
 sidebar_position: 1
-title: Complete page and control index
-description: Find every documented Open Science button, input, switch, and result by page.
+title: Page and control index
+description: Find every documented Open-Science button, input, switch, and result by page.
 last_update:
-  date: '2026-09-07'
+  date: '2026-09-15'
 ---
 
-# Complete page and control index
+# Page and control index
 
-This page condenses the application's entry points into a searchable, page-by-page list. State-dependent controls appear only when their conditions are met. Disabled means a prerequisite is missing, not that the control is unimplemented.
+This page condenses the application's entry points into a searchable, page-by-page list. State-dependent controls appear only when their conditions are met. If a control is disabled, read its tooltip and the relevant known issues; possible causes include session state, missing prerequisites and a product defect.
+
+
+<span id="current-verification-coverage" />
+
+## Find the detailed instructions
+
+Use this index to locate a control. Follow the linked tutorial for prerequisites, steps, expected results and known issues. See [Settings overview](../settings/overview.md) for the settings panels, [task shortcuts](controls.md) for common actions, and [Troubleshooting](../guides/troubleshooting.md) for errors.
 
 ## Onboarding
 
-| Page | Controls | Result or prerequisite |
+| Page, in wizard order | Controls | Result or prerequisite |
 | --- | --- | --- |
-| Environment | Check rows, Retry/Continue | Shows System, Storage, Secure vault, and Install network; a blocking failure prevents Continue |
-| Agent | Framework card, Install, Active, Back/Continue | Install or select an agent runtime |
-| Model | Provider type/name, Endpoint/Base URL, API format, key, model, context, Images, Reasoning, Test, Add | Continue after Test succeeds and a working model is available |
-| Notebook | Python/R switch, Add interpreter, Download and set up, Packages | Select an execution environment for the agent; this step can be completed later |
-| Location | Location, Browse, Back, Finish | Write the data root and complete onboarding |
+| Environment | Check again, Continue, check rows | Recheck host requirements; continue after passing |
+| Data location | Browse…, Use default location instead, Back, Continue | Choose the data location; a custom choice requires Keep default or Restart confirmation |
+| Agent runtime | Framework card, Install, Re-detect, Back, Continue | Install or select a ready active runtime |
+| Model provider | Provider type, authentication choice, conditional fields, Test & continue | Validate required inputs and test the provider before advancing |
+| Notebook runtime | Interpreter controls, environment setup, Packages, Back, Finish | Optional setup; finish or cancel an environment operation already in progress before leaving |
+
+See [First-time setup](../guides/onboarding.md) and [Provider configuration](../guides/providers.md) for the detailed walkthroughs.
 
 ## Home and projects
 
@@ -27,7 +36,7 @@ This page condenses the application's entry points into a searchable, page-by-pa
 | Home header | GitHub, Search, Library, Theme, Messages, Model settings | Open the repository, global search, literature library, appearance menu, notifications, or Model settings |
 | Home body | New project, project card, Recent session | Create or open a project or session |
 | Theme menu | System, Light, Dark | Set appearance and keep it in sync with General |
-| Search | Search input, result item, Esc | Find and open a project, session, or file |
+| Search | Search input, category, Advanced filters, result detail, Esc | [Find messages, files and references](../guides/navigation.md) with the intended scope |
 | Messages | Notification item, read action, Close | Open the source and manage unread items |
 | Create project | Name, Description, Agent Context, Cancel, Create project | Create a project; Name is required |
 | Project actions | State-dependent Edit, Archive, Delete, and related actions | Change project metadata, archive the project, or confirm deletion |
@@ -44,7 +53,7 @@ This page condenses the application's entry points into a searchable, page-by-pa
 | Files | Show the project files panel on the right |
 | Library | Open project-linked references in the literature library |
 | Session row | Switch sessions; status reports Idle, Running, Permission, or another state |
-| Session actions | Pin/Unpin, Rename, View notebook, Archive, Delete |
+| Session actions | Pin/Unpin, Edit…, Download all artifacts, View notebook, Export conversation…, Archive, Delete |
 | Messages, Settings, GitHub | Open notifications, settings, or the official repository |
 | Resize left/right, Collapse preview | Resize a panel or collapse Preview |
 
@@ -69,7 +78,7 @@ This page condenses the application's entry points into a searchable, page-by-pa
 | Surface | Controls | Result |
 | --- | --- | --- |
 | Permission | Impact info, Permission info, expandable Skill document, Allow once, Deny | Inspect and approve or reject a single request |
-| Scope confirmation | Cancel, Confirm session/project/global | Save a broader grant; broad scopes require a second confirmation |
+| Scope confirmation | Cancel, Confirm project/global | Save a broader grant; broad scopes require a second confirmation |
 | Plan | Approve/Run, Feedback input, Cancel | Accept a plan, ask for changes, or cancel |
 | Elicitation | Structured input or options, Submit, Cancel | Answer an agent question |
 | Subagent permission | Identity/pending count, Allow/Deny | Decide a subagent request separately |
@@ -118,9 +127,16 @@ This page condenses the application's entry points into a searchable, page-by-pa
 | Provenance tabs | Code, Execution Log, Messages, Environment, Review | Change the evidence type |
 | Code | Generate script, Download, Copy | Create a derived script or save the producer block |
 
+## Bookmarks and side discussions
+
+| Entry | Controls and behavior |
+| --- | --- |
+| Private reading bookmark | Selection → For me → Bookmark; Composer Bookmarks opens the list. Edit notes, return to the source or remove the bookmark. [Details](../guides/bookmarks.md) |
+| Side Chat tab | Independent tab and follow-up draft; annotation transfer; cancellation and destructive-close confirmation. [Details](../guides/delegation.md) |
+
 ## Global Settings controls
 
-`Back`, `Forward`, breadcrumbs, `Maximize/Restore`, `Close settings`, mobile navigation, and error `Dismiss` apply throughout Settings.
+**Search settings** navigates across the four panel groups. `Back`, `Forward`, breadcrumbs, `Maximize/Restore`, `Close settings`, mobile navigation and error `Dismiss` apply throughout Settings. See [Settings overview](../settings/overview.md) for groups and search shortcuts.
 
 ### Skills
 

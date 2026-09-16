@@ -1,0 +1,50 @@
+---
+sidebar_position: 1
+slug: /intro
+title: "Open-Science 문서"
+description: "소스 검사 가이드와 실제 연구 연습으로 Open-Science 알아보기."
+last_update:
+  date: '2026-09-16'
+---
+
+# Open-Science {/* #open-science */}
+
+Open-Science을 사용하여 연구 소스를 구성하고, 대리인과 일하고, 분석을 실행하고 저장된 결과를 검사하십시오.
+
+## 현재 위치 {/* #start-here */}
+
+1. [기능 및 지원된 입력](./guides/capabilities.md): 파일이나 연구문제에 대한 경로를 선택합니다.
+2. [설치하기](./guides/installation.md) 및 [첫째 시간 설정](./guides/onboarding.md) : 앱, 에이전트, 모델 및 런타임을 준비합니다.
+3. [첫 번째 프로젝트 및 결과](./guides/first-project.md): 작은 공공 데이터 테이블을 열고 체크된 요약을 저장합니다.
+4. [권한](./guides/approval-modes.md): 요청된 행동을 검사하고 기억된 접근을 관리하십시오.
+5. [Notebook 및 실행 증거](./guides/notebook.md) : 코드, 변수 및 결과 검증을 검사합니다.
+
+## 실제 연구 작업을 따르십시오. {/* #follow-a-real-research-task */}
+
+| 이름 &#42; | 채용 정보 | 데모 결과 |
+| --- | --- | --- |
+| 독서 수집 준비 | [핵심 판독 목록 구축](./workflows/core-reading-list.md) | 도서관, 수집 및 첨부 된 출판사 PDF에 검토 된 3 PRISMA 종이 |
+| dataset 확인 및 요약 | [raw data를 reproducible 분석으로 전환](./workflows/data-quality.md) | GSE60450 유전자 압축 매트릭스 검사, 12 샘플 QC CSV, 원시 수치 및 방법 보고서 |
+
+![실제 GSE60450 RNA-seq 수치 및 프로듀서 코드 Open-Science](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+
+## 세부의 올바른 수준 찾기 {/* #find-the-right-level-of-detail */}
+
+| 이름 &#42; | 읽기 |
+| --- | --- |
+| **사용 가이드** | 페이지 제어, 설정 및 일상 작업 |
+| **연구 워크플로** | 입력, 결정, 전달 및 합격 확인을 가진 연구 시나리오 |
+| **도구 살펴보기** | 도구 가족, 과학 서비스 및 통합 선택 |
+| **Skills** | 재사용 가능한 방법, 디렉토리 및 패키지 관리 |
+| **스페셜리스트** | 역할, 할당된 기능, 위임 및 검토 |
+| **Reference** | 정확한 제한, 구성 규칙, 패키지 형식, CLI/API 계약 및 변경 로그 |
+
+**Search** 또는 **⌘K / Ctrl + K**을 사용하여 이 문서의 제목, 제목 및 본문을 검색하십시오. 응용 프로그램의 자체 검색에는 다른 범위가 있습니다.
+
+## 예제 실행하기 전에 {/* #before-running-an-example */}
+
+Local walkthroughs use public PRISMA 종이와 GSE60450 RNA-seq 매트릭스. 연결된 입력을 다운로드하고 각 작업에 필요한 모델, 실행 시간 및 권한을 확인합니다.
+
+[먼 compute](./guides/remote-compute.md)은 완료된 Direct SSH RNA-seq 분석, 출력 수집, 재시작 복구 및 취소를 포함합니다. Slurm 단자 감시는 회계 업무를 필요로 합니다; GPU inference는 호환성 소프트웨어 환경을 필요로 합니다.
+
+기술 제한 및 구성에 대한 [참고 자료](./reference/index.md) 및 릴리스 역사를 위해 [관련 링크](./changelog/v0.30.1.md)을 사용하십시오.

@@ -1,0 +1,1608 @@
+{
+  "homepage.steps.install.title": {
+    "message": "Установить Open-Science"
+  },
+  "homepage.steps.install.description": {
+    "message": "Выберите свою операционную систему."
+  },
+  "homepage.steps.setup.title": {
+    "message": "Настройте свое рабочее пространство"
+  },
+  "homepage.steps.setup.description": {
+    "message": "Подключите модель и подготовьте время выполнения."
+  },
+  "homepage.steps.firstResult.title": {
+    "message": "Создайте свой первый результат"
+  },
+  "homepage.steps.firstResult.description": {
+    "message": "Следуйте за проектом от ввода к сохраненному выходу."
+  },
+  "homepage.sections.guides.title": {
+    "message": "Руководства"
+  },
+  "homepage.sections.guides.description": {
+    "message": "Проекты, разговоры, файлы и настройки рабочего пространства."
+  },
+  "homepage.sections.workflows.title": {
+    "message": "Исследовательские процессы"
+  },
+  "homepage.sections.workflows.description": {
+    "message": "Следуйте рабочим примерам с реальными данными исследований."
+  },
+  "homepage.sections.tools.title": {
+    "message": "Обзор инструментов"
+  },
+  "homepage.sections.tools.description": {
+    "message": "Найдите базы данных, проверьте файлы и запустите вычисления."
+  },
+  "homepage.sections.skills.title": {
+    "message": "Skills"
+  },
+  "homepage.sections.skills.description": {
+    "message": "Найти, использовать и создать многоразовые методы исследования."
+  },
+  "homepage.sections.specialists.title": {
+    "message": "Специалисты"
+  },
+  "homepage.sections.specialists.description": {
+    "message": "Делегировать целенаправленные задачи и анализировать результаты."
+  },
+  "homepage.sections.reference.title": {
+    "message": "Справочник"
+  },
+  "homepage.sections.reference.description": {
+    "message": "Посмотрите элементы управления, форматы файлов, CLI и API."
+  },
+  "homepage.topics.reproducibility": {
+    "message": "Воспроизводимость"
+  },
+  "homepage.topics.packages": {
+    "message": "Исследовательские пакеты .science"
+  },
+  "homepage.topics.marketplace": {
+    "message": "Каталог Skills"
+  },
+  "homepage.meta.title": {
+    "message": "Документация Open-Science"
+  },
+  "homepage.meta.description": {
+    "message": "Руководство по эксплуатации, конфигурации и воспроизводимости исследований для AIPOCH Open-Science"
+  },
+  "homepage.eyebrow": {
+    "message": "Документация"
+  },
+  "homepage.introduction": {
+    "message": "Настройте свое рабочее пространство, работайте с данными исследований, проверяйте и делитесь результатами."
+  },
+  "homepage.readDocs": {
+    "message": "Прочитайте документацию"
+  },
+  "homepage.troubleshooting": {
+    "message": "устранение неполадок"
+  },
+  "homepage.startHeading": {
+    "message": "Начните здесь"
+  },
+  "homepage.browseHeading": {
+    "message": "Исследуйте документацию"
+  },
+  "homepage.topicsHeading": {
+    "message": "Иди дальше."
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "Найден {count} результат|Найдено {count} результата|Найдено {count} результатов"
+  },
+  "docs.platform.label": {
+    "message": "Платформа"
+  },
+  "docs.platform.hint": {
+    "message": "Ваш выбор хранится в разных главах."
+  },
+  "docs.guides.outline.reproducibility.title": {
+    "message": "Воспроизводимость"
+  },
+  "docs.guides.outline.reproducibility.scope": {
+    "message": "Перезаписывайте шаги исследования, сравнивайте версии результатов и сохраняйте записи проверки."
+  },
+  "docs.guides.outline.research-packages.title": {
+    "message": "Исследовательские пакеты .science"
+  },
+  "docs.guides.outline.research-packages.scope": {
+    "message": "Экспорт, импорт и проверка переносных ветвей разговора, файлов и доказательств."
+  },
+  "docs.outline.skills.marketplace.title": {
+    "message": "Каталог Skills"
+  },
+  "docs.outline.skills.marketplace.scope": {
+    "message": "Найти, установить, обновить и управлять методами исследования с рынка."
+  },
+  "docs.guides.outline.bookmarks.title": {
+    "message": "Личные закладки для чтения"
+  },
+  "docs.guides.outline.bookmarks.scope": {
+    "message": "Сохраните личные места для чтения и области PDF, управляйте заметками и возвращайтесь к их источнику."
+  },
+  "docs.outline.reference.v0300.title": {
+    "message": "v0.30.0"
+  },
+  "docs.outline.reference.v0300.scope": {
+    "message": "Частные закладки, независимые вкладки Side Chat, поиск настроек и извлеченные доказательства PDF."
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Навигационная цепочка текущей страницы"
+  },
+  "docs.sections.label": {
+    "message": "Разделы документации"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Результаты поиска для \"{query}\"",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Поиск документации",
+    "description": "The search page title for empty query"
+  },
+  "docs.ui.searchIndex": {
+    "message": "Open-Science / Индекс документации"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "Повсюду"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Никаких документов обнаружено не было",
+    "description": "The paragraph for empty search result"
+  },
+  "docs.ui.moreResults": {
+    "message": "Показать больше результатов"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "На странице произошёл сбой."
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Прокрутка к началу"
+  },
+  "theme.blog.archive.title": {
+    "message": "Архив"
+  },
+  "theme.blog.archive.description": {
+    "message": "Архив"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Навигация по странице списка блогов"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Следующие записи"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Предыдущие записи"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Посмотреть все теги"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Навигация по странице поста блога"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Следующий пост"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Предыдущий пост"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "режим работы системы",
+    "description": "The name for the system color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "Светлый режим"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "Тёмный режим"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Переключение между темным и светлым режимом (сейчас используется {mode})"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Страница документа"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Предыдущая страница"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Следующая страница"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Одна страница|{count} страницы|{count} страниц"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} с тегом \"{tagName}\""
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Версия: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "Это документация для будущей версии {siteTitle} {versionLabel}."
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "Это документация {siteTitle} для версии {versionLabel}, которая уже не поддерживается."
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "Актуальная документация находится на странице {latestVersionLink} ({versionLabel})."
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "последней версии"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Прямая ссылка на {heading}"
+  },
+  "theme.common.editThisPage": {
+    "message": "Отредактировать эту страницу"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " {date}"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " от {user}"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Последнее обновление{atDate}{byUser}"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Версии"
+  },
+  "theme.NotFound.title": {
+    "message": "Страница не найдена"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Теги:"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Закрыть"
+  },
+  "theme.admonition.caution": {
+    "message": "предупреждение"
+  },
+  "theme.admonition.danger": {
+    "message": "осторожно"
+  },
+  "theme.admonition.info": {
+    "message": "к сведению"
+  },
+  "theme.admonition.note": {
+    "message": "примечание"
+  },
+  "theme.admonition.tip": {
+    "message": "подсказка"
+  },
+  "theme.admonition.warning": {
+    "message": "предупреждение",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Навигация по последним постам в блоге"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Расширение боковой панели категории «{label}»",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Коллапс боковой панели категории «{label}»",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(открывается в новой вкладке)",
+    "description": "The ARIA label for the external link icon"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Основная навигация"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Языки"
+  },
+  "theme.NotFound.p1": {
+    "message": "К сожалению, мы не смогли найти запрашиваемую вами страницу."
+  },
+  "theme.NotFound.p2": {
+    "message": "Пожалуйста, обратитесь к владельцу сайта, с которого вы перешли на эту ссылку, чтобы сообщить ему, что ссылка не работает."
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "Содержание этой страницы"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Читать дальше"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "Подробнее о {title}"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "{readingTime} мин. чтения|{readingTime} мин. чтения|{readingTime} мин. чтения"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Скопировать"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Скопировано"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Скопировать в буфер обмена"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Переключить перенос по строкам"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Главная страница"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Свернуть сайдбар"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Свернуть сайдбар"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Док сайдбар",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Расширить выпадающий",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Скачать Collapse The Dropdown",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Закрыть панель навигации"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Перейти к главному меню"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Переключить навигационную панель"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Развернуть сайдбар"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Развернуть сайдбар"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Нет результатов"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Посмотреть все результаты за пределами \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Посмотреть все результаты в разделе «{context}»"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Смотреть все результаты"
+  },
+  "theme.SearchBar.label": {
+    "message": "Поиск",
+    "description": "The ARIA label and placeholder for search button"
+  },
+  "theme.blog.post.plurals": {
+    "message": "{count} запись|{count} записи|{count} записей"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} с тегом \"{tagName}\""
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Авторы",
+    "description": "The title of the authors page"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "View All Authors"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "Этот автор пока не написал никаких постов.",
+    "description": "The text for authors with 0 blog post"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Незарегистрированная страница",
+    "description": "The unlisted content banner title"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "Эта страница не включена в список. Поисковые системы не будут индексировать его, и только пользователи, имеющие прямую ссылку, могут получить к нему доступ.",
+    "description": "The unlisted content banner message"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Проект страницы",
+    "description": "The draft content banner title"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "Эта страница — черновик. Он будет виден только на девайсе и будет исключен из производственного корпуса.",
+    "description": "The draft content banner message"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "{count} элемент|{count} элемента|{count} элементов"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Попробуйте ещё раз"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Перейти к основному содержимому"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Теги"
+  },
+  "docs.guides.outline.overview": {
+    "message": "Обзор Open-Science"
+  },
+  "docs.guides.outline.group.start": {
+    "message": "Начните здесь"
+  },
+  "docs.guides.outline.capabilities.title": {
+    "message": "Возможности и вспомогательные материалы"
+  },
+  "docs.guides.outline.capabilities.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.capabilities.topic.capabilities.title": {
+    "message": "Что может сделать Open-Science"
+  },
+  "docs.guides.outline.capabilities.topic.capabilities.scope": {
+    "message": "Поддерживаемая исследовательская деятельность, локальная модель рабочего пространства и с чего начать каждый вход или цель."
+  },
+  "docs.guides.outline.capabilities.topic.source-types.title": {
+    "message": "Поддерживаемые файлы и данные"
+  },
+  "docs.guides.outline.capabilities.topic.source-types.scope": {
+    "message": "Принятые входные данные, читаемые форматы и форматы исполнения и подготовка перед импортом."
+  },
+  "docs.guides.outline.installation.title": {
+    "message": "Установка и обновления"
+  },
+  "docs.guides.outline.installation.scope": {
+    "message": "Системные требования, установка рабочего стола, сборки источников, проверки обновлений и выбор версии."
+  },
+  "docs.guides.outline.onboarding.title": {
+    "message": "Первый раз установка"
+  },
+  "docs.guides.outline.onboarding.scope": {
+    "message": "Проверки окружающей среды, местоположение данных, время выполнения агента, доступ к модели и настройка Notebook в заказе мастера."
+  },
+  "docs.guides.outline.first-project.title": {
+    "message": "Ваш первый проект и результат"
+  },
+  "docs.guides.outline.first-project.scope": {
+    "message": "Маленькая первая задача от создания проекта до сохраненного результата и четкой проверки успеха."
+  },
+  "docs.guides.outline.group.workspace": {
+    "message": "Ваше рабочее пространство"
+  },
+  "docs.guides.outline.navigation.title": {
+    "message": "Навигация и поиск"
+  },
+  "docs.guides.outline.navigation.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.navigation.topic.navigation.title": {
+    "message": "Домашняя и навигация"
+  },
+  "docs.guides.outline.navigation.topic.navigation.scope": {
+    "message": "Домашние записи, макет рабочего пространства, панели боковой панели, изменение размера и возвращение к проектам."
+  },
+  "docs.guides.outline.navigation.topic.search.title": {
+    "message": "Поиск проектов, сессий и файлов"
+  },
+  "docs.guides.outline.navigation.topic.search.scope": {
+    "message": "Глобальный поиск, типы результатов, открытие результата и отличие от фильтров панельного уровня."
+  },
+  "docs.guides.outline.projects.title": {
+    "message": "Проекты и исходные папки"
+  },
+  "docs.guides.outline.projects.scope": {
+    "message": "Создание и редактирование проектов, описания проектов и контекста агента, выбор папок и область доступа."
+  },
+  "docs.guides.outline.sessions.title": {
+    "message": "Сессии и отделения"
+  },
+  "docs.guides.outline.sessions.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.sessions.topic.sessions.title": {
+    "message": "Создание и управление сессиями"
+  },
+  "docs.guides.outline.sessions.topic.sessions.scope": {
+    "message": "Начать, переключать, переименовывать и пин-сессии; Отличие проекта от его разговоров."
+  },
+  "docs.guides.outline.sessions.topic.revisions.title": {
+    "message": "Пересмотр сообщений и ветви"
+  },
+  "docs.guides.outline.sessions.topic.revisions.scope": {
+    "message": "Редактируйте предыдущее сообщение, просматривайте изменения, разветвляйте разговор и понимайте сохраненный контекст."
+  },
+  "docs.guides.outline.composer.title": {
+    "message": "Разговоры и запросы в очереди"
+  },
+  "docs.guides.outline.composer.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.composer.topic.composer.title": {
+    "message": "Спокойствия, привязанности и упоминания"
+  },
+  "docs.guides.outline.composer.topic.composer.scope": {
+    "message": "Составьте запрос, приложите входные данные, выберите Skills и справочные файлы или сеансы перед отправкой."
+  },
+  "docs.guides.outline.composer.topic.follow-ups.title": {
+    "message": "Последующие меры и очередь задач"
+  },
+  "docs.guides.outline.composer.topic.follow-ups.scope": {
+    "message": "Очередь, редактирование, переупорядочение, отправка и прекращение запросов; Объясните, что происходит после перерыва."
+  },
+  "docs.guides.outline.group.files": {
+    "message": "Файлы, литература и результаты"
+  },
+  "docs.guides.outline.files.title": {
+    "message": "Файлы, артефакты и версии"
+  },
+  "docs.guides.outline.files.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.files.topic.files.title": {
+    "message": "Файлы проекта и загрузка"
+  },
+  "docs.guides.outline.files.topic.files.scope": {
+    "message": "Загрузить против ссылки на папку, поиск файлов и макеты, копии проектов и места загрузки."
+  },
+  "docs.guides.outline.files.topic.artifacts.title": {
+    "message": "Артефакты и версии файлов"
+  },
+  "docs.guides.outline.files.topic.artifacts.scope": {
+    "message": "Отличить загрузку и сгенерированные артефакты; Проверьте сохраненные изменения, отредактируйте поддерживаемые управляемые файлы, сравните поддерживаемый текст или изменения Markdown и экспортируйте результаты."
+  },
+  "docs.guides.outline.previews.title": {
+    "message": "Открытие и предварительный просмотр файлов"
+  },
+  "docs.guides.outline.previews.scope": {
+    "message": "Разделенные и полноэкранные предварительные просмотры, поддерживаемые зрители, вкладки и элементы управления для конкретного формата."
+  },
+  "docs.guides.outline.library.title": {
+    "message": "Библиотека литературы и цитаты"
+  },
+  "docs.guides.outline.library.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.library.topic.library.title": {
+    "message": "Ссылки и коллекции"
+  },
+  "docs.guides.outline.library.topic.library.scope": {
+    "message": "Добавляйте и импортируйте записи, коллекции, ссылки на проекты, теги, дубликаты, мусор и восстановление."
+  },
+  "docs.guides.outline.library.topic.reading.title": {
+    "message": "Чтение статей и цитат"
+  },
+  "docs.guides.outline.library.topic.reading.scope": {
+    "message": "Вложения PDF, метаданные и полнотекстовый поиск, состояние чтения, стили цитирования, копирование и экспорт."
+  },
+  "docs.guides.outline.notebook.title": {
+    "message": "Notebook и доказательства казни"
+  },
+  "docs.guides.outline.notebook.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.notebook.topic.notebook.title": {
+    "message": "Сессия Notebook"
+  },
+  "docs.guides.outline.notebook.topic.notebook.scope": {
+    "message": "Выполненные Python, R и Bash единицы, выходы, переменные, ядра, остановка и экспорт ноутбуков."
+  },
+  "docs.guides.outline.notebook.topic.provenance.title": {
+    "message": "Проверка происхождения артефакта"
+  },
+  "docs.guides.outline.notebook.topic.provenance.scope": {
+    "message": "Проверять доступные ссылки на исходные сообщения, код, загрузку ноутбука и просматривать доказательства для версии; Объясните отсутствие доказательств и формат-зависимое освещение."
+  },
+  "docs.guides.outline.group.models": {
+    "message": "Модели и агенты"
+  },
+  "docs.guides.outline.models.title": {
+    "message": "Модели и политика в отношении задач"
+  },
+  "docs.guides.outline.models.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.models.topic.models.title": {
+    "message": "Модели и поставщики"
+  },
+  "docs.guides.outline.models.topic.models.scope": {
+    "message": "Различия между провайдером, моделью, агентом и Specialist; Выберите активную модель и усилие."
+  },
+  "docs.guides.outline.models.topic.scenario-models.title": {
+    "message": "Модели для разных задач"
+  },
+  "docs.guides.outline.models.topic.scenario-models.scope": {
+    "message": "Main, Subagent, Reviewer, Vision и Session подробно описывают политику, наследование и совместимые варианты."
+  },
+  "docs.guides.outline.providers.title": {
+    "message": "Поставщик и локальная настройка модели"
+  },
+  "docs.guides.outline.providers.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.providers.topic.providers.title": {
+    "message": "Подключение поставщика моделей"
+  },
+  "docs.guides.outline.providers.topic.providers.scope": {
+    "message": "Предустановки провайдера, вход в подписку или доступ API, пользовательские конечные точки, требуемые поля и тесты подключения."
+  },
+  "docs.guides.outline.providers.topic.local-models.title": {
+    "message": "Использование локальных моделей"
+  },
+  "docs.guides.outline.providers.topic.local-models.scope": {
+    "message": "Совместимые локальные конечные точки, идентификаторы моделей, ограничения возможностей и проверка соединения."
+  },
+  "docs.guides.outline.frameworks.title": {
+    "message": "Установка и переключение агентов"
+  },
+  "docs.guides.outline.frameworks.scope": {
+    "message": "Рамочная установка, обнаружение, аутентификация, активация, переключение, ремонт и удаление."
+  },
+  "docs.guides.outline.usage.title": {
+    "message": "Использование и активность токенов"
+  },
+  "docs.guides.outline.usage.scope": {
+    "message": "Сообщаемые категории токенов, временные фильтры, диаграммы, подсчеты проектов / сессий и отсутствующая телеметрия."
+  },
+  "docs.guides.outline.group.control": {
+    "message": "Научный контроль и контекст"
+  },
+  "docs.guides.outline.approval-modes.title": {
+    "message": "Разрешения и утверждения"
+  },
+  "docs.guides.outline.approval-modes.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.approval-modes.topic.approval-modes.title": {
+    "message": "Режимы разрешений и утверждения"
+  },
+  "docs.guides.outline.approval-modes.topic.approval-modes.scope": {
+    "message": "Запросите, автоматически подтвердите правки и полный доступ; Проверить, разрешить или отклонить конкретный запрос."
+  },
+  "docs.guides.outline.approval-modes.topic.remembered-permissions.title": {
+    "message": "Запомненные разрешения"
+  },
+  "docs.guides.outline.approval-modes.topic.remembered-permissions.scope": {
+    "message": "Сессия, проект и глобальные масштабы; проверять, отменять и восстанавливать дефолты без путаницы."
+  },
+  "docs.guides.outline.planning.title": {
+    "message": "Планирование перед исполнением"
+  },
+  "docs.guides.outline.planning.scope": {
+    "message": "План-первая запись, рассмотрение предлагаемого плана, обратная связь, утверждение и продолжение исполнения."
+  },
+  "docs.guides.outline.delegation.title": {
+    "message": "Делегирование и Side Chat"
+  },
+  "docs.guides.outline.delegation.scope": {
+    "message": "Проверка поддерживаемых рамками делегаций, деятельности субагентов и рекомендаций Side Chat. Создание Specialist, связывание возможностей и детали Рецензента относятся к разделу «Специалисты»."
+  },
+  "docs.guides.outline.memory.title": {
+    "message": "Память и контекст разговора"
+  },
+  "docs.guides.outline.memory.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.memory.topic.memory.title": {
+    "message": "Память и контекст многоразового использования"
+  },
+  "docs.guides.outline.memory.topic.memory.scope": {
+    "message": "Глобальные и проектные заметки, категории, автоматический вызов, ручное редактирование и удержание при отключении."
+  },
+  "docs.guides.outline.memory.topic.context.title": {
+    "message": "Контекст, уплотнение и передача"
+  },
+  "docs.guides.outline.memory.topic.context.scope": {
+    "message": "Осмотрите использование контекста, поймите сохраненную историю и уплотнение и подготовьте продолжение или передачу."
+  },
+  "docs.guides.outline.group.runtime": {
+    "message": "Время выполнения и соединения"
+  },
+  "docs.guides.outline.runtimes.title": {
+    "message": "Python и R Runtimes"
+  },
+  "docs.guides.outline.runtimes.scope": {
+    "message": "Управляемые и внешние интерпретаторы, установка, включение, доступ к пакету и восстановление воздействия."
+  },
+  "docs.guides.outline.connectors.title": {
+    "message": "Коннекторы и учетные данные"
+  },
+  "docs.guides.outline.connectors.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.connectors.topic.connectors.title": {
+    "message": "Подключение инструментов и услуг передачи данных"
+  },
+  "docs.guides.outline.connectors.topic.connectors.scope": {
+    "message": "Встроенная и настраиваемая настройка MCP, доступность инструментов и политика, связывание учетных данных и здоровье соединения."
+  },
+  "docs.guides.outline.connectors.topic.credentials.title": {
+    "message": "Полномочия и служебные счета"
+  },
+  "docs.guides.outline.connectors.topic.credentials.scope": {
+    "message": "Учетные данные устройства, контактные данные исследования, ключи API, токены, OAuth, повторное использование и удаление."
+  },
+  "docs.guides.outline.network.title": {
+    "message": "Сеть, прокси и зеркала пакетов"
+  },
+  "docs.guides.outline.network.scope": {
+    "message": "Сетевые проверки, Notebook разрешали домены, прокси-режимы, зеркала пакетов и пакеты сертификатов."
+  },
+  "docs.guides.outline.remote-compute.title": {
+    "message": "SSH-хосты и настройка Slurm"
+  },
+  "docs.guides.outline.remote-compute.scope": {
+    "message": "Аутентификация хоста, режим прямого против планировщика, обнаружение ресурсов, пути царапин и параллелизм."
+  },
+  "docs.guides.outline.remote-access.title": {
+    "message": "Удалённый доступ через браузер"
+  },
+  "docs.guides.outline.remote-access.scope": {
+    "message": "Предпосылки Remote.It, режимы доступа, сопряжение, доверенные браузеры и отзыв."
+  },
+  "docs.guides.outline.group.preferences": {
+    "message": "Персонализировать и поддерживать"
+  },
+  "docs.guides.outline.appearance.title": {
+    "message": "Внешний вид и уведомления"
+  },
+  "docs.guides.outline.appearance.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.appearance.topic.appearance.title": {
+    "message": "Внешний вид и язык"
+  },
+  "docs.guides.outline.appearance.topic.appearance.scope": {
+    "message": "Внешний вид системы / свет / темнота, явный язык интерфейса и поведение языка запуска."
+  },
+  "docs.guides.outline.appearance.topic.notifications.title": {
+    "message": "Сообщения и уведомления"
+  },
+  "docs.guides.outline.appearance.topic.notifications.scope": {
+    "message": "Сообщения в приложении, уведомления о задачах рабочего стола, видимость контента, тесты доставки и разрешения ОС."
+  },
+  "docs.guides.outline.tags.title": {
+    "message": "Организация с тегами"
+  },
+  "docs.guides.outline.tags.scope": {
+    "message": "Создавайте и редактируйте теги, внешний вид, назначение ресурсов, фильтрацию, дублирование имен и удаление."
+  },
+  "docs.guides.outline.storage.title": {
+    "message": "Хранение и архивная работа"
+  },
+  "docs.guides.outline.storage.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.storage.topic.storage.title": {
+    "message": "Местоположение данных и использование дисков"
+  },
+  "docs.guides.outline.storage.topic.storage.scope": {
+    "message": "Категории хранения, обновление, границы каталогов, перемещение, восстановление окружающей среды и восстановление."
+  },
+  "docs.guides.outline.storage.topic.archived.title": {
+    "message": "Архив, восстановление и удаление"
+  },
+  "docs.guides.outline.storage.topic.archived.scope": {
+    "message": "Архив и восстановление проекта/сессии, постоянное удаление, сохраненные папки и границы подтверждения."
+  },
+  "docs.guides.outline.group.help": {
+    "message": "Помощь и устранение проблем"
+  },
+  "docs.guides.outline.shortcuts.title": {
+    "message": "Ярлыки клавиатуры"
+  },
+  "docs.guides.outline.shortcuts.scope": {
+    "message": "Навигация, поиск, композитор и ярлыки предварительного просмотра с различиями платформы."
+  },
+  "docs.guides.outline.troubleshooting.title": {
+    "message": "Устранение неполадок и общие вопросы"
+  },
+  "docs.guides.outline.troubleshooting.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.guides.outline.troubleshooting.topic.troubleshooting.title": {
+    "message": "Устранение неполадок и диагностика"
+  },
+  "docs.guides.outline.troubleshooting.topic.troubleshooting.scope": {
+    "message": "Проверки на основе симптомов для запуска, моделей, времени выполнения, файлов и сети; Соберите полезную диагностику"
+  },
+  "docs.guides.outline.troubleshooting.topic.faq.title": {
+    "message": "Часто задаваемые вопросы"
+  },
+  "docs.guides.outline.troubleshooting.topic.faq.scope": {
+    "message": "Четкие ответы о владении данными, требованиях к учетной записи, расходах, автономном использовании и восстановлении; Ссылка на подробные руководства."
+  },
+  "docs.outline.workflows.overview": {
+    "message": "Обзор Open-Science"
+  },
+  "docs.outline.workflows.scope": {
+    "message": "Исследуйте ситуации с определенной отправной точкой и результатами; Интерфейсные операции относятся к каждому сценарию."
+  },
+  "docs.outline.workflows.group.start": {
+    "message": "Выберите рабочий процесс"
+  },
+  "docs.outline.workflows.cookbook.title": {
+    "message": "Поваренная книга Workflow"
+  },
+  "docs.outline.workflows.cookbook.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.cookbook.topic.cookbook.title": {
+    "message": "Поваренная книга Workflow"
+  },
+  "docs.outline.workflows.cookbook.topic.cookbook.scope": {
+    "message": "Выберите по исследовательскому вопросу, типу входа, ожидаемому выходу и доступным ресурсам."
+  },
+  "docs.outline.workflows.cookbook.topic.first-analysis.title": {
+    "message": "Ваш первый воспроизводимый анализ"
+  },
+  "docs.outline.workflows.cookbook.topic.first-analysis.scope": {
+    "message": "Небольшой пример CSV от импорта до проверки, выполнения, сохраненной фигуры и повторной проверки."
+  },
+  "docs.outline.workflows.group.library": {
+    "message": "Создайте свою исследовательскую коллекцию"
+  },
+  "docs.outline.workflows.build-library.title": {
+    "message": "Создайте основной список чтения для новой темы исследования"
+  },
+  "docs.outline.workflows.build-library.scope": {
+    "message": "При запуске незнакомой темы соберите семенные документы, составьте карту ключевых тем и сохраните список чтения, связанный с проектом. Импорт и маркировка являются шагами в этом сценарии."
+  },
+  "docs.outline.workflows.import-library.title": {
+    "message": "Возьмите на себя и организуйте сбор бумаги"
+  },
+  "docs.outline.workflows.import-library.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.import-library.topic.import-library.title": {
+    "message": "Возьмите на себя коллекцию литературы предыдущего исследователя"
+  },
+  "docs.outline.workflows.import-library.topic.import-library.scope": {
+    "message": "Учитывая PDF-файлы и экспорт цитирования от предыдущего исследователя, реконструируйте полезную библиотеку проекта и создайте список отсутствующих или неоднозначных записей."
+  },
+  "docs.outline.workflows.import-library.topic.repair-metadata.title": {
+    "message": "Сделать фрагментированную коллекцию бумаги снова полезной"
+  },
+  "docs.outline.workflows.import-library.topic.repair-metadata.scope": {
+    "message": "Учитывая смешанные папки, неполные цитаты и недостающие вложения, сверьте записи и полный текст в тематические коллекции с явным списком нерешенных пунктов."
+  },
+  "docs.outline.workflows.organize-library.title": {
+    "message": "Консолидация поисковых партий для обзорного проекта"
+  },
+  "docs.outline.workflows.organize-library.scope": {
+    "message": "Объедините записи из нескольких поисковых запросов или баз данных в дублированный набор кандидатов, сохраняя провенанс поиска и документированную передачу скрининга."
+  },
+  "docs.outline.workflows.review-inbox.title": {
+    "message": "Подготовьте целенаправленный пакет для чтения для журнального клуба."
+  },
+  "docs.outline.workflows.review-inbox.scope": {
+    "message": "Для предстоящего клуба журналов выберите статьи вокруг одного вопроса, просмотрите предложения агента, соберите доступный полный текст и подготовьте заказ на чтение с вопросами для обсуждения."
+  },
+  "docs.outline.workflows.deduplicate-library.title": {
+    "message": "Расширение существующей базы доказательств"
+  },
+  "docs.outline.workflows.deduplicate-library.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.deduplicate-library.topic.deduplicate-library.title": {
+    "message": "Повторное использование литературной базы для соответствующего исследовательского вопроса"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.deduplicate-library.scope": {
+    "message": "Когда начинается соответствующий проект, идентифицируйте соответствующие документы в существующей библиотеке, свяжите их без дублирования записей и пробелов в документах, характерных для нового вопроса."
+  },
+  "docs.outline.workflows.deduplicate-library.topic.attach-full-text.title": {
+    "message": "Обновить доказательную базу перед вехой проекта"
+  },
+  "docs.outline.workflows.deduplicate-library.topic.attach-full-text.scope": {
+    "message": "Перед рассмотрением предложения или прогресса проведите свежий поиск, сравните новые результаты с сохраненной коллекцией и подготовьте датированную записку с добавлениями и пробелами. Это ручной рабочий процесс, а не плановый мониторинг."
+  },
+  "docs.outline.workflows.group.evidence": {
+    "message": "Литература и доказательства"
+  },
+  "docs.outline.workflows.literature-review.title": {
+    "message": "Обзор литературы в таблице доказательств"
+  },
+  "docs.outline.workflows.literature-review.scope": {
+    "message": "Определите вопрос, поисковые и экранные записи, извлеките доказательства, процитируйте источники и сообщите о пробелах в доступе."
+  },
+  "docs.outline.workflows.paper-reading.title": {
+    "message": "Читайте документы и проверяйте претензии"
+  },
+  "docs.outline.workflows.paper-reading.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.paper-reading.topic.paper-reading.title": {
+    "message": "Читайте и сравнивайте документы"
+  },
+  "docs.outline.workflows.paper-reading.topic.paper-reading.scope": {
+    "message": "Извлекать методы, население, выводы и ограничения из предоставленных документов; Сохраняйте доказательства на уровне страницы."
+  },
+  "docs.outline.workflows.paper-reading.topic.pdf-evidence.title": {
+    "message": "Проверьте, поддерживает ли документ претензию"
+  },
+  "docs.outline.workflows.paper-reading.topic.pdf-evidence.scope": {
+    "message": "Учитывая претензию в проекте или примечании к заседанию, найдите соответствующие отрывки и методы PDF, сохраните доказательства страницы и сделайте подтвержденный, квалифицированный или неподтвержденный вывод."
+  },
+  "docs.outline.workflows.database-search.title": {
+    "message": "Перекрестная проверка научных записей"
+  },
+  "docs.outline.workflows.database-search.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.database-search.topic.database-search.title": {
+    "message": "Поиск научных баз данных"
+  },
+  "docs.outline.workflows.database-search.topic.database-search.scope": {
+    "message": "Выберите источник данных, сформулируйте ограниченные запросы, устраните идентификаторы и сохраните отслеживаемые записи."
+  },
+  "docs.outline.workflows.database-search.topic.cross-source-evidence.title": {
+    "message": "Устранить несоответствие между документом и базой данных"
+  },
+  "docs.outline.workflows.database-search.topic.cross-source-evidence.scope": {
+    "message": "Когда документ и база данных расходятся во мнениях по поводу гена, соединения или испытания, согласовывают идентификаторы и версии и документируют то, что остается нерешенным."
+  },
+  "docs.outline.workflows.indication-dossier.title": {
+    "message": "Создайте досье индикации"
+  },
+  "docs.outline.workflows.indication-dossier.scope": {
+    "message": "Объедините биологию, эпидемиологию, испытания и данные лечения с датами источника и нерешенными пробелами."
+  },
+  "docs.outline.workflows.format-bibliography.title": {
+    "message": "Подготовить ссылки для представления"
+  },
+  "docs.outline.workflows.format-bibliography.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.format-bibliography.topic.format-bibliography.title": {
+    "message": "Приспособить библиографию к целевому журналу"
+  },
+  "docs.outline.workflows.format-bibliography.topic.format-bibliography.scope": {
+    "message": "Используйте доверенные идентификаторы элементов библиотеки и поддерживаемые стили CSL. Покрытие форматированных цитирований, DOCX с семантическими маркерами цитирования и пакетом LaTeX, совместимым с Overleaf; Проверка полей вывода и требований к стилю."
+  },
+  "docs.outline.workflows.format-bibliography.topic.restore-library.title": {
+    "message": "Проверка ссылок на рукопись перед подачей"
+  },
+  "docs.outline.workflows.format-bibliography.topic.restore-library.scope": {
+    "message": "Учитывая рукопись и ее исходную библиотеку, сверьте цитируемые записи, библиографические поля, дубликаты и доступные доказательства, а затем создайте исправленную библиографию и список исключений."
+  },
+  "docs.outline.workflows.group.analysis": {
+    "message": "Анализ данных и их воспроизведение"
+  },
+  "docs.outline.workflows.data-quality.title": {
+    "message": "Проверить качество выборки в матрице подсчета генов"
+  },
+  "docs.outline.workflows.data-quality.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.data-quality.topic.data-quality.title": {
+    "message": "Аудит и очистка набора данных"
+  },
+  "docs.outline.workflows.data-quality.topic.data-quality.scope": {
+    "message": "Проверка типов, недостающих, дубликатов и единиц; Сохраняйте необработанные входы и записывайте исключения."
+  },
+  "docs.outline.workflows.data-quality.topic.python-r.title": {
+    "message": "Анализ с помощью Python и R"
+  },
+  "docs.outline.workflows.data-quality.topic.python-r.scope": {
+    "message": "Подготовьте время выполнения, проверьте переменные, выполняйте постепенно, восстанавливайте ошибки и сохраняйте многоразовые скрипты."
+  },
+  "docs.outline.workflows.statistics.title": {
+    "message": "Статистический анализ и проверка"
+  },
+  "docs.outline.workflows.statistics.scope": {
+    "message": "Выберите метод, проверьте диагностику, сообщите о неопределенности и сохраните исполняемый код."
+  },
+  "docs.outline.workflows.reproduce.title": {
+    "message": "Воспроизведение опубликованного результата"
+  },
+  "docs.outline.workflows.reproduce.scope": {
+    "message": "кадастровая бумага, код и данные; Определите критерии принятия, запустите пилота и отличите совпадения от отклонений."
+  },
+  "docs.outline.workflows.extend-analysis.title": {
+    "message": "Продлить анализ с помощью установленного Specialist"
+  },
+  "docs.outline.workflows.extend-analysis.scope": {
+    "message": "Существующие методы, QC PCA, примеры матричного и доказательного планирования."
+  },
+  "docs.outline.workflows.group.biology": {
+    "message": "Последовательности, клетки и молекулы"
+  },
+  "docs.outline.workflows.sequence-qc.title": {
+    "message": "Качество последовательности и аннотация"
+  },
+  "docs.outline.workflows.sequence-qc.scope": {
+    "message": "Проверить записи, алфавиты и длины FASTA; Устранение источников аннотации и сохранение несостоявшихся записей."
+  },
+  "docs.outline.workflows.single-cell.title": {
+    "message": "Одноклеточный анализ"
+  },
+  "docs.outline.workflows.single-cell.scope": {
+    "message": "Проверяйте входы экспрессии и метаданные, выберите scGPT или scvi-инструменты, где это уместно, и проверяйте выходы. Требуется совместимый одноклеточный вход, сконфигурированная среда Python и выбранные зависимости Skill; Научная казнь еще не завершена."
+  },
+  "docs.outline.workflows.structure-prediction.title": {
+    "message": "Белок и комплексное предсказание"
+  },
+  "docs.outline.workflows.structure-prediction.scope": {
+    "message": "Выберите доступный прогноз Skill, проверьте входы и вычислите требования, а затем проверьте уверенность и ограничения. Требует выбранного пакета, весов модели и подходящих локальных или удаленных вычислений; Skill не проверяет выполнение предсказаний."
+  },
+  "docs.outline.workflows.molecular-analysis.title": {
+    "message": "Молекулярные структуры и стыковка"
+  },
+  "docs.outline.workflows.molecular-analysis.scope": {
+    "message": "Проверяйте молекулы, проверяйте свойства и структуры и просматривайте позы стыковки, не приравнивая баллы к аффинности. Отделить локальный просмотрщик молекул, онлайн-источники химии и выполнение DiffDock; Стыковка требует собственных зависимостей и проверки вычислений."
+  },
+  "docs.outline.workflows.group.deliver": {
+    "message": "Цифры, отчеты и пересмотры"
+  },
+  "docs.outline.workflows.figures.title": {
+    "message": "Создавайте фигуры с прослеживаемыми доказательствами"
+  },
+  "docs.outline.workflows.figures.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.figures.topic.figures.title": {
+    "message": "Составление и подтверждение научных данных"
+  },
+  "docs.outline.workflows.figures.topic.figures.scope": {
+    "message": "Создавайте панели из отслеживаемых данных, проверяйте этикетки и визуальную точность, а также экспортируйте активы публикации."
+  },
+  "docs.outline.workflows.figures.topic.trace-result.title": {
+    "message": "Объясните, откуда взялся результат фигуры"
+  },
+  "docs.outline.workflows.figures.topic.trace-result.scope": {
+    "message": "Когда сотрудник задает вопрос о фигуре, отследите артефакт до его исполнения и входных данных, проверьте версии и подготовьте обоснованное объяснение расчета."
+  },
+  "docs.outline.workflows.manuscript.title": {
+    "message": "Написать и пересмотреть исследовательский отчет"
+  },
+  "docs.outline.workflows.manuscript.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.manuscript.topic.manuscript.title": {
+    "message": "Создайте отчет или рукопись повествования"
+  },
+  "docs.outline.workflows.manuscript.topic.manuscript.scope": {
+    "message": "Соедините проверенные результаты, порядок фигуры, методы и цитаты; Флаг неподтвержденных претензий."
+  },
+  "docs.outline.workflows.manuscript.topic.revise-artifact.title": {
+    "message": "Пересмотреть цифру или отчет после обратной связи с рецензентом"
+  },
+  "docs.outline.workflows.manuscript.topic.revise-artifact.scope": {
+    "message": "Картографическая обратная связь к сохраненным выводам, внесение поддерживаемых правок, сравнение изменений и подготовка ответа, связывающего каждое изменение с пересмотренным артефактом."
+  },
+  "docs.outline.workflows.recover-notebook.title": {
+    "message": "Перезапуск анализа после изменения исходных данных"
+  },
+  "docs.outline.workflows.recover-notebook.scope": {
+    "message": "Учитывая обновленный набор данных, идентифицируйте устаревшие выходы ноутбуков, повторите зависимости и сравните новые результаты с предыдущим результатом, чтобы объяснить существенные изменения."
+  },
+  "docs.outline.workflows.group.compute": {
+    "message": "Длинные задачи и удаленные вычисления"
+  },
+  "docs.outline.workflows.ssh-analysis.title": {
+    "message": "Запуск и восстановление удаленных анализов"
+  },
+  "docs.outline.workflows.ssh-analysis.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.ssh-analysis.topic.ssh-analysis.title": {
+    "message": "Проведите анализ на хосте SSH"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.ssh-analysis.scope": {
+    "message": "Проверяйте политику и готовность хоста, этапные входы, отслеживайте выполнение и восстанавливайте результаты в проекте. Требуется доступный хост SSH, предоставляемый пользователем, и проверенные учетные данные; Никакая удаленная работа не была проверена в ходе текущего аудита."
+  },
+  "docs.outline.workflows.ssh-analysis.topic.slurm-jobs.title": {
+    "message": "Отправка и восстановление рабочих мест Slurm"
+  },
+  "docs.outline.workflows.ssh-analysis.topic.slurm-jobs.scope": {
+    "message": "Подтвердите требования планировщика, отправьте ограниченную работу, отследите ее получение, отмените или восстановите и проверьте файлы. Требуется фактическая конфигурация кластера Slurm, учетной записи и планировщика; Выполнение планировщика не проверяется локальными элементами управления режимом."
+  },
+  "docs.outline.workflows.parallel-review.title": {
+    "message": "Делегирование и обзор исследовательской работы"
+  },
+  "docs.outline.workflows.parallel-review.scope": {
+    "message": "С помощью поддерживаемых рамок и рабочих моделей разделить ограниченную задачу, настроить возможности Specialist, проверить делегированную деятельность и утверждения, а также согласовать возвращенные доказательства. Проверяйте делегацию, прежде чем требовать параллельного исполнения."
+  },
+  "docs.outline.workflows.group.continue": {
+    "message": "Продолжить и отказаться от исследований"
+  },
+  "docs.outline.workflows.plan-research.title": {
+    "message": "Планировать и возобновить расследование"
+  },
+  "docs.outline.workflows.plan-research.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.plan-research.topic.plan-research.title": {
+    "message": "Проведите пилотное исследование, прежде чем совершать вычисления"
+  },
+  "docs.outline.workflows.plan-research.topic.plan-research.scope": {
+    "message": "Превратите широкий вопрос и ограниченные ресурсы в небольшой пилотный план с входными данными, результатами, условиями остановки и проверками приемки перед расширением анализа."
+  },
+  "docs.outline.workflows.plan-research.topic.persistent-goal.title": {
+    "message": "Возобновить незавершенное исследование с помощью плана сеанса"
+  },
+  "docs.outline.workflows.plan-research.topic.persistent-goal.scope": {
+    "message": "Возобновить инициированную пользователем работу из утвержденного Плана Сессий, записать статус шага и сохранить результаты. Сохраните оставшуюся рабочую записку; План не подразумевает необслуживаемое планирование или отдельную функцию постоянной цели."
+  },
+  "docs.outline.workflows.plan-research.topic.continue-context.title": {
+    "message": "Возобновить исследование после перерыва, не теряя решения"
+  },
+  "docs.outline.workflows.plan-research.topic.continue-context.scope": {
+    "message": "Реконструируйте приостановленное исследование из предыдущих сессий, проектную память и сохраненные файлы, а затем создайте проверенную текущую заметку перед дальнейшим анализом."
+  },
+  "docs.outline.workflows.compare-branches.title": {
+    "message": "Сравните два метода анализа на одном и том же наборе данных"
+  },
+  "docs.outline.workflows.compare-branches.scope": {
+    "message": "При выборе между методами, ветвь от общей отправной точки, выполняется как с документированными допущениями, так и производит сравнение результатов и ограничений."
+  },
+  "docs.outline.workflows.save-method.title": {
+    "message": "Повторное использование проверенного анализа на новом наборе данных"
+  },
+  "docs.outline.workflows.save-method.scope": {
+    "message": "Преобразуйте успешный анализ в многоразовый Skill, адаптируйте объявленные входы и проверьте метод на новом наборе данных, не перенеся старые предположения."
+  },
+  "docs.outline.workflows.handoff.title": {
+    "message": "Откажитесь от воспроизводимого исследовательского пакета"
+  },
+  "docs.outline.workflows.handoff.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.workflows.handoff.topic.handoff.title": {
+    "message": "Пакет воспроизводимой передачи"
+  },
+  "docs.outline.workflows.handoff.topic.handoff.scope": {
+    "message": "Собирать входные данные, сценарии, окружения, результаты и ограничения; Проверить пакет из свежего состояния."
+  },
+  "docs.outline.workflows.handoff.topic.export-handoff.title": {
+    "message": "Передайте незавершенный анализ сотруднику"
+  },
+  "docs.outline.workflows.handoff.topic.export-handoff.scope": {
+    "message": "Подготовьте выбранные доказательства беседы, файлы результатов, решения, требования к окружающей среде и оставшиеся вопросы в качестве обзорного пакета."
+  },
+  "docs.outline.tools.overview": {
+    "message": "Обзор Open-Science"
+  },
+  "docs.outline.tools.scope": {
+    "message": "Найти инструменты по возможностям; Каталоги и отдельные операции планируются в виде таблиц внутри широких глав."
+  },
+  "docs.outline.tools.group.find": {
+    "message": "Найдите инструмент"
+  },
+  "docs.outline.tools.overview.title": {
+    "message": "Обзор инструментов"
+  },
+  "docs.outline.tools.overview.scope": {
+    "message": "Выбор между встроенными инструментами, научным программным обеспечением, разъемами баз данных и зрителями; Сравните доступность и готовность в таблице."
+  },
+  "docs.outline.tools.built-in.title": {
+    "message": "Встроенные исследовательские инструменты"
+  },
+  "docs.outline.tools.built-in.scope": {
+    "message": "Таблица файлов, тетрадей, литературы, памяти, планирования и делегирования операций с входами, выходами и разрешениями."
+  },
+  "docs.outline.tools.catalog.title": {
+    "message": "Научный каталог инструментов"
+  },
+  "docs.outline.tools.catalog.scope": {
+    "message": "Таблица документации программного обеспечения, на которую ссылаются в комплекте Skills и проверенные пакеты времени выполнения, с целью, зависимостями и доступностью. Каталоговые записи не являются предустановленным программным обеспечением или отдельным каталогом приложений."
+  },
+  "docs.outline.tools.scientific.title": {
+    "message": "Научные инструменты"
+  },
+  "docs.outline.tools.scientific.scope": {
+    "message": "Объясните выполнение через среды выполнения Notebook или настроенные вычислительные хосты с установкой пакета, проверками ввода / вывода и диагностикой отказа. Запись локальных и удаленных требований для каждого примера программного обеспечения."
+  },
+  "docs.outline.tools.group.data": {
+    "message": "Данные и зрители"
+  },
+  "docs.outline.tools.databases.title": {
+    "message": "Научные базы данных"
+  },
+  "docs.outline.tools.databases.scope": {
+    "message": "Категоризированная таблица для разъемов 23: охват источника, точные операции, идентификаторы, учетные данные и ограничения. Местный Molecule Viewer задокументирован под научными зрителями."
+  },
+  "docs.outline.tools.tables.title": {
+    "message": "Таблицы и наборы данных"
+  },
+  "docs.outline.tools.tables.scope": {
+    "message": "Сравните поддерживаемые табличные форматы, контроль предварительного просмотра, проверку данных, обработку переменных, экспорт и ограничения по размеру в таблицах."
+  },
+  "docs.outline.tools.viewers.title": {
+    "message": "Научные зрители"
+  },
+  "docs.outline.tools.viewers.scope": {
+    "message": "Используйте фактический реестр предварительного просмотра для PDF, Office, изображений, FASTA, PDB и молекулярных форматов. Включите автономный модуль OpenChemLib Molecule Viewer и его инструменты проверки; Отличить просмотр от редактирования или научных вычислений."
+  },
+  "docs.outline.tools.group.connect": {
+    "message": "Соединять и расширять"
+  },
+  "docs.outline.tools.mcp.title": {
+    "message": "Коннекторы и MCP"
+  },
+  "docs.outline.tools.mcp.scope": {
+    "message": "Сравните встроенные и пользовательские разъемы, транспорты, обнаружение, включение и ошибки; Шаги конфигурации ссылок в руководствах."
+  },
+  "docs.outline.tools.credentials.title": {
+    "message": "Сертификаты службы"
+  },
+  "docs.outline.tools.credentials.scope": {
+    "message": "Таблица «Служба-доверенность», охватывающая типы учетных данных, привязки, требуемые области применения, проверки и сбои доступа."
+  },
+  "docs.outline.tools.custom.title": {
+    "message": "Подключите пользовательский инструмент MCP"
+  },
+  "docs.outline.tools.custom.scope": {
+    "message": "Подключите существующий или внешне реализованный сервер MCP через локальный стио или поддерживаемый удаленный транспорт, проверьте обнаруженные инструменты и проверьте учетные данные и разрешения. Реализация инструмента является внешней предпосылкой."
+  },
+  "docs.outline.skills.overview": {
+    "message": "Обзор Open-Science"
+  },
+  "docs.outline.skills.scope": {
+    "message": "выбирать, использовать и поддерживать многоразовые процедуры; Индивидуальные пакеты Skills входят в таблицы глав."
+  },
+  "docs.outline.skills.group.use": {
+    "message": "Используйте Skills"
+  },
+  "docs.outline.skills.overview.title": {
+    "message": "Skills"
+  },
+  "docs.outline.skills.overview.scope": {
+    "message": "Объясните Skills инструментам и специалистам. Поиск, включение, выбор, проверка инструкций и проверка Skill доступны."
+  },
+  "docs.outline.skills.directory.title": {
+    "message": "Директория Skill"
+  },
+  "docs.outline.skills.directory.scope": {
+    "message": "Одна таблица из всех 23 в комплекте с Skills, сгруппированная по целям исследования, с входами, зависимостями, выходами и статусом проверки."
+  },
+  "docs.outline.skills.recipes.title": {
+    "message": "Рецепты Skill"
+  },
+  "docs.outline.skills.recipes.scope": {
+    "message": "Рецепты, основанные на таблицах, соединяют цели исследований, выбранный Skills, выборочные входы, запросы, ожидаемые результаты и полные рабочие процессы."
+  },
+  "docs.outline.skills.group.maintain": {
+    "message": "Создавать и поддерживать"
+  },
+  "docs.outline.skills.create.title": {
+    "message": "Создайте Skill и поддерживающие его файлы"
+  },
+  "docs.outline.skills.create.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.skills.create.topic.create.title": {
+    "message": "Создайте Skill"
+  },
+  "docs.outline.skills.create.topic.create.scope": {
+    "message": "Напишите личный Skill или извлеките многоразовый метод из разговора; Определите входы, шаги, проверки и границы."
+  },
+  "docs.outline.skills.create.topic.files.title": {
+    "message": "Инструкции и вспомогательные файлы"
+  },
+  "docs.outline.skills.create.topic.files.scope": {
+    "message": "Опишите поля SKILL.md, скрипты, активы и ссылки, используя таблицу пакетных содержимого и контрольный список проверки."
+  },
+  "docs.outline.skills.manage.title": {
+    "message": "Управлять и проверять Skills"
+  },
+  "docs.outline.skills.manage.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.skills.manage.topic.manage.title": {
+    "message": "Импорт, экспорт и обновление Skills"
+  },
+  "docs.outline.skills.manage.topic.manage.scope": {
+    "message": "Источники группового импорта, предварительный просмотр, обработка конфликтов, редактирование, экспорт, удаление и проверка версий по операциям."
+  },
+  "docs.outline.skills.manage.topic.validate.title": {
+    "message": "Тестирование и устранение неполадок Skills"
+  },
+  "docs.outline.skills.manage.topic.validate.scope": {
+    "message": "Проверяйте свежий вход, диагностируйте недостающие пакеты, весы, учетные данные и инструменты, а также записывайте поддерживаемое и проверенное поведение."
+  },
+  "docs.outline.reference.overview": {
+    "message": "Обзор ссылок"
+  },
+  "docs.outline.reference.scope": {
+    "message": "Сначала настраивается проект и интегрируется CLI, затем следуют спецификации AIPOCH и Changelog."
+  },
+  "docs.outline.reference.group.product": {
+    "message": "Ссылка на продукт"
+  },
+  "docs.outline.reference.configuration.title": {
+    "message": "Конфигурация и контекст"
+  },
+  "docs.outline.reference.configuration.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.reference.configuration.topic.configuration.title": {
+    "message": "Настройки"
+  },
+  "docs.outline.reference.configuration.topic.configuration.scope": {
+    "message": "Таблицы поддерживаемых настроек приложений, объема, по умолчанию, совместимости с хранилищем и фреймворком; Свяжите операционные шаги с Руководствами."
+  },
+  "docs.outline.reference.configuration.topic.instructions.title": {
+    "message": "Контекст проекта и инструкции"
+  },
+  "docs.outline.reference.configuration.topic.instructions.scope": {
+    "message": "Начните с поля «Агент Контекст» проекта; Отличить его от заметок памяти, инструкций Skill и инструкций Specialist. Структурное поведение файла-инструкции должно документироваться в соответствии с рамками, а не как один универсальный механизм файла-проекта."
+  },
+  "docs.outline.reference.permissions.title": {
+    "message": "Разрешения и контроль"
+  },
+  "docs.outline.reference.permissions.scope": {
+    "message": "Режимы одобрения ссылок, приоритет области действия, запоминающиеся гранты, сетевые ограничения и семантика отзыва."
+  },
+  "docs.outline.reference.controls.title": {
+    "message": "Управление и ссылка на клавиатуру"
+  },
+  "docs.outline.reference.controls.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.reference.controls.topic.controls.title": {
+    "message": "Страница и контрольный индекс"
+  },
+  "docs.outline.reference.controls.topic.controls.scope": {
+    "message": "Страница за страницей таблица поиска для кнопок и входных меток, в результате состояний и статуса проверки."
+  },
+  "docs.outline.reference.controls.topic.commands.title": {
+    "message": "Ярлыки Skill, упоминания и элементы управления клавиатурой"
+  },
+  "docs.outline.reference.controls.topic.commands.scope": {
+    "message": "Документировать фактические триггеры композитора: / выбирает Skills, @ ссылочные файлы или артефакты, и # сессий ссылочных; Список поддерживает действия клавиатуры и ограничения контекста."
+  },
+  "docs.outline.reference.formats.title": {
+    "message": "Форматы файлов и ограничения"
+  },
+  "docs.outline.reference.formats.scope": {
+    "message": "Таблицы для поддерживаемых предварительных просмотров, импорт библиотек, экспорт цитирования, ограничения размера файлов и неподдерживаемые случаи."
+  },
+  "docs.outline.reference.packages.title": {
+    "message": "Skill, Specialist и MCP форматы"
+  },
+  "docs.outline.reference.packages.scope": {
+    "message": "Отдельные таблицы схем для пакетов Skill, пакетов Specialist и конфигурации MCP с ограничениями полей и архивов."
+  },
+  "docs.outline.reference.example-data.title": {
+    "message": "Примерные данные и ожидаемые результаты"
+  },
+  "docs.outline.reference.example-data.scope": {
+    "message": "Файлы с открытым исходным кодом, контрольные суммы и ожидаемые выходные примеры."
+  },
+  "docs.outline.reference.connector-operations.title": {
+    "message": "Операционный справочник Connector"
+  },
+  "docs.outline.reference.connector-operations.scope": {
+    "message": "Точные входные данные, по умолчанию и вызовы примера Connector."
+  },
+  "docs.outline.reference.group.integration": {
+    "message": "CLI и операции"
+  },
+  "docs.outline.reference.cli.title": {
+    "message": "CLI и структурированный выход"
+  },
+  "docs.outline.reference.cli.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.reference.cli.topic.cli.title": {
+    "message": "Ссылка на CLI"
+  },
+  "docs.outline.reference.cli.topic.cli.scope": {
+    "message": "Документируйте фактическое дерево команд открытой науки, флаги, дефолты, состояния выхода и примеры из хранилища CLI."
+  },
+  "docs.outline.reference.cli.topic.automation.title": {
+    "message": "Автоматизация и выход JSON"
+  },
+  "docs.outline.reference.cli.topic.automation.scope": {
+    "message": "Поддерживаемые сокрытием представления задач, опросов, вывода JSON и JSONL, ошибок и отмены; Избегайте использования встроенного планировщика."
+  },
+  "docs.outline.reference.api.title": {
+    "message": "Задание SDK и местный API"
+  },
+  "docs.outline.reference.api.scope": {
+    "message": "Поддерживаемые картой API задач и сессий, аутентификация, события и совместимость; Отличить публичные контракты от внутренних API-интерфейсов."
+  },
+  "docs.outline.reference.server.title": {
+    "message": "Сервис без головы и доступ к браузеру"
+  },
+  "docs.outline.reference.server.scope": {
+    "message": "Справочная служба Start/status/stop, аутентифицированные URL-адреса, локальные обнаружения и границы удаленного доступа от фактического CLI."
+  },
+  "docs.outline.reference.diagnostics.title": {
+    "message": "Архитектура и диагностика"
+  },
+  "docs.outline.reference.diagnostics.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.reference.diagnostics.topic.diagnostics.title": {
+    "message": "Ошибки и диагностика"
+  },
+  "docs.outline.reference.diagnostics.topic.diagnostics.scope": {
+    "message": "Карта наблюдаемых ошибок к причинам, диагностические доказательства и связанные руководства по восстановлению; К ним относятся CLI и отказы разъемов."
+  },
+  "docs.outline.reference.diagnostics.topic.architecture.title": {
+    "message": "Архитектура и поток данных"
+  },
+  "docs.outline.reference.diagnostics.topic.architecture.scope": {
+    "message": "Объясните границы рабочего стола, сервиса, фреймворка, хранения и исполнения, включая происхождение артефакта и обработку учетных данных."
+  },
+  "docs.outline.reference.diagnostics.topic.verification.title": {
+    "message": "Запись проверки документации"
+  },
+  "docs.outline.reference.diagnostics.topic.verification.scope": {
+    "message": "Версии с источниками записей, английский пользовательский интерфейс захватывает, выполняет элементы управления, условные тесты и выдающиеся пробелы в проверке."
+  },
+  "docs.outline.reference.group.changelog": {
+    "message": "Изменить"
+  },
+  "docs.outline.reference.v0290.title": {
+    "message": "v0.29.0"
+  },
+  "docs.outline.reference.v0290.scope": {
+    "message": "Рынок Skill, исследовательские пакеты, добыча PDF и внешняя установка пакета R."
+  },
+  "docs.outline.reference.v0280.title": {
+    "message": "v0.28.0"
+  },
+  "docs.outline.reference.v0280.scope": {
+    "message": "Проверка воспроизведения результатов, глобальный поиск, изменения конфиденциальности и управляемые обновления Codex."
+  },
+  "docs.outline.reference.v0270.title": {
+    "message": "v0.27.0"
+  },
+  "docs.outline.reference.v0270.scope": {
+    "message": "Импорт литературы, фоновые задачи, необходимые обновления Skills и интеграции."
+  },
+  "docs.outline.reference.v0260.title": {
+    "message": "v0.26.0"
+  },
+  "docs.outline.reference.v0260.scope": {
+    "message": "Существующая история версий."
+  },
+  "docs.outline.reference.v0251.title": {
+    "message": "v0.25.1"
+  },
+  "docs.outline.reference.v0251.scope": {
+    "message": "Существующая история версий."
+  },
+  "docs.outline.specialists.overview": {
+    "message": "Обзор Open-Science"
+  },
+  "docs.outline.specialists.scope": {
+    "message": "Создавать, оснащать, делегировать и поддерживать исследовательские роли независимо от каталога Skill."
+  },
+  "docs.outline.specialists.group.use": {
+    "message": "Познакомьтесь и используйте специалистов"
+  },
+  "docs.outline.specialists.overview.title": {
+    "message": "Специалисты и доступные роли"
+  },
+  "docs.outline.specialists.overview.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.specialists.overview.topic.overview.title": {
+    "message": "Обзор специалистов"
+  },
+  "docs.outline.specialists.overview.topic.overview.scope": {
+    "message": "Объясните Main Агент, Специалисты, встроенный Рецензент и Skills; Сравните роли и задачи в таблице."
+  },
+  "docs.outline.specialists.overview.topic.directory.title": {
+    "message": "Каталог и маркетплейс Specialist"
+  },
+  "docs.outline.specialists.overview.topic.directory.scope": {
+    "message": "Отличить встроенный неконфигурируемый рецензент, личные роли и онлайн-пакеты Marketplace. Манифест специалиста пустой; Удаленный листинг, подписание, установка и готовность к зависимости требуют отдельной проверки."
+  },
+  "docs.outline.specialists.delegate.title": {
+    "message": "Делегировать и проверять работу"
+  },
+  "docs.outline.specialists.delegate.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.specialists.delegate.topic.delegate.title": {
+    "message": "Делегатская и обзорная работа"
+  },
+  "docs.outline.specialists.delegate.topic.delegate.scope": {
+    "message": "Проверка поддержки делегирования рамок и доступа к модели; Отличить переключение основного разговора Specialist от делегирования подзадачи. Проверять прогресс, вмешательства и возвращать доказательства."
+  },
+  "docs.outline.specialists.delegate.topic.troubleshoot.title": {
+    "message": "Тестирование и устранение неполадок Специалист"
+  },
+  "docs.outline.specialists.delegate.topic.troubleshoot.scope": {
+    "message": "Запустите ограниченное тестовое задание и диагностируйте недостающие возможности, сбои модели, отклоненные запросы и неполные передачи."
+  },
+  "docs.outline.specialists.group.create": {
+    "message": "Создавать и настраивать"
+  },
+  "docs.outline.specialists.identity.title": {
+    "message": "Создать и инструктировать Specialist"
+  },
+  "docs.outline.specialists.identity.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.specialists.identity.topic.identity.title": {
+    "message": "Создайте Specialist"
+  },
+  "docs.outline.specialists.identity.topic.identity.scope": {
+    "message": "Планируйте поля идентификации, иконки, цвета, описания, режимы создания и предварительный просмотр с помощью справочной таблицы поля."
+  },
+  "docs.outline.specialists.identity.topic.instructions.title": {
+    "message": "Напишите инструкции Specialist"
+  },
+  "docs.outline.specialists.identity.topic.instructions.scope": {
+    "message": "Определение обязанностей, разрешенных доказательств, результатов и условий остановки; Используйте шаблоны ролей в главе."
+  },
+  "docs.outline.specialists.capabilities.title": {
+    "message": "Назначение Skills и коннекторов"
+  },
+  "docs.outline.specialists.capabilities.scope": {
+    "message": "Сравните наследование с полным доступом с явными привязками к возможностям. Объясните добавление/удаление элементов управления и проверки готовности."
+  },
+  "docs.outline.specialists.reviewer.title": {
+    "message": "Рецензент и Auto-review"
+  },
+  "docs.outline.specialists.reviewer.scope": {
+    "message": "Опишите встроенный Рецензент, модельную политику, триггеры обзора, отображаемые решения и пределы автоматизированного обзора."
+  },
+  "docs.outline.specialists.group.maintain": {
+    "message": "Управлять и делиться"
+  },
+  "docs.outline.specialists.manage.title": {
+    "message": "Управлять и делиться специалистами"
+  },
+  "docs.outline.specialists.manage.scope": {
+    "message": "Рассмотрение включенных тем и их запланированного охвата ниже."
+  },
+  "docs.outline.specialists.manage.topic.manage.title": {
+    "message": "Организовать и поддерживать специалистов"
+  },
+  "docs.outline.specialists.manage.topic.manage.scope": {
+    "message": "Поиск, фильтр, тег, включение, редактирование, дублирование и удаление ролей; Проверка изменений и доступности возможностей."
+  },
+  "docs.outline.specialists.manage.topic.packages.title": {
+    "message": "Импорт и экспорт пакетов Specialist"
+  },
+  "docs.outline.specialists.manage.topic.packages.scope": {
+    "message": "Просмотр содержимого пакетов, проверка пакетных привязок Skills и Connector, обработка конфликтов и проверка импортируемых ролей."
+  },
+  "docs.outline.availableNotice": {
+    "message": "Глава индекса"
+  },
+  "docs.outline.count": {
+    "message": "Группы {groups} · главы {chapters}"
+  },
+  "docs.outline.current": {
+    "message": "См. соответствующий существующий документ"
+  },
+  "docs.preferenceScreenshot.notifications": {
+    "message": "Контроль уведомлений о задачах и сообщенный статус испытания"
+  },
+  "docs.preferenceScreenshot.theme": {
+    "message": "Контроль темы и языка в режиме {theme}"
+  },
+  "docs.preferenceScreenshot.preview": {
+    "message": "Предварительный просмотр скриншота"
+  },
+  "docs.preferenceScreenshot.choose": {
+    "message": "Выберите тематический скриншот"
+  },
+  "docs.preferenceScreenshot.open": {
+    "message": "{label}; Открыть Full Screenshot"
+  },
+  "docs.preferenceScreenshot.caption": {
+    "message": "Скриншот приложения на английском языке · Выберите изображение, чтобы просмотреть его полностью"
+  },
+  "docs.translation.note": {
+    "message": "Автоматический перевод. Если какой-либо шаг непонятен, обратитесь к английскому оригиналу."
+  },
+  "docs.outline.reference.v0301.title": {
+    "message": "v0.30.1"
+  },
+  "docs.outline.reference.v0301.scope": {
+    "message": "Черновики Side Chat, проверка обновлений Skill, PDF в исследовательских пакетах и средства восстановления."
+  }
+}

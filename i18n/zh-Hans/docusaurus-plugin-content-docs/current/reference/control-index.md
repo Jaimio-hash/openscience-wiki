@@ -1,24 +1,33 @@
 ---
 sidebar_position: 1
 title: 完整页面与控件索引
-description: 按页面查找 Open Science 的按钮、输入、开关和结果。
+description: 按页面查找 Open-Science 的按钮、输入、开关和结果。
 last_update:
-  date: '2026-09-07'
+  date: '2026-09-15'
 ---
 
 # 完整页面与控件索引
 
 本页把实际界面入口按页面压缩成可检索清单。状态相关控件只在条件满足时出现；Disabled 表示缺少前置条件，不是实现缺失。
 
+
+<span id="当前验证覆盖" />
+
+## 查找详细操作
+
+本页用于定位控件。前置条件、操作步骤、预期结果和已知问题以对应教程为准。设置面板见[设置总览](../settings/overview.md)，常用任务见[控件与快捷键](controls.md)，报错处理见[故障排查](../guides/troubleshooting.md)。
+
 ## Onboarding
 
-| 页面 | 控件 | 结果/前置条件 |
+| 页面（按向导顺序） | 控件 | 结果或前置条件 |
 | --- | --- | --- |
-| Environment | 检查行、Retry/Continue | 展示 System/Storage/Secure vault/Install network；关键失败时不能继续 |
-| Agent | Framework card、Install、Active、Back/Continue | 安装或选中 agent runtime |
-| Model | Provider type/name、Endpoint/Base URL、API format、key、model、context、Images、Reasoning、Test、Add | Test 成功且有可用模型后继续 |
-| Notebook | Python/R switch、Add interpreter、Download and set up、Packages | 选择 agent 可用执行环境；可稍后设置 |
-| Location | Location、Browse、Back、Finish | 写入数据 root 并完成引导 |
+| Environment | Check again、Continue、检查状态行 | 重新检查主机条件，通过后继续 |
+| Data location | Browse…、Use default location instead、Back、Continue | 选择位置；自定义位置需确认 Keep default 或 Restart |
+| Agent runtime | 框架卡片、Install、Re-detect、Back、Continue | 安装或选择就绪的活动运行时 |
+| Model provider | Provider type、认证方式、条件字段、Test & continue | 必填校验与连接测试；成功后进入下一步 |
+| Notebook runtime | 解释器、环境设置、Packages、Back、Finish | 可选设置；已启动的环境准备必须完成或取消后才能结束 |
+
+完整实操见[首次设置](../guides/onboarding.md)和[提供商配置](../guides/providers.md)。
 
 ## Home 与项目
 
@@ -27,7 +36,7 @@ last_update:
 | Home header | GitHub、Search、Library、Theme、Messages、Model settings | 外链、全局搜索、文献资料库、主题、通知、打开 Model |
 | Home body | New project、项目卡、Recent session | 新建或打开项目/session |
 | Theme menu | System、Light、Dark | 设置外观并同步 General |
-| Search | Search input、结果项、Esc | 查找并跳转项目/session/file |
+| Search | Search input、类别、Advanced filters、结果详情、Esc | 按所需范围[查找消息、文件与文献](../guides/navigation.md) |
 | Messages | 通知项、已读操作、Close | 跳转来源和管理未读 |
 | Create project | Name、Description、Agent Context、Cancel、Create project | 创建项目；Name 必填 |
 | Project actions | Edit/Archive/Delete 等状态相关项 | 修改项目元数据、归档或确认删除 |
@@ -69,7 +78,7 @@ last_update:
 | 表面 | 控件 | 结果 |
 | --- | --- | --- |
 | Permission | Impact info、Permission info、可展开 Skill 文档、Allow once、Deny | 检查并批准/拒绝一次 |
-| Scope confirmation | Cancel、Confirm session/project/global | 保存更宽 grant；宽 scope 需二次确认 |
+| Scope confirmation | Cancel、Confirm project/global | 保存更宽 grant；宽 scope 需二次确认 |
 | Plan | Approve/Run、Feedback 输入、Cancel | 接受计划、要求修改或取消 |
 | Elicitation | 结构化输入/选项、Submit、Cancel | 回答 agent 追问 |
 | Subagent permission | 身份/待处理计数、Allow/Deny | 单独审批 subagent 请求 |
@@ -118,9 +127,16 @@ last_update:
 | Provenance tabs | Code、Execution Log、Messages、Environment、Review | 切换证据类型 |
 | Code | Generate script、Download、Copy | 生成派生脚本或保存 producer block |
 
+## 书签与旁聊
+
+| 入口 | 控件与行为 |
+| --- | --- |
+| 私人阅读书签 | 选区 → For me → Bookmark；输入框 Bookmarks 打开列表，可编辑备注、返回来源或删除书签。[详细说明](../guides/bookmarks.md) |
+| Side Chat 标签 | 独立标签与追问草稿、批注转移、取消生成，以及删除旁聊的关闭确认。[详细说明](../guides/delegation.md) |
+
 ## Settings 全局
 
-`Back`、`Forward`、面包屑、`Maximize/Restore`、`Close settings`、移动端导航以及错误 `Dismiss` 适用于设置框架。
+**Search settings** 可以跨四组面板查找设置。`Back`、`Forward`、面包屑、`Maximize/Restore`、`Close settings`、移动端导航及错误 `Dismiss` 适用于设置框架。分组与搜索快捷键见[设置中心总览](../settings/overview.md)。
 
 ### Skills
 

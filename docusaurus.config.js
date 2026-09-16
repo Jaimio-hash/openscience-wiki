@@ -4,14 +4,16 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
+import legacyDocRedirects from './src/data/legacy-doc-redirects.json';
 import {themes as prismThemes} from 'prism-react-renderer';
-import {defaultLocale, localeConfigs, locales} from './i18n.config.mjs';
+import {defaultLocale, localeConfigs, locales, docsBaseUrl} from './i18n.config.mjs';
+import screenshotImages from './src/remark/screenshot-images.js';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Open Science Wiki',
+  title: 'Open-Science Wiki',
   tagline: 'A local-first AI workspace for reproducible scientific research',
   // Same file aipoch.com serves at /favicon.ico — 16/32/48 PNG-in-ICO.
   favicon: 'img/aipoch-favicon.ico',
@@ -28,7 +30,7 @@ const config = {
   url: 'https://aipoch.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs/',
+  baseUrl: docsBaseUrl,
   // Keep generated URLs consistent with the directory URLs served by Nginx.
   trailingSlash: true,
 
@@ -38,6 +40,31 @@ const config = {
   projectName: 'openscience-wiki',
 
   onBrokenLinks: 'throw',
+
+  themes: [['./src/plugins/localized-search.cjs', {
+    hashed: 'filename',
+    docsRouteBasePath: '/',
+    indexDocs: true,
+    indexBlog: false,
+    indexPages: false,
+    // Keep old bookmarks working without returning navigation-only bridge pages in search.
+    ignoreFiles: [],
+    highlightSearchTermsOnTargetPage: true,
+    explicitSearchResultPath: true,
+    searchBarShortcutHint: true,
+    fuzzyMatchingDistance: 0,
+  }]],
+
+  // Preserve old bookmarks after the requested Changelog URL rename.
+  // This produces static client redirects for each locale, without server changes.
+  plugins: ['./src/plugins/locale-sitemap.cjs', ['@docusaurus/plugin-client-redirects', {
+    redirects: [
+      ...Object.entries(legacyDocRedirects).map(([from, to]) => ({from: `/${from}/`, to: `/${to}/`})),
+      {from: '/releases/v0-26-0/', to: '/changelog/v0-26-0/'},
+      {from: '/releases/v0-25-1/', to: '/changelog/v0-25-1/'},
+      {from: '/category/reference-and-troubleshooting/', to: '/reference/'},
+    ],
+  }]],
 
   // Keep the locale registry separate so more overseas languages can be added
   // without changing the rest of the site configuration.
@@ -55,6 +82,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: './sidebars.js',
+          remarkPlugins: [screenshotImages],
           // Read explicit content dates even when Git is absent in Docker.
           showLastUpdateTime: true,
         },
@@ -102,14 +130,13 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            href: 'https://aipoch.com/open-science',
             position: 'left',
-            label: 'Open Science Docs',
+            label: 'Open-Science',
           },
-          {to: 'getting-started/installation', label: 'Install', position: 'left'},
+          {to: 'guides/installation', label: 'Install', position: 'left'},
           {
-            to: 'reference/troubleshooting',
+            to: 'guides/troubleshooting',
             label: 'Troubleshooting',
             position: 'left',
           },
@@ -119,7 +146,7 @@ const config = {
           },
           {
             href: 'https://github.com/aipoch/open-science',
-            label: 'Open Science GitHub',
+            label: 'Open-Science GitHub',
             position: 'right',
           },
         ],
@@ -131,7 +158,7 @@ const config = {
             title: 'Documentation',
             items: [
               {
-                label: 'Open Science',
+                label: 'Open-Science',
                 to: '/',
               },
               {
@@ -144,7 +171,7 @@ const config = {
             title: 'Project',
             items: [
               {
-                label: 'Open Science',
+                label: 'Open-Science',
                 href: 'https://github.com/aipoch/open-science',
               },
               {

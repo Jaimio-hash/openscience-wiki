@@ -1,0 +1,8 @@
+{
+  "label": "설정",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "모형, 대리인, 기능, 허가, 런타임, 저장 및 원격 제어를 구성하십시오."
+  }
+}

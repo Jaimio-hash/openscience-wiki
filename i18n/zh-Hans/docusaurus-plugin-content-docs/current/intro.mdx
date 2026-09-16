@@ -1,50 +1,50 @@
 ---
 sidebar_position: 1
 slug: /intro
-title: Open Science 文档
-description: AIPOCH Open Science 的完整产品、操作与复现指南。
+title: Open-Science 文档
+description: 通过源码核对的指南和真实研究实操学习 Open-Science。
 last_update:
-  date: '2026-09-07'
+  date: '2026-09-16'
 ---
 
-# Open Science
+# Open-Science
 
-Open Science 是 AIPOCH 面向科研工作的开源 AI 工作台。它把对话式代理、文献资料库、项目文件、Python/R Notebook、科研文件预览、执行记录和 artifact provenance 放在同一个本地优先的桌面应用中。本 Wiki 对应稳定版 **Open Science v0.26.0**，依据 `aipoch/open-science` 的精确 `v0.26.0` tag、实现与 renderer 测试、production build 和隔离环境中的实际运行编写。
+使用 Open-Science 整理研究资料、与代理协作、运行分析并检查保存后的结果。
 
-![完成一次对话后的 Open Science 工作区](/img/open-science/conversation-completed.png)
+## 从这里开始
 
-## 你可以完成什么
+1. [能力与支持的输入](./guides/capabilities.md)：根据文件或研究问题选择路径。
+2. [安装](./guides/installation.md)与[首次设置](./guides/onboarding.md)：准备应用、代理、模型和运行时。
+3. [第一个项目与结果](./guides/first-project.md)：创建项目，用一份小表格生成并重新打开说明报告。
+4. [权限与审批](./guides/approval-modes.md)：检查操作请求，管理记住的授权。
+5. [Notebook 与执行证据](./guides/notebook.md)：查看代码、变量和产物来源。
 
-| 工作 | Open Science 提供的能力 |
+## 跟随真实研究任务
+
+| 目标 | 工作流 | 已演示结果 |
+| --- | --- | --- |
+| 准备阅读集合 | [搭建核心阅读清单](./workflows/core-reading-list.md) | 文献库中核对的三篇 PRISMA 论文、集合及出版方 PDF |
+| 检查并汇总数据 | [从原始数据得到可复现分析](./workflows/data-quality.md) | GSE60450 基因表达矩阵检查、十二样本质控 CSV、原始计数图和方法报告 |
+
+![Open-Science 中真实的 GSE60450 RNA-seq 图及生成代码](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+
+## 按所需细节查找
+
+| 分区 | 内容 |
 | --- | --- |
-| 发起研究 | 创建带描述和 Agent Context 的项目；选择模型、推理强度、专家和权限模式 |
-| 组织材料 | 上传或引用项目文件；搜索文件；在网格、列表和分栏模式间切换 |
-| 管理文献 | 导入文献与 PDF、整理集合、比较重复项、查找开放获取全文并格式化引用 |
-| 执行分析 | 让代理调用 shell、Python/R Notebook、Skills、Connectors 和远程算力 |
-| 检查结果 | 预览代码、CSV、Markdown、JSON、PDF、Office、图片、分子、PDB、FASTA 等 |
-| 复现与审计 | 查看 Session Notebook、artifact 版本、Code、Execution Log、Messages、Environment 和 Review |
-| 控制风险 | 在每次请求时 Allow/Deny，或设置 Ask、Auto-approve edits、Full access 以及逐工具策略 |
-| 远程协作 | 启用 Remote control，通过受保护的本地 Web 入口访问正在运行的桌面应用 |
+| **Guides** | 页面控件、设置和日常操作 |
+| **Workflows** | 包含输入、决策、交付物和验收检查的研究场景 |
+| **Explore tools** | 工具大类、科学服务和接入选择 |
+| **Skills** | 可复用方法、目录和包管理 |
+| **Specialists** | 角色、能力分配、委派和审核 |
+| **Reference** | 精确限制、配置规则、包格式、CLI/API 约定和 Changelog |
 
-## 推荐阅读路径
+使用 **Search** 或 **⌘K / Ctrl+K** 搜索当前语言文档的标题、章节和正文。应用自身搜索的范围与文档不同。
 
-1. [安装与运行](./getting-started/installation.md)：下载桌面版或从源码启动。
-2. [首次引导](./getting-started/onboarding.md)：完成环境、代理、模型、Notebook 和数据目录设置。
-3. [第一个项目](./getting-started/first-project.md)：创建项目并发送第一条请求。
-4. [工作区与对话](./workspace/conversation.md)：掌握输入、附件、模型和权限控制。
-5. [Notebook 与 Provenance](./workspace/notebook-provenance.md)：验证研究结果如何产生。
-6. [文献资料库](./workspace/literature-library.md)：导入、整理、核验和引用文献。
-7. [设置中心](./settings/overview.md)：配置全部 17 个设置面板。
-8. [完整控件索引](./reference/control-index.md)：按页面查找每个按钮、输入和开关。
-9. [v0.26.0 版本指南](/docs/zh-Hans/releases/v0-26-0)：查看从 v0.25.1 到当前版本的变化与验证限制。
+## 运行示例前
 
-:::info[文档中的演示环境]
-截图来自隔离的本地数据目录。界面、IPC、SQLite、文件、Notebook 和权限流均真实运行；为避免写入个人密钥和产生模型费用，演示响应由仓库自带的确定性 E2E agent fixture 提供。因而截图可以稳定复现 UI 行为，但示例回答不代表真实模型能力。
-:::
+本地示例使用公开 PRISMA 论文和 GSE60450 RNA-seq 矩阵。下载章节中的输入文件，确认任务所需的模型、运行时和权限。
 
-## 版本与边界
+[远程计算](./guides/remote-compute.md)已包含 Direct SSH RNA-seq 分析、结果回收、重启恢复和取消实操。Slurm 终态监控需要可用的记账查询，GPU 推理需要兼容的软件环境。
 
-- 应用仓库：`aipoch/open-science`，文档验证版本为稳定 tag `v0.26.0`，提交 `5df494a57ac67727c4153c707708a7b1727e968c`。
-- Wiki 仓库：`aipoch/openscience-wiki`，使用 Docusaurus 自动生成侧边栏。
-- macOS、Windows 和 Linux 的控件名称基本一致；系统文件选择器、托盘和关闭窗口行为会因平台不同而变化。
-- 删除项目、删除会话、卸载 runtime、迁移数据目录、保存 API key 等高影响操作在本文中说明确认步骤，但不会对用户真实数据执行。
+技术限制和配置查询见 [Reference](./reference/index.md)，版本变化见 [Changelog](./changelog/v0.30.1.md)。
