@@ -7,6 +7,9 @@ const buildDir = process.env.DOCS_BUILD_DIR || 'build';
 const availableWorkflows = [
   'core-reading-list', 'inherit-literature', 'journal-club', 'literature-review',
   'pdf-evidence', 'data-quality', 'statistics', 'extend-analysis', 'figures',
+  'focused-literature-search', 'merge-literature-searches', 'database-records',
+  'revise-report', 'update-literature', 'cross-check-records',
+  'rerun-updated-data', 'compare-methods',
 ];
 
 const en = readFileSync('docs/reference/connector-operations.md', 'utf8');
@@ -15,7 +18,7 @@ const operations = (text) => [...text.matchAll(/^### `([^`]+)`\n\n([^\n]+)/gm)].
 
 test('translated operation explanations preserve all callable names and example arguments', () => {
   const original = operations(en), translated = operations(zh);
-  const registry = JSON.parse(readFileSync('static/examples/capabilities/connector-catalog-v0.29.0.json', 'utf8'));
+  const registry = JSON.parse(readFileSync('static/examples/capabilities/connector-catalog-v0.30.1.json', 'utf8'));
   const dataTools = registry.filter((c) => c.id !== 'molecule').flatMap((c) => c.tools);
   assert.equal(original.length, 237);
   assert.deepEqual(original.map((t) => t.name).sort(), dataTools.map((t) => t.id).sort());
@@ -40,5 +43,28 @@ for (const prefix of locales.map((locale) => locale === 'en' ? '' : `${locale}/`
     assert.deepEqual(links.sort(), availableWorkflows.map((slug) => `/docs/${prefix}workflows/${slug}/`).sort());
     assert.ok(!aside.includes('guides-outline-chapter'));
     assert.ok(!/Chapter production in progress|upcoming coverage|Awaiting approval/i.test(aside));
+  });
+}
+
+const currentRegistry = JSON.parse(readFileSync('static/examples/capabilities/connector-catalog-v0.30.1.json', 'utf8'));
+const currentTools = currentRegistry.filter((c) => c.id !== 'molecule').flatMap((c) => c.tools);
+for (const [locale, prose, marker] of [['en', en, '**required**'], ['zh-Hans', zh, '**\u5fc5\u586b**']]) {
+  test(`${locale}: parameter tables preserve schema-required inputs and gnomAD coordinate bounds`, () => {
+    const sections = [...prose.matchAll(/^### `([^`]+)`\n([\s\S]*?)(?=^### `|$(?![\s\S]))/gm)];
+    assert.deepEqual(sections.map((s) => s[1]), currentTools.map((t) => t.id));
+    for (const [i, tool] of currentTools.entries()) {
+      const body = sections[i][2];
+      for (const field of tool.input.required ?? tool.required ?? []) {
+        const row = body.split('\n').find((line) => line.startsWith(`| \`${field}\` |`));
+        assert.ok(row?.includes(marker), `${tool.connector}/${tool.id}: ${field} must be marked required`);
+      }
+      if (tool.connector === 'variants' && ['region_variants', 'mitochondrial_variants'].includes(tool.id)) {
+        const fields = tool.id === 'region_variants' ? ['start', 'stop'] : ['region_start', 'region_stop'];
+        for (const field of fields) {
+          const row = body.split('\n').find((line) => line.startsWith(`| \`${field}\` |`));
+          assert.ok(row?.includes('2147483647'), `${tool.id}/${field}: missing coordinate upper bound`);
+        }
+      }
+    }
   });
 }

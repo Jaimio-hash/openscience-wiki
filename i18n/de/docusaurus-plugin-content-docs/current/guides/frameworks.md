@@ -1,12 +1,12 @@
 ---
 title: "Installations- und Vermittlungsstellen"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 # Installations- und Vermittlungsstellen {/* #installing-and-switching-agents */}
 
-Wählen Sie ein Agent-Framework, um Gespräche und Tools auszuführen. Nach der Installation konfigurieren Sie ein kompatibles [Modellanbieter](providers.md). Sie können mehrere Frameworks installiert halten und das aktive für ein Projekt wechseln.
+Wählen Sie ein Agent-Framework für Gespräche und Werkzeuge und richten Sie anschließend einen kompatiblen [Modellanbieter](providers.md) ein. Mehrere Frameworks können installiert bleiben. Das aktive Framework unter **Settings → Agent** ist eine anwendungsweite Einstellung für alle Projekte und gilt für nachfolgende Gesprächsrunden und Workflows.
 
 ## Lesen Sie die Agentenseite {/* #read-the-agent-page */}
 
@@ -17,7 +17,7 @@ Wählen Sie ein Agent-Framework, um Gespräche und Tools auszuführen. Nach der 
 | Kontrolle/Status | Sinn und Handlung |
 | --- | --- |
 | Eingebaute Karte | Wählen Sie eine berechtigte inaktive Karte aus, um einen Wechsel anzufordern. Eine aufgelistete Installation benötigt weiterhin einen kompatiblen Modellzugriff. |
-| Aktiv | Das ausgewählte Backend. Die Deinstallierungsaktion ist deaktiviert. |
+| Aktiv | Das anwendungsweit ausgewählte Backend. Die Deinstallierungsaktion ist deaktiviert. |
 | Erneut erkennen | Erfrischen Sie die Entdeckung nach einer Installation oder einem Pfadwechsel. Es zeigt vorübergehend Detecting; Es installiert keine fehlende Software. |
 | Nicht installiert | Für dieses Framework wurde keine nutzbare Laufzeit erkannt. |
 | Installationsmenü | Wählen Sie eine Quelle aus, die für dieses Framework angeboten wird, und überprüfen Sie dann den Installationsfortschritt. |
@@ -46,7 +46,7 @@ Ein App-verwaltetes Update ersetzt die App-eigene Laufzeit; ein externes CLI mus
 
 ## Switch ohne Verwechslung von Retained History mit Live State {/* #switch-without-confusing-retained-history-with-live-state */}
 
-Beenden oder stoppen Sie den aktuellen Vorgang vor dem Umschalten. Der Switch erstellt eine neue Backend-Sitzung und wiederholt das Transkript der offenen Konversation. Es überträgt keinen Prozess eines Bordwerkzeugs oder reproduziert jede Interpretervariable. Überprüfen Sie die Dateien der Sitzung, Notebook und Berechtigungen, bevor Sie eine Berechnung fortsetzen.
+Beenden oder stoppen Sie den aktuellen Vorgang vor dem Wechsel. Die Änderung gilt projektübergreifend für nachfolgende Gesprächsrunden und Workflows. Laufende Aufgaben behalten ihre bisherige Laufzeit bis zum Abschluss; inaktive Gespräche verbinden sich bei der nächsten Nutzung erneut. Der erhaltene Gesprächsverlauf überträgt keinen laufenden Werkzeugprozess und garantiert nicht den Erhalt von Interpretervariablen. Prüfen Sie Dateien, Notebook und Berechtigungen, bevor Sie weiterrechnen.
 
 Überprüfen Sie nach dem Wechsel das für die Konversation ausgewählte Modell. Codex Abonnements unterstützen [Side Chat](./delegation.md); Ausstehende Sitzungsvorgänge oder Wiederherstellung können das Öffnen vorübergehend verhindern. Folgen Sie der Nachricht, die durch den Eintrag angezeigt wird.
 
@@ -71,4 +71,6 @@ Wechseln Sie vor dem Entfernen eines Backends zu einem anderen verfügbaren Back
 
 Wenn Installationsaktionen deaktiviert sind, überprüfen Sie auf eine andere Installation/einen anderen laufenden Switch und den angegebenen Anforderungsfehler. Wenn die Erkennung erfolgreich ist, aber die Anforderungen fehlschlagen, prüfen Sie die Modellauthentifizierung und die Framework/API-Kompatibilität separat.
 
-Quellen: [Bevollmächtigter](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentPanel.tsx), [Rahmenkarte](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentFrameworkCard.tsx).
+Quellen: [Bevollmächtigter](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentPanel.tsx), [Rahmenkarte](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentFrameworkCard.tsx).
+
+Umfang und Schaltverhalten: [Einstellungen Speicher](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/settings/repository.ts), [Laufzeitumschaltung](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/acp/runtime-coordinator.ts).

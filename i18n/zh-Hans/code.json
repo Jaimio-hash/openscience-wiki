@@ -763,7 +763,7 @@
     "message": "查看下方合并后的主题及各自拟覆盖范围。"
   },
   "docs.outline.workflows.database-search.title": {
-    "message": "交叉核对科学记录"
+    "message": "查询并保存结构化数据库记录"
   },
   "docs.outline.workflows.database-search.scope": {
     "message": "查看下方合并后的主题及各自拟覆盖范围。"
@@ -1534,7 +1534,7 @@
     "message": "用同一数据集比较两种分析方法"
   },
   "docs.outline.workflows.compare-branches.scope": {
-    "message": "需要选择分析方法时，从相同起点分支，记录假设并分别运行，形成结果与局限对照。"
+    "message": "在相同输入和预处理条件下执行两种方法，比较结果、假设与解释边界。"
   },
   "docs.outline.workflows.continue-context.title": {
     "message": "中断一段时间后恢复课题并找回决策依据"
@@ -2538,5 +2538,17 @@
   },
   "docs.outline.reference.v0301.scope": {
     "message": "Side Chat 草稿、Skill 更新审核、研究包文献 PDF 与恢复工具。"
+  },
+  "docs.outline.workflows.focused-literature-search.title": {
+    "message": "按指定期刊与时间检索文献"
+  },
+  "docs.outline.workflows.focused-literature-search.scope": {
+    "message": "限定 PubMed 检索范围，逐条筛选返回记录，保留资格不确定的候选。"
+  },
+  "docs.outline.workflows.cross-check-records.title": {
+    "message": "交叉核对两个科研数据来源"
+  },
+  "docs.outline.workflows.cross-check-records.scope": {
+    "message": "先对齐定义、单位、年份和参考期，再比较 NASA 与 HadCRUT 年度温度数据。"
   }
 }

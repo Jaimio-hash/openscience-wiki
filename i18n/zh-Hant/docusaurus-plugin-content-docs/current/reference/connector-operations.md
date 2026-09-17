@@ -2,7 +2,7 @@
 title: "Connector 操作引數參考"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -36,7 +36,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## 操作輸入 {/* #操作输入 */}
 
-每次展開一個 Connector。必填項標為 **必填**，限制和預設值來自應用結構定義。<ExampleDownload path="/examples/capabilities/connector-catalog-v0.29.0.json">完整登錄檔下載</ExampleDownload>提供巢狀 JSON、完整返回說明和準確 Agent 側呼叫示例。工具要求 `accessions`、`cids`、`rs_id` 等專用欄位時，不要統一改為 `id`。
+每次展開一個 Connector。必填項標為 **必填**，本頁與下載目錄依據 Open-Science **v0.30.1** 的結構定義。以巢狀的 `input.required` 為準；舊式頂層 `required` 可能不存在。<ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">完整登錄檔下載</ExampleDownload>提供巢狀 JSON、完整返回說明和準確 Agent 側呼叫示例。工具要求 `accessions`、`cids`、`rs_id` 等專用欄位時，不要統一改為 `id`。
 
 
 ## 化學 {/* #family-1 */}
@@ -799,6 +799,8 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>展開操作與引數</summary>
 
+**gnomAD 座標規則**：同時記錄資料集固定標識與參考組裝。短變異的基因/區域查詢中，r2.1/ExAC 使用 GRCh37，r3/r4 使用 GRCh38；結構變異的基因查詢使用 `gnomad_sv_r2_1`（GRCh37）或 `gnomad_sv_r4`（GRCh38）；修改資料集不會轉換輸入座標。`gene_constraint` 和 gnomAD 的 ClinVar 映象固定使用 GRCh38 查詢基因，不接收 dataset 引數。線粒體查詢的父級定位也固定為 GRCh38；必須選擇基因或成對且有序的區域邊界，不能混用。區域邊界須為 1—2,147,483,647 的整數。百萬鹼基差值上限屬於 `region_variants`，不是另一個線粒體限制。結構變異 ID 必須與其所屬的 SV 資料集配套。
+
 ### `get_variant` {/* #get_variant */}
 
 按 gnomAD 短變異 ID 查詢群體頻率。variant_id 使用 chrom-pos-ref-alt，座標必須匹配 dataset 的參考組裝。rsID 先透過 search_variants 解析。
@@ -827,7 +829,7 @@ const result = await host.mcp("variants", "search_variants", {"query": "rs7412",
 
 ### `gene_variants` {/* #gene_variants */}
 
-列出一個基因在 gnomAD 中的全部短變異。gene_symbol 與 gene_id 必須二選一；大基因可能返回數千行。
+列出一個基因內的全部 gnomAD 短變異。基因邊界與變異座標使用所選資料集的參考組裝：r2.1/ExAC 為 GRCh37，r3/r4 為 GRCh38。大基因可能返回數千行。`gene_symbol`（HGNC 符號，如 `APOE`）和 `gene_id`（Ensembl ID，如 `ENSG00000130203`）必須二選一。
 
 | 欄位 | 型別 | 要求與約束 |
 | --- | --- | --- |
@@ -854,13 +856,13 @@ const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP
 
 ### `region_variants` {/* #region_variants */}
 
-列出 gnomAD 區域內全部短變異。染色體不帶 chr 字首，start/stop 為從 1 開始的閉區間，stop-start 不超過 1000000；更大區域分窗查詢。座標組裝由 dataset 決定。
+列出指定區域內的全部 gnomAD 短變異。`chrom` 接受 1—22、X、Y，也接受可選的 chr 字首和小寫 x/y。`start`/`stop` 為從 1 開始的閉區間整數，範圍 1—2,147,483,647；必須滿足 start ≤ stop 且 stop − start ≤ 1,000,000。r2.1/ExAC 使用 GRCh37，r3/r4 使用 GRCh38。輸入座標必須已採用相應組裝；選擇資料集不會自動進行 liftover。
 
 | 欄位 | 型別 | 要求與約束 |
 | --- | --- | --- |
 | `chrom` | 字串 | **必填** |
-| `start` | 整數 | **必填** |
-| `stop` | 整數 | **必填** |
+| `start` | 整數 | **必填**; 最小值： 1; 最大值： 2147483647 |
+| `stop` | 整數 | **必填**; 最小值： 1; 最大值： 2147483647 |
 | `dataset` | 字串 | 可選; 預設值： &quot;gnomad_r4&quot;; 列舉： &#91;&quot;gnomad_r4&quot;, &quot;gnomad_r4_non_ukb&quot;, &quot;gnomad_r3&quot;, &quot;gnomad_r3_controls_and_biobanks&quot;, &quot;gnomad_r3_non_cancer&quot;, &quot;gnomad_r3_non_neuro&quot;, &quot;gnomad_r3_non_topmed&quot;, &quot;gnomad_r3_non_v2&quot;, &quot;gnomad_r2_1&quot;, &quot;gnomad_r2_1_controls&quot;, &quot;gnomad_r2_1_non_cancer&quot;, &quot;gnomad_r2_1_non_neuro&quot;, &quot;gnomad_r2_1_non_topmed&quot;, &quot;exac&quot;&#93; |
 
 ```javascript
@@ -928,8 +930,8 @@ const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "D
 | --- | --- | --- |
 | `gene_symbol` | 字串 | 可選 |
 | `gene_id` | 字串 | 可選 |
-| `region_start` | 整數 | 可選 |
-| `region_stop` | 整數 | 可選 |
+| `region_start` | 整數 | 可選; 最小值： 1; 最大值： 2147483647 |
+| `region_stop` | 整數 | 可選; 最小值： 1; 最大值： 2147483647 |
 | `dataset` | 字串 | 可選; 預設值： &quot;gnomad_r4&quot;; 列舉： &#91;&quot;gnomad_r4&quot;, &quot;gnomad_r4_non_ukb&quot;, &quot;gnomad_r3&quot;, &quot;gnomad_r3_controls_and_biobanks&quot;, &quot;gnomad_r3_non_cancer&quot;, &quot;gnomad_r3_non_neuro&quot;, &quot;gnomad_r3_non_topmed&quot;, &quot;gnomad_r3_non_v2&quot;, &quot;gnomad_r2_1&quot;, &quot;gnomad_r2_1_controls&quot;, &quot;gnomad_r2_1_non_cancer&quot;, &quot;gnomad_r2_1_non_neuro&quot;, &quot;gnomad_r2_1_non_topmed&quot;, &quot;exac&quot;&#93; |
 
 ```javascript
@@ -1772,7 +1774,7 @@ const result = await host.mcp("biorxiv", "search_preprints", {"recent_days": 30,
 
 | 欄位 | 型別 | 要求與約束 |
 | --- | --- | --- |
-| `doi` | 字串 | 可選 |
+| `doi` | 字串 | **必填** |
 | `server` | 字串 | 可選; 預設值： &quot;biorxiv&quot;; 列舉： &#91;&quot;biorxiv&quot;, &quot;medrxiv&quot;&#93; |
 
 ```javascript
@@ -1805,9 +1807,9 @@ const result = await host.mcp("biorxiv", "search_published_preprints", {"publish
 
 | 欄位 | 型別 | 要求與約束 |
 | --- | --- | --- |
-| `funder_ror_id` | 字串 | 可選 |
-| `date_from` | 字串 | 可選 |
-| `date_to` | 字串 | 可選 |
+| `funder_ror_id` | 字串 | **必填** |
+| `date_from` | 字串 | **必填** |
+| `date_to` | 字串 | **必填** |
 | `server` | 字串 | 可選; 預設值： &quot;biorxiv&quot;; 列舉： &#91;&quot;biorxiv&quot;, &quot;medrxiv&quot;&#93; |
 | `category` | 字串 | 可選; 列舉： &#91;&quot;animal behavior and cognition&quot;, &quot;biochemistry&quot;, &quot;bioengineering&quot;, &quot;bioinformatics&quot;, &quot;biophysics&quot;, &quot;cancer biology&quot;, &quot;cell biology&quot;, &quot;clinical trials&quot;, &quot;developmental biology&quot;, &quot;ecology&quot;, &quot;epidemiology&quot;, &quot;evolutionary biology&quot;, &quot;genetics&quot;, &quot;genomics&quot;, &quot;immunology&quot;, &quot;microbiology&quot;, &quot;molecular biology&quot;, &quot;neuroscience&quot;, &quot;paleontology&quot;, &quot;pathology&quot;, &quot;pharmacology and toxicology&quot;, &quot;physiology&quot;, &quot;plant biology&quot;, &quot;scientific communication and education&quot;, &quot;synthetic biology&quot;, &quot;systems biology&quot;, &quot;zoology&quot;&#93; |
 | `limit` | 整數 | 可選; 預設值： 10; 最小值： 1; 最大值： 100 |

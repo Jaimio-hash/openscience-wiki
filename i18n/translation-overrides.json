@@ -112,7 +112,16 @@
     "Hai et al., 2022": "Hai ほか, 2022",
     "For Lang et al. (2019), choose KEEPAA beside Europe PMC. In this example, the PDF was saved under KEEPAB: 2.5 MB and 10 pages. Its title and DOI in the preview match the reference.": "Lang ほか（2019）の論文では、Europe PMC の横にある KEEPAA を選択します。この例では、2.5 MB、全10ページの PDF が文献の KEEPAB に保存されました。プレビューでタイトルと DOI が文献の記録と一致することを確認します。",
     "The downloaded Lang paper opens in the English PDF preview, showing page 1 of 10": "ダウンロードした Lang 論文を英語の PDF プレビューで開き、全10ページ中の1ページ目を表示",
-    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "他の選択済み論文も同じ手順で全文を取得します。PDF を取得できない場合は、KEEPAA から閲覧権限のあるコピーを入手し、KEEPAB で追加します。取得できない論文は全文未取得と明記し、抄録を全文の証拠として扱わないでください。"
+    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "他の選択済み論文も同じ手順で全文を取得します。PDF を取得できない場合は、KEEPAA から閲覧権限のあるコピーを入手し、KEEPAB で追加します。取得できない論文は全文未取得と明記し、抄録を全文の証拠として扱わないでください。",
+    "string": "文字列",
+    "integer": "整数",
+    "number": "数値",
+    "boolean": "真偽値",
+    "object": "オブジェクト",
+    "array of string": "文字列の配列",
+    "array of integer": "整数の配列",
+    "array of object": "オブジェクトの配列",
+    "required": "必須"
   },
   "ko": {
     "Guides": "사용 가이드",
@@ -225,7 +234,16 @@
     "Hai et al., 2022": "Hai 등, 2022",
     "For Lang et al. (2019), choose KEEPAA beside Europe PMC. In this example, the PDF was saved under KEEPAB: 2.5 MB and 10 pages. Its title and DOI in the preview match the reference.": "Lang 등의 2019년 논문에서는 Europe PMC 옆의 KEEPAA를 선택합니다. 이 사례에서는 2.5 MB, 총 10페이지의 PDF가 해당 문헌의 KEEPAB에 저장되었습니다. 미리보기에서 제목과 DOI가 문헌 기록과 일치하는지 확인합니다.",
     "The downloaded Lang paper opens in the English PDF preview, showing page 1 of 10": "다운로드한 Lang 논문을 영어 PDF 미리보기로 열어 총 10페이지 중 1페이지를 표시",
-    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "나머지 선정 논문도 같은 방법으로 원문을 확보합니다. PDF를 가져올 수 없다면 KEEPAA에서 접근 권한이 있는 사본을 구한 뒤 KEEPAB로 추가합니다. 확보하지 못한 논문은 원문 미확보로 표시하고, 초록을 원문 근거로 취급하지 마세요."
+    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "나머지 선정 논문도 같은 방법으로 원문을 확보합니다. PDF를 가져올 수 없다면 KEEPAA에서 접근 권한이 있는 사본을 구한 뒤 KEEPAB로 추가합니다. 확보하지 못한 논문은 원문 미확보로 표시하고, 초록을 원문 근거로 취급하지 마세요.",
+    "string": "문자열",
+    "integer": "정수",
+    "number": "숫자",
+    "boolean": "불리언",
+    "object": "객체",
+    "array of string": "문자열 배열",
+    "array of integer": "정수 배열",
+    "array of object": "객체 배열",
+    "required": "필수"
   },
   "fr": {
     "Guides": "Guides",
@@ -299,7 +317,16 @@
     "Single-Atom Catalysis - Journal Club": "Single-Atom Catalysis - Journal Club",
     "For Lang et al. (2019), choose KEEPAA beside Europe PMC. In this example, the PDF was saved under KEEPAB: 2.5 MB and 10 pages. Its title and DOI in the preview match the reference.": "Pour l’article de Lang et al. (2019), choisissez KEEPAA à côté d’Europe PMC. Dans cet exemple, le PDF a été enregistré dans KEEPAB : 2,5 Mo et 10 pages. Son titre et son DOI dans l’aperçu correspondent à la référence.",
     "The downloaded Lang paper opens in the English PDF preview, showing page 1 of 10": "Le PDF téléchargé de l’article de Lang s’ouvre dans l’aperçu en anglais, à la page 1 sur 10",
-    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "Répétez ces étapes pour les autres articles sélectionnés. Si un PDF est indisponible, utilisez KEEPAA pour obtenir une copie à laquelle vous avez le droit d’accéder, puis ajoutez-la avec KEEPAB. Signalez les textes intégraux manquants ; ne traitez pas leurs résumés comme des preuves issues du texte intégral."
+    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "Répétez ces étapes pour les autres articles sélectionnés. Si un PDF est indisponible, utilisez KEEPAA pour obtenir une copie à laquelle vous avez le droit d’accéder, puis ajoutez-la avec KEEPAB. Signalez les textes intégraux manquants ; ne traitez pas leurs résumés comme des preuves issues du texte intégral.",
+    "string": "chaîne de caractères",
+    "integer": "entier",
+    "number": "nombre",
+    "boolean": "booléen",
+    "object": "objet",
+    "array of string": "tableau de chaînes",
+    "array of integer": "tableau d’entiers",
+    "array of object": "tableau d’objets",
+    "required": "requis"
   },
   "de": {
     "Guides": "Anleitungen",
@@ -371,7 +398,16 @@
     "Single-Atom Catalysis - Journal Club": "Single-Atom Catalysis - Journal Club",
     "For Lang et al. (2019), choose KEEPAA beside Europe PMC. In this example, the PDF was saved under KEEPAB: 2.5 MB and 10 pages. Its title and DOI in the preview match the reference.": "Wählen Sie für Lang et al. (2019) neben Europe PMC die Option KEEPAA. In diesem Beispiel wurde die PDF mit 2,5 MB und 10 Seiten unter KEEPAB gespeichert. Titel und DOI in der Vorschau stimmen mit dem Literatureintrag überein.",
     "The downloaded Lang paper opens in the English PDF preview, showing page 1 of 10": "Die heruntergeladene Arbeit von Lang in der englischen PDF-Vorschau auf Seite 1 von 10",
-    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "Wiederholen Sie diese Schritte für die anderen ausgewählten Arbeiten. Falls eine PDF nicht verfügbar ist, beschaffen Sie über KEEPAA eine Kopie, auf die Sie zugreifen dürfen, und fügen Sie sie mit KEEPAB hinzu. Kennzeichnen Sie fehlende Volltexte weiterhin als nicht verfügbar; behandeln Sie deren Abstracts nicht als Belege aus dem Volltext."
+    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "Wiederholen Sie diese Schritte für die anderen ausgewählten Arbeiten. Falls eine PDF nicht verfügbar ist, beschaffen Sie über KEEPAA eine Kopie, auf die Sie zugreifen dürfen, und fügen Sie sie mit KEEPAB hinzu. Kennzeichnen Sie fehlende Volltexte weiterhin als nicht verfügbar; behandeln Sie deren Abstracts nicht als Belege aus dem Volltext.",
+    "string": "Zeichenfolge",
+    "integer": "Ganzzahl",
+    "number": "Zahl",
+    "boolean": "boolescher Wert",
+    "object": "Objekt",
+    "array of string": "Array aus Zeichenfolgen",
+    "array of integer": "Array aus Ganzzahlen",
+    "array of object": "Array aus Objekten",
+    "required": "erforderlich"
   },
   "es": {
     "Guides": "Guías",
@@ -442,7 +478,16 @@
     "Single-Atom Catalysis - Journal Club": "Single-Atom Catalysis - Journal Club",
     "For Lang et al. (2019), choose KEEPAA beside Europe PMC. In this example, the PDF was saved under KEEPAB: 2.5 MB and 10 pages. Its title and DOI in the preview match the reference.": "Para el artículo de Lang et al. (2019), seleccione KEEPAA junto a Europe PMC. En este ejemplo, el PDF se guardó en KEEPAB: 2,5 MB y 10 páginas. El título y el DOI de la vista previa coinciden con el registro bibliográfico.",
     "The downloaded Lang paper opens in the English PDF preview, showing page 1 of 10": "El artículo descargado de Lang abierto en la vista previa de PDF en inglés, en la página 1 de 10",
-    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "Repita estos pasos para los demás artículos seleccionados. Si no puede obtener un PDF, use KEEPAA para conseguir una copia a la que tenga derecho de acceso y añádala con KEEPAB. Mantenga los textos completos que falten marcados como no disponibles; no trate sus resúmenes como evidencia del texto completo."
+    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "Repita estos pasos para los demás artículos seleccionados. Si no puede obtener un PDF, use KEEPAA para conseguir una copia a la que tenga derecho de acceso y añádala con KEEPAB. Mantenga los textos completos que falten marcados como no disponibles; no trate sus resúmenes como evidencia del texto completo.",
+    "string": "cadena de texto",
+    "integer": "entero",
+    "number": "número",
+    "boolean": "booleano",
+    "object": "objeto",
+    "array of string": "matriz de cadenas",
+    "array of integer": "matriz de enteros",
+    "array of object": "matriz de objetos",
+    "required": "obligatorio"
   },
   "ru": {
     "Guides": "Руководства",
@@ -514,7 +559,16 @@
     "Single-Atom Catalysis - Journal Club": "Single-Atom Catalysis - Journal Club",
     "For Lang et al. (2019), choose KEEPAA beside Europe PMC. In this example, the PDF was saved under KEEPAB: 2.5 MB and 10 pages. Its title and DOI in the preview match the reference.": "Для статьи Lang и соавт. (2019) выберите KEEPAA рядом с Europe PMC. В этом примере PDF размером 2,5 МБ и объёмом 10 страниц сохранён в разделе KEEPAB записи. Заголовок и DOI в предпросмотре совпадают с записью о статье.",
     "The downloaded Lang paper opens in the English PDF preview, showing page 1 of 10": "Загруженная статья Lang открыта в англоязычном просмотрщике PDF: страница 1 из 10",
-    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "Повторите эти шаги для остальных выбранных статей. Если PDF недоступен, через KEEPAA получите копию, к которой у вас есть право доступа, и добавьте её с помощью KEEPAB. Отмечайте отсутствующие полные тексты; не используйте аннотации как доказательства из полного текста."
+    "Repeat these steps for the other selected papers. If a PDF is unavailable, use KEEPAA to obtain a copy you are entitled to access, then add it with KEEPAB. Keep missing full texts marked as unavailable; do not treat their abstracts as full-text evidence.": "Повторите эти шаги для остальных выбранных статей. Если PDF недоступен, через KEEPAA получите копию, к которой у вас есть право доступа, и добавьте её с помощью KEEPAB. Отмечайте отсутствующие полные тексты; не используйте аннотации как доказательства из полного текста.",
+    "string": "строка",
+    "integer": "целое число",
+    "number": "число",
+    "boolean": "логическое значение",
+    "object": "объект",
+    "array of string": "массив строк",
+    "array of integer": "массив целых чисел",
+    "array of object": "массив объектов",
+    "required": "обязательно"
   },
   "zh-Hant": {
     "安装位置用于存放应用程序；向导中的 KEEPAA 用于科研文件和运行环境，两者分别设置。安装后继续KEEPAB。": "安裝位置用於存放應用程式；設定精靈中的 KEEPAA 用於科研檔案和執行環境，兩者分別設定。安裝後繼續KEEPAB。",

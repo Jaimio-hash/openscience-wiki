@@ -918,7 +918,7 @@
     "message": "관련 PDF 구절 및 방법, 유지 페이지 증거 및 지원, 자격 또는 지원 된 발견을 생성하는 초안 또는 회의 메모에 주장을 부여합니다."
   },
   "docs.outline.workflows.database-search.title": {
-    "message": "Cross-check 과학적인 기록"
+    "message": "Structured 데이터베이스 기록"
   },
   "docs.outline.workflows.database-search.scope": {
     "message": "포함 된 주제와 계획 된 범위를 검토하십시오."
@@ -1128,7 +1128,7 @@
     "message": "같은 dataset에 두 가지 분석 방법 비교"
   },
   "docs.outline.workflows.compare-branches.scope": {
-    "message": "방법을 선택할 때, 공유 시작 지점에서 지점, 문서화 된 가정과 모두 실행하고 결과와 제한의 비교를 생성합니다."
+    "message": "동일한 문서 입력 및 2 가지 방법의 사전 처리를 사용하여 결과, 가정 및 제한을 모두 실행합니다."
   },
   "docs.outline.workflows.save-method.title": {
     "message": "새로운 dataset에 유효한 분석 재사용"
@@ -1594,5 +1594,17 @@
   },
   "docs.outline.reference.v0301.scope": {
     "message": "Side Chat 초안, Skill 업데이트 검토, 연구 패키지의 문헌 PDF 및 복구 도구."
+  },
+  "docs.outline.workflows.focused-literature-search.title": {
+    "message": "지정된 저널 및 날짜 내에서 검색"
+  },
+  "docs.outline.workflows.focused-literature-search.scope": {
+    "message": "바인딩된 PubMed 검색을 실행하고, 모든 반환된 기록과 유지 불확실한 결정."
+  },
+  "docs.outline.workflows.cross-check-records.title": {
+    "message": "Cross-check 2개의 과학적인 자료 근원"
+  },
+  "docs.outline.workflows.cross-check-records.scope": {
+    "message": "Align 정의, 단위, 년 및 NASA와 HadCRUT 연간 온도 기록을 비교하기 전에 참조 기간."
   }
 }

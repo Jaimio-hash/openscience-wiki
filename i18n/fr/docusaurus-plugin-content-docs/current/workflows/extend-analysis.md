@@ -57,12 +57,12 @@ Fichiers de référence : <ExampleDownload path="/examples/theoph/theoph-input.c
 
 ## 3. Ajouter les paramètres d'exposition {/* #3-add-the-exposure-metrics */}
 
-Téléchargez le <ExampleDownload path="/examples/theoph/nca-conventions.md">référence officielle de Skill NCA</ExampleDownload> et ajoutez-le via **+ → Attach files**. Il s'agit d'une référence inchangée du paquet installé. Dans la configuration enregistrée, Notebook pouvait lire la pièce jointe à la conversation, mais ne pouvait pas lire la référence dans le répertoire d'installation Skill.
+Téléchargez la <ExampleDownload path="/examples/theoph/nca-conventions.md">note méthodologique NCA corrigée</ExampleDownload> et ajoutez-la avec **+ → Attach files**. Cette version du Wiki corrige les explications du document fourni sur l’intégration et le choix de l’intervalle terminal. L’exemple utilise les Cmax/Tmax observés et une AUC calculée par la règle des trapèzes linéaires sur tous les intervalles ; il n’estime pas la pente terminale. Joignez le fichier à la conversation : dans la configuration utilisée, Notebook ne pouvait pas lire le document dans le répertoire d’installation du Skill.
 
 Sélectionnez à nouveau `/pkpd-modeling` dans la même conversation, puis envoyez :
 
 ```text
-Read the attached nca-conventions.md from the official Skill package.
+Read the attached reviewed nca-conventions.md methods reference.
 Extend the baseline using the same theoph-input.csv and base R Notebook.
 For each subject calculate observed Cmax (mg/L), earliest observed Tmax (h),
 linear-trapezoidal AUC from time zero to the last observation (mg*h/L),

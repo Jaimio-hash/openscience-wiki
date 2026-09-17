@@ -1,0 +1,8 @@
+date,station,pm25_mean_ug_m3_v1,pm25_mean_ug_m3_v2,pm25_mean_ug_m3_identical,valid_hours_v1,valid_hours_v2,valid_hours_identical,expected_hours_v1,expected_hours_v2,expected_hours_identical,missing_pm25_hours_v1,missing_pm25_hours_v2,missing_pm25_hours_identical,completeness_pct_v1,completeness_pct_v2,completeness_pct_identical,meets_18h_rule_v1,meets_18h_rule_v2,meets_18h_rule_identical,hourly_rows_v1,hourly_rows_v2,hourly_rows_identical,row_identical
+2016-01-01,Aotizhongxin,164.958000,164.958000,True,24,24,True,24,24,True,0,0,True,100.000000,100.000000,True,True,True,True,24,24,True,True
+2016-01-02,Aotizhongxin,272.792000,272.792000,True,24,24,True,24,24,True,0,0,True,100.000000,100.000000,True,True,True,True,24,24,True,True
+2016-01-03,Aotizhongxin,263.375000,263.375000,True,24,24,True,24,24,True,0,0,True,100.000000,100.000000,True,True,True,True,24,24,True,True
+2016-01-04,Aotizhongxin,45.458000,45.458000,True,24,24,True,24,24,True,0,0,True,100.000000,100.000000,True,True,True,True,24,24,True,True
+2016-01-05,Aotizhongxin,31.167000,31.167000,True,24,24,True,24,24,True,0,0,True,100.000000,100.000000,True,True,True,True,24,24,True,True
+2016-01-06,Aotizhongxin,23.875000,23.875000,True,24,24,True,24,24,True,0,0,True,100.000000,100.000000,True,True,True,True,24,24,True,True
+2016-01-07,Aotizhongxin,11.917000,11.917000,True,24,24,True,24,24,True,0,0,True,100.000000,100.000000,True,True,True,True,24,24,True,True

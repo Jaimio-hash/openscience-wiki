@@ -913,7 +913,7 @@
     "message": "ドラフトまたはミーティングノートにクレームを与え、関連するPDFの通路と方法を見つけ、ページ証拠を保持し、サポートされた、資格のある、またはサポートされていない検索を生成します。"
   },
   "docs.outline.workflows.database-search.title": {
-    "message": "科学的記録のクロスチェック"
+    "message": "構造化されたデータベースレコードを取得する"
   },
   "docs.outline.workflows.database-search.scope": {
     "message": "含まれたトピックとその計画範囲を以下で確認します。"
@@ -1123,7 +1123,7 @@
     "message": "同じデータセットで2つの解析方法を比較する"
   },
   "docs.outline.workflows.compare-branches.scope": {
-    "message": "メソッドを選択すると、共有開始点からブランチを選択し、文書化された仮定で実行し、結果と制限の比較を生成します。"
+    "message": "同じ文書化された入力と2つのメソッドのプリプロセッシングを使用して、両方を実行し、結果、仮定と制限を比較します。"
   },
   "docs.outline.workflows.save-method.title": {
     "message": "検証済みの分析を新しいデータセットで再利用"
@@ -1589,5 +1589,17 @@
   },
   "docs.outline.reference.v0301.scope": {
     "message": "Side Chat の下書き、Skill 更新の確認、研究パッケージの文献 PDF、復旧ツール。"
+  },
+  "docs.outline.workflows.focused-literature-search.title": {
+    "message": "特定のジャーナルと日付内で検索"
+  },
+  "docs.outline.workflows.focused-literature-search.scope": {
+    "message": "境界された PubMed の検索を実行します。, すべての返されたレコードをスクリーンし、不確実性の決定を保持."
+  },
+  "docs.outline.workflows.cross-check-records.title": {
+    "message": "2つの科学的データソースをクロスチェック"
+  },
+  "docs.outline.workflows.cross-check-records.scope": {
+    "message": "NASA および HadCRUT の年間温度記録を比較する前に定義、単位、年および参照の期間を一直線に並べて下さい。"
   }
 }

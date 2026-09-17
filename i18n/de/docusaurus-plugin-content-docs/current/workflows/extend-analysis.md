@@ -57,12 +57,12 @@ Referenzdateien: <ExampleDownload path="/examples/theoph/theoph-input.csv">Einga
 
 ## 3. Addieren Sie die Expositionsmetriken {/* #3-add-the-exposure-metrics */}
 
-Laden Sie den <ExampleDownload path="/examples/theoph/nca-conventions.md">Offizielle NCA-Referenz von Skill</ExampleDownload> herunter und fügen Sie ihn über **+ → Attach files** hinzu. Dies ist eine unveränderte Referenz aus dem installierten Paket. In der aufgezeichneten Konfiguration konnte Notebook die Konversationsanhängung lesen, aber nicht die Referenz im Installationsverzeichnis von Skill lesen.
+Laden Sie die <ExampleDownload path="/examples/theoph/nca-conventions.md">korrigierte NCA-Methodenreferenz</ExampleDownload> herunter und hängen Sie sie über **+ → Attach files** an. Diese Wiki-Fassung korrigiert die Erläuterungen zur Integration und zur Auswahl des terminalen Regressionsintervalls in der mitgelieferten Referenz. Das Beispiel berechnet beobachtete Cmax/Tmax und eine AUC mit der linearen Trapezregel über alle Intervalle; eine terminale Steigung wird nicht geschätzt. Nutzen Sie den Gesprächsanhang, da Notebook in der dokumentierten Konfiguration die Referenz im Installationsverzeichnis des Skills nicht lesen konnte.
 
 Wählen Sie `/pkpd-modeling` erneut in der gleichen Konversation aus und senden Sie dann:
 
 ```text
-Read the attached nca-conventions.md from the official Skill package.
+Read the attached reviewed nca-conventions.md methods reference.
 Extend the baseline using the same theoph-input.csv and base R Notebook.
 For each subject calculate observed Cmax (mg/L), earliest observed Tmax (h),
 linear-trapezoidal AUC from time zero to the last observation (mg*h/L),

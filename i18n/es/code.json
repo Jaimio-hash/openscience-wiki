@@ -914,7 +914,7 @@
     "message": "Dada una reclamación en un borrador o una nota de reunión, localice los pasajes y métodos PDF pertinentes, conserve las pruebas de la página y produzca un hallazgo respaldado, calificado o no respaldado."
   },
   "docs.outline.workflows.database-search.title": {
-    "message": "Comprobación de registros científicos"
+    "message": "Recuperar registros de bases de datos estructurados"
   },
   "docs.outline.workflows.database-search.scope": {
     "message": "Revise los temas incluidos y su alcance previsto a continuación."
@@ -1124,7 +1124,7 @@
     "message": "Compare dos métodos de análisis en el mismo conjunto de datos"
   },
   "docs.outline.workflows.compare-branches.scope": {
-    "message": "Al elegir entre métodos, rama desde un punto de partida compartido, corre con supuestos documentados y produce una comparación de resultados y limitaciones."
+    "message": "Use los mismos insumos documentados y preprocesamiento para dos métodos, ejecute ambos y compare resultados, supuestos y limitaciones."
   },
   "docs.outline.workflows.save-method.title": {
     "message": "Reutilizar un análisis validado en un nuevo conjunto de datos"
@@ -1590,5 +1590,17 @@
   },
   "docs.outline.reference.v0301.scope": {
     "message": "Borradores de Side Chat, revisión de actualizaciones de Skill, PDF en paquetes de investigación y recuperación."
+  },
+  "docs.outline.workflows.focused-literature-search.title": {
+    "message": "Búsqueda dentro de revistas y fechas especificadas"
+  },
+  "docs.outline.workflows.focused-literature-search.scope": {
+    "message": "Ejecute una búsqueda limitada de PubMed, revise todos los registros devueltos y mantenga decisiones de elegibilidad inciertas."
+  },
+  "docs.outline.workflows.cross-check-records.title": {
+    "message": "Comprobar dos fuentes de datos científicos"
+  },
+  "docs.outline.workflows.cross-check-records.scope": {
+    "message": "Definiciones, unidades, años y períodos de referencia alineados antes de comparar los registros de temperatura anuales de la NASA y HadCRUT."
   }
 }

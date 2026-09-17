@@ -53,6 +53,17 @@
             "contentStatus": "written"
           },
           {
+            "id": "focused-literature-search",
+            "title": "Search within specified journals and dates",
+            "scope": "Run a bounded PubMed search, screen every returned record and retain uncertain eligibility decisions.",
+            "relatedDocs": [
+              "guides/connectors"
+            ],
+            "currentDoc": "workflows/focused-literature-search",
+            "proposedUrl": "/docs/workflows/focused-literature-search/",
+            "contentStatus": "written"
+          },
+          {
             "id": "import-library",
             "title": "Take over and organize a paper collection",
             "scope": "Review the included topics and their planned scope below.",
@@ -84,11 +95,12 @@
             "id": "organize-library",
             "title": "Consolidate search batches for a review project",
             "scope": "Combine records from several searches or databases into a deduplicated candidate set, retaining search provenance and a documented screening handoff.",
-            "currentDoc": "guides/library",
-            "proposedUrl": "/docs/workflows/review-search-batches/",
+            "currentDoc": "workflows/merge-literature-searches",
+            "proposedUrl": "/docs/workflows/merge-literature-searches/",
             "relatedDocs": [
               "guides/library"
-            ]
+            ],
+            "contentStatus": "written"
           },
           {
             "id": "review-inbox",
@@ -105,8 +117,8 @@
             "id": "deduplicate-library",
             "title": "Extend an existing evidence base",
             "scope": "Review the included topics and their planned scope below.",
-            "currentDoc": "guides/library",
-            "proposedUrl": "/docs/workflows/related-project-evidence/",
+            "currentDoc": "workflows/update-literature",
+            "proposedUrl": "/docs/workflows/update-literature/",
             "topics": [
               {
                 "id": "deduplicate-library",
@@ -119,13 +131,15 @@
                 "id": "attach-full-text",
                 "title": "Refresh the evidence base before a project milestone",
                 "scope": "Before a proposal or progress review, run a fresh search, compare new findings with the saved collection and prepare a dated additions-and-gaps note. This is a manual workflow, not scheduled monitoring.",
-                "currentDoc": "guides/library",
-                "proposedUrl": "/docs/workflows/milestone-evidence-update/"
+                "currentDoc": "workflows/update-literature",
+                "proposedUrl": "/docs/workflows/update-literature/",
+                "contentStatus": "written"
               }
             ],
             "relatedDocs": [
               "guides/library"
-            ]
+            ],
+            "contentStatus": "written"
           }
         ]
       },
@@ -175,17 +189,18 @@
           },
           {
             "id": "database-search",
-            "title": "Cross-check scientific records",
+            "title": "Retrieve structured database records",
             "scope": "Review the included topics and their planned scope below.",
-            "currentDoc": "guides/connectors",
-            "proposedUrl": "/docs/workflows/database-search/",
+            "currentDoc": "workflows/database-records",
+            "proposedUrl": "/docs/workflows/database-records/",
             "topics": [
               {
                 "id": "database-search",
                 "title": "Search scientific databases",
                 "scope": "Select a data source, formulate bounded queries, resolve identifiers, and save traceable records.",
-                "currentDoc": "guides/connectors",
-                "proposedUrl": "/docs/workflows/database-search/"
+                "currentDoc": "workflows/database-records",
+                "proposedUrl": "/docs/workflows/database-records/",
+                "contentStatus": "written"
               },
               {
                 "id": "cross-source-evidence",
@@ -197,7 +212,19 @@
             ],
             "relatedDocs": [
               "guides/connectors"
-            ]
+            ],
+            "contentStatus": "written"
+          },
+          {
+            "id": "cross-check-records",
+            "title": "Cross-check two scientific data sources",
+            "scope": "Align definitions, units, years and reference periods before comparing NASA and HadCRUT annual temperature records.",
+            "relatedDocs": [
+              "guides/notebook"
+            ],
+            "currentDoc": "workflows/cross-check-records",
+            "proposedUrl": "/docs/workflows/cross-check-records/",
+            "contentStatus": "written"
           },
           {
             "id": "indication-dossier",
@@ -382,8 +409,8 @@
             "id": "manuscript",
             "title": "Write and revise a research report",
             "scope": "Review the included topics and their planned scope below.",
-            "currentDoc": "skills/directory",
-            "proposedUrl": "/docs/workflows/manuscript/",
+            "currentDoc": "workflows/revise-report",
+            "proposedUrl": "/docs/workflows/revise-report/",
             "topics": [
               {
                 "id": "manuscript",
@@ -396,24 +423,27 @@
                 "id": "revise-artifact",
                 "title": "Revise a figure or report after reviewer feedback",
                 "scope": "Map feedback to saved outputs, make supported edits, compare revisions and prepare a response linking each change to the revised artifact.",
-                "currentDoc": "guides/files",
-                "proposedUrl": "/docs/workflows/revise-artifact/"
+                "currentDoc": "workflows/revise-report",
+                "proposedUrl": "/docs/workflows/revise-report/",
+                "contentStatus": "written"
               }
             ],
             "relatedDocs": [
               "skills/directory",
               "guides/files"
-            ]
+            ],
+            "contentStatus": "written"
           },
           {
             "id": "recover-notebook",
             "title": "Rerun an analysis after the source data changes",
             "scope": "Given an updated dataset, identify stale notebook outputs, rerun dependencies and compare new results with the previous deliverable to explain material changes.",
-            "currentDoc": "guides/notebook",
-            "proposedUrl": "/docs/workflows/recover-notebook/",
+            "currentDoc": "workflows/rerun-updated-data",
+            "proposedUrl": "/docs/workflows/rerun-updated-data/",
             "relatedDocs": [
               "guides/notebook"
-            ]
+            ],
+            "contentStatus": "written"
           }
         ]
       },
@@ -500,12 +530,13 @@
           {
             "id": "compare-branches",
             "title": "Compare two analysis methods on the same dataset",
-            "scope": "When choosing between methods, branch from a shared starting point, run both with documented assumptions and produce a comparison of results and limitations.",
-            "currentDoc": "guides/composer",
-            "proposedUrl": "/docs/workflows/compare-branches/",
+            "scope": "Use the same documented inputs and preprocessing for two methods, execute both, and compare results, assumptions and limitations.",
+            "currentDoc": "workflows/compare-methods",
+            "proposedUrl": "/docs/workflows/compare-methods/",
             "relatedDocs": [
               "guides/composer"
-            ]
+            ],
+            "contentStatus": "written"
           },
           {
             "id": "save-method",
@@ -986,7 +1017,7 @@
           {
             "id": "paper-narrative",
             "title": "Paper Narrative",
-            "scope": "Review the order and argument of a paper\u2019s figure deck. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
+            "scope": "Review the order and argument of a paper’s figure deck. Specify inputs, runtime/weights/accounts, an example request, output files, validation, and known limits.",
             "currentDoc": "skills/directory"
           },
           {

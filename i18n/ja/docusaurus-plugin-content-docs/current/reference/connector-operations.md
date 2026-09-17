@@ -2,7 +2,7 @@
 title: "Connectorの操作の参照"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -36,7 +36,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## 操作の入力 {/* #operation-inputs */}
 
-Connectorを一度に拡大します。 必須フィールドは、**必須条件** マークされています。 ここに示す limits/defaults は、アプリケーションスキーマから来ています。 コンサルティング <ExampleDownload path="/examples/capabilities/connector-catalog-v0.29.0.json">完全なダウンロード可能なレジストリ</ExampleDownload> ネスト JSON スキーマ、フルリターンの説明、エージェント・サイドのコール例。 ツールが`accessions`、`cids`、`rs_id`、または別の名前空間固有のフィールドを期待したときに、一般的な`id`を渡すしないでください。
+Connectorを一度に拡大します。 必須フィールドは、**必須条件** マークされています。 この参照とダウンロードは、Open-Science **v0.30.1**スキーマを使用します。 ネストされた`input.required`リストは権威ある; `required` のレガシートップレベルのリストは、不在である可能性があります。 コンサルティング <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">完全なダウンロード可能なレジストリ</ExampleDownload> ネスト JSON スキーマ、フルリターンの説明、エージェント・サイドのコール例。 ツールが`accessions`、`cids`、`rs_id`、または別の名前空間固有のフィールドを期待したときに、一般的な`id`を渡すしないでください。
 
 
 ## 化学化学品 {/* #family-1 */}
@@ -50,10 +50,10 @@ Connectorを一度に拡大します。 必須フィールドは、**必須条�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `namespace` | キーワード | 任意; デフォルト: "name"; エヌム: &#91;"name", "smiles", "inchikey", "cid"&#93; |
-| `max_cids` | インテガー | 任意; デフォルト: 25; 最小値: 1; 最高: 100 |
-| `with_properties` | ボオラン | 任意; デフォルト: true |
+| `query` | 文字列 | **必須** |
+| `namespace` | 文字列 | 任意; デフォルト: "name"; エヌム: &#91;"name", "smiles", "inchikey", "cid"&#93; |
+| `max_cids` | 整数 | 任意; デフォルト: 25; 最小値: 1; 最高: 100 |
+| `with_properties` | 真偽値 | 任意; デフォルト: true |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_search_compounds", {"query": "aspirin", "max_cids": 25})
@@ -65,9 +65,9 @@ const result = await host.mcp("chemistry", "pubchem_search_compounds", {"query":
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `cids` | 整数の配列 | **必須条件**; minItems: 1; maxItems: 50の |
-| `include_synonyms` | ボオラン | 任意; デフォルト: false |
-| `max_synonyms` | インテガー | 任意; デフォルト: 30 |
+| `cids` | 整数の配列 | **必須**; minItems: 1; maxItems: 50の |
+| `include_synonyms` | 真偽値 | 任意; デフォルト: false |
+| `max_synonyms` | 整数 | 任意; デフォルト: 30 |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_get_compounds", {"cids": [2244, 2519], "include_synonyms": false})
@@ -79,10 +79,10 @@ const result = await host.mcp("chemistry", "pubchem_get_compounds", {"cids": [22
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `smiles` | キーワード | **必須条件** |
-| `threshold` | インテガー | 任意; デフォルト: 90; 最小値: 1; 最高: 100 |
-| `max_records` | インテガー | 任意; デフォルト: 50; 最小値: 1; 最高: 200 |
-| `with_properties` | ボオラン | 任意; デフォルト: false |
+| `smiles` | 文字列 | **必須** |
+| `threshold` | 整数 | 任意; デフォルト: 90; 最小値: 1; 最高: 100 |
+| `max_records` | 整数 | 任意; デフォルト: 50; 最小値: 1; 最高: 200 |
+| `with_properties` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_similarity_search", {"smiles": "CC(=O)OC1=CC=CC=C1C(=O)O", "threshold": 90})
@@ -94,9 +94,9 @@ const result = await host.mcp("chemistry", "pubchem_similarity_search", {"smiles
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `cid` | インテガー | **必須条件** |
-| `active_only` | ボオラン | 任意; デフォルト: false |
-| `max_rows` | インテガー | 任意; デフォルト: 100; 最小値: 1; 最高: 1000 |
+| `cid` | 整数 | **必須** |
+| `active_only` | 真偽値 | 任意; デフォルト: false |
+| `max_rows` | 整数 | 任意; デフォルト: 100; 最小値: 1; 最高: 1000 |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_get_bioassay_summary", {"cid": 2244, "active_only": true})
@@ -108,7 +108,7 @@ const result = await host.mcp("chemistry", "pubchem_get_bioassay_summary", {"cid
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `cid` | インテガー | **必須条件** |
+| `cid` | 整数 | **必須** |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_get_safety", {"cid": 702})
@@ -120,9 +120,9 @@ ChEBIエンティティティ(名前、同義語、式、InChIKeys)上の全文�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `term` | キーワード | **必須条件** |
-| `max_results` | インテガー | 任意; デフォルト: 20; 最小値: 1; 最高: 100 |
-| `page` | インテガー | 任意; デフォルト: 1; 最小値: 1 |
+| `term` | 文字列 | **必須** |
+| `max_results` | 整数 | 任意; デフォルト: 20; 最小値: 1; 最高: 100 |
+| `page` | 整数 | 任意; デフォルト: 1; 最小値: 1 |
 
 ```javascript
 const result = await host.mcp("chemistry", "chebi_search", {"term": "caffeine", "max_results": 20})
@@ -134,9 +134,9 @@ const result = await host.mcp("chemistry", "chebi_search", {"term": "caffeine", 
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `chebi_id` | キーワード | **必須条件** |
-| `max_synonyms` | インテガー | 任意; デフォルト: 30 |
-| `max_xrefs` | インテガー | 任意; デフォルト: 50 |
+| `chebi_id` | 文字列 | **必須** |
+| `max_synonyms` | 整数 | 任意; デフォルト: 30 |
+| `max_xrefs` | 整数 | 任意; デフォルト: 50 |
 
 ```javascript
 const result = await host.mcp("chemistry", "chebi_get_entity", {"chebi_id": "CHEBI:27732"})
@@ -148,9 +148,9 @@ ChEBIの組織のOntologyリレーション - それが何であるか(外出:�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `chebi_id` | キーワード | **必須条件** |
-| `relation_type` | キーワード | オプション |
-| `max_relations` | インテガー | 任意; デフォルト: 100 |
+| `chebi_id` | 文字列 | **必須** |
+| `relation_type` | 文字列 | オプション |
+| `max_relations` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("chemistry", "chebi_get_ontology", {"chebi_id": "CHEBI:27732", "relation_type": "has role"})
@@ -162,8 +162,8 @@ const result = await host.mcp("chemistry", "chebi_get_ontology", {"chebi_id": "C
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `limit` | インテガー | 任意; デフォルト: 50; 最小値: 1; 最高: 500 |
+| `query` | 文字列 | **必須** |
+| `limit` | 整数 | 任意; デフォルト: 50; 最小値: 1; 最高: 500 |
 
 ```javascript
 const result = await host.mcp("chemistry", "rhea_search_reactions", {"query": "caffeine", "limit": 50})
@@ -175,7 +175,7 @@ const result = await host.mcp("chemistry", "rhea_search_reactions", {"query": "c
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `rhea_id` | キーワード | **必須条件** |
+| `rhea_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("chemistry", "rhea_get_reaction", {"rhea_id": "10280"})
@@ -187,9 +187,9 @@ const result = await host.mcp("chemistry", "rhea_get_reaction", {"rhea_id": "102
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `uniprot` | キーワード | **必須条件** |
-| `affinity_cutoff_nm` | 郵便番号 | 任意; デフォルト: 10000 |
-| `max_rows` | インテガー | 任意; デフォルト: 100; 最小値: 1; 最高: 1000 |
+| `uniprot` | 文字列 | **必須** |
+| `affinity_cutoff_nm` | 数値 | 任意; デフォルト: 10000 |
+| `max_rows` | 整数 | 任意; デフォルト: 100; 最小値: 1; 最高: 1000 |
 
 ```javascript
 const result = await host.mcp("chemistry", "bindingdb_ligands_by_target", {"uniprot": "P00533", "affinity_cutoff_nm": 100})
@@ -201,9 +201,9 @@ const result = await host.mcp("chemistry", "bindingdb_ligands_by_target", {"unip
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `smiles` | キーワード | **必須条件** |
-| `similarity` | 郵便番号 | 任意; デフォルト: 0.85; 最小値: 0.5; 最高: 1 |
-| `max_rows` | インテガー | 任意; デフォルト: 100; 最小値: 1; 最高: 1000 |
+| `smiles` | 文字列 | **必須** |
+| `similarity` | 数値 | 任意; デフォルト: 0.85; 最小値: 0.5; 最高: 1 |
+| `max_rows` | 整数 | 任意; デフォルト: 100; 最小値: 1; 最高: 1000 |
 
 ```javascript
 const result = await host.mcp("chemistry", "bindingdb_targets_by_compound", {"smiles": "CC(=O)OC1=CC=CC=C1C(=O)O", "similarity": 0.85})
@@ -222,15 +222,15 @@ const result = await host.mcp("chemistry", "bindingdb_targets_by_compound", {"sm
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | オプション |
-| `year_from` | インテガー | オプション |
-| `year_to` | インテガー | オプション |
-| `work_type` | キーワード | オプション |
-| `open_access_only` | ボオラン | オプション |
-| `venue` | キーワード | オプション |
-| `sort` | キーワード | 任意; デフォルト: "relevance"; エヌム: &#91;"relevance"、"cited_by_count"、"publication_date"&#93; |
-| `max_records` | インテガー | 任意; デフォルト: 50 |
-| `include_abstracts` | ボオラン | 任意; デフォルト: false |
+| `query` | 文字列 | オプション |
+| `year_from` | 整数 | オプション |
+| `year_to` | 整数 | オプション |
+| `work_type` | 文字列 | オプション |
+| `open_access_only` | 真偽値 | オプション |
+| `venue` | 文字列 | オプション |
+| `sort` | 文字列 | 任意; デフォルト: "relevance"; エヌム: &#91;"relevance"、"cited_by_count"、"publication_date"&#93; |
+| `max_records` | 整数 | 任意; デフォルト: 50 |
+| `include_abstracts` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_search_works", {"query": "CRISPR base editing", "year_from": 2020, "open_access_only": true, "sort": "cited_by_count", "max_records": 25})
@@ -242,7 +242,7 @@ OpenAlex がフルで機能する — メタデータ, 抽象 (変換された�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `work_id` | キーワード | **必須条件** |
+| `work_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_get_work", {"work_id": "W2741809807"})
@@ -254,10 +254,10 @@ const result = await host.mcp("literature", "openalex_get_work", {"work_id": "W2
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `work_id` | キーワード | **必須条件** |
-| `sort` | キーワード | 任意; デフォルト: "cited_by_count"; enum: &#91;"cited_by_count"、"publication_date"、"relevance"&#93; |
-| `max_records` | インテガー | 任意; デフォルト: 50 |
-| `include_abstracts` | ボオラン | 任意; デフォルト: false |
+| `work_id` | 文字列 | **必須** |
+| `sort` | 文字列 | 任意; デフォルト: "cited_by_count"; enum: &#91;"cited_by_count"、"publication_date"、"relevance"&#93; |
+| `max_records` | 整数 | 任意; デフォルト: 50 |
+| `include_abstracts` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_citations", {"work_id": "W2741809807", "sort": "cited_by_count", "max_records": 50})
@@ -269,8 +269,8 @@ const result = await host.mcp("literature", "openalex_citations", {"work_id": "W
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `work_id` | キーワード | **必須条件** |
-| `max_records` | インテガー | 任意; デフォルト: 100 |
+| `work_id` | 文字列 | **必須** |
+| `max_records` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_references", {"work_id": "W2741809807", "max_records": 100})
@@ -282,8 +282,8 @@ OpenAlex の著者のプロフィールを名前で検索します。 Args: ク�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `max_records` | インテガー | 任意; デフォルト: 25 |
+| `query` | 文字列 | **必須** |
+| `max_records` | 整数 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_search_authors", {"query": "Jennifer Doudna", "max_records": 25})
@@ -295,8 +295,8 @@ const result = await host.mcp("literature", "openalex_search_authors", {"query":
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `author_id` | キーワード | **必須条件** |
-| `works_sample` | インテガー | 任意; デフォルト: 10 |
+| `author_id` | 文字列 | **必須** |
+| `works_sample` | 整数 | 任意; デフォルト: 10 |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_get_author", {"author_id": "A5023888391", "works_sample": 10})
@@ -308,8 +308,8 @@ OpenAlexのジャーナル/リポジトリ('sources') - OAステータス、DOAJ
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `venue` | キーワード | **必須条件** |
-| `max_records` | インテガー | 任意; デフォルト: 10 |
+| `venue` | 文字列 | **必須** |
+| `max_records` | 整数 | 任意; デフォルト: 10 |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_venue_info", {"venue": "Nature", "max_records": 10})
@@ -321,14 +321,14 @@ arXivのプリプリント(物理、数学、CS、統計、q-bio、...)を公式
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | オプション |
-| `category` | キーワード | オプション |
-| `date_from` | キーワード | オプション |
-| `date_to` | キーワード | オプション |
-| `start` | インテガー | 任意; デフォルト: 0 |
-| `max_results` | インテガー | 任意; デフォルト: 25 |
-| `sort_by` | キーワード | 任意; デフォルト: "relevance"; &#91;"relevance"、"submittedDate"、"lastUpdatedDate"&#93; |
-| `sort_order` | キーワード | 任意; デフォルト: "descending"; enum: &#91;"descending", "ascending"&#93; |
+| `query` | 文字列 | オプション |
+| `category` | 文字列 | オプション |
+| `date_from` | 文字列 | オプション |
+| `date_to` | 文字列 | オプション |
+| `start` | 整数 | 任意; デフォルト: 0 |
+| `max_results` | 整数 | 任意; デフォルト: 25 |
+| `sort_by` | 文字列 | 任意; デフォルト: "relevance"; &#91;"relevance"、"submittedDate"、"lastUpdatedDate"&#93; |
+| `sort_order` | 文字列 | 任意; デフォルト: "descending"; enum: &#91;"descending", "ascending"&#93; |
 
 ```javascript
 const result = await host.mcp("literature", "arxiv_search", {"query": "ti:transformer", "category": "cs.LG", "max_results": 10})
@@ -340,7 +340,7 @@ const result = await host.mcp("literature", "arxiv_search", {"query": "ti:transf
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `arxiv_ids` | 文字列の配列 | **必須条件** |
+| `arxiv_ids` | 文字列の配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("literature", "arxiv_get_papers", {"arxiv_ids": ["2103.14030", "1706.03762v5"]})
@@ -352,7 +352,7 @@ const result = await host.mcp("literature", "arxiv_get_papers", {"arxiv_ids": ["
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `doi` | キーワード | **必須条件**; 最長: 1; 最高長さ: 2048 |
+| `doi` | 文字列 | **必須**; 最長: 1; 最高長さ: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "crossref_get_work", {"doi": "10.1038/nature12968"})
@@ -365,7 +365,7 @@ const result = await host.mcp("literature", "crossref_get_work", {"doi": "10.103
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `doi` | キーワード | **必須条件**; 最長: 1; 最高長さ: 2048 |
+| `doi` | 文字列 | **必須**; 最長: 1; 最高長さ: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "crossref_get_updates", {"doi": "10.1038/nature12968"})
@@ -378,11 +378,11 @@ const result = await host.mcp("literature", "crossref_get_updates", {"doi": "10.
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | 任意; 最長: 1; 最高長さ: 2000 |
-| `related_doi` | キーワード | 任意; 最長: 1; 最高長さ: 2048 |
-| `resource_type` | キーワード | 任意; デフォルト: "dataset"; enum: &#91;"dataset"、"software"&#93; |
-| `page_size` | インテガー | 任意; デフォルト: 20; 最小値: 1; 最高: 100 |
-| `page` | インテガー | 任意; デフォルト: 1; 最小値: 1; 最高: 10000 |
+| `query` | 文字列 | 任意; 最長: 1; 最高長さ: 2000 |
+| `related_doi` | 文字列 | 任意; 最長: 1; 最高長さ: 2048 |
+| `resource_type` | 文字列 | 任意; デフォルト: "dataset"; enum: &#91;"dataset"、"software"&#93; |
+| `page_size` | 整数 | 任意; デフォルト: 20; 最小値: 1; 最高: 100 |
+| `page` | 整数 | 任意; デフォルト: 1; 最小値: 1; 最高: 10000 |
 
 ```javascript
 const result = await host.mcp("literature", "datacite_search_records", {"query": "climate", "resource_type": "dataset", "page_size": 5})
@@ -395,7 +395,7 @@ const result = await host.mcp("literature", "datacite_search_records", {"query":
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `doi` | キーワード | **必須条件**; 最長: 1; 最高長さ: 2048 |
+| `doi` | 文字列 | **必須**; 最長: 1; 最高長さ: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "datacite_get_record", {"doi": "10.14454/qdd3-ps68"})
@@ -414,13 +414,13 @@ const result = await host.mcp("literature", "datacite_get_record", {"doi": "10.1
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `max_results` | インテガー | 任意; デフォルト: 20 |
-| `retstart` | インテガー | 任意; デフォルト: 0 |
-| `sort` | キーワード | 任意; エヌム: &#91;"relevance"、"pub_date"、"author"、"journal_name"、"title"&#93; |
-| `date_from` | キーワード | オプション |
-| `date_to` | キーワード | オプション |
-| `datetype` | キーワード | 任意; デフォルト: "pdat"; エヌム: &#91;"pdat", "edat", "mdat"&#93; |
+| `query` | 文字列 | **必須** |
+| `max_results` | 整数 | 任意; デフォルト: 20 |
+| `retstart` | 整数 | 任意; デフォルト: 0 |
+| `sort` | 文字列 | 任意; エヌム: &#91;"relevance"、"pub_date"、"author"、"journal_name"、"title"&#93; |
+| `date_from` | 文字列 | オプション |
+| `date_to` | 文字列 | オプション |
+| `datetype` | 文字列 | 任意; デフォルト: "pdat"; エヌム: &#91;"pdat", "edat", "mdat"&#93; |
 
 ```javascript
 const result = await host.mcp("pubmed", "search_articles", {"query": "CRISPR gene editing", "max_results": 10})
@@ -432,7 +432,7 @@ PMID(バルク、efetch経由):識別子(pmid/pmc/doi)、タイトル、抄録�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; は、 | **必須条件** |
+| `pmids` | ['string', 'array'] | **必須** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_article_metadata", {"pmids": ["35486828", "33264437"]})
@@ -444,9 +444,9 @@ const result = await host.mcp("pubmed", "get_article_metadata", {"pmids": ["3548
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; は、 | **必須条件** |
-| `link_type` | キーワード | 任意; デフォルト: "pubmed_pubmed"; エヌム: &#91;"pubmed_pubmed", "pubmed_pmc", "pubmed_nucleotide", "pubmed_protein", "pubmed_gene"&#93; |
-| `max_results` | インテガー | オプション |
+| `pmids` | ['string', 'array'] | **必須** |
+| `link_type` | 文字列 | 任意; デフォルト: "pubmed_pubmed"; エヌム: &#91;"pubmed_pubmed", "pubmed_pmc", "pubmed_nucleotide", "pubmed_protein", "pubmed_gene"&#93; |
+| `max_results` | 整数 | オプション |
 
 ```javascript
 const result = await host.mcp("pubmed", "find_related_articles", {"pmids": ["35486828"], "link_type": "pubmed_pubmed"})
@@ -458,7 +458,7 @@ NCBI ecitmatch 経由で PMIDs にバイブリグラフの引用を解決しま�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `citations` | オブジェクトの配列 | **必須条件** |
+| `citations` | オブジェクトの配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("pubmed", "lookup_article_by_citation", {"citations": [{"journal": "Science", "year": 1987, "volume": "235", "first_page": "182", "author": "Palmenberg AC"}]})
@@ -470,8 +470,8 @@ PMID、PMCID、DOIをNCBI/PMC IDコンバーター経由で変換します。 �
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `ids` | &#91;'string', 'array'&#93; は、 | **必須条件** |
-| `id_type` | キーワード | 任意; デフォルト: "pmid"; enum: &#91;"pmid", "pmcid", "doi"&#93; |
+| `ids` | ['string', 'array'] | **必須** |
+| `id_type` | 文字列 | 任意; デフォルト: "pmid"; enum: &#91;"pmid", "pmcid", "doi"&#93; |
 
 ```javascript
 const result = await host.mcp("pubmed", "convert_article_ids", {"ids": ["PMC9046468"], "id_type": "pmcid"})
@@ -483,7 +483,7 @@ const result = await host.mcp("pubmed", "convert_article_ids", {"ids": ["PMC9046
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `pmc_ids` | &#91;'string', 'array'&#93; は、 | **必須条件** |
+| `pmc_ids` | ['string', 'array'] | **必須** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_full_text_article", {"pmc_ids": ["PMC9046468"]})
@@ -495,7 +495,7 @@ const result = await host.mcp("pubmed", "get_full_text_article", {"pmc_ids": ["P
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; は、 | **必須条件** |
+| `pmids` | ['string', 'array'] | **必須** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_copyright_status", {"pmids": ["35891187", "34375400"]})
@@ -514,10 +514,10 @@ mygene.info (batched、1000 条件/要求まで) を介して gene 識別子/シ
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `terms` | 文字列の配列 | **必須条件** |
-| `scopes` | キーワード | オプション |
-| `fields` | キーワード | 任意; デフォルト: "symbol、名前、taxid、entrezgene、ensembl.gene" |
-| `species` | キーワード | オプション |
+| `terms` | 文字列の配列 | **必須** |
+| `scopes` | 文字列 | オプション |
+| `fields` | 文字列 | 任意; デフォルト: "symbol、名前、taxid、entrezgene、ensembl.gene" |
+| `species` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("genes", "query_genes", {"terms": ["TP53", "BRCA1"], "scopes": "symbol,alias", "fields": "symbol,name,entrezgene,ensembl.gene", "species": "human"})
@@ -541,11 +541,11 @@ const result = await host.mcp("genes", "list_ontologies", {"ontology_ids": ["efo
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
+| `query` | 文字列 | **必須** |
 | `ontologies` | 文字列の配列 | オプション |
-| `exact` | ボオラン | 任意; デフォルト: false |
-| `include_obsolete` | ボオラン | 任意; デフォルト: false |
-| `max_results` | インテガー | 任意; デフォルト: 20 |
+| `exact` | 真偽値 | 任意; デフォルト: false |
+| `include_obsolete` | 真偽値 | 任意; デフォルト: false |
+| `max_results` | 整数 | 任意; デフォルト: 20 |
 
 ```javascript
 const result = await host.mcp("genes", "search_ontology_terms", {"query": "asthma", "ontologies": ["efo"], "max_results": 20})
@@ -557,10 +557,10 @@ const result = await host.mcp("genes", "search_ontology_terms", {"query": "asthm
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `ontology` | キーワード | **必須条件** |
-| `term_id` | キーワード | **必須条件** |
-| `relation` | キーワード | 任意; enum: &#91; &#93;"両親", , "お子様", , "先輩たち", , "子孫子", , "hierarchicalParents(階層)", , "hierarchicalChildren(アーキラル・キルデントレン)", , "hierarchicalAncestors(階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階", , "hierarchicalDescendants(アーキシャル・デッセンド)". . . |
-| `include_parents` | ボオラン | 任意; デフォルト: false |
+| `ontology` | 文字列 | **必須** |
+| `term_id` | 文字列 | **必須** |
+| `relation` | 文字列 | 任意; enum: &#91; &#93;"両親", , "お子様", , "先輩たち", , "子孫子", , "hierarchicalParents(階層)", , "hierarchicalChildren(アーキラル・キルデントレン)", , "hierarchicalAncestors(階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階層階", , "hierarchicalDescendants(アーキシャル・デッセンド)". . . |
+| `include_parents` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("genes", "get_ontology_term", {"ontology": "go", "term_id": "GO:0006281", "relation": "children"})
@@ -572,12 +572,12 @@ UniProt 遺伝子製品を QuickGO から取得します。 (完了、カウン�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `uniprot_accession` | キーワード | **必須条件** |
-| `aspect` | キーワード | 任意; エヌム: &#91;"biological_process", "molecular_function", "cellular_component"&#93; |
-| `evidence` | キーワード | オプション |
-| `taxon_id` | インテガー | オプション |
-| `include_term_names` | ボオラン | 任意; デフォルト: false |
-| `max_records` | インテガー | 任意; デフォルト: 200 |
+| `uniprot_accession` | 文字列 | **必須** |
+| `aspect` | 文字列 | 任意; エヌム: &#91;"biological_process", "molecular_function", "cellular_component"&#93; |
+| `evidence` | 文字列 | オプション |
+| `taxon_id` | 整数 | オプション |
+| `include_term_names` | 真偽値 | 任意; デフォルト: false |
+| `max_records` | 整数 | 任意; デフォルト: 200 |
 
 ```javascript
 const result = await host.mcp("genes", "get_go_annotations", {"uniprot_accession": "P04637", "aspect": "molecular_function", "evidence": "experimental_manual"})
@@ -589,8 +589,8 @@ const result = await host.mcp("genes", "get_go_annotations", {"uniprot_accession
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accessions` | 文字列の配列 | **必須条件** |
-| `format` | キーワード | 任意; enum: &#91;"fasta", "txt"&#93; |
+| `accessions` | 文字列の配列 | **必須** |
+| `format` | 文字列 | 任意; enum: &#91;"fasta", "txt"&#93; |
 | `fields` | 文字列の配列 | オプション |
 
 ```javascript
@@ -603,12 +603,12 @@ const result = await host.mcp("genes", "get_uniprot_entries", {"accessions": ["P
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `identifiers` | 文字列の配列 | **必須条件** |
-| `id_type` | キーワード | **必須条件**; enum: &#91;"symbol"、"uniprot"&#93; |
-| `species` | キーワード | 任意; デフォルト: "Homo sapiens" |
-| `resource` | キーワード | 任意; デフォルト: "TOTAL" |
-| `include_disease` | ボオラン | 任意; デフォルト: true |
-| `compact` | ボオラン | 任意; デフォルト: true |
+| `identifiers` | 文字列の配列 | **必須** |
+| `id_type` | 文字列 | **必須**; enum: &#91;"symbol"、"uniprot"&#93; |
+| `species` | 文字列 | 任意; デフォルト: "Homo sapiens" |
+| `resource` | 文字列 | 任意; デフォルト: "TOTAL" |
+| `include_disease` | 真偽値 | 任意; デフォルト: true |
+| `compact` | 真偽値 | 任意; デフォルト: true |
 
 ```javascript
 const result = await host.mcp("genes", "map_reactome_pathways", {"identifiers": ["TP53", "EGFR", "BRCA1"], "id_type": "symbol"})
@@ -627,9 +627,9 @@ const result = await host.mcp("genes", "map_reactome_pathways", {"identifiers": 
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `species` | キーワード | 任意; デフォルト: "homo_sapiens" |
-| `expand` | ボオラン | 任意; デフォルト: false |
+| `query` | 文字列 | **必須** |
+| `species` | 文字列 | 任意; デフォルト: "homo_sapiens" |
+| `expand` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_lookup", {"query": "BRAF"})
@@ -641,8 +641,8 @@ const result = await host.mcp("genomes", "ensembl_lookup", {"query": "BRAF"})
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `stable_id` | キーワード | **必須条件** |
-| `external_db` | キーワード | オプション |
+| `stable_id` | 文字列 | **必須** |
+| `external_db` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_xrefs", {"stable_id": "ENSG00000157764", "external_db": "HGNC"})
@@ -654,11 +654,11 @@ Ensembl VEP による多様な結果の予測 — (多くの場合、巨大) per
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `variant_id` | キーワード | オプション |
-| `region` | キーワード | オプション |
-| `allele` | キーワード | オプション |
-| `species` | キーワード | 任意; デフォルト: "homo_sapiens" |
-| `max_consequences` | インテガー | 任意; デフォルト: 25 |
+| `variant_id` | 文字列 | オプション |
+| `region` | 文字列 | オプション |
+| `allele` | 文字列 | オプション |
+| `species` | 文字列 | 任意; デフォルト: "homo_sapiens" |
+| `max_consequences` | 整数 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_vep_variant", {"variant_id": "rs7412", "max_consequences": 25})
@@ -670,13 +670,13 @@ const result = await host.mcp("genomes", "ensembl_vep_variant", {"variant_id": "
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_symbol` | キーワード | オプション |
-| `gene_id` | キーワード | オプション |
-| `homology_type` | キーワード | 任意; デフォルト: "orthologues"; enum: &#91;"orthologues", "paralogues", "projections"&#93; |
-| `target_species` | キーワード | オプション |
-| `target_taxon` | インテガー | オプション |
-| `species` | キーワード | 任意; デフォルト: "homo_sapiens" |
-| `max_homologies` | インテガー | 任意; デフォルト: 200 |
+| `gene_symbol` | 文字列 | オプション |
+| `gene_id` | 文字列 | オプション |
+| `homology_type` | 文字列 | 任意; デフォルト: "orthologues"; enum: &#91;"orthologues", "paralogues", "projections"&#93; |
+| `target_species` | 文字列 | オプション |
+| `target_taxon` | 整数 | オプション |
+| `species` | 文字列 | 任意; デフォルト: "homo_sapiens" |
+| `max_homologies` | 整数 | 任意; デフォルト: 200 |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_homology", {"gene_symbol": "BRAF", "target_species": "mus_musculus"})
@@ -688,11 +688,11 @@ const result = await host.mcp("genomes", "ensembl_homology", {"gene_symbol": "BR
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `stable_id` | キーワード | オプション |
-| `region` | キーワード | オプション |
-| `species` | キーワード | 任意; デフォルト: "homo_sapiens" |
-| `seq_type` | キーワード | 任意; デフォルト: "genomic"; エヌム: &#91;"genomic"、"cdna"、"cds"、"protein"&#93; |
-| `max_bytes` | インテガー | 任意; デフォルト: 400000 |
+| `stable_id` | 文字列 | オプション |
+| `region` | 文字列 | オプション |
+| `species` | 文字列 | 任意; デフォルト: "homo_sapiens" |
+| `seq_type` | 文字列 | 任意; デフォルト: "genomic"; エヌム: &#91;"genomic"、"cdna"、"cds"、"protein"&#93; |
+| `max_bytes` | 整数 | 任意; デフォルト: 400000 |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_sequence", {"stable_id": "ENSP00000288602", "seq_type": "protein"})
@@ -704,10 +704,10 @@ const result = await host.mcp("genomes", "ensembl_sequence", {"stable_id": "ENSP
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `region` | キーワード | **必須条件** |
-| `feature` | キーワード | 任意; デフォルト: "gene"; enum: &#91; &#93;"ジェネレーション", , "トランスクリプト", , "エクセゾン", , "cdsの", , "規制当局", , "モティフ", , "リピート", , "バリエーション", , "structural_variation", , "バンド", , "シンプル", , "ログイン". . . |
-| `species` | キーワード | 任意; デフォルト: "homo_sapiens" |
-| `max_features` | インテガー | 任意; デフォルト: 500 |
+| `region` | 文字列 | **必須** |
+| `feature` | 文字列 | 任意; デフォルト: "gene"; enum: &#91; &#93;"ジェネレーション", , "トランスクリプト", , "エクセゾン", , "cdsの", , "規制当局", , "モティフ", , "リピート", , "バリエーション", , "structural_variation", , "バンド", , "シンプル", , "ログイン". . . |
+| `species` | 文字列 | 任意; デフォルト: "homo_sapiens" |
+| `max_features` | 整数 | 任意; デフォルト: 500 |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_overlap_region", {"region": "7:140719327-140925199", "feature": "gene"})
@@ -719,9 +719,9 @@ UCSCゲノムブラウザアセンブリ(リーフトラックのみ — クエ�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `genome` | キーワード | 任意; デフォルト: "hg38" |
-| `filter_text` | キーワード | オプション |
-| `max_tracks` | インテガー | 任意; デフォルト: 200 |
+| `genome` | 文字列 | 任意; デフォルト: "hg38" |
+| `filter_text` | 文字列 | オプション |
+| `max_tracks` | 整数 | 任意; デフォルト: 200 |
 
 ```javascript
 const result = await host.mcp("genomes", "ucsc_list_tracks", {"genome": "hg38", "filter_text": "phyloP", "max_tracks": 50})
@@ -733,12 +733,12 @@ ucsc_conservation / ucsc_tfbs_clusters(遺伝子追跡、ClinVar、GWASカタロ
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `track` | キーワード | **必須条件** |
-| `chrom` | キーワード | **必須条件** |
-| `start` | インテガー | **必須条件** |
-| `end` | インテガー | **必須条件** |
-| `genome` | キーワード | 任意; デフォルト: "hg38" |
-| `max_rows` | インテガー | 任意; デフォルト: 1000 |
+| `track` | 文字列 | **必須** |
+| `chrom` | 文字列 | **必須** |
+| `start` | 整数 | **必須** |
+| `end` | 整数 | **必須** |
+| `genome` | 文字列 | 任意; デフォルト: "hg38" |
+| `max_rows` | 整数 | 任意; デフォルト: 1000 |
 
 ```javascript
 const result = await host.mcp("genomes", "ucsc_track_data", {"track": "cpgIslandExt", "chrom": "chr7", "start": 140700000, "end": 140800000, "genome": "hg38"})
@@ -750,13 +750,13 @@ UCSC phyloP / phastConsトラック(マルチスペクシーアライメント�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `chrom` | キーワード | **必須条件** |
-| `start` | インテガー | **必須条件** |
-| `end` | インテガー | **必須条件** |
-| `genome` | キーワード | 任意; デフォルト: "hg38" |
-| `track` | キーワード | 任意; デフォルト: "phyloP100way" |
-| `include_values` | ボオラン | 任意; デフォルト: false |
-| `max_values` | インテガー | 任意; デフォルト: 2000 |
+| `chrom` | 文字列 | **必須** |
+| `start` | 整数 | **必須** |
+| `end` | 整数 | **必須** |
+| `genome` | 文字列 | 任意; デフォルト: "hg38" |
+| `track` | 文字列 | 任意; デフォルト: "phyloP100way" |
+| `include_values` | 真偽値 | 任意; デフォルト: false |
+| `max_values` | 整数 | 任意; デフォルト: 2000 |
 
 ```javascript
 const result = await host.mcp("genomes", "ucsc_conservation", {"chrom": "chr7", "start": 140753330, "end": 140753380, "track": "phyloP100way"})
@@ -768,11 +768,11 @@ ENCODEのトランスクリプション・ファクター・バインディン�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `chrom` | キーワード | **必須条件** |
-| `start` | インテガー | **必須条件** |
-| `end` | インテガー | **必須条件** |
-| `genome` | キーワード | 任意; デフォルト: "hg38" |
-| `max_rows` | インテガー | 任意; デフォルト: 1000 |
+| `chrom` | 文字列 | **必須** |
+| `start` | 整数 | **必須** |
+| `end` | 整数 | **必須** |
+| `genome` | 文字列 | 任意; デフォルト: "hg38" |
+| `max_rows` | 整数 | 任意; デフォルト: 1000 |
 
 ```javascript
 const result = await host.mcp("genomes", "ucsc_tfbs_clusters", {"chrom": "chr7", "start": 140699000, "end": 140760000, "genome": "hg38"})
@@ -784,9 +784,9 @@ UCSCアセンブリの染色体/コンチグ名とサイズ - 座標および反
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `genome` | キーワード | 任意; デフォルト: "hg38" |
-| `filter_text` | キーワード | オプション |
-| `max_chroms` | インテガー | 任意; デフォルト: 100 |
+| `genome` | 文字列 | 任意; デフォルト: "hg38" |
+| `filter_text` | 文字列 | オプション |
+| `max_chroms` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", "filter_text": "chr1", "max_chroms": 25})
@@ -799,14 +799,16 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>操作とパラメータを表示</summary>
 
+**gnomAD 座標ルール:**は参照アセンブリが付いているデータセット ピンを記録します。 r2.1/ExAC および r3/r3 の GRCh38 のための短variant の遺伝子/region の照会の使用 GRCh37; 構造的variant 遺伝子のクエリは、`gnomad_sv_r2_1` (GRCh37) または `gnomad_sv_r4` (GRCh38) を使用します。 ピンの変更は入力座標を変換しません。 `gene_constraint`とgnomAD ClinVarミラーは、固定GRCh38遺伝子のルックアップを使用し、データセットの引数を受け入れません。 Mitochondrial のクエリは、固定の GRCh38 の親のルックアップも使用します。 遺伝子または両方の注文された領域の境界線のいずれかを供給します。, 決して両方のモード. 1 から 2,147,483,647 までの領域の境界は整数でなければなりません。 ワンミリオンベースの差分は、`region_variants`に適用されます。 別のミトコンドリアリミットではありません。 リリース固有の構造変数 ID を独自の SV データセットで保持します。
+
 ### `get_variant` {/* #get_variant */}
 
 ID で 1 つの gnomAD の短い variant を探し、その人口の頻度を返します。 `variant_id`は、データセットの'sリファレンスビルド(r3/r4、r2.1/ExAC用GRCh37用GRCh38)の`chrom-pos-ref-alt`です。 `19-44908822-C-T` (APOE rs7412); `search_variants` を使って rsID を最初に解決します。
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `variant_id` | キーワード | **必須条件** |
-| `dataset` | キーワード | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
+| `variant_id` | 文字列 | **必須** |
+| `dataset` | 文字列 | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
 
 ```javascript
 const result = await host.mcp("variants", "get_variant", {"variant_id": "19-44908822-C-T", "dataset": "gnomad_r4"})
@@ -818,8 +820,8 @@ const result = await host.mcp("variants", "get_variant", {"variant_id": "19-4490
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `dataset` | キーワード | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
+| `query` | 文字列 | **必須** |
+| `dataset` | 文字列 | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
 
 ```javascript
 const result = await host.mcp("variants", "search_variants", {"query": "rs7412", "dataset": "gnomad_r4"})
@@ -827,13 +829,13 @@ const result = await host.mcp("variants", "search_variants", {"query": "rs7412",
 
 ### `gene_variants` {/* #gene_variants */}
 
-遺伝子内のすべてのgnomAD ショート バリアント (完全なリスト — 数千行の大きな遺伝子) をリストします。 `gene_symbol`(HGNCシンボルなど)の1つを正確に渡す `APOE` または `gene_id` (遺伝子 ID を組み立てるなど) `ENSG00000130203`).
+遺伝子内のすべてのgnomAD の短い変種をリストします。 Gene 境界と variant 座標は、データセットリファレンスビルド (r2.1/ExAC, GRCh38 for r3/r4) を使用します。 完全なリストには、大量の遺伝子の列が数千個含まれていることができます。 `gene_symbol`(HGNCシンボルなど)の1つを正確に渡す `APOE` または `gene_id` (遺伝子 ID を組み立てるなど) `ENSG00000130203`).
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_symbol` | キーワード | オプション |
-| `gene_id` | キーワード | オプション |
-| `dataset` | キーワード | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
+| `gene_symbol` | 文字列 | オプション |
+| `gene_id` | 文字列 | オプション |
+| `dataset` | 文字列 | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
 
 ```javascript
 const result = await host.mcp("variants", "gene_variants", {"gene_symbol": "APOE", "dataset": "gnomad_r4"})
@@ -845,8 +847,8 @@ gnomAD 遺伝子制約メトリック: pLI, 観察/期待 LoF-missense-synonymou
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_symbol` | キーワード | オプション |
-| `gene_id` | キーワード | オプション |
+| `gene_symbol` | 文字列 | オプション |
+| `gene_id` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP53"})
@@ -854,14 +856,14 @@ const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP
 
 ### `region_variants` {/* #region_variants */}
 
-ゲノム領域(最大1 Mb — 大きい領域を連続したウィンドウに分割する)で、すべてのgnomAD短バリアントをリストします。 `chrom`は`chr`接頭辞(`1`-`22`、`X`、`Y`)なしで染色体名です。 `start`/`stop`は1ベースの包括的であり、`stop - start`は&lt;= 1,000,000でなければなりません。 データセットは、座標(r3/r4)の参照ビルドを決定します。
+ゲノム領域(最大1 Mb — 大きい領域を連続したウィンドウに分割する)で、すべてのgnomAD短バリアントをリストします。 `chrom`は`1`-`22`、`X`、`Y`、任意`chr`プレフィックスおよび下箱`x`/`y`を受け入れます; `start`/`stop`は1ベースの包括的であり、`stop - start`は&lt;= 1,000,000でなければなりません。 データセットは、座標(r2.1/ExAC、r3/r4のGRCh38)の参照ビルドを決定します。 入力座標は、すでにビルドして、自動リフトオーバーなしで使用しなければなりません。
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `chrom` | キーワード | **必須条件** |
-| `start` | インテガー | **必須条件** |
-| `stop` | インテガー | **必須条件** |
-| `dataset` | キーワード | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
+| `chrom` | 文字列 | **必須** |
+| `start` | 整数 | **必須**; 最小値: 1; 最高: 2147483647 |
+| `stop` | 整数 | **必須**; 最小値: 1; 最高: 2147483647 |
+| `dataset` | 文字列 | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
 
 ```javascript
 const result = await host.mcp("variants", "region_variants", {"chrom": "1", "start": 55039475, "stop": 55064852, "dataset": "gnomad_r4"})
@@ -873,8 +875,8 @@ const result = await host.mcp("variants", "region_variants", {"chrom": "1", "sta
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `variant_id` | キーワード | **必須条件** |
-| `source_build` | キーワード | 任意; デフォルト: "GRCh37"; enum: &#91;"GRCh37"、"GRCh38"&#93; |
+| `variant_id` | 文字列 | **必須** |
+| `source_build` | 文字列 | 任意; デフォルト: "GRCh37"; enum: &#91;"GRCh37"、"GRCh38"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "liftover_variant", {"variant_id": "1-55516888-G-GA", "source_build": "GRCh37"})
@@ -886,8 +888,8 @@ const result = await host.mcp("variants", "liftover_variant", {"variant_id": "1-
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_symbol` | キーワード | オプション |
-| `gene_id` | キーワード | オプション |
+| `gene_symbol` | 文字列 | オプション |
+| `gene_id` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_variants", {"gene_symbol": "BRCA1"})
@@ -899,9 +901,9 @@ const result = await host.mcp("variants", "clinvar_variants", {"gene_symbol": "B
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_symbol` | キーワード | オプション |
-| `gene_id` | キーワード | オプション |
-| `dataset` | キーワード | 任意; デフォルト: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4"、"gnomad_sv_r2_1"&#93; |
+| `gene_symbol` | 文字列 | オプション |
+| `gene_id` | 文字列 | オプション |
+| `dataset` | 文字列 | 任意; デフォルト: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4"、"gnomad_sv_r2_1"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "structural_variants", {"gene_symbol": "TP53", "dataset": "gnomad_sv_r4"})
@@ -913,8 +915,8 @@ const result = await host.mcp("variants", "structural_variants", {"gene_symbol":
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `sv_id` | キーワード | **必須条件** |
-| `dataset` | キーワード | 任意; デフォルト: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4"、"gnomad_sv_r2_1"&#93; |
+| `sv_id` | 文字列 | **必須** |
+| `dataset` | 文字列 | 任意; デフォルト: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4"、"gnomad_sv_r2_1"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "DEL_CHR17_A5250EA9", "dataset": "gnomad_sv_r4"})
@@ -926,11 +928,11 @@ const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "D
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_symbol` | キーワード | オプション |
-| `gene_id` | キーワード | オプション |
-| `region_start` | インテガー | オプション |
-| `region_stop` | インテガー | オプション |
-| `dataset` | キーワード | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
+| `gene_symbol` | 文字列 | オプション |
+| `gene_id` | 文字列 | オプション |
+| `region_start` | 整数 | 任意; 最小値: 1; 最高: 2147483647 |
+| `region_stop` | 整数 | 任意; 最小値: 1; 最高: 2147483647 |
+| `dataset` | 文字列 | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
 
 ```javascript
 const result = await host.mcp("variants", "mitochondrial_variants", {"gene_symbol": "MT-TL1", "dataset": "gnomad_r4"})
@@ -942,8 +944,8 @@ ClinVar を直接検索 (nbi をライブ, gnomAD's スナップショットで�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `max_records` | インテガー | 任意; デフォルト: 50 |
+| `query` | 文字列 | **必須** |
+| `max_records` | 整数 | 任意; デフォルト: 50 |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_search", {"query": "BRCA1 pathogenic[CLIN_SIG]", "max_records": 50})
@@ -955,7 +957,7 @@ VCV/RCVアクセスのバッチや、バリエーションIDのバールレコ�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accessions` | &#91;'string', 'array'&#93; は、 | **必須条件** |
+| `accessions` | ['string', 'array'] | **必須** |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_get_records", {"accessions": ["VCV000045122", "RCV000019428", "45123"]})
@@ -967,8 +969,8 @@ ClinVar のバリエーションレコードは、dbSNP の rsID を参照し、
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `rsid` | キーワード | **必須条件** |
-| `max_records` | インテガー | 任意; デフォルト: 50 |
+| `rsid` | 文字列 | **必須** |
+| `max_records` | 整数 | 任意; デフォルト: 50 |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_variant_by_rsid", {"rsid": "rs121913529", "max_records": 50})
@@ -980,7 +982,7 @@ Oracle dbSNP RefSNP は rsID のバッチのレコード: GRCh38+GRCh37 の配�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `rsids` | 文字列の配列 | **必須条件** |
+| `rsids` | 文字列の配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("variants", "dbsnp_get_rsids", {"rsids": ["rs7412", "rs429358"]})
@@ -992,11 +994,11 @@ const result = await host.mcp("variants", "dbsnp_get_rsids", {"rsids": ["rs7412"
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `chrom` | キーワード | **必須条件** |
-| `start` | インテガー | **必須条件** |
-| `stop` | インテガー | **必須条件** |
-| `assembly` | キーワード | 任意; デフォルト: "GRCh38"; enum: &#91;"GRCh38"、"GRCh37"&#93; |
-| `max_rsids` | インテガー | 任意; デフォルト: 200 |
+| `chrom` | 文字列 | **必須** |
+| `start` | 整数 | **必須** |
+| `stop` | 整数 | **必須** |
+| `assembly` | 文字列 | 任意; デフォルト: "GRCh38"; enum: &#91;"GRCh38"、"GRCh37"&#93; |
+| `max_rsids` | 整数 | 任意; デフォルト: 200 |
 
 ```javascript
 const result = await host.mcp("variants", "dbsnp_search_by_region", {"chrom": "19", "start": 44905000, "stop": 44910000, "assembly": "GRCh38"})
@@ -1015,17 +1017,17 @@ const result = await host.mcp("variants", "dbsnp_search_by_region", {"chrom": "1
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `condition` | キーワード | オプション |
-| `intervention` | キーワード | オプション |
-| `sponsor` | キーワード | オプション |
-| `location` | キーワード | オプション |
+| `condition` | 文字列 | オプション |
+| `intervention` | 文字列 | オプション |
+| `sponsor` | 文字列 | オプション |
+| `location` | 文字列 | オプション |
 | `status` | 文字列の配列 | オプション |
 | `phase` | 文字列の配列 | オプション |
-| `study_type` | キーワード | 任意; enum: &#91;"INTERVENTIONAL"、"OBSERVATIONAL"、"EXPANDED_ACCESS"&#93; |
-| `advanced_query` | キーワード | オプション |
-| `page_size` | インテガー | 任意; デフォルト: 10; 最小値: 1; 最高: 1000 |
-| `page_token` | キーワード | オプション |
-| `count_total` | ボオラン | 任意; デフォルト: false |
+| `study_type` | 文字列 | 任意; enum: &#91;"INTERVENTIONAL"、"OBSERVATIONAL"、"EXPANDED_ACCESS"&#93; |
+| `advanced_query` | 文字列 | オプション |
+| `page_size` | 整数 | 任意; デフォルト: 10; 最小値: 1; 最高: 1000 |
+| `page_token` | 文字列 | オプション |
+| `count_total` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_trials", {"condition": "lung cancer", "status": ["RECRUITING"], "phase": ["PHASE3"], "count_total": true, "page_size": 10})
@@ -1037,7 +1039,7 @@ NCT id による 1 つの試験のための包括的な詳細を取得する (�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `nct_id` | キーワード | **必須条件** |
+| `nct_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "get_trial_details", {"nct_id": "NCT03661411"})
@@ -1049,13 +1051,13 @@ const result = await host.mcp("clinical-trials", "get_trial_details", {"nct_id":
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `sponsor_name` | キーワード | **必須条件** |
-| `condition` | キーワード | オプション |
+| `sponsor_name` | 文字列 | **必須** |
+| `condition` | 文字列 | オプション |
 | `phase` | 文字列の配列 | オプション |
 | `status` | 文字列の配列 | オプション |
-| `page_size` | インテガー | 任意; デフォルト: 10; 最小値: 1; 最高: 1000 |
-| `page_token` | キーワード | オプション |
-| `count_total` | ボオラン | 任意; デフォルト: false |
+| `page_size` | 整数 | 任意; デフォルト: 10; 最小値: 1; 最高: 1000 |
+| `page_token` | 文字列 | オプション |
+| `count_total` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_by_sponsor", {"sponsor_name": "Pfizer", "phase": ["PHASE3"], "count_total": true})
@@ -1067,12 +1069,12 @@ const result = await host.mcp("clinical-trials", "search_by_sponsor", {"sponsor_
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `condition` | キーワード | オプション |
-| `institution` | キーワード | オプション |
-| `location` | キーワード | オプション |
-| `investigator_name` | キーワード | オプション |
+| `condition` | 文字列 | オプション |
+| `institution` | 文字列 | オプション |
+| `location` | 文字列 | オプション |
+| `investigator_name` | 文字列 | オプション |
 | `status` | 文字列の配列 | オプション |
-| `page_size` | インテガー | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
+| `page_size` | 整数 | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_investigators", {"condition": "Alzheimer", "institution": "Mayo Clinic", "page_size": 20})
@@ -1084,11 +1086,11 @@ const result = await host.mcp("clinical-trials", "search_investigators", {"condi
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `nct_id` | キーワード | オプション |
-| `condition` | キーワード | オプション |
+| `nct_id` | 文字列 | オプション |
+| `condition` | 文字列 | オプション |
 | `phase` | 文字列の配列 | オプション |
-| `start_date_after` | キーワード | オプション |
-| `page_size` | インテガー | 任意; デフォルト: 50; 最小値: 1; 最高: 1000 |
+| `start_date_after` | 文字列 | オプション |
+| `page_size` | 整数 | 任意; デフォルト: 50; 最小値: 1; 最高: 1000 |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "analyze_endpoints", {"nct_id": "NCT03661411"})
@@ -1100,14 +1102,14 @@ const result = await host.mcp("clinical-trials", "analyze_endpoints", {"nct_id":
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `condition` | キーワード | オプション |
-| `eligibility_keywords` | キーワード | オプション |
-| `min_age` | キーワード | オプション |
-| `max_age` | キーワード | オプション |
-| `sex` | キーワード | 任意; enum: &#91;"ALL", "MALE", "FEMALE"&#93; |
+| `condition` | 文字列 | オプション |
+| `eligibility_keywords` | 文字列 | オプション |
+| `min_age` | 文字列 | オプション |
+| `max_age` | 文字列 | オプション |
+| `sex` | 文字列 | 任意; enum: &#91;"ALL", "MALE", "FEMALE"&#93; |
 | `status` | 文字列の配列 | オプション |
-| `page_size` | インテガー | 任意; デフォルト: 10; 最小値: 1; 最高: 1000 |
-| `page_token` | キーワード | オプション |
+| `page_size` | 整数 | 任意; デフォルト: 10; 最小値: 1; 最高: 1000 |
+| `page_token` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_by_eligibility", {"condition": "diabetes", "min_age": "65 Years", "sex": "FEMALE"})
@@ -1126,7 +1128,7 @@ ClinGenの遺伝子疾患の有効性の治癒(証拠が遺伝子の変動が疾
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene` | キーワード | オプション |
+| `gene` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_gene_validity", {"gene": "BRCA2"})
@@ -1138,8 +1140,8 @@ ClinGenの投与量の感度キュレーション:遺伝子のハプロインフ
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene` | キーワード | オプション |
-| `include_regions` | ボオラン | 任意; デフォルト: false |
+| `gene` | 文字列 | オプション |
+| `include_regions` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_dosage_sensitivity", {"gene": "TP53"})
@@ -1151,8 +1153,8 @@ ClinGen の臨床作用性のcurations: 遺伝子に関連付けられている�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene` | キーワード | オプション |
-| `context` | キーワード | 任意; デフォルト: "both"; enum: &#91;"adult"、"pediatric"、"both"&#93; |
+| `gene` | 文字列 | オプション |
+| `context` | 文字列 | 任意; デフォルト: "both"; enum: &#91;"adult"、"pediatric"、"both"&#93; |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_actionability", {"gene": "BRCA1", "context": "adult"})
@@ -1164,9 +1166,9 @@ ClinGen証拠リポジトリ(ERepo)のエキスパートパネルの異様な病
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene` | キーワード | オプション |
-| `caid` | キーワード | オプション |
-| `hgvs` | キーワード | オプション |
+| `gene` | 文字列 | オプション |
+| `caid` | 文字列 | オプション |
+| `hgvs` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_variant_classifications", {"gene": "BRCA1"})
@@ -1178,7 +1180,7 @@ Entrez のシンボル (例: CIViC の遺伝子のレコードを検索します
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `entrez_symbol` | キーワード | **必須条件** |
+| `entrez_symbol` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_genes", {"entrez_symbol": "BRAF"})
@@ -1190,7 +1192,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_genes", {"entre
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_id` | インテガー | **必須条件** |
+| `gene_id` | 整数 | **必須** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_gene_variants", {"gene_id": 5})
@@ -1202,7 +1204,7 @@ CIViC の variant id (aliases, variant type, feature/gene linkage, gene variant 
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `variant_id` | インテガー | **必須条件** |
+| `variant_id` | 整数 | **必須** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_variant", {"variant_id": 12})
@@ -1214,8 +1216,8 @@ CIViC の variant を name の substring (例: ) で検索します。 "V600"は
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `name` | キーワード | **必須条件** |
-| `gene_id` | インテガー | オプション |
+| `name` | 文字列 | **必須** |
+| `gene_id` | 整数 | オプション |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_variants", {"name": "V600", "gene_id": 5})
@@ -1227,7 +1229,7 @@ idによる1つのCIViCの証拠項目:病気/療法のコンテキスト(証拠
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `evidence_id` | インテガー | **必須条件** |
+| `evidence_id` | 整数 | **必須** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_evidence_item", {"evidence_id": 1409})
@@ -1239,23 +1241,23 @@ const result = await host.mcp("clinical-genomics", "civic_get_evidence_item", {"
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `disease_name` | キーワード | オプション |
-| `therapy_name` | キーワード | オプション |
-| `evidence_level` | キーワード | オプション |
-| `evidence_type` | キーワード | オプション |
-| `evidence_direction` | キーワード | オプション |
-| `significance` | キーワード | オプション |
-| `variant_origin` | キーワード | オプション |
-| `evidence_rating` | インテガー | オプション |
-| `status` | キーワード | オプション |
-| `molecular_profile_name` | キーワード | オプション |
-| `molecular_profile_id` | インテガー | オプション |
-| `variant_id` | インテガー | オプション |
-| `disease_id` | インテガー | オプション |
-| `therapy_id` | インテガー | オプション |
-| `phenotype_id` | インテガー | オプション |
-| `source_id` | インテガー | オプション |
-| `assertion_id` | インテガー | オプション |
+| `disease_name` | 文字列 | オプション |
+| `therapy_name` | 文字列 | オプション |
+| `evidence_level` | 文字列 | オプション |
+| `evidence_type` | 文字列 | オプション |
+| `evidence_direction` | 文字列 | オプション |
+| `significance` | 文字列 | オプション |
+| `variant_origin` | 文字列 | オプション |
+| `evidence_rating` | 整数 | オプション |
+| `status` | 文字列 | オプション |
+| `molecular_profile_name` | 文字列 | オプション |
+| `molecular_profile_id` | 整数 | オプション |
+| `variant_id` | 整数 | オプション |
+| `disease_id` | 整数 | オプション |
+| `therapy_id` | 整数 | オプション |
+| `phenotype_id` | 整数 | オプション |
+| `source_id` | 整数 | オプション |
+| `assertion_id` | 整数 | オプション |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_evidence", {"disease_name": "melanoma", "evidence_level": "A"})
@@ -1267,7 +1269,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_evidence", {"di
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `assertion_id` | インテガー | **必須条件** |
+| `assertion_id` | 整数 | **必須** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_assertion", {"assertion_id": 7})
@@ -1279,22 +1281,22 @@ const result = await host.mcp("clinical-genomics", "civic_get_assertion", {"asse
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `disease_name` | キーワード | オプション |
-| `therapy_name` | キーワード | オプション |
-| `assertion_type` | キーワード | オプション |
-| `assertion_direction` | キーワード | オプション |
-| `significance` | キーワード | オプション |
-| `amp_level` | キーワード | オプション |
-| `status` | キーワード | オプション |
-| `molecular_profile_name` | キーワード | オプション |
-| `molecular_profile_id` | インテガー | オプション |
-| `variant_id` | インテガー | オプション |
-| `variant_name` | キーワード | オプション |
-| `disease_id` | インテガー | オプション |
-| `therapy_id` | インテガー | オプション |
-| `phenotype_id` | インテガー | オプション |
-| `evidence_id` | インテガー | オプション |
-| `summary` | キーワード | オプション |
+| `disease_name` | 文字列 | オプション |
+| `therapy_name` | 文字列 | オプション |
+| `assertion_type` | 文字列 | オプション |
+| `assertion_direction` | 文字列 | オプション |
+| `significance` | 文字列 | オプション |
+| `amp_level` | 文字列 | オプション |
+| `status` | 文字列 | オプション |
+| `molecular_profile_name` | 文字列 | オプション |
+| `molecular_profile_id` | 整数 | オプション |
+| `variant_id` | 整数 | オプション |
+| `variant_name` | 文字列 | オプション |
+| `disease_id` | 整数 | オプション |
+| `therapy_id` | 整数 | オプション |
+| `phenotype_id` | 整数 | オプション |
+| `evidence_id` | 整数 | オプション |
+| `summary` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_assertions", {"disease_name": "melanoma"})
@@ -1306,7 +1308,7 @@ idによる1つのCIViC分子プロファイル(証拠/インサートが添付�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `mp_id` | インテガー | **必須条件** |
+| `mp_id` | 整数 | **必須** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_molecular_profile", {"mp_id": 12})
@@ -1318,7 +1320,7 @@ CIViC 分子プロファイルを名前のサブストリング(例)で検索し
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `name` | キーワード | **必須条件** |
+| `name` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_molecular_profiles", {"name": "BRAF V600E"})
@@ -1330,7 +1332,7 @@ CIViC 疾患の記録を名前のサブストリング(例)で検索します。
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `name` | キーワード | **必須条件** |
+| `name` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_diseases", {"name": "melanoma"})
@@ -1342,7 +1344,7 @@ CIViC 療法のレコードを名前のサブストリング(例)で検索しま
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `name` | キーワード | **必須条件** |
+| `name` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_therapies", {"name": "vemurafenib"})
@@ -1354,7 +1356,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_therapies", {"n
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
+| `query` | 文字列 | **必須** |
 | `variables` | オブジェクト | オプション |
 
 ```javascript
@@ -1367,8 +1369,8 @@ const result = await host.mcp("clinical-genomics", "open_targets_graphql", {"que
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `efo_id` | キーワード | **必須条件** |
-| `size` | インテガー | 任意; デフォルト: 25 |
+| `efo_id` | 文字列 | **必須** |
+| `size` | 整数 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "open_targets_disease_drugs", {"efo_id": "MONDO_0004992", "size": 25})
@@ -1380,8 +1382,8 @@ const result = await host.mcp("clinical-genomics", "open_targets_disease_drugs",
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `efo_id` | キーワード | **必須条件** |
-| `size` | インテガー | 任意; デフォルト: 25 |
+| `efo_id` | 文字列 | **必須** |
+| `size` | 整数 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "open_targets_disease_targets", {"efo_id": "MONDO_0004992", "size": 25})
@@ -1393,7 +1395,7 @@ ChEMBL id(Open Targets Platform) — 名前、タイプ、最大臨床段階、�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `chembl_id` | キーワード | **必須条件** |
+| `chembl_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "open_targets_drug", {"chembl_id": "CHEMBL1201583"})
@@ -1412,7 +1414,7 @@ EMDB の cryo-EM 3D の地図の記入項目のための構造化されたメタ
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `emdb_ids` | 文字列の配列 | **必須条件** |
+| `emdb_ids` | 文字列の配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_entries", {"emdb_ids": ["EMD-11638", "emd-3061", "1234"]})
@@ -1424,8 +1426,8 @@ Solr スタイルのクエリで EMDB を検索します。 コンパクトな�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `max_rows` | インテガー | 任意; デフォルト: 1000 |
+| `query` | 文字列 | **必須** |
+| `max_rows` | 整数 | 任意; デフォルト: 1000 |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_search_entries", {"query": "title:\"apoferritin\" AND resolution:[0 TO 1.5]", "max_rows": 500})
@@ -1437,8 +1439,8 @@ EMDB エントリの 1 つの詳細なメタデータ セクションを取得�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `emdb_ids` | 文字列の配列 | **必須条件** |
-| `section` | キーワード | **必須条件**; enum: &#91;"publications", "map", "sample", "imaging"&#93; |
+| `emdb_ids` | 文字列の配列 | **必須** |
+| `section` | 文字列 | **必須**; enum: &#91;"publications", "map", "sample", "imaging"&#93; |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_entry_section", {"emdb_ids": ["EMD-11638"], "section": "imaging"})
@@ -1450,7 +1452,7 @@ EMDB エントリの数値検証分析メトリックを取得します。 エ�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `emdb_ids` | 文字列の配列 | **必須条件** |
+| `emdb_ids` | 文字列の配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_validation", {"emdb_ids": ["EMD-11638", "EMD-3061"]})
@@ -1462,7 +1464,7 @@ CPXアクセスによる複雑なポータルレコードの取得 各レコー�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `complex_acs` | 文字列の配列 | **必須条件** |
+| `complex_acs` | 文字列の配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("structures", "complexportal_get_complexes", {"complex_acs": ["CPX-2158", "CPX-2419"]})
@@ -1474,8 +1476,8 @@ const result = await host.mcp("structures", "complexportal_get_complexes", {"com
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
-| `participants_only` | ボオラン | 任意; デフォルト: true |
+| `accession` | 文字列 | **必須** |
+| `participants_only` | 真偽値 | 任意; デフォルト: true |
 
 ```javascript
 const result = await host.mcp("structures", "complexportal_search_by_participant", {"accession": "P69905", "participants_only": true})
@@ -1487,11 +1489,11 @@ const result = await host.mcp("structures", "complexportal_search_by_participant
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `min_mi_score` | 郵便番号 | 任意; デフォルト: 0 |
-| `max_mi_score` | 郵便番号 | 任意; デフォルト: 1 |
+| `query` | 文字列 | **必須** |
+| `min_mi_score` | 数値 | 任意; デフォルト: 0 |
+| `max_mi_score` | 数値 | 任意; デフォルト: 1 |
 | `interactor_species` | 文字列の配列 | オプション |
-| `max_records_returned` | インテガー | 任意; デフォルト: 500 |
+| `max_records_returned` | 整数 | 任意; デフォルト: 500 |
 
 ```javascript
 const result = await host.mcp("structures", "intact_fetch_interactions", {"query": "P04637", "min_mi_score": 0.45, "interactor_species": ["Homo sapiens"], "max_records_returned": 200})
@@ -1503,7 +1505,7 @@ const result = await host.mcp("structures", "intact_fetch_interactions", {"query
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
+| `query` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("structures", "intact_get_interactor", {"query": "P04637"})
@@ -1515,8 +1517,8 @@ ONE IntActインタラクションAC(例:1 IntActインタラクションAC)の�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `interaction_ac` | キーワード | **必須条件** |
-| `include_participants` | ボオラン | 任意; デフォルト: true |
+| `interaction_ac` | 文字列 | **必須** |
+| `include_participants` | 真偽値 | 任意; デフォルト: true |
 
 ```javascript
 const result = await host.mcp("structures", "intact_get_interaction_details", {"interaction_ac": "EBI-15635490", "include_participants": true})
@@ -1528,9 +1530,9 @@ const result = await host.mcp("structures", "intact_get_interaction_details", {"
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `seed_accessions` | 文字列の配列 | **必須条件** |
-| `min_mi_score` | 郵便番号 | 任意; デフォルト: 0.45 |
-| `max_interactors_expanded` | インテガー | 任意; デフォルト: 25 |
+| `seed_accessions` | 文字列の配列 | **必須** |
+| `min_mi_score` | 数値 | 任意; デフォルト: 0.45 |
+| `max_interactors_expanded` | 整数 | 任意; デフォルト: 25 |
 | `interactor_species` | 文字列の配列 | オプション |
 
 ```javascript
@@ -1543,15 +1545,15 @@ const result = await host.mcp("structures", "intact_build_network", {"seed_acces
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `text` | キーワード | オプション |
-| `organism` | キーワード | オプション |
-| `taxonomy_id` | インテガー | オプション |
-| `uniprot_accession` | キーワード | オプション |
-| `experimental_method` | キーワード | オプション |
-| `max_resolution_angstrom` | 郵便番号 | オプション |
-| `ligand_comp_id` | キーワード | オプション |
-| `include_computed_models` | ボオラン | 任意; デフォルト: false |
-| `max_rows` | インテガー | 任意; デフォルト: 100 |
+| `text` | 文字列 | オプション |
+| `organism` | 文字列 | オプション |
+| `taxonomy_id` | 整数 | オプション |
+| `uniprot_accession` | 文字列 | オプション |
+| `experimental_method` | 文字列 | オプション |
+| `max_resolution_angstrom` | 数値 | オプション |
+| `ligand_comp_id` | 文字列 | オプション |
+| `include_computed_models` | 真偽値 | 任意; デフォルト: false |
+| `max_rows` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_search_structures", {"uniprot_accession": "P04637", "experimental_method": "X-RAY DIFFRACTION", "max_rows": 50})
@@ -1563,7 +1565,7 @@ PDBエントリのエントリーレベルの要約 (バッチ、最大 25 ids)�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `pdb_ids` | 文字列の配列 | **必須条件** |
+| `pdb_ids` | 文字列の配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_get_structures", {"pdb_ids": ["1TUP", "1tup", "6XYZ"]})
@@ -1575,10 +1577,10 @@ const result = await host.mcp("structures", "pdb_get_structures", {"pdb_ids": ["
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `pdb_id` | キーワード | **必須条件** |
+| `pdb_id` | 文字列 | **必須** |
 | `entity_ids` | 文字列の配列 | オプション |
-| `include_sequences` | ボオラン | 任意; デフォルト: false |
-| `max_bytes` | インテガー | 任意; デフォルト: 400000 |
+| `include_sequences` | 真偽値 | 任意; デフォルト: false |
+| `max_bytes` | 整数 | 任意; デフォルト: 400000 |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_get_entities", {"pdb_id": "1TUP", "include_sequences": true})
@@ -1590,8 +1592,8 @@ const result = await host.mcp("structures", "pdb_get_entities", {"pdb_id": "1TUP
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `pdb_id` | キーワード | **必須条件** |
-| `max_ligands` | インテガー | 任意; デフォルト: 25 |
+| `pdb_id` | 文字列 | **必須** |
+| `max_ligands` | 整数 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_get_ligands", {"pdb_id": "1TUP"})
@@ -1603,8 +1605,8 @@ const result = await host.mcp("structures", "pdb_get_ligands", {"pdb_id": "1TUP"
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `uniprot_accession` | キーワード | **必須条件** |
-| `include_sequence` | ボオラン | 任意; デフォルト: false |
+| `uniprot_accession` | 文字列 | **必須** |
+| `include_sequence` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("structures", "alphafold_get_prediction", {"uniprot_accession": "P04637"})
@@ -1616,7 +1618,7 @@ const result = await host.mcp("structures", "alphafold_get_prediction", {"unipro
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `uniprot_accessions` | 文字列の配列 | **必須条件** |
+| `uniprot_accessions` | 文字列の配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("structures", "alphafold_check_coverage", {"uniprot_accessions": ["P04637", "P38398", "Q9Y6K9"]})
@@ -1635,12 +1637,12 @@ const result = await host.mcp("structures", "alphafold_check_coverage", {"unipro
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `name` | キーワード | オプション |
-| `chembl_id` | キーワード | オプション |
-| `smiles` | キーワード | オプション |
-| `similarity_threshold` | インテガー | 任意; 最小値: 70; 最高: 100 |
-| `max_phase` | インテガー | 任意; enum: &#91;0, 1, 2, 3, 4&#93; |
-| `limit` | インテガー | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
+| `name` | 文字列 | オプション |
+| `chembl_id` | 文字列 | オプション |
+| `smiles` | 文字列 | オプション |
+| `similarity_threshold` | 整数 | 任意; 最小値: 70; 最高: 100 |
+| `max_phase` | 整数 | 任意; enum: &#91;0, 1, 2, 3, 4&#93; |
+| `limit` | 整数 | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
 
 ```javascript
 const result = await host.mcp("chembl", "compound_search", {"name": "aspirin", "limit": 5})
@@ -1652,12 +1654,12 @@ const result = await host.mcp("chembl", "compound_search", {"name": "aspirin", "
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `indication` | キーワード | **必須条件** |
-| `drug_name` | キーワード | オプション |
-| `molecule_chembl_id` | キーワード | オプション |
-| `max_phase` | インテガー | 任意; enum: &#91;0, 1, 2, 3, 4&#93; |
-| `only_approved` | ボオラン | 任意; デフォルト: false |
-| `limit` | インテガー | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
+| `indication` | 文字列 | **必須** |
+| `drug_name` | 文字列 | オプション |
+| `molecule_chembl_id` | 文字列 | オプション |
+| `max_phase` | 整数 | 任意; enum: &#91;0, 1, 2, 3, 4&#93; |
+| `only_approved` | 真偽値 | 任意; デフォルト: false |
+| `limit` | 整数 | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
 
 ```javascript
 const result = await host.mcp("chembl", "drug_search", {"indication": "hypertension", "only_approved": true, "limit": 10})
@@ -1669,7 +1671,7 @@ ChEMBLは、薬物性/ADMET評価のための分子特性を1つの分子(ALogP�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `molecule_chembl_id` | キーワード | **必須条件** |
+| `molecule_chembl_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("chembl", "get_admet", {"molecule_chembl_id": "CHEMBL25"})
@@ -1681,14 +1683,14 @@ const result = await host.mcp("chembl", "get_admet", {"molecule_chembl_id": "CHE
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `molecule_chembl_id` | キーワード | オプション |
-| `target_chembl_id` | キーワード | オプション |
-| `activity_type` | キーワード | 任意; エヌム: &#91;"IC50"、"EC50"、"Ki"、"Kd"、"AC50"、"GI50"、"ED50"、"Potency"&#93; |
-| `min_pchembl` | 郵便番号 | 任意; 最小値: 0; 最高: 14 |
-| `min_value` | 郵便番号 | オプション |
-| `max_value` | 郵便番号 | オプション |
-| `unit` | キーワード | 任意; エヌム: &#91;"nM", "uM", "mM", "pM", "M"&#93; |
-| `limit` | インテガー | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
+| `molecule_chembl_id` | 文字列 | オプション |
+| `target_chembl_id` | 文字列 | オプション |
+| `activity_type` | 文字列 | 任意; エヌム: &#91;"IC50"、"EC50"、"Ki"、"Kd"、"AC50"、"GI50"、"ED50"、"Potency"&#93; |
+| `min_pchembl` | 数値 | 任意; 最小値: 0; 最高: 14 |
+| `min_value` | 数値 | オプション |
+| `max_value` | 数値 | オプション |
+| `unit` | 文字列 | 任意; エヌム: &#91;"nM", "uM", "mM", "pM", "M"&#93; |
+| `limit` | 整数 | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
 
 ```javascript
 const result = await host.mcp("chembl", "get_bioactivity", {"molecule_chembl_id": "CHEMBL25", "activity_type": "IC50", "limit": 10})
@@ -1700,10 +1702,10 @@ const result = await host.mcp("chembl", "get_bioactivity", {"molecule_chembl_id"
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `molecule_chembl_id` | キーワード | オプション |
-| `target_chembl_id` | キーワード | オプション |
-| `action_type` | キーワード | 任意; enum: &#91; &#93;"インヒビター", , "アソニスト", , "アタゴニスト", , "ブロッカー", , "モデレーター", , "営業体制", , "アクティベーター", , "一貫した調節器", , "ネガティブ・アオステリック・モジュレーター", , "パートリーアゴニスト", , "インバース・アゴニスト". . . |
-| `limit` | インテガー | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
+| `molecule_chembl_id` | 文字列 | オプション |
+| `target_chembl_id` | 文字列 | オプション |
+| `action_type` | 文字列 | 任意; enum: &#91; &#93;"インヒビター", , "アソニスト", , "アタゴニスト", , "ブロッカー", , "モデレーター", , "営業体制", , "アクティベーター", , "一貫した調節器", , "ネガティブ・アオステリック・モジュレーター", , "パートリーアゴニスト", , "インバース・アゴニスト". . . |
+| `limit` | 整数 | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
 
 ```javascript
 const result = await host.mcp("chembl", "get_mechanism", {"molecule_chembl_id": "CHEMBL25"})
@@ -1715,12 +1717,12 @@ ChEMBLの生物学的目標(タンパク質、複合体、家族、生物)を検
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `target_name` | キーワード | オプション |
-| `gene_symbol` | キーワード | オプション |
-| `target_chembl_id` | キーワード | オプション |
-| `organism` | キーワード | オプション |
-| `target_type` | キーワード | 任意; enum: &#91; &#93;"シングルプロテイン", , "PROTEIN COMPLEX(プロテインコンプレックス)", , "プロテインファミリー", , "オルガニズム", , "TISSUE(ティシュー)", , "セルライン", , "NUCLEIC-ACID(ナクレックアシッド)", , "サブセルラー". . . |
-| `limit` | インテガー | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
+| `target_name` | 文字列 | オプション |
+| `gene_symbol` | 文字列 | オプション |
+| `target_chembl_id` | 文字列 | オプション |
+| `organism` | 文字列 | オプション |
+| `target_type` | 文字列 | 任意; enum: &#91; &#93;"シングルプロテイン", , "PROTEIN COMPLEX(プロテインコンプレックス)", , "プロテインファミリー", , "オルガニズム", , "TISSUE(ティシュー)", , "セルライン", , "NUCLEIC-ACID(ナクレックアシッド)", , "サブセルラー". . . |
+| `limit` | 整数 | 任意; デフォルト: 20; 最小値: 1; 最高: 1000 |
 
 ```javascript
 const result = await host.mcp("chembl", "target_search", {"gene_symbol": "EGFR", "organism": "Homo sapiens", "limit": 5})
@@ -1751,14 +1753,14 @@ const result = await host.mcp("biorxiv", "get_categories", {})
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `server` | キーワード | 任意; デフォルト: "biorxiv"; enum: &#91;"biorxiv"、"medrxiv"&#93; |
-| `category` | キーワード | 任意; enum: &#91; &#93;"動物行動と認知", , "生物化学", , "バイオエンジニアリング", , "バイオインフォマティクス", , "生物物理", , "がん生物学", , "細胞生物学", , "臨床試験", , "開発生物学", , "エコロジー", , "疫学", , "進化する生物学", , "遺伝学", , "ゲノム", , "免疫学", , "マイクロバイオロジー", , "分子生物学", , "神経科学", , "パロントロジー", , "病理学", , "薬理学・毒性学", , "生理学", , "植物生物学", , "科学的コミュニケーションと教育", , "合成生物学", , "システム生物学", , "動物園". . . |
-| `date_from` | キーワード | オプション |
-| `date_to` | キーワード | オプション |
-| `recent_days` | インテガー | 任意; 最小値: 1 |
-| `recent_count` | インテガー | 任意; 最小値: 1 |
-| `limit` | インテガー | 任意; デフォルト: 10; 最小値: 1; 最高: 100 |
-| `cursor` | インテガー | 任意; デフォルト: 0; 最小値: 0 |
+| `server` | 文字列 | 任意; デフォルト: "biorxiv"; enum: &#91;"biorxiv"、"medrxiv"&#93; |
+| `category` | 文字列 | 任意; enum: &#91; &#93;"動物行動と認知", , "生物化学", , "バイオエンジニアリング", , "バイオインフォマティクス", , "生物物理", , "がん生物学", , "細胞生物学", , "臨床試験", , "開発生物学", , "エコロジー", , "疫学", , "進化する生物学", , "遺伝学", , "ゲノム", , "免疫学", , "マイクロバイオロジー", , "分子生物学", , "神経科学", , "パロントロジー", , "病理学", , "薬理学・毒性学", , "生理学", , "植物生物学", , "科学的コミュニケーションと教育", , "合成生物学", , "システム生物学", , "動物園". . . |
+| `date_from` | 文字列 | オプション |
+| `date_to` | 文字列 | オプション |
+| `recent_days` | 整数 | 任意; 最小値: 1 |
+| `recent_count` | 整数 | 任意; 最小値: 1 |
+| `limit` | 整数 | 任意; デフォルト: 10; 最小値: 1; 最高: 100 |
+| `cursor` | 整数 | 任意; デフォルト: 0; 最小値: 0 |
 
 ```javascript
 const result = await host.mcp("biorxiv", "search_preprints", {"recent_days": 30, "category": "neuroscience", "limit": 20})
@@ -1770,8 +1772,8 @@ DOI(Bre " 10.1101/...")による1つのプリプリントのための完全な�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `doi` | キーワード | オプション |
-| `server` | キーワード | 任意; デフォルト: "biorxiv"; enum: &#91;"biorxiv"、"medrxiv"&#93; |
+| `doi` | 文字列 | **必須** |
+| `server` | 文字列 | 任意; デフォルト: "biorxiv"; enum: &#91;"biorxiv"、"medrxiv"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_preprint", {"doi": "10.1101/339747"})
@@ -1783,15 +1785,15 @@ const result = await host.mcp("biorxiv", "get_preprint", {"doi": "10.1101/339747
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `server` | キーワード | 任意; デフォルト: "biorxiv"; enum: &#91;"biorxiv"、"medrxiv"&#93; |
-| `publisher` | キーワード | オプション |
-| `include_details` | ボオラン | 任意; デフォルト: true |
-| `date_from` | キーワード | オプション |
-| `date_to` | キーワード | オプション |
-| `recent_days` | インテガー | 任意; 最小値: 1 |
-| `recent_count` | インテガー | 任意; 最小値: 1 |
-| `limit` | インテガー | 任意; デフォルト: 10; 最小値: 1; 最高: 100 |
-| `cursor` | インテガー | 任意; デフォルト: 0; 最小値: 0 |
+| `server` | 文字列 | 任意; デフォルト: "biorxiv"; enum: &#91;"biorxiv"、"medrxiv"&#93; |
+| `publisher` | 文字列 | オプション |
+| `include_details` | 真偽値 | 任意; デフォルト: true |
+| `date_from` | 文字列 | オプション |
+| `date_to` | 文字列 | オプション |
+| `recent_days` | 整数 | 任意; 最小値: 1 |
+| `recent_count` | 整数 | 任意; 最小値: 1 |
+| `limit` | 整数 | 任意; デフォルト: 10; 最小値: 1; 最高: 100 |
+| `cursor` | 整数 | 任意; デフォルト: 0; 最小値: 0 |
 
 ```javascript
 const result = await host.mcp("biorxiv", "search_published_preprints", {"publisher": "10.1038", "date_from": "2024-01-01", "date_to": "2024-01-05", "limit": 10})
@@ -1803,13 +1805,13 @@ ROR id(9-char)で特定された資金提供者を認める事前プリントを
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `funder_ror_id` | キーワード | オプション |
-| `date_from` | キーワード | オプション |
-| `date_to` | キーワード | オプション |
-| `server` | キーワード | 任意; デフォルト: "biorxiv"; enum: &#91;"biorxiv"、"medrxiv"&#93; |
-| `category` | キーワード | 任意; enum: &#91; &#93;"動物行動と認知", , "生物化学", , "バイオエンジニアリング", , "バイオインフォマティクス", , "生物物理", , "がん生物学", , "細胞生物学", , "臨床試験", , "開発生物学", , "エコロジー", , "疫学", , "進化する生物学", , "遺伝学", , "ゲノム", , "免疫学", , "マイクロバイオロジー", , "分子生物学", , "神経科学", , "パロントロジー", , "病理学", , "薬理学・毒性学", , "生理学", , "植物生物学", , "科学的コミュニケーションと教育", , "合成生物学", , "システム生物学", , "動物園". . . |
-| `limit` | インテガー | 任意; デフォルト: 10; 最小値: 1; 最高: 100 |
-| `cursor` | インテガー | 任意; デフォルト: 0; 最小値: 0 |
+| `funder_ror_id` | 文字列 | **必須** |
+| `date_from` | 文字列 | **必須** |
+| `date_to` | 文字列 | **必須** |
+| `server` | 文字列 | 任意; デフォルト: "biorxiv"; enum: &#91;"biorxiv"、"medrxiv"&#93; |
+| `category` | 文字列 | 任意; enum: &#91; &#93;"動物行動と認知", , "生物化学", , "バイオエンジニアリング", , "バイオインフォマティクス", , "生物物理", , "がん生物学", , "細胞生物学", , "臨床試験", , "開発生物学", , "エコロジー", , "疫学", , "進化する生物学", , "遺伝学", , "ゲノム", , "免疫学", , "マイクロバイオロジー", , "分子生物学", , "神経科学", , "パロントロジー", , "病理学", , "薬理学・毒性学", , "生理学", , "植物生物学", , "科学的コミュニケーションと教育", , "合成生物学", , "システム生物学", , "動物園". . . |
+| `limit` | 整数 | 任意; デフォルト: 10; 最小値: 1; 最高: 100 |
+| `cursor` | 整数 | 任意; デフォルト: 0; 最小値: 0 |
 
 ```javascript
 const result = await host.mcp("biorxiv", "search_by_funder", {"funder_ror_id": "021nxhr62", "date_from": "2025-04-10", "date_to": "2025-05-10", "limit": 10})
@@ -1821,7 +1823,7 @@ const result = await host.mcp("biorxiv", "search_by_funder", {"funder_ror_id": "
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `interval` | キーワード | 任意; デフォルト: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
+| `interval` | 文字列 | 任意; デフォルト: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_content_statistics", {"interval": "yearly"})
@@ -1833,7 +1835,7 @@ const result = await host.mcp("biorxiv", "get_content_statistics", {"interval": 
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `interval` | キーワード | 任意; デフォルト: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
+| `interval` | 文字列 | 任意; デフォルト: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_usage_statistics", {"interval": "yearly"})
@@ -1852,20 +1854,20 @@ const result = await host.mcp("biorxiv", "get_usage_statistics", {"interval": "y
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `brand` | キーワード | オプション |
-| `generic` | キーワード | オプション |
-| `active_ingredient` | キーワード | オプション |
-| `sponsor` | キーワード | オプション |
-| `marketing_status` | キーワード | 任意; enum: &#91;"Prescription", "Overthe-counter", "Discontinued", "None (暫定承認)"&#93; |
-| `dosage_form` | キーワード | オプション |
-| `route` | キーワード | オプション |
-| `pharm_class` | キーワード | オプション |
-| `pharm_class_type` | キーワード | 任意; エヌム: &#91;"epc"、"moa"、"cs"、"pe"&#93; |
-| `search_type` | キーワード | 任意; デフォルト: "and"; enum: &#91;"and", "or"&#93; |
-| `submission_date_from` | キーワード | オプション |
-| `submission_date_to` | キーワード | オプション |
-| `raw_search` | キーワード | オプション |
-| `max_records` | インテガー | 任意; デフォルト: 50 |
+| `brand` | 文字列 | オプション |
+| `generic` | 文字列 | オプション |
+| `active_ingredient` | 文字列 | オプション |
+| `sponsor` | 文字列 | オプション |
+| `marketing_status` | 文字列 | 任意; enum: &#91;"Prescription", "Overthe-counter", "Discontinued", "None (暫定承認)"&#93; |
+| `dosage_form` | 文字列 | オプション |
+| `route` | 文字列 | オプション |
+| `pharm_class` | 文字列 | オプション |
+| `pharm_class_type` | 文字列 | 任意; エヌム: &#91;"epc"、"moa"、"cs"、"pe"&#93; |
+| `search_type` | 文字列 | 任意; デフォルト: "and"; enum: &#91;"and", "or"&#93; |
+| `submission_date_from` | 文字列 | オプション |
+| `submission_date_to` | 文字列 | オプション |
+| `raw_search` | 文字列 | オプション |
+| `max_records` | 整数 | 任意; デフォルト: 50 |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "search_drug_applications", {"generic": "ATORVASTATIN CALCIUM", "marketing_status": "Prescription", "max_records": 25})
@@ -1877,7 +1879,7 @@ const result = await host.mcp("drug-regulatory", "search_drug_applications", {"g
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `application_number` | キーワード | **必須条件** |
+| `application_number` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "get_drug_application", {"application_number": "NDA020702"})
@@ -1889,21 +1891,21 @@ Aggregate Drugs@FDA バケットは、search_drug_applications と同じフィ�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `count_field` | キーワード | **必須条件** |
-| `brand` | キーワード | オプション |
-| `generic` | キーワード | オプション |
-| `active_ingredient` | キーワード | オプション |
-| `sponsor` | キーワード | オプション |
-| `marketing_status` | キーワード | オプション |
-| `dosage_form` | キーワード | オプション |
-| `route` | キーワード | オプション |
-| `pharm_class` | キーワード | オプション |
-| `pharm_class_type` | キーワード | 任意; エヌム: &#91;"epc"、"moa"、"cs"、"pe"&#93; |
-| `search_type` | キーワード | 任意; デフォルト: "and"; enum: &#91;"and", "or"&#93; |
-| `submission_date_from` | キーワード | オプション |
-| `submission_date_to` | キーワード | オプション |
-| `raw_search` | キーワード | オプション |
-| `max_buckets` | インテガー | 任意; デフォルト: 100 |
+| `count_field` | 文字列 | **必須** |
+| `brand` | 文字列 | オプション |
+| `generic` | 文字列 | オプション |
+| `active_ingredient` | 文字列 | オプション |
+| `sponsor` | 文字列 | オプション |
+| `marketing_status` | 文字列 | オプション |
+| `dosage_form` | 文字列 | オプション |
+| `route` | 文字列 | オプション |
+| `pharm_class` | 文字列 | オプション |
+| `pharm_class_type` | 文字列 | 任意; エヌム: &#91;"epc"、"moa"、"cs"、"pe"&#93; |
+| `search_type` | 文字列 | 任意; デフォルト: "and"; enum: &#91;"and", "or"&#93; |
+| `submission_date_from` | 文字列 | オプション |
+| `submission_date_to` | 文字列 | オプション |
+| `raw_search` | 文字列 | オプション |
+| `max_buckets` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "count_drug_applications", {"count_field": "marketing_status"})
@@ -1927,8 +1929,8 @@ const result = await host.mcp("drug-regulatory", "get_drug_statistics", {})
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `class_type` | キーワード | 任意; デフォルト: "epc"; エヌム: &#91;"epc"、"moa"、"cs"、"pe"&#93; |
-| `max_buckets` | インテガー | 任意; デフォルト: 100 |
+| `class_type` | 文字列 | 任意; デフォルト: "epc"; エヌム: &#91;"epc"、"moa"、"cs"、"pe"&#93; |
+| `max_buckets` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "list_pharmacologic_classes", {"class_type": "epc", "max_buckets": 50})
@@ -1940,7 +1942,7 @@ const result = await host.mcp("drug-regulatory", "list_pharmacologic_classes", {
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `brand` | キーワード | **必須条件** |
+| `brand` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "get_generic_equivalents", {"brand": "Lipitor"})
@@ -1952,15 +1954,15 @@ const result = await host.mcp("drug-regulatory", "get_generic_equivalents", {"br
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `active_ingredient` | キーワード | オプション |
-| `generic_name` | キーワード | オプション |
-| `brand_name` | キーワード | オプション |
-| `route` | キーワード | オプション |
-| `product_type` | キーワード | 任意; enum: &#91;"HUMAN PRESCRIPTION DRUG", "HUMAN OTC DRUG"&#93; |
-| `exact` | ボオラン | 任意; デフォルト: false |
-| `raw_search` | キーワード | オプション |
+| `active_ingredient` | 文字列 | オプション |
+| `generic_name` | 文字列 | オプション |
+| `brand_name` | 文字列 | オプション |
+| `route` | 文字列 | オプション |
+| `product_type` | 文字列 | 任意; enum: &#91;"HUMAN PRESCRIPTION DRUG", "HUMAN OTC DRUG"&#93; |
+| `exact` | 真偽値 | 任意; デフォルト: false |
+| `raw_search` | 文字列 | オプション |
 | `sections` | 文字列の配列 | オプション |
-| `max_records` | インテガー | 任意; デフォルト: 25 |
+| `max_records` | 整数 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "search_drug_labels", {"brand_name": "Tylenol", "max_records": 5})
@@ -1979,8 +1981,8 @@ GWASカタログ協会は、まず第一種(rsID)に対して報告しました�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `rs_id` | キーワード | **必須条件** |
-| `max_records` | インテガー | 任意; デフォルト: 500 |
+| `rs_id` | 文字列 | **必須** |
+| `max_records` | 整数 | 任意; デフォルト: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_associations_for_variant", {"rs_id": "rs7412", "max_records": 100})
@@ -1992,8 +1994,8 @@ const result = await host.mcp("human-genetics", "gwas_associations_for_variant",
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_symbol` | キーワード | **必須条件** |
-| `max_records` | インテガー | 任意; デフォルト: 500 |
+| `gene_symbol` | 文字列 | **必須** |
+| `max_records` | 整数 | 任意; デフォルト: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_associations_for_gene", {"gene_symbol": "PCSK9", "max_records": 100})
@@ -2005,9 +2007,9 @@ GWASカタログは、EFO特性を1つに注釈付けし、最も重要である
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `efo_id` | キーワード | オプション |
-| `efo_trait` | キーワード | オプション |
-| `max_records` | インテガー | 任意; デフォルト: 500 |
+| `efo_id` | 文字列 | オプション |
+| `efo_trait` | 文字列 | オプション |
+| `max_records` | 整数 | 任意; デフォルト: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_associations_for_trait", {"efo_id": "MONDO_0005010", "max_records": 100})
@@ -2019,8 +2021,8 @@ const result = await host.mcp("human-genetics", "gwas_associations_for_trait", {
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `max_records` | インテガー | 任意; デフォルト: 500 |
+| `query` | 文字列 | **必須** |
+| `max_records` | 整数 | 任意; デフォルト: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_search_traits", {"query": "coronary", "max_records": 50})
@@ -2032,10 +2034,10 @@ const result = await host.mcp("human-genetics", "gwas_search_traits", {"query": 
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `efo_id` | キーワード | オプション |
-| `efo_trait` | キーワード | オプション |
-| `pubmed_id` | キーワード | オプション |
-| `max_records` | インテガー | 任意; デフォルト: 500 |
+| `efo_id` | 文字列 | オプション |
+| `efo_trait` | 文字列 | オプション |
+| `pubmed_id` | 文字列 | オプション |
+| `max_records` | 整数 | 任意; デフォルト: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_search_studies", {"efo_id": "MONDO_0005010", "max_records": 50})
@@ -2047,7 +2049,7 @@ GCSTアクセスによる1つのGWASカタログの研究をフェッチしま�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession_id` | キーワード | **必須条件** |
+| `accession_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_get_study", {"accession_id": "GCST90841394"})
@@ -2059,7 +2061,7 @@ rID による 1 つの GWAS カタログ バリアント レコード (位置、
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `rs_id` | キーワード | **必須条件** |
+| `rs_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_get_variant", {"rs_id": "rs7412"})
@@ -2071,10 +2073,10 @@ eQTLカタログデータセット(1つのデータセット=1つの研究x組�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `study_label` | キーワード | オプション |
-| `tissue_label` | キーワード | オプション |
-| `quant_method` | キーワード | オプション |
-| `max_records` | インテガー | 任意; デフォルト: 1000 |
+| `study_label` | 文字列 | オプション |
+| `tissue_label` | 文字列 | オプション |
+| `quant_method` | 文字列 | オプション |
+| `max_records` | 整数 | 任意; デフォルト: 1000 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "eqtl_list_datasets", {"study_label": "Alasoo_2018", "quant_method": "ge"})
@@ -2086,13 +2088,13 @@ const result = await host.mcp("human-genetics", "eqtl_list_datasets", {"study_la
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `dataset_id` | キーワード | **必須条件** |
-| `gene_id` | キーワード | オプション |
-| `rsid` | キーワード | オプション |
-| `variant` | キーワード | オプション |
-| `pos` | キーワード | オプション |
-| `nlog10p_min` | 郵便番号 | オプション |
-| `max_records` | インテガー | 任意; デフォルト: 1000 |
+| `dataset_id` | 文字列 | **必須** |
+| `gene_id` | 文字列 | オプション |
+| `rsid` | 文字列 | オプション |
+| `variant` | 文字列 | オプション |
+| `pos` | 文字列 | オプション |
+| `nlog10p_min` | 数値 | オプション |
+| `max_records` | 整数 | 任意; デフォルト: 1000 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "eqtl_associations", {"dataset_id": "QTD000266", "gene_id": "ENSG00000130203", "nlog10p_min": 2})
@@ -2116,9 +2118,9 @@ PheWAS は、バイオバンク PheWeb ポータル内のすべての phenotype 
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `instance` | キーワード | **必須条件**; enum: &#91;"finngen"、"bbj"&#93; |
-| `variant` | キーワード | **必須条件** |
-| `max_phenos` | インテガー | 任意; デフォルト: 200 |
+| `instance` | 文字列 | **必須**; enum: &#91;"finngen"、"bbj"&#93; |
+| `variant` | 文字列 | **必須** |
+| `max_phenos` | 整数 | 任意; デフォルト: 200 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "phewas_variant", {"instance": "finngen", "variant": "19-44908822-C-T", "max_phenos": 50})
@@ -2130,8 +2132,8 @@ FinnGen R12から遺伝子レベルのPheWAS:すべての疾患エンドポイ�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_symbol` | キーワード | **必須条件** |
-| `max_phenos` | インテガー | 任意; デフォルト: 200 |
+| `gene_symbol` | 文字列 | **必須** |
+| `max_phenos` | 整数 | 任意; デフォルト: 200 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "phewas_finngen_gene", {"gene_symbol": "PCSK9", "max_phenos": 50})
@@ -2143,8 +2145,8 @@ PheWeb インスタンスの phenotype (disease endpoint) の完全カタログ(
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `instance` | キーワード | 任意; デフォルト: "finngen"; enum: &#91;"finngen"&#93; |
-| `max_records` | インテガー | 任意; デフォルト: 3000 |
+| `instance` | 文字列 | 任意; デフォルト: "finngen"; enum: &#91;"finngen"&#93; |
+| `max_records` | 整数 | 任意; デフォルト: 3000 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "phewas_list_phenotypes", {"instance": "finngen", "max_records": 3000})
@@ -2156,9 +2158,9 @@ const result = await host.mcp("human-genetics", "phewas_list_phenotypes", {"inst
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `instance` | キーワード | 任意; デフォルト: "finngen"; enum: &#91;"finngen"、"bbj"&#93; |
-| `max_records` | インテガー | 任意; デフォルト: 500 |
+| `query` | 文字列 | **必須** |
+| `instance` | 文字列 | 任意; デフォルト: "finngen"; enum: &#91;"finngen"、"bbj"&#93; |
+| `max_records` | 整数 | 任意; デフォルト: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "phewas_search_phenotypes", {"query": "diabetes", "instance": "finngen"})
@@ -2177,7 +2179,7 @@ const result = await host.mcp("human-genetics", "phewas_search_phenotypes", {"qu
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `dataset_id` | キーワード | 任意; デフォルト: "gtex_v8" |
+| `dataset_id` | 文字列 | 任意; デフォルト: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_tissue_sites", {"dataset_id": "gtex_v8"})
@@ -2189,8 +2191,8 @@ const result = await host.mcp("expression", "gtex_tissue_sites", {"dataset_id": 
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `dataset_id` | キーワード | オプション |
-| `organization_name` | キーワード | オプション |
+| `dataset_id` | 文字列 | オプション |
+| `organization_name` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_dataset_info", {})
@@ -2202,11 +2204,11 @@ tissue_site_detail_id、data_type(例)でフィルタリングされたピン留
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `tissue_site_detail_id` | キーワード | オプション |
-| `data_type` | キーワード | オプション |
-| `subject_id` | キーワード | オプション |
-| `max_samples` | インテガー | オプション |
-| `dataset_id` | キーワード | 任意; デフォルト: "gtex_v8" |
+| `tissue_site_detail_id` | 文字列 | オプション |
+| `data_type` | 文字列 | オプション |
+| `subject_id` | 文字列 | オプション |
+| `max_samples` | 整数 | オプション |
+| `dataset_id` | 文字列 | 任意; デフォルト: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_sample_info", {"tissue_site_detail_id": "Liver", "data_type": "RNASEQ", "max_samples": 100})
@@ -2218,8 +2220,8 @@ const result = await host.mcp("expression", "gtex_sample_info", {"tissue_site_de
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `genes` | 文字列の配列 | **必須条件** | 7 / 0 / 0 |
-| `dataset_id` | キーワード | 任意; デフォルト: "gtex_v8" |
+| `genes` | 文字列の配列 | **必須** | 7 / 0 / 0 |
+| `dataset_id` | 文字列 | 任意; デフォルト: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_resolve_genes", {"genes": ["GAPDH", "BRCA2"]})
@@ -2231,9 +2233,9 @@ const result = await host.mcp("expression", "gtex_resolve_genes", {"genes": ["GA
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gencode_ids` | 文字列の配列 | **必須条件** |
+| `gencode_ids` | 文字列の配列 | **必須** |
 | `tissue_site_detail_ids` | 文字列の配列 | オプション |
-| `dataset_id` | キーワード | 任意; デフォルト: "gtex_v8" |
+| `dataset_id` | 文字列 | 任意; デフォルト: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_median_expression", {"gencode_ids": ["ENSG00000111640.14"]})
@@ -2245,8 +2247,8 @@ const result = await host.mcp("expression", "gtex_median_expression", {"gencode_
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene` | キーワード | **必須条件** |
-| `dataset_id` | キーワード | 任意; デフォルト: "gtex_v8" |
+| `gene` | 文字列 | **必須** |
+| `dataset_id` | 文字列 | 任意; デフォルト: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_expression_summary", {"gene": "GAPDH"})
@@ -2258,9 +2260,9 @@ const result = await host.mcp("expression", "gtex_expression_summary", {"gene": 
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gencode_id` | キーワード | **必須条件** |
+| `gencode_id` | 文字列 | **必須** |
 | `tissue_site_detail_ids` | 文字列の配列 | オプション |
-| `dataset_id` | キーワード | 任意; デフォルト: "gtex_v8" |
+| `dataset_id` | 文字列 | 任意; デフォルト: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_gene_expression", {"gencode_id": "ENSG00000111640.14", "tissue_site_detail_ids": ["Whole_Blood"]})
@@ -2272,10 +2274,10 @@ const result = await host.mcp("expression", "gtex_gene_expression", {"gencode_id
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `tissue_site_detail_id` | キーワード | **必須条件** |
-| `n` | インテガー | 任意; デフォルト: 100 |
-| `filter_mt_gene` | ボオラン | 任意; デフォルト: true |
-| `dataset_id` | キーワード | 任意; デフォルト: "gtex_v8" |
+| `tissue_site_detail_id` | 文字列 | **必須** |
+| `n` | 整数 | 任意; デフォルト: 100 |
+| `filter_mt_gene` | 真偽値 | 任意; デフォルト: true |
+| `dataset_id` | 文字列 | 任意; デフォルト: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_top_expressed_genes", {"tissue_site_detail_id": "Whole_Blood", "n": 20})
@@ -2287,9 +2289,9 @@ const result = await host.mcp("expression", "gtex_top_expressed_genes", {"tissue
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `tissue_site_detail_id` | キーワード | **必須条件** |
-| `max_genes` | インテガー | オプション |
-| `dataset_id` | キーワード | 任意; デフォルト: "gtex_v8" |
+| `tissue_site_detail_id` | 文字列 | **必須** |
+| `max_genes` | 整数 | オプション |
+| `dataset_id` | 文字列 | 任意; デフォルト: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_eqtl_genes", {"tissue_site_detail_id": "Pancreas", "max_genes": 100})
@@ -2301,11 +2303,11 @@ const result = await host.mcp("expression", "gtex_eqtl_genes", {"tissue_site_det
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gencode_id` | キーワード | オプション |
-| `variant_id` | キーワード | オプション |
-| `tissue_site_detail_id` | キーワード | オプション |
-| `max_results` | インテガー | オプション |
-| `dataset_id` | キーワード | 任意; デフォルト: "gtex_v8" |
+| `gencode_id` | 文字列 | オプション |
+| `variant_id` | 文字列 | オプション |
+| `tissue_site_detail_id` | 文字列 | オプション |
+| `max_results` | 整数 | オプション |
+| `dataset_id` | 文字列 | 任意; デフォルト: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_single_tissue_eqtls", {"gencode_id": "ENSG00000111640.14"})
@@ -2317,9 +2319,9 @@ const result = await host.mcp("expression", "gtex_single_tissue_eqtls", {"gencod
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gencode_id` | キーワード | **必須条件** |
-| `variant_id` | キーワード | オプション |
-| `dataset_id` | キーワード | 任意; デフォルト: "gtex_v8" |
+| `gencode_id` | 文字列 | **必須** |
+| `variant_id` | 文字列 | オプション |
+| `dataset_id` | 文字列 | 任意; デフォルト: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_multi_tissue_eqtls", {"gencode_id": "ENSG00000111640.14"})
@@ -2331,10 +2333,10 @@ eQTL を 1 つの組織の任意の遺伝子-variant ペアのためのフライ
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gencode_id` | キーワード | **必須条件** |
-| `variant_id` | キーワード | **必須条件** |
-| `tissue_site_detail_id` | キーワード | **必須条件** |
-| `dataset_id` | キーワード | 任意; デフォルト: "gtex_v8" |
+| `gencode_id` | 文字列 | **必須** |
+| `variant_id` | 文字列 | **必須** |
+| `tissue_site_detail_id` | 文字列 | **必須** |
+| `dataset_id` | 文字列 | 任意; デフォルト: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_calculate_eqtl", {"gencode_id": "ENSG00000111640.14", "variant_id": "chr12_6452899_G_A_b38", "tissue_site_detail_id": "Whole_Blood"})
@@ -2353,7 +2355,7 @@ const result = await host.mcp("expression", "gtex_calculate_eqtl", {"gencode_id"
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accessions` | 文字列の配列 | **必須条件** |
+| `accessions` | 文字列の配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_domain_architecture", {"accessions": ["P04637"]})
@@ -2365,10 +2367,10 @@ const result = await host.mcp("protein-annotation", "get_domain_architecture", {
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | オプション |
-| `entry_type` | キーワード | オプション |
-| `source_db` | キーワード | 任意; デフォルト: "interpro" |
-| `go_term` | キーワード | オプション |
+| `query` | 文字列 | オプション |
+| `entry_type` | 文字列 | オプション |
+| `source_db` | 文字列 | 任意; デフォルト: "interpro" |
+| `go_term` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_interpro_entries", {"query": "kinase", "source_db": "pfam"})
@@ -2380,7 +2382,7 @@ InterProエントリー(IPRxxxxxxxxx)またはPfamファミリー(PFxxxxx)の詳
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
+| `accession` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_interpro_entry", {"accession": "IPR000719"})
@@ -2392,7 +2394,7 @@ const result = await host.mcp("protein-annotation", "get_interpro_entry", {"acce
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | オプション |
+| `query` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_pfam_clans", {"query": "kinase"})
@@ -2404,7 +2406,7 @@ Pfam は、完全なソートされたメンバーファミリーリストを含
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `clan_accession` | キーワード | **必須条件** |
+| `clan_accession` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_clan", {"clan_accession": "CL0016"})
@@ -2416,10 +2418,10 @@ Pfamファミリーの会員タンパク質(完全カウントベリードウォ
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `pfam_accession` | キーワード | **必須条件** |
-| `reviewed_only` | ボオラン | 任意; デフォルト: false |
-| `tax_id` | インテガー | オプション |
-| `count_only` | ボオラン | 任意; デフォルト: false |
+| `pfam_accession` | 文字列 | **必須** |
+| `reviewed_only` | 真偽値 | 任意; デフォルト: false |
+| `tax_id` | 整数 | オプション |
+| `count_only` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_family_proteins", {"pfam_accession": "PF00069", "count_only": true})
@@ -2431,8 +2433,8 @@ Pfamファミリーのメンバーを含むプロテオム。 count_only デフ�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `pfam_accession` | キーワード | **必須条件** |
-| `count_only` | ボオラン | 任意; デフォルト: true |
+| `pfam_accession` | 文字列 | **必須** |
+| `count_only` | 真偽値 | 任意; デフォルト: true |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_family_proteomes", {"pfam_accession": "PF00069"})
@@ -2444,8 +2446,8 @@ const result = await host.mcp("protein-annotation", "get_pfam_family_proteomes",
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene` | キーワード | **必須条件** |
-| `full` | ボオラン | 任意; デフォルト: false |
+| `gene` | 文字列 | **必須** |
+| `full` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_protein_atlas_gene", {"gene": "TP53"})
@@ -2457,8 +2459,8 @@ const result = await host.mcp("protein-annotation", "get_protein_atlas_gene", {"
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `columns` | キーワード | 任意; デフォルト: "g、gs、eg、gd、up、chrp、scl" |
+| `query` | 文字列 | **必須** |
+| `columns` | 文字列 | 任意; デフォルト: "g、gs、eg、gd、up、chrp、scl" |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_protein_atlas", {"query": "kinase"})
@@ -2470,8 +2472,8 @@ const result = await host.mcp("protein-annotation", "search_protein_atlas", {"qu
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `symbols` | 文字列の配列 | **必須条件** |
-| `species` | インテガー | 任意; デフォルト: 9606 |
+| `symbols` | 文字列の配列 | **必須** |
+| `species` | 整数 | 任意; デフォルト: 9606 |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "map_string_ids", {"symbols": ["TP53", "BRCA1", "EGFR"]})
@@ -2483,9 +2485,9 @@ const result = await host.mcp("protein-annotation", "map_string_ids", {"symbols"
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `symbols` | 文字列の配列 | **必須条件** |
-| `species` | インテガー | 任意; デフォルト: 9606 |
-| `required_score` | インテガー | 任意; デフォルト: 700 |
+| `symbols` | 文字列の配列 | **必須** |
+| `species` | 整数 | 任意; デフォルト: 9606 |
+| `required_score` | 整数 | 任意; デフォルト: 700 |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_string_network", {"symbols": ["TP53", "BRCA1", "EGFR"], "required_score": 700})
@@ -2497,8 +2499,8 @@ const result = await host.mcp("protein-annotation", "get_string_network", {"symb
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `symbols` | 文字列の配列 | **必須条件** |
-| `species` | インテガー | 任意; デフォルト: 9606 |
+| `symbols` | 文字列の配列 | **必須** |
+| `species` | 整数 | 任意; デフォルト: 9606 |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_string_similarity_scores", {"symbols": ["TP53", "MDM2", "MDM4"]})
@@ -2510,9 +2512,9 @@ const result = await host.mcp("protein-annotation", "get_string_similarity_score
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `symbols` | 文字列の配列 | **必須条件** |
-| `species` | インテガー | 任意; デフォルト: 9606 |
-| `target_species` | インテガー | オプション |
+| `symbols` | 文字列の配列 | **必須** |
+| `species` | 整数 | 任意; デフォルト: 9606 |
+| `target_species` | 整数 | オプション |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_string_best_similarity_hits", {"symbols": ["TP53"], "target_species": 10090})
@@ -2531,9 +2533,9 @@ cBioPortal がん研究をリストし、任意にフリーテキストキーワ
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `keyword` | キーワード | オプション |
-| `cancer_type_id` | キーワード | オプション |
-| `max_records` | インテガー | 任意; デフォルト: 500 |
+| `keyword` | 文字列 | オプション |
+| `cancer_type_id` | 文字列 | オプション |
+| `max_records` | 整数 | 任意; デフォルト: 500 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_list_studies", {"keyword": "glioma"})
@@ -2545,7 +2547,7 @@ id による cBioPortal がん研究: メタデータ、データ型サンプル
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `study_id` | キーワード | **必須条件** |
+| `study_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_get_study", {"study_id": "msk_impact_2017"})
@@ -2557,9 +2559,9 @@ cBioPortal の 1 つの遺伝子(HUGO 記号)のすべての変異、再発の�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_symbol` | キーワード | **必須条件** |
-| `study_id` | キーワード | **必須条件** |
-| `max_records` | インテガー | 任意; デフォルト: 100 |
+| `gene_symbol` | 文字列 | **必須** |
+| `study_id` | 文字列 | **必須** |
+| `max_records` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_mutations_in_gene", {"gene_symbol": "IDH1", "study_id": "difg_msk_2023"})
@@ -2571,8 +2573,8 @@ const result = await host.mcp("cancer-models", "cbioportal_mutations_in_gene", {
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_symbol` | キーワード | **必須条件** |
-| `study_ids` | 文字列の配列 | **必須条件**; minItems: 1; maxItems: 12の |
+| `gene_symbol` | 文字列 | **必須** |
+| `study_ids` | 文字列の配列 | **必須**; minItems: 1; maxItems: 12の |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_mutation_frequency", {"gene_symbol": "KRAS", "study_ids": ["msk_impact_2017", "difg_msk_2023"]})
@@ -2584,10 +2586,10 @@ cBioPortal で 1 つの遺伝子のコピー番号変更を分離します。, �
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `gene_symbol` | キーワード | **必須条件** |
-| `study_id` | キーワード | **必須条件** |
-| `event_type` | キーワード | 任意; デフォルト: "HOMDEL_AND_AMP"; エヌム: &#91;"HOMDEL_AND_AMP", "HOMDEL", "AMP", "GAIN", "HETLOSS", "DIPLOID", "ALL"&#93; |
-| `max_records` | インテガー | 任意; デフォルト: 100 |
+| `gene_symbol` | 文字列 | **必須** |
+| `study_id` | 文字列 | **必須** |
+| `event_type` | 文字列 | 任意; デフォルト: "HOMDEL_AND_AMP"; エヌム: &#91;"HOMDEL_AND_AMP", "HOMDEL", "AMP", "GAIN", "HETLOSS", "DIPLOID", "ALL"&#93; |
+| `max_records` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_cna_in_gene", {"gene_symbol": "CDKN2A", "study_id": "msk_impact_2017"})
@@ -2599,8 +2601,8 @@ cBioPortal スタディ(パテントとサンプルレベルのフィールド)�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `study_id` | キーワード | **必須条件** |
-| `max_records` | インテガー | 任意; デフォルト: 200 |
+| `study_id` | 文字列 | **必須** |
+| `max_records` | 整数 | 任意; デフォルト: 200 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_clinical_attributes", {"study_id": "brca_tcga_pan_can_atlas_2018"})
@@ -2619,7 +2621,7 @@ const result = await host.mcp("cancer-models", "cbioportal_clinical_attributes",
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `family` | キーワード | **必須条件** |
+| `family` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("rna", "get_family", {"family": "RF00005"})
@@ -2631,9 +2633,9 @@ const result = await host.mcp("rna", "get_family", {"family": "RF00005"})
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `family` | キーワード | **必須条件** |
-| `fmt` | キーワード | 任意; デフォルト: "stockholm"; enum: &#91;"stockholm"、"fasta"&#93; |
-| `max_bytes` | インテガー | 任意; デフォルト: 400000 |
+| `family` | 文字列 | **必須** |
+| `fmt` | 文字列 | 任意; デフォルト: "stockholm"; enum: &#91;"stockholm"、"fasta"&#93; |
+| `max_bytes` | 整数 | 任意; デフォルト: 400000 |
 
 ```javascript
 const result = await host.mcp("rna", "get_seed_alignment", {"family": "RF00162", "fmt": "stockholm"})
@@ -2645,8 +2647,8 @@ Rfamファミリーの慣性コワランスモデル(CMファイル)は、cmsear
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `family` | キーワード | **必須条件** |
-| `max_bytes` | インテガー | 任意; デフォルト: 400000 |
+| `family` | 文字列 | **必須** |
+| `max_bytes` | 整数 | 任意; デフォルト: 400000 |
 
 ```javascript
 const result = await host.mcp("rna", "get_covariance_model", {"family": "RF00162"})
@@ -2658,7 +2660,7 @@ Rfamファミリー(NHX/Newick text)の種子植物学的ツリー。
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `family` | キーワード | **必須条件** |
+| `family` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("rna", "get_tree", {"family": "RF00162"})
@@ -2670,7 +2672,7 @@ const result = await host.mcp("rna", "get_tree", {"family": "RF00162"})
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `family` | キーワード | **必須条件** |
+| `family` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("rna", "get_sequence_regions", {"family": "RF00162"})
@@ -2682,7 +2684,7 @@ RfamファミリーのPDB残余レベルの構造マッピング、決定的ソ�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `family` | キーワード | **必須条件** |
+| `family` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("rna", "get_structure_mapping", {"family": "RF00162"})
@@ -2694,7 +2696,7 @@ Rfam のアクセスを家族 ID に変換 (例: Rfam) RF00005 -> "tRNA"。
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
+| `accession` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("rna", "accession_to_id", {"accession": "RF00005"})
@@ -2706,7 +2708,7 @@ Rfam 家族 ID をそのアクセスに変換します。(例: Rfam 家族の ID
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `family_id` | キーワード | **必須条件** |
+| `family_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("rna", "id_to_accession", {"family_id": "tRNA"})
@@ -2718,9 +2720,9 @@ Rfam バッチの公式エンドポイントから RNA のシーケンスを検�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `sequence` | キーワード | **必須条件** |
-| `max_wait_s` | 郵便番号 | 任意; デフォルト: 300 |
-| `poll_interval_s` | 郵便番号 | 任意; デフォルト: 5 |
+| `sequence` | 文字列 | **必須** |
+| `max_wait_s` | 数値 | 任意; デフォルト: 300 |
+| `poll_interval_s` | 数値 | 任意; デフォルト: 5 |
 
 ```javascript
 const result = await host.mcp("rna", "search_sequence", {"sequence": "GGUUCCGGGAAGGCAGCAGGUGGAAACCUGCCA"})
@@ -2739,14 +2741,14 @@ ArrayExpress 機能ゲノム実験 (BioStudies) を、完全な、合計 Hits �
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | オプション |
-| `organism` | キーワード | オプション |
-| `study_type` | キーワード | オプション |
-| `technology` | キーワード | オプション |
-| `released_after` | キーワード | オプション |
-| `released_before` | キーワード | オプション |
+| `query` | 文字列 | オプション |
+| `organism` | 文字列 | オプション |
+| `study_type` | 文字列 | オプション |
+| `technology` | 文字列 | オプション |
+| `released_after` | 文字列 | オプション |
+| `released_before` | 文字列 | オプション |
 | `extra_facets` | オブジェクト | オプション |
-| `max_records` | インテガー | 任意; デフォルト: 50 |
+| `max_records` | 整数 | 任意; デフォルト: 50 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_search_experiments", {"organism": "Homo sapiens", "study_type": "ChIP-seq", "max_records": 50})
@@ -2758,7 +2760,7 @@ const result = await host.mcp("omics-archives", "arrayexpress_search_experiments
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
+| `accession` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment", {"accession": "E-MTAB-5061"})
@@ -2770,7 +2772,7 @@ const result = await host.mcp("omics-archives", "arrayexpress_get_experiment", {
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
+| `accession` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment_files", {"accession": "E-MTAB-5061"})
@@ -2782,8 +2784,8 @@ ArrayExpress 実験 (MAGE-TAB ヘッダの動詞、 #2/#3 をリピートする)
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
-| `max_rows_returned` | インテガー | 任意; デフォルト: 200 |
+| `accession` | 文字列 | **必須** |
+| `max_rows_returned` | 整数 | 任意; デフォルト: 200 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment_samples", {"accession": "E-MTAB-5061", "max_rows_returned": 200})
@@ -2795,8 +2797,8 @@ NCBI GEO DataSet(db=gds)を検索し、シリーズレベルのレコード(ト�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `term` | キーワード | **必須条件** |
-| `retmax` | インテガー | 任意; デフォルト: 500 |
+| `term` | 文字列 | **必須** |
+| `retmax` | 整数 | 任意; デフォルト: 500 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "geo_search_series", {"term": "asthma AND gse[ETYP]", "retmax": 20})
@@ -2808,7 +2810,7 @@ GEOシリーズ(GSEアクセス)用のメタデータ(GSEアクセス)が含ま�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accessions` | 文字列の配列 | **必須条件** |
+| `accessions` | 文字列の配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "geo_get_series", {"accessions": ["GSE131907"]})
@@ -2832,9 +2834,9 @@ const result = await host.mcp("omics-archives", "metabolights_list_studies", {})
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accessions` | 文字列の配列 | **必須条件** |
-| `include_samples` | ボオラン | 任意; デフォルト: false |
-| `max_sample_rows_returned` | インテガー | 任意; デフォルト: 200 |
+| `accessions` | 文字列の配列 | **必須** |
+| `include_samples` | 真偽値 | 任意; デフォルト: false |
+| `max_sample_rows_returned` | 整数 | 任意; デフォルト: 200 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_get_studies", {"accessions": ["MTBLS1"], "include_samples": false})
@@ -2846,8 +2848,8 @@ const result = await host.mcp("omics-archives", "metabolights_get_studies", {"ac
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
-| `include_data_files` | ボオラン | 任意; デフォルト: true |
+| `accession` | 文字列 | **必須** |
+| `include_data_files` | 真偽値 | 任意; デフォルト: true |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_get_study_files", {"accession": "MTBLS1"})
@@ -2859,8 +2861,8 @@ MetaboLightsスタディ'sの生データフォルダ(FILESツリー)上のGlob�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
-| `pattern` | キーワード | オプション |
+| `accession` | 文字列 | **必須** |
+| `pattern` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_search_data_files", {"accession": "MTBLS1", "pattern": "*.zip"})
@@ -2872,8 +2874,8 @@ const result = await host.mcp("omics-archives", "metabolights_search_data_files"
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | オプション |
-| `biome_lineage` | キーワード | オプション |
+| `query` | 文字列 | オプション |
+| `biome_lineage` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_search_studies", {"query": "coral"})
@@ -2885,8 +2887,8 @@ MGnifyの研究(MGYSアクセス)のためのフェッチ構造レコード。 i
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accessions` | 文字列の配列 | **必須条件** |
-| `include_analyses` | ボオラン | 任意; デフォルト: false |
+| `accessions` | 文字列の配列 | **必須** |
+| `include_analyses` | 真偽値 | 任意; デフォルト: false |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_get_studies", {"accessions": ["MGYS00000410"], "include_analyses": false})
@@ -2898,7 +2900,7 @@ MGnify の 1 つの研究(完全、カウント検証済みのペジネーショ
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
+| `accession` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_get_study_analyses", {"accession": "MGYS00000410"})
@@ -2910,12 +2912,12 @@ PRIDEアーカイブプロテオミクスプロジェクト(完全、api_total�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `keyword` | キーワード | オプション |
-| `organism` | キーワード | オプション |
-| `instrument` | キーワード | オプション |
-| `disease` | キーワード | オプション |
+| `keyword` | 文字列 | オプション |
+| `organism` | 文字列 | オプション |
+| `instrument` | 文字列 | オプション |
+| `disease` | 文字列 | オプション |
 | `extra_filters` | オブジェクト | オプション |
-| `max_records_returned` | インテガー | 任意; デフォルト: 50 |
+| `max_records_returned` | 整数 | 任意; デフォルト: 50 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_search_projects", {"keyword": "phosphoproteome", "organism": "Homo sapiens (human)", "max_records_returned": 50})
@@ -2927,7 +2929,7 @@ const result = await host.mcp("omics-archives", "pride_search_projects", {"keywo
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accessions` | 文字列の配列 | **必須条件** |
+| `accessions` | 文字列の配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_get_projects", {"accessions": ["PXD010154"]})
@@ -2939,8 +2941,8 @@ const result = await host.mcp("omics-archives", "pride_get_projects", {"accessio
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `project_accession` | キーワード | **必須条件** |
-| `keyword` | キーワード | オプション |
+| `project_accession` | 文字列 | **必須** |
+| `keyword` | 文字列 | オプション |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_search_project_proteins", {"project_accession": "PXD010154"})
@@ -2952,7 +2954,7 @@ const result = await host.mcp("omics-archives", "pride_search_project_proteins",
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `protein_accession` | キーワード | **必須条件** |
+| `protein_accession` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_find_projects_for_protein", {"protein_accession": "P04637"})
@@ -2971,7 +2973,7 @@ CellGuide (CELLxGENE) セルオントロジー ID または名前による細胞
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `cell_type` | キーワード | **必須条件** |
+| `cell_type` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_cell_type_info", {"cell_type": "acinar cell"})
@@ -2983,8 +2985,8 @@ const result = await host.mcp("cellguide", "get_cell_type_info", {"cell_type": "
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `limit` | インテガー | 任意; デフォルト: 25 |
+| `query` | 文字列 | **必須** |
+| `limit` | 整数 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("cellguide", "search_cell_types", {"query": "T cell", "limit": 25})
@@ -2996,9 +2998,9 @@ const result = await host.mcp("cellguide", "search_cell_types", {"query": "T cel
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `cell_type` | キーワード | **必須条件** |
-| `marker_type` | キーワード | 任意; デフォルト: "computational"; enum: &#91;"computational"、"canonical"&#93; |
-| `limit` | インテガー | 任意; デフォルト: 25 |
+| `cell_type` | 文字列 | **必須** |
+| `marker_type` | 文字列 | 任意; デフォルト: "computational"; enum: &#91;"computational"、"canonical"&#93; |
+| `limit` | 整数 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_marker_genes", {"cell_type": "CL:0000084", "marker_type": "computational", "limit": 25})
@@ -3010,7 +3012,7 @@ const result = await host.mcp("cellguide", "get_marker_genes", {"cell_type": "CL
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `cell_type` | キーワード | **必須条件** |
+| `cell_type` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_source_data", {"cell_type": "CL:0000622"})
@@ -3022,7 +3024,7 @@ const result = await host.mcp("cellguide", "get_source_data", {"cell_type": "CL:
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `cell_type` | キーワード | **必須条件** |
+| `cell_type` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_cell_tissues", {"cell_type": "T cell"})
@@ -3041,13 +3043,13 @@ ENCODE機能ゲノム実験(ChIP-seq、ATAC-seq、...)を検索します。 フ�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `assay_title` | キーワード | オプション |
-| `target` | キーワード | オプション |
-| `organism` | キーワード | オプション |
-| `status` | キーワード | 任意; デフォルト: "released" |
-| `date_released_before` | キーワード | オプション |
+| `assay_title` | 文字列 | オプション |
+| `target` | 文字列 | オプション |
+| `organism` | 文字列 | オプション |
+| `status` | 文字列 | 任意; デフォルト: "released" |
+| `date_released_before` | 文字列 | オプション |
 | `extra_filters` | オブジェクト | オプション |
-| `max_rows` | インテガー | 任意; デフォルト: 100 |
+| `max_rows` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_search_experiments", {"target": "CTCF", "assay_title": "TF ChIP-seq", "max_rows": 50})
@@ -3059,13 +3061,13 @@ ENCODEバイオサンプル(セルライン、組織、プライマリセル)を
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `term_name` | キーワード | オプション |
-| `classification` | キーワード | オプション |
-| `organism` | キーワード | オプション |
-| `status` | キーワード | 任意; デフォルト: "released" |
-| `date_created_before` | キーワード | オプション |
+| `term_name` | 文字列 | オプション |
+| `classification` | 文字列 | オプション |
+| `organism` | 文字列 | オプション |
+| `status` | 文字列 | 任意; デフォルト: "released" |
+| `date_created_before` | 文字列 | オプション |
 | `extra_filters` | オブジェクト | オプション |
-| `max_rows` | インテガー | 任意; デフォルト: 100 |
+| `max_rows` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_search_biosamples", {"term_name": "K562", "classification": "cell line", "max_rows": 25})
@@ -3077,13 +3079,13 @@ const result = await host.mcp("regulation", "encode_search_biosamples", {"term_n
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `file_format` | キーワード | オプション |
-| `assay_term_name` | キーワード | オプション |
-| `biosample_term_name` | キーワード | オプション |
-| `status` | キーワード | 任意; デフォルト: "released" |
-| `date_created_before` | キーワード | オプション |
+| `file_format` | 文字列 | オプション |
+| `assay_term_name` | 文字列 | オプション |
+| `biosample_term_name` | 文字列 | オプション |
+| `status` | 文字列 | 任意; デフォルト: "released" |
+| `date_created_before` | 文字列 | オプション |
 | `extra_filters` | オブジェクト | オプション |
-| `max_rows` | インテガー | 任意; デフォルト: 100 |
+| `max_rows` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_list_files", {"file_format": "bed", "assay_term_name": "ChIP-seq", "biosample_term_name": "K562", "extra_filters": {"output_type": "peaks", "assembly": "GRCh38"}, "max_rows": 50})
@@ -3095,7 +3097,7 @@ const result = await host.mcp("regulation", "encode_list_files", {"file_format":
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
+| `accession` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_experiment", {"accession": "ENCSR000AKP"})
@@ -3107,7 +3109,7 @@ const result = await host.mcp("regulation", "encode_get_experiment", {"accession
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
+| `accession` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_file", {"accession": "ENCFF002JUR"})
@@ -3119,7 +3121,7 @@ const result = await host.mcp("regulation", "encode_get_file", {"accession": "EN
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `accession` | キーワード | **必須条件** |
+| `accession` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_biosample", {"accession": "ENCBS013JZP"})
@@ -3131,7 +3133,7 @@ VERSIONED のマトリックス ID によって 1 つの JASPAR TF の結合の�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `matrix_id` | キーワード | **必須条件** |
+| `matrix_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_get_matrix", {"matrix_id": "MA0002.2"})
@@ -3143,7 +3145,7 @@ JASPARベースマトリクスIDのすべてのバージョンをリストしま
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `base_id` | キーワード | **必須条件** |
+| `base_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_matrix_versions", {"base_id": "MA0002"})
@@ -3155,13 +3157,13 @@ JASPAR TF結合プロファイル(フルプロファイルカタログ)を検索
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `collection` | キーワード | オプション |
-| `tax_group` | キーワード | オプション |
-| `tax_id` | インテガー | オプション |
-| `name` | キーワード | オプション |
-| `search` | キーワード | オプション |
-| `version` | キーワード | オプション |
-| `max_rows` | インテガー | 任意; デフォルト: 1000 |
+| `collection` | 文字列 | オプション |
+| `tax_group` | 文字列 | オプション |
+| `tax_id` | 整数 | オプション |
+| `name` | 文字列 | オプション |
+| `search` | 文字列 | オプション |
+| `version` | 文字列 | オプション |
+| `max_rows` | 整数 | 任意; デフォルト: 1000 |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_list_matrices", {"tax_id": 9606, "collection": "CORE", "version": "latest", "max_rows": 200})
@@ -3221,13 +3223,13 @@ UniBind ChIP-seq のデータセットを高機密 TFBS 予測 (unibind.uio.no, 
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `tf_name` | キーワード | オプション |
-| `cell_line` | キーワード | オプション |
-| `species` | キーワード | オプション |
-| `collection` | キーワード | 任意; enum: &#91;"Robust", "Permissive"&#93; |
-| `jaspar_id` | キーワード | オプション |
-| `search` | キーワード | オプション |
-| `max_rows` | インテガー | 任意; デフォルト: 200 |
+| `tf_name` | 文字列 | オプション |
+| `cell_line` | 文字列 | オプション |
+| `species` | 文字列 | オプション |
+| `collection` | 文字列 | 任意; enum: &#91;"Robust", "Permissive"&#93; |
+| `jaspar_id` | 文字列 | オプション |
+| `search` | 文字列 | オプション |
+| `max_rows` | 整数 | 任意; デフォルト: 200 |
 
 ```javascript
 const result = await host.mcp("regulation", "unibind_search_tfbs", {"tf_name": "CTCF", "collection": "Robust", "max_rows": 50})
@@ -3239,7 +3241,7 @@ UniBind データセット's を 1 つ取得します。 TFBS は 1 つのモデ
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `tf_id` | キーワード | **必須条件** |
+| `tf_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("regulation", "unibind_get_dataset", {"tf_id": "ENCSR000AUE.A549_lung_carcinoma.CTCF"})
@@ -3251,13 +3253,13 @@ TFバインディングサイトはゲノム領域(UniBind 2021マップ)をオ�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `genome` | キーワード | **必須条件** |
-| `chrom` | キーワード | **必須条件** |
-| `start` | インテガー | **必須条件** |
-| `end` | インテガー | **必須条件** |
-| `tf_name` | キーワード | オプション |
-| `collection` | キーワード | 任意; デフォルト: "Robust"; enum: &#91;"Robust", "Permissive"&#93; |
-| `max_sites` | インテガー | 任意; デフォルト: 2000 |
+| `genome` | 文字列 | **必須** |
+| `chrom` | 文字列 | **必須** |
+| `start` | 整数 | **必須** |
+| `end` | 整数 | **必須** |
+| `tf_name` | 文字列 | オプション |
+| `collection` | 文字列 | 任意; デフォルト: "Robust"; enum: &#91;"Robust", "Permissive"&#93; |
+| `max_sites` | 整数 | 任意; デフォルト: 2000 |
 
 ```javascript
 const result = await host.mcp("regulation", "unibind_tfbs_in_region", {"genome": "hg38", "chrom": "chr1", "start": 1000000, "end": 1010000, "collection": "Robust"})
@@ -3276,17 +3278,17 @@ Search2 API(完全で有能な検索)によるSrants.govの資金調達機会を
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `keyword` | キーワード | オプション |
-| `opportunity_number` | キーワード | オプション |
-| `aln` | キーワード | オプション |
+| `keyword` | 文字列 | オプション |
+| `opportunity_number` | 文字列 | オプション |
+| `aln` | 文字列 | オプション |
 | `agencies` | 文字列の配列 | オプション |
 | `opportunity_statuses` | 文字列の配列 | オプション |
 | `eligibilities` | 文字列の配列 | オプション |
 | `funding_categories` | 文字列の配列 | オプション |
 | `funding_instruments` | 文字列の配列 | オプション |
-| `count_only` | ボオラン | 任意; デフォルト: false |
-| `max_records` | インテガー | 任意; デフォルト: 100 |
-| `include_facets` | ボオラン | 任意; デフォルト: true |
+| `count_only` | 真偽値 | 任意; デフォルト: false |
+| `max_records` | 整数 | 任意; デフォルト: 100 |
+| `include_facets` | 真偽値 | 任意; デフォルト: true |
 
 ```javascript
 const result = await host.mcp("research-resources", "search_grants", {"keyword": "cancer", "agencies": ["HHS-NIH11"], "max_records": 25})
@@ -3298,10 +3300,10 @@ const result = await host.mcp("research-resources", "search_grants", {"keyword":
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `query` | キーワード | **必須条件** |
-| `page` | インテガー | オプション |
-| `page_size` | インテガー | 任意; デフォルト: 100 |
-| `max_records` | インテガー | 任意; デフォルト: 500 |
+| `query` | 文字列 | **必須** |
+| `page` | 整数 | オプション |
+| `page_size` | 整数 | 任意; デフォルト: 100 |
+| `max_records` | 整数 | 任意; デフォルト: 500 |
 
 ```javascript
 const result = await host.mcp("research-resources", "search_antibodies", {"query": "CD4", "max_records": 100})
@@ -3313,7 +3315,7 @@ const result = await host.mcp("research-resources", "search_antibodies", {"query
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `antibody_id` | キーワード | **必須条件** |
+| `antibody_id` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("research-resources", "get_antibody", {"antibody_id": "RRID:AB_3643095"})
@@ -3325,9 +3327,9 @@ const result = await host.mcp("research-resources", "get_antibody", {"antibody_i
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `catalog_number` | キーワード | **必須条件** |
-| `vendor` | キーワード | オプション |
-| `page_size` | インテガー | 任意; デフォルト: 100 |
+| `catalog_number` | 文字列 | **必須** |
+| `vendor` | 文字列 | オプション |
+| `page_size` | 整数 | 任意; デフォルト: 100 |
 
 ```javascript
 const result = await host.mcp("research-resources", "find_antibodies_by_catalog", {"catalog_number": "ab32572"})
@@ -3370,7 +3372,7 @@ const result = await host.mcp("biomart", "list_marts", {})
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `mart` | キーワード | **必須条件** |
+| `mart` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_datasets", {"mart": "ENSEMBL_MART_ENSEMBL"})
@@ -3382,8 +3384,8 @@ const result = await host.mcp("biomart", "list_datasets", {"mart": "ENSEMBL_MART
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `mart` | キーワード | **必須条件** |
-| `dataset` | キーワード | **必須条件** |
+| `mart` | 文字列 | **必須** |
+| `dataset` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_common_attributes", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3395,8 +3397,8 @@ const result = await host.mcp("biomart", "list_common_attributes", {"mart": "ENS
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `mart` | キーワード | **必須条件** |
-| `dataset` | キーワード | **必須条件** |
+| `mart` | 文字列 | **必須** |
+| `dataset` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_all_attributes", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3408,8 +3410,8 @@ const result = await host.mcp("biomart", "list_all_attributes", {"mart": "ENSEMB
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `mart` | キーワード | **必須条件** |
-| `dataset` | キーワード | **必須条件** |
+| `mart` | 文字列 | **必須** |
+| `dataset` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_filters", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3421,9 +3423,9 @@ BioMart クエリを実行します。: 要求された属性をデータセッ�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `mart` | キーワード | **必須条件** |
-| `dataset` | キーワード | **必須条件** |
-| `attributes` | 文字列の配列 | **必須条件** |
+| `mart` | 文字列 | **必須** |
+| `dataset` | 文字列 | **必須** |
+| `attributes` | 文字列の配列 | **必須** |
 | `filters` | オブジェクト | オプション |
 
 ```javascript
@@ -3436,11 +3438,11 @@ const result = await host.mcp("biomart", "get_data", {"mart": "ENSEMBL_MART_ENSE
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `mart` | キーワード | **必須条件** |
-| `dataset` | キーワード | **必須条件** |
-| `from_attr` | キーワード | **必須条件** |
-| `to_attr` | キーワード | **必須条件** |
-| `target` | キーワード | **必須条件** |
+| `mart` | 文字列 | **必須** |
+| `dataset` | 文字列 | **必須** |
+| `from_attr` | 文字列 | **必須** |
+| `to_attr` | 文字列 | **必須** |
+| `target` | 文字列 | **必須** |
 
 ```javascript
 const result = await host.mcp("biomart", "get_translation", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "from_attr": "hgnc_symbol", "to_attr": "ensembl_gene_id", "target": "TP53"})
@@ -3452,11 +3454,11 @@ const result = await host.mcp("biomart", "get_translation", {"mart": "ENSEMBL_MA
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `mart` | キーワード | **必須条件** |
-| `dataset` | キーワード | **必須条件** |
-| `from_attr` | キーワード | **必須条件** |
-| `to_attr` | キーワード | **必須条件** |
-| `targets` | 文字列の配列 | **必須条件** |
+| `mart` | 文字列 | **必須** |
+| `dataset` | 文字列 | **必須** |
+| `from_attr` | 文字列 | **必須** |
+| `to_attr` | 文字列 | **必須** |
+| `targets` | 文字列の配列 | **必須** |
 
 ```javascript
 const result = await host.mcp("biomart", "batch_translate", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "from_attr": "hgnc_symbol", "to_attr": "ensembl_gene_id", "targets": ["TP53", "BRCA1", "BRCA2"]})
@@ -3475,9 +3477,9 @@ ZINCの識別子によるZINC22/ZINC20でpurchasable化合物を調べる — "�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'string', 'array'&#93; は、 | **必須条件** |
-| `max_results` | インテガー | 任意; デフォルト: 50 |
-| `timeout_s` | 郵便番号 | 任意; デフォルト: 25 |
+| `zinc_ids` | ['string', 'array'] | **必須** |
+| `max_results` | 整数 | 任意; デフォルト: 50 |
+| `timeout_s` | 数値 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_id", {"zinc_ids": ["ZINC000000000012"]})
@@ -3489,11 +3491,11 @@ const result = await host.mcp("zinc", "zinc_search_by_id", {"zinc_ids": ["ZINC00
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `smiles` | キーワード | **必須条件** |
-| `dist` | インテガー | 任意; デフォルト: 0 |
-| `adist` | インテガー | オプション |
-| `max_results` | インテガー | 任意; デフォルト: 50 |
-| `timeout_s` | 郵便番号 | 任意; デフォルト: 25 |
+| `smiles` | 文字列 | **必須** |
+| `dist` | 整数 | 任意; デフォルト: 0 |
+| `adist` | 整数 | オプション |
+| `max_results` | 整数 | 任意; デフォルト: 50 |
+| `timeout_s` | 数値 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_smiles", {"smiles": "CC(=O)Oc1ccccc1C(=O)O", "dist": 2})
@@ -3505,9 +3507,9 @@ ZINC化合物にベンダーのカタログ番号を解決 — "どのZINC物質
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `supplier_codes` | &#91;'string', 'array'&#93; は、 | **必須条件** |
-| `max_results` | インテガー | 任意; デフォルト: 50 |
-| `timeout_s` | 郵便番号 | 任意; デフォルト: 25 |
+| `supplier_codes` | ['string', 'array'] | **必須** |
+| `max_results` | 整数 | 任意; デフォルト: 50 |
+| `timeout_s` | 数値 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_supplier", {"supplier_codes": ["MCULE-2311834287"]})
@@ -3519,9 +3521,9 @@ const result = await host.mcp("zinc", "zinc_search_by_supplier", {"supplier_code
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `count` | インテガー | 任意; デフォルト: 50 |
-| `subset` | キーワード | オプション |
-| `timeout_s` | 郵便番号 | 任意; デフォルト: 25 |
+| `count` | 整数 | 任意; デフォルト: 50 |
+| `subset` | 文字列 | オプション |
+| `timeout_s` | 数値 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_random_sample", {"count": 25, "subset": "lead-like"})
@@ -3533,8 +3535,8 @@ ZINC化合物のドッキングレディ3D構造物を探します。 ZINC22は�
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'string', 'array'&#93; は、 | **必須条件** |
-| `timeout_s` | 郵便番号 | 任意; デフォルト: 25 |
+| `zinc_ids` | ['string', 'array'] | **必須** |
+| `timeout_s` | 数値 | 任意; デフォルト: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_get_3d", {"zinc_ids": ["ZINC000000000012"]})

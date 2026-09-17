@@ -1,12 +1,12 @@
 ---
 title: "Installation et commutation d'agents"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 # Installation et commutation d'agents {/* #installing-and-switching-agents */}
 
-Choisissez un cadre Agent pour exécuter des conversations et des outils. Après l'avoir installé, configurer un [modèle fournisseur](providers.md) compatible. Vous pouvez garder plusieurs frameworks installés et changer celui actif pour un projet.
+Choisissez un framework Agent pour exécuter les conversations et les outils. Après l’installation, configurez un [fournisseur de modèles](providers.md) compatible. Plusieurs frameworks peuvent rester installés. Le framework actif dans **Settings → Agent** est un réglage global de l’application, commun à tous les projets ; il s’applique aux prochains tours de conversation et workflows.
 
 ## Lire la page Agent {/* #read-the-agent-page */}
 
@@ -17,7 +17,7 @@ Ouvrez **Settings → Agent**. La page sépare **Installed** de **Available**. L
 | Contrôle/statut | Signification et action |
 | --- | --- |
 | Carte installée | Sélectionnez une carte inactive admissible pour demander un commutateur. Une installation répertoriée a encore besoin d'un accès au modèle compatible. |
-| Actif | Le moteur sélectionné. Son action Désinstaller est désactivée. |
+| Actif | Le moteur sélectionné pour l'application. Son action Désinstaller est désactivée. |
 | Re-détecter | Rafraîchir la découverte après une installation ou un changement de chemin. Il affiche temporairement la détection; il n'installe pas le logiciel manquant. |
 | Non installé | Aucun délai d'exécution utilisable n'a été détecté pour ce cadre. |
 | Installer le menu | Choisissez une source proposée pour ce cadre, puis vérifiez l'avancement de l'installation. |
@@ -46,7 +46,7 @@ Une mise à jour gérée par l'application remplace l'exécution de l'applicatio
 
 ## Commuter sans confondre l'histoire conservée avec l'état en direct {/* #switch-without-confusing-retained-history-with-live-state */}
 
-Terminer ou arrêter l'opération en cours avant de passer à la commande. Le commutateur crée une nouvelle session de backend et rejoue la transcription de la conversation ouverte. Il ne transfère pas un processus d'outil en vol ou ne reproduit pas chaque variable d'interprète. Vérifiez les fichiers de la session, Notebook et les permissions avant de continuer un calcul.
+Terminez ou arrêtez l’opération en cours avant de changer de framework. La modification concerne les prochains tours et workflows de tous les projets. Les tâches déjà lancées conservent leur runtime jusqu’à leur fin ; les conversations inactives se reconnectent lors de leur prochaine utilisation. La conservation de l’historique ne transfère pas un processus en cours et ne garantit pas la conservation des variables de l’interpréteur. Vérifiez les fichiers, Notebook et les autorisations avant de poursuivre les calculs.
 
 Après avoir commuté, vérifiez le modèle sélectionné pour la conversation. Les abonnements Codex supportent [Side Chat](./delegation.md); en attente d'opérations de session ou de récupération peut temporairement empêcher l'ouverture. Suivez le message affiché par l'entrée.
 
@@ -71,4 +71,6 @@ Avant d'enlever un moteur, passer à un autre moteur disponible; le moteur actif
 
 Si les actions d'installation sont désactivées, vérifiez une autre installation/switch en cours et l'erreur préalable indiquée. Si la détection réussit mais que les requêtes échouent, inspectez séparément l'authentification du modèle et la compatibilité framework/API.
 
-Sources: [Panneau d'agent](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentPanel.tsx), [carte cadre](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentFrameworkCard.tsx).
+Sources: [Panneau d'agent](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentPanel.tsx), [carte cadre](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentFrameworkCard.tsx).
+
+Portée et comportement de commutation : [stockage des paramètres](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/settings/repository.ts), [commutation de l'exécution](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/acp/runtime-coordinator.ts).

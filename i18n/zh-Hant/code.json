@@ -687,7 +687,7 @@
     "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
   },
   "docs.outline.workflows.database-search.title": {
-    "message": "交叉核對科學記錄"
+    "message": "查詢並儲存結構化資料庫記錄"
   },
   "docs.outline.workflows.database-search.scope": {
     "message": "檢視下方合併後的主題及各自擬覆蓋範圍。"
@@ -1458,7 +1458,7 @@
     "message": "用同一資料集比較兩種分析方法"
   },
   "docs.outline.workflows.compare-branches.scope": {
-    "message": "需要選擇分析方法時，從相同起點分支，記錄假設並分別執行，形成結果與侷限對照。"
+    "message": "在相同輸入和預處理條件下執行兩種方法，比較結果、假設與解釋邊界。"
   },
   "docs.outline.workflows.continue-context.title": {
     "message": "中斷一段時間後恢復課題並找回決策依據"
@@ -2461,5 +2461,17 @@
   },
   "docs.outline.reference.v0301.scope": {
     "message": "Side Chat 草稿、Skill 更新審核、研究包文獻 PDF 與復原工具。"
+  },
+  "docs.outline.workflows.focused-literature-search.title": {
+    "message": "按指定期刊與時間檢索文獻"
+  },
+  "docs.outline.workflows.focused-literature-search.scope": {
+    "message": "限定 PubMed 檢索範圍，逐條篩選返回記錄，保留資格不確定的候選。"
+  },
+  "docs.outline.workflows.cross-check-records.title": {
+    "message": "交叉核對兩個科研資料來源"
+  },
+  "docs.outline.workflows.cross-check-records.scope": {
+    "message": "先對齊定義、單位、年份和參考期，再比較 NASA 與 HadCRUT 年度溫度資料。"
   }
 }

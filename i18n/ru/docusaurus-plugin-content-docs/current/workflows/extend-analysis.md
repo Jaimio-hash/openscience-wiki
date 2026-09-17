@@ -57,12 +57,12 @@ Do not install packages or delegate. Keep everything in English.
 
 ## 3. Добавить метрики экспозиции {/* #3-add-the-exposure-metrics */}
 
-Скачать <ExampleDownload path="/examples/theoph/nca-conventions.md">Официальный справочник Skill по NCA</ExampleDownload> и добавить его через **+ → Attach files**. Это неизменная ссылка на установленный пакет. В записанной конфигурации Notebook мог читать вложение разговора, но не мог читать ссылку внутри каталога установки Skill.
+Скачайте <ExampleDownload path="/examples/theoph/nca-conventions.md">исправленную методическую справку по NCA</ExampleDownload> и прикрепите её через **+ → Attach files**. В версии Wiki исправлены пояснения об интегрировании и выборе интервала терминальной фазы в документе из пакета. В примере вычисляются наблюдаемые Cmax/Tmax и AUC линейным методом трапеций на всех интервалах; наклон терминальной фазы не оценивается. Прикрепите файл к разговору: в использованной конфигурации Notebook не мог прочитать справку из каталога установки Skill.
 
 Выберите `/pkpd-modeling` снова в том же разговоре, а затем отправьте:
 
 ```text
-Read the attached nca-conventions.md from the official Skill package.
+Read the attached reviewed nca-conventions.md methods reference.
 Extend the baseline using the same theoph-input.csv and base R Notebook.
 For each subject calculate observed Cmax (mg/L), earliest observed Tmax (h),
 linear-trapezoidal AUC from time zero to the last observation (mg*h/L),

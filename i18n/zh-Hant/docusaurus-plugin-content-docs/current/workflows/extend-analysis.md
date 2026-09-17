@@ -57,12 +57,12 @@ CSV 預覽只顯示前 100 列；儲存的輸入檔案包含全部 132 筆觀測
 
 ## 3. 補充暴露指標 {/* #3-补充暴露指标 */}
 
-下載 <ExampleDownload path="/examples/theoph/nca-conventions.md">官方 Skill 的 NCA 方法參考</ExampleDownload>，透過 **+ → Attach files** 新增到會話。這是安裝包中的未修改原檔案。本次配置下，Notebook 能讀取會話附件，但無法直接讀取 Skill 安裝目錄內的這份參考檔案。
+下載<ExampleDownload path="/examples/theoph/nca-conventions.md">已校訂的 NCA 方法參考</ExampleDownload>，透過 **+ → Attach files** 新增。本 Wiki 修訂版更正了隨包參考中的積分和終末區間說明。本例只計算實測 Cmax/Tmax 和明確指定的全線性梯形 AUC，不估計終末斜率。記錄本例時，Notebook 無法讀取 Skill 安裝目錄內的參考，因此需要透過會話附件提供。
 
 在同一會話中再次選中 `/pkpd-modeling`，然後傳送：
 
 ```text
-Read the attached nca-conventions.md from the official Skill package.
+Read the attached reviewed nca-conventions.md methods reference.
 Extend the baseline using the same theoph-input.csv and base R Notebook.
 For each subject calculate observed Cmax (mg/L), earliest observed Tmax (h),
 linear-trapezoidal AUC from time zero to the last observation (mg*h/L),
