@@ -40,6 +40,10 @@ for (const prefix of locales.map((locale) => locale === 'en' ? '' : `${locale}/`
     assert.ok(aside);
     // Attribute order is not a navigation contract; also handle href before class.
     const links = [...aside.matchAll(/<a\b[^>]*>/g)].map((m) => m[0]).filter((s) => /class="menu__link/.test(s)).map((s) => s.match(/href="([^"]+)"/)[1]);
+    assert.deepEqual(links.slice(0, 2), ['journal-club', 'core-reading-list'].map((slug) => `/docs/${prefix}workflows/${slug}/`),
+      'topic search in the journal-club workflow comes before building a reading collection');
+    const previousPage = [...html.matchAll(/<a\b[^>]*>/g)].map((m) => m[0]).find((tag) => tag.includes('pagination-nav__link--prev'));
+    assert.ok(previousPage?.includes(`href="/docs/${prefix}workflows/journal-club/"`));
     assert.deepEqual(links.sort(), availableWorkflows.map((slug) => `/docs/${prefix}workflows/${slug}/`).sort());
     assert.ok(!aside.includes('guides-outline-chapter'));
     assert.ok(!/Chapter production in progress|upcoming coverage|Awaiting approval/i.test(aside));
