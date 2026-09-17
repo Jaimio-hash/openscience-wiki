@@ -2,7 +2,7 @@
 title: "Référence de fonctionnement Connector"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -36,7 +36,7 @@ Les noms de champs de retour diffèrent selon l'opération. Les descriptions et 
 
 ## Entrées d'exploitation {/* #operation-inputs */}
 
-Expandez un Connector à la fois. Les champs obligatoires sont marqués **requis**; les limites/défauts indiqués ici proviennent du schéma d'application. Consultez le <ExampleDownload path="/examples/capabilities/connector-catalog-v0.29.0.json">Registre téléchargeable complet</ExampleDownload> pour les schémas JSON imbriqués, les descriptions complètes des retours et les exemples d'appels côté agent. Ne passez pas un `id` générique lorsqu'un outil s'attend à `accessions`, `cids`, `rs_id` ou à un autre champ spécifique à l'espace de noms.
+Expandez un Connector à la fois. Les champs obligatoires sont marqués **requis**; cette référence et téléchargement utilisent le schéma Open-Science **v0.30.1**. Une liste de `input.required` imbriquée fait autorité; une liste de haut niveau de `required` peut être absente. Consultez le <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">Registre téléchargeable complet</ExampleDownload> pour les schémas JSON imbriqués, les descriptions complètes des retours et les exemples d'appels côté agent. Ne passez pas un `id` générique lorsqu'un outil s'attend à `accessions`, `cids`, `rs_id` ou à un autre champ spécifique à l'espace de noms.
 
 
 ## Chimie {/* #family-1 */}
@@ -65,7 +65,7 @@ Complet des enregistrements de propriété pour un lot de CID PubChem, avec des 
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `cids` | tableau des entiers | **requis**; minItems: 1; maxItems: 50 |
+| `cids` | tableau d’entiers | **requis**; minItems: 1; maxItems: 50 |
 | `include_synonyms` | booléen | facultatif; par défaut : false |
 | `max_synonyms` | entier | facultatif; par défaut : 30 |
 
@@ -188,7 +188,7 @@ affinités de liaison mesurées (Ki/Kd/IC50/EC50) de tous les ligands BD contrai
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
 | `uniprot` | chaîne de caractères | **requis** |
-| `affinity_cutoff_nm` | Numéro | facultatif; par défaut : 10000 |
+| `affinity_cutoff_nm` | nombre | facultatif; par défaut : 10000 |
 | `max_rows` | entier | facultatif; par défaut : 100; minimum: 1; maximum: 1000 |
 
 ```javascript
@@ -202,7 +202,7 @@ Des cibles protéiques avec des affinités mesurées pour des composés 2D-simil
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
 | `smiles` | chaîne de caractères | **requis** |
-| `similarity` | Numéro | facultatif; par défaut : 0.85; minimum: 0.5; maximum: 1 |
+| `similarity` | nombre | facultatif; par défaut : 0.85; minimum: 0.5; maximum: 1 |
 | `max_rows` | entier | facultatif; par défaut : 100; minimum: 1; maximum: 1000 |
 
 ```javascript
@@ -340,7 +340,7 @@ Métadonnées papier arXiv (incl. abstracts) par ID — une demande rapide pour 
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `arxiv_ids` | tableau de la chaîne | **requis** |
+| `arxiv_ids` | tableau de chaînes | **requis** |
 
 ```javascript
 const result = await host.mcp("literature", "arxiv_get_papers", {"arxiv_ids": ["2103.14030", "1706.03762v5"]})
@@ -432,7 +432,7 @@ Récupérer des métadonnées détaillées d'articles de PubMed par PMID (bulk, 
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `pmids` | &#91;'Ficelle', 'array'&#93; | **requis** |
+| `pmids` | ['string', 'array'] | **requis** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_article_metadata", {"pmids": ["35486828", "33264437"]})
@@ -444,7 +444,7 @@ Trouvez le contenu PubMed associé pour une ou plusieurs sources PMIDs via NCBI 
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `pmids` | &#91;'Ficelle', 'array'&#93; | **requis** |
+| `pmids` | ['string', 'array'] | **requis** |
 | `link_type` | chaîne de caractères | facultatif; par défaut: "pubmed_pubmed"; enum: &#91;"pubmed_pubmed", "pubmed_pmc", "pubmed_nucleotide", "pubmed_protein", "pubmed_gene"&#93; |
 | `max_results` | entier | facultatif |
 
@@ -458,7 +458,7 @@ Résoudre les citations bibliographiques de PMIDs par l'intermédiaire de l'ecit
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `citations` | tableau d'objet | **requis** |
+| `citations` | tableau d’objets | **requis** |
 
 ```javascript
 const result = await host.mcp("pubmed", "lookup_article_by_citation", {"citations": [{"journal": "Science", "year": 1987, "volume": "235", "first_page": "182", "author": "Palmenberg AC"}]})
@@ -470,7 +470,7 @@ Convertir entre PMID, PMCID et DOI via le convertisseur d'ID NCI/PMC. ids d'entr
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `ids` | &#91;'Ficelle', 'array'&#93; | **requis** |
+| `ids` | ['string', 'array'] | **requis** |
 | `id_type` | chaîne de caractères | facultatif; par défaut: "pmid"; enum: &#91;"pmid", "pmcid", "doi"&#93; |
 
 ```javascript
@@ -483,7 +483,7 @@ Récupérer le texte complet en libre accès depuis PubMed Central via Europe PM
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `pmc_ids` | &#91;'Ficelle', 'array'&#93; | **requis** |
+| `pmc_ids` | ['string', 'array'] | **requis** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_full_text_article", {"pmc_ids": ["PMC9046468"]})
@@ -495,7 +495,7 @@ Signaler le droit d'auteur et le statut de licence par PMID en combinant PubMed 
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `pmids` | &#91;'Ficelle', 'array'&#93; | **requis** |
+| `pmids` | ['string', 'array'] | **requis** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_copyright_status", {"pmids": ["35891187", "34375400"]})
@@ -514,7 +514,7 @@ Résoudre les identificateurs/symboles de gènes via mygene.info (chiffré, jusq
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `terms` | tableau de la chaîne | **requis** |
+| `terms` | tableau de chaînes | **requis** |
 | `scopes` | chaîne de caractères | facultatif |
 | `fields` | chaîne de caractères | facultatif; par défaut: "symbol,name,taxid,entrezgene,ensembl.gene" |
 | `species` | chaîne de caractères | facultatif |
@@ -529,7 +529,7 @@ Liste des ontologies du Service de recherche en ontologie de l'EBI (OLS4). Avec 
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `ontology_ids` | tableau de la chaîne | facultatif |
+| `ontology_ids` | tableau de chaînes | facultatif |
 
 ```javascript
 const result = await host.mcp("genes", "list_ontologies", {"ontology_ids": ["efo", "go", "mondo"]})
@@ -542,7 +542,7 @@ Rechercher les termes de l'ontologie par étiquette/synonyme dans une ou plusieu
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
 | `query` | chaîne de caractères | **requis** |
-| `ontologies` | tableau de la chaîne | facultatif |
+| `ontologies` | tableau de chaînes | facultatif |
 | `exact` | booléen | facultatif; par défaut : false |
 | `include_obsolete` | booléen | facultatif; par défaut : false |
 | `max_results` | entier | facultatif; par défaut : 20 |
@@ -589,9 +589,9 @@ Téléchargez les notices UniProtKB pour une liste d'adhésions (requêtes O.R. 
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `accessions` | tableau de la chaîne | **requis** |
+| `accessions` | tableau de chaînes | **requis** |
 | `format` | chaîne de caractères | facultatif; enum: &#91;"fasta", "txt"&#93; |
-| `fields` | tableau de la chaîne | facultatif |
+| `fields` | tableau de chaînes | facultatif |
 
 ```javascript
 const result = await host.mcp("genes", "get_uniprot_entries", {"accessions": ["P04637", "P38398"], "fields": ["accession", "id", "protein_name", "gene_names", "organism_name", "length"]})
@@ -603,7 +603,7 @@ Les symboles de gènes Map ou les adhésions UniProt aux voies de réactome (pro
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `identifiers` | tableau de la chaîne | **requis** |
+| `identifiers` | tableau de chaînes | **requis** |
 | `id_type` | chaîne de caractères | **requis**; enum: &#91;"symbol", "uniprot"&#93; |
 | `species` | chaîne de caractères | facultatif; par défaut: "Homo sapiens" |
 | `resource` | chaîne de caractères | facultatif; par défaut : "TOTAL" |
@@ -799,6 +799,8 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>Afficher les opérations et les paramètres</summary>
 
+**règles de coordonnées gnomAD:** enregistre la broche du jeu de données avec l'ensemble de référence. Les requêtes de gènes/régions à courte variable utilisent GRCh37 pour r2.1/ExAC et GRCh38 pour r3/r4; les requêtes de gènes structuraux-variants utilisent `gnomad_sv_r2_1` (GRCh37) ou `gnomad_sv_r4` (GRCh38); changer la broche ne convertit pas les coordonnées d'entrée. `gene_constraint` et le miroir gnomAD ClinVar utilisent une recherche de gène GRCh38 fixe et n'acceptent pas d'argument d'ensemble de données. Les requêtes mitochondriales utilisent également une recherche de parent GRCh38 fixe; fournir soit un gène, soit les limites des régions ordonnées, jamais les deux modes. Les limites régionales doivent être des entiers de 1 à 2,147,483,647. La limite de la différence de base d'un million s'applique à `region_variants`; Ce n'est pas une limite mitochondriale séparée. Conservez les identifiants structuraux-variants spécifiques à la libération avec leur ensemble de données SV original.
+
 ### `get_variant` {/* #get_variant */}
 
 Recherchez une variante courte de gnomAD par ID et retournez ses fréquences de population. `variant_id` est `chrom-pos-ref-alt` sur la compilation de référence de l'ensemble de données's (GRCh38 pour r3/r4, GRCh37 pour r2.1/ExAC), par exemple. `19-44908822-C-T` (APOE rs7412); Utilisez `search_variants` pour résoudre un rsID en premier.
@@ -827,7 +829,7 @@ const result = await host.mcp("variants", "search_variants", {"query": "rs7412",
 
 ### `gene_variants` {/* #gene_variants */}
 
-Liste ALL gnomAD variants courts dans un gène (liste complète — peut être des milliers de lignes pour les grands gènes). Passer exactement un de `gene_symbol` (symbole HGNC, p.ex. `APOE`) ou `gene_id` (ID génétique de l'assemblage, p.ex. `ENSG00000130203`).
+Liste ALL gnomAD variants courts dans un gène. Les limites des gènes et les coordonnées des variantes utilisent la compilation de référence de l'ensemble de données (GRCh37 pour r2.1/ExAC, GRCh38 pour r3/r4). La liste complète peut contenir des milliers de lignes pour les grands gènes. Passer exactement un de `gene_symbol` (symbole HGNC, p.ex. `APOE`) ou `gene_id` (ID génétique de l'assemblage, p.ex. `ENSG00000130203`).
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
@@ -854,13 +856,13 @@ const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP
 
 ### `region_variants` {/* #region_variants */}
 
-Liste ALL gnomAD variants courts dans une région génomique (max 1 Mb — diviser les régions plus grandes en fenêtres consécutives). `chrom` est un nom de chromosome sans préfixe `chr` (`1`-`22`, `X`, `Y`); `start`/`stop` sont basés sur 1 inclusivement et `stop - start` doit être &lt;= 1,000,000. L'ensemble de données détermine la construction de référence des coordonnées (GRCh38 pour r3/r4).
+Liste ALL gnomAD variants courts dans une région génomique (max 1 Mb — diviser les régions plus grandes en fenêtres consécutives). `chrom` accepte `1`-`22`, `X`, `Y`, un préfixe en option `chr` et un minuscule `x`/`y`; `start`/`stop` sont basés sur 1 inclusivement et `stop - start` doit être &lt;= 1,000,000. L'ensemble de données détermine la construction de référence des coordonnées (GRCh37 pour r2.1/ExAC, GRCh38 pour r3/r4); les coordonnées d'entrée doivent déjà utiliser ce build, sans ascenseur automatique.
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
 | `chrom` | chaîne de caractères | **requis** |
-| `start` | entier | **requis** |
-| `stop` | entier | **requis** |
+| `start` | entier | **requis**; minimum: 1; maximum: 2147483647 |
+| `stop` | entier | **requis**; minimum: 1; maximum: 2147483647 |
 | `dataset` | chaîne de caractères | facultatif; par défaut: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
 
 ```javascript
@@ -928,8 +930,8 @@ const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "D
 | --- | --- | --- |
 | `gene_symbol` | chaîne de caractères | facultatif |
 | `gene_id` | chaîne de caractères | facultatif |
-| `region_start` | entier | facultatif |
-| `region_stop` | entier | facultatif |
+| `region_start` | entier | facultatif; minimum: 1; maximum: 2147483647 |
+| `region_stop` | entier | facultatif; minimum: 1; maximum: 2147483647 |
 | `dataset` | chaîne de caractères | facultatif; par défaut: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
 
 ```javascript
@@ -955,7 +957,7 @@ Récupérer des enregistrements ClinVar complets pour un lot d'adhésions VCV/RC
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `accessions` | &#91;'Ficelle', 'array'&#93; | **requis** |
+| `accessions` | ['string', 'array'] | **requis** |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_get_records", {"accessions": ["VCV000045122", "RCV000019428", "45123"]})
@@ -980,7 +982,7 @@ Canonique dbSNP RefSNP enregistre un lot de rsID : placements GRCh38+GRCh37, all
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `rsids` | tableau de la chaîne | **requis** |
+| `rsids` | tableau de chaînes | **requis** |
 
 ```javascript
 const result = await host.mcp("variants", "dbsnp_get_rsids", {"rsids": ["rs7412", "rs429358"]})
@@ -1019,8 +1021,8 @@ Recherche PRIMAIRE sur ClinicalTrials.gov. Filtrer par condition, intervention, 
 | `intervention` | chaîne de caractères | facultatif |
 | `sponsor` | chaîne de caractères | facultatif |
 | `location` | chaîne de caractères | facultatif |
-| `status` | tableau de la chaîne | facultatif |
-| `phase` | tableau de la chaîne | facultatif |
+| `status` | tableau de chaînes | facultatif |
+| `phase` | tableau de chaînes | facultatif |
 | `study_type` | chaîne de caractères | facultatif; Enum: &#91;"INTERVENTIONAL", "OBSERVATIONAL", "EXPANDED_ACCESS"&#93; |
 | `advanced_query` | chaîne de caractères | facultatif |
 | `page_size` | entier | facultatif; par défaut : 10; minimum: 1; maximum: 1000 |
@@ -1051,8 +1053,8 @@ Trouver des essais parrainés par une entreprise ou une organisation (comparaiso
 | --- | --- | --- |
 | `sponsor_name` | chaîne de caractères | **requis** |
 | `condition` | chaîne de caractères | facultatif |
-| `phase` | tableau de la chaîne | facultatif |
-| `status` | tableau de la chaîne | facultatif |
+| `phase` | tableau de chaînes | facultatif |
+| `status` | tableau de chaînes | facultatif |
 | `page_size` | entier | facultatif; par défaut : 10; minimum: 1; maximum: 1000 |
 | `page_token` | chaîne de caractères | facultatif |
 | `count_total` | booléen | facultatif; par défaut : false |
@@ -1071,7 +1073,7 @@ Trouver les chercheurs principaux et les sites de recherche par état, instituti
 | `institution` | chaîne de caractères | facultatif |
 | `location` | chaîne de caractères | facultatif |
 | `investigator_name` | chaîne de caractères | facultatif |
-| `status` | tableau de la chaîne | facultatif |
+| `status` | tableau de chaînes | facultatif |
 | `page_size` | entier | facultatif; par défaut : 20; minimum: 1; maximum: 1000 |
 
 ```javascript
@@ -1086,7 +1088,7 @@ Analyser les mesures des résultats primaires/secondaires/autres (points de fin)
 | --- | --- | --- |
 | `nct_id` | chaîne de caractères | facultatif |
 | `condition` | chaîne de caractères | facultatif |
-| `phase` | tableau de la chaîne | facultatif |
+| `phase` | tableau de chaînes | facultatif |
 | `start_date_after` | chaîne de caractères | facultatif |
 | `page_size` | entier | facultatif; par défaut : 50; minimum: 1; maximum: 1000 |
 
@@ -1105,7 +1107,7 @@ Appariement patient-procès. DÉFAUTS DE RECRUTIR les essais à moins que le sta
 | `min_age` | chaîne de caractères | facultatif |
 | `max_age` | chaîne de caractères | facultatif |
 | `sex` | chaîne de caractères | facultatif; Enum: &#91;"ALL", "MALE", "FEMALE"&#93; |
-| `status` | tableau de la chaîne | facultatif |
+| `status` | tableau de chaînes | facultatif |
 | `page_size` | entier | facultatif; par défaut : 10; minimum: 1; maximum: 1000 |
 | `page_token` | chaîne de caractères | facultatif |
 
@@ -1412,7 +1414,7 @@ Récupérer des enregistrements de métadonnées structurées pour les entrées 
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `emdb_ids` | tableau de la chaîne | **requis** |
+| `emdb_ids` | tableau de chaînes | **requis** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_entries", {"emdb_ids": ["EMD-11638", "emd-3061", "1234"]})
@@ -1437,7 +1439,7 @@ Saisissez une section de métadonnées détaillée pour les entrées de la BDEM.
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `emdb_ids` | tableau de la chaîne | **requis** |
+| `emdb_ids` | tableau de chaînes | **requis** |
 | `section` | chaîne de caractères | **requis**; enum: &#91;"publications", "map", "sample", "imaging"&#93; |
 
 ```javascript
@@ -1450,7 +1452,7 @@ Renseignez-vous sur les paramètres de validation numérique et d'analyse pour l
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `emdb_ids` | tableau de la chaîne | **requis** |
+| `emdb_ids` | tableau de chaînes | **requis** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_validation", {"emdb_ids": ["EMD-11638", "EMD-3061"]})
@@ -1462,7 +1464,7 @@ Renseignez-vous sur les dossiers du Portail complexe par adhésion au CPX. Chaqu
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `complex_acs` | tableau de la chaîne | **requis** |
+| `complex_acs` | tableau de chaînes | **requis** |
 
 ```javascript
 const result = await host.mcp("structures", "complexportal_get_complexes", {"complex_acs": ["CPX-2158", "CPX-2419"]})
@@ -1488,9 +1490,9 @@ Récupérer TOUTES les interactions binaires IntAct correspondant à une requêt
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
 | `query` | chaîne de caractères | **requis** |
-| `min_mi_score` | Numéro | facultatif; par défaut : 0 |
-| `max_mi_score` | Numéro | facultatif; par défaut : 1 |
-| `interactor_species` | tableau de la chaîne | facultatif |
+| `min_mi_score` | nombre | facultatif; par défaut : 0 |
+| `max_mi_score` | nombre | facultatif; par défaut : 1 |
+| `interactor_species` | tableau de chaînes | facultatif |
 | `max_records_returned` | entier | facultatif; par défaut : 500 |
 
 ```javascript
@@ -1528,10 +1530,10 @@ Construire un réseau d'interaction de profondeur-1 IntAct autour des protéines
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `seed_accessions` | tableau de la chaîne | **requis** |
-| `min_mi_score` | Numéro | facultatif; par défaut : 0.45 |
+| `seed_accessions` | tableau de chaînes | **requis** |
+| `min_mi_score` | nombre | facultatif; par défaut : 0.45 |
 | `max_interactors_expanded` | entier | facultatif; par défaut : 25 |
-| `interactor_species` | tableau de la chaîne | facultatif |
+| `interactor_species` | tableau de chaînes | facultatif |
 
 ```javascript
 const result = await host.mcp("structures", "intact_build_network", {"seed_accessions": ["P04637", "Q00987"], "min_mi_score": 0.45, "max_interactors_expanded": 25})
@@ -1548,7 +1550,7 @@ Rechercher les entrées de l'APB RCSB par filtres d'attributs; paged, plafonné 
 | `taxonomy_id` | entier | facultatif |
 | `uniprot_accession` | chaîne de caractères | facultatif |
 | `experimental_method` | chaîne de caractères | facultatif |
-| `max_resolution_angstrom` | Numéro | facultatif |
+| `max_resolution_angstrom` | nombre | facultatif |
 | `ligand_comp_id` | chaîne de caractères | facultatif |
 | `include_computed_models` | booléen | facultatif; par défaut : false |
 | `max_rows` | entier | facultatif; par défaut : 100 |
@@ -1563,7 +1565,7 @@ Récupère les résumés d'entrée de niveau pour les entrées PDB (batch, max 2
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `pdb_ids` | tableau de la chaîne | **requis** |
+| `pdb_ids` | tableau de chaînes | **requis** |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_get_structures", {"pdb_ids": ["1TUP", "1tup", "6XYZ"]})
@@ -1576,7 +1578,7 @@ Détails de l'entité polymère pour une entrée PDB, y compris Les cartes UniPr
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
 | `pdb_id` | chaîne de caractères | **requis** |
-| `entity_ids` | tableau de la chaîne | facultatif |
+| `entity_ids` | tableau de chaînes | facultatif |
 | `include_sequences` | booléen | facultatif; par défaut : false |
 | `max_bytes` | entier | facultatif; par défaut : 400000 |
 
@@ -1616,7 +1618,7 @@ Contrôle de couverture AlphaFold DB par lots (max. 40 adhésions UniProt unique
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `uniprot_accessions` | tableau de la chaîne | **requis** |
+| `uniprot_accessions` | tableau de chaînes | **requis** |
 
 ```javascript
 const result = await host.mcp("structures", "alphafold_check_coverage", {"uniprot_accessions": ["P04637", "P38398", "Q9Y6K9"]})
@@ -1684,9 +1686,9 @@ Récupérer les mesures de bioactivité du ChEMBL (IC50, Ki, Kd, EC50, ...) pour
 | `molecule_chembl_id` | chaîne de caractères | facultatif |
 | `target_chembl_id` | chaîne de caractères | facultatif |
 | `activity_type` | chaîne de caractères | facultatif; enum: &#91;"IC50", "EC50", "Ki", "Kd", "AC50", "GI50", "ED50", "Potency"&#93; |
-| `min_pchembl` | Numéro | facultatif; minimum: 0; maximum: 14 |
-| `min_value` | Numéro | facultatif |
-| `max_value` | Numéro | facultatif |
+| `min_pchembl` | nombre | facultatif; minimum: 0; maximum: 14 |
+| `min_value` | nombre | facultatif |
+| `max_value` | nombre | facultatif |
 | `unit` | chaîne de caractères | facultatif; enum: &#91;"nM", "uM", "mM", "pM", "M"&#93; |
 | `limit` | entier | facultatif; par défaut : 20; minimum: 1; maximum: 1000 |
 
@@ -1770,7 +1772,7 @@ Obtenez des métadonnées complètes pour une préimpression par DOI (bare " 10.
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `doi` | chaîne de caractères | facultatif |
+| `doi` | chaîne de caractères | **requis** |
 | `server` | chaîne de caractères | facultatif; par défaut: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
 
 ```javascript
@@ -1803,9 +1805,9 @@ Trouver des préimpressions reconnaissant un bailleur de fonds, identifiés par 
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `funder_ror_id` | chaîne de caractères | facultatif |
-| `date_from` | chaîne de caractères | facultatif |
-| `date_to` | chaîne de caractères | facultatif |
+| `funder_ror_id` | chaîne de caractères | **requis** |
+| `date_from` | chaîne de caractères | **requis** |
+| `date_to` | chaîne de caractères | **requis** |
 | `server` | chaîne de caractères | facultatif; par défaut: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
 | `category` | chaîne de caractères | facultatif; énième: &#91;"comportement animal et cognition", "biochimie", "bioingénierie", "bioinformatique", "biophysique", "biologie du cancer", "biologie cellulaire", "essais cliniques", "biologie du développement", "écologie", "épidémiologie", "biologie évolutive", "génétique", "génomique", "immunologie", "microbiologie", "biologie moléculaire", "neurosciences", "paléontologie", "pathologie", "pharmacologie et toxicologie", "physiologie", "biologie végétale", "communication scientifique et éducation", "biologie synthétique", "biologie des systèmes", "zoologie"C'est pas vrai. |
 | `limit` | entier | facultatif; par défaut : 10; minimum: 1; maximum: 100 |
@@ -1959,7 +1961,7 @@ Récupérer les étiquettes de produits pharmaceutiques (LSP) de la FDA par ingr
 | `product_type` | chaîne de caractères | facultatif; enum: &#91;"HUMAN PRESCRIPTION DRUG", "HUMAN OTC DRUG"&#93; |
 | `exact` | booléen | facultatif; par défaut : false |
 | `raw_search` | chaîne de caractères | facultatif |
-| `sections` | tableau de la chaîne | facultatif |
+| `sections` | tableau de chaînes | facultatif |
 | `max_records` | entier | facultatif; par défaut : 25 |
 
 ```javascript
@@ -2091,7 +2093,7 @@ Les lignes d'association moléculaire-QTL d'un ensemble de données du catalogue
 | `rsid` | chaîne de caractères | facultatif |
 | `variant` | chaîne de caractères | facultatif |
 | `pos` | chaîne de caractères | facultatif |
-| `nlog10p_min` | Numéro | facultatif |
+| `nlog10p_min` | nombre | facultatif |
 | `max_records` | entier | facultatif; par défaut : 1000 |
 
 ```javascript
@@ -2218,7 +2220,7 @@ Résoudre les symboles du gène ou les ids d'Ensembl non-versionnés aux ids de 
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `genes` | tableau de la chaîne | **requis** | 7 / 0 / 0 |
+| `genes` | tableau de chaînes | **requis** | 7 / 0 / 0 |
 | `dataset_id` | chaîne de caractères | facultatif; par défaut : "gtex_v8" |
 
 ```javascript
@@ -2231,8 +2233,8 @@ Expression génique médiane (MTP) pour un ou plusieurs ids de GENCODE VERSIONNE
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `gencode_ids` | tableau de la chaîne | **requis** |
-| `tissue_site_detail_ids` | tableau de la chaîne | facultatif |
+| `gencode_ids` | tableau de chaînes | **requis** |
+| `tissue_site_detail_ids` | tableau de chaînes | facultatif |
 | `dataset_id` | chaîne de caractères | facultatif; par défaut : "gtex_v8" |
 
 ```javascript
@@ -2259,7 +2261,7 @@ Echantillon-niveau (non agrégé) expression TPM tableaux pour un VERSIOND GENCO
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
 | `gencode_id` | chaîne de caractères | **requis** |
-| `tissue_site_detail_ids` | tableau de la chaîne | facultatif |
+| `tissue_site_detail_ids` | tableau de chaînes | facultatif |
 | `dataset_id` | chaîne de caractères | facultatif; par défaut : "gtex_v8" |
 
 ```javascript
@@ -2353,7 +2355,7 @@ Architecture complète du domaine InterPro pour une ou plusieurs protéines UniP
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `accessions` | tableau de la chaîne | **requis** |
+| `accessions` | tableau de chaînes | **requis** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_domain_architecture", {"accessions": ["P04637"]})
@@ -2470,7 +2472,7 @@ Carte des symboles/aliases des gènes pour les identificateurs de protéines STR
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `symbols` | tableau de la chaîne | **requis** |
+| `symbols` | tableau de chaînes | **requis** |
 | `species` | entier | facultatif; par défaut : 9606 |
 
 ```javascript
@@ -2483,7 +2485,7 @@ Réseau d'interaction protéine-protéine STRING pour une liste de gènes (v12.0
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `symbols` | tableau de la chaîne | **requis** |
+| `symbols` | tableau de chaînes | **requis** |
 | `species` | entier | facultatif; par défaut : 9606 |
 | `required_score` | entier | facultatif; par défaut : 700 |
 
@@ -2497,7 +2499,7 @@ La similarité entre les protéines de Smith-Waterman se situe dans un ensemble 
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `symbols` | tableau de la chaîne | **requis** |
+| `symbols` | tableau de chaînes | **requis** |
 | `species` | entier | facultatif; par défaut : 9606 |
 
 ```javascript
@@ -2510,7 +2512,7 @@ Meilleure homologie par protéine d'entrée chez une espèce cible (STRING /homo
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `symbols` | tableau de la chaîne | **requis** |
+| `symbols` | tableau de chaînes | **requis** |
 | `species` | entier | facultatif; par défaut : 9606 |
 | `target_species` | entier | facultatif |
 
@@ -2572,7 +2574,7 @@ Fréquence de mutation d'un gène dans plusieurs études de cBioPortal (1–12) 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
 | `gene_symbol` | chaîne de caractères | **requis** |
-| `study_ids` | tableau de la chaîne | **requis**; minItems: 1; maxItems: 12 |
+| `study_ids` | tableau de chaînes | **requis**; minItems: 1; maxItems: 12 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_mutation_frequency", {"gene_symbol": "KRAS", "study_ids": ["msk_impact_2017", "difg_msk_2023"]})
@@ -2719,8 +2721,8 @@ Effectuez une recherche dans une séquence d'ARN par l'intermédiaire du paramè
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
 | `sequence` | chaîne de caractères | **requis** |
-| `max_wait_s` | Numéro | facultatif; par défaut : 300 |
-| `poll_interval_s` | Numéro | facultatif; par défaut : 5 |
+| `max_wait_s` | nombre | facultatif; par défaut : 300 |
+| `poll_interval_s` | nombre | facultatif; par défaut : 5 |
 
 ```javascript
 const result = await host.mcp("rna", "search_sequence", {"sequence": "GGUUCCGGGAAGGCAGCAGGUGGAAACCUGCCA"})
@@ -2808,7 +2810,7 @@ Chercher des métadonnées structurées pour les séries GEO (adhésions GSE) av
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `accessions` | tableau de la chaîne | **requis** |
+| `accessions` | tableau de chaînes | **requis** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "geo_get_series", {"accessions": ["GSE131907"]})
@@ -2832,7 +2834,7 @@ Remplir des métadonnées structurées pour les études de MetaboLights (MTBLSxx
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `accessions` | tableau de la chaîne | **requis** |
+| `accessions` | tableau de chaînes | **requis** |
 | `include_samples` | booléen | facultatif; par défaut : false |
 | `max_sample_rows_returned` | entier | facultatif; par défaut : 200 |
 
@@ -2885,7 +2887,7 @@ Récupérer des dossiers structurés pour les études de MGnify (adhésions de M
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `accessions` | tableau de la chaîne | **requis** |
+| `accessions` | tableau de chaînes | **requis** |
 | `include_analyses` | booléen | facultatif; par défaut : false |
 
 ```javascript
@@ -2927,7 +2929,7 @@ Récupérer des métadonnées complètes pour les projets PRIDE par adhésion (p
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `accessions` | tableau de la chaîne | **requis** |
+| `accessions` | tableau de chaînes | **requis** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_get_projects", {"accessions": ["PXD010154"]})
@@ -3279,11 +3281,11 @@ Possibilités de financement de Search Grants.gov via la recherche2 API (extract
 | `keyword` | chaîne de caractères | facultatif |
 | `opportunity_number` | chaîne de caractères | facultatif |
 | `aln` | chaîne de caractères | facultatif |
-| `agencies` | tableau de la chaîne | facultatif |
-| `opportunity_statuses` | tableau de la chaîne | facultatif |
-| `eligibilities` | tableau de la chaîne | facultatif |
-| `funding_categories` | tableau de la chaîne | facultatif |
-| `funding_instruments` | tableau de la chaîne | facultatif |
+| `agencies` | tableau de chaînes | facultatif |
+| `opportunity_statuses` | tableau de chaînes | facultatif |
+| `eligibilities` | tableau de chaînes | facultatif |
+| `funding_categories` | tableau de chaînes | facultatif |
+| `funding_instruments` | tableau de chaînes | facultatif |
 | `count_only` | booléen | facultatif; par défaut : false |
 | `max_records` | entier | facultatif; par défaut : 100 |
 | `include_facets` | booléen | facultatif; par défaut : true |
@@ -3423,7 +3425,7 @@ Exécuter une requête BioMart : récupérer les attributs demandés pour un ens
 | --- | --- | --- |
 | `mart` | chaîne de caractères | **requis** |
 | `dataset` | chaîne de caractères | **requis** |
-| `attributes` | tableau de la chaîne | **requis** |
+| `attributes` | tableau de chaînes | **requis** |
 | `filters` | objet | facultatif |
 
 ```javascript
@@ -3456,7 +3458,7 @@ Traduire de nombreux identifiants d'un type d'attribut à un autre en une seule 
 | `dataset` | chaîne de caractères | **requis** |
 | `from_attr` | chaîne de caractères | **requis** |
 | `to_attr` | chaîne de caractères | **requis** |
-| `targets` | tableau de la chaîne | **requis** |
+| `targets` | tableau de chaînes | **requis** |
 
 ```javascript
 const result = await host.mcp("biomart", "batch_translate", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "from_attr": "hgnc_symbol", "to_attr": "ensembl_gene_id", "targets": ["TP53", "BRCA1", "BRCA2"]})
@@ -3475,9 +3477,9 @@ Rechercher les composés purchasables dans ZINC22/ZINC20 par l'identificateur ZI
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'Ficelle', 'array'&#93; | **requis** |
+| `zinc_ids` | ['string', 'array'] | **requis** |
 | `max_results` | entier | facultatif; par défaut : 50 |
-| `timeout_s` | Numéro | facultatif; par défaut : 25 |
+| `timeout_s` | nombre | facultatif; par défaut : 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_id", {"zinc_ids": ["ZINC000000000012"]})
@@ -3493,7 +3495,7 @@ Recherche ZINC22's espace chimique purchasable par structure — répond "ce que
 | `dist` | entier | facultatif; par défaut : 0 |
 | `adist` | entier | facultatif |
 | `max_results` | entier | facultatif; par défaut : 50 |
-| `timeout_s` | Numéro | facultatif; par défaut : 25 |
+| `timeout_s` | nombre | facultatif; par défaut : 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_smiles", {"smiles": "CC(=O)Oc1ccccc1C(=O)O", "dist": 2})
@@ -3505,9 +3507,9 @@ Résoudre les numéros de catalogue des fournisseurs aux composés ZINC — rép
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `supplier_codes` | &#91;'Ficelle', 'array'&#93; | **requis** |
+| `supplier_codes` | ['string', 'array'] | **requis** |
 | `max_results` | entier | facultatif; par défaut : 50 |
-| `timeout_s` | Numéro | facultatif; par défaut : 25 |
+| `timeout_s` | nombre | facultatif; par défaut : 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_supplier", {"supplier_codes": ["MCULE-2311834287"]})
@@ -3521,7 +3523,7 @@ Tirez un échantillon aléatoire de composés purchasables de ZINC22 — pour le
 | --- | --- | --- |
 | `count` | entier | facultatif; par défaut : 50 |
 | `subset` | chaîne de caractères | facultatif |
-| `timeout_s` | Numéro | facultatif; par défaut : 25 |
+| `timeout_s` | nombre | facultatif; par défaut : 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_random_sample", {"count": 25, "subset": "lead-like"})
@@ -3533,8 +3535,8 @@ Localiser les structures 3D prêtes à l'amarrage pour les composés ZINC. ZINC2
 
 | Champ | Type | Besoins et contraintes |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'Ficelle', 'array'&#93; | **requis** |
-| `timeout_s` | Numéro | facultatif; par défaut : 25 |
+| `zinc_ids` | ['string', 'array'] | **requis** |
+| `timeout_s` | nombre | facultatif; par défaut : 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_get_3d", {"zinc_ids": ["ZINC000000000012"]})

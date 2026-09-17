@@ -2,7 +2,7 @@
 title: "Connector 操作参数参考"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -36,7 +36,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## 操作输入
 
-每次展开一个 Connector。必填项标为 **必填**，限制和默认值来自应用结构定义。<ExampleDownload path="/examples/capabilities/connector-catalog-v0.29.0.json">完整注册表下载</ExampleDownload>提供嵌套 JSON、完整返回说明和准确 Agent 侧调用示例。工具要求 `accessions`、`cids`、`rs_id` 等专用字段时，不要统一改为 `id`。
+每次展开一个 Connector。必填项标为 **必填**，本页与下载目录依据 Open-Science **v0.30.1** 的结构定义。以嵌套的 `input.required` 为准；旧式顶层 `required` 可能不存在。<ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">完整注册表下载</ExampleDownload>提供嵌套 JSON、完整返回说明和准确 Agent 侧调用示例。工具要求 `accessions`、`cids`、`rs_id` 等专用字段时，不要统一改为 `id`。
 
 
 ## 化学 {/* #family-1 */}
@@ -799,6 +799,8 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>展开操作与参数</summary>
 
+**gnomAD 坐标规则**：同时记录数据集固定标识与参考组装。短变异的基因/区域查询中，r2.1/ExAC 使用 GRCh37，r3/r4 使用 GRCh38；结构变异的基因查询使用 `gnomad_sv_r2_1`（GRCh37）或 `gnomad_sv_r4`（GRCh38）；修改数据集不会转换输入坐标。`gene_constraint` 和 gnomAD 的 ClinVar 镜像固定使用 GRCh38 查询基因，不接收 dataset 参数。线粒体查询的父级定位也固定为 GRCh38；必须选择基因或成对且有序的区域边界，不能混用。区域边界须为 1—2,147,483,647 的整数。百万碱基差值上限属于 `region_variants`，不是另一个线粒体限制。结构变异 ID 必须与其所属的 SV 数据集配套。
+
 ### `get_variant`
 
 按 gnomAD 短变异 ID 查询群体频率。variant_id 使用 chrom-pos-ref-alt，坐标必须匹配 dataset 的参考组装。rsID 先通过 search_variants 解析。
@@ -827,7 +829,7 @@ const result = await host.mcp("variants", "search_variants", {"query": "rs7412",
 
 ### `gene_variants`
 
-列出一个基因在 gnomAD 中的全部短变异。gene_symbol 与 gene_id 必须二选一；大基因可能返回数千行。
+列出一个基因内的全部 gnomAD 短变异。基因边界与变异坐标使用所选数据集的参考组装：r2.1/ExAC 为 GRCh37，r3/r4 为 GRCh38。大基因可能返回数千行。`gene_symbol`（HGNC 符号，如 `APOE`）和 `gene_id`（Ensembl ID，如 `ENSG00000130203`）必须二选一。
 
 | 字段 | 类型 | 要求与约束 |
 | --- | --- | --- |
@@ -854,13 +856,13 @@ const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP
 
 ### `region_variants`
 
-列出 gnomAD 区域内全部短变异。染色体不带 chr 前缀，start/stop 为从 1 开始的闭区间，stop-start 不超过 1000000；更大区域分窗查询。坐标组装由 dataset 决定。
+列出指定区域内的全部 gnomAD 短变异。`chrom` 接受 1—22、X、Y，也接受可选的 chr 前缀和小写 x/y。`start`/`stop` 为从 1 开始的闭区间整数，范围 1—2,147,483,647；必须满足 start ≤ stop 且 stop − start ≤ 1,000,000。r2.1/ExAC 使用 GRCh37，r3/r4 使用 GRCh38。输入坐标必须已采用相应组装；选择数据集不会自动进行 liftover。
 
 | 字段 | 类型 | 要求与约束 |
 | --- | --- | --- |
 | `chrom` | 字符串 | **必填** |
-| `start` | 整数 | **必填** |
-| `stop` | 整数 | **必填** |
+| `start` | 整数 | **必填**; 最小值： 1; 最大值： 2147483647 |
+| `stop` | 整数 | **必填**; 最小值： 1; 最大值： 2147483647 |
 | `dataset` | 字符串 | 可选; 默认值： &quot;gnomad_r4&quot;; 枚举： [&quot;gnomad_r4&quot;, &quot;gnomad_r4_non_ukb&quot;, &quot;gnomad_r3&quot;, &quot;gnomad_r3_controls_and_biobanks&quot;, &quot;gnomad_r3_non_cancer&quot;, &quot;gnomad_r3_non_neuro&quot;, &quot;gnomad_r3_non_topmed&quot;, &quot;gnomad_r3_non_v2&quot;, &quot;gnomad_r2_1&quot;, &quot;gnomad_r2_1_controls&quot;, &quot;gnomad_r2_1_non_cancer&quot;, &quot;gnomad_r2_1_non_neuro&quot;, &quot;gnomad_r2_1_non_topmed&quot;, &quot;exac&quot;] |
 
 ```javascript
@@ -928,8 +930,8 @@ const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "D
 | --- | --- | --- |
 | `gene_symbol` | 字符串 | 可选 |
 | `gene_id` | 字符串 | 可选 |
-| `region_start` | 整数 | 可选 |
-| `region_stop` | 整数 | 可选 |
+| `region_start` | 整数 | 可选; 最小值： 1; 最大值： 2147483647 |
+| `region_stop` | 整数 | 可选; 最小值： 1; 最大值： 2147483647 |
 | `dataset` | 字符串 | 可选; 默认值： &quot;gnomad_r4&quot;; 枚举： [&quot;gnomad_r4&quot;, &quot;gnomad_r4_non_ukb&quot;, &quot;gnomad_r3&quot;, &quot;gnomad_r3_controls_and_biobanks&quot;, &quot;gnomad_r3_non_cancer&quot;, &quot;gnomad_r3_non_neuro&quot;, &quot;gnomad_r3_non_topmed&quot;, &quot;gnomad_r3_non_v2&quot;, &quot;gnomad_r2_1&quot;, &quot;gnomad_r2_1_controls&quot;, &quot;gnomad_r2_1_non_cancer&quot;, &quot;gnomad_r2_1_non_neuro&quot;, &quot;gnomad_r2_1_non_topmed&quot;, &quot;exac&quot;] |
 
 ```javascript
@@ -1772,7 +1774,7 @@ const result = await host.mcp("biorxiv", "search_preprints", {"recent_days": 30,
 
 | 字段 | 类型 | 要求与约束 |
 | --- | --- | --- |
-| `doi` | 字符串 | 可选 |
+| `doi` | 字符串 | **必填** |
 | `server` | 字符串 | 可选; 默认值： &quot;biorxiv&quot;; 枚举： [&quot;biorxiv&quot;, &quot;medrxiv&quot;] |
 
 ```javascript
@@ -1805,9 +1807,9 @@ const result = await host.mcp("biorxiv", "search_published_preprints", {"publish
 
 | 字段 | 类型 | 要求与约束 |
 | --- | --- | --- |
-| `funder_ror_id` | 字符串 | 可选 |
-| `date_from` | 字符串 | 可选 |
-| `date_to` | 字符串 | 可选 |
+| `funder_ror_id` | 字符串 | **必填** |
+| `date_from` | 字符串 | **必填** |
+| `date_to` | 字符串 | **必填** |
 | `server` | 字符串 | 可选; 默认值： &quot;biorxiv&quot;; 枚举： [&quot;biorxiv&quot;, &quot;medrxiv&quot;] |
 | `category` | 字符串 | 可选; 枚举： [&quot;animal behavior and cognition&quot;, &quot;biochemistry&quot;, &quot;bioengineering&quot;, &quot;bioinformatics&quot;, &quot;biophysics&quot;, &quot;cancer biology&quot;, &quot;cell biology&quot;, &quot;clinical trials&quot;, &quot;developmental biology&quot;, &quot;ecology&quot;, &quot;epidemiology&quot;, &quot;evolutionary biology&quot;, &quot;genetics&quot;, &quot;genomics&quot;, &quot;immunology&quot;, &quot;microbiology&quot;, &quot;molecular biology&quot;, &quot;neuroscience&quot;, &quot;paleontology&quot;, &quot;pathology&quot;, &quot;pharmacology and toxicology&quot;, &quot;physiology&quot;, &quot;plant biology&quot;, &quot;scientific communication and education&quot;, &quot;synthetic biology&quot;, &quot;systems biology&quot;, &quot;zoology&quot;] |
 | `limit` | 整数 | 可选; 默认值： 10; 最小值： 1; 最大值： 100 |

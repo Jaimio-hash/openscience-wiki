@@ -2,7 +2,7 @@
 title: "Connector operation reference"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -36,7 +36,7 @@ Return field names differ by operation. The descriptions and downloadable schema
 
 ## Operation inputs
 
-Expand one Connector at a time. Required fields are marked **required**; limits/defaults shown here come from the application schema. Consult the <ExampleDownload path="/examples/capabilities/connector-catalog-v0.29.0.json">complete downloadable registry</ExampleDownload> for nested JSON schemas, full return descriptions and agent-side call examples. Do not pass a generic `id` when a tool expects `accessions`, `cids`, `rs_id` or another namespace-specific field.
+Expand one Connector at a time. Required fields are marked **required**; this reference and download use the Open-Science **v0.30.1** schema. A nested `input.required` list is authoritative; a legacy top-level `required` list may be absent. Consult the <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">complete downloadable registry</ExampleDownload> for nested JSON schemas, full return descriptions and agent-side call examples. Do not pass a generic `id` when a tool expects `accessions`, `cids`, `rs_id` or another namespace-specific field.
 
 
 ## Chemistry {/* #family-1 */}
@@ -799,6 +799,8 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>Show operations and parameters</summary>
 
+**gnomAD coordinate rules:** record the dataset pin with the reference assembly. Short-variant gene/region queries use GRCh37 for r2.1/ExAC and GRCh38 for r3/r4; structural-variant gene queries use `gnomad_sv_r2_1` (GRCh37) or `gnomad_sv_r4` (GRCh38); changing the pin does not convert input coordinates. `gene_constraint` and the gnomAD ClinVar mirror use a fixed GRCh38 gene lookup and do not accept a dataset argument. Mitochondrial queries also use a fixed GRCh38 parent lookup; supply either a gene or both ordered region bounds, never both modes. Region bounds must be integers from 1 to 2,147,483,647. The one-million-base difference limit applies to `region_variants`; it is not a separate mitochondrial limit. Keep release-specific structural-variant IDs with their original SV dataset.
+
 ### `get_variant`
 
 Look up one gnomAD short variant by ID and return its population frequencies. `variant_id` is `chrom-pos-ref-alt` on the dataset&#x27;s reference build (GRCh38 for r3/r4, GRCh37 for r2.1/ExAC), e.g. `19-44908822-C-T` (APOE rs7412); use `search_variants` to resolve an rsID first.
@@ -827,7 +829,7 @@ const result = await host.mcp("variants", "search_variants", {"query": "rs7412",
 
 ### `gene_variants`
 
-List ALL gnomAD short variants in a gene (complete listing — can be thousands of rows for large genes). Pass exactly one of `gene_symbol` (HGNC symbol, e.g. `APOE`) or `gene_id` (Ensembl gene ID, e.g. `ENSG00000130203`).
+List ALL gnomAD short variants in a gene. Gene bounds and variant coordinates use the dataset reference build (GRCh37 for r2.1/ExAC, GRCh38 for r3/r4). The complete listing can contain thousands of rows for large genes. Pass exactly one of `gene_symbol` (HGNC symbol, e.g. `APOE`) or `gene_id` (Ensembl gene ID, e.g. `ENSG00000130203`).
 
 | Field | Type | Requirement and constraints |
 | --- | --- | --- |
@@ -854,13 +856,13 @@ const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP
 
 ### `region_variants`
 
-List ALL gnomAD short variants in a genomic region (max 1 Mb — split larger regions into consecutive windows). `chrom` is a chromosome name without `chr` prefix (`1`-`22`, `X`, `Y`); `start`/`stop` are 1-based inclusive and `stop - start` must be &lt;= 1,000,000. The dataset determines the reference build of the coordinates (GRCh38 for r3/r4).
+List ALL gnomAD short variants in a genomic region (max 1 Mb — split larger regions into consecutive windows). `chrom` accepts `1`-`22`, `X`, `Y`, an optional `chr` prefix and lowercase `x`/`y`; `start`/`stop` are 1-based inclusive and `stop - start` must be &lt;= 1,000,000. The dataset determines the reference build of the coordinates (GRCh37 for r2.1/ExAC, GRCh38 for r3/r4); input coordinates must already use that build, with no automatic liftover.
 
 | Field | Type | Requirement and constraints |
 | --- | --- | --- |
 | `chrom` | string | **required** |
-| `start` | integer | **required** |
-| `stop` | integer | **required** |
+| `start` | integer | **required**; minimum: 1; maximum: 2147483647 |
+| `stop` | integer | **required**; minimum: 1; maximum: 2147483647 |
 | `dataset` | string | optional; default: &quot;gnomad_r4&quot;; enum: [&quot;gnomad_r4&quot;, &quot;gnomad_r4_non_ukb&quot;, &quot;gnomad_r3&quot;, &quot;gnomad_r3_controls_and_biobanks&quot;, &quot;gnomad_r3_non_cancer&quot;, &quot;gnomad_r3_non_neuro&quot;, &quot;gnomad_r3_non_topmed&quot;, &quot;gnomad_r3_non_v2&quot;, &quot;gnomad_r2_1&quot;, &quot;gnomad_r2_1_controls&quot;, &quot;gnomad_r2_1_non_cancer&quot;, &quot;gnomad_r2_1_non_neuro&quot;, &quot;gnomad_r2_1_non_topmed&quot;, &quot;exac&quot;] |
 
 ```javascript
@@ -928,8 +930,8 @@ List gnomAD mitochondrial variants with heteroplasmy-aware counts (`ac_het`, `ac
 | --- | --- | --- |
 | `gene_symbol` | string | optional |
 | `gene_id` | string | optional |
-| `region_start` | integer | optional |
-| `region_stop` | integer | optional |
+| `region_start` | integer | optional; minimum: 1; maximum: 2147483647 |
+| `region_stop` | integer | optional; minimum: 1; maximum: 2147483647 |
 | `dataset` | string | optional; default: &quot;gnomad_r4&quot;; enum: [&quot;gnomad_r4&quot;, &quot;gnomad_r4_non_ukb&quot;, &quot;gnomad_r3&quot;, &quot;gnomad_r3_controls_and_biobanks&quot;, &quot;gnomad_r3_non_cancer&quot;, &quot;gnomad_r3_non_neuro&quot;, &quot;gnomad_r3_non_topmed&quot;, &quot;gnomad_r3_non_v2&quot;, &quot;gnomad_r2_1&quot;, &quot;gnomad_r2_1_controls&quot;, &quot;gnomad_r2_1_non_cancer&quot;, &quot;gnomad_r2_1_non_neuro&quot;, &quot;gnomad_r2_1_non_topmed&quot;, &quot;exac&quot;] |
 
 ```javascript
@@ -1770,7 +1772,7 @@ Get complete metadata for one preprint by DOI (bare &quot;10.1101/...&quot; or a
 
 | Field | Type | Requirement and constraints |
 | --- | --- | --- |
-| `doi` | string | optional |
+| `doi` | string | **required** |
 | `server` | string | optional; default: &quot;biorxiv&quot;; enum: [&quot;biorxiv&quot;, &quot;medrxiv&quot;] |
 
 ```javascript
@@ -1803,9 +1805,9 @@ Find preprints acknowledging a funder, identified by ROR id (9-char, e.g. &quot;
 
 | Field | Type | Requirement and constraints |
 | --- | --- | --- |
-| `funder_ror_id` | string | optional |
-| `date_from` | string | optional |
-| `date_to` | string | optional |
+| `funder_ror_id` | string | **required** |
+| `date_from` | string | **required** |
+| `date_to` | string | **required** |
 | `server` | string | optional; default: &quot;biorxiv&quot;; enum: [&quot;biorxiv&quot;, &quot;medrxiv&quot;] |
 | `category` | string | optional; enum: [&quot;animal behavior and cognition&quot;, &quot;biochemistry&quot;, &quot;bioengineering&quot;, &quot;bioinformatics&quot;, &quot;biophysics&quot;, &quot;cancer biology&quot;, &quot;cell biology&quot;, &quot;clinical trials&quot;, &quot;developmental biology&quot;, &quot;ecology&quot;, &quot;epidemiology&quot;, &quot;evolutionary biology&quot;, &quot;genetics&quot;, &quot;genomics&quot;, &quot;immunology&quot;, &quot;microbiology&quot;, &quot;molecular biology&quot;, &quot;neuroscience&quot;, &quot;paleontology&quot;, &quot;pathology&quot;, &quot;pharmacology and toxicology&quot;, &quot;physiology&quot;, &quot;plant biology&quot;, &quot;scientific communication and education&quot;, &quot;synthetic biology&quot;, &quot;systems biology&quot;, &quot;zoology&quot;] |
 | `limit` | integer | optional; default: 10; minimum: 1; maximum: 100 |

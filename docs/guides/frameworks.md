@@ -1,12 +1,12 @@
 ---
 title: "Installing and switching agents"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 # Installing and switching agents
 
-Choose an Agent framework to execute conversations and tools. After installing it, configure a compatible [model provider](providers.md). You can keep several frameworks installed and switch the active one for a project.
+Choose an Agent framework to execute conversations and tools. After installing it, configure a compatible [model provider](providers.md). You can keep several frameworks installed. The active framework in **Settings → Agent** is an application-wide setting shared across projects; it applies to subsequent turns and workflows.
 
 ## Read the Agent page
 
@@ -17,7 +17,7 @@ Open **Settings → Agent**. The page separates **Installed** from **Available**
 | Control/status | Meaning and action |
 | --- | --- |
 | Installed card | Select an eligible inactive card to request a switch. A listed installation still needs compatible model access. |
-| Active | The selected backend. Its Uninstall action is disabled. |
+| Active | The application-wide selected backend. Its Uninstall action is disabled. |
 | Re-detect | Refresh discovery after an installation or path change. It temporarily shows Detecting; it does not install missing software. |
 | Not installed | No usable runtime was detected for that framework. |
 | Install menu | Choose a source offered for that framework, then inspect the installation progress. |
@@ -46,7 +46,7 @@ An app-managed update replaces the app-owned runtime; an external CLI must be up
 
 ## Switch without confusing retained history with live state
 
-Finish or stop the current operation before switching. The switch creates a fresh backend session and replays the open conversation's transcript. It does not transfer an in-flight tool process or reproduce every interpreter variable. Check the session's files, Notebook and permissions before continuing a computation.
+Finish or stop the current operation before switching. The change applies across projects to subsequent turns and workflows. Already running work keeps its existing runtime until it finishes; idle conversations reconnect when used again. Retained conversation history does not transfer an in-flight tool process or guarantee that interpreter variables survive. Check the files, Notebook and permissions before continuing a computation.
 
 After switching, check the model selected for the conversation. Codex subscriptions support [Side Chat](./delegation.md); pending session operations or recovery can temporarily prevent opening it. Follow the message shown by the entry.
 
@@ -71,4 +71,6 @@ Before removing a backend, switch to another available backend; the active backe
 
 If install actions are disabled, check for another installation/switch in progress and the stated prerequisite error. If detection succeeds but requests fail, inspect model authentication and framework/API compatibility separately.
 
-Sources: [Agent panel](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentPanel.tsx), [framework card](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentFrameworkCard.tsx).
+Sources: [Agent panel](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentPanel.tsx), [framework card](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentFrameworkCard.tsx).
+
+Scope and switch behavior: [settings storage](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/settings/repository.ts), [runtime switching](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/acp/runtime-coordinator.ts).

@@ -1,12 +1,12 @@
 ---
 title: "Instalación y conmutación de agentes"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 # Instalación y conmutación de agentes {/* #installing-and-switching-agents */}
 
-Elija un marco de Agente para ejecutar conversaciones y herramientas. Después de instalarlo, configure un [proveedor de modelos](providers.md) compatible. Puede mantener varios marcos instalados y cambiar el activo para un proyecto.
+Elija un framework Agent para ejecutar conversaciones y herramientas y configure un [proveedor de modelos](providers.md) compatible. Puede mantener varios frameworks instalados. El framework activo en **Settings → Agent** es un ajuste de toda la aplicación, compartido por todos los proyectos; se aplica a los siguientes turnos de conversación y flujos de trabajo.
 
 ## Lea la página del agente {/* #read-the-agent-page */}
 
@@ -17,7 +17,7 @@ Abre **Settings → Agent**. La página separa **Installed** de **Available**. L
 | Control/establecimiento | Significado y acción |
 | --- | --- |
 | Tarjeta instalada | Seleccione una tarjeta inactiva elegible para solicitar un interruptor. Una instalación listada todavía necesita acceso modelo compatible. |
-| Activo | El backend seleccionado. Su acción de desinstalación está deshabilitada. |
+| Activo | El backend seleccionado para toda la aplicación. Su acción de desinstalación está deshabilitada. |
 | Volver a detectar | Refresca el descubrimiento después de una instalación o cambio de ruta. Muestra temporalmente la detección; no instala el software perdido. |
 | No instalado | No se detectó tiempo de funcionamiento utilizable para ese marco. |
 | Menú de instalación | Elija una fuente ofrecida para ese marco, luego inspeccione el progreso de la instalación. |
@@ -46,7 +46,7 @@ Una actualización administrada por aplicaciones sustituye el tiempo de ejecuci�
 
 ## Interruptor sin confundir la historia retenida con el estado vivo {/* #switch-without-confusing-retained-history-with-live-state */}
 
-Terminar o detener la operación actual antes de cambiar. El interruptor crea una sesión de backend fresca y reproduce la transcripción de la conversación abierta. No transfiere un proceso de herramienta en vuelo ni reproduce cada variable de intérprete. Compruebe los archivos de la sesión, Notebook y permisos antes de continuar una computación.
+Termine o detenga la operación actual antes de cambiar. El cambio se aplica a los siguientes turnos y flujos de trabajo de todos los proyectos. Las tareas en curso mantienen su entorno de ejecución hasta finalizar; las conversaciones inactivas se reconectan cuando vuelven a utilizarse. Conservar el historial no transfiere procesos en ejecución ni garantiza que se conserven las variables del intérprete. Revise los archivos, Notebook y los permisos antes de continuar el cálculo.
 
 Después de cambiar, compruebe el modelo seleccionado para la conversación. Las suscripciones Codex admiten [Side Chat](./delegation.md); las operaciones o la recuperación pendientes de sesión pueden impedir temporalmente la apertura. Siga el mensaje mostrado por la entrada.
 
@@ -71,4 +71,6 @@ Antes de eliminar un backend, cambie a otro backend disponible; el backend activ
 
 Si las acciones de instalación son deshabilitadas, compruebe otra instalación/switch en progreso y el error previo declarado. Si la detección tiene éxito pero las solicitudes fallan, inspeccione la autenticación del modelo y compatibilidad marco/API por separado.
 
-Fuentes: [Panel de Agentes](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentPanel.tsx), [tarjeta marco](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentFrameworkCard.tsx).
+Fuentes: [Panel de Agentes](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentPanel.tsx), [tarjeta marco](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentFrameworkCard.tsx).
+
+Comportamiento de exploración y conmutación: [configuración de almacenamiento](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/settings/repository.ts), [conmutación de tiempo de ejecución](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/acp/runtime-coordinator.ts).

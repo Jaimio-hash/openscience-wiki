@@ -928,7 +928,7 @@
     "message": "Wenn Sie in einem Entwurf oder einer Besprechungsnotiz einen Anspruch haben, suchen Sie die relevanten PDF-Passagen und -Methoden, behalten Sie Seitennachweise und erstellen Sie einen unterstützten, qualifizierten oder nicht unterstützten Befund."
   },
   "docs.outline.workflows.database-search.title": {
-    "message": "Wissenschaftliche Datenabgleiche"
+    "message": "Strukturierte Datenbankeinträge abrufen"
   },
   "docs.outline.workflows.database-search.scope": {
     "message": "Überprüfen Sie die enthaltenen Themen und deren geplanten Umfang unten."
@@ -1138,7 +1138,7 @@
     "message": "Vergleichen Sie zwei Analysemethoden auf dem gleichen Datensatz"
   },
   "docs.outline.workflows.compare-branches.scope": {
-    "message": "Wenn Sie zwischen Methoden wählen, verzweigen Sie von einem gemeinsamen Ausgangspunkt aus sowohl mit dokumentierten Annahmen als auch mit einem Vergleich der Ergebnisse und Einschränkungen."
+    "message": "Verwenden Sie die gleichen dokumentierten Eingaben und Vorverarbeitungen für zwei Methoden, führen Sie beide aus und vergleichen Sie Ergebnisse, Annahmen und Einschränkungen."
   },
   "docs.outline.workflows.save-method.title": {
     "message": "Wiederverwendung einer validierten Analyse in einem neuen Datensatz"
@@ -1604,5 +1604,17 @@
   },
   "docs.outline.reference.v0301.scope": {
     "message": "Side Chat-Entwürfe, Prüfung von Skill-Updates, Literatur-PDFs in Forschungspaketen und Wiederherstellung."
+  },
+  "docs.outline.workflows.focused-literature-search.title": {
+    "message": "Suchen Sie innerhalb bestimmter Zeitschriften und Termine"
+  },
+  "docs.outline.workflows.focused-literature-search.scope": {
+    "message": "Führen Sie eine begrenzte PubMed-Suche aus, screenen Sie jeden zurückgegebenen Datensatz und behalten Sie unsichere Auswahlentscheidungen bei."
+  },
+  "docs.outline.workflows.cross-check-records.title": {
+    "message": "Gegenüberstellung von zwei wissenschaftlichen Datenquellen"
+  },
+  "docs.outline.workflows.cross-check-records.scope": {
+    "message": "Richten Sie Definitionen, Einheiten, Jahre und Referenzzeiträume an, bevor Sie die jährlichen Temperaturaufzeichnungen der NASA und HadCRUT vergleichen."
   }
 }

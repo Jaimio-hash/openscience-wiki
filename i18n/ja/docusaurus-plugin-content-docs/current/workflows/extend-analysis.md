@@ -57,12 +57,12 @@ CSV プレビューには最初の 100 行が表示されます。保存され�
 
 ## 3. 露出メトリックの追加 {/* #3-add-the-exposure-metrics */}
 
-<ExampleDownload path="/examples/theoph/nca-conventions.md">公式 Skill の NCA リファレンス</ExampleDownload>をダウンロードして、**+ → Attach files**で追加します。 インストールされたパッケージから変更されていない参照です。 録画設定では、Notebook は会話の添付ファイルを読むことができますが、Skill インストールディレクトリ内の参照を読めません。
+<ExampleDownload path="/examples/theoph/nca-conventions.md">校訂済みの NCA 方法資料</ExampleDownload>をダウンロードし、**+ → Attach files** から添付します。この Wiki 版では、同梱資料の積分法と終末相の回帰区間の説明を修正しています。本例で求めるのは実測値に基づく Cmax/Tmax と、全区間に線形台形則を適用した AUC です。終末相の傾きは推定しません。記録時の環境では Notebook から Skill のインストール先にある資料を読めなかったため、会話の添付ファイルとして渡します。
 
 同じ会話で再び`/pkpd-modeling`を選択し、次のメッセージを送る:
 
 ```text
-Read the attached nca-conventions.md from the official Skill package.
+Read the attached reviewed nca-conventions.md methods reference.
 Extend the baseline using the same theoph-input.csv and base R Notebook.
 For each subject calculate observed Cmax (mg/L), earliest observed Tmax (h),
 linear-trapezoidal AUC from time zero to the last observation (mg*h/L),

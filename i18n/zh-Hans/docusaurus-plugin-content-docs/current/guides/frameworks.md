@@ -1,12 +1,12 @@
 ---
 title: "安装与切换代理框架"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 # 安装与切换代理框架
 
-选择 Agent 框架来执行对话和工具。安装后配置兼容的[模型提供方](providers.md)。可以同时保留多个框架，并为项目切换活动框架。
+选择 Agent 框架来执行对话和工具。安装后配置兼容的[模型提供方](providers.md)。可以同时保留多个框架。**Settings → Agent** 中的活动框架是所有项目共享的应用级设置，影响后续对话轮次和工作流。
 
 ## 读懂 Agent 页面
 
@@ -17,7 +17,7 @@ last_update:
 | 控件或状态 | 含义与操作 |
 | --- | --- |
 | 已安装卡片 | 选择可用但未激活的卡片申请切换；仍需兼容的模型配置 |
-| Active | 当前后端，其 Uninstall 禁用 |
+| Active | 应用级选中的后端，其 Uninstall 禁用 |
 | Re-detect | 安装或路径变更后重新发现，短暂显示 Detecting；不负责安装缺失软件 |
 | Not installed | 未发现可用运行时 |
 | Install 菜单 | 选择该后端实际提供的安装来源并查看进度 |
@@ -46,7 +46,7 @@ OpenCode 的 **Install → App-managed download (recommended)** 会下载自包�
 
 ## 切换时保留什么
 
-先结束或停止当前操作。切换会创建新后端会话，并回放打开对话的文字记录，不会迁移仍在运行的工具进程或所有解释器变量。继续计算前检查文件、Notebook 与权限。
+切换前先完成或停止当前操作。活动框架的变更作用于各项目后续的对话轮次和工作流；已经运行的任务继续使用原运行时直到完成，空闲会话在再次使用时重新连接。保留对话历史不代表转移了正在执行的工具进程，也不保证解释器变量仍然存在。继续计算前检查文件、Notebook 和权限。
 
 切换后检查会话所选模型。Codex 订阅支持 [Side Chat](./delegation.md)；待处理的会话操作或恢复状态可能暂时阻止打开旁聊，按入口显示的提示处理。
 
@@ -71,4 +71,6 @@ OpenCode 的 **Install → App-managed download (recommended)** 会下载自包�
 
 安装按钮禁用时检查是否已有安装或切换进行中，以及页面的前置条件错误。检测成功但请求失败时，分别检查模型认证和后端/API 兼容性。
 
-源码：[Agent 页面](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentPanel.tsx)、[后端卡片](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentFrameworkCard.tsx)。
+源码：[Agent 页面](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentPanel.tsx)、[后端卡片](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentFrameworkCard.tsx)。
+
+设置范围与切换行为：[设置存储](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/settings/repository.ts)、[运行时切换](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/acp/runtime-coordinator.ts)。

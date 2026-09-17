@@ -2,7 +2,7 @@
 title: "Операционный справочник Connector"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -36,7 +36,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## Эксплуатационные материалы {/* #operation-inputs */}
 
-Расширяйте один Connector за раз. Требуемые поля помечены **необходимый**; Показываемые здесь ограничения/дефолты исходят из схемы приложения. Проконсультируйтесь с <ExampleDownload path="/examples/capabilities/connector-catalog-v0.29.0.json">Полный загружаемый реестр</ExampleDownload> для вложенных схем JSON, полных описаний возврата и примеров вызова на стороне агента. Не пропустите общий `id`, когда инструмент ожидает `accessions`, `cids`, `rs_id` или другое поле пространства имен.
+Расширяйте один Connector за раз. Требуемые поля помечены **необходимый**; Эта ссылка и загрузка используют схему Open-Science **v0.30.1**. Вложенный список `input.required` является авторитетным; Унаследованный список `required` может отсутствовать. Проконсультируйтесь с <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">Полный загружаемый реестр</ExampleDownload> для вложенных схем JSON, полных описаний возврата и примеров вызова на стороне агента. Не пропустите общий `id`, когда инструмент ожидает `accessions`, `cids`, `rs_id` или другое поле пространства имен.
 
 
 ## химия {/* #family-1 */}
@@ -50,10 +50,10 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
-| `namespace` | струна | факультативный; по умолчанию: "name"; enum: &#91;"name", "smiles", "inchikey", "cid"&#93; |
+| `query` | строка | **обязательно** |
+| `namespace` | строка | факультативный; по умолчанию: "name"; enum: &#91;"name", "smiles", "inchikey", "cid"&#93; |
 | `max_cids` | целое число | факультативный; по умолчанию: 25; Минимум: 1; Максимум: 100 |
-| `with_properties` | булевый | факультативный; Дефолт: правда |
+| `with_properties` | логическое значение | факультативный; Дефолт: правда |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_search_compounds", {"query": "aspirin", "max_cids": 25})
@@ -65,8 +65,8 @@ const result = await host.mcp("chemistry", "pubchem_search_compounds", {"query":
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `cids` | массив целых чисел | **необходимый**; Мини-элементы: 1; maxItems: 50 |
-| `include_synonyms` | булевый | факультативный; Дефолт: ложный |
+| `cids` | массив целых чисел | **обязательно**; Мини-элементы: 1; maxItems: 50 |
+| `include_synonyms` | логическое значение | факультативный; Дефолт: ложный |
 | `max_synonyms` | целое число | факультативный; По умолчанию: 30 |
 
 ```javascript
@@ -79,10 +79,10 @@ const result = await host.mcp("chemistry", "pubchem_get_compounds", {"cids": [22
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `smiles` | струна | **необходимый** |
+| `smiles` | строка | **обязательно** |
 | `threshold` | целое число | факультативный; по умолчанию: 90; Минимум: 1; Максимум: 100 |
 | `max_records` | целое число | факультативный; по умолчанию: 50; Минимум: 1; Максимум: 200 |
-| `with_properties` | булевый | факультативный; Дефолт: ложный |
+| `with_properties` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_similarity_search", {"smiles": "CC(=O)OC1=CC=CC=C1C(=O)O", "threshold": 90})
@@ -94,8 +94,8 @@ const result = await host.mcp("chemistry", "pubchem_similarity_search", {"smiles
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `cid` | целое число | **необходимый** |
-| `active_only` | булевый | факультативный; Дефолт: ложный |
+| `cid` | целое число | **обязательно** |
+| `active_only` | логическое значение | факультативный; Дефолт: ложный |
 | `max_rows` | целое число | факультативный; по умолчанию: 100; Минимум: 1; Максимум: 1000 |
 
 ```javascript
@@ -108,7 +108,7 @@ const result = await host.mcp("chemistry", "pubchem_get_bioassay_summary", {"cid
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `cid` | целое число | **необходимый** |
+| `cid` | целое число | **обязательно** |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_get_safety", {"cid": 702})
@@ -120,7 +120,7 @@ const result = await host.mcp("chemistry", "pubchem_get_safety", {"cid": 702})
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `term` | струна | **необходимый** |
+| `term` | строка | **обязательно** |
 | `max_results` | целое число | факультативный; по умолчанию: 20; Минимум: 1; Максимум: 100 |
 | `page` | целое число | факультативный; по умолчанию: 1; Минимум: 1 |
 
@@ -134,7 +134,7 @@ const result = await host.mcp("chemistry", "chebi_search", {"term": "caffeine", 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `chebi_id` | струна | **необходимый** |
+| `chebi_id` | строка | **обязательно** |
 | `max_synonyms` | целое число | факультативный; По умолчанию: 30 |
 | `max_xrefs` | целое число | факультативный; По умолчанию: 50 |
 
@@ -148,8 +148,8 @@ const result = await host.mcp("chemistry", "chebi_get_entity", {"chebi_id": "CHE
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `chebi_id` | струна | **необходимый** |
-| `relation_type` | струна | необязательный |
+| `chebi_id` | строка | **обязательно** |
+| `relation_type` | строка | необязательный |
 | `max_relations` | целое число | факультативный; По умолчанию: 100 |
 
 ```javascript
@@ -162,7 +162,7 @@ const result = await host.mcp("chemistry", "chebi_get_ontology", {"chebi_id": "C
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
+| `query` | строка | **обязательно** |
 | `limit` | целое число | факультативный; по умолчанию: 50; Минимум: 1; Максимум: 500 |
 
 ```javascript
@@ -175,7 +175,7 @@ const result = await host.mcp("chemistry", "rhea_search_reactions", {"query": "c
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `rhea_id` | струна | **необходимый** |
+| `rhea_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("chemistry", "rhea_get_reaction", {"rhea_id": "10280"})
@@ -187,8 +187,8 @@ const result = await host.mcp("chemistry", "rhea_get_reaction", {"rhea_id": "102
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `uniprot` | струна | **необходимый** |
-| `affinity_cutoff_nm` | номер | факультативный; По умолчанию: 10000 |
+| `uniprot` | строка | **обязательно** |
+| `affinity_cutoff_nm` | число | факультативный; По умолчанию: 10000 |
 | `max_rows` | целое число | факультативный; по умолчанию: 100; Минимум: 1; Максимум: 1000 |
 
 ```javascript
@@ -201,8 +201,8 @@ const result = await host.mcp("chemistry", "bindingdb_ligands_by_target", {"unip
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `smiles` | струна | **необходимый** |
-| `similarity` | номер | факультативный; по умолчанию: 0.85; Минимум: 0.5; Максимум: 1 |
+| `smiles` | строка | **обязательно** |
+| `similarity` | число | факультативный; по умолчанию: 0.85; Минимум: 0.5; Максимум: 1 |
 | `max_rows` | целое число | факультативный; по умолчанию: 100; Минимум: 1; Максимум: 1000 |
 
 ```javascript
@@ -222,15 +222,15 @@ const result = await host.mcp("chemistry", "bindingdb_targets_by_compound", {"sm
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | необязательный |
+| `query` | строка | необязательный |
 | `year_from` | целое число | необязательный |
 | `year_to` | целое число | необязательный |
-| `work_type` | струна | необязательный |
-| `open_access_only` | булевый | необязательный |
-| `venue` | струна | необязательный |
-| `sort` | струна | факультативный; по умолчанию: "relevance"; enum: &#91;"relevance", "cited_by_count", "publication_date"&#93; |
+| `work_type` | строка | необязательный |
+| `open_access_only` | логическое значение | необязательный |
+| `venue` | строка | необязательный |
+| `sort` | строка | факультативный; по умолчанию: "relevance"; enum: &#91;"relevance", "cited_by_count", "publication_date"&#93; |
 | `max_records` | целое число | факультативный; По умолчанию: 50 |
-| `include_abstracts` | булевый | факультативный; Дефолт: ложный |
+| `include_abstracts` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_search_works", {"query": "CRISPR base editing", "year_from": 2020, "open_access_only": true, "sort": "cited_by_count", "max_records": 25})
@@ -242,7 +242,7 @@ const result = await host.mcp("literature", "openalex_search_works", {"query": "
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `work_id` | струна | **необходимый** |
+| `work_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_get_work", {"work_id": "W2741809807"})
@@ -254,10 +254,10 @@ const result = await host.mcp("literature", "openalex_get_work", {"work_id": "W2
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `work_id` | струна | **необходимый** |
-| `sort` | струна | факультативный; по умолчанию: "cited_by_count"; enum: &#91;"cited_by_count", "publication_date", "relevance"&#93; |
+| `work_id` | строка | **обязательно** |
+| `sort` | строка | факультативный; по умолчанию: "cited_by_count"; enum: &#91;"cited_by_count", "publication_date", "relevance"&#93; |
 | `max_records` | целое число | факультативный; По умолчанию: 50 |
-| `include_abstracts` | булевый | факультативный; Дефолт: ложный |
+| `include_abstracts` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_citations", {"work_id": "W2741809807", "sort": "cited_by_count", "max_records": 50})
@@ -269,7 +269,7 @@ const result = await host.mcp("literature", "openalex_citations", {"work_id": "W
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `work_id` | струна | **необходимый** |
+| `work_id` | строка | **обязательно** |
 | `max_records` | целое число | факультативный; По умолчанию: 100 |
 
 ```javascript
@@ -282,7 +282,7 @@ const result = await host.mcp("literature", "openalex_references", {"work_id": "
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
+| `query` | строка | **обязательно** |
 | `max_records` | целое число | факультативный; По умолчанию: 25 |
 
 ```javascript
@@ -295,7 +295,7 @@ const result = await host.mcp("literature", "openalex_search_authors", {"query":
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `author_id` | струна | **необходимый** |
+| `author_id` | строка | **обязательно** |
 | `works_sample` | целое число | факультативный; По умолчанию: 10 |
 
 ```javascript
@@ -308,7 +308,7 @@ const result = await host.mcp("literature", "openalex_get_author", {"author_id":
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `venue` | струна | **необходимый** |
+| `venue` | строка | **обязательно** |
 | `max_records` | целое число | факультативный; По умолчанию: 10 |
 
 ```javascript
@@ -321,14 +321,14 @@ const result = await host.mcp("literature", "openalex_venue_info", {"venue": "Na
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | необязательный |
-| `category` | струна | необязательный |
-| `date_from` | струна | необязательный |
-| `date_to` | струна | необязательный |
+| `query` | строка | необязательный |
+| `category` | строка | необязательный |
+| `date_from` | строка | необязательный |
+| `date_to` | строка | необязательный |
 | `start` | целое число | факультативный; По умолчанию: 0 |
 | `max_results` | целое число | факультативный; По умолчанию: 25 |
-| `sort_by` | струна | факультативный; по умолчанию: "relevance"; &#91;"relevance", "submittedDate", "lastUpdatedDate"&#93; |
-| `sort_order` | струна | факультативный; по умолчанию: "descending"; enum: &#91;"descending", "ascending"&#93; |
+| `sort_by` | строка | факультативный; по умолчанию: "relevance"; &#91;"relevance", "submittedDate", "lastUpdatedDate"&#93; |
+| `sort_order` | строка | факультативный; по умолчанию: "descending"; enum: &#91;"descending", "ascending"&#93; |
 
 ```javascript
 const result = await host.mcp("literature", "arxiv_search", {"query": "ti:transformer", "category": "cs.LG", "max_results": 10})
@@ -340,7 +340,7 @@ const result = await host.mcp("literature", "arxiv_search", {"query": "ti:transf
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `arxiv_ids` | массив струн | **необходимый** |
+| `arxiv_ids` | массив строк | **обязательно** |
 
 ```javascript
 const result = await host.mcp("literature", "arxiv_get_papers", {"arxiv_ids": ["2103.14030", "1706.03762v5"]})
@@ -352,7 +352,7 @@ const result = await host.mcp("literature", "arxiv_get_papers", {"arxiv_ids": ["
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `doi` | струна | **необходимый**; Длина: 1; Длина: 2048 |
+| `doi` | строка | **обязательно**; Длина: 1; Длина: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "crossref_get_work", {"doi": "10.1038/nature12968"})
@@ -365,7 +365,7 @@ const result = await host.mcp("literature", "crossref_get_work", {"doi": "10.103
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `doi` | струна | **необходимый**; Длина: 1; Длина: 2048 |
+| `doi` | строка | **обязательно**; Длина: 1; Длина: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "crossref_get_updates", {"doi": "10.1038/nature12968"})
@@ -378,9 +378,9 @@ const result = await host.mcp("literature", "crossref_get_updates", {"doi": "10.
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | факультативный; Длина: 1; Длина: 2000 |
-| `related_doi` | струна | факультативный; Длина: 1; Длина: 2048 |
-| `resource_type` | струна | факультативный; по умолчанию: "dataset"; enum: &#91;"dataset", "software"&#93; |
+| `query` | строка | факультативный; Длина: 1; Длина: 2000 |
+| `related_doi` | строка | факультативный; Длина: 1; Длина: 2048 |
+| `resource_type` | строка | факультативный; по умолчанию: "dataset"; enum: &#91;"dataset", "software"&#93; |
 | `page_size` | целое число | факультативный; по умолчанию: 20; Минимум: 1; Максимум: 100 |
 | `page` | целое число | факультативный; по умолчанию: 1; Минимум: 1; Максимум: 10000 |
 
@@ -395,7 +395,7 @@ const result = await host.mcp("literature", "datacite_search_records", {"query":
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `doi` | струна | **необходимый**; Длина: 1; Длина: 2048 |
+| `doi` | строка | **обязательно**; Длина: 1; Длина: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "datacite_get_record", {"doi": "10.14454/qdd3-ps68"})
@@ -414,13 +414,13 @@ Search PubMed (биомедийный &) Life-sciences literature via NCBI esear
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
+| `query` | строка | **обязательно** |
 | `max_results` | целое число | факультативный; По умолчанию: 20 |
 | `retstart` | целое число | факультативный; По умолчанию: 0 |
-| `sort` | струна | факультативный; enum: &#91;"relevance", "pub_date", "author", "journal_name", "title"&#93; |
-| `date_from` | струна | необязательный |
-| `date_to` | струна | необязательный |
-| `datetype` | струна | факультативный; по умолчанию: "pdat"; enum: &#91;"pdat", "edat", "mdat"&#93; |
+| `sort` | строка | факультативный; enum: &#91;"relevance", "pub_date", "author", "journal_name", "title"&#93; |
+| `date_from` | строка | необязательный |
+| `date_to` | строка | необязательный |
+| `datetype` | строка | факультативный; по умолчанию: "pdat"; enum: &#91;"pdat", "edat", "mdat"&#93; |
 
 ```javascript
 const result = await host.mcp("pubmed", "search_articles", {"query": "CRISPR gene editing", "max_results": 10})
@@ -432,7 +432,7 @@ const result = await host.mcp("pubmed", "search_articles", {"query": "CRISPR gen
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **необходимый** |
+| `pmids` | ['string', 'array'] | **обязательно** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_article_metadata", {"pmids": ["35486828", "33264437"]})
@@ -444,8 +444,8 @@ const result = await host.mcp("pubmed", "get_article_metadata", {"pmids": ["3548
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **необходимый** |
-| `link_type` | струна | факультативный; по умолчанию: "pubmed_pubmed"; enum: &#91;"pubmed_pubmed", "pubmed_pmc", "pubmed_nucleotide", "pubmed_protein", "pubmed_gene"&#93; |
+| `pmids` | ['string', 'array'] | **обязательно** |
+| `link_type` | строка | факультативный; по умолчанию: "pubmed_pubmed"; enum: &#91;"pubmed_pubmed", "pubmed_pmc", "pubmed_nucleotide", "pubmed_protein", "pubmed_gene"&#93; |
 | `max_results` | целое число | необязательный |
 
 ```javascript
@@ -458,7 +458,7 @@ const result = await host.mcp("pubmed", "find_related_articles", {"pmids": ["354
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `citations` | массив объектов | **необходимый** |
+| `citations` | массив объектов | **обязательно** |
 
 ```javascript
 const result = await host.mcp("pubmed", "lookup_article_by_citation", {"citations": [{"journal": "Science", "year": 1987, "volume": "235", "first_page": "182", "author": "Palmenberg AC"}]})
@@ -470,8 +470,8 @@ const result = await host.mcp("pubmed", "lookup_article_by_citation", {"citation
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `ids` | &#91;'string', 'array'&#93; | **необходимый** |
-| `id_type` | струна | факультативный; по умолчанию: "pmid"; enum: &#91;"pmid", "pmcid", "doi"&#93; |
+| `ids` | ['string', 'array'] | **обязательно** |
+| `id_type` | строка | факультативный; по умолчанию: "pmid"; enum: &#91;"pmid", "pmcid", "doi"&#93; |
 
 ```javascript
 const result = await host.mcp("pubmed", "convert_article_ids", {"ids": ["PMC9046468"], "id_type": "pmcid"})
@@ -483,7 +483,7 @@ const result = await host.mcp("pubmed", "convert_article_ids", {"ids": ["PMC9046
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `pmc_ids` | &#91;'string', 'array'&#93; | **необходимый** |
+| `pmc_ids` | ['string', 'array'] | **обязательно** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_full_text_article", {"pmc_ids": ["PMC9046468"]})
@@ -495,7 +495,7 @@ const result = await host.mcp("pubmed", "get_full_text_article", {"pmc_ids": ["P
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **необходимый** |
+| `pmids` | ['string', 'array'] | **обязательно** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_copyright_status", {"pmids": ["35891187", "34375400"]})
@@ -514,10 +514,10 @@ const result = await host.mcp("pubmed", "get_copyright_status", {"pmids": ["3589
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `terms` | массив струн | **необходимый** |
-| `scopes` | струна | необязательный |
-| `fields` | струна | факультативный; по умолчанию: "symbol,name,taxid,entrezgene,ensembl.gene" |
-| `species` | струна | необязательный |
+| `terms` | массив строк | **обязательно** |
+| `scopes` | строка | необязательный |
+| `fields` | строка | факультативный; по умолчанию: "symbol,name,taxid,entrezgene,ensembl.gene" |
+| `species` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("genes", "query_genes", {"terms": ["TP53", "BRCA1"], "scopes": "symbol,alias", "fields": "symbol,name,entrezgene,ensembl.gene", "species": "human"})
@@ -529,7 +529,7 @@ const result = await host.mcp("genes", "query_genes", {"terms": ["TP53", "BRCA1"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `ontology_ids` | массив струн | необязательный |
+| `ontology_ids` | массив строк | необязательный |
 
 ```javascript
 const result = await host.mcp("genes", "list_ontologies", {"ontology_ids": ["efo", "go", "mondo"]})
@@ -541,10 +541,10 @@ const result = await host.mcp("genes", "list_ontologies", {"ontology_ids": ["efo
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
-| `ontologies` | массив струн | необязательный |
-| `exact` | булевый | факультативный; Дефолт: ложный |
-| `include_obsolete` | булевый | факультативный; Дефолт: ложный |
+| `query` | строка | **обязательно** |
+| `ontologies` | массив строк | необязательный |
+| `exact` | логическое значение | факультативный; Дефолт: ложный |
+| `include_obsolete` | логическое значение | факультативный; Дефолт: ложный |
 | `max_results` | целое число | факультативный; По умолчанию: 20 |
 
 ```javascript
@@ -557,10 +557,10 @@ const result = await host.mcp("genes", "search_ontology_terms", {"query": "asthm
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `ontology` | струна | **необходимый** |
-| `term_id` | струна | **необходимый** |
-| `relation` | струна | факультативный; enum: &#91;"parents", "children", "ancestors", "descendants", "hierarchicalParents", "hierarchicalChildren", "hierarchicalAncestors", "hierarchicalDescendants"&#93; |
-| `include_parents` | булевый | факультативный; Дефолт: ложный |
+| `ontology` | строка | **обязательно** |
+| `term_id` | строка | **обязательно** |
+| `relation` | строка | факультативный; enum: &#91;"parents", "children", "ancestors", "descendants", "hierarchicalParents", "hierarchicalChildren", "hierarchicalAncestors", "hierarchicalDescendants"&#93; |
+| `include_parents` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("genes", "get_ontology_term", {"ontology": "go", "term_id": "GO:0006281", "relation": "children"})
@@ -572,11 +572,11 @@ const result = await host.mcp("genes", "get_ontology_term", {"ontology": "go", "
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `uniprot_accession` | струна | **необходимый** |
-| `aspect` | струна | факультативный; enum: &#91;"biological_process", "molecular_function", "cellular_component"&#93; |
-| `evidence` | струна | необязательный |
+| `uniprot_accession` | строка | **обязательно** |
+| `aspect` | строка | факультативный; enum: &#91;"biological_process", "molecular_function", "cellular_component"&#93; |
+| `evidence` | строка | необязательный |
 | `taxon_id` | целое число | необязательный |
-| `include_term_names` | булевый | факультативный; Дефолт: ложный |
+| `include_term_names` | логическое значение | факультативный; Дефолт: ложный |
 | `max_records` | целое число | факультативный; По умолчанию: 200 |
 
 ```javascript
@@ -589,9 +589,9 @@ const result = await host.mcp("genes", "get_go_annotations", {"uniprot_accession
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accessions` | массив струн | **необходимый** |
-| `format` | струна | факультативный; enum: &#91;"fasta", "txt"&#93; |
-| `fields` | массив струн | необязательный |
+| `accessions` | массив строк | **обязательно** |
+| `format` | строка | факультативный; enum: &#91;"fasta", "txt"&#93; |
+| `fields` | массив строк | необязательный |
 
 ```javascript
 const result = await host.mcp("genes", "get_uniprot_entries", {"accessions": ["P04637", "P38398"], "fields": ["accession", "id", "protein_name", "gene_names", "organism_name", "length"]})
@@ -603,12 +603,12 @@ const result = await host.mcp("genes", "get_uniprot_entries", {"accessions": ["P
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `identifiers` | массив струн | **необходимый** |
-| `id_type` | струна | **необходимый**; enum: &#91;"symbol", "uniprot"&#93; |
-| `species` | струна | факультативный; По умолчанию: "Homo sapiens" |
-| `resource` | струна | факультативный; По умолчанию: "TOTAL" |
-| `include_disease` | булевый | факультативный; Дефолт: правда |
-| `compact` | булевый | факультативный; Дефолт: правда |
+| `identifiers` | массив строк | **обязательно** |
+| `id_type` | строка | **обязательно**; enum: &#91;"symbol", "uniprot"&#93; |
+| `species` | строка | факультативный; По умолчанию: "Homo sapiens" |
+| `resource` | строка | факультативный; По умолчанию: "TOTAL" |
+| `include_disease` | логическое значение | факультативный; Дефолт: правда |
+| `compact` | логическое значение | факультативный; Дефолт: правда |
 
 ```javascript
 const result = await host.mcp("genes", "map_reactome_pathways", {"identifiers": ["TP53", "EGFR", "BRCA1"], "id_type": "symbol"})
@@ -627,9 +627,9 @@ const result = await host.mcp("genes", "map_reactome_pathways", {"identifiers": 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
-| `species` | струна | факультативный; По умолчанию: "homo_sapiens" |
-| `expand` | булевый | факультативный; Дефолт: ложный |
+| `query` | строка | **обязательно** |
+| `species` | строка | факультативный; По умолчанию: "homo_sapiens" |
+| `expand` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_lookup", {"query": "BRAF"})
@@ -641,8 +641,8 @@ const result = await host.mcp("genomes", "ensembl_lookup", {"query": "BRAF"})
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `stable_id` | струна | **необходимый** |
-| `external_db` | струна | необязательный |
+| `stable_id` | строка | **обязательно** |
+| `external_db` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_xrefs", {"stable_id": "ENSG00000157764", "external_db": "HGNC"})
@@ -654,10 +654,10 @@ const result = await host.mcp("genomes", "ensembl_xrefs", {"stable_id": "ENSG000
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `variant_id` | струна | необязательный |
-| `region` | струна | необязательный |
-| `allele` | струна | необязательный |
-| `species` | струна | факультативный; По умолчанию: "homo_sapiens" |
+| `variant_id` | строка | необязательный |
+| `region` | строка | необязательный |
+| `allele` | строка | необязательный |
+| `species` | строка | факультативный; По умолчанию: "homo_sapiens" |
 | `max_consequences` | целое число | факультативный; По умолчанию: 25 |
 
 ```javascript
@@ -670,12 +670,12 @@ const result = await host.mcp("genomes", "ensembl_vep_variant", {"variant_id": "
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_symbol` | струна | необязательный |
-| `gene_id` | струна | необязательный |
-| `homology_type` | струна | факультативный; по умолчанию: "orthologues"; enum: &#91;"orthologues", "paralogues", "projections"&#93; |
-| `target_species` | струна | необязательный |
+| `gene_symbol` | строка | необязательный |
+| `gene_id` | строка | необязательный |
+| `homology_type` | строка | факультативный; по умолчанию: "orthologues"; enum: &#91;"orthologues", "paralogues", "projections"&#93; |
+| `target_species` | строка | необязательный |
 | `target_taxon` | целое число | необязательный |
-| `species` | струна | факультативный; По умолчанию: "homo_sapiens" |
+| `species` | строка | факультативный; По умолчанию: "homo_sapiens" |
 | `max_homologies` | целое число | факультативный; По умолчанию: 200 |
 
 ```javascript
@@ -688,10 +688,10 @@ const result = await host.mcp("genomes", "ensembl_homology", {"gene_symbol": "BR
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `stable_id` | струна | необязательный |
-| `region` | струна | необязательный |
-| `species` | струна | факультативный; По умолчанию: "homo_sapiens" |
-| `seq_type` | струна | факультативный; по умолчанию: "genomic"; enum: &#91;"genomic", "cdna", "cds", "protein"&#93; |
+| `stable_id` | строка | необязательный |
+| `region` | строка | необязательный |
+| `species` | строка | факультативный; По умолчанию: "homo_sapiens" |
+| `seq_type` | строка | факультативный; по умолчанию: "genomic"; enum: &#91;"genomic", "cdna", "cds", "protein"&#93; |
 | `max_bytes` | целое число | факультативный; По умолчанию: 400000 |
 
 ```javascript
@@ -704,9 +704,9 @@ const result = await host.mcp("genomes", "ensembl_sequence", {"stable_id": "ENSP
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `region` | струна | **необходимый** |
-| `feature` | струна | факультативный; по умолчанию: "gene"; enum: &#91;"gene", "transcript", "exon", "cds", "regulatory", "motif", "repeat", "variation", "structural_variation", "band", "simple", "misc"&#93; |
-| `species` | струна | факультативный; По умолчанию: "homo_sapiens" |
+| `region` | строка | **обязательно** |
+| `feature` | строка | факультативный; по умолчанию: "gene"; enum: &#91;"gene", "transcript", "exon", "cds", "regulatory", "motif", "repeat", "variation", "structural_variation", "band", "simple", "misc"&#93; |
+| `species` | строка | факультативный; По умолчанию: "homo_sapiens" |
 | `max_features` | целое число | факультативный; По умолчанию: 500 |
 
 ```javascript
@@ -719,8 +719,8 @@ const result = await host.mcp("genomes", "ensembl_overlap_region", {"region": "7
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `genome` | струна | факультативный; По умолчанию: "hg38" |
-| `filter_text` | струна | необязательный |
+| `genome` | строка | факультативный; По умолчанию: "hg38" |
+| `filter_text` | строка | необязательный |
 | `max_tracks` | целое число | факультативный; По умолчанию: 200 |
 
 ```javascript
@@ -733,11 +733,11 @@ const result = await host.mcp("genomes", "ucsc_list_tracks", {"genome": "hg38", 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `track` | струна | **необходимый** |
-| `chrom` | струна | **необходимый** |
-| `start` | целое число | **необходимый** |
-| `end` | целое число | **необходимый** |
-| `genome` | струна | факультативный; По умолчанию: "hg38" |
+| `track` | строка | **обязательно** |
+| `chrom` | строка | **обязательно** |
+| `start` | целое число | **обязательно** |
+| `end` | целое число | **обязательно** |
+| `genome` | строка | факультативный; По умолчанию: "hg38" |
 | `max_rows` | целое число | факультативный; По умолчанию: 1000 |
 
 ```javascript
@@ -750,12 +750,12 @@ const result = await host.mcp("genomes", "ucsc_track_data", {"track": "cpgIsland
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `chrom` | струна | **необходимый** |
-| `start` | целое число | **необходимый** |
-| `end` | целое число | **необходимый** |
-| `genome` | струна | факультативный; По умолчанию: "hg38" |
-| `track` | струна | факультативный; По умолчанию: "phyloP100way" |
-| `include_values` | булевый | факультативный; Дефолт: ложный |
+| `chrom` | строка | **обязательно** |
+| `start` | целое число | **обязательно** |
+| `end` | целое число | **обязательно** |
+| `genome` | строка | факультативный; По умолчанию: "hg38" |
+| `track` | строка | факультативный; По умолчанию: "phyloP100way" |
+| `include_values` | логическое значение | факультативный; Дефолт: ложный |
 | `max_values` | целое число | факультативный; По умолчанию: 2000 |
 
 ```javascript
@@ -768,10 +768,10 @@ const result = await host.mcp("genomes", "ucsc_conservation", {"chrom": "chr7", 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `chrom` | струна | **необходимый** |
-| `start` | целое число | **необходимый** |
-| `end` | целое число | **необходимый** |
-| `genome` | струна | факультативный; По умолчанию: "hg38" |
+| `chrom` | строка | **обязательно** |
+| `start` | целое число | **обязательно** |
+| `end` | целое число | **обязательно** |
+| `genome` | строка | факультативный; По умолчанию: "hg38" |
 | `max_rows` | целое число | факультативный; По умолчанию: 1000 |
 
 ```javascript
@@ -784,8 +784,8 @@ const result = await host.mcp("genomes", "ucsc_tfbs_clusters", {"chrom": "chr7",
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `genome` | струна | факультативный; По умолчанию: "hg38" |
-| `filter_text` | струна | необязательный |
+| `genome` | строка | факультативный; По умолчанию: "hg38" |
+| `filter_text` | строка | необязательный |
 | `max_chroms` | целое число | факультативный; По умолчанию: 100 |
 
 ```javascript
@@ -799,14 +799,16 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>Показать операции и параметры</summary>
 
+**Правила координации gnomAD:** записывает штифт набора данных с помощью эталонной сборки. Коротковариантные генные/региональные запросы используют GRCh37 для r2.1/ExAC и GRCh38 для r3/r4; Структурно-вариантные генные запросы используют `gnomad_sv_r2_1` (GRCh37) или `gnomad_sv_r4` (GRCh38); Изменение штифта не преобразует входные координаты. `gene_constraint` и зеркало GnomAD ClinVar используют фиксированный поиск гена GRCh38 и не принимают аргумент набора данных. Митохондриальные запросы также используют фиксированный родительский поиск GRCh38. Поставляет либо ген, либо обе упорядоченные границы области, никогда оба режима. Границы областей должны быть целыми числами от 1 до 2,147,483,647. Разница в один миллион базисных разниц распространяется на `region_variants`. Это не отдельный митохондриальный предел. Сохраняйте идентификаторы структурно-вариантных идентификаторов с их исходным набором данных SV.
+
 ### `get_variant` {/* #get_variant */}
 
 Посмотрите на один короткий вариант gnomAD по ID и верните его частоту популяции. `variant_id` - `chrom-pos-ref-alt` в сборке данных ' (GRCh38 для r3/r4, GRCh37 для r2.1/ExAC), например. `19-44908822-C-T` (APOE rs7412); Сначала используйте `search_variants` для разрешения rsID.
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `variant_id` | струна | **необходимый** |
-| `dataset` | струна | факультативный; по умолчанию: "gnomad_r4"; Перечислим: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "эксцентричный"&#93; |
+| `variant_id` | строка | **обязательно** |
+| `dataset` | строка | факультативный; по умолчанию: "gnomad_r4"; Перечислим: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "эксцентричный"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "get_variant", {"variant_id": "19-44908822-C-T", "dataset": "gnomad_r4"})
@@ -818,8 +820,8 @@ const result = await host.mcp("variants", "get_variant", {"variant_id": "19-4490
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
-| `dataset` | струна | факультативный; по умолчанию: "gnomad_r4"; Перечислим: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "эксцентричный"&#93; |
+| `query` | строка | **обязательно** |
+| `dataset` | строка | факультативный; по умолчанию: "gnomad_r4"; Перечислим: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "эксцентричный"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "search_variants", {"query": "rs7412", "dataset": "gnomad_r4"})
@@ -827,13 +829,13 @@ const result = await host.mcp("variants", "search_variants", {"query": "rs7412",
 
 ### `gene_variants` {/* #gene_variants */}
 
-Перечислите все короткие варианты гномады в гене (полный список — может быть тысячи строк для больших генов). Передайте точно один из `gene_symbol` (символ HGNC, например). `APOE`) или `gene_id` (Ensembl gene ID, например. `ENSG00000130203`).
+Перечислите все короткие варианты гномады в гене. Границы генов и координаты вариантов используют сборку эталонных наборов данных (GRCh37 для r2.1/ExAC, GRCh38 для r3/r4). Полный список может содержать тысячи строк для больших генов. Передайте точно один из `gene_symbol` (символ HGNC, например). `APOE`) или `gene_id` (Ensembl gene ID, например. `ENSG00000130203`).
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_symbol` | струна | необязательный |
-| `gene_id` | струна | необязательный |
-| `dataset` | струна | факультативный; по умолчанию: "gnomad_r4"; Перечислим: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "эксцентричный"&#93; |
+| `gene_symbol` | строка | необязательный |
+| `gene_id` | строка | необязательный |
+| `dataset` | строка | факультативный; по умолчанию: "gnomad_r4"; Перечислим: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "эксцентричный"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "gene_variants", {"gene_symbol": "APOE", "dataset": "gnomad_r4"})
@@ -845,8 +847,8 @@ const result = await host.mcp("variants", "gene_variants", {"gene_symbol": "APOE
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_symbol` | струна | необязательный |
-| `gene_id` | струна | необязательный |
+| `gene_symbol` | строка | необязательный |
+| `gene_id` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP53"})
@@ -854,14 +856,14 @@ const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP
 
 ### `region_variants` {/* #region_variants */}
 
-Перечислите все короткие варианты гномады в геномной области (макс 1 Mb — разделение больших областей на последовательные окна). `chrom` - это название хромосомы без префикса `chr` (`1`-`22`, `X`, `Y`); `start`/`stop` - это 1 на основе включительно, а `stop - start` должен быть &lt; = 1,000,000. Набор данных определяет исходную сборку координат (GRCh38 для r3/r4).
+Перечислите все короткие варианты гномады в геномной области (макс 1 Mb — разделение больших областей на последовательные окна). `chrom` принимает `1`-`22`, `X`, `Y`, дополнительный префикс `chr` и строчную версию `x`/`y`; `start`/`stop` - это 1 на основе включительно, а `stop - start` должен быть &lt; = 1,000,000. Набор данных определяет исходную сборку координат (GRCh37 для r2.1/ExAC, GRCh38 для r3/r4); Координаты ввода уже должны использовать эту сборку без автоматического подъема.
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `chrom` | струна | **необходимый** |
-| `start` | целое число | **необходимый** |
-| `stop` | целое число | **необходимый** |
-| `dataset` | струна | факультативный; по умолчанию: "gnomad_r4"; Перечислим: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "эксцентричный"&#93; |
+| `chrom` | строка | **обязательно** |
+| `start` | целое число | **обязательно**; Минимум: 1; Максимум: 2147483647 |
+| `stop` | целое число | **обязательно**; Минимум: 1; Максимум: 2147483647 |
+| `dataset` | строка | факультативный; по умолчанию: "gnomad_r4"; Перечислим: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "эксцентричный"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "region_variants", {"chrom": "1", "start": 55039475, "stop": 55064852, "dataset": "gnomad_r4"})
@@ -873,8 +875,8 @@ const result = await host.mcp("variants", "region_variants", {"chrom": "1", "sta
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `variant_id` | струна | **необходимый** |
-| `source_build` | струна | факультативный; по умолчанию: "GRCh37"; enum: &#91;"GRCh37", "GRCh38"&#93; |
+| `variant_id` | строка | **обязательно** |
+| `source_build` | строка | факультативный; по умолчанию: "GRCh37"; enum: &#91;"GRCh37", "GRCh38"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "liftover_variant", {"variant_id": "1-55516888-G-GA", "source_build": "GRCh37"})
@@ -886,8 +888,8 @@ const result = await host.mcp("variants", "liftover_variant", {"variant_id": "1-
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_symbol` | струна | необязательный |
-| `gene_id` | струна | необязательный |
+| `gene_symbol` | строка | необязательный |
+| `gene_id` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_variants", {"gene_symbol": "BRCA1"})
@@ -899,9 +901,9 @@ const result = await host.mcp("variants", "clinvar_variants", {"gene_symbol": "B
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_symbol` | струна | необязательный |
-| `gene_id` | струна | необязательный |
-| `dataset` | струна | факультативный; по умолчанию: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
+| `gene_symbol` | строка | необязательный |
+| `gene_id` | строка | необязательный |
+| `dataset` | строка | факультативный; по умолчанию: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "structural_variants", {"gene_symbol": "TP53", "dataset": "gnomad_sv_r4"})
@@ -913,8 +915,8 @@ const result = await host.mcp("variants", "structural_variants", {"gene_symbol":
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `sv_id` | струна | **необходимый** |
-| `dataset` | струна | факультативный; по умолчанию: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
+| `sv_id` | строка | **обязательно** |
+| `dataset` | строка | факультативный; по умолчанию: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "DEL_CHR17_A5250EA9", "dataset": "gnomad_sv_r4"})
@@ -926,11 +928,11 @@ const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "D
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_symbol` | струна | необязательный |
-| `gene_id` | струна | необязательный |
-| `region_start` | целое число | необязательный |
-| `region_stop` | целое число | необязательный |
-| `dataset` | струна | факультативный; по умолчанию: "gnomad_r4"; Перечислим: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "эксцентричный"&#93; |
+| `gene_symbol` | строка | необязательный |
+| `gene_id` | строка | необязательный |
+| `region_start` | целое число | факультативный; Минимум: 1; Максимум: 2147483647 |
+| `region_stop` | целое число | факультативный; Минимум: 1; Максимум: 2147483647 |
+| `dataset` | строка | факультативный; по умолчанию: "gnomad_r4"; Перечислим: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "эксцентричный"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "mitochondrial_variants", {"gene_symbol": "MT-TL1", "dataset": "gnomad_r4"})
@@ -942,7 +944,7 @@ const result = await host.mcp("variants", "mitochondrial_variants", {"gene_symbo
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
+| `query` | строка | **обязательно** |
 | `max_records` | целое число | факультативный; По умолчанию: 50 |
 
 ```javascript
@@ -955,7 +957,7 @@ const result = await host.mcp("variants", "clinvar_search", {"query": "BRCA1 pat
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accessions` | &#91;'string', 'array'&#93; | **необходимый** |
+| `accessions` | ['string', 'array'] | **обязательно** |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_get_records", {"accessions": ["VCV000045122", "RCV000019428", "45123"]})
@@ -967,7 +969,7 @@ const result = await host.mcp("variants", "clinvar_get_records", {"accessions": 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `rsid` | струна | **необходимый** |
+| `rsid` | строка | **обязательно** |
 | `max_records` | целое число | факультативный; По умолчанию: 50 |
 
 ```javascript
@@ -980,7 +982,7 @@ const result = await host.mcp("variants", "clinvar_variant_by_rsid", {"rsid": "r
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `rsids` | массив струн | **необходимый** |
+| `rsids` | массив строк | **обязательно** |
 
 ```javascript
 const result = await host.mcp("variants", "dbsnp_get_rsids", {"rsids": ["rs7412", "rs429358"]})
@@ -992,10 +994,10 @@ const result = await host.mcp("variants", "dbsnp_get_rsids", {"rsids": ["rs7412"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `chrom` | струна | **необходимый** |
-| `start` | целое число | **необходимый** |
-| `stop` | целое число | **необходимый** |
-| `assembly` | струна | факультативный; по умолчанию: "GRCh38"; enum: &#91;"GRCh38", "GRCh37"&#93; |
+| `chrom` | строка | **обязательно** |
+| `start` | целое число | **обязательно** |
+| `stop` | целое число | **обязательно** |
+| `assembly` | строка | факультативный; по умолчанию: "GRCh38"; enum: &#91;"GRCh38", "GRCh37"&#93; |
 | `max_rsids` | целое число | факультативный; По умолчанию: 200 |
 
 ```javascript
@@ -1015,17 +1017,17 @@ const result = await host.mcp("variants", "dbsnp_search_by_region", {"chrom": "1
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `condition` | струна | необязательный |
-| `intervention` | струна | необязательный |
-| `sponsor` | струна | необязательный |
-| `location` | струна | необязательный |
-| `status` | массив струн | необязательный |
-| `phase` | массив струн | необязательный |
-| `study_type` | струна | факультативный; &#91;"INTERVENTIONAL", "OBSERVATIONAL", "EXPANDED_ACCESS"&#93; |
-| `advanced_query` | струна | необязательный |
+| `condition` | строка | необязательный |
+| `intervention` | строка | необязательный |
+| `sponsor` | строка | необязательный |
+| `location` | строка | необязательный |
+| `status` | массив строк | необязательный |
+| `phase` | массив строк | необязательный |
+| `study_type` | строка | факультативный; &#91;"INTERVENTIONAL", "OBSERVATIONAL", "EXPANDED_ACCESS"&#93; |
+| `advanced_query` | строка | необязательный |
 | `page_size` | целое число | факультативный; по умолчанию: 10; Минимум: 1; Максимум: 1000 |
-| `page_token` | струна | необязательный |
-| `count_total` | булевый | факультативный; Дефолт: ложный |
+| `page_token` | строка | необязательный |
+| `count_total` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_trials", {"condition": "lung cancer", "status": ["RECRUITING"], "phase": ["PHASE3"], "count_total": true, "page_size": 10})
@@ -1037,7 +1039,7 @@ const result = await host.mcp("clinical-trials", "search_trials", {"condition": 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `nct_id` | струна | **необходимый** |
+| `nct_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "get_trial_details", {"nct_id": "NCT03661411"})
@@ -1049,13 +1051,13 @@ const result = await host.mcp("clinical-trials", "get_trial_details", {"nct_id":
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `sponsor_name` | струна | **необходимый** |
-| `condition` | струна | необязательный |
-| `phase` | массив струн | необязательный |
-| `status` | массив струн | необязательный |
+| `sponsor_name` | строка | **обязательно** |
+| `condition` | строка | необязательный |
+| `phase` | массив строк | необязательный |
+| `status` | массив строк | необязательный |
 | `page_size` | целое число | факультативный; по умолчанию: 10; Минимум: 1; Максимум: 1000 |
-| `page_token` | струна | необязательный |
-| `count_total` | булевый | факультативный; Дефолт: ложный |
+| `page_token` | строка | необязательный |
+| `count_total` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_by_sponsor", {"sponsor_name": "Pfizer", "phase": ["PHASE3"], "count_total": true})
@@ -1067,11 +1069,11 @@ const result = await host.mcp("clinical-trials", "search_by_sponsor", {"sponsor_
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `condition` | струна | необязательный |
-| `institution` | струна | необязательный |
-| `location` | струна | необязательный |
-| `investigator_name` | струна | необязательный |
-| `status` | массив струн | необязательный |
+| `condition` | строка | необязательный |
+| `institution` | строка | необязательный |
+| `location` | строка | необязательный |
+| `investigator_name` | строка | необязательный |
+| `status` | массив строк | необязательный |
 | `page_size` | целое число | факультативный; по умолчанию: 20; Минимум: 1; Максимум: 1000 |
 
 ```javascript
@@ -1084,10 +1086,10 @@ const result = await host.mcp("clinical-trials", "search_investigators", {"condi
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `nct_id` | струна | необязательный |
-| `condition` | струна | необязательный |
-| `phase` | массив струн | необязательный |
-| `start_date_after` | струна | необязательный |
+| `nct_id` | строка | необязательный |
+| `condition` | строка | необязательный |
+| `phase` | массив строк | необязательный |
+| `start_date_after` | строка | необязательный |
 | `page_size` | целое число | факультативный; по умолчанию: 50; Минимум: 1; Максимум: 1000 |
 
 ```javascript
@@ -1100,14 +1102,14 @@ const result = await host.mcp("clinical-trials", "analyze_endpoints", {"nct_id":
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `condition` | струна | необязательный |
-| `eligibility_keywords` | струна | необязательный |
-| `min_age` | струна | необязательный |
-| `max_age` | струна | необязательный |
-| `sex` | струна | факультативный; &#91;"ALL", "MALE", "FEMALE"&#93; |
-| `status` | массив струн | необязательный |
+| `condition` | строка | необязательный |
+| `eligibility_keywords` | строка | необязательный |
+| `min_age` | строка | необязательный |
+| `max_age` | строка | необязательный |
+| `sex` | строка | факультативный; &#91;"ALL", "MALE", "FEMALE"&#93; |
+| `status` | массив строк | необязательный |
 | `page_size` | целое число | факультативный; по умолчанию: 10; Минимум: 1; Максимум: 1000 |
-| `page_token` | струна | необязательный |
+| `page_token` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_by_eligibility", {"condition": "diabetes", "min_age": "65 Years", "sex": "FEMALE"})
@@ -1126,7 +1128,7 @@ const result = await host.mcp("clinical-trials", "search_by_eligibility", {"cond
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene` | струна | необязательный |
+| `gene` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_gene_validity", {"gene": "BRCA2"})
@@ -1138,8 +1140,8 @@ const result = await host.mcp("clinical-genomics", "clingen_gene_validity", {"ge
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene` | струна | необязательный |
-| `include_regions` | булевый | факультативный; Дефолт: ложный |
+| `gene` | строка | необязательный |
+| `include_regions` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_dosage_sensitivity", {"gene": "TP53"})
@@ -1151,8 +1153,8 @@ const result = await host.mcp("clinical-genomics", "clingen_dosage_sensitivity",
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene` | струна | необязательный |
-| `context` | струна | факультативный; по умолчанию: "both"; enum: &#91;"adult", "pediatric", "both"&#93; |
+| `gene` | строка | необязательный |
+| `context` | строка | факультативный; по умолчанию: "both"; enum: &#91;"adult", "pediatric", "both"&#93; |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_actionability", {"gene": "BRCA1", "context": "adult"})
@@ -1164,9 +1166,9 @@ ClinGen Evidence Repository (ERepo) - экспертно-панельная кл
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene` | струна | необязательный |
-| `caid` | струна | необязательный |
-| `hgvs` | струна | необязательный |
+| `gene` | строка | необязательный |
+| `caid` | строка | необязательный |
+| `hgvs` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_variant_classifications", {"gene": "BRCA1"})
@@ -1178,7 +1180,7 @@ const result = await host.mcp("clinical-genomics", "clingen_variant_classificati
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `entrez_symbol` | струна | **необходимый** |
+| `entrez_symbol` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_genes", {"entrez_symbol": "BRAF"})
@@ -1190,7 +1192,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_genes", {"entre
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_id` | целое число | **необходимый** |
+| `gene_id` | целое число | **обязательно** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_gene_variants", {"gene_id": 5})
@@ -1202,7 +1204,7 @@ const result = await host.mcp("clinical-genomics", "civic_gene_variants", {"gene
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `variant_id` | целое число | **необходимый** |
+| `variant_id` | целое число | **обязательно** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_variant", {"variant_id": 12})
@@ -1214,7 +1216,7 @@ const result = await host.mcp("clinical-genomics", "civic_get_variant", {"varian
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `name` | струна | **необходимый** |
+| `name` | строка | **обязательно** |
 | `gene_id` | целое число | необязательный |
 
 ```javascript
@@ -1227,7 +1229,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_variants", {"na
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `evidence_id` | целое число | **необходимый** |
+| `evidence_id` | целое число | **обязательно** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_evidence_item", {"evidence_id": 1409})
@@ -1239,16 +1241,16 @@ const result = await host.mcp("clinical-genomics", "civic_get_evidence_item", {"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `disease_name` | струна | необязательный |
-| `therapy_name` | струна | необязательный |
-| `evidence_level` | струна | необязательный |
-| `evidence_type` | струна | необязательный |
-| `evidence_direction` | струна | необязательный |
-| `significance` | струна | необязательный |
-| `variant_origin` | струна | необязательный |
+| `disease_name` | строка | необязательный |
+| `therapy_name` | строка | необязательный |
+| `evidence_level` | строка | необязательный |
+| `evidence_type` | строка | необязательный |
+| `evidence_direction` | строка | необязательный |
+| `significance` | строка | необязательный |
+| `variant_origin` | строка | необязательный |
 | `evidence_rating` | целое число | необязательный |
-| `status` | струна | необязательный |
-| `molecular_profile_name` | струна | необязательный |
+| `status` | строка | необязательный |
+| `molecular_profile_name` | строка | необязательный |
 | `molecular_profile_id` | целое число | необязательный |
 | `variant_id` | целое число | необязательный |
 | `disease_id` | целое число | необязательный |
@@ -1267,7 +1269,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_evidence", {"di
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `assertion_id` | целое число | **необходимый** |
+| `assertion_id` | целое число | **обязательно** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_assertion", {"assertion_id": 7})
@@ -1279,22 +1281,22 @@ const result = await host.mcp("clinical-genomics", "civic_get_assertion", {"asse
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `disease_name` | струна | необязательный |
-| `therapy_name` | струна | необязательный |
-| `assertion_type` | струна | необязательный |
-| `assertion_direction` | струна | необязательный |
-| `significance` | струна | необязательный |
-| `amp_level` | струна | необязательный |
-| `status` | струна | необязательный |
-| `molecular_profile_name` | струна | необязательный |
+| `disease_name` | строка | необязательный |
+| `therapy_name` | строка | необязательный |
+| `assertion_type` | строка | необязательный |
+| `assertion_direction` | строка | необязательный |
+| `significance` | строка | необязательный |
+| `amp_level` | строка | необязательный |
+| `status` | строка | необязательный |
+| `molecular_profile_name` | строка | необязательный |
 | `molecular_profile_id` | целое число | необязательный |
 | `variant_id` | целое число | необязательный |
-| `variant_name` | струна | необязательный |
+| `variant_name` | строка | необязательный |
 | `disease_id` | целое число | необязательный |
 | `therapy_id` | целое число | необязательный |
 | `phenotype_id` | целое число | необязательный |
 | `evidence_id` | целое число | необязательный |
-| `summary` | струна | необязательный |
+| `summary` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_assertions", {"disease_name": "melanoma"})
@@ -1306,7 +1308,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_assertions", {"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `mp_id` | целое число | **необходимый** |
+| `mp_id` | целое число | **обязательно** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_molecular_profile", {"mp_id": 12})
@@ -1318,7 +1320,7 @@ const result = await host.mcp("clinical-genomics", "civic_get_molecular_profile"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `name` | струна | **необходимый** |
+| `name` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_molecular_profiles", {"name": "BRAF V600E"})
@@ -1330,7 +1332,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_molecular_profi
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `name` | струна | **необходимый** |
+| `name` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_diseases", {"name": "melanoma"})
@@ -1342,7 +1344,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_diseases", {"na
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `name` | струна | **необходимый** |
+| `name` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_therapies", {"name": "vemurafenib"})
@@ -1354,7 +1356,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_therapies", {"n
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
+| `query` | строка | **обязательно** |
 | `variables` | объект | необязательный |
 
 ```javascript
@@ -1367,7 +1369,7 @@ const result = await host.mcp("clinical-genomics", "open_targets_graphql", {"que
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `efo_id` | струна | **необходимый** |
+| `efo_id` | строка | **обязательно** |
 | `size` | целое число | факультативный; По умолчанию: 25 |
 
 ```javascript
@@ -1380,7 +1382,7 @@ const result = await host.mcp("clinical-genomics", "open_targets_disease_drugs",
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `efo_id` | струна | **необходимый** |
+| `efo_id` | строка | **обязательно** |
 | `size` | целое число | факультативный; По умолчанию: 25 |
 
 ```javascript
@@ -1393,7 +1395,7 @@ const result = await host.mcp("clinical-genomics", "open_targets_disease_targets
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `chembl_id` | струна | **необходимый** |
+| `chembl_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "open_targets_drug", {"chembl_id": "CHEMBL1201583"})
@@ -1412,7 +1414,7 @@ const result = await host.mcp("clinical-genomics", "open_targets_drug", {"chembl
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `emdb_ids` | массив струн | **необходимый** |
+| `emdb_ids` | массив строк | **обязательно** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_entries", {"emdb_ids": ["EMD-11638", "emd-3061", "1234"]})
@@ -1424,7 +1426,7 @@ const result = await host.mcp("structures", "emdb_get_entries", {"emdb_ids": ["E
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
+| `query` | строка | **обязательно** |
 | `max_rows` | целое число | факультативный; По умолчанию: 1000 |
 
 ```javascript
@@ -1437,8 +1439,8 @@ const result = await host.mcp("structures", "emdb_search_entries", {"query": "ti
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `emdb_ids` | массив струн | **необходимый** |
-| `section` | струна | **необходимый**; enum: &#91;"publications", "map", "sample", "imaging"&#93; |
+| `emdb_ids` | массив строк | **обязательно** |
+| `section` | строка | **обязательно**; enum: &#91;"publications", "map", "sample", "imaging"&#93; |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_entry_section", {"emdb_ids": ["EMD-11638"], "section": "imaging"})
@@ -1450,7 +1452,7 @@ const result = await host.mcp("structures", "emdb_get_entry_section", {"emdb_ids
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `emdb_ids` | массив струн | **необходимый** |
+| `emdb_ids` | массив строк | **обязательно** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_validation", {"emdb_ids": ["EMD-11638", "EMD-3061"]})
@@ -1462,7 +1464,7 @@ const result = await host.mcp("structures", "emdb_get_validation", {"emdb_ids": 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `complex_acs` | массив струн | **необходимый** |
+| `complex_acs` | массив строк | **обязательно** |
 
 ```javascript
 const result = await host.mcp("structures", "complexportal_get_complexes", {"complex_acs": ["CPX-2158", "CPX-2419"]})
@@ -1474,8 +1476,8 @@ const result = await host.mcp("structures", "complexportal_get_complexes", {"com
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
-| `participants_only` | булевый | факультативный; Дефолт: правда |
+| `accession` | строка | **обязательно** |
+| `participants_only` | логическое значение | факультативный; Дефолт: правда |
 
 ```javascript
 const result = await host.mcp("structures", "complexportal_search_by_participant", {"accession": "P69905", "participants_only": true})
@@ -1487,10 +1489,10 @@ const result = await host.mcp("structures", "complexportal_search_by_participant
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
-| `min_mi_score` | номер | факультативный; По умолчанию: 0 |
-| `max_mi_score` | номер | факультативный; По умолчанию: 1 |
-| `interactor_species` | массив струн | необязательный |
+| `query` | строка | **обязательно** |
+| `min_mi_score` | число | факультативный; По умолчанию: 0 |
+| `max_mi_score` | число | факультативный; По умолчанию: 1 |
+| `interactor_species` | массив строк | необязательный |
 | `max_records_returned` | целое число | факультативный; По умолчанию: 500 |
 
 ```javascript
@@ -1503,7 +1505,7 @@ const result = await host.mcp("structures", "intact_fetch_interactions", {"query
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
+| `query` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("structures", "intact_get_interactor", {"query": "P04637"})
@@ -1515,8 +1517,8 @@ const result = await host.mcp("structures", "intact_get_interactor", {"query": "
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `interaction_ac` | струна | **необходимый** |
-| `include_participants` | булевый | факультативный; Дефолт: правда |
+| `interaction_ac` | строка | **обязательно** |
+| `include_participants` | логическое значение | факультативный; Дефолт: правда |
 
 ```javascript
 const result = await host.mcp("structures", "intact_get_interaction_details", {"interaction_ac": "EBI-15635490", "include_participants": true})
@@ -1528,10 +1530,10 @@ const result = await host.mcp("structures", "intact_get_interaction_details", {"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `seed_accessions` | массив струн | **необходимый** |
-| `min_mi_score` | номер | факультативный; По умолчанию: 0.45 |
+| `seed_accessions` | массив строк | **обязательно** |
+| `min_mi_score` | число | факультативный; По умолчанию: 0.45 |
 | `max_interactors_expanded` | целое число | факультативный; По умолчанию: 25 |
-| `interactor_species` | массив струн | необязательный |
+| `interactor_species` | массив строк | необязательный |
 
 ```javascript
 const result = await host.mcp("structures", "intact_build_network", {"seed_accessions": ["P04637", "Q00987"], "min_mi_score": 0.45, "max_interactors_expanded": 25})
@@ -1543,14 +1545,14 @@ const result = await host.mcp("structures", "intact_build_network", {"seed_acces
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `text` | струна | необязательный |
-| `organism` | струна | необязательный |
+| `text` | строка | необязательный |
+| `organism` | строка | необязательный |
 | `taxonomy_id` | целое число | необязательный |
-| `uniprot_accession` | струна | необязательный |
-| `experimental_method` | струна | необязательный |
-| `max_resolution_angstrom` | номер | необязательный |
-| `ligand_comp_id` | струна | необязательный |
-| `include_computed_models` | булевый | факультативный; Дефолт: ложный |
+| `uniprot_accession` | строка | необязательный |
+| `experimental_method` | строка | необязательный |
+| `max_resolution_angstrom` | число | необязательный |
+| `ligand_comp_id` | строка | необязательный |
+| `include_computed_models` | логическое значение | факультативный; Дефолт: ложный |
 | `max_rows` | целое число | факультативный; По умолчанию: 100 |
 
 ```javascript
@@ -1563,7 +1565,7 @@ const result = await host.mcp("structures", "pdb_search_structures", {"uniprot_a
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `pdb_ids` | массив струн | **необходимый** |
+| `pdb_ids` | массив строк | **обязательно** |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_get_structures", {"pdb_ids": ["1TUP", "1tup", "6XYZ"]})
@@ -1575,9 +1577,9 @@ const result = await host.mcp("structures", "pdb_get_structures", {"pdb_ids": ["
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `pdb_id` | струна | **необходимый** |
-| `entity_ids` | массив струн | необязательный |
-| `include_sequences` | булевый | факультативный; Дефолт: ложный |
+| `pdb_id` | строка | **обязательно** |
+| `entity_ids` | массив строк | необязательный |
+| `include_sequences` | логическое значение | факультативный; Дефолт: ложный |
 | `max_bytes` | целое число | факультативный; По умолчанию: 400000 |
 
 ```javascript
@@ -1590,7 +1592,7 @@ const result = await host.mcp("structures", "pdb_get_entities", {"pdb_id": "1TUP
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `pdb_id` | струна | **необходимый** |
+| `pdb_id` | строка | **обязательно** |
 | `max_ligands` | целое число | факультативный; По умолчанию: 25 |
 
 ```javascript
@@ -1603,8 +1605,8 @@ AlphaFold DB предсказывает структуру метаданных 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `uniprot_accession` | струна | **необходимый** |
-| `include_sequence` | булевый | факультативный; Дефолт: ложный |
+| `uniprot_accession` | строка | **обязательно** |
+| `include_sequence` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("structures", "alphafold_get_prediction", {"uniprot_accession": "P04637"})
@@ -1616,7 +1618,7 @@ const result = await host.mcp("structures", "alphafold_get_prediction", {"unipro
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `uniprot_accessions` | массив струн | **необходимый** |
+| `uniprot_accessions` | массив строк | **обязательно** |
 
 ```javascript
 const result = await host.mcp("structures", "alphafold_check_coverage", {"uniprot_accessions": ["P04637", "P38398", "Q9Y6K9"]})
@@ -1635,9 +1637,9 @@ const result = await host.mcp("structures", "alphafold_check_coverage", {"unipro
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `name` | струна | необязательный |
-| `chembl_id` | струна | необязательный |
-| `smiles` | струна | необязательный |
+| `name` | строка | необязательный |
+| `chembl_id` | строка | необязательный |
+| `smiles` | строка | необязательный |
 | `similarity_threshold` | целое число | факультативный; Минимум: 70; Максимум: 100 |
 | `max_phase` | целое число | факультативный; enum: &#91;0, 1, 2, 3, 4&#93; |
 | `limit` | целое число | факультативный; по умолчанию: 20; Минимум: 1; Максимум: 1000 |
@@ -1652,11 +1654,11 @@ const result = await host.mcp("chembl", "compound_search", {"name": "aspirin", "
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `indication` | струна | **необходимый** |
-| `drug_name` | струна | необязательный |
-| `molecule_chembl_id` | струна | необязательный |
+| `indication` | строка | **обязательно** |
+| `drug_name` | строка | необязательный |
+| `molecule_chembl_id` | строка | необязательный |
 | `max_phase` | целое число | факультативный; enum: &#91;0, 1, 2, 3, 4&#93; |
-| `only_approved` | булевый | факультативный; Дефолт: ложный |
+| `only_approved` | логическое значение | факультативный; Дефолт: ложный |
 | `limit` | целое число | факультативный; по умолчанию: 20; Минимум: 1; Максимум: 1000 |
 
 ```javascript
@@ -1669,7 +1671,7 @@ Retrieve ChEMBL вычислил молекулярные свойства дл�
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `molecule_chembl_id` | струна | **необходимый** |
+| `molecule_chembl_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("chembl", "get_admet", {"molecule_chembl_id": "CHEMBL25"})
@@ -1681,13 +1683,13 @@ const result = await host.mcp("chembl", "get_admet", {"molecule_chembl_id": "CHE
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `molecule_chembl_id` | струна | необязательный |
-| `target_chembl_id` | струна | необязательный |
-| `activity_type` | струна | факультативный; enum: &#91;"IC50", "EC50", "Ki", "Kd", "AC50", "GI50", "ED50", "Potency"&#93; |
-| `min_pchembl` | номер | факультативный; Минимум: 0; Максимум: 14 |
-| `min_value` | номер | необязательный |
-| `max_value` | номер | необязательный |
-| `unit` | струна | факультативный; enum: &#91;"nM", "uM", "mM", "pM", "M"&#93; |
+| `molecule_chembl_id` | строка | необязательный |
+| `target_chembl_id` | строка | необязательный |
+| `activity_type` | строка | факультативный; enum: &#91;"IC50", "EC50", "Ki", "Kd", "AC50", "GI50", "ED50", "Potency"&#93; |
+| `min_pchembl` | число | факультативный; Минимум: 0; Максимум: 14 |
+| `min_value` | число | необязательный |
+| `max_value` | число | необязательный |
+| `unit` | строка | факультативный; enum: &#91;"nM", "uM", "mM", "pM", "M"&#93; |
 | `limit` | целое число | факультативный; по умолчанию: 20; Минимум: 1; Максимум: 1000 |
 
 ```javascript
@@ -1700,9 +1702,9 @@ const result = await host.mcp("chembl", "get_bioactivity", {"molecule_chembl_id"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `molecule_chembl_id` | струна | необязательный |
-| `target_chembl_id` | струна | необязательный |
-| `action_type` | струна | факультативный; enum: &#91;"INHIBITOR", "AGONIST", "ANTAGONIST", "BLOCKER", "MODULATOR", "OPENER", "ACTIVATOR", "POSITIVE ALLOSTERIC MODULATOR", "NEGATIVE ALLOSTERIC MODULATOR", "PARTIAL AGONIST", "INVERSE AGONIST"&#93; |
+| `molecule_chembl_id` | строка | необязательный |
+| `target_chembl_id` | строка | необязательный |
+| `action_type` | строка | факультативный; enum: &#91;"INHIBITOR", "AGONIST", "ANTAGONIST", "BLOCKER", "MODULATOR", "OPENER", "ACTIVATOR", "POSITIVE ALLOSTERIC MODULATOR", "NEGATIVE ALLOSTERIC MODULATOR", "PARTIAL AGONIST", "INVERSE AGONIST"&#93; |
 | `limit` | целое число | факультативный; по умолчанию: 20; Минимум: 1; Максимум: 1000 |
 
 ```javascript
@@ -1715,11 +1717,11 @@ const result = await host.mcp("chembl", "get_mechanism", {"molecule_chembl_id": 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `target_name` | струна | необязательный |
-| `gene_symbol` | струна | необязательный |
-| `target_chembl_id` | струна | необязательный |
-| `organism` | струна | необязательный |
-| `target_type` | струна | факультативный; enum: &#91;"SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN FAMILY", "ORGANISM", "TISSUE", "CELL-LINE", "NUCLEIC-ACID", "SUBCELLULAR"&#93; |
+| `target_name` | строка | необязательный |
+| `gene_symbol` | строка | необязательный |
+| `target_chembl_id` | строка | необязательный |
+| `organism` | строка | необязательный |
+| `target_type` | строка | факультативный; enum: &#91;"SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN FAMILY", "ORGANISM", "TISSUE", "CELL-LINE", "NUCLEIC-ACID", "SUBCELLULAR"&#93; |
 | `limit` | целое число | факультативный; по умолчанию: 20; Минимум: 1; Максимум: 1000 |
 
 ```javascript
@@ -1751,10 +1753,10 @@ const result = await host.mcp("biorxiv", "get_categories", {})
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `server` | струна | факультативный; по умолчанию: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
-| `category` | струна | факультативный; Перечислим: &#91;"Поведение и познание животных", "биохимия", "биоинженерия", "биоинформатика", "биофизика", "Раковая биология", "клеточная биология", "клинические испытания", "биология развития", "экология", "эпидемиология", "эволюционная биология", "генетика", "геномика", "иммунология", "микробиология", "молекулярная биология", "нейробиология", "палеонтология", "патология", "фармакология и токсикология", "физиология", "Биология растений", "научная коммуникация и образование", "Синтетическая биология", "системная биология", "зоология"&#93; |
-| `date_from` | струна | необязательный |
-| `date_to` | струна | необязательный |
+| `server` | строка | факультативный; по умолчанию: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `category` | строка | факультативный; Перечислим: &#91;"Поведение и познание животных", "биохимия", "биоинженерия", "биоинформатика", "биофизика", "Раковая биология", "клеточная биология", "клинические испытания", "биология развития", "экология", "эпидемиология", "эволюционная биология", "генетика", "геномика", "иммунология", "микробиология", "молекулярная биология", "нейробиология", "палеонтология", "патология", "фармакология и токсикология", "физиология", "Биология растений", "научная коммуникация и образование", "Синтетическая биология", "системная биология", "зоология"&#93; |
+| `date_from` | строка | необязательный |
+| `date_to` | строка | необязательный |
 | `recent_days` | целое число | факультативный; Минимум: 1 |
 | `recent_count` | целое число | факультативный; Минимум: 1 |
 | `limit` | целое число | факультативный; по умолчанию: 10; Минимум: 1; Максимум: 100 |
@@ -1770,8 +1772,8 @@ const result = await host.mcp("biorxiv", "search_preprints", {"recent_days": 30,
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `doi` | струна | необязательный |
-| `server` | струна | факультативный; по умолчанию: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `doi` | строка | **обязательно** |
+| `server` | строка | факультативный; по умолчанию: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_preprint", {"doi": "10.1101/339747"})
@@ -1783,11 +1785,11 @@ const result = await host.mcp("biorxiv", "get_preprint", {"doi": "10.1101/339747
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `server` | струна | факультативный; по умолчанию: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
-| `publisher` | струна | необязательный |
-| `include_details` | булевый | факультативный; Дефолт: правда |
-| `date_from` | струна | необязательный |
-| `date_to` | струна | необязательный |
+| `server` | строка | факультативный; по умолчанию: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `publisher` | строка | необязательный |
+| `include_details` | логическое значение | факультативный; Дефолт: правда |
+| `date_from` | строка | необязательный |
+| `date_to` | строка | необязательный |
 | `recent_days` | целое число | факультативный; Минимум: 1 |
 | `recent_count` | целое число | факультативный; Минимум: 1 |
 | `limit` | целое число | факультативный; по умолчанию: 10; Минимум: 1; Максимум: 100 |
@@ -1803,11 +1805,11 @@ const result = await host.mcp("biorxiv", "search_published_preprints", {"publish
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `funder_ror_id` | струна | необязательный |
-| `date_from` | струна | необязательный |
-| `date_to` | струна | необязательный |
-| `server` | струна | факультативный; по умолчанию: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
-| `category` | струна | факультативный; Перечислим: &#91;"Поведение и познание животных", "биохимия", "биоинженерия", "биоинформатика", "биофизика", "Раковая биология", "клеточная биология", "клинические испытания", "биология развития", "экология", "эпидемиология", "эволюционная биология", "генетика", "геномика", "иммунология", "микробиология", "молекулярная биология", "нейробиология", "палеонтология", "патология", "фармакология и токсикология", "физиология", "Биология растений", "научная коммуникация и образование", "Синтетическая биология", "системная биология", "зоология"&#93; |
+| `funder_ror_id` | строка | **обязательно** |
+| `date_from` | строка | **обязательно** |
+| `date_to` | строка | **обязательно** |
+| `server` | строка | факультативный; по умолчанию: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `category` | строка | факультативный; Перечислим: &#91;"Поведение и познание животных", "биохимия", "биоинженерия", "биоинформатика", "биофизика", "Раковая биология", "клеточная биология", "клинические испытания", "биология развития", "экология", "эпидемиология", "эволюционная биология", "генетика", "геномика", "иммунология", "микробиология", "молекулярная биология", "нейробиология", "палеонтология", "патология", "фармакология и токсикология", "физиология", "Биология растений", "научная коммуникация и образование", "Синтетическая биология", "системная биология", "зоология"&#93; |
 | `limit` | целое число | факультативный; по умолчанию: 10; Минимум: 1; Максимум: 100 |
 | `cursor` | целое число | факультативный; по умолчанию: 0; Минимум: 0 |
 
@@ -1821,7 +1823,7 @@ BioRxiv представляет статистические данные по 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `interval` | струна | факультативный; по умолчанию: "monthly"; (перенаправлено с «"monthly", "yearly"») |
+| `interval` | строка | факультативный; по умолчанию: "monthly"; (перенаправлено с «"monthly", "yearly"») |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_content_statistics", {"interval": "yearly"})
@@ -1833,7 +1835,7 @@ const result = await host.mcp("biorxiv", "get_content_statistics", {"interval": 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `interval` | струна | факультативный; по умолчанию: "monthly"; (перенаправлено с «"monthly", "yearly"») |
+| `interval` | строка | факультативный; по умолчанию: "monthly"; (перенаправлено с «"monthly", "yearly"») |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_usage_statistics", {"interval": "yearly"})
@@ -1852,19 +1854,19 @@ const result = await host.mcp("biorxiv", "get_usage_statistics", {"interval": "y
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `brand` | струна | необязательный |
-| `generic` | струна | необязательный |
-| `active_ingredient` | струна | необязательный |
-| `sponsor` | струна | необязательный |
-| `marketing_status` | струна | факультативный; enum: &#91;"Prescription", "Over-the-counter", "Discontinued", "None (Tentative Approval)"&#93; |
-| `dosage_form` | струна | необязательный |
-| `route` | струна | необязательный |
-| `pharm_class` | струна | необязательный |
-| `pharm_class_type` | струна | факультативный; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
-| `search_type` | струна | факультативный; по умолчанию: " и "; enum: &#91;"and", "or"&#93; |
-| `submission_date_from` | струна | необязательный |
-| `submission_date_to` | струна | необязательный |
-| `raw_search` | струна | необязательный |
+| `brand` | строка | необязательный |
+| `generic` | строка | необязательный |
+| `active_ingredient` | строка | необязательный |
+| `sponsor` | строка | необязательный |
+| `marketing_status` | строка | факультативный; enum: &#91;"Prescription", "Over-the-counter", "Discontinued", "None (Tentative Approval)"&#93; |
+| `dosage_form` | строка | необязательный |
+| `route` | строка | необязательный |
+| `pharm_class` | строка | необязательный |
+| `pharm_class_type` | строка | факультативный; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
+| `search_type` | строка | факультативный; по умолчанию: " и "; enum: &#91;"and", "or"&#93; |
+| `submission_date_from` | строка | необязательный |
+| `submission_date_to` | строка | необязательный |
+| `raw_search` | строка | необязательный |
 | `max_records` | целое число | факультативный; По умолчанию: 50 |
 
 ```javascript
@@ -1877,7 +1879,7 @@ const result = await host.mcp("drug-regulatory", "search_drug_applications", {"g
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `application_number` | струна | **необходимый** |
+| `application_number` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "get_drug_application", {"application_number": "NDA020702"})
@@ -1889,20 +1891,20 @@ Aggregate Drugs@FDA bucket рассчитывается по одному пол
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `count_field` | струна | **необходимый** |
-| `brand` | струна | необязательный |
-| `generic` | струна | необязательный |
-| `active_ingredient` | струна | необязательный |
-| `sponsor` | струна | необязательный |
-| `marketing_status` | струна | необязательный |
-| `dosage_form` | струна | необязательный |
-| `route` | струна | необязательный |
-| `pharm_class` | струна | необязательный |
-| `pharm_class_type` | струна | факультативный; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
-| `search_type` | струна | факультативный; по умолчанию: " и "; enum: &#91;"and", "or"&#93; |
-| `submission_date_from` | струна | необязательный |
-| `submission_date_to` | струна | необязательный |
-| `raw_search` | струна | необязательный |
+| `count_field` | строка | **обязательно** |
+| `brand` | строка | необязательный |
+| `generic` | строка | необязательный |
+| `active_ingredient` | строка | необязательный |
+| `sponsor` | строка | необязательный |
+| `marketing_status` | строка | необязательный |
+| `dosage_form` | строка | необязательный |
+| `route` | строка | необязательный |
+| `pharm_class` | строка | необязательный |
+| `pharm_class_type` | строка | факультативный; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
+| `search_type` | строка | факультативный; по умолчанию: " и "; enum: &#91;"and", "or"&#93; |
+| `submission_date_from` | строка | необязательный |
+| `submission_date_to` | строка | необязательный |
+| `raw_search` | строка | необязательный |
 | `max_buckets` | целое число | факультативный; По умолчанию: 100 |
 
 ```javascript
@@ -1927,7 +1929,7 @@ const result = await host.mcp("drug-regulatory", "get_drug_statistics", {})
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `class_type` | струна | факультативный; по умолчанию: "epc"; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
+| `class_type` | строка | факультативный; по умолчанию: "epc"; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
 | `max_buckets` | целое число | факультативный; По умолчанию: 100 |
 
 ```javascript
@@ -1940,7 +1942,7 @@ const result = await host.mcp("drug-regulatory", "list_pharmacologic_classes", {
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `brand` | струна | **необходимый** |
+| `brand` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "get_generic_equivalents", {"brand": "Lipitor"})
@@ -1952,14 +1954,14 @@ const result = await host.mcp("drug-regulatory", "get_generic_equivalents", {"br
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `active_ingredient` | струна | необязательный |
-| `generic_name` | струна | необязательный |
-| `brand_name` | струна | необязательный |
-| `route` | струна | необязательный |
-| `product_type` | струна | факультативный; &#91;"HUMAN PRESCRIPTION DRUG", "HUMAN OTC DRUG"&#93; |
-| `exact` | булевый | факультативный; Дефолт: ложный |
-| `raw_search` | струна | необязательный |
-| `sections` | массив струн | необязательный |
+| `active_ingredient` | строка | необязательный |
+| `generic_name` | строка | необязательный |
+| `brand_name` | строка | необязательный |
+| `route` | строка | необязательный |
+| `product_type` | строка | факультативный; &#91;"HUMAN PRESCRIPTION DRUG", "HUMAN OTC DRUG"&#93; |
+| `exact` | логическое значение | факультативный; Дефолт: ложный |
+| `raw_search` | строка | необязательный |
+| `sections` | массив строк | необязательный |
 | `max_records` | целое число | факультативный; По умолчанию: 25 |
 
 ```javascript
@@ -1979,7 +1981,7 @@ const result = await host.mcp("drug-regulatory", "search_drug_labels", {"brand_n
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `rs_id` | струна | **необходимый** |
+| `rs_id` | строка | **обязательно** |
 | `max_records` | целое число | факультативный; По умолчанию: 500 |
 
 ```javascript
@@ -1992,7 +1994,7 @@ GWAS Каталог ассоциаций, варианты которых МАП
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_symbol` | струна | **необходимый** |
+| `gene_symbol` | строка | **обязательно** |
 | `max_records` | целое число | факультативный; По умолчанию: 500 |
 
 ```javascript
@@ -2005,8 +2007,8 @@ const result = await host.mcp("human-genetics", "gwas_associations_for_gene", {"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `efo_id` | струна | необязательный |
-| `efo_trait` | струна | необязательный |
+| `efo_id` | строка | необязательный |
+| `efo_trait` | строка | необязательный |
 | `max_records` | целое число | факультативный; По умолчанию: 500 |
 
 ```javascript
@@ -2019,7 +2021,7 @@ const result = await host.mcp("human-genetics", "gwas_associations_for_trait", {
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
+| `query` | строка | **обязательно** |
 | `max_records` | целое число | факультативный; По умолчанию: 500 |
 
 ```javascript
@@ -2032,9 +2034,9 @@ const result = await host.mcp("human-genetics", "gwas_search_traits", {"query": 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `efo_id` | струна | необязательный |
-| `efo_trait` | струна | необязательный |
-| `pubmed_id` | струна | необязательный |
+| `efo_id` | строка | необязательный |
+| `efo_trait` | строка | необязательный |
+| `pubmed_id` | строка | необязательный |
 | `max_records` | целое число | факультативный; По умолчанию: 500 |
 
 ```javascript
@@ -2047,7 +2049,7 @@ const result = await host.mcp("human-genetics", "gwas_search_studies", {"efo_id"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession_id` | струна | **необходимый** |
+| `accession_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_get_study", {"accession_id": "GCST90841394"})
@@ -2059,7 +2061,7 @@ const result = await host.mcp("human-genetics", "gwas_get_study", {"accession_id
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `rs_id` | струна | **необходимый** |
+| `rs_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_get_variant", {"rs_id": "rs7412"})
@@ -2071,9 +2073,9 @@ const result = await host.mcp("human-genetics", "gwas_get_variant", {"rs_id": "r
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `study_label` | струна | необязательный |
-| `tissue_label` | струна | необязательный |
-| `quant_method` | струна | необязательный |
+| `study_label` | строка | необязательный |
+| `tissue_label` | строка | необязательный |
+| `quant_method` | строка | необязательный |
 | `max_records` | целое число | факультативный; По умолчанию: 1000 |
 
 ```javascript
@@ -2086,12 +2088,12 @@ const result = await host.mcp("human-genetics", "eqtl_list_datasets", {"study_la
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `dataset_id` | струна | **необходимый** |
-| `gene_id` | струна | необязательный |
-| `rsid` | струна | необязательный |
-| `variant` | струна | необязательный |
-| `pos` | струна | необязательный |
-| `nlog10p_min` | номер | необязательный |
+| `dataset_id` | строка | **обязательно** |
+| `gene_id` | строка | необязательный |
+| `rsid` | строка | необязательный |
+| `variant` | строка | необязательный |
+| `pos` | строка | необязательный |
+| `nlog10p_min` | число | необязательный |
 | `max_records` | целое число | факультативный; По умолчанию: 1000 |
 
 ```javascript
@@ -2116,8 +2118,8 @@ PheWAS для одного варианта: его статистика асс�
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `instance` | струна | **необходимый**; enum: &#91;"finngen", "bbj"&#93; |
-| `variant` | струна | **необходимый** |
+| `instance` | строка | **обязательно**; enum: &#91;"finngen", "bbj"&#93; |
+| `variant` | строка | **обязательно** |
 | `max_phenos` | целое число | факультативный; По умолчанию: 200 |
 
 ```javascript
@@ -2130,7 +2132,7 @@ PheWAS генного уровня от FinnGen R12: для каждой кон�
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_symbol` | струна | **необходимый** |
+| `gene_symbol` | строка | **обязательно** |
 | `max_phenos` | целое число | факультативный; По умолчанию: 200 |
 
 ```javascript
@@ -2143,7 +2145,7 @@ const result = await host.mcp("human-genetics", "phewas_finngen_gene", {"gene_sy
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `instance` | струна | факультативный; по умолчанию: "finngen"; &#91;"finngen"&#93; |
+| `instance` | строка | факультативный; по умолчанию: "finngen"; &#91;"finngen"&#93; |
 | `max_records` | целое число | факультативный; По умолчанию: 3000 |
 
 ```javascript
@@ -2156,8 +2158,8 @@ const result = await host.mcp("human-genetics", "phewas_list_phenotypes", {"inst
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
-| `instance` | струна | факультативный; по умолчанию: "finngen"; enum: &#91;"finngen", "bbj"&#93; |
+| `query` | строка | **обязательно** |
+| `instance` | строка | факультативный; по умолчанию: "finngen"; enum: &#91;"finngen", "bbj"&#93; |
 | `max_records` | целое число | факультативный; По умолчанию: 500 |
 
 ```javascript
@@ -2177,7 +2179,7 @@ const result = await host.mcp("human-genetics", "phewas_search_phenotypes", {"qu
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `dataset_id` | струна | факультативный; По умолчанию: "gtex_v8" |
+| `dataset_id` | строка | факультативный; По умолчанию: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_tissue_sites", {"dataset_id": "gtex_v8"})
@@ -2189,8 +2191,8 @@ const result = await host.mcp("expression", "gtex_tissue_sites", {"dataset_id": 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `dataset_id` | струна | необязательный |
-| `organization_name` | струна | необязательный |
+| `dataset_id` | строка | необязательный |
+| `organization_name` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_dataset_info", {})
@@ -2202,11 +2204,11 @@ const result = await host.mcp("expression", "gtex_dataset_info", {})
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `tissue_site_detail_id` | струна | необязательный |
-| `data_type` | струна | необязательный |
-| `subject_id` | струна | необязательный |
+| `tissue_site_detail_id` | строка | необязательный |
+| `data_type` | строка | необязательный |
+| `subject_id` | строка | необязательный |
 | `max_samples` | целое число | необязательный |
-| `dataset_id` | струна | факультативный; По умолчанию: "gtex_v8" |
+| `dataset_id` | строка | факультативный; По умолчанию: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_sample_info", {"tissue_site_detail_id": "Liver", "data_type": "RNASEQ", "max_samples": 100})
@@ -2218,8 +2220,8 @@ const result = await host.mcp("expression", "gtex_sample_info", {"tissue_site_de
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `genes` | массив струн | **необходимый** | 7 / 0 / 0 |
-| `dataset_id` | струна | факультативный; По умолчанию: "gtex_v8" |
+| `genes` | массив строк | **обязательно** | 7 / 0 / 0 |
+| `dataset_id` | строка | факультативный; По умолчанию: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_resolve_genes", {"genes": ["GAPDH", "BRCA2"]})
@@ -2231,9 +2233,9 @@ const result = await host.mcp("expression", "gtex_resolve_genes", {"genes": ["GA
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gencode_ids` | массив струн | **необходимый** |
-| `tissue_site_detail_ids` | массив струн | необязательный |
-| `dataset_id` | струна | факультативный; По умолчанию: "gtex_v8" |
+| `gencode_ids` | массив строк | **обязательно** |
+| `tissue_site_detail_ids` | массив строк | необязательный |
+| `dataset_id` | строка | факультативный; По умолчанию: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_median_expression", {"gencode_ids": ["ENSG00000111640.14"]})
@@ -2245,8 +2247,8 @@ const result = await host.mcp("expression", "gtex_median_expression", {"gencode_
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene` | струна | **необходимый** |
-| `dataset_id` | струна | факультативный; По умолчанию: "gtex_v8" |
+| `gene` | строка | **обязательно** |
+| `dataset_id` | строка | факультативный; По умолчанию: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_expression_summary", {"gene": "GAPDH"})
@@ -2258,9 +2260,9 @@ const result = await host.mcp("expression", "gtex_expression_summary", {"gene": 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gencode_id` | струна | **необходимый** |
-| `tissue_site_detail_ids` | массив струн | необязательный |
-| `dataset_id` | струна | факультативный; По умолчанию: "gtex_v8" |
+| `gencode_id` | строка | **обязательно** |
+| `tissue_site_detail_ids` | массив строк | необязательный |
+| `dataset_id` | строка | факультативный; По умолчанию: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_gene_expression", {"gencode_id": "ENSG00000111640.14", "tissue_site_detail_ids": ["Whole_Blood"]})
@@ -2272,10 +2274,10 @@ const result = await host.mcp("expression", "gtex_gene_expression", {"gencode_id
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `tissue_site_detail_id` | струна | **необходимый** |
+| `tissue_site_detail_id` | строка | **обязательно** |
 | `n` | целое число | факультативный; По умолчанию: 100 |
-| `filter_mt_gene` | булевый | факультативный; Дефолт: правда |
-| `dataset_id` | струна | факультативный; По умолчанию: "gtex_v8" |
+| `filter_mt_gene` | логическое значение | факультативный; Дефолт: правда |
+| `dataset_id` | строка | факультативный; По умолчанию: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_top_expressed_genes", {"tissue_site_detail_id": "Whole_Blood", "n": 20})
@@ -2287,9 +2289,9 @@ const result = await host.mcp("expression", "gtex_top_expressed_genes", {"tissue
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `tissue_site_detail_id` | струна | **необходимый** |
+| `tissue_site_detail_id` | строка | **обязательно** |
 | `max_genes` | целое число | необязательный |
-| `dataset_id` | струна | факультативный; По умолчанию: "gtex_v8" |
+| `dataset_id` | строка | факультативный; По умолчанию: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_eqtl_genes", {"tissue_site_detail_id": "Pancreas", "max_genes": 100})
@@ -2301,11 +2303,11 @@ const result = await host.mcp("expression", "gtex_eqtl_genes", {"tissue_site_det
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gencode_id` | струна | необязательный |
-| `variant_id` | струна | необязательный |
-| `tissue_site_detail_id` | струна | необязательный |
+| `gencode_id` | строка | необязательный |
+| `variant_id` | строка | необязательный |
+| `tissue_site_detail_id` | строка | необязательный |
 | `max_results` | целое число | необязательный |
-| `dataset_id` | струна | факультативный; По умолчанию: "gtex_v8" |
+| `dataset_id` | строка | факультативный; По умолчанию: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_single_tissue_eqtls", {"gencode_id": "ENSG00000111640.14"})
@@ -2317,9 +2319,9 @@ const result = await host.mcp("expression", "gtex_single_tissue_eqtls", {"gencod
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gencode_id` | струна | **необходимый** |
-| `variant_id` | струна | необязательный |
-| `dataset_id` | струна | факультативный; По умолчанию: "gtex_v8" |
+| `gencode_id` | строка | **обязательно** |
+| `variant_id` | строка | необязательный |
+| `dataset_id` | строка | факультативный; По умолчанию: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_multi_tissue_eqtls", {"gencode_id": "ENSG00000111640.14"})
@@ -2331,10 +2333,10 @@ const result = await host.mcp("expression", "gtex_multi_tissue_eqtls", {"gencode
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gencode_id` | струна | **необходимый** |
-| `variant_id` | струна | **необходимый** |
-| `tissue_site_detail_id` | струна | **необходимый** |
-| `dataset_id` | струна | факультативный; По умолчанию: "gtex_v8" |
+| `gencode_id` | строка | **обязательно** |
+| `variant_id` | строка | **обязательно** |
+| `tissue_site_detail_id` | строка | **обязательно** |
+| `dataset_id` | строка | факультативный; По умолчанию: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_calculate_eqtl", {"gencode_id": "ENSG00000111640.14", "variant_id": "chr12_6452899_G_A_b38", "tissue_site_detail_id": "Whole_Blood"})
@@ -2353,7 +2355,7 @@ const result = await host.mcp("expression", "gtex_calculate_eqtl", {"gencode_id"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accessions` | массив струн | **необходимый** |
+| `accessions` | массив строк | **обязательно** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_domain_architecture", {"accessions": ["P04637"]})
@@ -2365,10 +2367,10 @@ const result = await host.mcp("protein-annotation", "get_domain_architecture", {
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | необязательный |
-| `entry_type` | струна | необязательный |
-| `source_db` | струна | факультативный; По умолчанию: "interpro" |
-| `go_term` | струна | необязательный |
+| `query` | строка | необязательный |
+| `entry_type` | строка | необязательный |
+| `source_db` | строка | факультативный; По умолчанию: "interpro" |
+| `go_term` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_interpro_entries", {"query": "kinase", "source_db": "pfam"})
@@ -2380,7 +2382,7 @@ const result = await host.mcp("protein-annotation", "search_interpro_entries", {
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
+| `accession` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_interpro_entry", {"accession": "IPR000719"})
@@ -2392,7 +2394,7 @@ const result = await host.mcp("protein-annotation", "get_interpro_entry", {"acce
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | необязательный |
+| `query` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_pfam_clans", {"query": "kinase"})
@@ -2404,7 +2406,7 @@ const result = await host.mcp("protein-annotation", "search_pfam_clans", {"query
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `clan_accession` | струна | **необходимый** |
+| `clan_accession` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_clan", {"clan_accession": "CL0016"})
@@ -2416,10 +2418,10 @@ const result = await host.mcp("protein-annotation", "get_pfam_clan", {"clan_acce
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `pfam_accession` | струна | **необходимый** |
-| `reviewed_only` | булевый | факультативный; Дефолт: ложный |
+| `pfam_accession` | строка | **обязательно** |
+| `reviewed_only` | логическое значение | факультативный; Дефолт: ложный |
 | `tax_id` | целое число | необязательный |
-| `count_only` | булевый | факультативный; Дефолт: ложный |
+| `count_only` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_family_proteins", {"pfam_accession": "PF00069", "count_only": true})
@@ -2431,8 +2433,8 @@ const result = await host.mcp("protein-annotation", "get_pfam_family_proteins", 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `pfam_accession` | струна | **необходимый** |
-| `count_only` | булевый | факультативный; Дефолт: правда |
+| `pfam_accession` | строка | **обязательно** |
+| `count_only` | логическое значение | факультативный; Дефолт: правда |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_family_proteomes", {"pfam_accession": "PF00069"})
@@ -2444,8 +2446,8 @@ const result = await host.mcp("protein-annotation", "get_pfam_family_proteomes",
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene` | струна | **необходимый** |
-| `full` | булевый | факультативный; Дефолт: ложный |
+| `gene` | строка | **обязательно** |
+| `full` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_protein_atlas_gene", {"gene": "TP53"})
@@ -2457,8 +2459,8 @@ const result = await host.mcp("protein-annotation", "get_protein_atlas_gene", {"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
-| `columns` | струна | факультативный; по умолчанию: "g,gs,eg,gd,up,chr,chrp,scl" |
+| `query` | строка | **обязательно** |
+| `columns` | строка | факультативный; по умолчанию: "g,gs,eg,gd,up,chr,chrp,scl" |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_protein_atlas", {"query": "kinase"})
@@ -2470,7 +2472,7 @@ const result = await host.mcp("protein-annotation", "search_protein_atlas", {"qu
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `symbols` | массив струн | **необходимый** |
+| `symbols` | массив строк | **обязательно** |
 | `species` | целое число | факультативный; По умолчанию: 9606 |
 
 ```javascript
@@ -2483,7 +2485,7 @@ const result = await host.mcp("protein-annotation", "map_string_ids", {"symbols"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `symbols` | массив струн | **необходимый** |
+| `symbols` | массив строк | **обязательно** |
 | `species` | целое число | факультативный; По умолчанию: 9606 |
 | `required_score` | целое число | факультативный; По умолчанию: 700 |
 
@@ -2497,7 +2499,7 @@ const result = await host.mcp("protein-annotation", "get_string_network", {"symb
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `symbols` | массив струн | **необходимый** |
+| `symbols` | массив строк | **обязательно** |
 | `species` | целое число | факультативный; По умолчанию: 9606 |
 
 ```javascript
@@ -2510,7 +2512,7 @@ const result = await host.mcp("protein-annotation", "get_string_similarity_score
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `symbols` | массив струн | **необходимый** |
+| `symbols` | массив строк | **обязательно** |
 | `species` | целое число | факультативный; По умолчанию: 9606 |
 | `target_species` | целое число | необязательный |
 
@@ -2531,8 +2533,8 @@ const result = await host.mcp("protein-annotation", "get_string_best_similarity_
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `keyword` | струна | необязательный |
-| `cancer_type_id` | струна | необязательный |
+| `keyword` | строка | необязательный |
+| `cancer_type_id` | строка | необязательный |
 | `max_records` | целое число | факультативный; По умолчанию: 500 |
 
 ```javascript
@@ -2545,7 +2547,7 @@ const result = await host.mcp("cancer-models", "cbioportal_list_studies", {"keyw
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `study_id` | струна | **необходимый** |
+| `study_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_get_study", {"study_id": "msk_impact_2017"})
@@ -2557,8 +2559,8 @@ const result = await host.mcp("cancer-models", "cbioportal_get_study", {"study_i
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_symbol` | струна | **необходимый** |
-| `study_id` | струна | **необходимый** |
+| `gene_symbol` | строка | **обязательно** |
+| `study_id` | строка | **обязательно** |
 | `max_records` | целое число | факультативный; По умолчанию: 100 |
 
 ```javascript
@@ -2571,8 +2573,8 @@ const result = await host.mcp("cancer-models", "cbioportal_mutations_in_gene", {
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_symbol` | струна | **необходимый** |
-| `study_ids` | массив струн | **необходимый**; Мини-элементы: 1; maxItems: 12 |
+| `gene_symbol` | строка | **обязательно** |
+| `study_ids` | массив строк | **обязательно**; Мини-элементы: 1; maxItems: 12 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_mutation_frequency", {"gene_symbol": "KRAS", "study_ids": ["msk_impact_2017", "difg_msk_2023"]})
@@ -2584,9 +2586,9 @@ const result = await host.mcp("cancer-models", "cbioportal_mutation_frequency", 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `gene_symbol` | струна | **необходимый** |
-| `study_id` | струна | **необходимый** |
-| `event_type` | струна | факультативный; по умолчанию: "HOMDEL_AND_AMP"; enum: &#91;"HOMDEL_AND_AMP", "HOMDEL", "AMP", "GAIN", "HETLOSS", "DIPLOID", "ALL"&#93; |
+| `gene_symbol` | строка | **обязательно** |
+| `study_id` | строка | **обязательно** |
+| `event_type` | строка | факультативный; по умолчанию: "HOMDEL_AND_AMP"; enum: &#91;"HOMDEL_AND_AMP", "HOMDEL", "AMP", "GAIN", "HETLOSS", "DIPLOID", "ALL"&#93; |
 | `max_records` | целое число | факультативный; По умолчанию: 100 |
 
 ```javascript
@@ -2599,7 +2601,7 @@ const result = await host.mcp("cancer-models", "cbioportal_cna_in_gene", {"gene_
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `study_id` | струна | **необходимый** |
+| `study_id` | строка | **обязательно** |
 | `max_records` | целое число | факультативный; По умолчанию: 200 |
 
 ```javascript
@@ -2619,7 +2621,7 @@ const result = await host.mcp("cancer-models", "cbioportal_clinical_attributes",
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `family` | струна | **необходимый** |
+| `family` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("rna", "get_family", {"family": "RF00005"})
@@ -2631,8 +2633,8 @@ const result = await host.mcp("rna", "get_family", {"family": "RF00005"})
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `family` | струна | **необходимый** |
-| `fmt` | струна | факультативный; по умолчанию: "stockholm"; enum: &#91;"stockholm", "fasta"&#93; |
+| `family` | строка | **обязательно** |
+| `fmt` | строка | факультативный; по умолчанию: "stockholm"; enum: &#91;"stockholm", "fasta"&#93; |
 | `max_bytes` | целое число | факультативный; По умолчанию: 400000 |
 
 ```javascript
@@ -2645,7 +2647,7 @@ const result = await host.mcp("rna", "get_seed_alignment", {"family": "RF00162",
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `family` | струна | **необходимый** |
+| `family` | строка | **обязательно** |
 | `max_bytes` | целое число | факультативный; По умолчанию: 400000 |
 
 ```javascript
@@ -2658,7 +2660,7 @@ const result = await host.mcp("rna", "get_covariance_model", {"family": "RF00162
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `family` | струна | **необходимый** |
+| `family` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("rna", "get_tree", {"family": "RF00162"})
@@ -2670,7 +2672,7 @@ const result = await host.mcp("rna", "get_tree", {"family": "RF00162"})
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `family` | струна | **необходимый** |
+| `family` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("rna", "get_sequence_regions", {"family": "RF00162"})
@@ -2682,7 +2684,7 @@ const result = await host.mcp("rna", "get_sequence_regions", {"family": "RF00162
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `family` | струна | **необходимый** |
+| `family` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("rna", "get_structure_mapping", {"family": "RF00162"})
@@ -2694,7 +2696,7 @@ const result = await host.mcp("rna", "get_structure_mapping", {"family": "RF0016
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
+| `accession` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("rna", "accession_to_id", {"accession": "RF00005"})
@@ -2706,7 +2708,7 @@ const result = await host.mcp("rna", "accession_to_id", {"accession": "RF00005"}
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `family_id` | струна | **необходимый** |
+| `family_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("rna", "id_to_accession", {"family_id": "tRNA"})
@@ -2718,9 +2720,9 @@ const result = await host.mcp("rna", "id_to_accession", {"family_id": "tRNA"})
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `sequence` | струна | **необходимый** |
-| `max_wait_s` | номер | факультативный; По умолчанию: 300 |
-| `poll_interval_s` | номер | факультативный; По умолчанию: 5 |
+| `sequence` | строка | **обязательно** |
+| `max_wait_s` | число | факультативный; По умолчанию: 300 |
+| `poll_interval_s` | число | факультативный; По умолчанию: 5 |
 
 ```javascript
 const result = await host.mcp("rna", "search_sequence", {"sequence": "GGUUCCGGGAAGGCAGCAGGUGGAAACCUGCCA"})
@@ -2739,12 +2741,12 @@ const result = await host.mcp("rna", "search_sequence", {"sequence": "GGUUCCGGGA
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | необязательный |
-| `organism` | струна | необязательный |
-| `study_type` | струна | необязательный |
-| `technology` | струна | необязательный |
-| `released_after` | струна | необязательный |
-| `released_before` | струна | необязательный |
+| `query` | строка | необязательный |
+| `organism` | строка | необязательный |
+| `study_type` | строка | необязательный |
+| `technology` | строка | необязательный |
+| `released_after` | строка | необязательный |
+| `released_before` | строка | необязательный |
 | `extra_facets` | объект | необязательный |
 | `max_records` | целое число | факультативный; По умолчанию: 50 |
 
@@ -2758,7 +2760,7 @@ const result = await host.mcp("omics-archives", "arrayexpress_search_experiments
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
+| `accession` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment", {"accession": "E-MTAB-5061"})
@@ -2770,7 +2772,7 @@ const result = await host.mcp("omics-archives", "arrayexpress_get_experiment", {
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
+| `accession` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment_files", {"accession": "E-MTAB-5061"})
@@ -2782,7 +2784,7 @@ const result = await host.mcp("omics-archives", "arrayexpress_get_experiment_fil
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
+| `accession` | строка | **обязательно** |
 | `max_rows_returned` | целое число | факультативный; По умолчанию: 200 |
 
 ```javascript
@@ -2795,7 +2797,7 @@ const result = await host.mcp("omics-archives", "arrayexpress_get_experiment_sam
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `term` | струна | **необходимый** |
+| `term` | строка | **обязательно** |
 | `retmax` | целое число | факультативный; По умолчанию: 500 |
 
 ```javascript
@@ -2808,7 +2810,7 @@ const result = await host.mcp("omics-archives", "geo_search_series", {"term": "a
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accessions` | массив струн | **необходимый** |
+| `accessions` | массив строк | **обязательно** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "geo_get_series", {"accessions": ["GSE131907"]})
@@ -2832,8 +2834,8 @@ const result = await host.mcp("omics-archives", "metabolights_list_studies", {})
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accessions` | массив струн | **необходимый** |
-| `include_samples` | булевый | факультативный; Дефолт: ложный |
+| `accessions` | массив строк | **обязательно** |
+| `include_samples` | логическое значение | факультативный; Дефолт: ложный |
 | `max_sample_rows_returned` | целое число | факультативный; По умолчанию: 200 |
 
 ```javascript
@@ -2846,8 +2848,8 @@ const result = await host.mcp("omics-archives", "metabolights_get_studies", {"ac
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
-| `include_data_files` | булевый | факультативный; Дефолт: правда |
+| `accession` | строка | **обязательно** |
+| `include_data_files` | логическое значение | факультативный; Дефолт: правда |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_get_study_files", {"accession": "MTBLS1"})
@@ -2859,8 +2861,8 @@ const result = await host.mcp("omics-archives", "metabolights_get_study_files", 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
-| `pattern` | струна | необязательный |
+| `accession` | строка | **обязательно** |
+| `pattern` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_search_data_files", {"accession": "MTBLS1", "pattern": "*.zip"})
@@ -2872,8 +2874,8 @@ const result = await host.mcp("omics-archives", "metabolights_search_data_files"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | необязательный |
-| `biome_lineage` | струна | необязательный |
+| `query` | строка | необязательный |
+| `biome_lineage` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_search_studies", {"query": "coral"})
@@ -2885,8 +2887,8 @@ const result = await host.mcp("omics-archives", "mgnify_search_studies", {"query
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accessions` | массив струн | **необходимый** |
-| `include_analyses` | булевый | факультативный; Дефолт: ложный |
+| `accessions` | массив строк | **обязательно** |
+| `include_analyses` | логическое значение | факультативный; Дефолт: ложный |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_get_studies", {"accessions": ["MGYS00000410"], "include_analyses": false})
@@ -2898,7 +2900,7 @@ const result = await host.mcp("omics-archives", "mgnify_get_studies", {"accessio
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
+| `accession` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_get_study_analyses", {"accession": "MGYS00000410"})
@@ -2910,10 +2912,10 @@ const result = await host.mcp("omics-archives", "mgnify_get_study_analyses", {"a
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `keyword` | струна | необязательный |
-| `organism` | струна | необязательный |
-| `instrument` | струна | необязательный |
-| `disease` | струна | необязательный |
+| `keyword` | строка | необязательный |
+| `organism` | строка | необязательный |
+| `instrument` | строка | необязательный |
+| `disease` | строка | необязательный |
 | `extra_filters` | объект | необязательный |
 | `max_records_returned` | целое число | факультативный; По умолчанию: 50 |
 
@@ -2927,7 +2929,7 @@ const result = await host.mcp("omics-archives", "pride_search_projects", {"keywo
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accessions` | массив струн | **необходимый** |
+| `accessions` | массив строк | **обязательно** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_get_projects", {"accessions": ["PXD010154"]})
@@ -2939,8 +2941,8 @@ const result = await host.mcp("omics-archives", "pride_get_projects", {"accessio
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `project_accession` | струна | **необходимый** |
-| `keyword` | струна | необязательный |
+| `project_accession` | строка | **обязательно** |
+| `keyword` | строка | необязательный |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_search_project_proteins", {"project_accession": "PXD010154"})
@@ -2952,7 +2954,7 @@ const result = await host.mcp("omics-archives", "pride_search_project_proteins",
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `protein_accession` | струна | **необходимый** |
+| `protein_accession` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_find_projects_for_protein", {"protein_accession": "P04637"})
@@ -2971,7 +2973,7 @@ CellGuide (CELLxGENE) информация клеточного типа по и
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `cell_type` | струна | **необходимый** |
+| `cell_type` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_cell_type_info", {"cell_type": "acinar cell"})
@@ -2983,7 +2985,7 @@ const result = await host.mcp("cellguide", "get_cell_type_info", {"cell_type": "
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
+| `query` | строка | **обязательно** |
 | `limit` | целое число | факультативный; По умолчанию: 25 |
 
 ```javascript
@@ -2996,8 +2998,8 @@ const result = await host.mcp("cellguide", "search_cell_types", {"query": "T cel
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `cell_type` | струна | **необходимый** |
-| `marker_type` | струна | факультативный; по умолчанию: "computational"; enum: &#91;"computational", "canonical"&#93; |
+| `cell_type` | строка | **обязательно** |
+| `marker_type` | строка | факультативный; по умолчанию: "computational"; enum: &#91;"computational", "canonical"&#93; |
 | `limit` | целое число | факультативный; По умолчанию: 25 |
 
 ```javascript
@@ -3010,7 +3012,7 @@ const result = await host.mcp("cellguide", "get_marker_genes", {"cell_type": "CL
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `cell_type` | струна | **необходимый** |
+| `cell_type` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_source_data", {"cell_type": "CL:0000622"})
@@ -3022,7 +3024,7 @@ const result = await host.mcp("cellguide", "get_source_data", {"cell_type": "CL:
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `cell_type` | струна | **необходимый** |
+| `cell_type` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_cell_tissues", {"cell_type": "T cell"})
@@ -3041,11 +3043,11 @@ const result = await host.mcp("cellguide", "get_cell_tissues", {"cell_type": "T 
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `assay_title` | струна | необязательный |
-| `target` | струна | необязательный |
-| `organism` | струна | необязательный |
-| `status` | струна | факультативный; По умолчанию: "released" |
-| `date_released_before` | струна | необязательный |
+| `assay_title` | строка | необязательный |
+| `target` | строка | необязательный |
+| `organism` | строка | необязательный |
+| `status` | строка | факультативный; По умолчанию: "released" |
+| `date_released_before` | строка | необязательный |
 | `extra_filters` | объект | необязательный |
 | `max_rows` | целое число | факультативный; По умолчанию: 100 |
 
@@ -3059,11 +3061,11 @@ const result = await host.mcp("regulation", "encode_search_experiments", {"targe
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `term_name` | струна | необязательный |
-| `classification` | струна | необязательный |
-| `organism` | струна | необязательный |
-| `status` | струна | факультативный; По умолчанию: "released" |
-| `date_created_before` | струна | необязательный |
+| `term_name` | строка | необязательный |
+| `classification` | строка | необязательный |
+| `organism` | строка | необязательный |
+| `status` | строка | факультативный; По умолчанию: "released" |
+| `date_created_before` | строка | необязательный |
 | `extra_filters` | объект | необязательный |
 | `max_rows` | целое число | факультативный; По умолчанию: 100 |
 
@@ -3077,11 +3079,11 @@ const result = await host.mcp("regulation", "encode_search_biosamples", {"term_n
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `file_format` | струна | необязательный |
-| `assay_term_name` | струна | необязательный |
-| `biosample_term_name` | струна | необязательный |
-| `status` | струна | факультативный; По умолчанию: "released" |
-| `date_created_before` | струна | необязательный |
+| `file_format` | строка | необязательный |
+| `assay_term_name` | строка | необязательный |
+| `biosample_term_name` | строка | необязательный |
+| `status` | строка | факультативный; По умолчанию: "released" |
+| `date_created_before` | строка | необязательный |
 | `extra_filters` | объект | необязательный |
 | `max_rows` | целое число | факультативный; По умолчанию: 100 |
 
@@ -3095,7 +3097,7 @@ const result = await host.mcp("regulation", "encode_list_files", {"file_format":
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
+| `accession` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_experiment", {"accession": "ENCSR000AKP"})
@@ -3107,7 +3109,7 @@ const result = await host.mcp("regulation", "encode_get_experiment", {"accession
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
+| `accession` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_file", {"accession": "ENCFF002JUR"})
@@ -3119,7 +3121,7 @@ const result = await host.mcp("regulation", "encode_get_file", {"accession": "EN
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `accession` | струна | **необходимый** |
+| `accession` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_biosample", {"accession": "ENCBS013JZP"})
@@ -3131,7 +3133,7 @@ const result = await host.mcp("regulation", "encode_get_biosample", {"accession"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `matrix_id` | струна | **необходимый** |
+| `matrix_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_get_matrix", {"matrix_id": "MA0002.2"})
@@ -3143,7 +3145,7 @@ const result = await host.mcp("regulation", "jaspar_get_matrix", {"matrix_id": "
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `base_id` | струна | **необходимый** |
+| `base_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_matrix_versions", {"base_id": "MA0002"})
@@ -3155,12 +3157,12 @@ const result = await host.mcp("regulation", "jaspar_matrix_versions", {"base_id"
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `collection` | струна | необязательный |
-| `tax_group` | струна | необязательный |
+| `collection` | строка | необязательный |
+| `tax_group` | строка | необязательный |
 | `tax_id` | целое число | необязательный |
-| `name` | струна | необязательный |
-| `search` | струна | необязательный |
-| `version` | струна | необязательный |
+| `name` | строка | необязательный |
+| `search` | строка | необязательный |
+| `version` | строка | необязательный |
 | `max_rows` | целое число | факультативный; По умолчанию: 1000 |
 
 ```javascript
@@ -3221,12 +3223,12 @@ const result = await host.mcp("regulation", "jaspar_list_releases", {})
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `tf_name` | струна | необязательный |
-| `cell_line` | струна | необязательный |
-| `species` | струна | необязательный |
-| `collection` | струна | факультативный; enum: &#91;"Robust", "Permissive"&#93; |
-| `jaspar_id` | струна | необязательный |
-| `search` | струна | необязательный |
+| `tf_name` | строка | необязательный |
+| `cell_line` | строка | необязательный |
+| `species` | строка | необязательный |
+| `collection` | строка | факультативный; enum: &#91;"Robust", "Permissive"&#93; |
+| `jaspar_id` | строка | необязательный |
+| `search` | строка | необязательный |
 | `max_rows` | целое число | факультативный; По умолчанию: 200 |
 
 ```javascript
@@ -3239,7 +3241,7 @@ const result = await host.mcp("regulation", "unibind_search_tfbs", {"tf_name": "
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `tf_id` | струна | **необходимый** |
+| `tf_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("regulation", "unibind_get_dataset", {"tf_id": "ENCSR000AUE.A549_lung_carcinoma.CTCF"})
@@ -3251,12 +3253,12 @@ const result = await host.mcp("regulation", "unibind_get_dataset", {"tf_id": "EN
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `genome` | струна | **необходимый** |
-| `chrom` | струна | **необходимый** |
-| `start` | целое число | **необходимый** |
-| `end` | целое число | **необходимый** |
-| `tf_name` | струна | необязательный |
-| `collection` | струна | факультативный; по умолчанию: "Robust"; enum: &#91;"Robust", "Permissive"&#93; |
+| `genome` | строка | **обязательно** |
+| `chrom` | строка | **обязательно** |
+| `start` | целое число | **обязательно** |
+| `end` | целое число | **обязательно** |
+| `tf_name` | строка | необязательный |
+| `collection` | строка | факультативный; по умолчанию: "Robust"; enum: &#91;"Robust", "Permissive"&#93; |
 | `max_sites` | целое число | факультативный; По умолчанию: 2000 |
 
 ```javascript
@@ -3276,17 +3278,17 @@ const result = await host.mcp("regulation", "unibind_tfbs_in_region", {"genome":
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `keyword` | струна | необязательный |
-| `opportunity_number` | струна | необязательный |
-| `aln` | струна | необязательный |
-| `agencies` | массив струн | необязательный |
-| `opportunity_statuses` | массив струн | необязательный |
-| `eligibilities` | массив струн | необязательный |
-| `funding_categories` | массив струн | необязательный |
-| `funding_instruments` | массив струн | необязательный |
-| `count_only` | булевый | факультативный; Дефолт: ложный |
+| `keyword` | строка | необязательный |
+| `opportunity_number` | строка | необязательный |
+| `aln` | строка | необязательный |
+| `agencies` | массив строк | необязательный |
+| `opportunity_statuses` | массив строк | необязательный |
+| `eligibilities` | массив строк | необязательный |
+| `funding_categories` | массив строк | необязательный |
+| `funding_instruments` | массив строк | необязательный |
+| `count_only` | логическое значение | факультативный; Дефолт: ложный |
 | `max_records` | целое число | факультативный; По умолчанию: 100 |
-| `include_facets` | булевый | факультативный; Дефолт: правда |
+| `include_facets` | логическое значение | факультативный; Дефолт: правда |
 
 ```javascript
 const result = await host.mcp("research-resources", "search_grants", {"keyword": "cancer", "agencies": ["HHS-NIH11"], "max_records": 25})
@@ -3298,7 +3300,7 @@ const result = await host.mcp("research-resources", "search_grants", {"keyword":
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `query` | струна | **необходимый** |
+| `query` | строка | **обязательно** |
 | `page` | целое число | необязательный |
 | `page_size` | целое число | факультативный; По умолчанию: 100 |
 | `max_records` | целое число | факультативный; По умолчанию: 500 |
@@ -3313,7 +3315,7 @@ const result = await host.mcp("research-resources", "search_antibodies", {"query
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `antibody_id` | струна | **необходимый** |
+| `antibody_id` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("research-resources", "get_antibody", {"antibody_id": "RRID:AB_3643095"})
@@ -3325,8 +3327,8 @@ const result = await host.mcp("research-resources", "get_antibody", {"antibody_i
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `catalog_number` | струна | **необходимый** |
-| `vendor` | струна | необязательный |
+| `catalog_number` | строка | **обязательно** |
+| `vendor` | строка | необязательный |
 | `page_size` | целое число | факультативный; По умолчанию: 100 |
 
 ```javascript
@@ -3370,7 +3372,7 @@ const result = await host.mcp("biomart", "list_marts", {})
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `mart` | струна | **необходимый** |
+| `mart` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_datasets", {"mart": "ENSEMBL_MART_ENSEMBL"})
@@ -3382,8 +3384,8 @@ const result = await host.mcp("biomart", "list_datasets", {"mart": "ENSEMBL_MART
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `mart` | струна | **необходимый** |
-| `dataset` | струна | **необходимый** |
+| `mart` | строка | **обязательно** |
+| `dataset` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_common_attributes", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3395,8 +3397,8 @@ const result = await host.mcp("biomart", "list_common_attributes", {"mart": "ENS
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `mart` | струна | **необходимый** |
-| `dataset` | струна | **необходимый** |
+| `mart` | строка | **обязательно** |
+| `dataset` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_all_attributes", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3408,8 +3410,8 @@ const result = await host.mcp("biomart", "list_all_attributes", {"mart": "ENSEMB
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `mart` | струна | **необходимый** |
-| `dataset` | струна | **необходимый** |
+| `mart` | строка | **обязательно** |
+| `dataset` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_filters", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3421,9 +3423,9 @@ const result = await host.mcp("biomart", "list_filters", {"mart": "ENSEMBL_MART_
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `mart` | струна | **необходимый** |
-| `dataset` | струна | **необходимый** |
-| `attributes` | массив струн | **необходимый** |
+| `mart` | строка | **обязательно** |
+| `dataset` | строка | **обязательно** |
+| `attributes` | массив строк | **обязательно** |
 | `filters` | объект | необязательный |
 
 ```javascript
@@ -3436,11 +3438,11 @@ const result = await host.mcp("biomart", "get_data", {"mart": "ENSEMBL_MART_ENSE
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `mart` | струна | **необходимый** |
-| `dataset` | струна | **необходимый** |
-| `from_attr` | струна | **необходимый** |
-| `to_attr` | струна | **необходимый** |
-| `target` | струна | **необходимый** |
+| `mart` | строка | **обязательно** |
+| `dataset` | строка | **обязательно** |
+| `from_attr` | строка | **обязательно** |
+| `to_attr` | строка | **обязательно** |
+| `target` | строка | **обязательно** |
 
 ```javascript
 const result = await host.mcp("biomart", "get_translation", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "from_attr": "hgnc_symbol", "to_attr": "ensembl_gene_id", "target": "TP53"})
@@ -3452,11 +3454,11 @@ const result = await host.mcp("biomart", "get_translation", {"mart": "ENSEMBL_MA
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `mart` | струна | **необходимый** |
-| `dataset` | струна | **необходимый** |
-| `from_attr` | струна | **необходимый** |
-| `to_attr` | струна | **необходимый** |
-| `targets` | массив струн | **необходимый** |
+| `mart` | строка | **обязательно** |
+| `dataset` | строка | **обязательно** |
+| `from_attr` | строка | **обязательно** |
+| `to_attr` | строка | **обязательно** |
+| `targets` | массив строк | **обязательно** |
 
 ```javascript
 const result = await host.mcp("biomart", "batch_translate", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "from_attr": "hgnc_symbol", "to_attr": "ensembl_gene_id", "targets": ["TP53", "BRCA1", "BRCA2"]})
@@ -3475,9 +3477,9 @@ const result = await host.mcp("biomart", "batch_translate", {"mart": "ENSEMBL_MA
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'string', 'array'&#93; | **необходимый** |
+| `zinc_ids` | ['string', 'array'] | **обязательно** |
 | `max_results` | целое число | факультативный; По умолчанию: 50 |
-| `timeout_s` | номер | факультативный; По умолчанию: 25 |
+| `timeout_s` | число | факультативный; По умолчанию: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_id", {"zinc_ids": ["ZINC000000000012"]})
@@ -3489,11 +3491,11 @@ const result = await host.mcp("zinc", "zinc_search_by_id", {"zinc_ids": ["ZINC00
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `smiles` | струна | **необходимый** |
+| `smiles` | строка | **обязательно** |
 | `dist` | целое число | факультативный; По умолчанию: 0 |
 | `adist` | целое число | необязательный |
 | `max_results` | целое число | факультативный; По умолчанию: 50 |
-| `timeout_s` | номер | факультативный; По умолчанию: 25 |
+| `timeout_s` | число | факультативный; По умолчанию: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_smiles", {"smiles": "CC(=O)Oc1ccccc1C(=O)O", "dist": 2})
@@ -3505,9 +3507,9 @@ const result = await host.mcp("zinc", "zinc_search_by_smiles", {"smiles": "CC(=O
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `supplier_codes` | &#91;'string', 'array'&#93; | **необходимый** |
+| `supplier_codes` | ['string', 'array'] | **обязательно** |
 | `max_results` | целое число | факультативный; По умолчанию: 50 |
-| `timeout_s` | номер | факультативный; По умолчанию: 25 |
+| `timeout_s` | число | факультативный; По умолчанию: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_supplier", {"supplier_codes": ["MCULE-2311834287"]})
@@ -3520,8 +3522,8 @@ const result = await host.mcp("zinc", "zinc_search_by_supplier", {"supplier_code
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
 | `count` | целое число | факультативный; По умолчанию: 50 |
-| `subset` | струна | необязательный |
-| `timeout_s` | номер | факультативный; По умолчанию: 25 |
+| `subset` | строка | необязательный |
+| `timeout_s` | число | факультативный; По умолчанию: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_random_sample", {"count": 25, "subset": "lead-like"})
@@ -3533,8 +3535,8 @@ const result = await host.mcp("zinc", "zinc_random_sample", {"count": 25, "subse
 
 | Полное поле | Тип | Требования и ограничения |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'string', 'array'&#93; | **необходимый** |
-| `timeout_s` | номер | факультативный; По умолчанию: 25 |
+| `zinc_ids` | ['string', 'array'] | **обязательно** |
+| `timeout_s` | число | факультативный; По умолчанию: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_get_3d", {"zinc_ids": ["ZINC000000000012"]})

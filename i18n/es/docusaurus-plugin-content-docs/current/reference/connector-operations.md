@@ -2,7 +2,7 @@
 title: "Referencia de operación Connector"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -36,7 +36,7 @@ Los nombres de campo de retorno difieren por operación. Las descripciones y esq
 
 ## Contribuciones de las operaciones {/* #operation-inputs */}
 
-Ampliar un Connector a la vez. Los campos obligatorios están marcados con **necesarios**; límites/defaults que se muestran aquí provienen del esquema de aplicación. Consulte el <ExampleDownload path="/examples/capabilities/connector-catalog-v0.29.0.json">registro completo descargable</ExampleDownload> para los esquemas JSON anidados, descripciones de rendimiento completo y ejemplos de llamadas de agentes. No pase un `id` genérico cuando una herramienta espera `accessions`, `cids`, `rs_id` u otro campo específico del espacio de nombres.
+Ampliar un Connector a la vez. Los campos obligatorios están marcados con **necesarios**; esta referencia y descarga utilizar el esquema Open-Science **v0.30.1** Una lista `input.required` anidada es autorizada; una lista de `required` de alto nivel puede estar ausente. Consulte el <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">registro completo descargable</ExampleDownload> para los esquemas JSON anidados, descripciones de rendimiento completo y ejemplos de llamadas de agentes. No pase un `id` genérico cuando una herramienta espera `accessions`, `cids`, `rs_id` u otro campo específico del espacio de nombres.
 
 
 ## Química {/* #family-1 */}
@@ -50,10 +50,10 @@ Resolver un identificador químico (nombre, SMILES, InChIKey, o CID) a PubChem C
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
-| `namespace` | cuerda. | facultativa; predeterminado: "name"; enum: &#91;"name", "smiles", "inchikey", "cid"&#93; |
+| `query` | cadena de texto | **obligatorio** |
+| `namespace` | cadena de texto | facultativa; predeterminado: "name"; enum: &#91;"name", "smiles", "inchikey", "cid"&#93; |
 | `max_cids` | entero | facultativa; predeterminado: 25; mínimo: 1; máximo: 100 |
-| `with_properties` | boolean | facultativa; default: true |
+| `with_properties` | booleano | facultativa; default: true |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_search_compounds", {"query": "aspirin", "max_cids": 25})
@@ -65,8 +65,8 @@ Registros completos de propiedad computarizada para un lote de PubChem CIDs, con
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `cids` | array de entero | **necesarios**; minItems: 1; maxItems: 50 |
-| `include_synonyms` | boolean | facultativa; default: false |
+| `cids` | matriz de enteros | **obligatorio**; minItems: 1; maxItems: 50 |
+| `include_synonyms` | booleano | facultativa; default: false |
 | `max_synonyms` | entero | facultativa; predeterminado: 30 |
 
 ```javascript
@@ -79,10 +79,10 @@ const result = await host.mcp("chemistry", "pubchem_get_compounds", {"cids": [22
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `smiles` | cuerda. | **necesarios** |
+| `smiles` | cadena de texto | **obligatorio** |
 | `threshold` | entero | facultativa; predeterminado: 90; mínimo: 1; máximo: 100 |
 | `max_records` | entero | facultativa; predeterminado: 50; mínimo: 1; máximo: 200 |
-| `with_properties` | boolean | facultativa; default: false |
+| `with_properties` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_similarity_search", {"smiles": "CC(=O)OC1=CC=CC=C1C(=O)O", "threshold": 90})
@@ -94,8 +94,8 @@ Resumen de la actividad de bioassayo para un compuesto PubChem - que los ensayos
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `cid` | entero | **necesarios** |
-| `active_only` | boolean | facultativa; default: false |
+| `cid` | entero | **obligatorio** |
+| `active_only` | booleano | facultativa; default: false |
 | `max_rows` | entero | facultativa; predeterminado: 100; mínimo: 1; máximo: 1000 |
 
 ```javascript
@@ -108,7 +108,7 @@ Clasificación de seguridad GHS para un compuesto PubChem (PUG-View 'GHS Classif
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `cid` | entero | **necesarios** |
+| `cid` | entero | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_get_safety", {"cid": 702})
@@ -120,7 +120,7 @@ Búsqueda de texto completo sobre entidades ChEBI (nombres, sinónimos, fórmula
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `term` | cuerda. | **necesarios** |
+| `term` | cadena de texto | **obligatorio** |
 | `max_results` | entero | facultativa; predeterminado: 20; mínimo: 1; máximo: 100 |
 | `page` | entero | facultativa; predeterminado: 1; mínimo: 1 |
 
@@ -134,7 +134,7 @@ Registro completo de la entidad ChEBI: nombres, estructura, datos químicos, rol
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `chebi_id` | cuerda. | **necesarios** |
+| `chebi_id` | cadena de texto | **obligatorio** |
 | `max_synonyms` | entero | facultativa; predeterminado: 30 |
 | `max_xrefs` | entero | facultativa; predeterminado: 50 |
 
@@ -148,8 +148,8 @@ Relaciones ontológicas de una entidad ChEBI — lo que ES (extrocedente: es un 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `chebi_id` | cuerda. | **necesarios** |
-| `relation_type` | cuerda. | opcional |
+| `chebi_id` | cadena de texto | **obligatorio** |
+| `relation_type` | cadena de texto | opcional |
 | `max_relations` | entero | facultativa; predeterminado: 100 |
 
 ```javascript
@@ -162,7 +162,7 @@ Buscar Reacciones maestras de Ñandú por texto de ecuación, participante ChEBI
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
+| `query` | cadena de texto | **obligatorio** |
 | `limit` | entero | facultativa; predeterminado: 50; mínimo: 1; máximo: 500 |
 
 ```javascript
@@ -175,7 +175,7 @@ Registro completo para una reacción de Ñandú: ecuación, participantes con id
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `rhea_id` | cuerda. | **necesarios** |
+| `rhea_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("chemistry", "rhea_get_reaction", {"rhea_id": "10280"})
@@ -187,8 +187,8 @@ Afinidades de unión aseguradas (Ki/Kd/IC50/EC50) de todos los ligandos BindingD
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `uniprot` | cuerda. | **necesarios** |
-| `affinity_cutoff_nm` | Número | facultativa; predeterminado: 10000 |
+| `uniprot` | cadena de texto | **obligatorio** |
+| `affinity_cutoff_nm` | número | facultativa; predeterminado: 10000 |
 | `max_rows` | entero | facultativa; predeterminado: 100; mínimo: 1; máximo: 1000 |
 
 ```javascript
@@ -201,8 +201,8 @@ Metas de proteína con afinidades medidas para compuestos 2D-similar a una consu
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `smiles` | cuerda. | **necesarios** |
-| `similarity` | Número | facultativa; predeterminado: 0.85; mínimo: 0.5; máximo: 1 |
+| `smiles` | cadena de texto | **obligatorio** |
+| `similarity` | número | facultativa; predeterminado: 0.85; mínimo: 0.5; máximo: 1 |
 | `max_rows` | entero | facultativa; predeterminado: 100; mínimo: 1; máximo: 1000 |
 
 ```javascript
@@ -222,15 +222,15 @@ Buscar OpenAlex obras académicas (todas las disciplinas, ~250M registros) con f
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | opcional |
+| `query` | cadena de texto | opcional |
 | `year_from` | entero | opcional |
 | `year_to` | entero | opcional |
-| `work_type` | cuerda. | opcional |
-| `open_access_only` | boolean | opcional |
-| `venue` | cuerda. | opcional |
-| `sort` | cuerda. | facultativa; predeterminado: "relevance"; enum: &#91;"relevance", "cited_by_count", "publication_date"&#93; |
+| `work_type` | cadena de texto | opcional |
+| `open_access_only` | booleano | opcional |
+| `venue` | cadena de texto | opcional |
+| `sort` | cadena de texto | facultativa; predeterminado: "relevance"; enum: &#91;"relevance", "cited_by_count", "publication_date"&#93; |
 | `max_records` | entero | facultativa; predeterminado: 50 |
-| `include_abstracts` | boolean | facultativa; default: false |
+| `include_abstracts` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_search_works", {"query": "CRISPR base editing", "year_from": 2020, "open_access_only": true, "sort": "cited_by_count", "max_records": 25})
@@ -242,7 +242,7 @@ Obtenga un trabajo de OpenAlex en su totalidad — metadatos, abstractos (recons
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `work_id` | cuerda. | **necesarios** |
+| `work_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_get_work", {"work_id": "W2741809807"})
@@ -254,10 +254,10 @@ La lista funciona que CITE un trabajo dado (recibiendo citas) a través de OpenA
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `work_id` | cuerda. | **necesarios** |
-| `sort` | cuerda. | facultativa; predeterminado: "cited_by_count"; enum: &#91;"cited_by_count", "publication_date", "relevance"&#93; |
+| `work_id` | cadena de texto | **obligatorio** |
+| `sort` | cadena de texto | facultativa; predeterminado: "cited_by_count"; enum: &#91;"cited_by_count", "publication_date", "relevance"&#93; |
 | `max_records` | entero | facultativa; predeterminado: 50 |
-| `include_abstracts` | boolean | facultativa; default: false |
+| `include_abstracts` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_citations", {"work_id": "W2741809807", "sort": "cited_by_count", "max_records": 50})
@@ -269,7 +269,7 @@ Enumerar las obras de un determinado trabajo CITES (referencias salientes), hidr
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `work_id` | cuerda. | **necesarios** |
+| `work_id` | cadena de texto | **obligatorio** |
 | `max_records` | entero | facultativa; predeterminado: 100 |
 
 ```javascript
@@ -282,7 +282,7 @@ Buscar Perfiles de autor OpenAlex por nombre. Args: consulta (pantallas con el n
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
+| `query` | cadena de texto | **obligatorio** |
 | `max_records` | entero | facultativa; predeterminado: 25 |
 
 ```javascript
@@ -295,7 +295,7 @@ Traiga un perfil de autor OpenAlex más sus obras de primera clase. Args: author
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `author_id` | cuerda. | **necesarios** |
+| `author_id` | cadena de texto | **obligatorio** |
 | `works_sample` | entero | facultativa; predeterminado: 10 |
 
 ```javascript
@@ -308,7 +308,7 @@ Busque revistas/repositorios ('sources') en OpenAlex — estado de OA, listado D
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `venue` | cuerda. | **necesarios** |
+| `venue` | cadena de texto | **obligatorio** |
 | `max_records` | entero | facultativa; predeterminado: 10 |
 
 ```javascript
@@ -321,14 +321,14 @@ Preimpresos de búsqueda arXiv (física, matemáticas, CS, estadísticas, q-bio,
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | opcional |
-| `category` | cuerda. | opcional |
-| `date_from` | cuerda. | opcional |
-| `date_to` | cuerda. | opcional |
+| `query` | cadena de texto | opcional |
+| `category` | cadena de texto | opcional |
+| `date_from` | cadena de texto | opcional |
+| `date_to` | cadena de texto | opcional |
 | `start` | entero | facultativa; predeterminado: 0 |
 | `max_results` | entero | facultativa; predeterminado: 25 |
-| `sort_by` | cuerda. | facultativa; predeterminado: "relevance"; enum: &#91;"relevance", "submittedDate", "lastUpdatedDate"&#93; |
-| `sort_order` | cuerda. | facultativa; predeterminado: "descending"; enum: &#91;"descending", "ascending"&#93; |
+| `sort_by` | cadena de texto | facultativa; predeterminado: "relevance"; enum: &#91;"relevance", "submittedDate", "lastUpdatedDate"&#93; |
+| `sort_order` | cadena de texto | facultativa; predeterminado: "descending"; enum: &#91;"descending", "ascending"&#93; |
 
 ```javascript
 const result = await host.mcp("literature", "arxiv_search", {"query": "ti:transformer", "category": "cs.LG", "max_results": 10})
@@ -340,7 +340,7 @@ Metadatos de papel arXiv de lote (incl. abstracts) por ID — una solicitud de h
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `arxiv_ids` | array de cadena | **necesarios** |
+| `arxiv_ids` | matriz de cadenas | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("literature", "arxiv_get_papers", {"arxiv_ids": ["2103.14030", "1706.03762v5"]})
@@ -352,7 +352,7 @@ Recuperar metadatos descriptos por el editor para un Crossref DOI. Un DOI desnud
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `doi` | cuerda. | **necesarios**; minLength: 1; maxLength: 2048 |
+| `doi` | cadena de texto | **obligatorio**; minLength: 1; maxLength: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "crossref_get_work", {"doi": "10.1038/nature12968"})
@@ -365,7 +365,7 @@ Leer corrección depositada, retracción y otras relaciones de actualización. u
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `doi` | cuerda. | **necesarios**; minLength: 1; maxLength: 2048 |
+| `doi` | cadena de texto | **obligatorio**; minLength: 1; maxLength: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "crossref_get_updates", {"doi": "10.1038/nature12968"})
@@ -378,9 +378,9 @@ Buscar datos públicos DataCite dataset/software DOI metadatos. Consulta de sumi
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | facultativa; minLength: 1; maxLength: 2000 |
-| `related_doi` | cuerda. | facultativa; minLength: 1; maxLength: 2048 |
-| `resource_type` | cuerda. | facultativa; predeterminado: "dataset"; enum: &#91;"dataset", "software"&#93; |
+| `query` | cadena de texto | facultativa; minLength: 1; maxLength: 2000 |
+| `related_doi` | cadena de texto | facultativa; minLength: 1; maxLength: 2048 |
+| `resource_type` | cadena de texto | facultativa; predeterminado: "dataset"; enum: &#91;"dataset", "software"&#93; |
 | `page_size` | entero | facultativa; predeterminado: 20; mínimo: 1; máximo: 100 |
 | `page` | entero | facultativa; predeterminado: 1; mínimo: 1; máximo: 10000 |
 
@@ -395,7 +395,7 @@ Recuperar un registro de DataCite DOI público, incluyendo títulos, creadores, 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `doi` | cuerda. | **necesarios**; minLength: 1; maxLength: 2048 |
+| `doi` | cadena de texto | **obligatorio**; minLength: 1; maxLength: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "datacite_get_record", {"doi": "10.14454/qdd3-ps68"})
@@ -414,13 +414,13 @@ Búsqueda PubMed (biomedical & literatura de ciencias de la vida a través de la
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
+| `query` | cadena de texto | **obligatorio** |
 | `max_results` | entero | facultativa; predeterminado: 20 |
 | `retstart` | entero | facultativa; predeterminado: 0 |
-| `sort` | cuerda. | facultativa; enum: &#91;"relevance", "pub_date", "author", "journal_name", "title"&#93; |
-| `date_from` | cuerda. | opcional |
-| `date_to` | cuerda. | opcional |
-| `datetype` | cuerda. | facultativa; predeterminado: "pdat"; enum: &#91;"pdat", "edat", "mdat"&#93; |
+| `sort` | cadena de texto | facultativa; enum: &#91;"relevance", "pub_date", "author", "journal_name", "title"&#93; |
+| `date_from` | cadena de texto | opcional |
+| `date_to` | cadena de texto | opcional |
+| `datetype` | cadena de texto | facultativa; predeterminado: "pdat"; enum: &#91;"pdat", "edat", "mdat"&#93; |
 
 ```javascript
 const result = await host.mcp("pubmed", "search_articles", {"query": "CRISPR gene editing", "max_results": 10})
@@ -432,7 +432,7 @@ Recuperar metadatos detallados de PubMed por PMID (bulk, via efetch): identifica
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **necesarios** |
+| `pmids` | ['string', 'array'] | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_article_metadata", {"pmids": ["35486828", "33264437"]})
@@ -444,8 +444,8 @@ Encuentre contenido relacionado PubMed para una o más fuente PMIDs vía NCBI el
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **necesarios** |
-| `link_type` | cuerda. | facultativa; predeterminado: "pubmed_pubmed"; enum: &#91;"pubmed_pubmed", "pubmed_pmc", "pubmed_nucleotide", "pubmed_protein", "pubmed_gene"&#93; |
+| `pmids` | ['string', 'array'] | **obligatorio** |
+| `link_type` | cadena de texto | facultativa; predeterminado: "pubmed_pubmed"; enum: &#91;"pubmed_pubmed", "pubmed_pmc", "pubmed_nucleotide", "pubmed_protein", "pubmed_gene"&#93; |
 | `max_results` | entero | opcional |
 
 ```javascript
@@ -458,7 +458,7 @@ Resolver citas bibliográficas a PMIDs a través de Ecitmatch NCBI. Cada cita su
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `citations` | array de objeto | **necesarios** |
+| `citations` | matriz de objetos | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("pubmed", "lookup_article_by_citation", {"citations": [{"journal": "Science", "year": 1987, "volume": "235", "first_page": "182", "author": "Palmenberg AC"}]})
@@ -470,8 +470,8 @@ Convertir entre PMID, PMCID y DOI a través del convertidor NCBI/PMC ID. ids de 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `ids` | &#91;'string', 'array'&#93; | **necesarios** |
-| `id_type` | cuerda. | facultativa; predeterminado: "pmid"; enum: &#91;"pmid", "pmcid", "doi"&#93; |
+| `ids` | ['string', 'array'] | **obligatorio** |
+| `id_type` | cadena de texto | facultativa; predeterminado: "pmid"; enum: &#91;"pmid", "pmcid", "doi"&#93; |
 
 ```javascript
 const result = await host.mcp("pubmed", "convert_article_ids", {"ids": ["PMC9046468"], "id_type": "pmcid"})
@@ -483,7 +483,7 @@ Recuperar texto completo de acceso abierto de PubMed Central a través de Europa
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `pmc_ids` | &#91;'string', 'array'&#93; | **necesarios** |
+| `pmc_ids` | ['string', 'array'] | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_full_text_article", {"pmc_ids": ["PMC9046468"]})
@@ -495,7 +495,7 @@ Informe de copyright y estado de licencia por PMID combinando PubMed CopyrightIn
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **necesarios** |
+| `pmids` | ['string', 'array'] | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_copyright_status", {"pmids": ["35891187", "34375400"]})
@@ -514,10 +514,10 @@ Resolver identificadores/symbols de genes a través de mygene.info (batched, up 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `terms` | array de cadena | **necesarios** |
-| `scopes` | cuerda. | opcional |
-| `fields` | cuerda. | facultativa; default: "symbol,name,taxid,entrezgene,ensembl.gene" |
-| `species` | cuerda. | opcional |
+| `terms` | matriz de cadenas | **obligatorio** |
+| `scopes` | cadena de texto | opcional |
+| `fields` | cadena de texto | facultativa; default: "symbol,name,taxid,entrezgene,ensembl.gene" |
+| `species` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("genes", "query_genes", {"terms": ["TP53", "BRCA1"], "scopes": "symbol,alias", "fields": "symbol,name,entrezgene,ensembl.gene", "species": "human"})
@@ -529,7 +529,7 @@ Lista de ontologías en el Servicio de Vigilancia de Ontología EBI (OLS4). Con 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `ontology_ids` | array de cadena | opcional |
+| `ontology_ids` | matriz de cadenas | opcional |
 
 ```javascript
 const result = await host.mcp("genes", "list_ontologies", {"ontology_ids": ["efo", "go", "mondo"]})
@@ -541,10 +541,10 @@ Buscar términos de ontología por etiqueta/sinónimo a través de una o más on
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
-| `ontologies` | array de cadena | opcional |
-| `exact` | boolean | facultativa; default: false |
-| `include_obsolete` | boolean | facultativa; default: false |
+| `query` | cadena de texto | **obligatorio** |
+| `ontologies` | matriz de cadenas | opcional |
+| `exact` | booleano | facultativa; default: false |
+| `include_obsolete` | booleano | facultativa; default: false |
 | `max_results` | entero | facultativa; predeterminado: 20 |
 
 ```javascript
@@ -557,10 +557,10 @@ Traiga un término de ontología 's detalles, o su conjunto completo de plazos r
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `ontology` | cuerda. | **necesarios** |
-| `term_id` | cuerda. | **necesarios** |
-| `relation` | cuerda. | facultativa; enum: &#91;"padres", "niños", "antepasados", "descendientes descendientes", "jerárquicaParents", "jerárquica", "jerárquica", "jerárquicaDescendants"&#93; |
-| `include_parents` | boolean | facultativa; default: false |
+| `ontology` | cadena de texto | **obligatorio** |
+| `term_id` | cadena de texto | **obligatorio** |
+| `relation` | cadena de texto | facultativa; enum: &#91;"padres", "niños", "antepasados", "descendientes descendientes", "jerárquicaParents", "jerárquica", "jerárquica", "jerárquicaDescendants"&#93; |
+| `include_parents` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("genes", "get_ontology_term", {"ontology": "go", "term_id": "GO:0006281", "relation": "children"})
@@ -572,11 +572,11 @@ Retrieve GO anotaciones para un producto de genes UniProt de QuickGO (completo, 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `uniprot_accession` | cuerda. | **necesarios** |
-| `aspect` | cuerda. | facultativa; enum: &#91;"biological_process", "molecular_function", "cellular_component"&#93; |
-| `evidence` | cuerda. | opcional |
+| `uniprot_accession` | cadena de texto | **obligatorio** |
+| `aspect` | cadena de texto | facultativa; enum: &#91;"biological_process", "molecular_function", "cellular_component"&#93; |
+| `evidence` | cadena de texto | opcional |
 | `taxon_id` | entero | opcional |
-| `include_term_names` | boolean | facultativa; default: false |
+| `include_term_names` | booleano | facultativa; default: false |
 | `max_records` | entero | facultativa; predeterminado: 200 |
 
 ```javascript
@@ -589,9 +589,9 @@ Traiga registros UniProtKB para una lista de adhesiones (recuperaciones OR corta
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accessions` | array de cadena | **necesarios** |
-| `format` | cuerda. | facultativa; enum: &#91;"fasta", "txt"&#93; |
-| `fields` | array de cadena | opcional |
+| `accessions` | matriz de cadenas | **obligatorio** |
+| `format` | cadena de texto | facultativa; enum: &#91;"fasta", "txt"&#93; |
+| `fields` | matriz de cadenas | opcional |
 
 ```javascript
 const result = await host.mcp("genes", "get_uniprot_entries", {"accessions": ["P04637", "P38398"], "fields": ["accession", "id", "protein_name", "gene_names", "organism_name", "length"]})
@@ -603,12 +603,12 @@ Mapa de símbolos gen o adhesiones UniProt a las vías Reactome (AnalysisService
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `identifiers` | array de cadena | **necesarios** |
-| `id_type` | cuerda. | **necesarios**; enum: &#91;"symbol", "uniprot"&#93; |
-| `species` | cuerda. | facultativa; predeterminado: "Homo sapiens" |
-| `resource` | cuerda. | facultativa; default: "TOTAL" |
-| `include_disease` | boolean | facultativa; default: true |
-| `compact` | boolean | facultativa; default: true |
+| `identifiers` | matriz de cadenas | **obligatorio** |
+| `id_type` | cadena de texto | **obligatorio**; enum: &#91;"symbol", "uniprot"&#93; |
+| `species` | cadena de texto | facultativa; predeterminado: "Homo sapiens" |
+| `resource` | cadena de texto | facultativa; default: "TOTAL" |
+| `include_disease` | booleano | facultativa; default: true |
+| `compact` | booleano | facultativa; default: true |
 
 ```javascript
 const result = await host.mcp("genes", "map_reactome_pathways", {"identifiers": ["TP53", "EGFR", "BRCA1"], "id_type": "symbol"})
@@ -627,9 +627,9 @@ Busque un gen Ensembl/transcript/proteína por ID estable o un gen por símbolo;
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
-| `species` | cuerda. | facultativa; por defecto: "homo_sapiens" |
-| `expand` | boolean | facultativa; default: false |
+| `query` | cadena de texto | **obligatorio** |
+| `species` | cadena de texto | facultativa; por defecto: "homo_sapiens" |
+| `expand` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_lookup", {"query": "BRAF"})
@@ -641,8 +641,8 @@ Referencias transversales externas de un ID estable ensembl —el puente de los 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `stable_id` | cuerda. | **necesarios** |
-| `external_db` | cuerda. | opcional |
+| `stable_id` | cadena de texto | **obligatorio** |
+| `external_db` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_xrefs", {"stable_id": "ENSG00000157764", "external_db": "HGNC"})
@@ -654,10 +654,10 @@ Predecir las consecuencias de la variante con Ensembl VEP — la mayoría del re
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `variant_id` | cuerda. | opcional |
-| `region` | cuerda. | opcional |
-| `allele` | cuerda. | opcional |
-| `species` | cuerda. | facultativa; por defecto: "homo_sapiens" |
+| `variant_id` | cadena de texto | opcional |
+| `region` | cadena de texto | opcional |
+| `allele` | cadena de texto | opcional |
+| `species` | cadena de texto | facultativa; por defecto: "homo_sapiens" |
 | `max_consequences` | entero | facultativa; predeterminado: 25 |
 
 ```javascript
@@ -670,12 +670,12 @@ Ortodologías o paralogues de un gen de Ensembl Compara (condenadas filas — no
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_symbol` | cuerda. | opcional |
-| `gene_id` | cuerda. | opcional |
-| `homology_type` | cuerda. | facultativa; predeterminado: "orthologues"; enum: &#91;"orthologues", "paralogues", "projections"&#93; |
-| `target_species` | cuerda. | opcional |
+| `gene_symbol` | cadena de texto | opcional |
+| `gene_id` | cadena de texto | opcional |
+| `homology_type` | cadena de texto | facultativa; predeterminado: "orthologues"; enum: &#91;"orthologues", "paralogues", "projections"&#93; |
+| `target_species` | cadena de texto | opcional |
 | `target_taxon` | entero | opcional |
-| `species` | cuerda. | facultativa; por defecto: "homo_sapiens" |
+| `species` | cadena de texto | facultativa; por defecto: "homo_sapiens" |
 | `max_homologies` | entero | facultativa; predeterminado: 200 |
 
 ```javascript
@@ -688,10 +688,10 @@ Secuencia de captura de Ensembl — por ID estable (gene/transcript/proteína) o
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `stable_id` | cuerda. | opcional |
-| `region` | cuerda. | opcional |
-| `species` | cuerda. | facultativa; por defecto: "homo_sapiens" |
-| `seq_type` | cuerda. | facultativa; predeterminado: "genomic"; enum: &#91;"genomic", "cdna", "cds", "protein"&#93; |
+| `stable_id` | cadena de texto | opcional |
+| `region` | cadena de texto | opcional |
+| `species` | cadena de texto | facultativa; por defecto: "homo_sapiens" |
+| `seq_type` | cadena de texto | facultativa; predeterminado: "genomic"; enum: &#91;"genomic", "cdna", "cds", "protein"&#93; |
 | `max_bytes` | entero | facultativa; predeterminado: 400000 |
 
 ```javascript
@@ -704,9 +704,9 @@ Lista Las características de conjunto superponen una región genómica — gene
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `region` | cuerda. | **necesarios** |
-| `feature` | cuerda. | facultativa; predeterminado: "gene"; &#91;Enum&#93;"gene", "transcripción", "exon", "cds", "reglamentación reglamentaria", "motivo", "repetición", "Variación", "structural_variation", "banda", "simple", "misc"&#93; |
-| `species` | cuerda. | facultativa; por defecto: "homo_sapiens" |
+| `region` | cadena de texto | **obligatorio** |
+| `feature` | cadena de texto | facultativa; predeterminado: "gene"; &#91;Enum&#93;"gene", "transcripción", "exon", "cds", "reglamentación reglamentaria", "motivo", "repetición", "Variación", "structural_variation", "banda", "simple", "misc"&#93; |
+| `species` | cadena de texto | facultativa; por defecto: "homo_sapiens" |
 | `max_features` | entero | facultativa; predeterminado: 500 |
 
 ```javascript
@@ -719,8 +719,8 @@ Listar las pistas de datos disponibles en un montaje de UCSC Genome Browser (só
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `genome` | cuerda. | facultativa; default: "hg38" |
-| `filter_text` | cuerda. | opcional |
+| `genome` | cadena de texto | facultativa; default: "hg38" |
+| `filter_text` | cadena de texto | opcional |
 | `max_tracks` | entero | facultativa; predeterminado: 200 |
 
 ```javascript
@@ -733,11 +733,11 @@ Obtenga filas crudas de cualquier UCSC Genome Browser track en una región — l
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `track` | cuerda. | **necesarios** |
-| `chrom` | cuerda. | **necesarios** |
-| `start` | entero | **necesarios** |
-| `end` | entero | **necesarios** |
-| `genome` | cuerda. | facultativa; default: "hg38" |
+| `track` | cadena de texto | **obligatorio** |
+| `chrom` | cadena de texto | **obligatorio** |
+| `start` | entero | **obligatorio** |
+| `end` | entero | **obligatorio** |
+| `genome` | cadena de texto | facultativa; default: "hg38" |
 | `max_rows` | entero | facultativa; predeterminado: 1000 |
 
 ```javascript
@@ -750,12 +750,12 @@ Resumen de conservación evolutivo para una región de las pistas de UCSC phyloP
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `chrom` | cuerda. | **necesarios** |
-| `start` | entero | **necesarios** |
-| `end` | entero | **necesarios** |
-| `genome` | cuerda. | facultativa; default: "hg38" |
-| `track` | cuerda. | facultativa; predeterminado: "phyloP100way" |
-| `include_values` | boolean | facultativa; default: false |
+| `chrom` | cadena de texto | **obligatorio** |
+| `start` | entero | **obligatorio** |
+| `end` | entero | **obligatorio** |
+| `genome` | cadena de texto | facultativa; default: "hg38" |
+| `track` | cadena de texto | facultativa; predeterminado: "phyloP100way" |
+| `include_values` | booleano | facultativa; default: false |
 | `max_values` | entero | facultativa; predeterminado: 2000 |
 
 ```javascript
@@ -768,10 +768,10 @@ Grupos de sitios vinculantes de factor de transcripción ENCODE que superponen u
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `chrom` | cuerda. | **necesarios** |
-| `start` | entero | **necesarios** |
-| `end` | entero | **necesarios** |
-| `genome` | cuerda. | facultativa; default: "hg38" |
+| `chrom` | cadena de texto | **obligatorio** |
+| `start` | entero | **obligatorio** |
+| `end` | entero | **obligatorio** |
+| `genome` | cadena de texto | facultativa; default: "hg38" |
 | `max_rows` | entero | facultativa; predeterminado: 1000 |
 
 ```javascript
@@ -784,8 +784,8 @@ Nombres cromosomas/contig y tamaños de una asamblea UCSC — para validar coord
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `genome` | cuerda. | facultativa; default: "hg38" |
-| `filter_text` | cuerda. | opcional |
+| `genome` | cadena de texto | facultativa; default: "hg38" |
+| `filter_text` | cadena de texto | opcional |
 | `max_chroms` | entero | facultativa; predeterminado: 100 |
 
 ```javascript
@@ -799,14 +799,16 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>Mostrar operaciones y parámetros</summary>
 
+**gnomAD coordinar reglas:** registra el pin de conjunto de datos con el montaje de referencia. Las consultas de genes/región de corta duración utilizan GRCh37 para r2.1/ExAC y GRCh38 para r3/r4; las consultas de genes estructural-variantes usan `gnomad_sv_r2_1` (GRCh37) o `gnomad_sv_r4` (GRCh38); cambiar el pin no convierte las coordenadas de entrada. `gene_constraint` y el espejo GnomAD ClinVar usan un look de genes GRCh38 fijo y no aceptan un argumento de conjunto de datos. Las consultas mitocondriales también utilizan una revisión fija de los padres GRCh38; suministrar un gen o ambas regiones ordenadas límites, nunca ambos modos. Los límites de la región deben ser enteros desde 1 a 2,147,483,647. El límite de diferencia de un millón de pesos se aplica a `region_variants`; no es un límite mitocondrial separado. Mantenga IDs de variables estructurales específicas para la liberación con su conjunto de datos SV original.
+
 ### `get_variant` {/* #get_variant */}
 
 Busque una variante corta de gnomAD por ID y devuelva sus frecuencias de población. `variant_id` es `chrom-pos-ref-alt` en el dataset's de referencia (GRCh38 para r3/r4, GRCh37 para r2.1/ExAC), por ejemplo. `19-44908822-C-T` (APOE rs7412); use `search_variants` para resolver un RsID primero.
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `variant_id` | cuerda. | **necesarios** |
-| `dataset` | cuerda. | facultativa; predeterminado: "gnomad_r4"; &#91;Enum&#93;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
+| `variant_id` | cadena de texto | **obligatorio** |
+| `dataset` | cadena de texto | facultativa; predeterminado: "gnomad_r4"; &#91;Enum&#93;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "get_variant", {"variant_id": "19-44908822-C-T", "dataset": "gnomad_r4"})
@@ -818,8 +820,8 @@ GnomAD de búsqueda para IDs variantes que coincidan con una cadena de consulta 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
-| `dataset` | cuerda. | facultativa; predeterminado: "gnomad_r4"; &#91;Enum&#93;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
+| `query` | cadena de texto | **obligatorio** |
+| `dataset` | cadena de texto | facultativa; predeterminado: "gnomad_r4"; &#91;Enum&#93;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "search_variants", {"query": "rs7412", "dataset": "gnomad_r4"})
@@ -827,13 +829,13 @@ const result = await host.mcp("variants", "search_variants", {"query": "rs7412",
 
 ### `gene_variants` {/* #gene_variants */}
 
-Lista TODAS las variantes cortas de gnomAD en un gen (lista completa) pueden ser miles de filas para genes grandes. Pase exactamente uno de `gene_symbol` (símbolo HGNC, por ejemplo. `APOE`) o `gene_id` (Ensembl gene ID, por ejemplo. `ENSG00000130203`).
+Lista TODAS las variantes cortas de gnomAD en un gen. Los límites genéticos y las coordenadas variantes utilizan el conjunto de datos de referencia (GRCh37 para r2.1/ExAC, GRCh38 para r3/r4). La lista completa puede contener miles de filas para genes grandes. Pase exactamente uno de `gene_symbol` (símbolo HGNC, por ejemplo. `APOE`) o `gene_id` (Ensembl gene ID, por ejemplo. `ENSG00000130203`).
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_symbol` | cuerda. | opcional |
-| `gene_id` | cuerda. | opcional |
-| `dataset` | cuerda. | facultativa; predeterminado: "gnomad_r4"; &#91;Enum&#93;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
+| `gene_symbol` | cadena de texto | opcional |
+| `gene_id` | cadena de texto | opcional |
+| `dataset` | cadena de texto | facultativa; predeterminado: "gnomad_r4"; &#91;Enum&#93;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "gene_variants", {"gene_symbol": "APOE", "dataset": "gnomad_r4"})
@@ -845,8 +847,8 @@ gnomAD gene limitt metrics: pLI, observado/expected LoF-missense-synonymous cuen
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_symbol` | cuerda. | opcional |
-| `gene_id` | cuerda. | opcional |
+| `gene_symbol` | cadena de texto | opcional |
+| `gene_id` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP53"})
@@ -854,14 +856,14 @@ const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP
 
 ### `region_variants` {/* #region_variants */}
 
-Lista TODAS las variantes cortas de gnomAD en una región genómica (max 1 Mb) dividieron regiones más grandes en ventanas consecutivas. `chrom` es un nombre cromosoma sin prefijo `chr` (`1`-`22`, `X`, `Y`); `start`/`stop` son 1 integrados y `stop - start` debe ser &lt;= 1,000,000. El conjunto de datos determina la construcción de referencia de las coordenadas (GRCh38 para r3/r4).
+Lista TODAS las variantes cortas de gnomAD en una región genómica (max 1 Mb) dividieron regiones más grandes en ventanas consecutivas. `chrom` acepta `1`-`22`, `X`, `Y`, un prefijo `chr` opcional y una maleta inferior `x`/`y`; `start`/`stop` son 1 integrados y `stop - start` debe ser &lt;= 1,000,000. El conjunto de datos determina la construcción de referencia de las coordenadas (GRCh37 para r2.1/ExAC, GRCh38 para r3/r4); Las coordenadas de entrada ya deben utilizar esa construcción, sin remontaje automático.
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `chrom` | cuerda. | **necesarios** |
-| `start` | entero | **necesarios** |
-| `stop` | entero | **necesarios** |
-| `dataset` | cuerda. | facultativa; predeterminado: "gnomad_r4"; &#91;Enum&#93;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
+| `chrom` | cadena de texto | **obligatorio** |
+| `start` | entero | **obligatorio**; mínimo: 1; máximo: 2147483647 |
+| `stop` | entero | **obligatorio**; mínimo: 1; máximo: 2147483647 |
+| `dataset` | cadena de texto | facultativa; predeterminado: "gnomad_r4"; &#91;Enum&#93;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "region_variants", {"chrom": "1", "start": 55039475, "stop": 55064852, "dataset": "gnomad_r4"})
@@ -873,8 +875,8 @@ Mapa una variante ID entre las obras de referencia (GRCh37 &lt;-> GRCh38) utiliz
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `variant_id` | cuerda. | **necesarios** |
-| `source_build` | cuerda. | facultativa; predeterminado: "GRCh37"; enum: &#91;"GRCh37", "GRCh38"&#93; |
+| `variant_id` | cadena de texto | **obligatorio** |
+| `source_build` | cadena de texto | facultativa; predeterminado: "GRCh37"; enum: &#91;"GRCh37", "GRCh38"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "liftover_variant", {"variant_id": "1-55516888-G-GA", "source_build": "GRCh37"})
@@ -886,8 +888,8 @@ Lista ClinVar variantes en un gen como reflejado por gnomAD, con significado cl�
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_symbol` | cuerda. | opcional |
-| `gene_id` | cuerda. | opcional |
+| `gene_symbol` | cadena de texto | opcional |
+| `gene_id` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_variants", {"gene_symbol": "BRCA1"})
@@ -899,9 +901,9 @@ Lista de variantes estructurales gnomAD (deleciones, duplicaciones, inserciones,
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_symbol` | cuerda. | opcional |
-| `gene_id` | cuerda. | opcional |
-| `dataset` | cuerda. | facultativa; predeterminado: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
+| `gene_symbol` | cadena de texto | opcional |
+| `gene_id` | cadena de texto | opcional |
+| `dataset` | cadena de texto | facultativa; predeterminado: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "structural_variants", {"gene_symbol": "TP53", "dataset": "gnomad_sv_r4"})
@@ -913,8 +915,8 @@ Busque una variante estructural de gnomAD por su ID SV específico de liberació
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `sv_id` | cuerda. | **necesarios** |
-| `dataset` | cuerda. | facultativa; predeterminado: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
+| `sv_id` | cadena de texto | **obligatorio** |
+| `dataset` | cadena de texto | facultativa; predeterminado: "gnomad_sv_r4"; enum: &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "DEL_CHR17_A5250EA9", "dataset": "gnomad_sv_r4"})
@@ -926,11 +928,11 @@ Lista de las variantes mitocondriales gnomAD con recuentos heteroplasmáticos (`
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_symbol` | cuerda. | opcional |
-| `gene_id` | cuerda. | opcional |
-| `region_start` | entero | opcional |
-| `region_stop` | entero | opcional |
-| `dataset` | cuerda. | facultativa; predeterminado: "gnomad_r4"; &#91;Enum&#93;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
+| `gene_symbol` | cadena de texto | opcional |
+| `gene_id` | cadena de texto | opcional |
+| `region_start` | entero | facultativa; mínimo: 1; máximo: 2147483647 |
+| `region_stop` | entero | facultativa; mínimo: 1; máximo: 2147483647 |
+| `dataset` | cadena de texto | facultativa; predeterminado: "gnomad_r4"; &#91;Enum&#93;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "exac"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "mitochondrial_variants", {"gene_symbol": "MT-TL1", "dataset": "gnomad_r4"})
@@ -942,7 +944,7 @@ Buscar ClinVar directamente (en vivo NCBI, no gnomAD's instantánea) y volver a 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
+| `query` | cadena de texto | **obligatorio** |
 | `max_records` | entero | facultativa; predeterminado: 50 |
 
 ```javascript
@@ -955,7 +957,7 @@ Obtenga registros completos de ClinVar para un lote de adhesiones VCV/RCV o ID d
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accessions` | &#91;'string', 'array'&#93; | **necesarios** |
+| `accessions` | ['string', 'array'] | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_get_records", {"accessions": ["VCV000045122", "RCV000019428", "45123"]})
@@ -967,7 +969,7 @@ Todos los registros de variaciones de ClinVar que hacen referencia a un dbSNP rs
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `rsid` | cuerda. | **necesarios** |
+| `rsid` | cadena de texto | **obligatorio** |
 | `max_records` | entero | facultativa; predeterminado: 50 |
 
 ```javascript
@@ -980,7 +982,7 @@ Registros Canónicos dbSNP RefSNP para un lote de rsIDs: GRCh38+GRCh37 colocacio
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `rsids` | array de cadena | **necesarios** |
+| `rsids` | matriz de cadenas | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("variants", "dbsnp_get_rsids", {"rsids": ["rs7412", "rs429358"]})
@@ -992,10 +994,10 @@ Lista dbSNP rsIDs en una ventana genómica (indice de posición de la investigac
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `chrom` | cuerda. | **necesarios** |
-| `start` | entero | **necesarios** |
-| `stop` | entero | **necesarios** |
-| `assembly` | cuerda. | facultativa; predeterminado: "GRCh38"; enum: &#91;"GRCh38", "GRCh37"&#93; |
+| `chrom` | cadena de texto | **obligatorio** |
+| `start` | entero | **obligatorio** |
+| `stop` | entero | **obligatorio** |
+| `assembly` | cadena de texto | facultativa; predeterminado: "GRCh38"; enum: &#91;"GRCh38", "GRCh37"&#93; |
 | `max_rsids` | entero | facultativa; predeterminado: 200 |
 
 ```javascript
@@ -1015,17 +1017,17 @@ Búsqueda de PREMIOS sobre ClinicalTrials.gov. Filtro por condición, intervenci
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `condition` | cuerda. | opcional |
-| `intervention` | cuerda. | opcional |
-| `sponsor` | cuerda. | opcional |
-| `location` | cuerda. | opcional |
-| `status` | array de cadena | opcional |
-| `phase` | array de cadena | opcional |
-| `study_type` | cuerda. | facultativa; enum: &#91;"INTERVENTIONAL", "OBSERVATIONAL", "EXPANDED_ACCESS"&#93; |
-| `advanced_query` | cuerda. | opcional |
+| `condition` | cadena de texto | opcional |
+| `intervention` | cadena de texto | opcional |
+| `sponsor` | cadena de texto | opcional |
+| `location` | cadena de texto | opcional |
+| `status` | matriz de cadenas | opcional |
+| `phase` | matriz de cadenas | opcional |
+| `study_type` | cadena de texto | facultativa; enum: &#91;"INTERVENTIONAL", "OBSERVATIONAL", "EXPANDED_ACCESS"&#93; |
+| `advanced_query` | cadena de texto | opcional |
 | `page_size` | entero | facultativa; predeterminado: 10; mínimo: 1; máximo: 1000 |
-| `page_token` | cuerda. | opcional |
-| `count_total` | boolean | facultativa; default: false |
+| `page_token` | cadena de texto | opcional |
+| `count_total` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_trials", {"condition": "lung cancer", "status": ["RECRUITING"], "phase": ["PHASE3"], "count_total": true, "page_size": 10})
@@ -1037,7 +1039,7 @@ Obtenga detalles completos para un ensayo por NCT id (formato "NCT" + dígitos 8
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `nct_id` | cuerda. | **necesarios** |
+| `nct_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "get_trial_details", {"nct_id": "NCT03661411"})
@@ -1049,13 +1051,13 @@ Buscar juicios patrocinados por una empresa u organización (concuerda con el no
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `sponsor_name` | cuerda. | **necesarios** |
-| `condition` | cuerda. | opcional |
-| `phase` | array de cadena | opcional |
-| `status` | array de cadena | opcional |
+| `sponsor_name` | cadena de texto | **obligatorio** |
+| `condition` | cadena de texto | opcional |
+| `phase` | matriz de cadenas | opcional |
+| `status` | matriz de cadenas | opcional |
 | `page_size` | entero | facultativa; predeterminado: 10; mínimo: 1; máximo: 1000 |
-| `page_token` | cuerda. | opcional |
-| `count_total` | boolean | facultativa; default: false |
+| `page_token` | cadena de texto | opcional |
+| `count_total` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_by_sponsor", {"sponsor_name": "Pfizer", "phase": ["PHASE3"], "count_total": true})
@@ -1067,11 +1069,11 @@ Encontrar investigadores principales y sitios de investigación por condición, 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `condition` | cuerda. | opcional |
-| `institution` | cuerda. | opcional |
-| `location` | cuerda. | opcional |
-| `investigator_name` | cuerda. | opcional |
-| `status` | array de cadena | opcional |
+| `condition` | cadena de texto | opcional |
+| `institution` | cadena de texto | opcional |
+| `location` | cadena de texto | opcional |
+| `investigator_name` | cadena de texto | opcional |
+| `status` | matriz de cadenas | opcional |
 | `page_size` | entero | facultativa; predeterminado: 20; mínimo: 1; máximo: 1000 |
 
 ```javascript
@@ -1084,10 +1086,10 @@ Analizar las medidas primarias/secundarias/otros resultados (puntos finales). Pr
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `nct_id` | cuerda. | opcional |
-| `condition` | cuerda. | opcional |
-| `phase` | array de cadena | opcional |
-| `start_date_after` | cuerda. | opcional |
+| `nct_id` | cadena de texto | opcional |
+| `condition` | cadena de texto | opcional |
+| `phase` | matriz de cadenas | opcional |
+| `start_date_after` | cadena de texto | opcional |
 | `page_size` | entero | facultativa; predeterminado: 50; mínimo: 1; máximo: 1000 |
 
 ```javascript
@@ -1100,14 +1102,14 @@ Concordancia entre el paciente y el juicio. DEFALITOS PARA RECIBAR juicios a men
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `condition` | cuerda. | opcional |
-| `eligibility_keywords` | cuerda. | opcional |
-| `min_age` | cuerda. | opcional |
-| `max_age` | cuerda. | opcional |
-| `sex` | cuerda. | facultativa; enum: &#91;"ALL", "MALE", "FEMALE"&#93; |
-| `status` | array de cadena | opcional |
+| `condition` | cadena de texto | opcional |
+| `eligibility_keywords` | cadena de texto | opcional |
+| `min_age` | cadena de texto | opcional |
+| `max_age` | cadena de texto | opcional |
+| `sex` | cadena de texto | facultativa; enum: &#91;"ALL", "MALE", "FEMALE"&#93; |
+| `status` | matriz de cadenas | opcional |
 | `page_size` | entero | facultativa; predeterminado: 10; mínimo: 1; máximo: 1000 |
-| `page_token` | cuerda. | opcional |
+| `page_token` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_by_eligibility", {"condition": "diabetes", "min_age": "65 Years", "sex": "FEMALE"})
@@ -1126,7 +1128,7 @@ Comisariaciones de validez de la enfermedad de ClinGen (cuán fuerte es la evide
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene` | cuerda. | opcional |
+| `gene` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_gene_validity", {"gene": "BRCA2"})
@@ -1138,8 +1140,8 @@ Comisariaciones de sensibilidad de dosificación ClinGen: afirmaciones de haploi
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene` | cuerda. | opcional |
-| `include_regions` | boolean | facultativa; default: false |
+| `gene` | cadena de texto | opcional |
+| `include_regions` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_dosage_sensitivity", {"gene": "TP53"})
@@ -1151,8 +1153,8 @@ Comisariaciones ClinGen de accionamiento clínico: para trastornos asociados con
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene` | cuerda. | opcional |
-| `context` | cuerda. | facultativa; predeterminado: "both"; enum: &#91;"adult", "pediatric", "both"&#93; |
+| `gene` | cadena de texto | opcional |
+| `context` | cadena de texto | facultativa; predeterminado: "both"; enum: &#91;"adult", "pediatric", "both"&#93; |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_actionability", {"gene": "BRCA1", "context": "adult"})
@@ -1164,9 +1166,9 @@ ClinGen Evidence Repository (ERepo) expert-panel variante pathogenicity Ratings 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene` | cuerda. | opcional |
-| `caid` | cuerda. | opcional |
-| `hgvs` | cuerda. | opcional |
+| `gene` | cadena de texto | opcional |
+| `caid` | cadena de texto | opcional |
+| `hgvs` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_variant_classifications", {"gene": "BRCA1"})
@@ -1178,7 +1180,7 @@ Encontrar los registros genéticos de CIViC por símbolo de Entrez exacto (por e
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `entrez_symbol` | cuerda. | **necesarios** |
+| `entrez_symbol` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_genes", {"entrez_symbol": "BRAF"})
@@ -1190,7 +1192,7 @@ Todas las variantes de un gen CIViC (por gen id CIViC), completamente paginado, 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_id` | entero | **necesarios** |
+| `gene_id` | entero | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_gene_variants", {"gene_id": 5})
@@ -1202,7 +1204,7 @@ Una variante de CIViC por su variante id de CIViC (alias, tipos de variantes, li
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `variant_id` | entero | **necesarios** |
+| `variant_id` | entero | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_variant", {"variant_id": 12})
@@ -1214,7 +1216,7 @@ Buscar variantes de CIViC por subestring nombre (por ejemplo. "V600"), opcionalm
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `name` | cuerda. | **necesarios** |
+| `name` | cadena de texto | **obligatorio** |
 | `gene_id` | entero | opcional |
 
 ```javascript
@@ -1227,7 +1229,7 @@ Un elemento de evidencia CIViC por id: significación clínica de un perfil mole
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `evidence_id` | entero | **necesarios** |
+| `evidence_id` | entero | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_evidence_item", {"evidence_id": 1409})
@@ -1239,16 +1241,16 @@ Buscar elementos de prueba CIViC por cualquier combinación de filtros; completa
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `disease_name` | cuerda. | opcional |
-| `therapy_name` | cuerda. | opcional |
-| `evidence_level` | cuerda. | opcional |
-| `evidence_type` | cuerda. | opcional |
-| `evidence_direction` | cuerda. | opcional |
-| `significance` | cuerda. | opcional |
-| `variant_origin` | cuerda. | opcional |
+| `disease_name` | cadena de texto | opcional |
+| `therapy_name` | cadena de texto | opcional |
+| `evidence_level` | cadena de texto | opcional |
+| `evidence_type` | cadena de texto | opcional |
+| `evidence_direction` | cadena de texto | opcional |
+| `significance` | cadena de texto | opcional |
+| `variant_origin` | cadena de texto | opcional |
 | `evidence_rating` | entero | opcional |
-| `status` | cuerda. | opcional |
-| `molecular_profile_name` | cuerda. | opcional |
+| `status` | cadena de texto | opcional |
+| `molecular_profile_name` | cadena de texto | opcional |
 | `molecular_profile_id` | entero | opcional |
 | `variant_id` | entero | opcional |
 | `disease_id` | entero | opcional |
@@ -1267,7 +1269,7 @@ Una afirmación del CIViC por id: una reclamación sumaria comprobada por expert
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `assertion_id` | entero | **necesarios** |
+| `assertion_id` | entero | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_assertion", {"assertion_id": 7})
@@ -1279,22 +1281,22 @@ Buscar afirmaciones de CIViC por cualquier combinación de filtros; completament
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `disease_name` | cuerda. | opcional |
-| `therapy_name` | cuerda. | opcional |
-| `assertion_type` | cuerda. | opcional |
-| `assertion_direction` | cuerda. | opcional |
-| `significance` | cuerda. | opcional |
-| `amp_level` | cuerda. | opcional |
-| `status` | cuerda. | opcional |
-| `molecular_profile_name` | cuerda. | opcional |
+| `disease_name` | cadena de texto | opcional |
+| `therapy_name` | cadena de texto | opcional |
+| `assertion_type` | cadena de texto | opcional |
+| `assertion_direction` | cadena de texto | opcional |
+| `significance` | cadena de texto | opcional |
+| `amp_level` | cadena de texto | opcional |
+| `status` | cadena de texto | opcional |
+| `molecular_profile_name` | cadena de texto | opcional |
 | `molecular_profile_id` | entero | opcional |
 | `variant_id` | entero | opcional |
-| `variant_name` | cuerda. | opcional |
+| `variant_name` | cadena de texto | opcional |
 | `disease_id` | entero | opcional |
 | `therapy_id` | entero | opcional |
 | `phenotype_id` | entero | opcional |
 | `evidence_id` | entero | opcional |
-| `summary` | cuerda. | opcional |
+| `summary` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_assertions", {"disease_name": "melanoma"})
@@ -1306,7 +1308,7 @@ Un perfil molecular CIViC por id (combinación variable que evidencia/aserciones
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `mp_id` | entero | **necesarios** |
+| `mp_id` | entero | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_molecular_profile", {"mp_id": 12})
@@ -1318,7 +1320,7 @@ Buscar perfiles moleculares CIViC por subestring de nombre (por ejemplo. "BRAF V
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `name` | cuerda. | **necesarios** |
+| `name` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_molecular_profiles", {"name": "BRAF V600E"})
@@ -1330,7 +1332,7 @@ Buscar registros de enfermedad de CIViC por subestring de nombre (por ejemplo. "
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `name` | cuerda. | **necesarios** |
+| `name` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_diseases", {"name": "melanoma"})
@@ -1342,7 +1344,7 @@ Buscar registros de terapia CIViC por subestring de nombre (por ejemplo. "vemura
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `name` | cuerda. | **necesarios** |
+| `name` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_therapies", {"name": "vemurafenib"})
@@ -1354,7 +1356,7 @@ Ejecute una consulta arbitraria de GraphQL contra la Plataforma Open Targets API
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
+| `query` | cadena de texto | **obligatorio** |
 | `variables` | objeto | opcional |
 
 ```javascript
@@ -1367,7 +1369,7 @@ Medicamentos conocidos/investigativos para una enfermedad ( Plataforma de objeti
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `efo_id` | cuerda. | **necesarios** |
+| `efo_id` | cadena de texto | **obligatorio** |
 | `size` | entero | facultativa; predeterminado: 25 |
 
 ```javascript
@@ -1380,7 +1382,7 @@ Principales objetivos asociados para una enfermedad, clasificados por Open Targe
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `efo_id` | cuerda. | **necesarios** |
+| `efo_id` | cadena de texto | **obligatorio** |
 | `size` | entero | facultativa; predeterminado: 25 |
 
 ```javascript
@@ -1393,7 +1395,7 @@ Detalles de fármacos por ChEMBL id (Open Targets Platform) — nombre, tipo, es
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `chembl_id` | cuerda. | **necesarios** |
+| `chembl_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "open_targets_drug", {"chembl_id": "CHEMBL1201583"})
@@ -1412,7 +1414,7 @@ Obtenga registros de metadatos estructurados para las entradas de mapas 3D de EM
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `emdb_ids` | array de cadena | **necesarios** |
+| `emdb_ids` | matriz de cadenas | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_entries", {"emdb_ids": ["EMD-11638", "emd-3061", "1234"]})
@@ -1424,7 +1426,7 @@ Buscar EMDB con una consulta de estilo Solr; retrieval completo de filas compact
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
+| `query` | cadena de texto | **obligatorio** |
 | `max_rows` | entero | facultativa; predeterminado: 1000 |
 
 ```javascript
@@ -1437,8 +1439,8 @@ Obtenga una sección de metadatos detallados para las entradas de EMDB. Seccione
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `emdb_ids` | array de cadena | **necesarios** |
-| `section` | cuerda. | **necesarios**; enum: &#91;"publications", "map", "sample", "imaging"&#93; |
+| `emdb_ids` | matriz de cadenas | **obligatorio** |
+| `section` | cadena de texto | **obligatorio**; enum: &#91;"publications", "map", "sample", "imaging"&#93; |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_entry_section", {"emdb_ids": ["EMD-11638"], "section": "imaging"})
@@ -1450,7 +1452,7 @@ Obtenga métricas numéricas de validación-análisis para entradas de EMDB. Por
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `emdb_ids` | array de cadena | **necesarios** |
+| `emdb_ids` | matriz de cadenas | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_validation", {"emdb_ids": ["EMD-11638", "EMD-3061"]})
@@ -1462,7 +1464,7 @@ Trae registros Complejo Comisario comisariados por la adhesión CPX. Cada regist
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `complex_acs` | array de cadena | **necesarios** |
+| `complex_acs` | matriz de cadenas | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("structures", "complexportal_get_complexes", {"complex_acs": ["CPX-2158", "CPX-2419"]})
@@ -1474,8 +1476,8 @@ Buscar Portal Complejo para complejos que contienen una molécula. `accession` e
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
-| `participants_only` | boolean | facultativa; default: true |
+| `accession` | cadena de texto | **obligatorio** |
+| `participants_only` | booleano | facultativa; default: true |
 
 ```javascript
 const result = await host.mcp("structures", "complexportal_search_by_participant", {"accession": "P69905", "participants_only": true})
@@ -1487,10 +1489,10 @@ Recuperar TODAS las interacciones binarias de IntAct que coincidan con una consu
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
-| `min_mi_score` | Número | facultativa; predeterminado: 0 |
-| `max_mi_score` | Número | facultativa; predeterminado: 1 |
-| `interactor_species` | array de cadena | opcional |
+| `query` | cadena de texto | **obligatorio** |
+| `min_mi_score` | número | facultativa; predeterminado: 0 |
+| `max_mi_score` | número | facultativa; predeterminado: 1 |
+| `interactor_species` | matriz de cadenas | opcional |
 | `max_records_returned` | entero | facultativa; predeterminado: 500 |
 
 ```javascript
@@ -1503,7 +1505,7 @@ Resolver una molécula a su registro de interacción de IntAct(s). `query` es un
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
+| `query` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("structures", "intact_get_interactor", {"query": "P04637"})
@@ -1515,8 +1517,8 @@ Detalles completos curados para la interacción de UNA IntAct AC (por ejemplo. '
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `interaction_ac` | cuerda. | **necesarios** |
-| `include_participants` | boolean | facultativa; default: true |
+| `interaction_ac` | cadena de texto | **obligatorio** |
+| `include_participants` | booleano | facultativa; default: true |
 
 ```javascript
 const result = await host.mcp("structures", "intact_get_interaction_details", {"interaction_ac": "EBI-15635490", "include_participants": true})
@@ -1528,10 +1530,10 @@ Construir una red de interacción IntAct-1 en profundidad alrededor de las prote
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `seed_accessions` | array de cadena | **necesarios** |
-| `min_mi_score` | Número | facultativa; predeterminado: 0.45 |
+| `seed_accessions` | matriz de cadenas | **obligatorio** |
+| `min_mi_score` | número | facultativa; predeterminado: 0.45 |
 | `max_interactors_expanded` | entero | facultativa; predeterminado: 25 |
-| `interactor_species` | array de cadena | opcional |
+| `interactor_species` | matriz de cadenas | opcional |
 
 ```javascript
 const result = await host.mcp("structures", "intact_build_network", {"seed_accessions": ["P04637", "Q00987"], "min_mi_score": 0.45, "max_interactors_expanded": 25})
@@ -1543,14 +1545,14 @@ Buscar entradas de RCSB PDB por filtros de atributo; en la página, tapado + mar
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `text` | cuerda. | opcional |
-| `organism` | cuerda. | opcional |
+| `text` | cadena de texto | opcional |
+| `organism` | cadena de texto | opcional |
 | `taxonomy_id` | entero | opcional |
-| `uniprot_accession` | cuerda. | opcional |
-| `experimental_method` | cuerda. | opcional |
-| `max_resolution_angstrom` | Número | opcional |
-| `ligand_comp_id` | cuerda. | opcional |
-| `include_computed_models` | boolean | facultativa; default: false |
+| `uniprot_accession` | cadena de texto | opcional |
+| `experimental_method` | cadena de texto | opcional |
+| `max_resolution_angstrom` | número | opcional |
+| `ligand_comp_id` | cadena de texto | opcional |
+| `include_computed_models` | booleano | facultativa; default: false |
 | `max_rows` | entero | facultativa; predeterminado: 100 |
 
 ```javascript
@@ -1563,7 +1565,7 @@ Ingrese resúmenes de nivel de entrada para entradas de PDB (batch, max 25 ids).
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `pdb_ids` | array de cadena | **necesarios** |
+| `pdb_ids` | matriz de cadenas | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_get_structures", {"pdb_ids": ["1TUP", "1tup", "6XYZ"]})
@@ -1575,9 +1577,9 @@ Detalles de la entidad polímero para una entrada de PDB, incl. Cartografías Un
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `pdb_id` | cuerda. | **necesarios** |
-| `entity_ids` | array de cadena | opcional |
-| `include_sequences` | boolean | facultativa; default: false |
+| `pdb_id` | cadena de texto | **obligatorio** |
+| `entity_ids` | matriz de cadenas | opcional |
+| `include_sequences` | booleano | facultativa; default: false |
 | `max_bytes` | entero | facultativa; predeterminado: 400000 |
 
 ```javascript
@@ -1590,7 +1592,7 @@ Libra ligandos (compuestos no polímeros) de una entrada de PDB, con química. C
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `pdb_id` | cuerda. | **necesarios** |
+| `pdb_id` | cadena de texto | **obligatorio** |
 | `max_ligands` | entero | facultativa; predeterminado: 25 |
 
 ```javascript
@@ -1603,8 +1605,8 @@ AlphaFold DB metadatos de estructura predicha para una adhesión UniProt. Devuel
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `uniprot_accession` | cuerda. | **necesarios** |
-| `include_sequence` | boolean | facultativa; default: false |
+| `uniprot_accession` | cadena de texto | **obligatorio** |
+| `include_sequence` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("structures", "alphafold_get_prediction", {"uniprot_accession": "P04637"})
@@ -1616,7 +1618,7 @@ Batch AlphaFold Control de cobertura de DB (accesiones UniProt únicas de 40). L
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `uniprot_accessions` | array de cadena | **necesarios** |
+| `uniprot_accessions` | matriz de cadenas | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("structures", "alphafold_check_coverage", {"uniprot_accessions": ["P04637", "P38398", "Q9Y6K9"]})
@@ -1635,9 +1637,9 @@ Buscar compuestos químicos ChEMBL por nombre (por defecto), ChEMBL id o estruct
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `name` | cuerda. | opcional |
-| `chembl_id` | cuerda. | opcional |
-| `smiles` | cuerda. | opcional |
+| `name` | cadena de texto | opcional |
+| `chembl_id` | cadena de texto | opcional |
+| `smiles` | cadena de texto | opcional |
 | `similarity_threshold` | entero | facultativa; mínimo: 70; máximo: 100 |
 | `max_phase` | entero | facultativa; enum: &#91;0, 1, 2, 3, 4&#93; |
 | `limit` | entero | facultativa; predeterminado: 20; mínimo: 1; máximo: 1000 |
@@ -1652,11 +1654,11 @@ Buscar medicamentos aprobados y candidatos clínicos por indicación terapéutic
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `indication` | cuerda. | **necesarios** |
-| `drug_name` | cuerda. | opcional |
-| `molecule_chembl_id` | cuerda. | opcional |
+| `indication` | cadena de texto | **obligatorio** |
+| `drug_name` | cadena de texto | opcional |
+| `molecule_chembl_id` | cadena de texto | opcional |
 | `max_phase` | entero | facultativa; enum: &#91;0, 1, 2, 3, 4&#93; |
-| `only_approved` | boolean | facultativa; default: false |
+| `only_approved` | booleano | facultativa; default: false |
 | `limit` | entero | facultativa; predeterminado: 20; mínimo: 1; máximo: 1000 |
 
 ```javascript
@@ -1669,7 +1671,7 @@ Retrieve ChEMBL calcula propiedades moleculares para la evaluación de la semeja
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `molecule_chembl_id` | cuerda. | **necesarios** |
+| `molecule_chembl_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("chembl", "get_admet", {"molecule_chembl_id": "CHEMBL25"})
@@ -1681,13 +1683,13 @@ Recuperar las mediciones de bioactividad ChEMBL (IC50, Ki, Kd, EC50, ...) para i
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `molecule_chembl_id` | cuerda. | opcional |
-| `target_chembl_id` | cuerda. | opcional |
-| `activity_type` | cuerda. | facultativa; enum: &#91;"IC50", "EC50", "Ki", "Kd", "AC50", "GI50", "ED50", "Potency"&#93; |
-| `min_pchembl` | Número | facultativa; mínimo: 0; máximo: 14 |
-| `min_value` | Número | opcional |
-| `max_value` | Número | opcional |
-| `unit` | cuerda. | facultativa; enum: &#91;"nM", "uM", "mM", "pM", "M"&#93; |
+| `molecule_chembl_id` | cadena de texto | opcional |
+| `target_chembl_id` | cadena de texto | opcional |
+| `activity_type` | cadena de texto | facultativa; enum: &#91;"IC50", "EC50", "Ki", "Kd", "AC50", "GI50", "ED50", "Potency"&#93; |
+| `min_pchembl` | número | facultativa; mínimo: 0; máximo: 14 |
+| `min_value` | número | opcional |
+| `max_value` | número | opcional |
+| `unit` | cadena de texto | facultativa; enum: &#91;"nM", "uM", "mM", "pM", "M"&#93; |
 | `limit` | entero | facultativa; predeterminado: 20; mínimo: 1; máximo: 1000 |
 
 ```javascript
@@ -1700,9 +1702,9 @@ Recuperar los registros del mecanismo de acción de ChEMBL para medicamentos apr
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `molecule_chembl_id` | cuerda. | opcional |
-| `target_chembl_id` | cuerda. | opcional |
-| `action_type` | cuerda. | facultativa; enum: &#91;"INHIBITOR", "AGONIST", "ANTAGONISTA", "BLOCKER", "MODULATOR", "OPENER", "ACTIVAR", "POSITIVE ALLOSTERIC MODULATOR", "NEGATIVE ALLOSTERIC MODULATOR", "PARTIAL AGONIST", "INVERSE AGONIST"&#93; |
+| `molecule_chembl_id` | cadena de texto | opcional |
+| `target_chembl_id` | cadena de texto | opcional |
+| `action_type` | cadena de texto | facultativa; enum: &#91;"INHIBITOR", "AGONIST", "ANTAGONISTA", "BLOCKER", "MODULATOR", "OPENER", "ACTIVAR", "POSITIVE ALLOSTERIC MODULATOR", "NEGATIVE ALLOSTERIC MODULATOR", "PARTIAL AGONIST", "INVERSE AGONIST"&#93; |
 | `limit` | entero | facultativa; predeterminado: 20; mínimo: 1; máximo: 1000 |
 
 ```javascript
@@ -1715,11 +1717,11 @@ Buscar objetivos biológicos ChEMBL (proteínas, complejos, familias, organismos
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `target_name` | cuerda. | opcional |
-| `gene_symbol` | cuerda. | opcional |
-| `target_chembl_id` | cuerda. | opcional |
-| `organism` | cuerda. | opcional |
-| `target_type` | cuerda. | facultativa; &#91;Enum&#93;"SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN FAMILY", "ORGANISM", "TISSUE", "CELL-LINE", "NUCLEIC-ACID", "SUBCELLULAR"&#93; |
+| `target_name` | cadena de texto | opcional |
+| `gene_symbol` | cadena de texto | opcional |
+| `target_chembl_id` | cadena de texto | opcional |
+| `organism` | cadena de texto | opcional |
+| `target_type` | cadena de texto | facultativa; &#91;Enum&#93;"SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN FAMILY", "ORGANISM", "TISSUE", "CELL-LINE", "NUCLEIC-ACID", "SUBCELLULAR"&#93; |
 | `limit` | entero | facultativa; predeterminado: 20; mínimo: 1; máximo: 1000 |
 
 ```javascript
@@ -1751,10 +1753,10 @@ Buscar preimpresión bioRxiv/medRxiv por fecha y (opcionalmente) categoría. Use
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `server` | cuerda. | facultativa; predeterminado: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
-| `category` | cuerda. | facultativa; &#91;Enum&#93;"comportamiento animal y cognición", "bioquímica", "biomotora", "bioinformática", "biofísica", "biología del cáncer", "biología celular", "ensayos clínicos", "biología del desarrollo", "ecología", "epidemiología", "biología evolucionaria", "genética", "genómica", "inmunología", "microbiología", "Biología molecular", "neurociencia", "paleontología", "patología", "farmacología y toxicología", "fisiología", "planta biología", "la comunicación científica y la educación", "biología sintética", "sistemas de biología", "zoología"&#93; |
-| `date_from` | cuerda. | opcional |
-| `date_to` | cuerda. | opcional |
+| `server` | cadena de texto | facultativa; predeterminado: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `category` | cadena de texto | facultativa; &#91;Enum&#93;"comportamiento animal y cognición", "bioquímica", "biomotora", "bioinformática", "biofísica", "biología del cáncer", "biología celular", "ensayos clínicos", "biología del desarrollo", "ecología", "epidemiología", "biología evolucionaria", "genética", "genómica", "inmunología", "microbiología", "Biología molecular", "neurociencia", "paleontología", "patología", "farmacología y toxicología", "fisiología", "planta biología", "la comunicación científica y la educación", "biología sintética", "sistemas de biología", "zoología"&#93; |
+| `date_from` | cadena de texto | opcional |
+| `date_to` | cadena de texto | opcional |
 | `recent_days` | entero | facultativa; mínimo: 1 |
 | `recent_count` | entero | facultativa; mínimo: 1 |
 | `limit` | entero | facultativa; predeterminado: 10; mínimo: 1; máximo: 100 |
@@ -1770,8 +1772,8 @@ Obtenga metadatos completos para un preimpresión por DOI (bare " 10.1101/..." o
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `doi` | cuerda. | opcional |
-| `server` | cuerda. | facultativa; predeterminado: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `doi` | cadena de texto | **obligatorio** |
+| `server` | cadena de texto | facultativa; predeterminado: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_preprint", {"doi": "10.1101/339747"})
@@ -1783,11 +1785,11 @@ Buscar preimpresiones que fueron publicadas posteriormente en revistas revisadas
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `server` | cuerda. | facultativa; predeterminado: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
-| `publisher` | cuerda. | opcional |
-| `include_details` | boolean | facultativa; default: true |
-| `date_from` | cuerda. | opcional |
-| `date_to` | cuerda. | opcional |
+| `server` | cadena de texto | facultativa; predeterminado: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `publisher` | cadena de texto | opcional |
+| `include_details` | booleano | facultativa; default: true |
+| `date_from` | cadena de texto | opcional |
+| `date_to` | cadena de texto | opcional |
 | `recent_days` | entero | facultativa; mínimo: 1 |
 | `recent_count` | entero | facultativa; mínimo: 1 |
 | `limit` | entero | facultativa; predeterminado: 10; mínimo: 1; máximo: 100 |
@@ -1803,11 +1805,11 @@ Busque preimpresión reconociendo un financiador, identificado por ROR id (9-cha
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `funder_ror_id` | cuerda. | opcional |
-| `date_from` | cuerda. | opcional |
-| `date_to` | cuerda. | opcional |
-| `server` | cuerda. | facultativa; predeterminado: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
-| `category` | cuerda. | facultativa; &#91;Enum&#93;"comportamiento animal y cognición", "bioquímica", "biomotora", "bioinformática", "biofísica", "biología del cáncer", "biología celular", "ensayos clínicos", "biología del desarrollo", "ecología", "epidemiología", "biología evolucionaria", "genética", "genómica", "inmunología", "microbiología", "Biología molecular", "neurociencia", "paleontología", "patología", "farmacología y toxicología", "fisiología", "planta biología", "la comunicación científica y la educación", "biología sintética", "sistemas de biología", "zoología"&#93; |
+| `funder_ror_id` | cadena de texto | **obligatorio** |
+| `date_from` | cadena de texto | **obligatorio** |
+| `date_to` | cadena de texto | **obligatorio** |
+| `server` | cadena de texto | facultativa; predeterminado: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `category` | cadena de texto | facultativa; &#91;Enum&#93;"comportamiento animal y cognición", "bioquímica", "biomotora", "bioinformática", "biofísica", "biología del cáncer", "biología celular", "ensayos clínicos", "biología del desarrollo", "ecología", "epidemiología", "biología evolucionaria", "genética", "genómica", "inmunología", "microbiología", "Biología molecular", "neurociencia", "paleontología", "patología", "farmacología y toxicología", "fisiología", "planta biología", "la comunicación científica y la educación", "biología sintética", "sistemas de biología", "zoología"&#93; |
 | `limit` | entero | facultativa; predeterminado: 10; mínimo: 1; máximo: 100 |
 | `cursor` | entero | facultativa; predeterminado: 0; mínimo: 0 |
 
@@ -1821,7 +1823,7 @@ bioRxiv estadística de la presentación sobre toda la historia — nuevos vs re
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `interval` | cuerda. | facultativa; predeterminado: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
+| `interval` | cadena de texto | facultativa; predeterminado: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_content_statistics", {"interval": "yearly"})
@@ -1833,7 +1835,7 @@ bioRxiv uso/informática estadística sobre toda la historia — opiniones abstr
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `interval` | cuerda. | facultativa; predeterminado: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
+| `interval` | cadena de texto | facultativa; predeterminado: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_usage_statistics", {"interval": "yearly"})
@@ -1852,19 +1854,19 @@ Busque las aplicaciones de Drugs@FDA (NDA/ANDA/BLA) por cualquier combinación d
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `brand` | cuerda. | opcional |
-| `generic` | cuerda. | opcional |
-| `active_ingredient` | cuerda. | opcional |
-| `sponsor` | cuerda. | opcional |
-| `marketing_status` | cuerda. | facultativa; enum: &#91;"Prescription", "Over-the-counter", "Discontinued", "None (Aprobación Tentativa)"&#93; |
-| `dosage_form` | cuerda. | opcional |
-| `route` | cuerda. | opcional |
-| `pharm_class` | cuerda. | opcional |
-| `pharm_class_type` | cuerda. | facultativa; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
-| `search_type` | cuerda. | facultativa; predeterminado: "and"; enum: &#91;"and", "or"&#93; |
-| `submission_date_from` | cuerda. | opcional |
-| `submission_date_to` | cuerda. | opcional |
-| `raw_search` | cuerda. | opcional |
+| `brand` | cadena de texto | opcional |
+| `generic` | cadena de texto | opcional |
+| `active_ingredient` | cadena de texto | opcional |
+| `sponsor` | cadena de texto | opcional |
+| `marketing_status` | cadena de texto | facultativa; enum: &#91;"Prescription", "Over-the-counter", "Discontinued", "None (Aprobación Tentativa)"&#93; |
+| `dosage_form` | cadena de texto | opcional |
+| `route` | cadena de texto | opcional |
+| `pharm_class` | cadena de texto | opcional |
+| `pharm_class_type` | cadena de texto | facultativa; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
+| `search_type` | cadena de texto | facultativa; predeterminado: "and"; enum: &#91;"and", "or"&#93; |
+| `submission_date_from` | cadena de texto | opcional |
+| `submission_date_to` | cadena de texto | opcional |
+| `raw_search` | cadena de texto | opcional |
 | `max_records` | entero | facultativa; predeterminado: 50 |
 
 ```javascript
@@ -1877,7 +1879,7 @@ Traiga una solicitud de medicamentos@FDA por su número (por ejemplo: "NDA020702
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `application_number` | cuerda. | **necesarios** |
+| `application_number` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "get_drug_application", {"application_number": "NDA020702"})
@@ -1889,20 +1891,20 @@ El cubo Aggregate Drugs@FDA cuenta sobre un campo, opcionalmente reducido por lo
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `count_field` | cuerda. | **necesarios** |
-| `brand` | cuerda. | opcional |
-| `generic` | cuerda. | opcional |
-| `active_ingredient` | cuerda. | opcional |
-| `sponsor` | cuerda. | opcional |
-| `marketing_status` | cuerda. | opcional |
-| `dosage_form` | cuerda. | opcional |
-| `route` | cuerda. | opcional |
-| `pharm_class` | cuerda. | opcional |
-| `pharm_class_type` | cuerda. | facultativa; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
-| `search_type` | cuerda. | facultativa; predeterminado: "and"; enum: &#91;"and", "or"&#93; |
-| `submission_date_from` | cuerda. | opcional |
-| `submission_date_to` | cuerda. | opcional |
-| `raw_search` | cuerda. | opcional |
+| `count_field` | cadena de texto | **obligatorio** |
+| `brand` | cadena de texto | opcional |
+| `generic` | cadena de texto | opcional |
+| `active_ingredient` | cadena de texto | opcional |
+| `sponsor` | cadena de texto | opcional |
+| `marketing_status` | cadena de texto | opcional |
+| `dosage_form` | cadena de texto | opcional |
+| `route` | cadena de texto | opcional |
+| `pharm_class` | cadena de texto | opcional |
+| `pharm_class_type` | cadena de texto | facultativa; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
+| `search_type` | cadena de texto | facultativa; predeterminado: "and"; enum: &#91;"and", "or"&#93; |
+| `submission_date_from` | cadena de texto | opcional |
+| `submission_date_to` | cadena de texto | opcional |
+| `raw_search` | cadena de texto | opcional |
 | `max_buckets` | entero | facultativa; predeterminado: 100 |
 
 ```javascript
@@ -1927,7 +1929,7 @@ Aumentar las clases farmacológicas con los recuentos de sus aplicaciones, conta
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `class_type` | cuerda. | facultativa; predeterminado: "epc"; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
+| `class_type` | cadena de texto | facultativa; predeterminado: "epc"; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
 | `max_buckets` | entero | facultativa; predeterminado: 100 |
 
 ```javascript
@@ -1940,7 +1942,7 @@ Encontrar equivalentes genéricos de un medicamento de marca: resolver la marca 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `brand` | cuerda. | **necesarios** |
+| `brand` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "get_generic_equivalents", {"brand": "Lipitor"})
@@ -1952,14 +1954,14 @@ Recuperar etiquetas de productos de la FDA (SPL) por ingrediente/nombre/rute con
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `active_ingredient` | cuerda. | opcional |
-| `generic_name` | cuerda. | opcional |
-| `brand_name` | cuerda. | opcional |
-| `route` | cuerda. | opcional |
-| `product_type` | cuerda. | facultativa; enum: &#91;"HUMAN PRESCRIPTION DRUG", "HUMAN OTC DRUG"&#93; |
-| `exact` | boolean | facultativa; default: false |
-| `raw_search` | cuerda. | opcional |
-| `sections` | array de cadena | opcional |
+| `active_ingredient` | cadena de texto | opcional |
+| `generic_name` | cadena de texto | opcional |
+| `brand_name` | cadena de texto | opcional |
+| `route` | cadena de texto | opcional |
+| `product_type` | cadena de texto | facultativa; enum: &#91;"HUMAN PRESCRIPTION DRUG", "HUMAN OTC DRUG"&#93; |
+| `exact` | booleano | facultativa; default: false |
+| `raw_search` | cadena de texto | opcional |
+| `sections` | matriz de cadenas | opcional |
 | `max_records` | entero | facultativa; predeterminado: 25 |
 
 ```javascript
@@ -1979,7 +1981,7 @@ GWAS Catalog associations reported for one variety (rsID), most significant firs
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `rs_id` | cuerda. | **necesarios** |
+| `rs_id` | cadena de texto | **obligatorio** |
 | `max_records` | entero | facultativa; predeterminado: 500 |
 
 ```javascript
@@ -1992,7 +1994,7 @@ GWAS Catálogo asociaciones cuyas variantes son MAPPED a un gen (catalog's Ensem
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_symbol` | cuerda. | **necesarios** |
+| `gene_symbol` | cadena de texto | **obligatorio** |
 | `max_records` | entero | facultativa; predeterminado: 500 |
 
 ```javascript
@@ -2005,8 +2007,8 @@ GWAS Catálogo asociaciones anotadas a un rasgo EFO, el primero más significati
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `efo_id` | cuerda. | opcional |
-| `efo_trait` | cuerda. | opcional |
+| `efo_id` | cadena de texto | opcional |
+| `efo_trait` | cadena de texto | opcional |
 | `max_records` | entero | facultativa; predeterminado: 500 |
 
 ```javascript
@@ -2019,7 +2021,7 @@ Buscar GWAS Catálogo EFO características anotaciones por etiqueta subestring -
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
+| `query` | cadena de texto | **obligatorio** |
 | `max_records` | entero | facultativa; predeterminado: 500 |
 
 ```javascript
@@ -2032,9 +2034,9 @@ Buscar GWAS Catálogo estudios por anotación o publicación de rasgos. Args: ef
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `efo_id` | cuerda. | opcional |
-| `efo_trait` | cuerda. | opcional |
-| `pubmed_id` | cuerda. | opcional |
+| `efo_id` | cadena de texto | opcional |
+| `efo_trait` | cadena de texto | opcional |
+| `pubmed_id` | cadena de texto | opcional |
 | `max_records` | entero | facultativa; predeterminado: 500 |
 
 ```javascript
@@ -2047,7 +2049,7 @@ Traiga un estudio del catálogo GWAS por su adhesión al GCST. Args: accession_i
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession_id` | cuerda. | **necesarios** |
+| `accession_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_get_study", {"accession_id": "GCST90841394"})
@@ -2059,7 +2061,7 @@ Tráigase un registro de variantes del catálogo de GWAS (posición, genes mapea
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `rs_id` | cuerda. | **necesarios** |
+| `rs_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_get_variant", {"rs_id": "rs7412"})
@@ -2071,9 +2073,9 @@ Lista eQTL Catálogo conjuntos de datos (un conjunto de datos = un estudio x tej
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `study_label` | cuerda. | opcional |
-| `tissue_label` | cuerda. | opcional |
-| `quant_method` | cuerda. | opcional |
+| `study_label` | cadena de texto | opcional |
+| `tissue_label` | cadena de texto | opcional |
+| `quant_method` | cadena de texto | opcional |
 | `max_records` | entero | facultativa; predeterminado: 1000 |
 
 ```javascript
@@ -2086,12 +2088,12 @@ Líneas de asociación Molecular-QTL de un conjunto de datos eQTL Catalogue, fil
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `dataset_id` | cuerda. | **necesarios** |
-| `gene_id` | cuerda. | opcional |
-| `rsid` | cuerda. | opcional |
-| `variant` | cuerda. | opcional |
-| `pos` | cuerda. | opcional |
-| `nlog10p_min` | Número | opcional |
+| `dataset_id` | cadena de texto | **obligatorio** |
+| `gene_id` | cadena de texto | opcional |
+| `rsid` | cadena de texto | opcional |
+| `variant` | cadena de texto | opcional |
+| `pos` | cadena de texto | opcional |
+| `nlog10p_min` | número | opcional |
 | `max_records` | entero | facultativa; predeterminado: 1000 |
 
 ```javascript
@@ -2116,8 +2118,8 @@ PheWAS para una variante: sus estadísticas de asociación contra cada fenotipo 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `instance` | cuerda. | **necesarios**; enum: &#91;"finngen", "bbj"&#93; |
-| `variant` | cuerda. | **necesarios** |
+| `instance` | cadena de texto | **obligatorio**; enum: &#91;"finngen", "bbj"&#93; |
+| `variant` | cadena de texto | **obligatorio** |
 | `max_phenos` | entero | facultativa; predeterminado: 200 |
 
 ```javascript
@@ -2130,7 +2132,7 @@ PheWAS de nivel genético de FinnGen R12: para cada endpoint de enfermedad, la v
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_symbol` | cuerda. | **necesarios** |
+| `gene_symbol` | cadena de texto | **obligatorio** |
 | `max_phenos` | entero | facultativa; predeterminado: 200 |
 
 ```javascript
@@ -2143,7 +2145,7 @@ Fenotipo completo (punto final de la enfermedad) de una instancia PheWeb, con ca
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `instance` | cuerda. | facultativa; predeterminado: "finngen"; enum: &#91;"finngen"&#93; |
+| `instance` | cadena de texto | facultativa; predeterminado: "finngen"; enum: &#91;"finngen"&#93; |
 | `max_records` | entero | facultativa; predeterminado: 3000 |
 
 ```javascript
@@ -2156,8 +2158,8 @@ Busque un ejemplo PheWeb's fenotipos (y entidades) por nombre, el punto de entra
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
-| `instance` | cuerda. | facultativa; predeterminado: "finngen"; enum: &#91;"finngen", "bbj"&#93; |
+| `query` | cadena de texto | **obligatorio** |
+| `instance` | cadena de texto | facultativa; predeterminado: "finngen"; enum: &#91;"finngen", "bbj"&#93; |
 | `max_records` | entero | facultativa; predeterminado: 500 |
 
 ```javascript
@@ -2177,7 +2179,7 @@ Listar todos los sitios de tejidos con metadatos para una liberación GTEx enfil
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `dataset_id` | cuerda. | facultativa; por defecto: "gtex_v8" |
+| `dataset_id` | cadena de texto | facultativa; por defecto: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_tissue_sites", {"dataset_id": "gtex_v8"})
@@ -2189,8 +2191,8 @@ Enumerar todos los datos de GTEx con metadatos: datasetId, GENCODE version, geno
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `dataset_id` | cuerda. | opcional |
-| `organization_name` | cuerda. | opcional |
+| `dataset_id` | cadena de texto | opcional |
+| `organization_name` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_dataset_info", {})
@@ -2202,11 +2204,11 @@ Metadatos de muestra y donantes para una versión GTEx enfilada, opcionalmente f
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `tissue_site_detail_id` | cuerda. | opcional |
-| `data_type` | cuerda. | opcional |
-| `subject_id` | cuerda. | opcional |
+| `tissue_site_detail_id` | cadena de texto | opcional |
+| `data_type` | cadena de texto | opcional |
+| `subject_id` | cadena de texto | opcional |
 | `max_samples` | entero | opcional |
-| `dataset_id` | cuerda. | facultativa; por defecto: "gtex_v8" |
+| `dataset_id` | cadena de texto | facultativa; por defecto: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_sample_info", {"tissue_site_detail_id": "Liver", "data_type": "RNASEQ", "max_samples": 100})
@@ -2218,8 +2220,8 @@ Resolver símbolos de genes o ids de ensembl no versionados a ids GENCODE versio
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `genes` | array de cadena | **necesarios** | 7 / 0 / 0 |
-| `dataset_id` | cuerda. | facultativa; por defecto: "gtex_v8" |
+| `genes` | matriz de cadenas | **obligatorio** | 7 / 0 / 0 |
+| `dataset_id` | cadena de texto | facultativa; por defecto: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_resolve_genes", {"genes": ["GAPDH", "BRCA2"]})
@@ -2231,9 +2233,9 @@ Expresión mediana del gen (TPM) para uno o más GENCODE VERSIONADOS ids a trav�
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gencode_ids` | array de cadena | **necesarios** |
-| `tissue_site_detail_ids` | array de cadena | opcional |
-| `dataset_id` | cuerda. | facultativa; por defecto: "gtex_v8" |
+| `gencode_ids` | matriz de cadenas | **obligatorio** |
+| `tissue_site_detail_ids` | matriz de cadenas | opcional |
+| `dataset_id` | cadena de texto | facultativa; por defecto: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_median_expression", {"gencode_ids": ["ENSG00000111640.14"]})
@@ -2245,8 +2247,8 @@ Summarizar la expresión de un gen a través de TODOS los tejidos clasificados p
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene` | cuerda. | **necesarios** |
-| `dataset_id` | cuerda. | facultativa; por defecto: "gtex_v8" |
+| `gene` | cadena de texto | **obligatorio** |
+| `dataset_id` | cadena de texto | facultativa; por defecto: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_expression_summary", {"gene": "GAPDH"})
@@ -2258,9 +2260,9 @@ Expresión a nivel de muestra (no agregado) arrays TPM para un id GENCODE VERSIO
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gencode_id` | cuerda. | **necesarios** |
-| `tissue_site_detail_ids` | array de cadena | opcional |
-| `dataset_id` | cuerda. | facultativa; por defecto: "gtex_v8" |
+| `gencode_id` | cadena de texto | **obligatorio** |
+| `tissue_site_detail_ids` | matriz de cadenas | opcional |
+| `dataset_id` | cadena de texto | facultativa; por defecto: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_gene_expression", {"gencode_id": "ENSG00000111640.14", "tissue_site_detail_ids": ["Whole_Blood"]})
@@ -2272,10 +2274,10 @@ Los genes de Top-n por mediana TPM en un tejido, utilizando la clasificación AP
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `tissue_site_detail_id` | cuerda. | **necesarios** |
+| `tissue_site_detail_id` | cadena de texto | **obligatorio** |
 | `n` | entero | facultativa; predeterminado: 100 |
-| `filter_mt_gene` | boolean | facultativa; default: true |
-| `dataset_id` | cuerda. | facultativa; por defecto: "gtex_v8" |
+| `filter_mt_gene` | booleano | facultativa; default: true |
+| `dataset_id` | cadena de texto | facultativa; por defecto: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_top_expressed_genes", {"tissue_site_detail_id": "Whole_Blood", "n": 20})
@@ -2287,9 +2289,9 @@ Todos los eGenes (genes con ≥1 cis-eQTL significativo) para un tejido. Camina 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `tissue_site_detail_id` | cuerda. | **necesarios** |
+| `tissue_site_detail_id` | cadena de texto | **obligatorio** |
 | `max_genes` | entero | opcional |
-| `dataset_id` | cuerda. | facultativa; por defecto: "gtex_v8" |
+| `dataset_id` | cadena de texto | facultativa; por defecto: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_eqtl_genes", {"tissue_site_detail_id": "Pancreas", "max_genes": 100})
@@ -2301,11 +2303,11 @@ Asociaciones de cis-eQTL significativas para un gen y/o una variante (precomputa
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gencode_id` | cuerda. | opcional |
-| `variant_id` | cuerda. | opcional |
-| `tissue_site_detail_id` | cuerda. | opcional |
+| `gencode_id` | cadena de texto | opcional |
+| `variant_id` | cadena de texto | opcional |
+| `tissue_site_detail_id` | cadena de texto | opcional |
 | `max_results` | entero | opcional |
-| `dataset_id` | cuerda. | facultativa; por defecto: "gtex_v8" |
+| `dataset_id` | cadena de texto | facultativa; por defecto: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_single_tissue_eqtls", {"gencode_id": "ENSG00000111640.14"})
@@ -2317,9 +2319,9 @@ Metaanálisis de cis-eQTL (METASOFT) para un id GENCODE VERSIONADO. variant_id o
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gencode_id` | cuerda. | **necesarios** |
-| `variant_id` | cuerda. | opcional |
-| `dataset_id` | cuerda. | facultativa; por defecto: "gtex_v8" |
+| `gencode_id` | cadena de texto | **obligatorio** |
+| `variant_id` | cadena de texto | opcional |
+| `dataset_id` | cadena de texto | facultativa; por defecto: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_multi_tissue_eqtls", {"gencode_id": "ENSG00000111640.14"})
@@ -2331,10 +2333,10 @@ Calcular un eQTL en la mosca para cualquier par de genes variables en un tejido,
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gencode_id` | cuerda. | **necesarios** |
-| `variant_id` | cuerda. | **necesarios** |
-| `tissue_site_detail_id` | cuerda. | **necesarios** |
-| `dataset_id` | cuerda. | facultativa; por defecto: "gtex_v8" |
+| `gencode_id` | cadena de texto | **obligatorio** |
+| `variant_id` | cadena de texto | **obligatorio** |
+| `tissue_site_detail_id` | cadena de texto | **obligatorio** |
+| `dataset_id` | cadena de texto | facultativa; por defecto: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_calculate_eqtl", {"gencode_id": "ENSG00000111640.14", "variant_id": "chr12_6452899_G_A_b38", "tissue_site_detail_id": "Whole_Blood"})
@@ -2353,7 +2355,7 @@ Completa arquitectura de dominio InterPro para una o más proteínas UniProt (to
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accessions` | array de cadena | **necesarios** |
+| `accessions` | matriz de cadenas | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_domain_architecture", {"accessions": ["P04637"]})
@@ -2365,10 +2367,10 @@ Búsqueda de palabras clave sobre las entradas InterPro o base de datos de miemb
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | opcional |
-| `entry_type` | cuerda. | opcional |
-| `source_db` | cuerda. | facultativa; default: "interpro" |
-| `go_term` | cuerda. | opcional |
+| `query` | cadena de texto | opcional |
+| `entry_type` | cadena de texto | opcional |
+| `source_db` | cadena de texto | facultativa; default: "interpro" |
+| `go_term` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_interpro_entries", {"query": "kinase", "source_db": "pfam"})
@@ -2380,7 +2382,7 @@ Registro de detalle para una entrada InterPro (IPRxxxxxxxx) o familia Pfam (PFxx
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
+| `accession` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_interpro_entry", {"accession": "IPR000719"})
@@ -2392,7 +2394,7 @@ Búsqueda de palabras clave sobre los clanes de Pfam (InterPro sets, adhesiones 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | opcional |
+| `query` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_pfam_clans", {"query": "kinase"})
@@ -2404,7 +2406,7 @@ Pfam clan detalle incluyendo la lista completa de miembros-familia clasificada.
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `clan_accession` | cuerda. | **necesarios** |
+| `clan_accession` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_clan", {"clan_accession": "CL0016"})
@@ -2416,10 +2418,10 @@ Proteínas miembros de una familia Pfam (conteo completo o cuenta solamente). Us
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `pfam_accession` | cuerda. | **necesarios** |
-| `reviewed_only` | boolean | facultativa; default: false |
+| `pfam_accession` | cadena de texto | **obligatorio** |
+| `reviewed_only` | booleano | facultativa; default: false |
 | `tax_id` | entero | opcional |
-| `count_only` | boolean | facultativa; default: false |
+| `count_only` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_family_proteins", {"pfam_accession": "PF00069", "count_only": true})
@@ -2431,8 +2433,8 @@ Proteomas que contienen miembros de una familia Pfam. count_only predetermina la
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `pfam_accession` | cuerda. | **necesarios** |
-| `count_only` | boolean | facultativa; default: true |
+| `pfam_accession` | cadena de texto | **obligatorio** |
+| `count_only` | booleano | facultativa; default: true |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_family_proteomes", {"pfam_accession": "PF00069"})
@@ -2444,8 +2446,8 @@ Human Protein Atlas per-gene record (release 25.x): tissue/subcellular/pathology
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene` | cuerda. | **necesarios** |
-| `full` | boolean | facultativa; default: false |
+| `gene` | cadena de texto | **obligatorio** |
+| `full` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_protein_atlas_gene", {"gene": "TP53"})
@@ -2457,8 +2459,8 @@ Búsqueda masiva seleccionada por columna sobre el Atlas de Proteína Humana (se
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
-| `columns` | cuerda. | facultativa; predeterminado: "g,gs,eg,gd,up,chr,chrp,scl" |
+| `query` | cadena de texto | **obligatorio** |
+| `columns` | cadena de texto | facultativa; predeterminado: "g,gs,eg,gd,up,chr,chrp,scl" |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_protein_atlas", {"query": "kinase"})
@@ -2470,7 +2472,7 @@ Mapa de símbolos/alias a identificadores de proteínas de STRING (v12.0). Cada 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `symbols` | array de cadena | **necesarios** |
+| `symbols` | matriz de cadenas | **obligatorio** |
 | `species` | entero | facultativa; predeterminado: 9606 |
 
 ```javascript
@@ -2483,7 +2485,7 @@ Red de interacción de proteína-proteína para una lista de genes (v12.0) en un
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `symbols` | array de cadena | **necesarios** |
+| `symbols` | matriz de cadenas | **obligatorio** |
 | `species` | entero | facultativa; predeterminado: 9606 |
 | `required_score` | entero | facultativa; predeterminado: 700 |
 
@@ -2497,7 +2499,7 @@ Smith-Waterman protein similarity bitscores entre un conjunto de genes (STRING /
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `symbols` | array de cadena | **necesarios** |
+| `symbols` | matriz de cadenas | **obligatorio** |
 | `species` | entero | facultativa; predeterminado: 9606 |
 
 ```javascript
@@ -2510,7 +2512,7 @@ La mejor homología golpeada por proteína de entrada en una especie objetivo (S
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `symbols` | array de cadena | **necesarios** |
+| `symbols` | matriz de cadenas | **obligatorio** |
 | `species` | entero | facultativa; predeterminado: 9606 |
 | `target_species` | entero | opcional |
 
@@ -2531,8 +2533,8 @@ List cBioPortal cancer studies, opcionalmente filtrado por una palabra clave de 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `keyword` | cuerda. | opcional |
-| `cancer_type_id` | cuerda. | opcional |
+| `keyword` | cadena de texto | opcional |
+| `cancer_type_id` | cadena de texto | opcional |
 | `max_records` | entero | facultativa; predeterminado: 500 |
 
 ```javascript
@@ -2545,7 +2547,7 @@ Obtenga un estudio de cáncer de cBioPortal por id: metadatos, conteos de muestr
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `study_id` | cuerda. | **necesarios** |
+| `study_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_get_study", {"study_id": "msk_impact_2017"})
@@ -2557,8 +2559,8 @@ Todas las mutaciones de un gen (símbolo de la OVH) en un estudio cBioPortal, co
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_symbol` | cuerda. | **necesarios** |
-| `study_id` | cuerda. | **necesarios** |
+| `gene_symbol` | cadena de texto | **obligatorio** |
+| `study_id` | cadena de texto | **obligatorio** |
 | `max_records` | entero | facultativa; predeterminado: 100 |
 
 ```javascript
@@ -2571,8 +2573,8 @@ Frecuencia de mutación de un gen a través de varios estudios cBioPortal (1–1
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_symbol` | cuerda. | **necesarios** |
-| `study_ids` | array de cadena | **necesarios**; minItems: 1; maxItems: 12 |
+| `gene_symbol` | cadena de texto | **obligatorio** |
+| `study_ids` | matriz de cadenas | **obligatorio**; minItems: 1; maxItems: 12 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_mutation_frequency", {"gene_symbol": "KRAS", "study_ids": ["msk_impact_2017", "difg_msk_2023"]})
@@ -2584,9 +2586,9 @@ Discreta las alteraciones del número de copia de un gen en un estudio cBioPorta
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `gene_symbol` | cuerda. | **necesarios** |
-| `study_id` | cuerda. | **necesarios** |
-| `event_type` | cuerda. | facultativa; predeterminado: "HOMDEL_AND_AMP"; enum: &#91;"HOMDEL_AND_AMP", "HOMDEL", "AMP", "GAIN", "HETLOSS", "DIPLOID", "ALL"&#93; |
+| `gene_symbol` | cadena de texto | **obligatorio** |
+| `study_id` | cadena de texto | **obligatorio** |
+| `event_type` | cadena de texto | facultativa; predeterminado: "HOMDEL_AND_AMP"; enum: &#91;"HOMDEL_AND_AMP", "HOMDEL", "AMP", "GAIN", "HETLOSS", "DIPLOID", "ALL"&#93; |
 | `max_records` | entero | facultativa; predeterminado: 100 |
 
 ```javascript
@@ -2599,7 +2601,7 @@ Atributos clínicos definidos en un estudio cBioPortal (campos de pacientes y ni
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `study_id` | cuerda. | **necesarios** |
+| `study_id` | cadena de texto | **obligatorio** |
 | `max_records` | entero | facultativa; predeterminado: 200 |
 
 ```javascript
@@ -2619,7 +2621,7 @@ Los metadatos de familia Rfam para una adhesión (RF00005) o id familiar (tRNA) 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `family` | cuerda. | **necesarios** |
+| `family` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("rna", "get_family", {"family": "RF00005"})
@@ -2631,8 +2633,8 @@ Alineación de semillas de una familia Rfam en Estocolmo (por defecto, con líne
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `family` | cuerda. | **necesarios** |
-| `fmt` | cuerda. | facultativa; predeterminado: "stockholm"; enum: &#91;"stockholm", "fasta"&#93; |
+| `family` | cadena de texto | **obligatorio** |
+| `fmt` | cadena de texto | facultativa; predeterminado: "stockholm"; enum: &#91;"stockholm", "fasta"&#93; |
 | `max_bytes` | entero | facultativa; predeterminado: 400000 |
 
 ```javascript
@@ -2645,7 +2647,7 @@ Modelo de covariancia infernal (archón MC) de una familia Rfam, utilizable dire
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `family` | cuerda. | **necesarios** |
+| `family` | cadena de texto | **obligatorio** |
 | `max_bytes` | entero | facultativa; predeterminado: 400000 |
 
 ```javascript
@@ -2658,7 +2660,7 @@ const result = await host.mcp("rna", "get_covariance_model", {"family": "RF00162
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `family` | cuerda. | **necesarios** |
+| `family` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("rna", "get_tree", {"family": "RF00162"})
@@ -2670,7 +2672,7 @@ Todos los éxitos de registro completo de una familia Rfam a través de bases de
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `family` | cuerda. | **necesarios** |
+| `family` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("rna", "get_sequence_regions", {"family": "RF00162"})
@@ -2682,7 +2684,7 @@ Cartografías de la estructura del PDB de una familia Rfam, determinísticamente
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `family` | cuerda. | **necesarios** |
+| `family` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("rna", "get_structure_mapping", {"family": "RF00162"})
@@ -2694,7 +2696,7 @@ Convertir una adhesión Rfam a su id familiar (por ejemplo, RF00005 -> "tRNA").
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
+| `accession` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("rna", "accession_to_id", {"accession": "RF00005"})
@@ -2706,7 +2708,7 @@ Convertir una familia Rfam id en su adhesión (por ejemplo, "tRNA" -> RF00005).
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `family_id` | cuerda. | **necesarios** |
+| `family_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("rna", "id_to_accession", {"family_id": "tRNA"})
@@ -2718,9 +2720,9 @@ Busque una secuencia de ARN a través del punto final oficial de lote Rfam. Mant
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `sequence` | cuerda. | **necesarios** |
-| `max_wait_s` | Número | facultativa; predeterminado: 300 |
-| `poll_interval_s` | Número | facultativa; predeterminado: 5 |
+| `sequence` | cadena de texto | **obligatorio** |
+| `max_wait_s` | número | facultativa; predeterminado: 300 |
+| `poll_interval_s` | número | facultativa; predeterminado: 5 |
 
 ```javascript
 const result = await host.mcp("rna", "search_sequence", {"sequence": "GGUUCCGGGAAGGCAGCAGGUGGAAACCUGCCA"})
@@ -2739,12 +2741,12 @@ Buscar ArrayExpress funcional-genomics experiments (BioStudies) con total, total
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | opcional |
-| `organism` | cuerda. | opcional |
-| `study_type` | cuerda. | opcional |
-| `technology` | cuerda. | opcional |
-| `released_after` | cuerda. | opcional |
-| `released_before` | cuerda. | opcional |
+| `query` | cadena de texto | opcional |
+| `organism` | cadena de texto | opcional |
+| `study_type` | cadena de texto | opcional |
+| `technology` | cadena de texto | opcional |
+| `released_after` | cadena de texto | opcional |
+| `released_before` | cadena de texto | opcional |
 | `extra_facets` | objeto | opcional |
 | `max_records` | entero | facultativa; predeterminado: 50 |
 
@@ -2758,7 +2760,7 @@ Trate de un experimento ArrayExpress (BioStudies) como un registro analista apla
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
+| `accession` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment", {"accession": "E-MTAB-5061"})
@@ -2770,7 +2772,7 @@ Listar todos los archivos de un experimento ArrayExpress (nombre, tamaño, tipo,
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
+| `accession` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment_files", {"accession": "E-MTAB-5061"})
@@ -2782,7 +2784,7 @@ Busque filas de anotación SDRF por muestreo para un experimento de ArrayExpress
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
+| `accession` | cadena de texto | **obligatorio** |
 | `max_rows_returned` | entero | facultativa; predeterminado: 200 |
 
 ```javascript
@@ -2795,7 +2797,7 @@ Buscar NCBI GEO DataSets (db=gds) y registros de nivel de serie de retorno (docs
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `term` | cuerda. | **necesarios** |
+| `term` | cadena de texto | **obligatorio** |
 | `retmax` | entero | facultativa; predeterminado: 500 |
 
 ```javascript
@@ -2808,7 +2810,7 @@ Obtenga metadatos estructurados para la serie GEO (Accesiones GSE) con muestras 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accessions` | array de cadena | **necesarios** |
+| `accessions` | matriz de cadenas | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "geo_get_series", {"accessions": ["GSE131907"]})
@@ -2832,8 +2834,8 @@ Obtenga metadatos estructurados para los estudios de MetaboLights (MTBLSxxxx) de
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accessions` | array de cadena | **necesarios** |
-| `include_samples` | boolean | facultativa; default: false |
+| `accessions` | matriz de cadenas | **obligatorio** |
+| `include_samples` | booleano | facultativa; default: false |
 | `max_sample_rows_returned` | entero | facultativa; predeterminado: 200 |
 
 ```javascript
@@ -2846,8 +2848,8 @@ Completo inventario de archivos para un estudio público de MetaboLights — la 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
-| `include_data_files` | boolean | facultativa; default: true |
+| `accession` | cadena de texto | **obligatorio** |
+| `include_data_files` | booleano | facultativa; default: true |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_get_study_files", {"accession": "MTBLS1"})
@@ -2859,8 +2861,8 @@ Búsqueda de brillo sobre un estudio de MetaboLights's carpeta de datos brutos (
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
-| `pattern` | cuerda. | opcional |
+| `accession` | cadena de texto | **obligatorio** |
+| `pattern` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_search_data_files", {"accession": "MTBLS1", "pattern": "*.zip"})
@@ -2872,8 +2874,8 @@ Buscar MGnify metagenomics studies by free text OR biome lineage (provide justam
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | opcional |
-| `biome_lineage` | cuerda. | opcional |
+| `query` | cadena de texto | opcional |
+| `biome_lineage` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_search_studies", {"query": "coral"})
@@ -2885,8 +2887,8 @@ Obtenga registros estructurados para los estudios MGnify ( adhesiones de MGYS). 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accessions` | array de cadena | **necesarios** |
-| `include_analyses` | boolean | facultativa; default: false |
+| `accessions` | matriz de cadenas | **obligatorio** |
+| `include_analyses` | booleano | facultativa; default: false |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_get_studies", {"accessions": ["MGYS00000410"], "include_analyses": false})
@@ -2898,7 +2900,7 @@ Lista TODOS los análisis de un estudio MGnify (paginación completa y verificad
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
+| `accession` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_get_study_analyses", {"accession": "MGYS00000410"})
@@ -2910,10 +2912,10 @@ Buscar proyectos de proteomics del archivo PRIDE (completo, retroceso verificado
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `keyword` | cuerda. | opcional |
-| `organism` | cuerda. | opcional |
-| `instrument` | cuerda. | opcional |
-| `disease` | cuerda. | opcional |
+| `keyword` | cadena de texto | opcional |
+| `organism` | cadena de texto | opcional |
+| `instrument` | cadena de texto | opcional |
+| `disease` | cadena de texto | opcional |
 | `extra_filters` | objeto | opcional |
 | `max_records_returned` | entero | facultativa; predeterminado: 50 |
 
@@ -2927,7 +2929,7 @@ Obtenga metadatos completos para los proyectos de PRIDE mediante la adhesión (p
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accessions` | array de cadena | **necesarios** |
+| `accessions` | matriz de cadenas | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_get_projects", {"accessions": ["PXD010154"]})
@@ -2939,8 +2941,8 @@ Listar filas de evidencia de proteínas para un proyecto de afinidad-proteomics 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `project_accession` | cuerda. | **necesarios** |
-| `keyword` | cuerda. | opcional |
+| `project_accession` | cadena de texto | **obligatorio** |
+| `keyword` | cadena de texto | opcional |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_search_project_proteins", {"project_accession": "PXD010154"})
@@ -2952,7 +2954,7 @@ Buscar proyectos de PRIDE que contengan una proteína (dirección de arquivo MS)
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `protein_accession` | cuerda. | **necesarios** |
+| `protein_accession` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_find_projects_for_protein", {"protein_accession": "P04637"})
@@ -2971,7 +2973,7 @@ CellGuide (CELLxGENE) información de tipo celular por Cell Ontology id o nombre
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `cell_type` | cuerda. | **necesarios** |
+| `cell_type` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_cell_type_info", {"cell_type": "acinar cell"})
@@ -2983,7 +2985,7 @@ Buscar CellGuide tipos de celdas por texto libre sobre nombre y sinónimos (el C
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
+| `query` | cadena de texto | **obligatorio** |
 | `limit` | entero | facultativa; predeterminado: 25 |
 
 ```javascript
@@ -2996,8 +2998,8 @@ Los genes de marcadores CellGuide para un tipo de célula (id o nombre): computa
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `cell_type` | cuerda. | **necesarios** |
-| `marker_type` | cuerda. | facultativa; predeterminado: "computational"; enum: &#91;"computational", "canonical"&#93; |
+| `cell_type` | cadena de texto | **obligatorio** |
+| `marker_type` | cadena de texto | facultativa; predeterminado: "computational"; enum: &#91;"computational", "canonical"&#93; |
 | `limit` | entero | facultativa; predeterminado: 25 |
 
 ```javascript
@@ -3010,7 +3012,7 @@ CellGuide datasets de origen y publicaciones que contribuyen a un tipo de célul
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `cell_type` | cuerda. | **necesarios** |
+| `cell_type` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_source_data", {"cell_type": "CL:0000622"})
@@ -3022,7 +3024,7 @@ Tejidos anatómicos donde se observa un tipo de célula (id o nombre) agregado (
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `cell_type` | cuerda. | **necesarios** |
+| `cell_type` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_cell_tissues", {"cell_type": "T cell"})
@@ -3041,11 +3043,11 @@ Búsqueda ENCODE experimentos funcional-genomics (ChIP-seq, ATAC-seq, ...). Filt
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `assay_title` | cuerda. | opcional |
-| `target` | cuerda. | opcional |
-| `organism` | cuerda. | opcional |
-| `status` | cuerda. | facultativa; default: "released" |
-| `date_released_before` | cuerda. | opcional |
+| `assay_title` | cadena de texto | opcional |
+| `target` | cadena de texto | opcional |
+| `organism` | cadena de texto | opcional |
+| `status` | cadena de texto | facultativa; default: "released" |
+| `date_released_before` | cadena de texto | opcional |
 | `extra_filters` | objeto | opcional |
 | `max_rows` | entero | facultativa; predeterminado: 100 |
 
@@ -3059,11 +3061,11 @@ Buscar biosamplos ENCODE (líneas de células, tejidos, células primarias). Fil
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `term_name` | cuerda. | opcional |
-| `classification` | cuerda. | opcional |
-| `organism` | cuerda. | opcional |
-| `status` | cuerda. | facultativa; default: "released" |
-| `date_created_before` | cuerda. | opcional |
+| `term_name` | cadena de texto | opcional |
+| `classification` | cadena de texto | opcional |
+| `organism` | cadena de texto | opcional |
+| `status` | cadena de texto | facultativa; default: "released" |
+| `date_created_before` | cadena de texto | opcional |
 | `extra_filters` | objeto | opcional |
 | `max_rows` | entero | facultativa; predeterminado: 100 |
 
@@ -3077,11 +3079,11 @@ Listar archivos de datos ENCODE por formato / ensayo / biosample. Filtros: file_
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `file_format` | cuerda. | opcional |
-| `assay_term_name` | cuerda. | opcional |
-| `biosample_term_name` | cuerda. | opcional |
-| `status` | cuerda. | facultativa; default: "released" |
-| `date_created_before` | cuerda. | opcional |
+| `file_format` | cadena de texto | opcional |
+| `assay_term_name` | cadena de texto | opcional |
+| `biosample_term_name` | cadena de texto | opcional |
+| `status` | cadena de texto | facultativa; default: "released" |
+| `date_created_before` | cadena de texto | opcional |
 | `extra_filters` | objeto | opcional |
 | `max_rows` | entero | facultativa; predeterminado: 100 |
 
@@ -3095,7 +3097,7 @@ Obtenga un experimento ENCODE mediante la adhesión (por ejemplo, "ENCSR000AKP")
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
+| `accession` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_experiment", {"accession": "ENCSR000AKP"})
@@ -3107,7 +3109,7 @@ Obtenga un archivo ENCODE por adhesión (por ejemplo, "ENCFF002JUR"). Devuelve u
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
+| `accession` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_file", {"accession": "ENCFF002JUR"})
@@ -3119,7 +3121,7 @@ Obtenga un biosamplo ENCODE por adhesión (por ejemplo, "ENCBS013JZP"). Devuelve
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `accession` | cuerda. | **necesarios** |
+| `accession` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_biosample", {"accession": "ENCBS013JZP"})
@@ -3131,7 +3133,7 @@ Obtenga un perfil de unión JASPAR TF por matriz VERSIONED id (por ejemplo. "MA0
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `matrix_id` | cuerda. | **necesarios** |
+| `matrix_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_get_matrix", {"matrix_id": "MA0002.2"})
@@ -3143,7 +3145,7 @@ Listar todas las versiones de una matriz base JASPAR id (por ejemplo. "MA0002").
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `base_id` | cuerda. | **necesarios** |
+| `base_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_matrix_versions", {"base_id": "MA0002"})
@@ -3155,12 +3157,12 @@ Búsqueda/lista JASPAR Perfiles de unión TF (el catálogo completo de perfil). 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `collection` | cuerda. | opcional |
-| `tax_group` | cuerda. | opcional |
+| `collection` | cadena de texto | opcional |
+| `tax_group` | cadena de texto | opcional |
 | `tax_id` | entero | opcional |
-| `name` | cuerda. | opcional |
-| `search` | cuerda. | opcional |
-| `version` | cuerda. | opcional |
+| `name` | cadena de texto | opcional |
+| `search` | cadena de texto | opcional |
+| `version` | cadena de texto | opcional |
 | `max_rows` | entero | facultativa; predeterminado: 1000 |
 
 ```javascript
@@ -3221,12 +3223,12 @@ Buscar conjuntos de datos UniBind ChIP-seq con predicciones de TFBS de alta conf
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `tf_name` | cuerda. | opcional |
-| `cell_line` | cuerda. | opcional |
-| `species` | cuerda. | opcional |
-| `collection` | cuerda. | facultativa; enum: &#91;"Robust", "Permisive"&#93; |
-| `jaspar_id` | cuerda. | opcional |
-| `search` | cuerda. | opcional |
+| `tf_name` | cadena de texto | opcional |
+| `cell_line` | cadena de texto | opcional |
+| `species` | cadena de texto | opcional |
+| `collection` | cadena de texto | facultativa; enum: &#91;"Robust", "Permisive"&#93; |
+| `jaspar_id` | cadena de texto | opcional |
+| `search` | cadena de texto | opcional |
 | `max_rows` | entero | facultativa; predeterminado: 200 |
 
 ```javascript
@@ -3239,7 +3241,7 @@ Obtenga un conjunto de datos UniBind's detalle: TFBS cuenta por modelo + URLs de
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `tf_id` | cuerda. | **necesarios** |
+| `tf_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("regulation", "unibind_get_dataset", {"tf_id": "ENCSR000AUE.A549_lung_carcinoma.CTCF"})
@@ -3251,12 +3253,12 @@ Los sitios de unión TF superponen una región genómica (UniBind 2021 mapas), s
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `genome` | cuerda. | **necesarios** |
-| `chrom` | cuerda. | **necesarios** |
-| `start` | entero | **necesarios** |
-| `end` | entero | **necesarios** |
-| `tf_name` | cuerda. | opcional |
-| `collection` | cuerda. | facultativa; predeterminado: "Robust"; enum: &#91;"Robust", "Permisive"&#93; |
+| `genome` | cadena de texto | **obligatorio** |
+| `chrom` | cadena de texto | **obligatorio** |
+| `start` | entero | **obligatorio** |
+| `end` | entero | **obligatorio** |
+| `tf_name` | cadena de texto | opcional |
+| `collection` | cadena de texto | facultativa; predeterminado: "Robust"; enum: &#91;"Robust", "Permisive"&#93; |
 | `max_sites` | entero | facultativa; predeterminado: 2000 |
 
 ```javascript
@@ -3276,17 +3278,17 @@ Search Grants.gov oportunidades de financiación a través de la búsqueda2 API 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `keyword` | cuerda. | opcional |
-| `opportunity_number` | cuerda. | opcional |
-| `aln` | cuerda. | opcional |
-| `agencies` | array de cadena | opcional |
-| `opportunity_statuses` | array de cadena | opcional |
-| `eligibilities` | array de cadena | opcional |
-| `funding_categories` | array de cadena | opcional |
-| `funding_instruments` | array de cadena | opcional |
-| `count_only` | boolean | facultativa; default: false |
+| `keyword` | cadena de texto | opcional |
+| `opportunity_number` | cadena de texto | opcional |
+| `aln` | cadena de texto | opcional |
+| `agencies` | matriz de cadenas | opcional |
+| `opportunity_statuses` | matriz de cadenas | opcional |
+| `eligibilities` | matriz de cadenas | opcional |
+| `funding_categories` | matriz de cadenas | opcional |
+| `funding_instruments` | matriz de cadenas | opcional |
+| `count_only` | booleano | facultativa; default: false |
 | `max_records` | entero | facultativa; predeterminado: 100 |
-| `include_facets` | boolean | facultativa; default: true |
+| `include_facets` | booleano | facultativa; default: true |
 
 ```javascript
 const result = await host.mcp("research-resources", "search_grants", {"keyword": "cancer", "agencies": ["HHS-NIH11"], "max_records": 25})
@@ -3298,7 +3300,7 @@ Búsqueda de texto completo del Registro Anticuerpo (antibodyregistry.org, ~3.2M
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `query` | cuerda. | **necesarios** |
+| `query` | cadena de texto | **obligatorio** |
 | `page` | entero | opcional |
 | `page_size` | entero | facultativa; predeterminado: 100 |
 | `max_records` | entero | facultativa; predeterminado: 500 |
@@ -3313,7 +3315,7 @@ Obtenga registros de detalles del Registro Anticuerpo(s) para una adhesión al A
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `antibody_id` | cuerda. | **necesarios** |
+| `antibody_id` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("research-resources", "get_antibody", {"antibody_id": "RRID:AB_3643095"})
@@ -3325,8 +3327,8 @@ Encontrar anticuerpos por número de catálogo de proveedores (exacto, caso-inse
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `catalog_number` | cuerda. | **necesarios** |
-| `vendor` | cuerda. | opcional |
+| `catalog_number` | cadena de texto | **obligatorio** |
+| `vendor` | cadena de texto | opcional |
 | `page_size` | entero | facultativa; predeterminado: 100 |
 
 ```javascript
@@ -3370,7 +3372,7 @@ Lista los conjuntos de datos disponibles en una marta determinada (por ejemplo. 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `mart` | cuerda. | **necesarios** |
+| `mart` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_datasets", {"mart": "ENSEMBL_MART_ENSEMBL"})
@@ -3382,8 +3384,8 @@ Lista los atributos comúnmente utilizados para un conjunto de datos (un subconj
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `mart` | cuerda. | **necesarios** |
-| `dataset` | cuerda. | **necesarios** |
+| `mart` | cadena de texto | **obligatorio** |
+| `dataset` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_common_attributes", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3395,8 +3397,8 @@ Lista todos los atributos disponibles para un conjunto de datos, menos homologs 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `mart` | cuerda. | **necesarios** |
-| `dataset` | cuerda. | **necesarios** |
+| `mart` | cadena de texto | **obligatorio** |
+| `dataset` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_all_attributes", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3408,8 +3410,8 @@ Lista los filtros disponibles para un conjunto de datos. Los filtros estrechan u
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `mart` | cuerda. | **necesarios** |
-| `dataset` | cuerda. | **necesarios** |
+| `mart` | cadena de texto | **obligatorio** |
+| `dataset` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_filters", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3421,9 +3423,9 @@ Ejecutar una consulta BioMart: recuperar los atributos solicitados para un conju
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `mart` | cuerda. | **necesarios** |
-| `dataset` | cuerda. | **necesarios** |
-| `attributes` | array de cadena | **necesarios** |
+| `mart` | cadena de texto | **obligatorio** |
+| `dataset` | cadena de texto | **obligatorio** |
+| `attributes` | matriz de cadenas | **obligatorio** |
 | `filters` | objeto | opcional |
 
 ```javascript
@@ -3436,11 +3438,11 @@ Traducir un identificador único de un tipo de atributo a otro (por ejemplo,. un
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `mart` | cuerda. | **necesarios** |
-| `dataset` | cuerda. | **necesarios** |
-| `from_attr` | cuerda. | **necesarios** |
-| `to_attr` | cuerda. | **necesarios** |
-| `target` | cuerda. | **necesarios** |
+| `mart` | cadena de texto | **obligatorio** |
+| `dataset` | cadena de texto | **obligatorio** |
+| `from_attr` | cadena de texto | **obligatorio** |
+| `to_attr` | cadena de texto | **obligatorio** |
+| `target` | cadena de texto | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("biomart", "get_translation", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "from_attr": "hgnc_symbol", "to_attr": "ensembl_gene_id", "target": "TP53"})
@@ -3452,11 +3454,11 @@ Traducir muchos identificadores de un tipo de atributo a otro en una sola consul
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `mart` | cuerda. | **necesarios** |
-| `dataset` | cuerda. | **necesarios** |
-| `from_attr` | cuerda. | **necesarios** |
-| `to_attr` | cuerda. | **necesarios** |
-| `targets` | array de cadena | **necesarios** |
+| `mart` | cadena de texto | **obligatorio** |
+| `dataset` | cadena de texto | **obligatorio** |
+| `from_attr` | cadena de texto | **obligatorio** |
+| `to_attr` | cadena de texto | **obligatorio** |
+| `targets` | matriz de cadenas | **obligatorio** |
 
 ```javascript
 const result = await host.mcp("biomart", "batch_translate", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "from_attr": "hgnc_symbol", "to_attr": "ensembl_gene_id", "targets": ["TP53", "BRCA1", "BRCA2"]})
@@ -3475,9 +3477,9 @@ Busque compuestos de compra en ZINC22/ZINC20 por identificador ZINC — respuest
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'string', 'array'&#93; | **necesarios** |
+| `zinc_ids` | ['string', 'array'] | **obligatorio** |
 | `max_results` | entero | facultativa; predeterminado: 50 |
-| `timeout_s` | Número | facultativa; predeterminado: 25 |
+| `timeout_s` | número | facultativa; predeterminado: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_id", {"zinc_ids": ["ZINC000000000012"]})
@@ -3489,11 +3491,11 @@ Buscar ZINC22's espacio químico depurable por estructura — respuestas " lo qu
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `smiles` | cuerda. | **necesarios** |
+| `smiles` | cadena de texto | **obligatorio** |
 | `dist` | entero | facultativa; predeterminado: 0 |
 | `adist` | entero | opcional |
 | `max_results` | entero | facultativa; predeterminado: 50 |
-| `timeout_s` | Número | facultativa; predeterminado: 25 |
+| `timeout_s` | número | facultativa; predeterminado: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_smiles", {"smiles": "CC(=O)Oc1ccccc1C(=O)O", "dist": 2})
@@ -3505,9 +3507,9 @@ Resolver números de catálogo de proveedores a compuestos ZINC — respuestas "
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `supplier_codes` | &#91;'string', 'array'&#93; | **necesarios** |
+| `supplier_codes` | ['string', 'array'] | **obligatorio** |
 | `max_results` | entero | facultativa; predeterminado: 50 |
-| `timeout_s` | Número | facultativa; predeterminado: 25 |
+| `timeout_s` | número | facultativa; predeterminado: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_supplier", {"supplier_codes": ["MCULE-2311834287"]})
@@ -3520,8 +3522,8 @@ Dibujar una muestra aleatoria de compuestos purificables de ZINC22 — para la c
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
 | `count` | entero | facultativa; predeterminado: 50 |
-| `subset` | cuerda. | opcional |
-| `timeout_s` | Número | facultativa; predeterminado: 25 |
+| `subset` | cadena de texto | opcional |
+| `timeout_s` | número | facultativa; predeterminado: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_random_sample", {"count": 25, "subset": "lead-like"})
@@ -3533,8 +3535,8 @@ Localice estructuras 3D listas para compuestos ZINC. ZINC22 naves conformadores 
 
 | Campo | Tipo | Requisitos y limitaciones |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'string', 'array'&#93; | **necesarios** |
-| `timeout_s` | Número | facultativa; predeterminado: 25 |
+| `zinc_ids` | ['string', 'array'] | **obligatorio** |
+| `timeout_s` | número | facultativa; predeterminado: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_get_3d", {"zinc_ids": ["ZINC000000000012"]})

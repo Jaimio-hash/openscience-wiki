@@ -1,12 +1,12 @@
 ---
 title: "설치 및 전환 에이전트"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 # 설치 및 전환 에이전트 {/* #installing-and-switching-agents */}
 
-대화 및 도구를 실행하는 Agent Framework를 선택하십시오. 설치 후 호환 [모델 공급자](providers.md)을 구성합니다. 몇 가지 프레임 워크를 설치하고 프로젝트를 위해 활성 하나를 전환 할 수 있습니다.
+대화와 도구 실행에 사용할 Agent 프레임워크를 선택하고, 설치 후 호환되는 [모델 제공자](providers.md)를 설정하세요. 여러 프레임워크를 설치할 수 있습니다. **Settings → Agent**의 활성 프레임워크는 모든 프로젝트가 공유하는 앱 전체 설정이며, 변경 사항은 이후 대화와 워크플로에 적용됩니다.
 
 ## 에이전트 페이지를 읽으십시오 {/* #read-the-agent-page */}
 
@@ -17,7 +17,7 @@ last_update:
 | 통제/status | 의미와 행동 |
 | --- | --- |
 | 설치된 카드 | 스위치를 요청할 수 있는 자격이 있는 비활성 카드를 선택하십시오. 목록으로 만들어진 임명은 아직도 호환성 모형 접근을 필요로 합니다. |
-| 활성 | 선택한 백엔드. 그것의 제거 활동은 비활성화됩니다. |
+| 활성 | 응용 프로그램 전체 선택 백엔드. 그것의 제거 활동은 비활성화됩니다. |
 | 재감지 | 설치 또는 경로 변경 후 검색을 새로 고침합니다. 그것은 일시적으로 검출을 보여줍니다; 그것은 누락된 소프트웨어를 설치하지 않습니다. |
 | 설치되지 않음 | 사용 가능한 실행 시간은 그 프레임 워크에 대해 감지되었습니다. |
 | 메뉴 설치 | 그 프레임 워크를 위해 제공되는 소스를 선택하고, 설치 진행 상황을 검사합니다. |
@@ -46,7 +46,7 @@ Codex의 경우, 기본 런타임 및 ACP 어댑터는 호환 쌍으로 탐지�
 
 ## 살아있는 국가를 가진 옹호된 역사 없이 전환 {/* #switch-without-confusing-retained-history-with-live-state */}
 
-스위치의 앞에 현재 가동을 완료하거나 중지하십시오. 스위치는 신선한 백엔드 세션을 만들고 열린 대화의 성적표를 재생합니다. in-flight tool process 또는 reproduce 모든 해석기 변수를 전송하지 않습니다. 세션의 파일을 확인, Notebook 및 계산을 계속하기 전에 권한.
+전환 전에 현재 작업을 완료하거나 중지하세요. 변경 사항은 모든 프로젝트의 이후 대화와 워크플로에 적용됩니다. 실행 중인 작업은 완료될 때까지 기존 런타임을 사용하며, 유휴 대화는 다시 사용할 때 연결됩니다. 대화 기록이 남아 있어도 실행 중인 도구 프로세스나 인터프리터 변수가 그대로 이어지는 것은 아닙니다. 계산을 계속하기 전에 파일, Notebook 및 권한을 확인하세요.
 
 전환 후, 대화를 위해 선택한 모델을 확인합니다. Codex 구독 지원 [Side Chat](./delegation.md); 종료 세션 운영 또는 복구 일시적으로 그것을 차단할 수 있습니다. 자주 묻는 질문
 
@@ -71,4 +71,6 @@ Codex의 경우, 기본 런타임 및 ACP 어댑터는 호환 쌍으로 탐지�
 
 작업이 비활성화되면 진행중인 다른 설치 / 스위치를 확인하고 명시된 prerequisite 오류를 확인하십시오. 감지가 성공하지만 요청이 실패하면 모델 인증 및 프레임 워크 / API 호환성을 별도로 검사합니다.
 
-출처: [에이전트 패널](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentPanel.tsx), [프레임 워크 카드](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/AgentFrameworkCard.tsx).
+출처: [에이전트 패널](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentPanel.tsx), [프레임 워크 카드](https://github.com/aipoch/open-science/blob/v0.30.1/src/renderer/src/pages/settings/AgentFrameworkCard.tsx).
+
+범위와 스위치 동작: [설정 저장](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/settings/repository.ts), [런타임 전환](https://github.com/aipoch/open-science/blob/v0.30.1/src/main/acp/runtime-coordinator.ts).

@@ -57,12 +57,12 @@ Archivo de referencia: <ExampleDownload path="/examples/theoph/theoph-input.csv"
 
 ## 3. Agregue las métricas de exposición {/* #3-add-the-exposure-metrics */}
 
-Descargue el <ExampleDownload path="/examples/theoph/nca-conventions.md">referencia oficial de Skill NCA</ExampleDownload> y agréguelo a través de **+ → Attach files**. Esta es una referencia sin cambios del paquete instalado. En la configuración grabada, Notebook podría leer el accesorio de conversación pero no podía leer la referencia dentro del directorio de instalación Skill.
+Descargue la <ExampleDownload path="/examples/theoph/nca-conventions.md">referencia metodológica NCA corregida</ExampleDownload> y adjúntela mediante **+ → Attach files**. Esta versión del Wiki corrige las explicaciones sobre integración y selección del intervalo terminal del documento incluido en el paquete. El ejemplo calcula Cmax/Tmax observados y un AUC mediante la regla trapezoidal lineal en todos los intervalos; no estima la pendiente terminal. Adjunte el archivo a la conversación, ya que en la configuración documentada Notebook no podía leer la referencia dentro de la carpeta de instalación del Skill.
 
 Seleccione `/pkpd-modeling` de nuevo en la misma conversación, luego enviar:
 
 ```text
-Read the attached nca-conventions.md from the official Skill package.
+Read the attached reviewed nca-conventions.md methods reference.
 Extend the baseline using the same theoph-input.csv and base R Notebook.
 For each subject calculate observed Cmax (mg/L), earliest observed Tmax (h),
 linear-trapezoidal AUC from time zero to the last observation (mg*h/L),

@@ -5,7 +5,7 @@ Recorded on 2026-09-16 in Open-Science 0.30.1, with the official Pharmacometrics
 ## Inputs and attribution
 
 - `theoph-input.csv`: unmodified observations exported from R `datasets::Theoph`, 132 rows and five columns. Source and variable definitions: https://www.stat.ethz.ch/R-manual/R-devel/library/datasets/html/Theoph.html . The dataset documentation credits Boeckmann, Sheiner and Beal (1994), reporting Robert Upton's study. The R datasets package is distributed with R under GPL-2 or GPL-3.
-- `nca-conventions.md`: unchanged reference from `pkpd-modeling/references/nca-conventions.md` in the official Specialist package. The Skill declares the MIT license. Supplied as an explicit conversation attachment because the Notebook sandbox could not read the installation directory. This case uses only the observed-extrema and linear-trapezoidal conventions, not the reference's other analysis routes.
+- `nca-conventions.md`: reviewed Wiki adaptation of the MIT-licensed reference from `pkpd-modeling/references/nca-conventions.md` in Specialist 1.0.0. The current download corrects the integration and terminal-window explanations and is not byte-identical to the package file. The recorded app run used the original attachment. Its observed Cmax/Tmax and explicitly specified all-linear AUC calculations are unaffected; the saved script, input, numerical outputs and screenshots are unchanged. The example never estimated a terminal slope.
 
 Input CSV SHA-256: `9cb8329d19da78114ff7bebf7c31dd9f247492b5ecbc7c0de274081a30a660c8`.
 

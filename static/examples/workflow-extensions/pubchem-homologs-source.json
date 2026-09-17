@@ -1,0 +1,501 @@
+{
+  "title": "PubChem straight-chain saturated monocarboxylic acids, C2-C8",
+  "connector": "Chemistry/PubChem",
+  "exact_operations": [
+    {
+      "operation": "pubchem_search_compounds",
+      "input": {
+        "query": "acetic acid",
+        "namespace": "name",
+        "max_cids": 1,
+        "with_properties": true
+      },
+      "response": {
+        "query": "acetic acid",
+        "namespace": "name",
+        "n_cids_total": 1,
+        "truncated": false,
+        "cids": [
+          176
+        ],
+        "properties": [
+          {
+            "CID": 176,
+            "MolecularFormula": "C2H4O2",
+            "MolecularWeight": "60.05",
+            "SMILES": "CC(=O)O",
+            "ConnectivitySMILES": "CC(=O)O",
+            "InChI": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)",
+            "InChIKey": "QTBSBXVTEAMEQO-UHFFFAOYSA-N",
+            "IUPACName": "acetic acid",
+            "XLogP": -0.2,
+            "ExactMass": "60.021129366",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 0,
+            "HeavyAtomCount": 4
+          }
+        ]
+      }
+    },
+    {
+      "operation": "pubchem_search_compounds",
+      "input": {
+        "query": "propanoic acid",
+        "namespace": "name",
+        "max_cids": 1,
+        "with_properties": true
+      },
+      "response": {
+        "query": "propanoic acid",
+        "namespace": "name",
+        "n_cids_total": 1,
+        "truncated": false,
+        "cids": [
+          1032
+        ],
+        "properties": [
+          {
+            "CID": 1032,
+            "MolecularFormula": "C3H6O2",
+            "MolecularWeight": "74.08",
+            "SMILES": "CCC(=O)O",
+            "ConnectivitySMILES": "CCC(=O)O",
+            "InChI": "InChI=1S/C3H6O2/c1-2-3(4)5/h2H2,1H3,(H,4,5)",
+            "InChIKey": "XBDQKXXYIPTUBI-UHFFFAOYSA-N",
+            "IUPACName": "propanoic acid",
+            "XLogP": 0.3,
+            "ExactMass": "74.036779430",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 1,
+            "HeavyAtomCount": 5
+          }
+        ]
+      }
+    },
+    {
+      "operation": "pubchem_search_compounds",
+      "input": {
+        "query": "butanoic acid",
+        "namespace": "name",
+        "max_cids": 1,
+        "with_properties": true
+      },
+      "response": {
+        "query": "butanoic acid",
+        "namespace": "name",
+        "n_cids_total": 1,
+        "truncated": false,
+        "cids": [
+          264
+        ],
+        "properties": [
+          {
+            "CID": 264,
+            "MolecularFormula": "C4H8O2",
+            "MolecularWeight": "88.11",
+            "SMILES": "CCCC(=O)O",
+            "ConnectivitySMILES": "CCCC(=O)O",
+            "InChI": "InChI=1S/C4H8O2/c1-2-3-4(5)6/h2-3H2,1H3,(H,5,6)",
+            "InChIKey": "FERIUCNNQQJTOY-UHFFFAOYSA-N",
+            "IUPACName": "butanoic acid",
+            "XLogP": 0.8,
+            "ExactMass": "88.052429494",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 2,
+            "HeavyAtomCount": 6
+          }
+        ]
+      }
+    },
+    {
+      "operation": "pubchem_search_compounds",
+      "input": {
+        "query": "pentanoic acid",
+        "namespace": "name",
+        "max_cids": 1,
+        "with_properties": true
+      },
+      "response": {
+        "query": "pentanoic acid",
+        "namespace": "name",
+        "n_cids_total": 1,
+        "truncated": false,
+        "cids": [
+          7991
+        ],
+        "properties": [
+          {
+            "CID": 7991,
+            "MolecularFormula": "C5H10O2",
+            "MolecularWeight": "102.13",
+            "SMILES": "CCCCC(=O)O",
+            "ConnectivitySMILES": "CCCCC(=O)O",
+            "InChI": "InChI=1S/C5H10O2/c1-2-3-4-5(6)7/h2-4H2,1H3,(H,6,7)",
+            "InChIKey": "NQPDZGIKBAWPEJ-UHFFFAOYSA-N",
+            "IUPACName": "pentanoic acid",
+            "XLogP": 1.4,
+            "ExactMass": "102.068079557",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 3,
+            "HeavyAtomCount": 7
+          }
+        ]
+      }
+    },
+    {
+      "operation": "pubchem_search_compounds",
+      "input": {
+        "query": "hexanoic acid",
+        "namespace": "name",
+        "max_cids": 1,
+        "with_properties": true
+      },
+      "response": {
+        "query": "hexanoic acid",
+        "namespace": "name",
+        "n_cids_total": 1,
+        "truncated": false,
+        "cids": [
+          8892
+        ],
+        "properties": [
+          {
+            "CID": 8892,
+            "MolecularFormula": "C6H12O2",
+            "MolecularWeight": "116.16",
+            "SMILES": "CCCCCC(=O)O",
+            "ConnectivitySMILES": "CCCCCC(=O)O",
+            "InChI": "InChI=1S/C6H12O2/c1-2-3-4-5-6(7)8/h2-5H2,1H3,(H,7,8)",
+            "InChIKey": "FUZZWVXGSFPDMH-UHFFFAOYSA-N",
+            "IUPACName": "hexanoic acid",
+            "XLogP": 1.9,
+            "ExactMass": "116.083729621",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 4,
+            "HeavyAtomCount": 8
+          }
+        ]
+      }
+    },
+    {
+      "operation": "pubchem_search_compounds",
+      "input": {
+        "query": "heptanoic acid",
+        "namespace": "name",
+        "max_cids": 1,
+        "with_properties": true
+      },
+      "response": {
+        "query": "heptanoic acid",
+        "namespace": "name",
+        "n_cids_total": 1,
+        "truncated": false,
+        "cids": [
+          8094
+        ],
+        "properties": [
+          {
+            "CID": 8094,
+            "MolecularFormula": "C7H14O2",
+            "MolecularWeight": "130.18",
+            "SMILES": "CCCCCCC(=O)O",
+            "ConnectivitySMILES": "CCCCCCC(=O)O",
+            "InChI": "InChI=1S/C7H14O2/c1-2-3-4-5-6-7(8)9/h2-6H2,1H3,(H,8,9)",
+            "InChIKey": "MNWFXJYAOYHMED-UHFFFAOYSA-N",
+            "IUPACName": "heptanoic acid",
+            "XLogP": 2.5,
+            "ExactMass": "130.099379685",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 5,
+            "HeavyAtomCount": 9
+          }
+        ]
+      }
+    },
+    {
+      "operation": "pubchem_search_compounds",
+      "input": {
+        "query": "octanoic acid",
+        "namespace": "name",
+        "max_cids": 1,
+        "with_properties": true
+      },
+      "response": {
+        "query": "octanoic acid",
+        "namespace": "name",
+        "n_cids_total": 1,
+        "truncated": false,
+        "cids": [
+          379
+        ],
+        "properties": [
+          {
+            "CID": 379,
+            "MolecularFormula": "C8H16O2",
+            "MolecularWeight": "144.21",
+            "SMILES": "CCCCCCCC(=O)O",
+            "ConnectivitySMILES": "CCCCCCCC(=O)O",
+            "InChI": "InChI=1S/C8H16O2/c1-2-3-4-5-6-7-8(9)10/h2-7H2,1H3,(H,9,10)",
+            "InChIKey": "WWZKQHOCKIZLMA-UHFFFAOYSA-N",
+            "IUPACName": "octanoic acid",
+            "XLogP": 3,
+            "ExactMass": "144.115029749",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 6,
+            "HeavyAtomCount": 10
+          }
+        ]
+      }
+    },
+    {
+      "operation": "pubchem_get_compounds",
+      "input": {
+        "cids": [
+          176,
+          1032,
+          264,
+          7991,
+          8892,
+          8094,
+          379
+        ],
+        "include_synonyms": false
+      },
+      "response": {
+        "n_requested": 7,
+        "duplicates": [],
+        "records": [
+          {
+            "CID": 176,
+            "MolecularFormula": "C2H4O2",
+            "MolecularWeight": "60.05",
+            "SMILES": "CC(=O)O",
+            "ConnectivitySMILES": "CC(=O)O",
+            "InChI": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)",
+            "InChIKey": "QTBSBXVTEAMEQO-UHFFFAOYSA-N",
+            "IUPACName": "acetic acid",
+            "XLogP": -0.2,
+            "ExactMass": "60.021129366",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 0,
+            "HeavyAtomCount": 4
+          },
+          {
+            "CID": 1032,
+            "MolecularFormula": "C3H6O2",
+            "MolecularWeight": "74.08",
+            "SMILES": "CCC(=O)O",
+            "ConnectivitySMILES": "CCC(=O)O",
+            "InChI": "InChI=1S/C3H6O2/c1-2-3(4)5/h2H2,1H3,(H,4,5)",
+            "InChIKey": "XBDQKXXYIPTUBI-UHFFFAOYSA-N",
+            "IUPACName": "propanoic acid",
+            "XLogP": 0.3,
+            "ExactMass": "74.036779430",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 1,
+            "HeavyAtomCount": 5
+          },
+          {
+            "CID": 264,
+            "MolecularFormula": "C4H8O2",
+            "MolecularWeight": "88.11",
+            "SMILES": "CCCC(=O)O",
+            "ConnectivitySMILES": "CCCC(=O)O",
+            "InChI": "InChI=1S/C4H8O2/c1-2-3-4(5)6/h2-3H2,1H3,(H,5,6)",
+            "InChIKey": "FERIUCNNQQJTOY-UHFFFAOYSA-N",
+            "IUPACName": "butanoic acid",
+            "XLogP": 0.8,
+            "ExactMass": "88.052429494",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 2,
+            "HeavyAtomCount": 6
+          },
+          {
+            "CID": 7991,
+            "MolecularFormula": "C5H10O2",
+            "MolecularWeight": "102.13",
+            "SMILES": "CCCCC(=O)O",
+            "ConnectivitySMILES": "CCCCC(=O)O",
+            "InChI": "InChI=1S/C5H10O2/c1-2-3-4-5(6)7/h2-4H2,1H3,(H,6,7)",
+            "InChIKey": "NQPDZGIKBAWPEJ-UHFFFAOYSA-N",
+            "IUPACName": "pentanoic acid",
+            "XLogP": 1.4,
+            "ExactMass": "102.068079557",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 3,
+            "HeavyAtomCount": 7
+          },
+          {
+            "CID": 8892,
+            "MolecularFormula": "C6H12O2",
+            "MolecularWeight": "116.16",
+            "SMILES": "CCCCCC(=O)O",
+            "ConnectivitySMILES": "CCCCCC(=O)O",
+            "InChI": "InChI=1S/C6H12O2/c1-2-3-4-5-6(7)8/h2-5H2,1H3,(H,7,8)",
+            "InChIKey": "FUZZWVXGSFPDMH-UHFFFAOYSA-N",
+            "IUPACName": "hexanoic acid",
+            "XLogP": 1.9,
+            "ExactMass": "116.083729621",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 4,
+            "HeavyAtomCount": 8
+          },
+          {
+            "CID": 8094,
+            "MolecularFormula": "C7H14O2",
+            "MolecularWeight": "130.18",
+            "SMILES": "CCCCCCC(=O)O",
+            "ConnectivitySMILES": "CCCCCCC(=O)O",
+            "InChI": "InChI=1S/C7H14O2/c1-2-3-4-5-6-7(8)9/h2-6H2,1H3,(H,8,9)",
+            "InChIKey": "MNWFXJYAOYHMED-UHFFFAOYSA-N",
+            "IUPACName": "heptanoic acid",
+            "XLogP": 2.5,
+            "ExactMass": "130.099379685",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 5,
+            "HeavyAtomCount": 9
+          },
+          {
+            "CID": 379,
+            "MolecularFormula": "C8H16O2",
+            "MolecularWeight": "144.21",
+            "SMILES": "CCCCCCCC(=O)O",
+            "ConnectivitySMILES": "CCCCCCCC(=O)O",
+            "InChI": "InChI=1S/C8H16O2/c1-2-3-4-5-6-7-8(9)10/h2-7H2,1H3,(H,9,10)",
+            "InChIKey": "WWZKQHOCKIZLMA-UHFFFAOYSA-N",
+            "IUPACName": "octanoic acid",
+            "XLogP": 3,
+            "ExactMass": "144.115029749",
+            "TPSA": 37.3,
+            "Charge": 0,
+            "HBondDonorCount": 1,
+            "HBondAcceptorCount": 2,
+            "RotatableBondCount": 6,
+            "HeavyAtomCount": 10
+          }
+        ],
+        "not_found": []
+      }
+    }
+  ],
+  "derived_output_rows": [
+    {
+      "LookupName": "acetic acid",
+      "CID": 176,
+      "MolecularFormula": "C2H4O2",
+      "MolecularWeight": "60.05",
+      "SMILES": "CC(=O)O",
+      "ConnectivitySMILES": "CC(=O)O",
+      "InChIKey": "QTBSBXVTEAMEQO-UHFFFAOYSA-N",
+      "SourceURL": "https://pubchem.ncbi.nlm.nih.gov/compound/176"
+    },
+    {
+      "LookupName": "propanoic acid",
+      "CID": 1032,
+      "MolecularFormula": "C3H6O2",
+      "MolecularWeight": "74.08",
+      "SMILES": "CCC(=O)O",
+      "ConnectivitySMILES": "CCC(=O)O",
+      "InChIKey": "XBDQKXXYIPTUBI-UHFFFAOYSA-N",
+      "SourceURL": "https://pubchem.ncbi.nlm.nih.gov/compound/1032"
+    },
+    {
+      "LookupName": "butanoic acid",
+      "CID": 264,
+      "MolecularFormula": "C4H8O2",
+      "MolecularWeight": "88.11",
+      "SMILES": "CCCC(=O)O",
+      "ConnectivitySMILES": "CCCC(=O)O",
+      "InChIKey": "FERIUCNNQQJTOY-UHFFFAOYSA-N",
+      "SourceURL": "https://pubchem.ncbi.nlm.nih.gov/compound/264"
+    },
+    {
+      "LookupName": "pentanoic acid",
+      "CID": 7991,
+      "MolecularFormula": "C5H10O2",
+      "MolecularWeight": "102.13",
+      "SMILES": "CCCCC(=O)O",
+      "ConnectivitySMILES": "CCCCC(=O)O",
+      "InChIKey": "NQPDZGIKBAWPEJ-UHFFFAOYSA-N",
+      "SourceURL": "https://pubchem.ncbi.nlm.nih.gov/compound/7991"
+    },
+    {
+      "LookupName": "hexanoic acid",
+      "CID": 8892,
+      "MolecularFormula": "C6H12O2",
+      "MolecularWeight": "116.16",
+      "SMILES": "CCCCCC(=O)O",
+      "ConnectivitySMILES": "CCCCCC(=O)O",
+      "InChIKey": "FUZZWVXGSFPDMH-UHFFFAOYSA-N",
+      "SourceURL": "https://pubchem.ncbi.nlm.nih.gov/compound/8892"
+    },
+    {
+      "LookupName": "heptanoic acid",
+      "CID": 8094,
+      "MolecularFormula": "C7H14O2",
+      "MolecularWeight": "130.18",
+      "SMILES": "CCCCCCC(=O)O",
+      "ConnectivitySMILES": "CCCCCCC(=O)O",
+      "InChIKey": "MNWFXJYAOYHMED-UHFFFAOYSA-N",
+      "SourceURL": "https://pubchem.ncbi.nlm.nih.gov/compound/8094"
+    },
+    {
+      "LookupName": "octanoic acid",
+      "CID": 379,
+      "MolecularFormula": "C8H16O2",
+      "MolecularWeight": "144.21",
+      "SMILES": "CCCCCCCC(=O)O",
+      "ConnectivitySMILES": "CCCCCCCC(=O)O",
+      "InChIKey": "WWZKQHOCKIZLMA-UHFFFAOYSA-N",
+      "SourceURL": "https://pubchem.ncbi.nlm.nih.gov/compound/379"
+    }
+  ],
+  "validation": {
+    "row_count_is_7": true,
+    "seven_distinct_cids": true,
+    "carbon_counts_are_2_through_8": true,
+    "formulas_match_CnH2nO2": true,
+    "neutral_charge_zero": true,
+    "batch_not_found_empty": true,
+    "batch_duplicates_empty": true
+  }
+}

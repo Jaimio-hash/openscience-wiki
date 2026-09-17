@@ -1,0 +1,8 @@
+date,station,pm25_mean_ug_m3,valid_hours,expected_hours,missing_pm25_hours,completeness_pct,meets_18h_rule,hourly_rows
+2016-01-01,Aotizhongxin,164.958,24,24,0,100.000,True,24
+2016-01-02,Aotizhongxin,272.792,24,24,0,100.000,True,24
+2016-01-03,Aotizhongxin,263.375,24,24,0,100.000,True,24
+2016-01-04,Aotizhongxin,45.458,24,24,0,100.000,True,24
+2016-01-05,Aotizhongxin,31.167,24,24,0,100.000,True,24
+2016-01-06,Aotizhongxin,23.875,24,24,0,100.000,True,24
+2016-01-07,Aotizhongxin,11.917,24,24,0,100.000,True,24

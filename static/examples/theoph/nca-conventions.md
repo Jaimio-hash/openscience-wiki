@@ -1,128 +1,60 @@
-# Non-compartmental analysis: conventions that change the answer
+# NCA methods reference for the Theoph example
 
-NCA is arithmetic on a concentration-time curve. What makes two analyses of the same data disagree
-is never the arithmetic — it is the four conventions below, which are frequently left unstated.
+Reviewed Wiki adaptation, 2026-09-16. Based on the MIT-licensed `pkpd-modeling/references/nca-conventions.md` supplied with Pharmacometrics PK/PD Design Specialist 1.0.0, with corrections to integration and terminal-window selection. This is not an unchanged package file or a validation of the Specialist's other calculations.
 
-## 1. Which trapezoidal rule
+## Scope of this example
 
-| Rule | Segment AUC | When |
-| --- | --- | --- |
-| Linear | `(C1+C2)/2 * dt` | Rising phase; sparse data; regulatory default for some agencies on ascending segments |
-| Linear-up / log-down | linear while rising, log while falling | The usual default for a drug with log-linear decline |
-| Log-linear | `(C1-C2)/k`, `k = ln(C1/C2)/dt` | Whole curve; fails on any rising or flat segment |
+Use the observed maximum concentration for Cmax and its earliest observed time for Tmax. Retain measured time-zero concentrations. Calculate AUC from observed time zero to each subject's actual last sample with the all-linear rule:
 
-Linear trapezoid **overestimates** AUC on a convex declining curve, because the chord lies above
-the exponential. The error grows with the sampling interval, so a sparse late-phase schedule biases
-AUC upward under the linear rule and the two rules can differ by several percent.
-
-Under log-down, the AUMC segment is
-
-```
-AUMC = (t1*C1 - t2*C2)/k + (C1 - C2)/k^2      with k = ln(C1/C2)/(t2 - t1)
+```text
+AUC_segment = (C1 + C2) * (t2 - t1) / 2
+AUC0-last = sum(AUC_segment)
 ```
 
-which is not what you get by applying the AUC substitution naively.
+Report the observation window and units. Here these are hours, mg/L and mg*h/L. Subjects have different last sampling times. The example does not select a terminal window or calculate lambda_z, half-life, AUC to infinity, clearance or dosing recommendations.
 
-## 2. How lambda_z was selected
+## Integration rules are explicit method choices
 
-The dominant convention: fit `ln C` on time over the last three quantifiable points, extend the
-window backwards one point at a time, and keep the longer window only when **adjusted** r-squared
-improves by more than 0.0001.
+For strictly positive, unequal endpoints, the logarithmic segment area is
 
-- Plain r-squared is monotone in the number of points, so it always selects the longest window.
-  Adjusted r-squared is the only version of this rule that discriminates.
-- Points at or before Tmax are never eligible. Including Tmax fits the tail of absorption, which
-  biases lambda_z upward and therefore half-life, Vz and AUCinf downward.
-- Trailing BLQ samples are excluded from the regression, not set to zero — a zero cannot be
-  log-transformed and a half-LLOQ substitution in the tail flattens the slope.
+```text
+k = ln(C1 / C2) / (t2 - t1)
+AUC_log = (C1 - C2) / k
+```
 
-Reportability criteria, all conventions rather than regulation, and all worth pre-specifying:
+This expression is defined for both increasing and decreasing concentrations: k is negative for an increase. Equal endpoints make the expression 0/0, but its limit is `C1 * (t2 - t1)`. Nonpositive endpoints cannot enter the logarithm.
 
-| Diagnostic | Usual threshold | What it means when it fails |
-| --- | --- | --- |
-| Points in the window | ≥ 3 | The slope is an interpolation between two points |
-| Adjusted r-squared | ≥ 0.80 (sometimes 0.85) | The terminal phase is not log-linear, or is noise |
-| Span ratio: window duration / t½ | ≥ 2 | The true terminal phase may not have been reached |
-| % AUC extrapolated | ≤ 20% | AUCinf is driven by the fit, not by data |
+Phoenix distinguishes these choices:
 
-A profile can pass all four and still be wrong if sampling stopped during a distribution phase: the
-"terminal" slope is then the beta phase of a drug whose gamma phase was never observed, and Vz and
-t½ are both underestimated. Only the sampling duration relative to the true terminal half-life
-fixes this, and NCA cannot detect it.
-
-## 3. What happened to BLQ values
-
-| Rule | Effect |
+| Method | AUC rule |
 | --- | --- |
-| Set to zero | Standard for leading BLQ before the first quantifiable sample |
-| LLOQ/2 | Common for embedded BLQ; biases AUC upward slightly and t½ downward |
-| Treated as missing | Standard for trailing BLQ; avoids fabricating a tail |
+| Linear Trapezoidal Linear Interpolation | Linear on each interval; the documented Phoenix default |
+| Linear Up Log Down | Linear on increasing intervals, logarithmic on decreasing intervals |
+| Linear Log Trapezoidal | Linear through the first Cmax, logarithmic after it |
 
-The usual regulatory-acceptable combination is: leading BLQ = 0, embedded BLQ = 0 or LLOQ/2 with
-the choice stated, trailing BLQ excluded. Whatever you choose, apply it identically to every
-profile and to every treatment arm — a rule applied to the test formulation and not the reference
-biases the ratio directly.
+Phoenix falls back to linear calculation for equal or nonpositive adjacent concentrations in the methods that otherwise use logarithms. Do not confuse the last two methods or call either a universal NCA default. See [Certara's calculation options](https://onlinehelp.certara.com/phoenix/8.3/topics/Options_tab1.htm).
 
-## 4. Observed or predicted Clast
+For a truly exponential declining segment, linear interpolation lies above the curve and gives a larger area than logarithmic integration. That comparison does not establish which approximation is appropriate for a noisy observed profile.
 
+## Terminal-window selection is outside this worked example
+
+R-squared does not have a guaranteed monotonic relationship with the number of observations when the fitted window changes. The familiar monotonic property concerns adding predictors while retaining the same observations, not adding time points.
+
+For a simple regression with an intercept and one slope:
+
+```text
+adjusted_R_squared = 1 - (1 - R_squared) * (n - 1) / (n - 2)
+lambda_z = -slope of ln(concentration) against time
 ```
-AUCinf_obs  = AUClast + Clast_observed  / lambda_z
-AUCinf_pred = AUClast + Clast_predicted / lambda_z     (Clast_predicted from the lambda_z fit)
-```
 
-They differ whenever the last observation sits off the fitted line, which is exactly when the last
-observation is noisy. `_pred` is more stable; `_obs` is more common. Report which.
+Phoenix Best Fit evaluates eligible terminal windows with at least three positive concentrations and a negative fitted slope. It selects the largest adjusted R-squared, preferring more points when a candidate is within 0.0001 of that maximum. The tolerance is not a requirement that every longer window improve the score by more than 0.0001.
 
-## Parameter definitions
+Automatic selection excludes observations before Cmax or before the end of infusion; Cmax itself is excluded for non-bolus models. IV bolus and explicitly specified time ranges have different eligibility rules, so exclusion of every point at or before Tmax is not universal. Check the model and selected range in [Certara's Lambda Z method](https://onlinehelp.certara.com/phoenix/8.3/topics/Lambda_Z_or_Slope_Estimation_settings.htm).
 
-| Parameter | Definition | Notes |
-| --- | --- | --- |
-| Cmax, Tmax | Highest observed concentration and its time | **Observed values, never interpolated.** Tmax is summarised as median and range, not mean and SD |
-| AUClast | AUC to the last quantifiable concentration | The only exposure metric that involves no extrapolation |
-| AUCinf | AUClast + Clast/lambda_z | |
-| AUMCinf | AUMClast + tlast·Clast/λz + Clast/λz² | |
-| MRT | AUMCinf/AUCinf | Subtract Tinf/2 for a zero-order infusion |
-| CL or CL/F | Dose/AUCinf | Apparent (`/F`) for any extravascular route |
-| Vz or Vz/F | Dose/(λz · AUCinf) | Terminal-phase volume; depends on λz and inherits its error |
-| Vss | CL · MRT | **Intravenous only.** Vss from extravascular data is not defined, because MRT then includes mean absorption time |
-| AUC(0-tau) | AUC over one dosing interval at steady state | The reportable exposure metric at steady state |
-| Cavg | AUC(0-tau)/tau | |
-| PTF% | 100·(Cmax − Cmin)/Cavg | Peak-trough fluctuation |
-| Swing | (Cmax − Cmin)/Cmin | More sensitive than PTF to a low trough |
-| Rac | AUC(0-tau),ss / AUC(0-tau),first dose | Observed accumulation; compare with 1/(1 − e^(−λz·tau)) |
+Inspect the concentration-time plot, selected points and fitted slope. A large adjusted R-squared alone does not establish that the terminal elimination phase was sampled. Predefine and report acceptance criteria, rather than presenting a particular R-squared, span or extrapolated-area threshold as a universal regulatory requirement.
 
-**Vz versus Vss.** Vz is a terminal-phase parameter and is systematically larger than Vss for a
-multi-compartment drug. They are not alternative estimates of the same thing, and a covariate model
-built on one does not transfer to the other.
+## Missing values and reporting
 
-## Steady state
+Record the assay limit and the treatment of below-quantification values before analysis. A zero cannot be log-transformed; substituting zero or half the quantification limit changes the data and can affect the result. The supplied Theoph input has no missing concentration values, and this example makes no such substitution.
 
-Do not compute AUCinf from a truncated steady-state profile. The `nca.py` extrapolation finding
-fires on exactly this, because the tail beyond tau is not observed and the extrapolated area is a
-fiction. Report AUC(0-tau).
-
-Attainment of steady state should be demonstrated, not assumed — by trough concentrations across at
-least three consecutive intervals showing no trend, not by counting half-lives, because the half
-life you would count with is the one you are trying to estimate.
-
-## Urinary data
-
-- `Ae` — cumulative amount excreted unchanged; `fe = Ae(0-inf)/Dose`
-- `CLr = Ae(0-t)/AUC(0-t)` over the **same** interval; mismatching the intervals is the standard error
-- `CLnr = CL − CLr`
-
-Incomplete collection biases `fe` and `CLr` downward and is not detectable from the data alone.
-
-## Sparse sampling
-
-With one or two samples per subject, per-subject NCA is not possible. The Bailer method and its
-Nedelman-Jia extension estimate a mean AUC and its standard error across a batch design. Do not
-average per-subject AUCs computed from single points; do not run the destructive-sampling data
-through an individual NCA and summarise the result.
-
-## Reporting
-
-State, for every NCA: the trapezoidal rule; the BLQ rule at each position; the lambda_z selection
-rule with the window and number of points per subject; whether AUCinf is observed- or
-predicted-based; and the exclusion criteria applied, decided before unblinding. Summarise exposure
-metrics as geometric mean with geometric CV%, and Tmax as median with range.
+Preserve the input, script, output table and stated integration rule together. The downloadable Theoph summary remains an observed-data calculation, not a clinical interpretation or a complete pharmacokinetic assessment.

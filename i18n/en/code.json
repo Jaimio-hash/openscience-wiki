@@ -995,7 +995,7 @@
     "message": "Given a claim in a draft or meeting note, locate the relevant PDF passages and methods, retain page evidence and produce a supported, qualified or unsupported finding."
   },
   "docs.outline.workflows.database-search.title": {
-    "message": "Cross-check scientific records"
+    "message": "Retrieve structured database records"
   },
   "docs.outline.workflows.database-search.scope": {
     "message": "Review the included topics and their planned scope below."
@@ -1205,7 +1205,7 @@
     "message": "Compare two analysis methods on the same dataset"
   },
   "docs.outline.workflows.compare-branches.scope": {
-    "message": "When choosing between methods, branch from a shared starting point, run both with documented assumptions and produce a comparison of results and limitations."
+    "message": "Use the same documented inputs and preprocessing for two methods, execute both, and compare results, assumptions and limitations."
   },
   "docs.outline.workflows.save-method.title": {
     "message": "Reuse a validated analysis on a new dataset"
@@ -1671,5 +1671,17 @@
   },
   "docs.outline.reference.v0301.scope": {
     "message": "Side Chat drafts, reviewed Skill updates, literature PDFs in packages and recovery tools."
+  },
+  "docs.outline.workflows.focused-literature-search.title": {
+    "message": "Search within specified journals and dates"
+  },
+  "docs.outline.workflows.focused-literature-search.scope": {
+    "message": "Run a bounded PubMed search, screen every returned record and retain uncertain eligibility decisions."
+  },
+  "docs.outline.workflows.cross-check-records.title": {
+    "message": "Cross-check two scientific data sources"
+  },
+  "docs.outline.workflows.cross-check-records.scope": {
+    "message": "Align definitions, units, years and reference periods before comparing NASA and HadCRUT annual temperature records."
   }
 }

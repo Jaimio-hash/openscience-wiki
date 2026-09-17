@@ -2,7 +2,7 @@
 title: "Connector Betriebsnummer"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -36,7 +36,7 @@ Die Namen der Rückgabefelder unterscheiden sich je nach Operation. Die folgende
 
 ## Betriebsinputs {/* #operation-inputs */}
 
-Erweitern Sie einen Connector auf einmal. Erforderliche Felder sind mit **erforderlich** gekennzeichnet; Limits/Defaults, die hier gezeigt werden, stammen aus dem Anwendungsschema. Konsultieren Sie den <ExampleDownload path="/examples/capabilities/connector-catalog-v0.29.0.json">vollständiges herunterladbares Register</ExampleDownload> für verschachtelte JSON-Schemata, vollständige Rückgabebeschreibungen und agentenseitige Anrufbeispiele. Übergeben Sie kein generisches `id`, wenn ein Tool `accessions`, `cids`, `rs_id` oder ein anderes Namespace-spezifisches Feld erwartet.
+Erweitern Sie einen Connector auf einmal. Erforderliche Felder sind mit **erforderlich** gekennzeichnet; Diese Referenz und Download verwenden Sie das Open-Science **v0.30.1** Schema. Eine verschachtelte `input.required`-Liste ist maßgebend; eine ältere `required`-Liste der obersten Ebene möglicherweise fehlt. Konsultieren Sie den <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">vollständiges herunterladbares Register</ExampleDownload> für verschachtelte JSON-Schemata, vollständige Rückgabebeschreibungen und agentenseitige Anrufbeispiele. Übergeben Sie kein generisches `id`, wenn ein Tool `accessions`, `cids`, `rs_id` oder ein anderes Namespace-spezifisches Feld erwartet.
 
 
 ## Chemie {/* #family-1 */}
@@ -50,10 +50,10 @@ Lösen Sie einen chemischen Identifikator (Name, SMILES, InChIKey oder CID) in P
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
-| `namespace` | Schnurschnur | fakultativ; Standard: "name"; enum: &#91;"name", "smiles", "inchikey", "cid"&#93; |
+| `query` | Zeichenfolge | **erforderlich** |
+| `namespace` | Zeichenfolge | fakultativ; Standard: "name"; enum: &#91;"name", "smiles", "inchikey", "cid"&#93; |
 | `max_cids` | Ganzzahl | fakultativ; Standard: 25; mindestens: 1; höchstens: 100 |
-| `with_properties` | Boolean | fakultativ; Standard: true |
+| `with_properties` | boolescher Wert | fakultativ; Standard: true |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_search_compounds", {"query": "aspirin", "max_cids": 25})
@@ -65,8 +65,8 @@ Vollständige Computed-Property-Records für eine Charge von PubChem CIDs, mit o
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `cids` | Array von Ganzzahlern | **erforderlich**; minItems: 1; maxItems: 50 |
-| `include_synonyms` | Boolean | fakultativ; Standard: falsch |
+| `cids` | Array aus Ganzzahlen | **erforderlich**; minItems: 1; maxItems: 50 |
+| `include_synonyms` | boolescher Wert | fakultativ; Standard: falsch |
 | `max_synonyms` | Ganzzahl | fakultativ; Standard: 30 |
 
 ```javascript
@@ -79,10 +79,10 @@ const result = await host.mcp("chemistry", "pubchem_get_compounds", {"cids": [22
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `smiles` | Schnurschnur | **erforderlich** |
+| `smiles` | Zeichenfolge | **erforderlich** |
 | `threshold` | Ganzzahl | fakultativ; Standard: 90; mindestens: 1; höchstens: 100 |
 | `max_records` | Ganzzahl | fakultativ; Standard: 50; mindestens: 1; höchstens: 200 |
-| `with_properties` | Boolean | fakultativ; Standard: falsch |
+| `with_properties` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_similarity_search", {"smiles": "CC(=O)OC1=CC=CC=C1C(=O)O", "threshold": 90})
@@ -95,7 +95,7 @@ Zusammenfassung der Bioassay-Aktivität für eine PubChem-Verbindung - welche As
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
 | `cid` | Ganzzahl | **erforderlich** |
-| `active_only` | Boolean | fakultativ; Standard: falsch |
+| `active_only` | boolescher Wert | fakultativ; Standard: falsch |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 100; mindestens: 1; höchstens: 1000 |
 
 ```javascript
@@ -120,7 +120,7 @@ Volltextsuche über ChEBI-Entitäten (Namen, Synonyme, Formeln, InChIKeys).
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `term` | Schnurschnur | **erforderlich** |
+| `term` | Zeichenfolge | **erforderlich** |
 | `max_results` | Ganzzahl | fakultativ; Standard: 20; mindestens: 1; höchstens: 100 |
 | `page` | Ganzzahl | fakultativ; Standard: 1; mindestens: 1 |
 
@@ -134,7 +134,7 @@ Vollständiger ChEBI-Entitätsdatensatz: Namen, Struktur, chemische Daten, Rolle
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `chebi_id` | Schnurschnur | **erforderlich** |
+| `chebi_id` | Zeichenfolge | **erforderlich** |
 | `max_synonyms` | Ganzzahl | fakultativ; Standard: 30 |
 | `max_xrefs` | Ganzzahl | fakultativ; Standard: 50 |
 
@@ -148,8 +148,8 @@ Ontologie-Beziehungen einer ChEBI-Entität - was sie IST (ausgehend: ist eine / 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `chebi_id` | Schnurschnur | **erforderlich** |
-| `relation_type` | Schnurschnur | fakultativ |
+| `chebi_id` | Zeichenfolge | **erforderlich** |
+| `relation_type` | Zeichenfolge | fakultativ |
 | `max_relations` | Ganzzahl | fakultativ; Standard: 100 |
 
 ```javascript
@@ -162,7 +162,7 @@ Rhea-Masterreaktionen nach Gleichungstext, Teilnehmer-ChEBI-ID oder EC-Nummer (A
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
+| `query` | Zeichenfolge | **erforderlich** |
 | `limit` | Ganzzahl | fakultativ; Standard: 50; mindestens: 1; höchstens: 500 |
 
 ```javascript
@@ -175,7 +175,7 @@ Vollständige Aufzeichnung für eine Rhea-Reaktion: Gleichung, Teilnehmer mit Ch
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `rhea_id` | Schnurschnur | **erforderlich** |
+| `rhea_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("chemistry", "rhea_get_reaction", {"rhea_id": "10280"})
@@ -187,8 +187,8 @@ Gemessene Bindungsaffinitäten (Ki/Kd/IC50/EC50) aller BindingDB-Liganden gegen 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `uniprot` | Schnurschnur | **erforderlich** |
-| `affinity_cutoff_nm` | Nummer | fakultativ; Standard: 10000 |
+| `uniprot` | Zeichenfolge | **erforderlich** |
+| `affinity_cutoff_nm` | Zahl | fakultativ; Standard: 10000 |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 100; mindestens: 1; höchstens: 1000 |
 
 ```javascript
@@ -201,8 +201,8 @@ Protein-Targets mit gemessenen Affinitäten für Verbindungen 2D-ähnlich einer 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `smiles` | Schnurschnur | **erforderlich** |
-| `similarity` | Nummer | fakultativ; Standard: 0.85; mindestens: 0.5; höchstens: 1 |
+| `smiles` | Zeichenfolge | **erforderlich** |
+| `similarity` | Zahl | fakultativ; Standard: 0.85; mindestens: 0.5; höchstens: 1 |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 100; mindestens: 1; höchstens: 1000 |
 
 ```javascript
@@ -222,15 +222,15 @@ Suche OpenAlex wissenschaftliche Arbeiten (alle Disziplinen, ~250M Datensätze) 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | fakultativ |
+| `query` | Zeichenfolge | fakultativ |
 | `year_from` | Ganzzahl | fakultativ |
 | `year_to` | Ganzzahl | fakultativ |
-| `work_type` | Schnurschnur | fakultativ |
-| `open_access_only` | Boolean | fakultativ |
-| `venue` | Schnurschnur | fakultativ |
-| `sort` | Schnurschnur | fakultativ; Standard: "relevance"; enum: &#91;"relevanz", "cited_by_count", "publication_date"&#93; |
+| `work_type` | Zeichenfolge | fakultativ |
+| `open_access_only` | boolescher Wert | fakultativ |
+| `venue` | Zeichenfolge | fakultativ |
+| `sort` | Zeichenfolge | fakultativ; Standard: "relevance"; enum: &#91;"relevanz", "cited_by_count", "publication_date"&#93; |
 | `max_records` | Ganzzahl | fakultativ; Standard: 50 |
-| `include_abstracts` | Boolean | fakultativ; Standard: falsch |
+| `include_abstracts` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_search_works", {"query": "CRISPR base editing", "year_from": 2020, "open_access_only": true, "sort": "cited_by_count", "max_records": 25})
@@ -242,7 +242,7 @@ Holen Sie eine OpenAlex-Arbeit vollständig ab - Metadaten, abstrakt (rekonstrui
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `work_id` | Schnurschnur | **erforderlich** |
+| `work_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_get_work", {"work_id": "W2741809807"})
@@ -254,10 +254,10 @@ Listen Sie Werke auf, die ein bestimmtes Werk CITE (eingehende Zitate) über den
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `work_id` | Schnurschnur | **erforderlich** |
-| `sort` | Schnurschnur | fakultativ; Standard: "cited_by_count"; enum: &#91;"cited_by_count", "publication_date", "relevanz"&#93; |
+| `work_id` | Zeichenfolge | **erforderlich** |
+| `sort` | Zeichenfolge | fakultativ; Standard: "cited_by_count"; enum: &#91;"cited_by_count", "publication_date", "relevanz"&#93; |
 | `max_records` | Ganzzahl | fakultativ; Standard: 50 |
-| `include_abstracts` | Boolean | fakultativ; Standard: falsch |
+| `include_abstracts` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_citations", {"work_id": "W2741809807", "sort": "cited_by_count", "max_records": 50})
@@ -269,7 +269,7 @@ Listen Sie die Werke eines bestimmten Werkes CITES (ausgehende Referenzen) auf, 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `work_id` | Schnurschnur | **erforderlich** |
+| `work_id` | Zeichenfolge | **erforderlich** |
 | `max_records` | Ganzzahl | fakultativ; Standard: 100 |
 
 ```javascript
@@ -282,7 +282,7 @@ Durchsuchen Sie OpenAlex Autorenprofile nach Namen. Args: Query (Matches anzeige
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
+| `query` | Zeichenfolge | **erforderlich** |
 | `max_records` | Ganzzahl | fakultativ; Standard: 25 |
 
 ```javascript
@@ -295,7 +295,7 @@ Holen Sie sich ein OpenAlex-Autorenprofil und ihre top-zitierten Werke. Args: au
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `author_id` | Schnurschnur | **erforderlich** |
+| `author_id` | Zeichenfolge | **erforderlich** |
 | `works_sample` | Ganzzahl | fakultativ; Standard: 10 |
 
 ```javascript
@@ -308,7 +308,7 @@ Schauen Sie sich Zeitschriften / Repositories ('sources') in OpenAlex an - OA-St
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `venue` | Schnurschnur | **erforderlich** |
+| `venue` | Zeichenfolge | **erforderlich** |
 | `max_records` | Ganzzahl | fakultativ; Standard: 10 |
 
 ```javascript
@@ -321,14 +321,14 @@ Suchen Sie arXiv Preprints (Physik, Mathematik, CS, Statistiken, q-bio, ...) üb
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | fakultativ |
-| `category` | Schnurschnur | fakultativ |
-| `date_from` | Schnurschnur | fakultativ |
-| `date_to` | Schnurschnur | fakultativ |
+| `query` | Zeichenfolge | fakultativ |
+| `category` | Zeichenfolge | fakultativ |
+| `date_from` | Zeichenfolge | fakultativ |
+| `date_to` | Zeichenfolge | fakultativ |
 | `start` | Ganzzahl | fakultativ; Standard: 0 |
 | `max_results` | Ganzzahl | fakultativ; Standard: 25 |
-| `sort_by` | Schnurschnur | fakultativ; Standard: "relevance"; enum: &#91;"relevance", "submittedDate", "lastUpdatedDate"&#93; |
-| `sort_order` | Schnurschnur | fakultativ; Standard: "descending"; &#91;"descending", "ascending"&#93; |
+| `sort_by` | Zeichenfolge | fakultativ; Standard: "relevance"; enum: &#91;"relevance", "submittedDate", "lastUpdatedDate"&#93; |
+| `sort_order` | Zeichenfolge | fakultativ; Standard: "descending"; &#91;"descending", "ascending"&#93; |
 
 ```javascript
 const result = await host.mcp("literature", "arxiv_search", {"query": "ti:transformer", "category": "cs.LG", "max_results": 10})
@@ -340,7 +340,7 @@ Batch-fetch arXiv Papiermetadaten (incl.) Abstracts) nach ID - eine temporierte 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `arxiv_ids` | String-Array | **erforderlich** |
+| `arxiv_ids` | Array aus Zeichenfolgen | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("literature", "arxiv_get_papers", {"arxiv_ids": ["2103.14030", "1706.03762v5"]})
@@ -352,7 +352,7 @@ Abrufen von von Publishern hinterlegten Metadaten für ein Crossref DOI. Ein blo
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `doi` | Schnurschnur | **erforderlich**; minLänge: 1; maxLänge: 2048 |
+| `doi` | Zeichenfolge | **erforderlich**; minLänge: 1; maxLänge: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "crossref_get_work", {"doi": "10.1038/nature12968"})
@@ -365,7 +365,7 @@ Lesen Sie hinterlegte Korrektur-, Retraktions- und andere Aktualisierungsbeziehu
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `doi` | Schnurschnur | **erforderlich**; minLänge: 1; maxLänge: 2048 |
+| `doi` | Zeichenfolge | **erforderlich**; minLänge: 1; maxLänge: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "crossref_get_updates", {"doi": "10.1038/nature12968"})
@@ -378,9 +378,9 @@ Durchsuchen Sie öffentliche DataCite Datensatz / Software DOI Metadaten. Liefer
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | fakultativ; minLänge: 1; maxLänge: 2000 |
-| `related_doi` | Schnurschnur | fakultativ; minLänge: 1; maxLänge: 2048 |
-| `resource_type` | Schnurschnur | fakultativ; Standard: "dataset"; enum: &#91;"dataset", "software"&#93; |
+| `query` | Zeichenfolge | fakultativ; minLänge: 1; maxLänge: 2000 |
+| `related_doi` | Zeichenfolge | fakultativ; minLänge: 1; maxLänge: 2048 |
+| `resource_type` | Zeichenfolge | fakultativ; Standard: "dataset"; enum: &#91;"dataset", "software"&#93; |
 | `page_size` | Ganzzahl | fakultativ; Standard: 20; mindestens: 1; höchstens: 100 |
 | `page` | Ganzzahl | fakultativ; Standard: 1; mindestens: 1; höchstens: 10000 |
 
@@ -395,7 +395,7 @@ Abrufen eines öffentlichen DataCite DOI-Datensatzes, einschließlich Titel, Ers
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `doi` | Schnurschnur | **erforderlich**; minLänge: 1; maxLänge: 2048 |
+| `doi` | Zeichenfolge | **erforderlich**; minLänge: 1; maxLänge: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "datacite_get_record", {"doi": "10.14454/qdd3-ps68"})
@@ -414,13 +414,13 @@ Suche PubMed (biomedizinische &) Biowissenschaften Literatur über NCBI esearch 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
+| `query` | Zeichenfolge | **erforderlich** |
 | `max_results` | Ganzzahl | fakultativ; Standard: 20 |
 | `retstart` | Ganzzahl | fakultativ; Standard: 0 |
-| `sort` | Schnurschnur | fakultativ; enum: &#91;"relevanz", "pub_date", "author", "journal_name", "title"&#93; |
-| `date_from` | Schnurschnur | fakultativ |
-| `date_to` | Schnurschnur | fakultativ |
-| `datetype` | Schnurschnur | fakultativ; Standard: "pdat"; enum: &#91;"pdat", "edat", "mdat"&#93; |
+| `sort` | Zeichenfolge | fakultativ; enum: &#91;"relevanz", "pub_date", "author", "journal_name", "title"&#93; |
+| `date_from` | Zeichenfolge | fakultativ |
+| `date_to` | Zeichenfolge | fakultativ |
+| `datetype` | Zeichenfolge | fakultativ; Standard: "pdat"; enum: &#91;"pdat", "edat", "mdat"&#93; |
 
 ```javascript
 const result = await host.mcp("pubmed", "search_articles", {"query": "CRISPR gene editing", "max_results": 10})
@@ -432,7 +432,7 @@ Holen Sie sich detaillierte Artikel-Metadaten aus PubMed von PMID (bulk, via efe
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **erforderlich** |
+| `pmids` | ['string', 'array'] | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_article_metadata", {"pmids": ["35486828", "33264437"]})
@@ -444,8 +444,8 @@ Finden Sie verwandte PubMed-Inhalte für eine oder mehrere Quellen PMIDs über N
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **erforderlich** |
-| `link_type` | Schnurschnur | fakultativ; Standard: "pubmed_pubmed"; enum: &#91;"pubmed_pubmed", "pubmed_pmc", "pubmed_nucleotide", "pubmed_protein", "pubmed_gene"&#93; |
+| `pmids` | ['string', 'array'] | **erforderlich** |
+| `link_type` | Zeichenfolge | fakultativ; Standard: "pubmed_pubmed"; enum: &#91;"pubmed_pubmed", "pubmed_pmc", "pubmed_nucleotide", "pubmed_protein", "pubmed_gene"&#93; |
 | `max_results` | Ganzzahl | fakultativ |
 
 ```javascript
@@ -458,7 +458,7 @@ Beheben Sie bibliographische Zitate zu PMIDs über NCBI ecitmatch. Jedes Zitat l
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `citations` | Array des Objekts | **erforderlich** |
+| `citations` | Array aus Objekten | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("pubmed", "lookup_article_by_citation", {"citations": [{"journal": "Science", "year": 1987, "volume": "235", "first_page": "182", "author": "Palmenberg AC"}]})
@@ -470,8 +470,8 @@ Konvertieren zwischen PMID, PMCID und DOI über den NCBI/PMC ID-Konverter. Homog
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `ids` | &#91;'string', 'array'&#93; | **erforderlich** |
-| `id_type` | Schnurschnur | fakultativ; Standard: "pmid"; enum: &#91;"pmid", "pmcid", "doi"&#93; |
+| `ids` | ['string', 'array'] | **erforderlich** |
+| `id_type` | Zeichenfolge | fakultativ; Standard: "pmid"; enum: &#91;"pmid", "pmcid", "doi"&#93; |
 
 ```javascript
 const result = await host.mcp("pubmed", "convert_article_ids", {"ids": ["PMC9046468"], "id_type": "pmcid"})
@@ -483,7 +483,7 @@ Abrufen von Open-Access-Volltext von PubMed Central über Europa PMC von PMC ID 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `pmc_ids` | &#91;'string', 'array'&#93; | **erforderlich** |
+| `pmc_ids` | ['string', 'array'] | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_full_text_article", {"pmc_ids": ["PMC9046468"]})
@@ -495,7 +495,7 @@ Melden Sie Copyright und Lizenzstatus nach PMID durch die Kombination von PubMed
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **erforderlich** |
+| `pmids` | ['string', 'array'] | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_copyright_status", {"pmids": ["35891187", "34375400"]})
@@ -514,10 +514,10 @@ Lösen Sie Gen-Identifikatoren / Symbole über mygene.info (batchiert, bis zu 10
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `terms` | String-Array | **erforderlich** |
-| `scopes` | Schnurschnur | fakultativ |
-| `fields` | Schnurschnur | fakultativ; Standard: "symbol,name,taxid,entrezgene,ensembl.gene" |
-| `species` | Schnurschnur | fakultativ |
+| `terms` | Array aus Zeichenfolgen | **erforderlich** |
+| `scopes` | Zeichenfolge | fakultativ |
+| `fields` | Zeichenfolge | fakultativ; Standard: "symbol,name,taxid,entrezgene,ensembl.gene" |
+| `species` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("genes", "query_genes", {"terms": ["TP53", "BRCA1"], "scopes": "symbol,alias", "fields": "symbol,name,entrezgene,ensembl.gene", "species": "human"})
@@ -529,7 +529,7 @@ Liste Ontologien im EBI Ontology Lookup Service (OLS4). Mit `ontology_ids` (z.B.
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `ontology_ids` | String-Array | fakultativ |
+| `ontology_ids` | Array aus Zeichenfolgen | fakultativ |
 
 ```javascript
 const result = await host.mcp("genes", "list_ontologies", {"ontology_ids": ["efo", "go", "mondo"]})
@@ -541,10 +541,10 @@ Suchen Sie Ontologiebegriffe nach Label/Synonym für eine oder mehrere OLS4-Onto
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
-| `ontologies` | String-Array | fakultativ |
-| `exact` | Boolean | fakultativ; Standard: falsch |
-| `include_obsolete` | Boolean | fakultativ; Standard: falsch |
+| `query` | Zeichenfolge | **erforderlich** |
+| `ontologies` | Array aus Zeichenfolgen | fakultativ |
+| `exact` | boolescher Wert | fakultativ; Standard: falsch |
+| `include_obsolete` | boolescher Wert | fakultativ; Standard: falsch |
 | `max_results` | Ganzzahl | fakultativ; Standard: 20 |
 
 ```javascript
@@ -557,10 +557,10 @@ Holen Sie sich eine Ontologie term's Details, oder seine vollständige verwandte
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `ontology` | Schnurschnur | **erforderlich** |
-| `term_id` | Schnurschnur | **erforderlich** |
-| `relation` | Schnurschnur | fakultativ; enum: &#91;"parents", "children", "ancestors", "descendants", "hierarchicalParents", "hierarchicalChildren", "hierarchicalAncestors", "hierarchicalDescendants"&#93; |
-| `include_parents` | Boolean | fakultativ; Standard: falsch |
+| `ontology` | Zeichenfolge | **erforderlich** |
+| `term_id` | Zeichenfolge | **erforderlich** |
+| `relation` | Zeichenfolge | fakultativ; enum: &#91;"parents", "children", "ancestors", "descendants", "hierarchicalParents", "hierarchicalChildren", "hierarchicalAncestors", "hierarchicalDescendants"&#93; |
+| `include_parents` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("genes", "get_ontology_term", {"ontology": "go", "term_id": "GO:0006281", "relation": "children"})
@@ -572,11 +572,11 @@ Abrufen von GO-Annotationen für ein UniProt-Genprodukt von QuickGO (vollständi
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `uniprot_accession` | Schnurschnur | **erforderlich** |
-| `aspect` | Schnurschnur | fakultativ; enum: &#91;"biological_process", "molecular_function", "cellular_component"&#93; |
-| `evidence` | Schnurschnur | fakultativ |
+| `uniprot_accession` | Zeichenfolge | **erforderlich** |
+| `aspect` | Zeichenfolge | fakultativ; enum: &#91;"biological_process", "molecular_function", "cellular_component"&#93; |
+| `evidence` | Zeichenfolge | fakultativ |
 | `taxon_id` | Ganzzahl | fakultativ |
-| `include_term_names` | Boolean | fakultativ; Standard: falsch |
+| `include_term_names` | boolescher Wert | fakultativ; Standard: falsch |
 | `max_records` | Ganzzahl | fakultativ; Standard: 200 |
 
 ```javascript
@@ -589,9 +589,9 @@ Fetch UniProtKB zeichnet eine Liste von Accessions auf (batchierte OR-Abfragen, 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accessions` | String-Array | **erforderlich** |
-| `format` | Schnurschnur | fakultativ; enum: &#91;"fasta", "txt"&#93; |
-| `fields` | String-Array | fakultativ |
+| `accessions` | Array aus Zeichenfolgen | **erforderlich** |
+| `format` | Zeichenfolge | fakultativ; enum: &#91;"fasta", "txt"&#93; |
+| `fields` | Array aus Zeichenfolgen | fakultativ |
 
 ```javascript
 const result = await host.mcp("genes", "get_uniprot_entries", {"accessions": ["P04637", "P38398"], "fields": ["accession", "id", "protein_name", "gene_names", "organism_name", "length"]})
@@ -603,12 +603,12 @@ Kartengensymbole oder UniProt-Zugänge zu Reactome-Signalwegen (AnalysisService-
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `identifiers` | String-Array | **erforderlich** |
-| `id_type` | Schnurschnur | **erforderlich**; enum: &#91;"symbol", "uniprot"&#93; |
-| `species` | Schnurschnur | fakultativ; Standard: "Homo sapiens" |
-| `resource` | Schnurschnur | fakultativ; Standard: "TOTAL" |
-| `include_disease` | Boolean | fakultativ; Standard: true |
-| `compact` | Boolean | fakultativ; Standard: true |
+| `identifiers` | Array aus Zeichenfolgen | **erforderlich** |
+| `id_type` | Zeichenfolge | **erforderlich**; enum: &#91;"symbol", "uniprot"&#93; |
+| `species` | Zeichenfolge | fakultativ; Standard: "Homo sapiens" |
+| `resource` | Zeichenfolge | fakultativ; Standard: "TOTAL" |
+| `include_disease` | boolescher Wert | fakultativ; Standard: true |
+| `compact` | boolescher Wert | fakultativ; Standard: true |
 
 ```javascript
 const result = await host.mcp("genes", "map_reactome_pathways", {"identifiers": ["TP53", "EGFR", "BRCA1"], "id_type": "symbol"})
@@ -627,9 +627,9 @@ Suchen Sie ein Ensembl-Gen / Transkript / Protein nach stabiler ID oder ein Gen 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
-| `species` | Schnurschnur | fakultativ; Standard: "homo_sapiens" |
-| `expand` | Boolean | fakultativ; Standard: falsch |
+| `query` | Zeichenfolge | **erforderlich** |
+| `species` | Zeichenfolge | fakultativ; Standard: "homo_sapiens" |
+| `expand` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_lookup", {"query": "BRAF"})
@@ -641,8 +641,8 @@ Externe Querverweise einer Ensembl-Stable-ID — die Brücke von Ensembl-Gen-/Tr
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `stable_id` | Schnurschnur | **erforderlich** |
-| `external_db` | Schnurschnur | fakultativ |
+| `stable_id` | Zeichenfolge | **erforderlich** |
+| `external_db` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_xrefs", {"stable_id": "ENSG00000157764", "external_db": "HGNC"})
@@ -654,10 +654,10 @@ Prognostizieren Sie die Folgen von Varianten mit Ensembl VEP - die schwerste Zus
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `variant_id` | Schnurschnur | fakultativ |
-| `region` | Schnurschnur | fakultativ |
-| `allele` | Schnurschnur | fakultativ |
-| `species` | Schnurschnur | fakultativ; Standard: "homo_sapiens" |
+| `variant_id` | Zeichenfolge | fakultativ |
+| `region` | Zeichenfolge | fakultativ |
+| `allele` | Zeichenfolge | fakultativ |
+| `species` | Zeichenfolge | fakultativ; Standard: "homo_sapiens" |
 | `max_consequences` | Ganzzahl | fakultativ; Standard: 25 |
 
 ```javascript
@@ -670,12 +670,12 @@ Orthologe oder Paraloge eines Gens aus Ensembl Compara (kondensierte Reihen — 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene_symbol` | Schnurschnur | fakultativ |
-| `gene_id` | Schnurschnur | fakultativ |
-| `homology_type` | Schnurschnur | fakultativ; Standard: "orthologues"; enum: &#91;"orthologues", "paralogues", "projections"&#93; |
-| `target_species` | Schnurschnur | fakultativ |
+| `gene_symbol` | Zeichenfolge | fakultativ |
+| `gene_id` | Zeichenfolge | fakultativ |
+| `homology_type` | Zeichenfolge | fakultativ; Standard: "orthologues"; enum: &#91;"orthologues", "paralogues", "projections"&#93; |
+| `target_species` | Zeichenfolge | fakultativ |
 | `target_taxon` | Ganzzahl | fakultativ |
-| `species` | Schnurschnur | fakultativ; Standard: "homo_sapiens" |
+| `species` | Zeichenfolge | fakultativ; Standard: "homo_sapiens" |
 | `max_homologies` | Ganzzahl | fakultativ; Standard: 200 |
 
 ```javascript
@@ -688,10 +688,10 @@ Abrufsequenz aus Ensembl — nach stabiler ID (Gen/Transkript/Protein) oder nach
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `stable_id` | Schnurschnur | fakultativ |
-| `region` | Schnurschnur | fakultativ |
-| `species` | Schnurschnur | fakultativ; Standard: "homo_sapiens" |
-| `seq_type` | Schnurschnur | fakultativ; Standard: "genomic"; enum: &#91;"genomic", "cdna", "cds", "protein"&#93; |
+| `stable_id` | Zeichenfolge | fakultativ |
+| `region` | Zeichenfolge | fakultativ |
+| `species` | Zeichenfolge | fakultativ; Standard: "homo_sapiens" |
+| `seq_type` | Zeichenfolge | fakultativ; Standard: "genomic"; enum: &#91;"genomic", "cdna", "cds", "protein"&#93; |
 | `max_bytes` | Ganzzahl | fakultativ; Standard: 400000 |
 
 ```javascript
@@ -704,9 +704,9 @@ List Ensembl-Funktionen, die sich über eine genomische Region überschneiden: G
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `region` | Schnurschnur | **erforderlich** |
-| `feature` | Schnurschnur | fakultativ; Standard: "gene"; enum: &#91;"Gengen", "Transkript", "Exon", "CDs", "Regulierung", "Motiv", "Wiederholung", "Varianz", "structural_variation", "Band", "einfach", "Misc"&#93; |
-| `species` | Schnurschnur | fakultativ; Standard: "homo_sapiens" |
+| `region` | Zeichenfolge | **erforderlich** |
+| `feature` | Zeichenfolge | fakultativ; Standard: "gene"; enum: &#91;"Gengen", "Transkript", "Exon", "CDs", "Regulierung", "Motiv", "Wiederholung", "Varianz", "structural_variation", "Band", "einfach", "Misc"&#93; |
+| `species` | Zeichenfolge | fakultativ; Standard: "homo_sapiens" |
 | `max_features` | Ganzzahl | fakultativ; Standard: 500 |
 
 ```javascript
@@ -719,8 +719,8 @@ Listen Sie Datenspuren auf, die in einer UCSC Genome Browser Assembly verfügbar
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `genome` | Schnurschnur | fakultativ; Standard: "hg38" |
-| `filter_text` | Schnurschnur | fakultativ |
+| `genome` | Zeichenfolge | fakultativ; Standard: "hg38" |
+| `filter_text` | Zeichenfolge | fakultativ |
 | `max_tracks` | Ganzzahl | fakultativ; Standard: 200 |
 
 ```javascript
@@ -733,11 +733,11 @@ Holen Sie rohe Zeilen eines UCSC Genome Browser-Tracks in einer Region ab - die 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `track` | Schnurschnur | **erforderlich** |
-| `chrom` | Schnurschnur | **erforderlich** |
+| `track` | Zeichenfolge | **erforderlich** |
+| `chrom` | Zeichenfolge | **erforderlich** |
 | `start` | Ganzzahl | **erforderlich** |
 | `end` | Ganzzahl | **erforderlich** |
-| `genome` | Schnurschnur | fakultativ; Standard: "hg38" |
+| `genome` | Zeichenfolge | fakultativ; Standard: "hg38" |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 1000 |
 
 ```javascript
@@ -750,12 +750,12 @@ Evolutionäre Konservierungszusammenfassung für eine Region aus UCSC phyloP / p
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `chrom` | Schnurschnur | **erforderlich** |
+| `chrom` | Zeichenfolge | **erforderlich** |
 | `start` | Ganzzahl | **erforderlich** |
 | `end` | Ganzzahl | **erforderlich** |
-| `genome` | Schnurschnur | fakultativ; Standard: "hg38" |
-| `track` | Schnurschnur | fakultativ; Standard: "phyloP100way" |
-| `include_values` | Boolean | fakultativ; Standard: falsch |
+| `genome` | Zeichenfolge | fakultativ; Standard: "hg38" |
+| `track` | Zeichenfolge | fakultativ; Standard: "phyloP100way" |
+| `include_values` | boolescher Wert | fakultativ; Standard: falsch |
 | `max_values` | Ganzzahl | fakultativ; Standard: 2000 |
 
 ```javascript
@@ -768,10 +768,10 @@ ENCODE-Transkriptionsfaktor-Bindungsstellencluster überlappen eine Region (ChIP
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `chrom` | Schnurschnur | **erforderlich** |
+| `chrom` | Zeichenfolge | **erforderlich** |
 | `start` | Ganzzahl | **erforderlich** |
 | `end` | Ganzzahl | **erforderlich** |
-| `genome` | Schnurschnur | fakultativ; Standard: "hg38" |
+| `genome` | Zeichenfolge | fakultativ; Standard: "hg38" |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 1000 |
 
 ```javascript
@@ -784,8 +784,8 @@ Chromosomen-/Kontignamen und -größen einer UCSC-Baugruppe — zur Validierung 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `genome` | Schnurschnur | fakultativ; Standard: "hg38" |
-| `filter_text` | Schnurschnur | fakultativ |
+| `genome` | Zeichenfolge | fakultativ; Standard: "hg38" |
+| `filter_text` | Zeichenfolge | fakultativ |
 | `max_chroms` | Ganzzahl | fakultativ; Standard: 100 |
 
 ```javascript
@@ -799,14 +799,16 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>Operationen und Parameter anzeigen</summary>
 
+**Koordinatenregeln von gnomAD:** zeichnet den Datensatz-Pin mit der Referenzbaugruppe auf. Kurzvariante Gen/Region Abfragen verwenden GRCh37 für r2.1/ExAC und GRCh38 für r3/r4; strukturvariante Genabfragen verwenden `gnomad_sv_r2_1` (GRCh37) oder `gnomad_sv_r4` (GRCh38); Das Ändern des Pins konvertiert keine Eingangskoordinaten. `gene_constraint` und der gnomAD ClinVar-Spiegel verwenden einen festen GRCh38-Gen-Lookup und akzeptieren kein Dataset-Argument. Mitochondriale Abfragen verwenden auch einen festen GRCh38-Eltern-Lookup; Liefern Sie entweder ein Gen oder beide geordnete Regionsgrenzen, niemals beide Modi. Regionsgrenzen müssen ganze Zahlen von 1 bis 2,147,483,647 sein. Die 1-Millionen-Basis-Differenzgrenze gilt für `region_variants`; Es handelt sich nicht um eine separate mitochondriale Grenze. Bewahren Sie Release-spezifische Strukturvarianten-IDs mit ihrem ursprünglichen SV-Datensatz auf.
+
 ### `get_variant` {/* #get_variant */}
 
 Suchen Sie nach einer gnomAD-Kurzvariante nach ID und geben Sie ihre Populationsfrequenzen zurück. `variant_id` ist `chrom-pos-ref-alt` auf dem Dataset's Referenz Build (GRCh38 für r3/r4, GRCh37 für r2.1/ExAC), z.B. `19-44908822-C-T` (APOE rs7412); Verwenden Sie `search_variants`, um eine rsID zuerst aufzulösen.
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `variant_id` | Schnurschnur | **erforderlich** |
-| `dataset` | Schnurschnur | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
+| `variant_id` | Zeichenfolge | **erforderlich** |
+| `dataset` | Zeichenfolge | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "get_variant", {"variant_id": "19-44908822-C-T", "dataset": "gnomad_r4"})
@@ -818,8 +820,8 @@ Suchen Sie gnomAD nach Varianten-IDs, die mit einer Abfragezeichenfolge überein
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
-| `dataset` | Schnurschnur | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
+| `query` | Zeichenfolge | **erforderlich** |
+| `dataset` | Zeichenfolge | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "search_variants", {"query": "rs7412", "dataset": "gnomad_r4"})
@@ -827,13 +829,13 @@ const result = await host.mcp("variants", "search_variants", {"query": "rs7412",
 
 ### `gene_variants` {/* #gene_variants */}
 
-Liste alle gnomAD-Kurzvarianten in einem Gen auf (vollständige Auflistung - kann Tausende von Zeilen für große Gene sein). Pass genau eines von `gene_symbol` (HGNC Symbol, z.B. `APOE`) oder `gene_id` (Ensembl-Gen-ID, z.B. `ENSG00000130203`).
+Listen Sie alle gnomAD-Kurzvarianten in einem Gen auf. Gengrenzen und Variantenkoordinaten verwenden den Datensatz-Referenzaufbau (GRCh37 für r2.1/ExAC, GRCh38 für r3/r4). Die vollständige Auflistung kann Tausende von Zeilen für große Gene enthalten. Pass genau eines von `gene_symbol` (HGNC Symbol, z.B. `APOE`) oder `gene_id` (Ensembl-Gen-ID, z.B. `ENSG00000130203`).
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene_symbol` | Schnurschnur | fakultativ |
-| `gene_id` | Schnurschnur | fakultativ |
-| `dataset` | Schnurschnur | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
+| `gene_symbol` | Zeichenfolge | fakultativ |
+| `gene_id` | Zeichenfolge | fakultativ |
+| `dataset` | Zeichenfolge | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "gene_variants", {"gene_symbol": "APOE", "dataset": "gnomad_r4"})
@@ -845,8 +847,8 @@ gnomAD-Gen-Konstraint-Metriken: pLI, beobachtete/erwartete LoF-missense-synonyme
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene_symbol` | Schnurschnur | fakultativ |
-| `gene_id` | Schnurschnur | fakultativ |
+| `gene_symbol` | Zeichenfolge | fakultativ |
+| `gene_id` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP53"})
@@ -854,14 +856,14 @@ const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP
 
 ### `region_variants` {/* #region_variants */}
 
-Liste ALLE kurzen gnomAD-Varianten in einer genomischen Region (max. 1 Mb — größere Regionen in aufeinanderfolgende Fenster aufteilen). `chrom` ist ein Chromosomenname ohne `chr`-Präfix (`1`-`22`, `X`, `Y`); `start`/`stop` sind 1-basiert und `stop - start` muss &lt;=1,000,000 sein. Der Datensatz bestimmt den Referenzaufbau der Koordinaten (GRCh38 für r3/r4).
+Liste ALLE kurzen gnomAD-Varianten in einer genomischen Region (max. 1 Mb — größere Regionen in aufeinanderfolgende Fenster aufteilen). `chrom` akzeptiert `1`-`22`, `X`, `Y`, ein optionales `chr`-Präfix und Kleinbuchstaben `x`/`y`; `start`/`stop` sind 1-basiert und `stop - start` muss &lt;=1,000,000 sein. Der Datensatz bestimmt den Referenzaufbau der Koordinaten (GRCh37 für r2.1/ExAC, GRCh38 für r3/r4); Eingabekoordinaten müssen diesen Build bereits verwenden, ohne automatischen Liftover.
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `chrom` | Schnurschnur | **erforderlich** |
-| `start` | Ganzzahl | **erforderlich** |
-| `stop` | Ganzzahl | **erforderlich** |
-| `dataset` | Schnurschnur | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
+| `chrom` | Zeichenfolge | **erforderlich** |
+| `start` | Ganzzahl | **erforderlich**; mindestens: 1; höchstens: 2147483647 |
+| `stop` | Ganzzahl | **erforderlich**; mindestens: 1; höchstens: 2147483647 |
+| `dataset` | Zeichenfolge | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "region_variants", {"chrom": "1", "start": 55039475, "stop": 55064852, "dataset": "gnomad_r4"})
@@ -873,8 +875,8 @@ Zuordnung einer Varianten-ID zwischen Referenz-Builds (GRCh37 &lt;->) GRCh38) mi
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `variant_id` | Schnurschnur | **erforderlich** |
-| `source_build` | Schnurschnur | fakultativ; Standard: "GRCh37"; &#91;"GRCh37", "GRCh38"&#93; |
+| `variant_id` | Zeichenfolge | **erforderlich** |
+| `source_build` | Zeichenfolge | fakultativ; Standard: "GRCh37"; &#91;"GRCh37", "GRCh38"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "liftover_variant", {"variant_id": "1-55516888-G-GA", "source_build": "GRCh37"})
@@ -886,8 +888,8 @@ Liste ClinVar-Varianten in einem Gen, wie es von gnomAD gespiegelt wird, mit kli
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene_symbol` | Schnurschnur | fakultativ |
-| `gene_id` | Schnurschnur | fakultativ |
+| `gene_symbol` | Zeichenfolge | fakultativ |
+| `gene_id` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_variants", {"gene_symbol": "BRCA1"})
@@ -899,9 +901,9 @@ Liste gnomAD-Strukturvarianten (Deletionen, Duplikationen, Insertionen, Inversio
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene_symbol` | Schnurschnur | fakultativ |
-| `gene_id` | Schnurschnur | fakultativ |
-| `dataset` | Schnurschnur | fakultativ; Standard: "gnomad_sv_r4"; &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
+| `gene_symbol` | Zeichenfolge | fakultativ |
+| `gene_id` | Zeichenfolge | fakultativ |
+| `dataset` | Zeichenfolge | fakultativ; Standard: "gnomad_sv_r4"; &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "structural_variants", {"gene_symbol": "TP53", "dataset": "gnomad_sv_r4"})
@@ -913,8 +915,8 @@ Eine gnomAD-Strukturvariante kann anhand ihrer releasespezifischen SV ID nachges
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `sv_id` | Schnurschnur | **erforderlich** |
-| `dataset` | Schnurschnur | fakultativ; Standard: "gnomad_sv_r4"; &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
+| `sv_id` | Zeichenfolge | **erforderlich** |
+| `dataset` | Zeichenfolge | fakultativ; Standard: "gnomad_sv_r4"; &#91;"gnomad_sv_r4", "gnomad_sv_r2_1"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "DEL_CHR17_A5250EA9", "dataset": "gnomad_sv_r4"})
@@ -926,11 +928,11 @@ Liste gnomAD mitochondriale Varianten mit heteroplasmy-aware counts (`ac_het`, `
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene_symbol` | Schnurschnur | fakultativ |
-| `gene_id` | Schnurschnur | fakultativ |
-| `region_start` | Ganzzahl | fakultativ |
-| `region_stop` | Ganzzahl | fakultativ |
-| `dataset` | Schnurschnur | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
+| `gene_symbol` | Zeichenfolge | fakultativ |
+| `gene_id` | Zeichenfolge | fakultativ |
+| `region_start` | Ganzzahl | fakultativ; mindestens: 1; höchstens: 2147483647 |
+| `region_stop` | Ganzzahl | fakultativ; mindestens: 1; höchstens: 2147483647 |
+| `dataset` | Zeichenfolge | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
 
 ```javascript
 const result = await host.mcp("variants", "mitochondrial_variants", {"gene_symbol": "MT-TL1", "dataset": "gnomad_r4"})
@@ -942,7 +944,7 @@ Suchen Sie ClinVar direkt (live NCBI, nicht gnomAD's Snapshot) und geben Sie üb
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
+| `query` | Zeichenfolge | **erforderlich** |
 | `max_records` | Ganzzahl | fakultativ; Standard: 50 |
 
 ```javascript
@@ -955,7 +957,7 @@ Holen Sie vollständige ClinVar-Datensätze für eine Charge von VCV/RCV-Zugäng
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accessions` | &#91;'string', 'array'&#93; | **erforderlich** |
+| `accessions` | ['string', 'array'] | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_get_records", {"accessions": ["VCV000045122", "RCV000019428", "45123"]})
@@ -967,7 +969,7 @@ Alle ClinVar-Variationsdatensätze, die sich auf eine dbSNP rsID beziehen, mit v
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `rsid` | Schnurschnur | **erforderlich** |
+| `rsid` | Zeichenfolge | **erforderlich** |
 | `max_records` | Ganzzahl | fakultativ; Standard: 50 |
 
 ```javascript
@@ -980,7 +982,7 @@ Canonical dbSNP RefSNP Aufzeichnungen für eine Charge von rsIDs: GRCh38 + GRCh3
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `rsids` | String-Array | **erforderlich** |
+| `rsids` | Array aus Zeichenfolgen | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("variants", "dbsnp_get_rsids", {"rsids": ["rs7412", "rs429358"]})
@@ -992,10 +994,10 @@ Liste dbSNP rsIDs in einem genomischen Fenster (esearch db=snp positional index 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `chrom` | Schnurschnur | **erforderlich** |
+| `chrom` | Zeichenfolge | **erforderlich** |
 | `start` | Ganzzahl | **erforderlich** |
 | `stop` | Ganzzahl | **erforderlich** |
-| `assembly` | Schnurschnur | fakultativ; Standard: "GRCh38"; enum: &#91;"GRCh38", "GRCh37"&#93; |
+| `assembly` | Zeichenfolge | fakultativ; Standard: "GRCh38"; enum: &#91;"GRCh38", "GRCh37"&#93; |
 | `max_rsids` | Ganzzahl | fakultativ; Standard: 200 |
 
 ```javascript
@@ -1015,17 +1017,17 @@ PRIMARY Suche über ClinicalTrials.gov. Filtern nach Bedingung, Intervention, Sp
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `condition` | Schnurschnur | fakultativ |
-| `intervention` | Schnurschnur | fakultativ |
-| `sponsor` | Schnurschnur | fakultativ |
-| `location` | Schnurschnur | fakultativ |
-| `status` | String-Array | fakultativ |
-| `phase` | String-Array | fakultativ |
-| `study_type` | Schnurschnur | fakultativ; enum: &#91;"INTERVENTIONAL", "OBSERVATIONAL", "EXPANDED_ACCESS"&#93; |
-| `advanced_query` | Schnurschnur | fakultativ |
+| `condition` | Zeichenfolge | fakultativ |
+| `intervention` | Zeichenfolge | fakultativ |
+| `sponsor` | Zeichenfolge | fakultativ |
+| `location` | Zeichenfolge | fakultativ |
+| `status` | Array aus Zeichenfolgen | fakultativ |
+| `phase` | Array aus Zeichenfolgen | fakultativ |
+| `study_type` | Zeichenfolge | fakultativ; enum: &#91;"INTERVENTIONAL", "OBSERVATIONAL", "EXPANDED_ACCESS"&#93; |
+| `advanced_query` | Zeichenfolge | fakultativ |
 | `page_size` | Ganzzahl | fakultativ; Standard: 10; mindestens: 1; höchstens: 1000 |
-| `page_token` | Schnurschnur | fakultativ |
-| `count_total` | Boolean | fakultativ; Standard: falsch |
+| `page_token` | Zeichenfolge | fakultativ |
+| `count_total` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_trials", {"condition": "lung cancer", "status": ["RECRUITING"], "phase": ["PHASE3"], "count_total": true, "page_size": 10})
@@ -1037,7 +1039,7 @@ Holen Sie sich umfassende Details für eine Studie von NCT id (Format "NCT") + 8
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `nct_id` | Schnurschnur | **erforderlich** |
+| `nct_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "get_trial_details", {"nct_id": "NCT03661411"})
@@ -1049,13 +1051,13 @@ Finden Sie Studien, die von einem Unternehmen oder einer Organisation gesponsert
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `sponsor_name` | Schnurschnur | **erforderlich** |
-| `condition` | Schnurschnur | fakultativ |
-| `phase` | String-Array | fakultativ |
-| `status` | String-Array | fakultativ |
+| `sponsor_name` | Zeichenfolge | **erforderlich** |
+| `condition` | Zeichenfolge | fakultativ |
+| `phase` | Array aus Zeichenfolgen | fakultativ |
+| `status` | Array aus Zeichenfolgen | fakultativ |
 | `page_size` | Ganzzahl | fakultativ; Standard: 10; mindestens: 1; höchstens: 1000 |
-| `page_token` | Schnurschnur | fakultativ |
-| `count_total` | Boolean | fakultativ; Standard: falsch |
+| `page_token` | Zeichenfolge | fakultativ |
+| `count_total` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_by_sponsor", {"sponsor_name": "Pfizer", "phase": ["PHASE3"], "count_total": true})
@@ -1067,11 +1069,11 @@ Finden Sie die Hauptforscher und Forschungsstandorte nach Zustand, Institution, 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `condition` | Schnurschnur | fakultativ |
-| `institution` | Schnurschnur | fakultativ |
-| `location` | Schnurschnur | fakultativ |
-| `investigator_name` | Schnurschnur | fakultativ |
-| `status` | String-Array | fakultativ |
+| `condition` | Zeichenfolge | fakultativ |
+| `institution` | Zeichenfolge | fakultativ |
+| `location` | Zeichenfolge | fakultativ |
+| `investigator_name` | Zeichenfolge | fakultativ |
+| `status` | Array aus Zeichenfolgen | fakultativ |
 | `page_size` | Ganzzahl | fakultativ; Standard: 20; mindestens: 1; höchstens: 1000 |
 
 ```javascript
@@ -1084,10 +1086,10 @@ Analysieren Sie primäre / sekundäre / andere Ergebnismessungen (Endpunkte). Ge
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `nct_id` | Schnurschnur | fakultativ |
-| `condition` | Schnurschnur | fakultativ |
-| `phase` | String-Array | fakultativ |
-| `start_date_after` | Schnurschnur | fakultativ |
+| `nct_id` | Zeichenfolge | fakultativ |
+| `condition` | Zeichenfolge | fakultativ |
+| `phase` | Array aus Zeichenfolgen | fakultativ |
+| `start_date_after` | Zeichenfolge | fakultativ |
 | `page_size` | Ganzzahl | fakultativ; Standard: 50; mindestens: 1; höchstens: 1000 |
 
 ```javascript
@@ -1100,14 +1102,14 @@ Patient-Trial-Matching. FEHLER zu RECRUITING-Versuchen, es sei denn, der Status 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `condition` | Schnurschnur | fakultativ |
-| `eligibility_keywords` | Schnurschnur | fakultativ |
-| `min_age` | Schnurschnur | fakultativ |
-| `max_age` | Schnurschnur | fakultativ |
-| `sex` | Schnurschnur | fakultativ; enum: &#91;"ALL", "MALE", "FEMALE"&#93; |
-| `status` | String-Array | fakultativ |
+| `condition` | Zeichenfolge | fakultativ |
+| `eligibility_keywords` | Zeichenfolge | fakultativ |
+| `min_age` | Zeichenfolge | fakultativ |
+| `max_age` | Zeichenfolge | fakultativ |
+| `sex` | Zeichenfolge | fakultativ; enum: &#91;"ALL", "MALE", "FEMALE"&#93; |
+| `status` | Array aus Zeichenfolgen | fakultativ |
 | `page_size` | Ganzzahl | fakultativ; Standard: 10; mindestens: 1; höchstens: 1000 |
-| `page_token` | Schnurschnur | fakultativ |
+| `page_token` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_by_eligibility", {"condition": "diabetes", "min_age": "65 Years", "sex": "FEMALE"})
@@ -1126,7 +1128,7 @@ ClinGen-Gen-Validitätskurationen (wie stark ist die Evidenz, dass Variation in 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene` | Schnurschnur | fakultativ |
+| `gene` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_gene_validity", {"gene": "BRCA2"})
@@ -1138,8 +1140,8 @@ ClinGen Dosierungssensitivität Kurationen: Haploinsuffizienz und Triplossibilit
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene` | Schnurschnur | fakultativ |
-| `include_regions` | Boolean | fakultativ; Standard: falsch |
+| `gene` | Zeichenfolge | fakultativ |
+| `include_regions` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_dosage_sensitivity", {"gene": "TP53"})
@@ -1151,8 +1153,8 @@ ClinGen klinische Aktionsfähigkeit Kurationen: für Störungen im Zusammenhang 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene` | Schnurschnur | fakultativ |
-| `context` | Schnurschnur | fakultativ; Standard: "both"; enum: &#91;"adult", "pediatric", "both"&#93; |
+| `gene` | Zeichenfolge | fakultativ |
+| `context` | Zeichenfolge | fakultativ; Standard: "both"; enum: &#91;"adult", "pediatric", "both"&#93; |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_actionability", {"gene": "BRCA1", "context": "adult"})
@@ -1164,9 +1166,9 @@ ClinGen Evidence Repository (ERepo) Expert-Panel-Varianten-Pathogenitätsklassif
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene` | Schnurschnur | fakultativ |
-| `caid` | Schnurschnur | fakultativ |
-| `hgvs` | Schnurschnur | fakultativ |
+| `gene` | Zeichenfolge | fakultativ |
+| `caid` | Zeichenfolge | fakultativ |
+| `hgvs` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_variant_classifications", {"gene": "BRCA1"})
@@ -1178,7 +1180,7 @@ Finden Sie CIViC-Gendatensätze nach dem genauen Entrez-Symbol (z.B.) "BRAF". Vo
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `entrez_symbol` | Schnurschnur | **erforderlich** |
+| `entrez_symbol` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_genes", {"entrez_symbol": "BRAF"})
@@ -1214,7 +1216,7 @@ CIViC-Varianten nach Name Substring (z.B.) "V600"), gegebenenfalls zu einer CIVi
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `name` | Schnurschnur | **erforderlich** |
+| `name` | Zeichenfolge | **erforderlich** |
 | `gene_id` | Ganzzahl | fakultativ |
 
 ```javascript
@@ -1239,16 +1241,16 @@ Durchsuchen von CIViC-Beweiselementen durch eine beliebige Kombination von Filte
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `disease_name` | Schnurschnur | fakultativ |
-| `therapy_name` | Schnurschnur | fakultativ |
-| `evidence_level` | Schnurschnur | fakultativ |
-| `evidence_type` | Schnurschnur | fakultativ |
-| `evidence_direction` | Schnurschnur | fakultativ |
-| `significance` | Schnurschnur | fakultativ |
-| `variant_origin` | Schnurschnur | fakultativ |
+| `disease_name` | Zeichenfolge | fakultativ |
+| `therapy_name` | Zeichenfolge | fakultativ |
+| `evidence_level` | Zeichenfolge | fakultativ |
+| `evidence_type` | Zeichenfolge | fakultativ |
+| `evidence_direction` | Zeichenfolge | fakultativ |
+| `significance` | Zeichenfolge | fakultativ |
+| `variant_origin` | Zeichenfolge | fakultativ |
 | `evidence_rating` | Ganzzahl | fakultativ |
-| `status` | Schnurschnur | fakultativ |
-| `molecular_profile_name` | Schnurschnur | fakultativ |
+| `status` | Zeichenfolge | fakultativ |
+| `molecular_profile_name` | Zeichenfolge | fakultativ |
 | `molecular_profile_id` | Ganzzahl | fakultativ |
 | `variant_id` | Ganzzahl | fakultativ |
 | `disease_id` | Ganzzahl | fakultativ |
@@ -1279,22 +1281,22 @@ Durchsuchen von CIViC-Behauptungen durch eine beliebige Kombination von Filtern;
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `disease_name` | Schnurschnur | fakultativ |
-| `therapy_name` | Schnurschnur | fakultativ |
-| `assertion_type` | Schnurschnur | fakultativ |
-| `assertion_direction` | Schnurschnur | fakultativ |
-| `significance` | Schnurschnur | fakultativ |
-| `amp_level` | Schnurschnur | fakultativ |
-| `status` | Schnurschnur | fakultativ |
-| `molecular_profile_name` | Schnurschnur | fakultativ |
+| `disease_name` | Zeichenfolge | fakultativ |
+| `therapy_name` | Zeichenfolge | fakultativ |
+| `assertion_type` | Zeichenfolge | fakultativ |
+| `assertion_direction` | Zeichenfolge | fakultativ |
+| `significance` | Zeichenfolge | fakultativ |
+| `amp_level` | Zeichenfolge | fakultativ |
+| `status` | Zeichenfolge | fakultativ |
+| `molecular_profile_name` | Zeichenfolge | fakultativ |
 | `molecular_profile_id` | Ganzzahl | fakultativ |
 | `variant_id` | Ganzzahl | fakultativ |
-| `variant_name` | Schnurschnur | fakultativ |
+| `variant_name` | Zeichenfolge | fakultativ |
 | `disease_id` | Ganzzahl | fakultativ |
 | `therapy_id` | Ganzzahl | fakultativ |
 | `phenotype_id` | Ganzzahl | fakultativ |
 | `evidence_id` | Ganzzahl | fakultativ |
-| `summary` | Schnurschnur | fakultativ |
+| `summary` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_assertions", {"disease_name": "melanoma"})
@@ -1318,7 +1320,7 @@ CIViC-Molekülprofile nach Name Substring (z.B.) "BRAF V600E". vollständig pagi
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `name` | Schnurschnur | **erforderlich** |
+| `name` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_molecular_profiles", {"name": "BRAF V600E"})
@@ -1330,7 +1332,7 @@ Durchsuchen von CIViC Disease Records nach Name Substring (z.B.) "melanom". Gibt
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `name` | Schnurschnur | **erforderlich** |
+| `name` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_diseases", {"name": "melanoma"})
@@ -1342,7 +1344,7 @@ Durchsuchen von CIViC-Therapieaufzeichnungen nach Namenssubstring (z.B.) "vemura
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `name` | Schnurschnur | **erforderlich** |
+| `name` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_therapies", {"name": "vemurafenib"})
@@ -1354,7 +1356,7 @@ Führen Sie eine willkürliche GraphQL-Abfrage gegen die Open Targets Platform A
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
+| `query` | Zeichenfolge | **erforderlich** |
 | `variables` | Objekt | fakultativ |
 
 ```javascript
@@ -1367,7 +1369,7 @@ Bekannte / investigative Medikamente für eine Krankheit (Open Targets Platform)
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `efo_id` | Schnurschnur | **erforderlich** |
+| `efo_id` | Zeichenfolge | **erforderlich** |
 | `size` | Ganzzahl | fakultativ; Standard: 25 |
 
 ```javascript
@@ -1380,7 +1382,7 @@ Top assoziierte Ziele für eine Krankheit, geordnet nach Open Targets Gesamtasso
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `efo_id` | Schnurschnur | **erforderlich** |
+| `efo_id` | Zeichenfolge | **erforderlich** |
 | `size` | Ganzzahl | fakultativ; Standard: 25 |
 
 ```javascript
@@ -1393,7 +1395,7 @@ Arzneimitteldetails nach ChEMBL-ID (Open Targets Platform) - Name, Typ, maximale
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `chembl_id` | Schnurschnur | **erforderlich** |
+| `chembl_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "open_targets_drug", {"chembl_id": "CHEMBL1201583"})
@@ -1412,7 +1414,7 @@ Holen Sie strukturierte Metadatensätze für EMDB-Kryo-EM-3D-Karteneinträge ab.
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `emdb_ids` | String-Array | **erforderlich** |
+| `emdb_ids` | Array aus Zeichenfolgen | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_entries", {"emdb_ids": ["EMD-11638", "emd-3061", "1234"]})
@@ -1424,7 +1426,7 @@ Suche nach EMDB mit einer Solr-Stil-Abfrage; vollständiges Seitenabrufen von ko
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
+| `query` | Zeichenfolge | **erforderlich** |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 1000 |
 
 ```javascript
@@ -1437,8 +1439,8 @@ Holen Sie sich einen detaillierten Metadaten-Abschnitt für EMDB-Einträge. Absc
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `emdb_ids` | String-Array | **erforderlich** |
-| `section` | Schnurschnur | **erforderlich**; enum: &#91;"publications", "map", "sample", "imaging"&#93; |
+| `emdb_ids` | Array aus Zeichenfolgen | **erforderlich** |
+| `section` | Zeichenfolge | **erforderlich**; enum: &#91;"publications", "map", "sample", "imaging"&#93; |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_entry_section", {"emdb_ids": ["EMD-11638"], "section": "imaging"})
@@ -1450,7 +1452,7 @@ Holen Sie numerische Validierungs-Analyse-Metriken für EMDB-Einträge ab. Pro E
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `emdb_ids` | String-Array | **erforderlich** |
+| `emdb_ids` | Array aus Zeichenfolgen | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_validation", {"emdb_ids": ["EMD-11638", "EMD-3061"]})
@@ -1462,7 +1464,7 @@ Fetch kuratierte Complex Portal Records durch CPX-Beitritt. Jeder Datensatz: Kom
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `complex_acs` | String-Array | **erforderlich** |
+| `complex_acs` | Array aus Zeichenfolgen | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("structures", "complexportal_get_complexes", {"complex_acs": ["CPX-2158", "CPX-2419"]})
@@ -1474,8 +1476,8 @@ Suchen Sie Komplex Portal nach Komplexen, die ein Molekül enthalten. `accession
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
-| `participants_only` | Boolean | fakultativ; Standard: true |
+| `accession` | Zeichenfolge | **erforderlich** |
+| `participants_only` | boolescher Wert | fakultativ; Standard: true |
 
 ```javascript
 const result = await host.mcp("structures", "complexportal_search_by_participant", {"accession": "P69905", "participants_only": true})
@@ -1487,10 +1489,10 @@ Abrufen ALLER binären IntAct-Interaktionen, die mit einer Abfrage übereinstimm
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
-| `min_mi_score` | Nummer | fakultativ; Standard: 0 |
-| `max_mi_score` | Nummer | fakultativ; Standard: 1 |
-| `interactor_species` | String-Array | fakultativ |
+| `query` | Zeichenfolge | **erforderlich** |
+| `min_mi_score` | Zahl | fakultativ; Standard: 0 |
+| `max_mi_score` | Zahl | fakultativ; Standard: 1 |
+| `interactor_species` | Array aus Zeichenfolgen | fakultativ |
 | `max_records_returned` | Ganzzahl | fakultativ; Standard: 500 |
 
 ```javascript
@@ -1503,7 +1505,7 @@ Lösen Sie ein Molekül in seinen IntAct-Interaktor-Record(s). `query` ist ein U
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
+| `query` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("structures", "intact_get_interactor", {"query": "P04637"})
@@ -1515,8 +1517,8 @@ Vollständige kuratierte Details für ONE IntAct Interaktion AC (z.B.) 'EBI-1563
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `interaction_ac` | Schnurschnur | **erforderlich** |
-| `include_participants` | Boolean | fakultativ; Standard: true |
+| `interaction_ac` | Zeichenfolge | **erforderlich** |
+| `include_participants` | boolescher Wert | fakultativ; Standard: true |
 
 ```javascript
 const result = await host.mcp("structures", "intact_get_interaction_details", {"interaction_ac": "EBI-15635490", "include_participants": true})
@@ -1528,10 +1530,10 @@ Bauen Sie ein Tiefen-1-IntAct-Interaktionsnetzwerk um Saatgutproteine auf. `seed
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `seed_accessions` | String-Array | **erforderlich** |
-| `min_mi_score` | Nummer | fakultativ; Standard: 0.45 |
+| `seed_accessions` | Array aus Zeichenfolgen | **erforderlich** |
+| `min_mi_score` | Zahl | fakultativ; Standard: 0.45 |
 | `max_interactors_expanded` | Ganzzahl | fakultativ; Standard: 25 |
-| `interactor_species` | String-Array | fakultativ |
+| `interactor_species` | Array aus Zeichenfolgen | fakultativ |
 
 ```javascript
 const result = await host.mcp("structures", "intact_build_network", {"seed_accessions": ["P04637", "Q00987"], "min_mi_score": 0.45, "max_interactors_expanded": 25})
@@ -1543,14 +1545,14 @@ RCSB-PDB-Einträge nach Attributfiltern durchsuchen; paged, capped + flagged. al
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `text` | Schnurschnur | fakultativ |
-| `organism` | Schnurschnur | fakultativ |
+| `text` | Zeichenfolge | fakultativ |
+| `organism` | Zeichenfolge | fakultativ |
 | `taxonomy_id` | Ganzzahl | fakultativ |
-| `uniprot_accession` | Schnurschnur | fakultativ |
-| `experimental_method` | Schnurschnur | fakultativ |
-| `max_resolution_angstrom` | Nummer | fakultativ |
-| `ligand_comp_id` | Schnurschnur | fakultativ |
-| `include_computed_models` | Boolean | fakultativ; Standard: falsch |
+| `uniprot_accession` | Zeichenfolge | fakultativ |
+| `experimental_method` | Zeichenfolge | fakultativ |
+| `max_resolution_angstrom` | Zahl | fakultativ |
+| `ligand_comp_id` | Zeichenfolge | fakultativ |
+| `include_computed_models` | boolescher Wert | fakultativ; Standard: falsch |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 100 |
 
 ```javascript
@@ -1563,7 +1565,7 @@ Holen Sie Zusammenfassungen der Einstiegsstufe für PDB-Einträge ab (Charge, ma
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `pdb_ids` | String-Array | **erforderlich** |
+| `pdb_ids` | Array aus Zeichenfolgen | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_get_structures", {"pdb_ids": ["1TUP", "1tup", "6XYZ"]})
@@ -1575,9 +1577,9 @@ Angaben zur Polymereinheit für einen PDB-Eintrag, incl. UniProt Mappings. mit e
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `pdb_id` | Schnurschnur | **erforderlich** |
-| `entity_ids` | String-Array | fakultativ |
-| `include_sequences` | Boolean | fakultativ; Standard: falsch |
+| `pdb_id` | Zeichenfolge | **erforderlich** |
+| `entity_ids` | Array aus Zeichenfolgen | fakultativ |
+| `include_sequences` | boolescher Wert | fakultativ; Standard: falsch |
 | `max_bytes` | Ganzzahl | fakultativ; Standard: 400000 |
 
 ```javascript
@@ -1590,7 +1592,7 @@ Gebundene Liganden (nichtpolymere Komponenten) eines PDB-Eintrags, mit Chemie. G
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `pdb_id` | Schnurschnur | **erforderlich** |
+| `pdb_id` | Zeichenfolge | **erforderlich** |
 | `max_ligands` | Ganzzahl | fakultativ; Standard: 25 |
 
 ```javascript
@@ -1603,8 +1605,8 @@ AlphaFold DB Predicted-Structure-Metadaten für einen UniProt-Beitritt. Gibt has
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `uniprot_accession` | Schnurschnur | **erforderlich** |
-| `include_sequence` | Boolean | fakultativ; Standard: falsch |
+| `uniprot_accession` | Zeichenfolge | **erforderlich** |
+| `include_sequence` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("structures", "alphafold_get_prediction", {"uniprot_accession": "P04637"})
@@ -1616,7 +1618,7 @@ Batch AlphaFold DB-Abdeckungsprüfung (max. 40 eindeutige UniProt-Zugänge). Lee
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `uniprot_accessions` | String-Array | **erforderlich** |
+| `uniprot_accessions` | Array aus Zeichenfolgen | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("structures", "alphafold_check_coverage", {"uniprot_accessions": ["P04637", "P38398", "Q9Y6K9"]})
@@ -1635,9 +1637,9 @@ Suche ChEMBL chemische Verbindungen nach Namen (Standard), ChEMBL id oder moleku
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `name` | Schnurschnur | fakultativ |
-| `chembl_id` | Schnurschnur | fakultativ |
-| `smiles` | Schnurschnur | fakultativ |
+| `name` | Zeichenfolge | fakultativ |
+| `chembl_id` | Zeichenfolge | fakultativ |
+| `smiles` | Zeichenfolge | fakultativ |
 | `similarity_threshold` | Ganzzahl | fakultativ; mindestens: 70; höchstens: 100 |
 | `max_phase` | Ganzzahl | fakultativ; enum: &#91;0, 1, 2, 3, 4&#93; |
 | `limit` | Ganzzahl | fakultativ; Standard: 20; mindestens: 1; höchstens: 1000 |
@@ -1652,11 +1654,11 @@ Suchen Sie zugelassene Medikamente und klinische Kandidaten nach therapeutischer
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `indication` | Schnurschnur | **erforderlich** |
-| `drug_name` | Schnurschnur | fakultativ |
-| `molecule_chembl_id` | Schnurschnur | fakultativ |
+| `indication` | Zeichenfolge | **erforderlich** |
+| `drug_name` | Zeichenfolge | fakultativ |
+| `molecule_chembl_id` | Zeichenfolge | fakultativ |
 | `max_phase` | Ganzzahl | fakultativ; enum: &#91;0, 1, 2, 3, 4&#93; |
-| `only_approved` | Boolean | fakultativ; Standard: falsch |
+| `only_approved` | boolescher Wert | fakultativ; Standard: falsch |
 | `limit` | Ganzzahl | fakultativ; Standard: 20; mindestens: 1; höchstens: 1000 |
 
 ```javascript
@@ -1669,7 +1671,7 @@ Retrieve ChEMBL berechnete molekulare Eigenschaften für die Arzneimittelähnlic
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `molecule_chembl_id` | Schnurschnur | **erforderlich** |
+| `molecule_chembl_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("chembl", "get_admet", {"molecule_chembl_id": "CHEMBL25"})
@@ -1681,13 +1683,13 @@ ChEMBL-Bioaktivitätsmessungen (IC50, Ki, Kd, EC50, ...) für Verbindungen-Ziel-
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `molecule_chembl_id` | Schnurschnur | fakultativ |
-| `target_chembl_id` | Schnurschnur | fakultativ |
-| `activity_type` | Schnurschnur | fakultativ; enum: &#91;"IC50", "EC50", "Ki", "Kd", "AC50", "GI50", "ED50", "Potency"&#93; |
-| `min_pchembl` | Nummer | fakultativ; mindestens: 0; höchstens: 14 |
-| `min_value` | Nummer | fakultativ |
-| `max_value` | Nummer | fakultativ |
-| `unit` | Schnurschnur | fakultativ; enum: &#91;"nM", "uM", "mM", "pM", "M"&#93; |
+| `molecule_chembl_id` | Zeichenfolge | fakultativ |
+| `target_chembl_id` | Zeichenfolge | fakultativ |
+| `activity_type` | Zeichenfolge | fakultativ; enum: &#91;"IC50", "EC50", "Ki", "Kd", "AC50", "GI50", "ED50", "Potency"&#93; |
+| `min_pchembl` | Zahl | fakultativ; mindestens: 0; höchstens: 14 |
+| `min_value` | Zahl | fakultativ |
+| `max_value` | Zahl | fakultativ |
+| `unit` | Zeichenfolge | fakultativ; enum: &#91;"nM", "uM", "mM", "pM", "M"&#93; |
 | `limit` | Ganzzahl | fakultativ; Standard: 20; mindestens: 1; höchstens: 1000 |
 
 ```javascript
@@ -1700,9 +1702,9 @@ Retrieve ChEMBL-Mechanismus-of-Action-Datensätze für zugelassene Medikamente u
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `molecule_chembl_id` | Schnurschnur | fakultativ |
-| `target_chembl_id` | Schnurschnur | fakultativ |
-| `action_type` | Schnurschnur | fakultativ; enum: &#91;"INHIBITOR", "AGONIST", "ANTAGONIST", "BLOCKER", "MODULATOR", "OPENER", "ACTIVATOR", "POSITIVE ALLOSTERIC MODULATOR", "NEGATIVE ALLOSTERIC MODULATOR", "PARTIAL AGONIST", "INVERSE AGONIST"&#93; |
+| `molecule_chembl_id` | Zeichenfolge | fakultativ |
+| `target_chembl_id` | Zeichenfolge | fakultativ |
+| `action_type` | Zeichenfolge | fakultativ; enum: &#91;"INHIBITOR", "AGONIST", "ANTAGONIST", "BLOCKER", "MODULATOR", "OPENER", "ACTIVATOR", "POSITIVE ALLOSTERIC MODULATOR", "NEGATIVE ALLOSTERIC MODULATOR", "PARTIAL AGONIST", "INVERSE AGONIST"&#93; |
 | `limit` | Ganzzahl | fakultativ; Standard: 20; mindestens: 1; höchstens: 1000 |
 
 ```javascript
@@ -1715,11 +1717,11 @@ Suche nach biologischen ChEMBL-Zielen (Proteine, Komplexe, Familien, Organismen)
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `target_name` | Schnurschnur | fakultativ |
-| `gene_symbol` | Schnurschnur | fakultativ |
-| `target_chembl_id` | Schnurschnur | fakultativ |
-| `organism` | Schnurschnur | fakultativ |
-| `target_type` | Schnurschnur | fakultativ; enum: &#91;"SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN FAMILY", "ORGANISM", "TISSUE", "CELL-LINE", "NUCLEIC-ACID", "SUBCELLULAR"&#93; |
+| `target_name` | Zeichenfolge | fakultativ |
+| `gene_symbol` | Zeichenfolge | fakultativ |
+| `target_chembl_id` | Zeichenfolge | fakultativ |
+| `organism` | Zeichenfolge | fakultativ |
+| `target_type` | Zeichenfolge | fakultativ; enum: &#91;"SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN FAMILY", "ORGANISM", "TISSUE", "CELL-LINE", "NUCLEIC-ACID", "SUBCELLULAR"&#93; |
 | `limit` | Ganzzahl | fakultativ; Standard: 20; mindestens: 1; höchstens: 1000 |
 
 ```javascript
@@ -1751,10 +1753,10 @@ Suche bioRxiv/medRxiv Preprints nach Datum und (optional) Kategorie. Verwenden S
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `server` | Schnurschnur | fakultativ; Standard: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
-| `category` | Schnurschnur | fakultativ; enum: &#91;"Verhalten und Kognition von Tieren", "Biochemie", "Bioengineering", "Bioinformatik", "Biophysik", "Krebsbiologie", "Zellbiologie", "Klinische Prüfungen", "Entwicklungsbiologie", "Ökologie", "Epidemiologie", "Evolutionsbiologie", "Genetik", "Genomik", "Immunologie", "Mikrobiologie", "Molekularbiologie", "Neurowissenschaften", "Paläontologie", "Pathologie", "Pharmakologie und Toxikologie", "Physiologie", "Pflanzenbiologie", "Wissenschaftliche Kommunikation und Bildung", "Synthetische Biologie", "Systembiologie", "Zoologie"&#93; |
-| `date_from` | Schnurschnur | fakultativ |
-| `date_to` | Schnurschnur | fakultativ |
+| `server` | Zeichenfolge | fakultativ; Standard: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `category` | Zeichenfolge | fakultativ; enum: &#91;"Verhalten und Kognition von Tieren", "Biochemie", "Bioengineering", "Bioinformatik", "Biophysik", "Krebsbiologie", "Zellbiologie", "Klinische Prüfungen", "Entwicklungsbiologie", "Ökologie", "Epidemiologie", "Evolutionsbiologie", "Genetik", "Genomik", "Immunologie", "Mikrobiologie", "Molekularbiologie", "Neurowissenschaften", "Paläontologie", "Pathologie", "Pharmakologie und Toxikologie", "Physiologie", "Pflanzenbiologie", "Wissenschaftliche Kommunikation und Bildung", "Synthetische Biologie", "Systembiologie", "Zoologie"&#93; |
+| `date_from` | Zeichenfolge | fakultativ |
+| `date_to` | Zeichenfolge | fakultativ |
 | `recent_days` | Ganzzahl | fakultativ; mindestens: 1 |
 | `recent_count` | Ganzzahl | fakultativ; mindestens: 1 |
 | `limit` | Ganzzahl | fakultativ; Standard: 10; mindestens: 1; höchstens: 100 |
@@ -1770,8 +1772,8 @@ Erhalten Sie vollständige Metadaten für einen Vordruck von DOI (Blatt " 10.110
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `doi` | Schnurschnur | fakultativ |
-| `server` | Schnurschnur | fakultativ; Standard: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `doi` | Zeichenfolge | **erforderlich** |
+| `server` | Zeichenfolge | fakultativ; Standard: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_preprint", {"doi": "10.1101/339747"})
@@ -1783,11 +1785,11 @@ Finden Sie Preprints, die später in Peer-Review-Zeitschriften veröffentlicht w
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `server` | Schnurschnur | fakultativ; Standard: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
-| `publisher` | Schnurschnur | fakultativ |
-| `include_details` | Boolean | fakultativ; Standard: true |
-| `date_from` | Schnurschnur | fakultativ |
-| `date_to` | Schnurschnur | fakultativ |
+| `server` | Zeichenfolge | fakultativ; Standard: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `publisher` | Zeichenfolge | fakultativ |
+| `include_details` | boolescher Wert | fakultativ; Standard: true |
+| `date_from` | Zeichenfolge | fakultativ |
+| `date_to` | Zeichenfolge | fakultativ |
 | `recent_days` | Ganzzahl | fakultativ; mindestens: 1 |
 | `recent_count` | Ganzzahl | fakultativ; mindestens: 1 |
 | `limit` | Ganzzahl | fakultativ; Standard: 10; mindestens: 1; höchstens: 100 |
@@ -1803,11 +1805,11 @@ Finden Sie Preprints, die einen Funder bestätigen, identifiziert durch ROR-ID (
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `funder_ror_id` | Schnurschnur | fakultativ |
-| `date_from` | Schnurschnur | fakultativ |
-| `date_to` | Schnurschnur | fakultativ |
-| `server` | Schnurschnur | fakultativ; Standard: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
-| `category` | Schnurschnur | fakultativ; enum: &#91;"Verhalten und Kognition von Tieren", "Biochemie", "Bioengineering", "Bioinformatik", "Biophysik", "Krebsbiologie", "Zellbiologie", "Klinische Prüfungen", "Entwicklungsbiologie", "Ökologie", "Epidemiologie", "Evolutionsbiologie", "Genetik", "Genomik", "Immunologie", "Mikrobiologie", "Molekularbiologie", "Neurowissenschaften", "Paläontologie", "Pathologie", "Pharmakologie und Toxikologie", "Physiologie", "Pflanzenbiologie", "Wissenschaftliche Kommunikation und Bildung", "Synthetische Biologie", "Systembiologie", "Zoologie"&#93; |
+| `funder_ror_id` | Zeichenfolge | **erforderlich** |
+| `date_from` | Zeichenfolge | **erforderlich** |
+| `date_to` | Zeichenfolge | **erforderlich** |
+| `server` | Zeichenfolge | fakultativ; Standard: "biorxiv"; enum: &#91;"biorxiv", "medrxiv"&#93; |
+| `category` | Zeichenfolge | fakultativ; enum: &#91;"Verhalten und Kognition von Tieren", "Biochemie", "Bioengineering", "Bioinformatik", "Biophysik", "Krebsbiologie", "Zellbiologie", "Klinische Prüfungen", "Entwicklungsbiologie", "Ökologie", "Epidemiologie", "Evolutionsbiologie", "Genetik", "Genomik", "Immunologie", "Mikrobiologie", "Molekularbiologie", "Neurowissenschaften", "Paläontologie", "Pathologie", "Pharmakologie und Toxikologie", "Physiologie", "Pflanzenbiologie", "Wissenschaftliche Kommunikation und Bildung", "Synthetische Biologie", "Systembiologie", "Zoologie"&#93; |
 | `limit` | Ganzzahl | fakultativ; Standard: 10; mindestens: 1; höchstens: 100 |
 | `cursor` | Ganzzahl | fakultativ; Standard: 0; mindestens: 0 |
 
@@ -1821,7 +1823,7 @@ BioRxiv-Einreichungsstatistiken über die gesamte Historie — neue vs. revidier
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `interval` | Schnurschnur | fakultativ; Standard: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
+| `interval` | Zeichenfolge | fakultativ; Standard: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_content_statistics", {"interval": "yearly"})
@@ -1833,7 +1835,7 @@ bioRxiv Nutzungs-/Engagement-Statistiken über den gesamten Verlauf — abstrakt
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `interval` | Schnurschnur | fakultativ; Standard: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
+| `interval` | Zeichenfolge | fakultativ; Standard: "monthly"; enum: &#91;"monthly", "yearly"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_usage_statistics", {"interval": "yearly"})
@@ -1852,19 +1854,19 @@ Search Drugs@FDA-Anwendungen (NDA/ANDA/BLA) durch eine beliebige Kombination von
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `brand` | Schnurschnur | fakultativ |
-| `generic` | Schnurschnur | fakultativ |
-| `active_ingredient` | Schnurschnur | fakultativ |
-| `sponsor` | Schnurschnur | fakultativ |
-| `marketing_status` | Schnurschnur | fakultativ; enum: &#91;"Prescription", "Over-the-counter", "Discontinued", "None (Vorläufige Genehmigung)"&#93; |
-| `dosage_form` | Schnurschnur | fakultativ |
-| `route` | Schnurschnur | fakultativ |
-| `pharm_class` | Schnurschnur | fakultativ |
-| `pharm_class_type` | Schnurschnur | fakultativ; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
-| `search_type` | Schnurschnur | fakultativ; Standard: "and"; enum: &#91;"and", "or"&#93; |
-| `submission_date_from` | Schnurschnur | fakultativ |
-| `submission_date_to` | Schnurschnur | fakultativ |
-| `raw_search` | Schnurschnur | fakultativ |
+| `brand` | Zeichenfolge | fakultativ |
+| `generic` | Zeichenfolge | fakultativ |
+| `active_ingredient` | Zeichenfolge | fakultativ |
+| `sponsor` | Zeichenfolge | fakultativ |
+| `marketing_status` | Zeichenfolge | fakultativ; enum: &#91;"Prescription", "Over-the-counter", "Discontinued", "None (Vorläufige Genehmigung)"&#93; |
+| `dosage_form` | Zeichenfolge | fakultativ |
+| `route` | Zeichenfolge | fakultativ |
+| `pharm_class` | Zeichenfolge | fakultativ |
+| `pharm_class_type` | Zeichenfolge | fakultativ; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
+| `search_type` | Zeichenfolge | fakultativ; Standard: "and"; enum: &#91;"and", "or"&#93; |
+| `submission_date_from` | Zeichenfolge | fakultativ |
+| `submission_date_to` | Zeichenfolge | fakultativ |
+| `raw_search` | Zeichenfolge | fakultativ |
 | `max_records` | Ganzzahl | fakultativ; Standard: 50 |
 
 ```javascript
@@ -1877,7 +1879,7 @@ Holen Sie sich einen Drugs@FDA-Antrag nach seiner Nummer (z.B.) "NDA020702", "AN
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `application_number` | Schnurschnur | **erforderlich** |
+| `application_number` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "get_drug_application", {"application_number": "NDA020702"})
@@ -1889,20 +1891,20 @@ Aggregate Drugs@FDA Bucket zählt über ein Feld, optional eingeengt durch die g
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `count_field` | Schnurschnur | **erforderlich** |
-| `brand` | Schnurschnur | fakultativ |
-| `generic` | Schnurschnur | fakultativ |
-| `active_ingredient` | Schnurschnur | fakultativ |
-| `sponsor` | Schnurschnur | fakultativ |
-| `marketing_status` | Schnurschnur | fakultativ |
-| `dosage_form` | Schnurschnur | fakultativ |
-| `route` | Schnurschnur | fakultativ |
-| `pharm_class` | Schnurschnur | fakultativ |
-| `pharm_class_type` | Schnurschnur | fakultativ; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
-| `search_type` | Schnurschnur | fakultativ; Standard: "and"; enum: &#91;"and", "or"&#93; |
-| `submission_date_from` | Schnurschnur | fakultativ |
-| `submission_date_to` | Schnurschnur | fakultativ |
-| `raw_search` | Schnurschnur | fakultativ |
+| `count_field` | Zeichenfolge | **erforderlich** |
+| `brand` | Zeichenfolge | fakultativ |
+| `generic` | Zeichenfolge | fakultativ |
+| `active_ingredient` | Zeichenfolge | fakultativ |
+| `sponsor` | Zeichenfolge | fakultativ |
+| `marketing_status` | Zeichenfolge | fakultativ |
+| `dosage_form` | Zeichenfolge | fakultativ |
+| `route` | Zeichenfolge | fakultativ |
+| `pharm_class` | Zeichenfolge | fakultativ |
+| `pharm_class_type` | Zeichenfolge | fakultativ; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
+| `search_type` | Zeichenfolge | fakultativ; Standard: "and"; enum: &#91;"and", "or"&#93; |
+| `submission_date_from` | Zeichenfolge | fakultativ |
+| `submission_date_to` | Zeichenfolge | fakultativ |
+| `raw_search` | Zeichenfolge | fakultativ |
 | `max_buckets` | Ganzzahl | fakultativ; Standard: 100 |
 
 ```javascript
@@ -1927,7 +1929,7 @@ Aufzählen der pharmakologischen Klassen mit ihren Anwendungszählungen, gezähl
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `class_type` | Schnurschnur | fakultativ; Standard: "epc"; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
+| `class_type` | Zeichenfolge | fakultativ; Standard: "epc"; enum: &#91;"epc", "moa", "cs", "pe"&#93; |
 | `max_buckets` | Ganzzahl | fakultativ; Standard: 100 |
 
 ```javascript
@@ -1940,7 +1942,7 @@ Finden Sie generische Äquivalente eines Markenarzneimittels: Lösen Sie die Mar
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `brand` | Schnurschnur | **erforderlich** |
+| `brand` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "get_generic_equivalents", {"brand": "Lipitor"})
@@ -1952,14 +1954,14 @@ Retrieve FDA Drug Product Labels (SPL) nach Inhaltsstoff / Name / Route mit gezi
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `active_ingredient` | Schnurschnur | fakultativ |
-| `generic_name` | Schnurschnur | fakultativ |
-| `brand_name` | Schnurschnur | fakultativ |
-| `route` | Schnurschnur | fakultativ |
-| `product_type` | Schnurschnur | fakultativ; enum: &#91;"HUMAN PRESCRIPTION DRUG", "HUMAN OTC DRUG"&#93; |
-| `exact` | Boolean | fakultativ; Standard: falsch |
-| `raw_search` | Schnurschnur | fakultativ |
-| `sections` | String-Array | fakultativ |
+| `active_ingredient` | Zeichenfolge | fakultativ |
+| `generic_name` | Zeichenfolge | fakultativ |
+| `brand_name` | Zeichenfolge | fakultativ |
+| `route` | Zeichenfolge | fakultativ |
+| `product_type` | Zeichenfolge | fakultativ; enum: &#91;"HUMAN PRESCRIPTION DRUG", "HUMAN OTC DRUG"&#93; |
+| `exact` | boolescher Wert | fakultativ; Standard: falsch |
+| `raw_search` | Zeichenfolge | fakultativ |
+| `sections` | Array aus Zeichenfolgen | fakultativ |
 | `max_records` | Ganzzahl | fakultativ; Standard: 25 |
 
 ```javascript
@@ -1979,7 +1981,7 @@ GWAS-Katalogverbände berichteten für eine Variante (rsID), die wichtigste zuer
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `rs_id` | Schnurschnur | **erforderlich** |
+| `rs_id` | Zeichenfolge | **erforderlich** |
 | `max_records` | Ganzzahl | fakultativ; Standard: 500 |
 
 ```javascript
@@ -1992,7 +1994,7 @@ GWAS-Katalog-Assoziationen, deren Varianten zu einem Gen MAPPED sind (catalog's 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene_symbol` | Schnurschnur | **erforderlich** |
+| `gene_symbol` | Zeichenfolge | **erforderlich** |
 | `max_records` | Ganzzahl | fakultativ; Standard: 500 |
 
 ```javascript
@@ -2005,8 +2007,8 @@ GWAS-Katalogverbände kommentierten ein EFO-Merkmal, das wichtigste zuerst. Args
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `efo_id` | Schnurschnur | fakultativ |
-| `efo_trait` | Schnurschnur | fakultativ |
+| `efo_id` | Zeichenfolge | fakultativ |
+| `efo_trait` | Zeichenfolge | fakultativ |
 | `max_records` | Ganzzahl | fakultativ; Standard: 500 |
 
 ```javascript
@@ -2019,7 +2021,7 @@ Suchen Sie nach GWAS Catalog EFO-Eigenschaftsanmerkungen nach Label-Substring - 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
+| `query` | Zeichenfolge | **erforderlich** |
 | `max_records` | Ganzzahl | fakultativ; Standard: 500 |
 
 ```javascript
@@ -2032,9 +2034,9 @@ Durchsuchen Sie GWAS-Katalogstudien nach Merkmalsannotation oder Veröffentlichu
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `efo_id` | Schnurschnur | fakultativ |
-| `efo_trait` | Schnurschnur | fakultativ |
-| `pubmed_id` | Schnurschnur | fakultativ |
+| `efo_id` | Zeichenfolge | fakultativ |
+| `efo_trait` | Zeichenfolge | fakultativ |
+| `pubmed_id` | Zeichenfolge | fakultativ |
 | `max_records` | Ganzzahl | fakultativ; Standard: 500 |
 
 ```javascript
@@ -2047,7 +2049,7 @@ Holen Sie sich eine GWAS-Katalogstudie durch ihren GCST-Beitritt. Args: accessio
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession_id` | Schnurschnur | **erforderlich** |
+| `accession_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_get_study", {"accession_id": "GCST90841394"})
@@ -2059,7 +2061,7 @@ Holen Sie sich einen GWAS-Katalog-Variantendatensatz (Position, kartierte Gene, 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `rs_id` | Schnurschnur | **erforderlich** |
+| `rs_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_get_variant", {"rs_id": "rs7412"})
@@ -2071,9 +2073,9 @@ Liste der eQTL-Katalogdatensätze (ein Datensatz = eine Studie x Gewebe-/Zelltyp
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `study_label` | Schnurschnur | fakultativ |
-| `tissue_label` | Schnurschnur | fakultativ |
-| `quant_method` | Schnurschnur | fakultativ |
+| `study_label` | Zeichenfolge | fakultativ |
+| `tissue_label` | Zeichenfolge | fakultativ |
+| `quant_method` | Zeichenfolge | fakultativ |
 | `max_records` | Ganzzahl | fakultativ; Standard: 1000 |
 
 ```javascript
@@ -2086,12 +2088,12 @@ Molekular-QTL-Assoziationszeilen aus einem eQTL-Katalogdatensatz, gefiltert nach
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `dataset_id` | Schnurschnur | **erforderlich** |
-| `gene_id` | Schnurschnur | fakultativ |
-| `rsid` | Schnurschnur | fakultativ |
-| `variant` | Schnurschnur | fakultativ |
-| `pos` | Schnurschnur | fakultativ |
-| `nlog10p_min` | Nummer | fakultativ |
+| `dataset_id` | Zeichenfolge | **erforderlich** |
+| `gene_id` | Zeichenfolge | fakultativ |
+| `rsid` | Zeichenfolge | fakultativ |
+| `variant` | Zeichenfolge | fakultativ |
+| `pos` | Zeichenfolge | fakultativ |
+| `nlog10p_min` | Zahl | fakultativ |
 | `max_records` | Ganzzahl | fakultativ; Standard: 1000 |
 
 ```javascript
@@ -2116,8 +2118,8 @@ PheWAS für eine Variante: seine Assoziation Statistiken gegen jeden Phänotyp i
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `instance` | Schnurschnur | **erforderlich**; enum: &#91;"finngen", "bbj"&#93; |
-| `variant` | Schnurschnur | **erforderlich** |
+| `instance` | Zeichenfolge | **erforderlich**; enum: &#91;"finngen", "bbj"&#93; |
+| `variant` | Zeichenfolge | **erforderlich** |
 | `max_phenos` | Ganzzahl | fakultativ; Standard: 200 |
 
 ```javascript
@@ -2130,7 +2132,7 @@ Gen-Level PheWAS aus FinnGen R12: für jeden Krankheitsendpunkt die am besten as
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene_symbol` | Schnurschnur | **erforderlich** |
+| `gene_symbol` | Zeichenfolge | **erforderlich** |
 | `max_phenos` | Ganzzahl | fakultativ; Standard: 200 |
 
 ```javascript
@@ -2143,7 +2145,7 @@ Vollständiger Phänotyp-Katalog (Krankheitsendpunkt) einer PheWeb-Instanz mit F
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `instance` | Schnurschnur | fakultativ; Standard: "finngen"; enum: &#91;"finngen"&#93; |
+| `instance` | Zeichenfolge | fakultativ; Standard: "finngen"; enum: &#91;"finngen"&#93; |
 | `max_records` | Ganzzahl | fakultativ; Standard: 3000 |
 
 ```javascript
@@ -2156,8 +2158,8 @@ Durchsuchen Sie einen PheWeb-Instanz's-Phänotypen (und Entitäten) nach Namen -
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
-| `instance` | Schnurschnur | fakultativ; Standard: "finngen"; enum: &#91;"finngen", "bbj"&#93; |
+| `query` | Zeichenfolge | **erforderlich** |
+| `instance` | Zeichenfolge | fakultativ; Standard: "finngen"; enum: &#91;"finngen", "bbj"&#93; |
 | `max_records` | Ganzzahl | fakultativ; Standard: 500 |
 
 ```javascript
@@ -2177,7 +2179,7 @@ Listen Sie alle Gewebestellen mit Metadaten für eine angeheftete GTEx-Veröffen
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `dataset_id` | Schnurschnur | fakultativ; Standard: "gtex_v8" |
+| `dataset_id` | Zeichenfolge | fakultativ; Standard: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_tissue_sites", {"dataset_id": "gtex_v8"})
@@ -2189,8 +2191,8 @@ Listen Sie alle GTEx-Dataset-Releases mit Metadaten auf: datasetId, GENCODE-Vers
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `dataset_id` | Schnurschnur | fakultativ |
-| `organization_name` | Schnurschnur | fakultativ |
+| `dataset_id` | Zeichenfolge | fakultativ |
+| `organization_name` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_dataset_info", {})
@@ -2202,11 +2204,11 @@ Sample- und Donor-Metadaten für eine angeheftete GTEx-Freigabe, optional gefilt
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `tissue_site_detail_id` | Schnurschnur | fakultativ |
-| `data_type` | Schnurschnur | fakultativ |
-| `subject_id` | Schnurschnur | fakultativ |
+| `tissue_site_detail_id` | Zeichenfolge | fakultativ |
+| `data_type` | Zeichenfolge | fakultativ |
+| `subject_id` | Zeichenfolge | fakultativ |
 | `max_samples` | Ganzzahl | fakultativ |
-| `dataset_id` | Schnurschnur | fakultativ; Standard: "gtex_v8" |
+| `dataset_id` | Zeichenfolge | fakultativ; Standard: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_sample_info", {"tissue_site_detail_id": "Liver", "data_type": "RNASEQ", "max_samples": 100})
@@ -2218,8 +2220,8 @@ Lösen Sie Gensymbole oder unversionierte Ensembl-IDs auf versionierte GENCODE-I
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `genes` | String-Array | **erforderlich** | 7 / 0 / 0 |
-| `dataset_id` | Schnurschnur | fakultativ; Standard: "gtex_v8" |
+| `genes` | Array aus Zeichenfolgen | **erforderlich** | 7 / 0 / 0 |
+| `dataset_id` | Zeichenfolge | fakultativ; Standard: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_resolve_genes", {"genes": ["GAPDH", "BRCA2"]})
@@ -2231,9 +2233,9 @@ Mediane Genexpression (TPM) für eine oder mehrere VERSIONIERTE GENCODE-IDs übe
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gencode_ids` | String-Array | **erforderlich** |
-| `tissue_site_detail_ids` | String-Array | fakultativ |
-| `dataset_id` | Schnurschnur | fakultativ; Standard: "gtex_v8" |
+| `gencode_ids` | Array aus Zeichenfolgen | **erforderlich** |
+| `tissue_site_detail_ids` | Array aus Zeichenfolgen | fakultativ |
+| `dataset_id` | Zeichenfolge | fakultativ; Standard: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_median_expression", {"gencode_ids": ["ENSG00000111640.14"]})
@@ -2245,8 +2247,8 @@ Fassen Sie die Expression eines Gens in ALLEN Geweben zusammen, die nach dem abs
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene` | Schnurschnur | **erforderlich** |
-| `dataset_id` | Schnurschnur | fakultativ; Standard: "gtex_v8" |
+| `gene` | Zeichenfolge | **erforderlich** |
+| `dataset_id` | Zeichenfolge | fakultativ; Standard: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_expression_summary", {"gene": "GAPDH"})
@@ -2258,9 +2260,9 @@ TPM-Arrays auf Probenebene (nicht aggregiert) für eine VERSIONED GENCODE-ID pro
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gencode_id` | Schnurschnur | **erforderlich** |
-| `tissue_site_detail_ids` | String-Array | fakultativ |
-| `dataset_id` | Schnurschnur | fakultativ; Standard: "gtex_v8" |
+| `gencode_id` | Zeichenfolge | **erforderlich** |
+| `tissue_site_detail_ids` | Array aus Zeichenfolgen | fakultativ |
+| `dataset_id` | Zeichenfolge | fakultativ; Standard: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_gene_expression", {"gencode_id": "ENSG00000111640.14", "tissue_site_detail_ids": ["Whole_Blood"]})
@@ -2272,10 +2274,10 @@ Top-n-Gene nach Median TPM in einem Gewebe unter Verwendung des API-Seitenrankin
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `tissue_site_detail_id` | Schnurschnur | **erforderlich** |
+| `tissue_site_detail_id` | Zeichenfolge | **erforderlich** |
 | `n` | Ganzzahl | fakultativ; Standard: 100 |
-| `filter_mt_gene` | Boolean | fakultativ; Standard: true |
-| `dataset_id` | Schnurschnur | fakultativ; Standard: "gtex_v8" |
+| `filter_mt_gene` | boolescher Wert | fakultativ; Standard: true |
+| `dataset_id` | Zeichenfolge | fakultativ; Standard: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_top_expressed_genes", {"tissue_site_detail_id": "Whole_Blood", "n": 20})
@@ -2287,9 +2289,9 @@ Alle eGene (Gene mit ≥ 1 signifikanten cis-eQTL) für ein Gewebe. Seite für S
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `tissue_site_detail_id` | Schnurschnur | **erforderlich** |
+| `tissue_site_detail_id` | Zeichenfolge | **erforderlich** |
 | `max_genes` | Ganzzahl | fakultativ |
-| `dataset_id` | Schnurschnur | fakultativ; Standard: "gtex_v8" |
+| `dataset_id` | Zeichenfolge | fakultativ; Standard: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_eqtl_genes", {"tissue_site_detail_id": "Pancreas", "max_genes": 100})
@@ -2301,11 +2303,11 @@ Signifikante Einzelgewebe-cis-eQTL-Assoziationen für ein Gen und/oder eine Vari
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gencode_id` | Schnurschnur | fakultativ |
-| `variant_id` | Schnurschnur | fakultativ |
-| `tissue_site_detail_id` | Schnurschnur | fakultativ |
+| `gencode_id` | Zeichenfolge | fakultativ |
+| `variant_id` | Zeichenfolge | fakultativ |
+| `tissue_site_detail_id` | Zeichenfolge | fakultativ |
 | `max_results` | Ganzzahl | fakultativ |
-| `dataset_id` | Schnurschnur | fakultativ; Standard: "gtex_v8" |
+| `dataset_id` | Zeichenfolge | fakultativ; Standard: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_single_tissue_eqtls", {"gencode_id": "ENSG00000111640.14"})
@@ -2317,9 +2319,9 @@ Multi-Tissue cis-eQTL Meta-Analyse (METASOFT) für eine VERSIONED GENCODE ID. va
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gencode_id` | Schnurschnur | **erforderlich** |
-| `variant_id` | Schnurschnur | fakultativ |
-| `dataset_id` | Schnurschnur | fakultativ; Standard: "gtex_v8" |
+| `gencode_id` | Zeichenfolge | **erforderlich** |
+| `variant_id` | Zeichenfolge | fakultativ |
+| `dataset_id` | Zeichenfolge | fakultativ; Standard: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_multi_tissue_eqtls", {"gencode_id": "ENSG00000111640.14"})
@@ -2331,10 +2333,10 @@ Berechnen Sie eine eQTL im laufenden Betrieb für jedes Gen-Varianten-Paar in ei
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gencode_id` | Schnurschnur | **erforderlich** |
-| `variant_id` | Schnurschnur | **erforderlich** |
-| `tissue_site_detail_id` | Schnurschnur | **erforderlich** |
-| `dataset_id` | Schnurschnur | fakultativ; Standard: "gtex_v8" |
+| `gencode_id` | Zeichenfolge | **erforderlich** |
+| `variant_id` | Zeichenfolge | **erforderlich** |
+| `tissue_site_detail_id` | Zeichenfolge | **erforderlich** |
+| `dataset_id` | Zeichenfolge | fakultativ; Standard: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_calculate_eqtl", {"gencode_id": "ENSG00000111640.14", "variant_id": "chr12_6452899_G_A_b38", "tissue_site_detail_id": "Whole_Blood"})
@@ -2353,7 +2355,7 @@ Komplette InterPro-Domänenarchitektur für ein oder mehrere UniProt-Proteine (a
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accessions` | String-Array | **erforderlich** |
+| `accessions` | Array aus Zeichenfolgen | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_domain_architecture", {"accessions": ["P04637"]})
@@ -2365,10 +2367,10 @@ Keyword-Suche über InterPro oder Mitglieder-Datenbankeinträge (Pfam, SMART, PR
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | fakultativ |
-| `entry_type` | Schnurschnur | fakultativ |
-| `source_db` | Schnurschnur | fakultativ; Standard: "interpro" |
-| `go_term` | Schnurschnur | fakultativ |
+| `query` | Zeichenfolge | fakultativ |
+| `entry_type` | Zeichenfolge | fakultativ |
+| `source_db` | Zeichenfolge | fakultativ; Standard: "interpro" |
+| `go_term` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_interpro_entries", {"query": "kinase", "source_db": "pfam"})
@@ -2380,7 +2382,7 @@ Detaildatensatz für einen InterPro-Eintrag (IPRxxxxxxxx) oder eine Pfam-Familie
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
+| `accession` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_interpro_entry", {"accession": "IPR000719"})
@@ -2392,7 +2394,7 @@ Keyword-Suche über Pfam-Clans (InterPro-Sets, Accessions CLxxxx).
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | fakultativ |
+| `query` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_pfam_clans", {"query": "kinase"})
@@ -2404,7 +2406,7 @@ Pfam Clan Details einschließlich der komplett sortierten Mitgliederfamilienlist
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `clan_accession` | Schnurschnur | **erforderlich** |
+| `clan_accession` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_clan", {"clan_accession": "CL0016"})
@@ -2416,10 +2418,10 @@ Mitgliedsproteine einer Pfam-Familie (komplette Zählung verifizierter Spazierga
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `pfam_accession` | Schnurschnur | **erforderlich** |
-| `reviewed_only` | Boolean | fakultativ; Standard: falsch |
+| `pfam_accession` | Zeichenfolge | **erforderlich** |
+| `reviewed_only` | boolescher Wert | fakultativ; Standard: falsch |
 | `tax_id` | Ganzzahl | fakultativ |
-| `count_only` | Boolean | fakultativ; Standard: falsch |
+| `count_only` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_family_proteins", {"pfam_accession": "PF00069", "count_only": true})
@@ -2431,8 +2433,8 @@ Proteome mit Mitgliedern einer Pfam-Familie. count_only ist standardmäßig wahr
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `pfam_accession` | Schnurschnur | **erforderlich** |
-| `count_only` | Boolean | fakultativ; Standard: true |
+| `pfam_accession` | Zeichenfolge | **erforderlich** |
+| `count_only` | boolescher Wert | fakultativ; Standard: true |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_family_proteomes", {"pfam_accession": "PF00069"})
@@ -2444,8 +2446,8 @@ Human Protein Atlas per-Gen-Datensatz (Freigabe 25.x): Gewebe/Subzellular/Pathol
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene` | Schnurschnur | **erforderlich** |
-| `full` | Boolean | fakultativ; Standard: falsch |
+| `gene` | Zeichenfolge | **erforderlich** |
+| `full` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_protein_atlas_gene", {"gene": "TP53"})
@@ -2457,8 +2459,8 @@ Spaltenselektierte Massensuche über den Human Protein Atlas (search_download).
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
-| `columns` | Schnurschnur | fakultativ; Standard: "g,gs,eg,gd,up,chr,chrp,scl" |
+| `query` | Zeichenfolge | **erforderlich** |
+| `columns` | Zeichenfolge | fakultativ; Standard: "g,gs,eg,gd,up,chr,chrp,scl" |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_protein_atlas", {"query": "kinase"})
@@ -2470,7 +2472,7 @@ Zuordnung der Gensymbole/Aliasen zu STRING-Protein-Identifikatoren (v12.0). Jede
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `symbols` | String-Array | **erforderlich** |
+| `symbols` | Array aus Zeichenfolgen | **erforderlich** |
 | `species` | Ganzzahl | fakultativ; Standard: 9606 |
 
 ```javascript
@@ -2483,7 +2485,7 @@ STRING Protein-Protein-Interaktionsnetzwerk für eine Genliste (v12.0) bei einer
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `symbols` | String-Array | **erforderlich** |
+| `symbols` | Array aus Zeichenfolgen | **erforderlich** |
 | `species` | Ganzzahl | fakultativ; Standard: 9606 |
 | `required_score` | Ganzzahl | fakultativ; Standard: 700 |
 
@@ -2497,7 +2499,7 @@ Smith-Waterman Protein Ähnlichkeit Bitscores unter einem Gen-Set (STRING / Homo
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `symbols` | String-Array | **erforderlich** |
+| `symbols` | Array aus Zeichenfolgen | **erforderlich** |
 | `species` | Ganzzahl | fakultativ; Standard: 9606 |
 
 ```javascript
@@ -2510,7 +2512,7 @@ Bester Homologietreffer pro Inputprotein in einer Zielspezies (STRING /homology_
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `symbols` | String-Array | **erforderlich** |
+| `symbols` | Array aus Zeichenfolgen | **erforderlich** |
 | `species` | Ganzzahl | fakultativ; Standard: 9606 |
 | `target_species` | Ganzzahl | fakultativ |
 
@@ -2531,8 +2533,8 @@ cBioPortal-Krebsstudien, optional gefiltert nach einem Freitext-Schlüsselwort (
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `keyword` | Schnurschnur | fakultativ |
-| `cancer_type_id` | Schnurschnur | fakultativ |
+| `keyword` | Zeichenfolge | fakultativ |
+| `cancer_type_id` | Zeichenfolge | fakultativ |
 | `max_records` | Ganzzahl | fakultativ; Standard: 500 |
 
 ```javascript
@@ -2545,7 +2547,7 @@ Erhalten Sie eine cBioPortal-Krebsstudie nach ID: Metadaten, Stichprobenzahlen p
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `study_id` | Schnurschnur | **erforderlich** |
+| `study_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_get_study", {"study_id": "msk_impact_2017"})
@@ -2557,8 +2559,8 @@ Alle Mutationen eines Gens (HUGO-Symbol) in einer cBioPortal-Studie mit Rezidiva
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene_symbol` | Schnurschnur | **erforderlich** |
-| `study_id` | Schnurschnur | **erforderlich** |
+| `gene_symbol` | Zeichenfolge | **erforderlich** |
+| `study_id` | Zeichenfolge | **erforderlich** |
 | `max_records` | Ganzzahl | fakultativ; Standard: 100 |
 
 ```javascript
@@ -2571,8 +2573,8 @@ Mutationshäufigkeit eines Gens in mehreren cBioPortal-Studien (1-12): mutierte 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene_symbol` | Schnurschnur | **erforderlich** |
-| `study_ids` | String-Array | **erforderlich**; minItems: 1; maxItems: 12 |
+| `gene_symbol` | Zeichenfolge | **erforderlich** |
+| `study_ids` | Array aus Zeichenfolgen | **erforderlich**; minItems: 1; maxItems: 12 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_mutation_frequency", {"gene_symbol": "KRAS", "study_ids": ["msk_impact_2017", "difg_msk_2023"]})
@@ -2584,9 +2586,9 @@ Diskrete Kopienzahl-Veränderungen eines Gens in einer cBioPortal-Studie, gefilt
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `gene_symbol` | Schnurschnur | **erforderlich** |
-| `study_id` | Schnurschnur | **erforderlich** |
-| `event_type` | Schnurschnur | fakultativ; Standard: "HOMDEL_AND_AMP"; enum: &#91;"HOMDEL_AND_AMP", "HOMDEL", "AMP", "GAIN", "HETLOSS", "DIPLOID", "ALL"&#93; |
+| `gene_symbol` | Zeichenfolge | **erforderlich** |
+| `study_id` | Zeichenfolge | **erforderlich** |
+| `event_type` | Zeichenfolge | fakultativ; Standard: "HOMDEL_AND_AMP"; enum: &#91;"HOMDEL_AND_AMP", "HOMDEL", "AMP", "GAIN", "HETLOSS", "DIPLOID", "ALL"&#93; |
 | `max_records` | Ganzzahl | fakultativ; Standard: 100 |
 
 ```javascript
@@ -2599,7 +2601,7 @@ Klinische Attribute, die in einer cBioPortal-Studie (Felder auf Patienten- und P
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `study_id` | Schnurschnur | **erforderlich** |
+| `study_id` | Zeichenfolge | **erforderlich** |
 | `max_records` | Ganzzahl | fakultativ; Standard: 200 |
 
 ```javascript
@@ -2619,7 +2621,7 @@ Rfam-Familienmetadaten für einen Beitritt (RF00005) oder Familien-ID (tRNA) —
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `family` | Schnurschnur | **erforderlich** |
+| `family` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("rna", "get_family", {"family": "RF00005"})
@@ -2631,8 +2633,8 @@ Seed Alignment einer Rfam-Familie in Stockholm (Standard, mit Konsensus-Sekundä
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `family` | Schnurschnur | **erforderlich** |
-| `fmt` | Schnurschnur | fakultativ; Standard: "stockholm"; enum: &#91;"stockholm", "fasta"&#93; |
+| `family` | Zeichenfolge | **erforderlich** |
+| `fmt` | Zeichenfolge | fakultativ; Standard: "stockholm"; enum: &#91;"stockholm", "fasta"&#93; |
 | `max_bytes` | Ganzzahl | fakultativ; Standard: 400000 |
 
 ```javascript
@@ -2645,7 +2647,7 @@ Höllisches Kovarianzmodell (CM-Datei) einer Rfam-Familie, direkt verwendbar mit
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `family` | Schnurschnur | **erforderlich** |
+| `family` | Zeichenfolge | **erforderlich** |
 | `max_bytes` | Ganzzahl | fakultativ; Standard: 400000 |
 
 ```javascript
@@ -2658,7 +2660,7 @@ Samen phylogenetischer Baum einer Rfam-Familie (NHX / Newick-Text).
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `family` | Schnurschnur | **erforderlich** |
+| `family` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("rna", "get_tree", {"family": "RF00162"})
@@ -2670,7 +2672,7 @@ Alle Vollregionstreffer einer Rfam-Familie über Sequenzdatenbanken hinweg (pars
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `family` | Schnurschnur | **erforderlich** |
+| `family` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("rna", "get_sequence_regions", {"family": "RF00162"})
@@ -2682,7 +2684,7 @@ Strukturkartierungen der PDB-Rückstandsebene einer Rfam-Familie, deterministisc
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `family` | Schnurschnur | **erforderlich** |
+| `family` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("rna", "get_structure_mapping", {"family": "RF00162"})
@@ -2694,7 +2696,7 @@ Konvertieren eines Rfam-Beitritts in seine Familien-ID (z.B.) RF00005 -> "tRNA".
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
+| `accession` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("rna", "accession_to_id", {"accession": "RF00005"})
@@ -2706,7 +2708,7 @@ Konvertieren Sie eine Rfam-Familien-ID in ihren Beitritt (z.B.) "tRNA" -> RF0000
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `family_id` | Schnurschnur | **erforderlich** |
+| `family_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("rna", "id_to_accession", {"family_id": "tRNA"})
@@ -2718,9 +2720,9 @@ Suchen Sie eine RNA-Sequenz über den offiziellen Rfam-Batch-Endpunkt. Behalten 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `sequence` | Schnurschnur | **erforderlich** |
-| `max_wait_s` | Nummer | fakultativ; Standard: 300 |
-| `poll_interval_s` | Nummer | fakultativ; Standard: 5 |
+| `sequence` | Zeichenfolge | **erforderlich** |
+| `max_wait_s` | Zahl | fakultativ; Standard: 300 |
+| `poll_interval_s` | Zahl | fakultativ; Standard: 5 |
 
 ```javascript
 const result = await host.mcp("rna", "search_sequence", {"sequence": "GGUUCCGGGAAGGCAGCAGGUGGAAACCUGCCA"})
@@ -2739,12 +2741,12 @@ Search ArrayExpress funktionelle Genomik-Experimente (BioStudies) mit vollständ
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | fakultativ |
-| `organism` | Schnurschnur | fakultativ |
-| `study_type` | Schnurschnur | fakultativ |
-| `technology` | Schnurschnur | fakultativ |
-| `released_after` | Schnurschnur | fakultativ |
-| `released_before` | Schnurschnur | fakultativ |
+| `query` | Zeichenfolge | fakultativ |
+| `organism` | Zeichenfolge | fakultativ |
+| `study_type` | Zeichenfolge | fakultativ |
+| `technology` | Zeichenfolge | fakultativ |
+| `released_after` | Zeichenfolge | fakultativ |
+| `released_before` | Zeichenfolge | fakultativ |
 | `extra_facets` | Objekt | fakultativ |
 | `max_records` | Ganzzahl | fakultativ; Standard: 50 |
 
@@ -2758,7 +2760,7 @@ Holen Sie sich ein ArrayExpress-Experiment (BioStudies) als abgeflachte Analyste
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
+| `accession` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment", {"accession": "E-MTAB-5061"})
@@ -2770,7 +2772,7 @@ Listen Sie jede Datei eines ArrayExpress-Experiments (Name, Größe, Typ, Format
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
+| `accession` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment_files", {"accession": "E-MTAB-5061"})
@@ -2782,7 +2784,7 @@ Suchen Sie nach SDRF-Annotationszeilen pro Stichprobe für ein ArrayExpress-Expe
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
+| `accession` | Zeichenfolge | **erforderlich** |
 | `max_rows_returned` | Ganzzahl | fakultativ; Standard: 200 |
 
 ```javascript
@@ -2795,7 +2797,7 @@ Durchsuchen von NCBI GEO DataSets (db=gds) und Rückgabe von Datensätzen auf Se
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `term` | Schnurschnur | **erforderlich** |
+| `term` | Zeichenfolge | **erforderlich** |
 | `retmax` | Ganzzahl | fakultativ; Standard: 500 |
 
 ```javascript
@@ -2808,7 +2810,7 @@ Holen Sie strukturierte Metadaten für GEO-Serien (GSE-Zugänge) mit einbezogene
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accessions` | String-Array | **erforderlich** |
+| `accessions` | Array aus Zeichenfolgen | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "geo_get_series", {"accessions": ["GSE131907"]})
@@ -2832,8 +2834,8 @@ Strukturierte Metadaten für MetaboLights-Studien (MTBLSxxx) aus der analysierte
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accessions` | String-Array | **erforderlich** |
-| `include_samples` | Boolean | fakultativ; Standard: falsch |
+| `accessions` | Array aus Zeichenfolgen | **erforderlich** |
+| `include_samples` | boolescher Wert | fakultativ; Standard: falsch |
 | `max_sample_rows_returned` | Ganzzahl | fakultativ; Standard: 200 |
 
 ```javascript
@@ -2846,8 +2848,8 @@ Komplettes Dateiinventar für eine öffentliche MetaboLights-Studie — der Top-
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
-| `include_data_files` | Boolean | fakultativ; Standard: true |
+| `accession` | Zeichenfolge | **erforderlich** |
+| `include_data_files` | boolescher Wert | fakultativ; Standard: true |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_get_study_files", {"accession": "MTBLS1"})
@@ -2859,8 +2861,8 @@ Glob-Suche über einen MetaboLights study's-Rohdatenordner (FILES-Baum). `patter
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
-| `pattern` | Schnurschnur | fakultativ |
+| `accession` | Zeichenfolge | **erforderlich** |
+| `pattern` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_search_data_files", {"accession": "MTBLS1", "pattern": "*.zip"})
@@ -2872,8 +2874,8 @@ Finden Sie MGnify Metagenomik-Studien nach Freitext ODER Biom-Linie (geben Sie g
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | fakultativ |
-| `biome_lineage` | Schnurschnur | fakultativ |
+| `query` | Zeichenfolge | fakultativ |
+| `biome_lineage` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_search_studies", {"query": "coral"})
@@ -2885,8 +2887,8 @@ Strukturierte Datensätze für MGnify-Studien abrufen (MGYS-Zugänge). Mit inclu
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accessions` | String-Array | **erforderlich** |
-| `include_analyses` | Boolean | fakultativ; Standard: falsch |
+| `accessions` | Array aus Zeichenfolgen | **erforderlich** |
+| `include_analyses` | boolescher Wert | fakultativ; Standard: falsch |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_get_studies", {"accessions": ["MGYS00000410"], "include_analyses": false})
@@ -2898,7 +2900,7 @@ Liste ALLE Analysen einer MGnify-Studie (vollständige, zählverifizierte Pagini
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
+| `accession` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_get_study_analyses", {"accession": "MGYS00000410"})
@@ -2910,10 +2912,10 @@ PRIDE Archive Proteomics-Projekte durchsuchen (vollständig, api_total-verifizie
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `keyword` | Schnurschnur | fakultativ |
-| `organism` | Schnurschnur | fakultativ |
-| `instrument` | Schnurschnur | fakultativ |
-| `disease` | Schnurschnur | fakultativ |
+| `keyword` | Zeichenfolge | fakultativ |
+| `organism` | Zeichenfolge | fakultativ |
+| `instrument` | Zeichenfolge | fakultativ |
+| `disease` | Zeichenfolge | fakultativ |
 | `extra_filters` | Objekt | fakultativ |
 | `max_records_returned` | Ganzzahl | fakultativ; Standard: 50 |
 
@@ -2927,7 +2929,7 @@ Vollständige Metadaten für PRIDE-Projekte per Beitritt abrufen (z.B.) PXD01015
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accessions` | String-Array | **erforderlich** |
+| `accessions` | Array aus Zeichenfolgen | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_get_projects", {"accessions": ["PXD010154"]})
@@ -2939,8 +2941,8 @@ Liste der Proteinnachweisreihen für ein PRIDE-Affinitäts-Proteomik-Projekt (Se
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `project_accession` | Schnurschnur | **erforderlich** |
-| `keyword` | Schnurschnur | fakultativ |
+| `project_accession` | Zeichenfolge | **erforderlich** |
+| `keyword` | Zeichenfolge | fakultativ |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_search_project_proteins", {"project_accession": "PXD010154"})
@@ -2952,7 +2954,7 @@ Finden Sie PRIDE-Projekte, die ein Protein enthalten (MS-Archiv-Richtung). `prot
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `protein_accession` | Schnurschnur | **erforderlich** |
+| `protein_accession` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_find_projects_for_protein", {"protein_accession": "P04637"})
@@ -2971,7 +2973,7 @@ CellGuide (CELLxGENE) cell-type info by Cell Ontology id or name: name, synonyms
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `cell_type` | Schnurschnur | **erforderlich** |
+| `cell_type` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_cell_type_info", {"cell_type": "acinar cell"})
@@ -2983,7 +2985,7 @@ CellGuide-Zellentypen nach freiem Text über Name und Synonyme suchen (das CDN h
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
+| `query` | Zeichenfolge | **erforderlich** |
 | `limit` | Ganzzahl | fakultativ; Standard: 25 |
 
 ```javascript
@@ -2996,8 +2998,8 @@ CellGuide-Markergene für einen Zelltyp (ID oder Name): rechnerisch (Daten abgel
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `cell_type` | Schnurschnur | **erforderlich** |
-| `marker_type` | Schnurschnur | fakultativ; Standard: "computational"; enum: &#91;"computational", "canonical"&#93; |
+| `cell_type` | Zeichenfolge | **erforderlich** |
+| `marker_type` | Zeichenfolge | fakultativ; Standard: "computational"; enum: &#91;"computational", "canonical"&#93; |
 | `limit` | Ganzzahl | fakultativ; Standard: 25 |
 
 ```javascript
@@ -3010,7 +3012,7 @@ CellGuide-Quellendatensätze und Veröffentlichungen, die zu einem Zelltyp (ID o
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `cell_type` | Schnurschnur | **erforderlich** |
+| `cell_type` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_source_data", {"cell_type": "CL:0000622"})
@@ -3022,7 +3024,7 @@ Anatomische Gewebe, in denen ein Zelltyp (ID oder Name) beobachtet wird, aggregi
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `cell_type` | Schnurschnur | **erforderlich** |
+| `cell_type` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_cell_tissues", {"cell_type": "T cell"})
@@ -3041,11 +3043,11 @@ Suche nach ENCODE-Funktionalgenomik-Experimenten (ChIP-seq, ATAC-seq, ...). Filt
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `assay_title` | Schnurschnur | fakultativ |
-| `target` | Schnurschnur | fakultativ |
-| `organism` | Schnurschnur | fakultativ |
-| `status` | Schnurschnur | fakultativ; Standard: "released" |
-| `date_released_before` | Schnurschnur | fakultativ |
+| `assay_title` | Zeichenfolge | fakultativ |
+| `target` | Zeichenfolge | fakultativ |
+| `organism` | Zeichenfolge | fakultativ |
+| `status` | Zeichenfolge | fakultativ; Standard: "released" |
+| `date_released_before` | Zeichenfolge | fakultativ |
 | `extra_filters` | Objekt | fakultativ |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 100 |
 
@@ -3059,11 +3061,11 @@ ENCODE-Bioproben (Zelllinien, Gewebe, Primärzellen) durchsuchen. Filter: term_n
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `term_name` | Schnurschnur | fakultativ |
-| `classification` | Schnurschnur | fakultativ |
-| `organism` | Schnurschnur | fakultativ |
-| `status` | Schnurschnur | fakultativ; Standard: "released" |
-| `date_created_before` | Schnurschnur | fakultativ |
+| `term_name` | Zeichenfolge | fakultativ |
+| `classification` | Zeichenfolge | fakultativ |
+| `organism` | Zeichenfolge | fakultativ |
+| `status` | Zeichenfolge | fakultativ; Standard: "released" |
+| `date_created_before` | Zeichenfolge | fakultativ |
 | `extra_filters` | Objekt | fakultativ |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 100 |
 
@@ -3077,11 +3079,11 @@ Liste ENCODE-Dateien nach Format / Assay / Bioprobe. Filter: file_format ("fastq
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `file_format` | Schnurschnur | fakultativ |
-| `assay_term_name` | Schnurschnur | fakultativ |
-| `biosample_term_name` | Schnurschnur | fakultativ |
-| `status` | Schnurschnur | fakultativ; Standard: "released" |
-| `date_created_before` | Schnurschnur | fakultativ |
+| `file_format` | Zeichenfolge | fakultativ |
+| `assay_term_name` | Zeichenfolge | fakultativ |
+| `biosample_term_name` | Zeichenfolge | fakultativ |
+| `status` | Zeichenfolge | fakultativ; Standard: "released" |
+| `date_created_before` | Zeichenfolge | fakultativ |
 | `extra_filters` | Objekt | fakultativ |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 100 |
 
@@ -3095,7 +3097,7 @@ Erhalten Sie ein ENCODE-Experiment durch Beitritt (z.B.) "ENCSR000AKP". Gibt ein
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
+| `accession` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_experiment", {"accession": "ENCSR000AKP"})
@@ -3107,7 +3109,7 @@ Erhalten Sie eine ENCODE-Datei durch Beitritt (z.B.) "ENCFF002JUR". Gibt einen D
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
+| `accession` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_file", {"accession": "ENCFF002JUR"})
@@ -3119,7 +3121,7 @@ Erhalten Sie eine ENCODE-Bioprobe durch Beitritt (z.B.) "ENCBS013JZP". Gibt eine
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `accession` | Schnurschnur | **erforderlich** |
+| `accession` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_biosample", {"accession": "ENCBS013JZP"})
@@ -3131,7 +3133,7 @@ Erhalten Sie ein JASPAR TF Bindungsprofil durch VERSIONED matrix id (z.B.) "MA00
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `matrix_id` | Schnurschnur | **erforderlich** |
+| `matrix_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_get_matrix", {"matrix_id": "MA0002.2"})
@@ -3143,7 +3145,7 @@ Listen Sie alle Versionen einer JASPAR-Basismatrix-ID auf (z.B.) "MA0002". Gibt 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `base_id` | Schnurschnur | **erforderlich** |
+| `base_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_matrix_versions", {"base_id": "MA0002"})
@@ -3155,12 +3157,12 @@ Suchen/listen Sie JASPAR TF Binding Profile (der Vollprofilkatalog). Filter (all
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `collection` | Schnurschnur | fakultativ |
-| `tax_group` | Schnurschnur | fakultativ |
+| `collection` | Zeichenfolge | fakultativ |
+| `tax_group` | Zeichenfolge | fakultativ |
 | `tax_id` | Ganzzahl | fakultativ |
-| `name` | Schnurschnur | fakultativ |
-| `search` | Schnurschnur | fakultativ |
-| `version` | Schnurschnur | fakultativ |
+| `name` | Zeichenfolge | fakultativ |
+| `search` | Zeichenfolge | fakultativ |
+| `version` | Zeichenfolge | fakultativ |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 1000 |
 
 ```javascript
@@ -3221,12 +3223,12 @@ UniBind ChIP-seq-Datensätze mit TFBS-Vorhersagen mit hohem Vertrauen durchsuche
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `tf_name` | Schnurschnur | fakultativ |
-| `cell_line` | Schnurschnur | fakultativ |
-| `species` | Schnurschnur | fakultativ |
-| `collection` | Schnurschnur | fakultativ; enum: &#91;"Robust", "Permissive"&#93; |
-| `jaspar_id` | Schnurschnur | fakultativ |
-| `search` | Schnurschnur | fakultativ |
+| `tf_name` | Zeichenfolge | fakultativ |
+| `cell_line` | Zeichenfolge | fakultativ |
+| `species` | Zeichenfolge | fakultativ |
+| `collection` | Zeichenfolge | fakultativ; enum: &#91;"Robust", "Permissive"&#93; |
+| `jaspar_id` | Zeichenfolge | fakultativ |
+| `search` | Zeichenfolge | fakultativ |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 200 |
 
 ```javascript
@@ -3239,7 +3241,7 @@ Holen Sie sich ein UniBind-Dataset's-Detail: pro Modell TFBS zählt + Datei-URLs
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `tf_id` | Schnurschnur | **erforderlich** |
+| `tf_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("regulation", "unibind_get_dataset", {"tf_id": "ENCSR000AUE.A549_lung_carcinoma.CTCF"})
@@ -3251,12 +3253,12 @@ TF-Bindungsstellen überlappen eine genomische Region (UniBind 2021-Karten), die
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `genome` | Schnurschnur | **erforderlich** |
-| `chrom` | Schnurschnur | **erforderlich** |
+| `genome` | Zeichenfolge | **erforderlich** |
+| `chrom` | Zeichenfolge | **erforderlich** |
 | `start` | Ganzzahl | **erforderlich** |
 | `end` | Ganzzahl | **erforderlich** |
-| `tf_name` | Schnurschnur | fakultativ |
-| `collection` | Schnurschnur | fakultativ; Standard: "Robust"; enum: &#91;"Robust", "Permissive"&#93; |
+| `tf_name` | Zeichenfolge | fakultativ |
+| `collection` | Zeichenfolge | fakultativ; Standard: "Robust"; enum: &#91;"Robust", "Permissive"&#93; |
 | `max_sites` | Ganzzahl | fakultativ; Standard: 2000 |
 
 ```javascript
@@ -3276,17 +3278,17 @@ Search Grants.gov Finanzierungsmöglichkeiten über die Suche2 API (vollständig
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `keyword` | Schnurschnur | fakultativ |
-| `opportunity_number` | Schnurschnur | fakultativ |
-| `aln` | Schnurschnur | fakultativ |
-| `agencies` | String-Array | fakultativ |
-| `opportunity_statuses` | String-Array | fakultativ |
-| `eligibilities` | String-Array | fakultativ |
-| `funding_categories` | String-Array | fakultativ |
-| `funding_instruments` | String-Array | fakultativ |
-| `count_only` | Boolean | fakultativ; Standard: falsch |
+| `keyword` | Zeichenfolge | fakultativ |
+| `opportunity_number` | Zeichenfolge | fakultativ |
+| `aln` | Zeichenfolge | fakultativ |
+| `agencies` | Array aus Zeichenfolgen | fakultativ |
+| `opportunity_statuses` | Array aus Zeichenfolgen | fakultativ |
+| `eligibilities` | Array aus Zeichenfolgen | fakultativ |
+| `funding_categories` | Array aus Zeichenfolgen | fakultativ |
+| `funding_instruments` | Array aus Zeichenfolgen | fakultativ |
+| `count_only` | boolescher Wert | fakultativ; Standard: falsch |
 | `max_records` | Ganzzahl | fakultativ; Standard: 100 |
-| `include_facets` | Boolean | fakultativ; Standard: true |
+| `include_facets` | boolescher Wert | fakultativ; Standard: true |
 
 ```javascript
 const result = await host.mcp("research-resources", "search_grants", {"keyword": "cancer", "agencies": ["HHS-NIH11"], "max_records": 25})
@@ -3298,7 +3300,7 @@ Volltextsuche nach Antibody Registry (antibodyregistry.org, ~3.2M records). Toke
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `query` | Schnurschnur | **erforderlich** |
+| `query` | Zeichenfolge | **erforderlich** |
 | `page` | Ganzzahl | fakultativ |
 | `page_size` | Ganzzahl | fakultativ; Standard: 100 |
 | `max_records` | Ganzzahl | fakultativ; Standard: 500 |
@@ -3313,7 +3315,7 @@ Fetch Antibody Registry Detaildatensatz (s) für einen Antikörper-Zugang / RRID
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `antibody_id` | Schnurschnur | **erforderlich** |
+| `antibody_id` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("research-resources", "get_antibody", {"antibody_id": "RRID:AB_3643095"})
@@ -3325,8 +3327,8 @@ Finden Sie Antikörper nach Anbieterkatalognummer (genau, fallunempfindlich). Im
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `catalog_number` | Schnurschnur | **erforderlich** |
-| `vendor` | Schnurschnur | fakultativ |
+| `catalog_number` | Zeichenfolge | **erforderlich** |
+| `vendor` | Zeichenfolge | fakultativ |
 | `page_size` | Ganzzahl | fakultativ; Standard: 100 |
 
 ```javascript
@@ -3370,7 +3372,7 @@ Listen Sie die in einem bestimmten Mart verfügbaren Datensätze auf (z.B.) hsap
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `mart` | Schnurschnur | **erforderlich** |
+| `mart` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_datasets", {"mart": "ENSEMBL_MART_ENSEMBL"})
@@ -3382,8 +3384,8 @@ Listen Sie die am häufigsten verwendeten Attribute für einen Datensatz (eine k
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `mart` | Schnurschnur | **erforderlich** |
-| `dataset` | Schnurschnur | **erforderlich** |
+| `mart` | Zeichenfolge | **erforderlich** |
+| `dataset` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_common_attributes", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3395,8 +3397,8 @@ Listen Sie alle für einen Datensatz verfügbaren Attribute auf, abzüglich Homo
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `mart` | Schnurschnur | **erforderlich** |
-| `dataset` | Schnurschnur | **erforderlich** |
+| `mart` | Zeichenfolge | **erforderlich** |
+| `dataset` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_all_attributes", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3408,8 +3410,8 @@ Listen Sie die Filter auf, die für einen Datensatz verfügbar sind. Filter vere
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `mart` | Schnurschnur | **erforderlich** |
-| `dataset` | Schnurschnur | **erforderlich** |
+| `mart` | Zeichenfolge | **erforderlich** |
+| `dataset` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_filters", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3421,9 +3423,9 @@ Führen Sie eine BioMart-Abfrage aus: Holen Sie die angeforderten Attribute für
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `mart` | Schnurschnur | **erforderlich** |
-| `dataset` | Schnurschnur | **erforderlich** |
-| `attributes` | String-Array | **erforderlich** |
+| `mart` | Zeichenfolge | **erforderlich** |
+| `dataset` | Zeichenfolge | **erforderlich** |
+| `attributes` | Array aus Zeichenfolgen | **erforderlich** |
 | `filters` | Objekt | fakultativ |
 
 ```javascript
@@ -3436,11 +3438,11 @@ const result = await host.mcp("biomart", "get_data", {"mart": "ENSEMBL_MART_ENSE
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `mart` | Schnurschnur | **erforderlich** |
-| `dataset` | Schnurschnur | **erforderlich** |
-| `from_attr` | Schnurschnur | **erforderlich** |
-| `to_attr` | Schnurschnur | **erforderlich** |
-| `target` | Schnurschnur | **erforderlich** |
+| `mart` | Zeichenfolge | **erforderlich** |
+| `dataset` | Zeichenfolge | **erforderlich** |
+| `from_attr` | Zeichenfolge | **erforderlich** |
+| `to_attr` | Zeichenfolge | **erforderlich** |
+| `target` | Zeichenfolge | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("biomart", "get_translation", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "from_attr": "hgnc_symbol", "to_attr": "ensembl_gene_id", "target": "TP53"})
@@ -3452,11 +3454,11 @@ const result = await host.mcp("biomart", "get_translation", {"mart": "ENSEMBL_MA
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `mart` | Schnurschnur | **erforderlich** |
-| `dataset` | Schnurschnur | **erforderlich** |
-| `from_attr` | Schnurschnur | **erforderlich** |
-| `to_attr` | Schnurschnur | **erforderlich** |
-| `targets` | String-Array | **erforderlich** |
+| `mart` | Zeichenfolge | **erforderlich** |
+| `dataset` | Zeichenfolge | **erforderlich** |
+| `from_attr` | Zeichenfolge | **erforderlich** |
+| `to_attr` | Zeichenfolge | **erforderlich** |
+| `targets` | Array aus Zeichenfolgen | **erforderlich** |
 
 ```javascript
 const result = await host.mcp("biomart", "batch_translate", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "from_attr": "hgnc_symbol", "to_attr": "ensembl_gene_id", "targets": ["TP53", "BRCA1", "BRCA2"]})
@@ -3475,9 +3477,9 @@ Suchen Sie nach kaufbaren Verbindungen in ZINC22 / ZINC20 nach ZINC-Kennung - An
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'string', 'array'&#93; | **erforderlich** |
+| `zinc_ids` | ['string', 'array'] | **erforderlich** |
 | `max_results` | Ganzzahl | fakultativ; Standard: 50 |
-| `timeout_s` | Nummer | fakultativ; Standard: 25 |
+| `timeout_s` | Zahl | fakultativ; Standard: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_id", {"zinc_ids": ["ZINC000000000012"]})
@@ -3489,11 +3491,11 @@ Suche ZINC22's erschaffbaren chemischen Raum nach Struktur - Antworten "was ersc
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `smiles` | Schnurschnur | **erforderlich** |
+| `smiles` | Zeichenfolge | **erforderlich** |
 | `dist` | Ganzzahl | fakultativ; Standard: 0 |
 | `adist` | Ganzzahl | fakultativ |
 | `max_results` | Ganzzahl | fakultativ; Standard: 50 |
-| `timeout_s` | Nummer | fakultativ; Standard: 25 |
+| `timeout_s` | Zahl | fakultativ; Standard: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_smiles", {"smiles": "CC(=O)Oc1ccccc1C(=O)O", "dist": 2})
@@ -3505,9 +3507,9 @@ Lösen Sie die Lieferantenkatalognummern für ZINC-Verbindungen auf - Antworten 
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `supplier_codes` | &#91;'string', 'array'&#93; | **erforderlich** |
+| `supplier_codes` | ['string', 'array'] | **erforderlich** |
 | `max_results` | Ganzzahl | fakultativ; Standard: 50 |
-| `timeout_s` | Nummer | fakultativ; Standard: 25 |
+| `timeout_s` | Zahl | fakultativ; Standard: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_supplier", {"supplier_codes": ["MCULE-2311834287"]})
@@ -3520,8 +3522,8 @@ Zeichnen Sie eine Zufallsstichprobe von käuflichen Verbindungen aus ZINC22 - f�
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
 | `count` | Ganzzahl | fakultativ; Standard: 50 |
-| `subset` | Schnurschnur | fakultativ |
-| `timeout_s` | Nummer | fakultativ; Standard: 25 |
+| `subset` | Zeichenfolge | fakultativ |
+| `timeout_s` | Zahl | fakultativ; Standard: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_random_sample", {"count": 25, "subset": "lead-like"})
@@ -3533,8 +3535,8 @@ Suchen Sie andockfähige 3D-Strukturen für ZINC-Verbindungen. ZINC22 liefert vo
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'string', 'array'&#93; | **erforderlich** |
-| `timeout_s` | Nummer | fakultativ; Standard: 25 |
+| `zinc_ids` | ['string', 'array'] | **erforderlich** |
+| `timeout_s` | Zahl | fakultativ; Standard: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_get_3d", {"zinc_ids": ["ZINC000000000012"]})

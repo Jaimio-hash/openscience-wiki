@@ -2,7 +2,7 @@
 title: "Connector 가동 참고"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-16'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -36,7 +36,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## 작업 입력 {/* #operation-inputs */}
 
-한 번에 Connector을 확장합니다. 필수 필드는 **(주)** 표시; limits/defaults 여기에 표시된 응용 프로그램 schema. JSON 스키마, 전체 반품 설명 및 에이전트 사이드 호출 예제를 배열 <ExampleDownload path="/examples/capabilities/connector-catalog-v0.29.0.json">완벽한 다운로드 레지스트리</ExampleDownload>을 상담하십시오. 도구가 `accessions`, `cids`, `rs_id` 또는 다른 네임스페이스 별 필드를 기대할 때 일반 `id`을 통과하지 마십시오.
+한 번에 Connector을 확장합니다. 필수 필드는 **(주)** 표시; 이 참조 및 다운로드는 Open-Science **v0.30.1** 스키마를 사용합니다. 배열된 `input.required` 명부는 권위입니다; 레거시 최고 수준의 `required` 목록은 absent 될 수 있습니다. JSON 스키마, 전체 반품 설명 및 에이전트 사이드 호출 예제를 배열 <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">완벽한 다운로드 레지스트리</ExampleDownload>을 상담하십시오. 도구가 `accessions`, `cids`, `rs_id` 또는 다른 네임스페이스 별 필드를 기대할 때 일반 `id`을 통과하지 마십시오.
 
 
 ## 뚱 베어 {/* #family-1 */}
@@ -50,10 +50,10 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `namespace` | 뚱 베어 | 선택 사항; 기본: "name"; 줌: &#91;"name", "smiles", "inchikey", "cid"&#93; |
-| `max_cids` | 뚱 베어 | 선택 사항; 기본: 25; 최소: 1; 최대: 100 |
-| `with_properties` | boolean의 특징 | 선택 사항; 기본값: true |
+| `query` | 문자열 | **필수** |
+| `namespace` | 문자열 | 선택 사항; 기본: "name"; 줌: &#91;"name", "smiles", "inchikey", "cid"&#93; |
+| `max_cids` | 정수 | 선택 사항; 기본: 25; 최소: 1; 최대: 100 |
+| `with_properties` | 불리언 | 선택 사항; 기본값: true |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_search_compounds", {"query": "aspirin", "max_cids": 25})
@@ -65,9 +65,9 @@ Full computed-property record for batch of PubChem CIDs, 옵션 capped synonym l
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `cids` | integer의 배열 | **(주)**; 최소품목: 1; 최대품목: 50 |
-| `include_synonyms` | boolean의 특징 | 선택 사항; 기본값: false |
-| `max_synonyms` | 뚱 베어 | 선택 사항; 기본: 30 |
+| `cids` | 정수 배열 | **필수**; 최소품목: 1; 최대품목: 50 |
+| `include_synonyms` | 불리언 | 선택 사항; 기본값: false |
+| `max_synonyms` | 정수 | 선택 사항; 기본: 30 |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_get_compounds", {"cids": [2244, 2519], "include_synonyms": false})
@@ -79,10 +79,10 @@ const result = await host.mcp("chemistry", "pubchem_get_compounds", {"cids": [22
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `smiles` | 뚱 베어 | **(주)** |
-| `threshold` | 뚱 베어 | 선택 사항; 기본: 90; 최소: 1; 최대: 100 |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 50; 최소: 1; 최대: 200 |
-| `with_properties` | boolean의 특징 | 선택 사항; 기본값: false |
+| `smiles` | 문자열 | **필수** |
+| `threshold` | 정수 | 선택 사항; 기본: 90; 최소: 1; 최대: 100 |
+| `max_records` | 정수 | 선택 사항; 기본: 50; 최소: 1; 최대: 200 |
+| `with_properties` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_similarity_search", {"smiles": "CC(=O)OC1=CC=CC=C1C(=O)O", "threshold": 90})
@@ -94,9 +94,9 @@ Bioassay 활동 요약 한 PubChem 화합물 — assays 테스트, 어떤 목표
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `cid` | 뚱 베어 | **(주)** |
-| `active_only` | boolean의 특징 | 선택 사항; 기본값: false |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 100; 최소: 1; 최대: 1000 |
+| `cid` | 정수 | **필수** |
+| `active_only` | 불리언 | 선택 사항; 기본값: false |
+| `max_rows` | 정수 | 선택 사항; 기본: 100; 최소: 1; 최대: 1000 |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_get_bioassay_summary", {"cid": 2244, "active_only": true})
@@ -108,7 +108,7 @@ GHS 안전 분류 한 PubChem 화합물 (PUG-View 'GHS Classification' heading),
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `cid` | 뚱 베어 | **(주)** |
+| `cid` | 정수 | **필수** |
 
 ```javascript
 const result = await host.mcp("chemistry", "pubchem_get_safety", {"cid": 702})
@@ -120,9 +120,9 @@ ChEBI entities (name, synonyms, Formulae, InChIKeys)에 대한 전체 텍스트 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `term` | 뚱 베어 | **(주)** |
-| `max_results` | 뚱 베어 | 선택 사항; 기본: 20; 최소: 1; 최대: 100 |
-| `page` | 뚱 베어 | 선택 사항; 기본: 1; 최소: 1 |
+| `term` | 문자열 | **필수** |
+| `max_results` | 정수 | 선택 사항; 기본: 20; 최소: 1; 최대: 100 |
+| `page` | 정수 | 선택 사항; 기본: 1; 최소: 1 |
 
 ```javascript
 const result = await host.mcp("chemistry", "chebi_search", {"term": "caffeine", "max_results": 20})
@@ -134,9 +134,9 @@ const result = await host.mcp("chemistry", "chebi_search", {"term": "caffeine", 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `chebi_id` | 뚱 베어 | **(주)** |
-| `max_synonyms` | 뚱 베어 | 선택 사항; 기본: 30 |
-| `max_xrefs` | 뚱 베어 | 선택 사항; 기본: 50 |
+| `chebi_id` | 문자열 | **필수** |
+| `max_synonyms` | 정수 | 선택 사항; 기본: 30 |
+| `max_xrefs` | 정수 | 선택 사항; 기본: 50 |
 
 ```javascript
 const result = await host.mcp("chemistry", "chebi_get_entity", {"chebi_id": "CHEBI:27732"})
@@ -148,9 +148,9 @@ ChEBI entity의 종양 관계 - 그것이 무엇인지 (outgoing: /는 역할 / 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `chebi_id` | 뚱 베어 | **(주)** |
-| `relation_type` | 뚱 베어 | 옵션 정보 |
-| `max_relations` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `chebi_id` | 문자열 | **필수** |
+| `relation_type` | 문자열 | 옵션 정보 |
+| `max_relations` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("chemistry", "chebi_get_ontology", {"chebi_id": "CHEBI:27732", "relation_type": "has role"})
@@ -162,8 +162,8 @@ const result = await host.mcp("chemistry", "chebi_get_ontology", {"chebi_id": "C
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `limit` | 뚱 베어 | 선택 사항; 기본: 50; 최소: 1; 최대: 500 |
+| `query` | 문자열 | **필수** |
+| `limit` | 정수 | 선택 사항; 기본: 50; 최소: 1; 최대: 500 |
 
 ```javascript
 const result = await host.mcp("chemistry", "rhea_search_reactions", {"query": "caffeine", "limit": 50})
@@ -175,7 +175,7 @@ const result = await host.mcp("chemistry", "rhea_search_reactions", {"query": "c
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `rhea_id` | 뚱 베어 | **(주)** |
+| `rhea_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("chemistry", "rhea_get_reaction", {"rhea_id": "10280"})
@@ -187,9 +187,9 @@ const result = await host.mcp("chemistry", "rhea_get_reaction", {"rhea_id": "102
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `uniprot` | 뚱 베어 | **(주)** |
-| `affinity_cutoff_nm` | 이름 &#42; | 선택 사항; 기본: 10000 |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 100; 최소: 1; 최대: 1000 |
+| `uniprot` | 문자열 | **필수** |
+| `affinity_cutoff_nm` | 숫자 | 선택 사항; 기본: 10000 |
+| `max_rows` | 정수 | 선택 사항; 기본: 100; 최소: 1; 최대: 1000 |
 
 ```javascript
 const result = await host.mcp("chemistry", "bindingdb_ligands_by_target", {"uniprot": "P00533", "affinity_cutoff_nm": 100})
@@ -201,9 +201,9 @@ const result = await host.mcp("chemistry", "bindingdb_ligands_by_target", {"unip
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `smiles` | 뚱 베어 | **(주)** |
-| `similarity` | 이름 &#42; | 선택 사항; 기본: 0.85; 최소: 0.5; 최대: 1 |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 100; 최소: 1; 최대: 1000 |
+| `smiles` | 문자열 | **필수** |
+| `similarity` | 숫자 | 선택 사항; 기본: 0.85; 최소: 0.5; 최대: 1 |
+| `max_rows` | 정수 | 선택 사항; 기본: 100; 최소: 1; 최대: 1000 |
 
 ```javascript
 const result = await host.mcp("chemistry", "bindingdb_targets_by_compound", {"smiles": "CC(=O)OC1=CC=CC=C1C(=O)O", "similarity": 0.85})
@@ -222,15 +222,15 @@ const result = await host.mcp("chemistry", "bindingdb_targets_by_compound", {"sm
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | 옵션 정보 |
-| `year_from` | 뚱 베어 | 옵션 정보 |
-| `year_to` | 뚱 베어 | 옵션 정보 |
-| `work_type` | 뚱 베어 | 옵션 정보 |
-| `open_access_only` | boolean의 특징 | 옵션 정보 |
-| `venue` | 뚱 베어 | 옵션 정보 |
-| `sort` | 뚱 베어 | 선택 사항; 기본: "relevance"; 한국어 (ko)"관련 상품"· "cited_by_count"· "publication_date"· |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 50 |
-| `include_abstracts` | boolean의 특징 | 선택 사항; 기본값: false |
+| `query` | 문자열 | 옵션 정보 |
+| `year_from` | 정수 | 옵션 정보 |
+| `year_to` | 정수 | 옵션 정보 |
+| `work_type` | 문자열 | 옵션 정보 |
+| `open_access_only` | 불리언 | 옵션 정보 |
+| `venue` | 문자열 | 옵션 정보 |
+| `sort` | 문자열 | 선택 사항; 기본: "relevance"; 한국어 (ko)"관련 상품"· "cited_by_count"· "publication_date"· |
+| `max_records` | 정수 | 선택 사항; 기본: 50 |
+| `include_abstracts` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_search_works", {"query": "CRISPR base editing", "year_from": 2020, "open_access_only": true, "sort": "cited_by_count", "max_records": 25})
@@ -242,7 +242,7 @@ const result = await host.mcp("literature", "openalex_search_works", {"query": "
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `work_id` | 뚱 베어 | **(주)** |
+| `work_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_get_work", {"work_id": "W2741809807"})
@@ -254,10 +254,10 @@ const result = await host.mcp("literature", "openalex_get_work", {"work_id": "W2
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `work_id` | 뚱 베어 | **(주)** |
-| `sort` | 뚱 베어 | 선택 사항; 기본: "cited_by_count"; 크기: "cited_by_count", "publication_date", "relevance" |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 50 |
-| `include_abstracts` | boolean의 특징 | 선택 사항; 기본값: false |
+| `work_id` | 문자열 | **필수** |
+| `sort` | 문자열 | 선택 사항; 기본: "cited_by_count"; 크기: "cited_by_count", "publication_date", "relevance" |
+| `max_records` | 정수 | 선택 사항; 기본: 50 |
+| `include_abstracts` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_citations", {"work_id": "W2741809807", "sort": "cited_by_count", "max_records": 50})
@@ -269,8 +269,8 @@ CITES (outgoing references)를 작성하여 참조 목록 순서에 전체 메�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `work_id` | 뚱 베어 | **(주)** |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `work_id` | 문자열 | **필수** |
+| `max_records` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_references", {"work_id": "W2741809807", "max_records": 100})
@@ -282,8 +282,8 @@ OpenAlex 저자 프로필을 이름으로 검색합니다. Args: 쿼리 (매트 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 25 |
+| `query` | 문자열 | **필수** |
+| `max_records` | 정수 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_search_authors", {"query": "Jennifer Doudna", "max_records": 25})
@@ -295,8 +295,8 @@ Fetch one OpenAlex 저자 프로필과 그들의 최고 인용 작품. Args: aut
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `author_id` | 뚱 베어 | **(주)** |
-| `works_sample` | 뚱 베어 | 선택 사항; 기본: 10 |
+| `author_id` | 문자열 | **필수** |
+| `works_sample` | 정수 | 선택 사항; 기본: 10 |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_get_author", {"author_id": "A5023888391", "works_sample": 10})
@@ -308,8 +308,8 @@ OpenAlex - OA 상태, DOAJ 목록, APC, 인용 미터에서 저널 / 저장소 (
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `venue` | 뚱 베어 | **(주)** |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 10 |
+| `venue` | 문자열 | **필수** |
+| `max_records` | 정수 | 선택 사항; 기본: 10 |
 
 ```javascript
 const result = await host.mcp("literature", "openalex_venue_info", {"venue": "Nature", "max_records": 10})
@@ -321,14 +321,14 @@ const result = await host.mcp("literature", "openalex_venue_info", {"venue": "Na
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | 옵션 정보 |
-| `category` | 뚱 베어 | 옵션 정보 |
-| `date_from` | 뚱 베어 | 옵션 정보 |
-| `date_to` | 뚱 베어 | 옵션 정보 |
-| `start` | 뚱 베어 | 선택 사항; 기본: 0 |
-| `max_results` | 뚱 베어 | 선택 사항; 기본: 25 |
-| `sort_by` | 뚱 베어 | 선택 사항; 기본: "relevance"; 한국어 (ko)"관련 상품"· "제출일자"· "최근 업데이트"· |
-| `sort_order` | 뚱 베어 | 선택 사항; 기본: "descending"; koum : &#91;"descending", "ascending"&#93; |
+| `query` | 문자열 | 옵션 정보 |
+| `category` | 문자열 | 옵션 정보 |
+| `date_from` | 문자열 | 옵션 정보 |
+| `date_to` | 문자열 | 옵션 정보 |
+| `start` | 정수 | 선택 사항; 기본: 0 |
+| `max_results` | 정수 | 선택 사항; 기본: 25 |
+| `sort_by` | 문자열 | 선택 사항; 기본: "relevance"; 한국어 (ko)"관련 상품"· "제출일자"· "최근 업데이트"· |
+| `sort_order` | 문자열 | 선택 사항; 기본: "descending"; koum : &#91;"descending", "ascending"&#93; |
 
 ```javascript
 const result = await host.mcp("literature", "arxiv_search", {"query": "ti:transformer", "category": "cs.LG", "max_results": 10})
@@ -340,7 +340,7 @@ Batch-fetch arXiv 종이 메타 데이터 (포함. ) ID에 의해 - 100 용지�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `arxiv_ids` | 문자열의 배열 | **(주)** |
+| `arxiv_ids` | 문자열 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("literature", "arxiv_get_papers", {"arxiv_ids": ["2103.14030", "1706.03762v5"]})
@@ -352,7 +352,7 @@ Crossref DOI에 대한 출판사-deposited 메타데이터를 검색합니다. b
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `doi` | 뚱 베어 | **(주)**; 최소 길이: 1; 최대 길이: 2048 |
+| `doi` | 문자열 | **필수**; 최소 길이: 1; 최대 길이: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "crossref_get_work", {"doi": "10.1038/nature12968"})
@@ -365,7 +365,7 @@ const result = await host.mcp("literature", "crossref_get_work", {"doi": "10.103
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `doi` | 뚱 베어 | **(주)**; 최소 길이: 1; 최대 길이: 2048 |
+| `doi` | 문자열 | **필수**; 최소 길이: 1; 최대 길이: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "crossref_get_updates", {"doi": "10.1038/nature12968"})
@@ -378,11 +378,11 @@ DataCite dataset/software DOI 메타데이터를 검색합니다. 공급 질문,
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | 선택 사항; 최소 길이: 1; 최대 길이: 2000 |
-| `related_doi` | 뚱 베어 | 선택 사항; 최소 길이: 1; 최대 길이: 2048 |
-| `resource_type` | 뚱 베어 | 선택 사항; 기본: "dataset"; 한국어 (ko)"데이터셋"· "소프트웨어"· |
-| `page_size` | 뚱 베어 | 선택 사항; 기본: 20; 최소: 1; 최대: 100 |
-| `page` | 뚱 베어 | 선택 사항; 기본: 1; 최소: 1; 최대: 10000 |
+| `query` | 문자열 | 선택 사항; 최소 길이: 1; 최대 길이: 2000 |
+| `related_doi` | 문자열 | 선택 사항; 최소 길이: 1; 최대 길이: 2048 |
+| `resource_type` | 문자열 | 선택 사항; 기본: "dataset"; 한국어 (ko)"데이터셋"· "소프트웨어"· |
+| `page_size` | 정수 | 선택 사항; 기본: 20; 최소: 1; 최대: 100 |
+| `page` | 정수 | 선택 사항; 기본: 1; 최소: 1; 최대: 10000 |
 
 ```javascript
 const result = await host.mcp("literature", "datacite_search_records", {"query": "climate", "resource_type": "dataset", "page_size": 5})
@@ -395,7 +395,7 @@ const result = await host.mcp("literature", "datacite_search_records", {"query":
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `doi` | 뚱 베어 | **(주)**; 최소 길이: 1; 최대 길이: 2048 |
+| `doi` | 문자열 | **필수**; 최소 길이: 1; 최대 길이: 2048 |
 
 ```javascript
 const result = await host.mcp("literature", "datacite_get_record", {"doi": "10.14454/qdd3-ps68"})
@@ -414,13 +414,13 @@ const result = await host.mcp("literature", "datacite_get_record", {"doi": "10.1
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `max_results` | 뚱 베어 | 선택 사항; 기본: 20 |
-| `retstart` | 뚱 베어 | 선택 사항; 기본: 0 |
-| `sort` | 뚱 베어 | 선택 사항; 한국어 (ko)"관련 상품"· "pub_date"· "이름 &#42;"· "journal_name"· "이름 &#42;"· |
-| `date_from` | 뚱 베어 | 옵션 정보 |
-| `date_to` | 뚱 베어 | 옵션 정보 |
-| `datetype` | 뚱 베어 | 선택 사항; 기본: "pdat"; 한국어 (ko)"뚱 베어"· "칫"· "뚱 베어"· |
+| `query` | 문자열 | **필수** |
+| `max_results` | 정수 | 선택 사항; 기본: 20 |
+| `retstart` | 정수 | 선택 사항; 기본: 0 |
+| `sort` | 문자열 | 선택 사항; 한국어 (ko)"관련 상품"· "pub_date"· "이름 &#42;"· "journal_name"· "이름 &#42;"· |
+| `date_from` | 문자열 | 옵션 정보 |
+| `date_to` | 문자열 | 옵션 정보 |
+| `datetype` | 문자열 | 선택 사항; 기본: "pdat"; 한국어 (ko)"뚱 베어"· "칫"· "뚱 베어"· |
 
 ```javascript
 const result = await host.mcp("pubmed", "search_articles", {"query": "CRISPR gene editing", "max_results": 10})
@@ -432,7 +432,7 @@ pubMed의 상세한 기사 메타 데이터를 검색 PMID (bulk, efetch를 통�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **(주)** |
+| `pmids` | ['string', 'array'] | **필수** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_article_metadata", {"pmids": ["35486828", "33264437"]})
@@ -444,9 +444,9 @@ NCBI elink를 통해 한 개 이상의 소스 PMIDs에 대한 관련 PubMed 콘�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **(주)** |
-| `link_type` | 뚱 베어 | 선택 사항; 기본: "pubmed_pubmed"; 크기: "pubmed_pubmed", "pubmed_pmc", "pubmed_nucleotide", "pubmed_protein", "pubmed_gene" |
-| `max_results` | 뚱 베어 | 옵션 정보 |
+| `pmids` | ['string', 'array'] | **필수** |
+| `link_type` | 문자열 | 선택 사항; 기본: "pubmed_pubmed"; 크기: "pubmed_pubmed", "pubmed_pmc", "pubmed_nucleotide", "pubmed_protein", "pubmed_gene" |
+| `max_results` | 정수 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("pubmed", "find_related_articles", {"pmids": ["35486828"], "link_type": "pubmed_pubmed"})
@@ -458,7 +458,7 @@ NCBI ecitmatch를 통해 PMIDs에 대한 bibliographic 인용을 해결하십시
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `citations` | 객체의 배열 | **(주)** |
+| `citations` | 객체 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("pubmed", "lookup_article_by_citation", {"citations": [{"journal": "Science", "year": 1987, "volume": "235", "first_page": "182", "author": "Palmenberg AC"}]})
@@ -470,8 +470,8 @@ NCBI/PMC ID 변환기를 통해 PMID, PMCID 및 DOI 사이 변환. 통화 당 �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `ids` | &#91;'string', 'array'&#93; | **(주)** |
-| `id_type` | 뚱 베어 | 선택 사항; 기본: "pmid"; 한국어 (ko)"뚱 베어"· "뚱 베어"· "뚱 베어"· |
+| `ids` | ['string', 'array'] | **필수** |
+| `id_type` | 문자열 | 선택 사항; 기본: "pmid"; 한국어 (ko)"뚱 베어"· "뚱 베어"· "뚱 베어"· |
 
 ```javascript
 const result = await host.mcp("pubmed", "convert_article_ids", {"ids": ["PMC9046468"], "id_type": "pmcid"})
@@ -483,7 +483,7 @@ const result = await host.mcp("pubmed", "convert_article_ids", {"ids": ["PMC9046
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `pmc_ids` | &#91;'string', 'array'&#93; | **(주)** |
+| `pmc_ids` | ['string', 'array'] | **필수** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_full_text_article", {"pmc_ids": ["PMC9046468"]})
@@ -495,7 +495,7 @@ PubMed 저작권정보, PMC ID 변환기 (PMID ->)를 결합하여 PMID의 저�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `pmids` | &#91;'string', 'array'&#93; | **(주)** |
+| `pmids` | ['string', 'array'] | **필수** |
 
 ```javascript
 const result = await host.mcp("pubmed", "get_copyright_status", {"pmids": ["35891187", "34375400"]})
@@ -514,10 +514,10 @@ mygene.info를 통해 유전자 식별자/symbols를 해결하십시오 (1000 �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `terms` | 문자열의 배열 | **(주)** |
-| `scopes` | 뚱 베어 | 옵션 정보 |
-| `fields` | 뚱 베어 | 선택 사항; 기본: "symbol, 이름,taxid,entrezgene,ensembl.gene" |
-| `species` | 뚱 베어 | 옵션 정보 |
+| `terms` | 문자열 배열 | **필수** |
+| `scopes` | 문자열 | 옵션 정보 |
+| `fields` | 문자열 | 선택 사항; 기본: "symbol, 이름,taxid,entrezgene,ensembl.gene" |
+| `species` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("genes", "query_genes", {"terms": ["TP53", "BRCA1"], "scopes": "symbol,alias", "fields": "symbol,name,entrezgene,ensembl.gene", "species": "human"})
@@ -529,7 +529,7 @@ EBI Ontology Lookup Service (OLS4)의 ontologies 목록. `ontology_ids` (예를�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `ontology_ids` | 문자열의 배열 | 옵션 정보 |
+| `ontology_ids` | 문자열 배열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("genes", "list_ontologies", {"ontology_ids": ["efo", "go", "mondo"]})
@@ -541,11 +541,11 @@ const result = await host.mcp("genes", "list_ontologies", {"ontology_ids": ["efo
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `ontologies` | 문자열의 배열 | 옵션 정보 |
-| `exact` | boolean의 특징 | 선택 사항; 기본값: false |
-| `include_obsolete` | boolean의 특징 | 선택 사항; 기본값: false |
-| `max_results` | 뚱 베어 | 선택 사항; 기본: 20 |
+| `query` | 문자열 | **필수** |
+| `ontologies` | 문자열 배열 | 옵션 정보 |
+| `exact` | 불리언 | 선택 사항; 기본값: false |
+| `include_obsolete` | 불리언 | 선택 사항; 기본값: false |
+| `max_results` | 정수 | 선택 사항; 기본: 20 |
 
 ```javascript
 const result = await host.mcp("genes", "search_ontology_terms", {"query": "asthma", "ontologies": ["efo"], "max_results": 20})
@@ -557,10 +557,10 @@ Fetch one tology term's 세부사항, 또는 그것의 완전한 관련 맨끝 �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `ontology` | 뚱 베어 | **(주)** |
-| `term_id` | 뚱 베어 | **(주)** |
-| `relation` | 뚱 베어 | 선택 사항; 한국어 (ko)"엄마의 아들"· "아이 들과"· "의 역사"· "뚱 베어"· "hierarchical특허"· "의료기관"· "hierarchical아세터"· "히어로즈"· |
-| `include_parents` | boolean의 특징 | 선택 사항; 기본값: false |
+| `ontology` | 문자열 | **필수** |
+| `term_id` | 문자열 | **필수** |
+| `relation` | 문자열 | 선택 사항; 한국어 (ko)"엄마의 아들"· "아이 들과"· "의 역사"· "뚱 베어"· "hierarchical특허"· "의료기관"· "hierarchical아세터"· "히어로즈"· |
+| `include_parents` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("genes", "get_ontology_term", {"ontology": "go", "term_id": "GO:0006281", "relation": "children"})
@@ -572,12 +572,12 @@ QuickGO (complete, count-verified)에서 UniProt 유전자 제품에 대한 GO �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `uniprot_accession` | 뚱 베어 | **(주)** |
-| `aspect` | 뚱 베어 | 선택 사항; 한국어 (ko)"biological_process"· "molecular_function"· "cellular_component"· |
-| `evidence` | 뚱 베어 | 옵션 정보 |
-| `taxon_id` | 뚱 베어 | 옵션 정보 |
-| `include_term_names` | boolean의 특징 | 선택 사항; 기본값: false |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 200 |
+| `uniprot_accession` | 문자열 | **필수** |
+| `aspect` | 문자열 | 선택 사항; 한국어 (ko)"biological_process"· "molecular_function"· "cellular_component"· |
+| `evidence` | 문자열 | 옵션 정보 |
+| `taxon_id` | 정수 | 옵션 정보 |
+| `include_term_names` | 불리언 | 선택 사항; 기본값: false |
+| `max_records` | 정수 | 선택 사항; 기본: 200 |
 
 ```javascript
 const result = await host.mcp("genes", "get_go_annotations", {"uniprot_accession": "P04637", "aspect": "molecular_function", "evidence": "experimental_manual"})
@@ -589,9 +589,9 @@ const result = await host.mcp("genes", "get_go_annotations", {"uniprot_accession
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accessions` | 문자열의 배열 | **(주)** |
-| `format` | 뚱 베어 | 선택 사항; koum : &#91;"fasta", "txt"&#93; |
-| `fields` | 문자열의 배열 | 옵션 정보 |
+| `accessions` | 문자열 배열 | **필수** |
+| `format` | 문자열 | 선택 사항; koum : &#91;"fasta", "txt"&#93; |
+| `fields` | 문자열 배열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("genes", "get_uniprot_entries", {"accessions": ["P04637", "P38398"], "fields": ["accession", "id", "protein_name", "gene_names", "organism_name", "length"]})
@@ -603,12 +603,12 @@ Reactome Pathways (AnalysisService Token 워크플로우)에 대한 Map 유전�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `identifiers` | 문자열의 배열 | **(주)** |
-| `id_type` | 뚱 베어 | **(주)**; koum : &#91;"symbol", "uniprot"&#93; |
-| `species` | 뚱 베어 | 선택 사항; 기본: "Homo 사파이어" |
-| `resource` | 뚱 베어 | 선택 사항; 기본: "TOTAL" |
-| `include_disease` | boolean의 특징 | 선택 사항; 기본값: true |
-| `compact` | boolean의 특징 | 선택 사항; 기본값: true |
+| `identifiers` | 문자열 배열 | **필수** |
+| `id_type` | 문자열 | **필수**; koum : &#91;"symbol", "uniprot"&#93; |
+| `species` | 문자열 | 선택 사항; 기본: "Homo 사파이어" |
+| `resource` | 문자열 | 선택 사항; 기본: "TOTAL" |
+| `include_disease` | 불리언 | 선택 사항; 기본값: true |
+| `compact` | 불리언 | 선택 사항; 기본값: true |
 
 ```javascript
 const result = await host.mcp("genes", "map_reactome_pathways", {"identifiers": ["TP53", "EGFR", "BRCA1"], "id_type": "symbol"})
@@ -627,9 +627,9 @@ Ensembl gene/transcript/protein을 안정된 ID 또는 기호에 의한 유전�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `species` | 뚱 베어 | 선택 사항; 기본: "homo_sapiens" |
-| `expand` | boolean의 특징 | 선택 사항; 기본값: false |
+| `query` | 문자열 | **필수** |
+| `species` | 문자열 | 선택 사항; 기본: "homo_sapiens" |
+| `expand` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_lookup", {"query": "BRAF"})
@@ -641,8 +641,8 @@ Ensembl 안정적인 ID의 외부 교차 환경 — Ensembl gene/transcript ID�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `stable_id` | 뚱 베어 | **(주)** |
-| `external_db` | 뚱 베어 | 옵션 정보 |
+| `stable_id` | 문자열 | **필수** |
+| `external_db` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_xrefs", {"stable_id": "ENSG00000157764", "external_db": "HGNC"})
@@ -654,11 +654,11 @@ Ensembl VEP와 예측 변종 결과 - (거대한) per-transcript 결과 목록�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `variant_id` | 뚱 베어 | 옵션 정보 |
-| `region` | 뚱 베어 | 옵션 정보 |
-| `allele` | 뚱 베어 | 옵션 정보 |
-| `species` | 뚱 베어 | 선택 사항; 기본: "homo_sapiens" |
-| `max_consequences` | 뚱 베어 | 선택 사항; 기본: 25 |
+| `variant_id` | 문자열 | 옵션 정보 |
+| `region` | 문자열 | 옵션 정보 |
+| `allele` | 문자열 | 옵션 정보 |
+| `species` | 문자열 | 선택 사항; 기본: "homo_sapiens" |
+| `max_consequences` | 정수 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_vep_variant", {"variant_id": "rs7412", "max_consequences": 25})
@@ -670,13 +670,13 @@ Ensembl Compara (condensed rows — no alignments/sequences)에서 유전자의 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_symbol` | 뚱 베어 | 옵션 정보 |
-| `gene_id` | 뚱 베어 | 옵션 정보 |
-| `homology_type` | 뚱 베어 | 선택 사항; 기본: "orthologues"; 줌: &#91;"orthologues", "paralogues", "projections"&#93; |
-| `target_species` | 뚱 베어 | 옵션 정보 |
-| `target_taxon` | 뚱 베어 | 옵션 정보 |
-| `species` | 뚱 베어 | 선택 사항; 기본: "homo_sapiens" |
-| `max_homologies` | 뚱 베어 | 선택 사항; 기본: 200 |
+| `gene_symbol` | 문자열 | 옵션 정보 |
+| `gene_id` | 문자열 | 옵션 정보 |
+| `homology_type` | 문자열 | 선택 사항; 기본: "orthologues"; 줌: &#91;"orthologues", "paralogues", "projections"&#93; |
+| `target_species` | 문자열 | 옵션 정보 |
+| `target_taxon` | 정수 | 옵션 정보 |
+| `species` | 문자열 | 선택 사항; 기본: "homo_sapiens" |
+| `max_homologies` | 정수 | 선택 사항; 기본: 200 |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_homology", {"gene_symbol": "BRAF", "target_species": "mus_musculus"})
@@ -688,11 +688,11 @@ Ensembl의 Fetch 순서 — 안정된 ID (gene/transcript/protein) 또는 genomi
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `stable_id` | 뚱 베어 | 옵션 정보 |
-| `region` | 뚱 베어 | 옵션 정보 |
-| `species` | 뚱 베어 | 선택 사항; 기본: "homo_sapiens" |
-| `seq_type` | 뚱 베어 | 선택 사항; 기본: "genomic"; 크기: "genomic", "cdna", "cds", "protein" |
-| `max_bytes` | 뚱 베어 | 선택 사항; 기본: 400000 |
+| `stable_id` | 문자열 | 옵션 정보 |
+| `region` | 문자열 | 옵션 정보 |
+| `species` | 문자열 | 선택 사항; 기본: "homo_sapiens" |
+| `seq_type` | 문자열 | 선택 사항; 기본: "genomic"; 크기: "genomic", "cdna", "cds", "protein" |
+| `max_bytes` | 정수 | 선택 사항; 기본: 400000 |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_sequence", {"stable_id": "ENSP00000288602", "seq_type": "protein"})
@@ -704,10 +704,10 @@ Ensembl은 유전자, 성적, 규제 기능 (enhancers/promoters), 반복, 변�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `region` | 뚱 베어 | **(주)** |
-| `feature` | 뚱 베어 | 선택 사항; 기본: "gene"; 한국어 (ko)"- 한국어"· "관련 기사"· "뚱 베어"· "cds의"· "인증 및 인증"· "뚱 베어"· "제품 설명"· "의 특징"· "structural_variation"· "팟캐스트"· "간단한 설명"· "뚱 베어"· |
-| `species` | 뚱 베어 | 선택 사항; 기본: "homo_sapiens" |
-| `max_features` | 뚱 베어 | 선택 사항; 기본: 500 |
+| `region` | 문자열 | **필수** |
+| `feature` | 문자열 | 선택 사항; 기본: "gene"; 한국어 (ko)"- 한국어"· "관련 기사"· "뚱 베어"· "cds의"· "인증 및 인증"· "뚱 베어"· "제품 설명"· "의 특징"· "structural_variation"· "팟캐스트"· "간단한 설명"· "뚱 베어"· |
+| `species` | 문자열 | 선택 사항; 기본: "homo_sapiens" |
+| `max_features` | 정수 | 선택 사항; 기본: 500 |
 
 ```javascript
 const result = await host.mcp("genomes", "ensembl_overlap_region", {"region": "7:140719327-140925199", "feature": "gene"})
@@ -719,9 +719,9 @@ UCSC 게놈 브라우저 어셈블리에서 사용할 수있는 데이터 트랙
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `genome` | 뚱 베어 | 선택 사항; 기본: "hg38" |
-| `filter_text` | 뚱 베어 | 옵션 정보 |
-| `max_tracks` | 뚱 베어 | 선택 사항; 기본: 200 |
+| `genome` | 문자열 | 선택 사항; 기본: "hg38" |
+| `filter_text` | 문자열 | 옵션 정보 |
+| `max_tracks` | 정수 | 선택 사항; 기본: 200 |
 
 ```javascript
 const result = await host.mcp("genomes", "ucsc_list_tracks", {"genome": "hg38", "filter_text": "phyloP", "max_tracks": 50})
@@ -733,12 +733,12 @@ const result = await host.mcp("genomes", "ucsc_list_tracks", {"genome": "hg38", 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `track` | 뚱 베어 | **(주)** |
-| `chrom` | 뚱 베어 | **(주)** |
-| `start` | 뚱 베어 | **(주)** |
-| `end` | 뚱 베어 | **(주)** |
-| `genome` | 뚱 베어 | 선택 사항; 기본: "hg38" |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 1000 |
+| `track` | 문자열 | **필수** |
+| `chrom` | 문자열 | **필수** |
+| `start` | 정수 | **필수** |
+| `end` | 정수 | **필수** |
+| `genome` | 문자열 | 선택 사항; 기본: "hg38" |
+| `max_rows` | 정수 | 선택 사항; 기본: 1000 |
 
 ```javascript
 const result = await host.mcp("genomes", "ucsc_track_data", {"track": "cpgIslandExt", "chrom": "chr7", "start": 140700000, "end": 140800000, "genome": "hg38"})
@@ -750,13 +750,13 @@ UCSC phyloP / phastCons 트랙의 영역에 대한 진화 보수 요약 (다양�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `chrom` | 뚱 베어 | **(주)** |
-| `start` | 뚱 베어 | **(주)** |
-| `end` | 뚱 베어 | **(주)** |
-| `genome` | 뚱 베어 | 선택 사항; 기본: "hg38" |
-| `track` | 뚱 베어 | 선택 사항; 기본: "phyloP100way" |
-| `include_values` | boolean의 특징 | 선택 사항; 기본값: false |
-| `max_values` | 뚱 베어 | 선택 사항; 기본: 2000 |
+| `chrom` | 문자열 | **필수** |
+| `start` | 정수 | **필수** |
+| `end` | 정수 | **필수** |
+| `genome` | 문자열 | 선택 사항; 기본: "hg38" |
+| `track` | 문자열 | 선택 사항; 기본: "phyloP100way" |
+| `include_values` | 불리언 | 선택 사항; 기본값: false |
+| `max_values` | 정수 | 선택 사항; 기본: 2000 |
 
 ```javascript
 const result = await host.mcp("genomes", "ucsc_conservation", {"chrom": "chr7", "start": 140753330, "end": 140753380, "track": "phyloP100way"})
@@ -768,11 +768,11 @@ ENCODE transcription-factor 바인딩 사이트 클러스터는 지역 (세포 �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `chrom` | 뚱 베어 | **(주)** |
-| `start` | 뚱 베어 | **(주)** |
-| `end` | 뚱 베어 | **(주)** |
-| `genome` | 뚱 베어 | 선택 사항; 기본: "hg38" |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 1000 |
+| `chrom` | 문자열 | **필수** |
+| `start` | 정수 | **필수** |
+| `end` | 정수 | **필수** |
+| `genome` | 문자열 | 선택 사항; 기본: "hg38" |
+| `max_rows` | 정수 | 선택 사항; 기본: 1000 |
 
 ```javascript
 const result = await host.mcp("genomes", "ucsc_tfbs_clusters", {"chrom": "chr7", "start": 140699000, "end": 140760000, "genome": "hg38"})
@@ -784,9 +784,9 @@ Chromosome/contig 이름과 UCSC 집합의 크기 — 유효한 협조 및 itera
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `genome` | 뚱 베어 | 선택 사항; 기본: "hg38" |
-| `filter_text` | 뚱 베어 | 옵션 정보 |
-| `max_chroms` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `genome` | 문자열 | 선택 사항; 기본: "hg38" |
+| `filter_text` | 문자열 | 옵션 정보 |
+| `max_chroms` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", "filter_text": "chr1", "max_chroms": 25})
@@ -799,14 +799,16 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>작업 및 매개 변수 표시</summary>
 
+**gnomAD 좌표 규칙:**는 참고 집합을 가진 dataset 핀을 기록합니다. R2.1/ExAC 및 GRCh38 for r3/r4; 구조 가변 유전자 쿼리 사용 `gnomad_sv_r2_1` (GRCh37) 또는 `gnomad_sv_r4` (GRCh38); 핀을 변경하면 입력 좌표를 변환하지 않습니다. `gene_constraint` 및 gnomAD ClinVar 미러는 고정 GRCh38 유전자 검사를 사용하며 dataset 인수를 허용하지 않습니다. Mitochondrial 쿼리는 또한 고정 GRCh38 부모를 찾습니다; 유전자 또는 둘 다 주문한 지역 경계를 공급하고, 형태를 결코 두지 마십시오. 지역 경계는 1에서 2,147,483,647에 정수가 있어야 합니다. 1 백만 기초 차이 한계는 `region_variants`에 적용합니다; 별도의 mitochondrial 제한이 없습니다. 원래 SV dataset을 사용하여 release-specific Structure-variant ID를 유지하십시오.
+
 ### `get_variant` {/* #get_variant */}
 
 ID로 하나의 gnomAD 짧은 변형을 확인하고 인구 빈도를 반환하십시오. `variant_id`는 dataset's 참고 구조 (R3/r4를 위한 GRCh38, r2.1/ExAC를 위한 GRCh37를 위한 GRCh38)에 `chrom-pos-ref-alt`입니다, 예를들면. `19-44908822-C-T` (APOE rs7412); `search_variants`을 사용하여 rsID를 먼저 해결합니다.
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `variant_id` | 뚱 베어 | **(주)** |
-| `dataset` | 뚱 베어 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
+| `variant_id` | 문자열 | **필수** |
+| `dataset` | 문자열 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
 
 ```javascript
 const result = await host.mcp("variants", "get_variant", {"variant_id": "19-44908822-C-T", "dataset": "gnomad_r4"})
@@ -818,8 +820,8 @@ const result = await host.mcp("variants", "get_variant", {"variant_id": "19-4490
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `dataset` | 뚱 베어 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
+| `query` | 문자열 | **필수** |
+| `dataset` | 문자열 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
 
 ```javascript
 const result = await host.mcp("variants", "search_variants", {"query": "rs7412", "dataset": "gnomad_r4"})
@@ -827,13 +829,13 @@ const result = await host.mcp("variants", "search_variants", {"query": "rs7412",
 
 ### `gene_variants` {/* #gene_variants */}
 
-유전자의 모든 gnomAD 짧은 변형 목록 (전체 목록 — 큰 유전자의 수천이 될 수 있음). `gene_symbol` (HGNC 기호, 예를 들어) 중 하나를 정확히 통과하십시오. `APOE`) 또는 `gene_id` (Ensembl 유전자 ID, 예를 들어. `ENSG00000130203`).
+유전자의 모든 gnomAD 짧은 변형을 나열합니다. 유전자 경계와 변조 좌표는 dataset 참고 구조 (R2.1/ExAC, R3/r4를 위한 GRCh38를 위한 GRCh37)를 이용합니다. 전체 목록은 큰 유전자의 수천을 포함 할 수 있습니다. `gene_symbol` (HGNC 기호, 예를 들어) 중 하나를 정확히 통과하십시오. `APOE`) 또는 `gene_id` (Ensembl 유전자 ID, 예를 들어. `ENSG00000130203`).
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_symbol` | 뚱 베어 | 옵션 정보 |
-| `gene_id` | 뚱 베어 | 옵션 정보 |
-| `dataset` | 뚱 베어 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
+| `gene_symbol` | 문자열 | 옵션 정보 |
+| `gene_id` | 문자열 | 옵션 정보 |
+| `dataset` | 문자열 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
 
 ```javascript
 const result = await host.mcp("variants", "gene_variants", {"gene_symbol": "APOE", "dataset": "gnomad_r4"})
@@ -845,8 +847,8 @@ gnomAD 유전자 제약 메트릭 : pLI, 관찰 / 탐험 LoF-missense-synonymous
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_symbol` | 뚱 베어 | 옵션 정보 |
-| `gene_id` | 뚱 베어 | 옵션 정보 |
+| `gene_symbol` | 문자열 | 옵션 정보 |
+| `gene_id` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP53"})
@@ -854,14 +856,14 @@ const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP
 
 ### `region_variants` {/* #region_variants */}
 
-genomic 지역의 모든 gnomAD 짧은 변형 목록 (최대 1 Mb - 연속 창으로 더 큰 영역을 분할). `chrom`는 `chr` 접두사 (`1`-`22`, `X`, `Y`) 없이 염색체 이름입니다; `start`/`stop`는 1 기반 포괄적이고 `stop - start`는 &lt;= 1,000,000이어야 합니다. dataset는 좌표 (R3/r4를 위한 GRCh38)의 참고 구조를 결정합니다.
+genomic 지역의 모든 gnomAD 짧은 변형 목록 (최대 1 Mb - 연속 창으로 더 큰 영역을 분할). `chrom`는 `1`-`22`, `X`, `Y`, 선택적인 `chr` 접두사 및 더 낮은 케이스 `x`/`y`를 받아들입니다; `start`/`stop`는 1 기반 포괄적이고 `stop - start`는 &lt;= 1,000,000이어야 합니다. dataset는 좌표 (R2.1/ExAC, R3/r4를 위한 GRCh38를 위한 GRCh37를 위한 GRCh37)의 참고 구조를 결정합니다; 입력 좌표는 이미 빌드를 사용해야하며 자동 liftover가 없습니다.
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `chrom` | 뚱 베어 | **(주)** |
-| `start` | 뚱 베어 | **(주)** |
-| `stop` | 뚱 베어 | **(주)** |
-| `dataset` | 뚱 베어 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
+| `chrom` | 문자열 | **필수** |
+| `start` | 정수 | **필수**; 최소: 1; 최대: 2147483647 |
+| `stop` | 정수 | **필수**; 최소: 1; 최대: 2147483647 |
+| `dataset` | 문자열 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
 
 ```javascript
 const result = await host.mcp("variants", "region_variants", {"chrom": "1", "start": 55039475, "stop": 55064852, "dataset": "gnomad_r4"})
@@ -873,8 +875,8 @@ const result = await host.mcp("variants", "region_variants", {"chrom": "1", "sta
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `variant_id` | 뚱 베어 | **(주)** |
-| `source_build` | 뚱 베어 | 선택 사항; 기본: "GRCh37"; 한국어 (ko)"사이트맵"· "GRCh38의 특징"· |
+| `variant_id` | 문자열 | **필수** |
+| `source_build` | 문자열 | 선택 사항; 기본: "GRCh37"; 한국어 (ko)"사이트맵"· "GRCh38의 특징"· |
 
 ```javascript
 const result = await host.mcp("variants", "liftover_variant", {"variant_id": "1-55516888-G-GA", "source_build": "GRCh37"})
@@ -886,8 +888,8 @@ gnomAD에 의해 미러링 된 유전자의 ClinVar 변형 목록, 임상 중요
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_symbol` | 뚱 베어 | 옵션 정보 |
-| `gene_id` | 뚱 베어 | 옵션 정보 |
+| `gene_symbol` | 문자열 | 옵션 정보 |
+| `gene_id` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_variants", {"gene_symbol": "BRCA1"})
@@ -899,9 +901,9 @@ gnomAD 구조 변형 목록 (deletions, duplications, insertions, inversions, CN
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_symbol` | 뚱 베어 | 옵션 정보 |
-| `gene_id` | 뚱 베어 | 옵션 정보 |
-| `dataset` | 뚱 베어 | 선택 사항; 기본: "gnomad_sv_r4"; 한국어 (ko)"gnomad_sv_r4"· "gnomad_sv_r2_1"· |
+| `gene_symbol` | 문자열 | 옵션 정보 |
+| `gene_id` | 문자열 | 옵션 정보 |
+| `dataset` | 문자열 | 선택 사항; 기본: "gnomad_sv_r4"; 한국어 (ko)"gnomad_sv_r4"· "gnomad_sv_r2_1"· |
 
 ```javascript
 const result = await host.mcp("variants", "structural_variants", {"gene_symbol": "TP53", "dataset": "gnomad_sv_r4"})
@@ -913,8 +915,8 @@ const result = await host.mcp("variants", "structural_variants", {"gene_symbol":
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `sv_id` | 뚱 베어 | **(주)** |
-| `dataset` | 뚱 베어 | 선택 사항; 기본: "gnomad_sv_r4"; 한국어 (ko)"gnomad_sv_r4"· "gnomad_sv_r2_1"· |
+| `sv_id` | 문자열 | **필수** |
+| `dataset` | 문자열 | 선택 사항; 기본: "gnomad_sv_r4"; 한국어 (ko)"gnomad_sv_r4"· "gnomad_sv_r2_1"· |
 
 ```javascript
 const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "DEL_CHR17_A5250EA9", "dataset": "gnomad_sv_r4"})
@@ -926,11 +928,11 @@ gnomAD mitochondrial 변형을 나열하십시오. 이식성 인식 수 (`ac_het
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_symbol` | 뚱 베어 | 옵션 정보 |
-| `gene_id` | 뚱 베어 | 옵션 정보 |
-| `region_start` | 뚱 베어 | 옵션 정보 |
-| `region_stop` | 뚱 베어 | 옵션 정보 |
-| `dataset` | 뚱 베어 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
+| `gene_symbol` | 문자열 | 옵션 정보 |
+| `gene_id` | 문자열 | 옵션 정보 |
+| `region_start` | 정수 | 선택 사항; 최소: 1; 최대: 2147483647 |
+| `region_stop` | 정수 | 선택 사항; 최소: 1; 최대: 2147483647 |
+| `dataset` | 문자열 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
 
 ```javascript
 const result = await host.mcp("variants", "mitochondrial_variants", {"gene_symbol": "MT-TL1", "dataset": "gnomad_r4"})
@@ -942,8 +944,8 @@ ClinVar를 직접 검색하십시오 (라이브 NCBI, gnomAD's 스냅 샷) 임�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 50 |
+| `query` | 문자열 | **필수** |
+| `max_records` | 정수 | 선택 사항; 기본: 50 |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_search", {"query": "BRCA1 pathogenic[CLIN_SIG]", "max_records": 50})
@@ -955,7 +957,7 @@ VCV / RCV 액세스 또는 베어 변형 ID의 배치에 대한 전체 ClinVar �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accessions` | &#91;'string', 'array'&#93; | **(주)** |
+| `accessions` | ['string', 'array'] | **필수** |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_get_records", {"accessions": ["VCV000045122", "RCV000019428", "45123"]})
@@ -967,8 +969,8 @@ const result = await host.mcp("variants", "clinvar_get_records", {"accessions": 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `rsid` | 뚱 베어 | **(주)** |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 50 |
+| `rsid` | 문자열 | **필수** |
+| `max_records` | 정수 | 선택 사항; 기본: 50 |
 
 ```javascript
 const result = await host.mcp("variants", "clinvar_variant_by_rsid", {"rsid": "rs121913529", "max_records": 50})
@@ -980,7 +982,7 @@ Canonical dbSNP RefSNP는 rsIDs의 배치를 위해 기록합니다: GRCh38+GRCh
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `rsids` | 문자열의 배열 | **(주)** |
+| `rsids` | 문자열 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("variants", "dbsnp_get_rsids", {"rsids": ["rs7412", "rs429358"]})
@@ -992,11 +994,11 @@ genomic window의 dbSNP rsID 목록 (esearch db=snp positional index — NCBI Va
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `chrom` | 뚱 베어 | **(주)** |
-| `start` | 뚱 베어 | **(주)** |
-| `stop` | 뚱 베어 | **(주)** |
-| `assembly` | 뚱 베어 | 선택 사항; 기본: "GRCh38"; 한국어 (ko)"GRCh38의 특징"· "사이트맵"· |
-| `max_rsids` | 뚱 베어 | 선택 사항; 기본: 200 |
+| `chrom` | 문자열 | **필수** |
+| `start` | 정수 | **필수** |
+| `stop` | 정수 | **필수** |
+| `assembly` | 문자열 | 선택 사항; 기본: "GRCh38"; 한국어 (ko)"GRCh38의 특징"· "사이트맵"· |
+| `max_rsids` | 정수 | 선택 사항; 기본: 200 |
 
 ```javascript
 const result = await host.mcp("variants", "dbsnp_search_by_region", {"chrom": "19", "start": 44905000, "stop": 44910000, "assembly": "GRCh38"})
@@ -1015,17 +1017,17 @@ ClinicalTrials.gov에 대한 PRIMARY 검색. 상태, 개입, 스폰서, 위치, 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `condition` | 뚱 베어 | 옵션 정보 |
-| `intervention` | 뚱 베어 | 옵션 정보 |
-| `sponsor` | 뚱 베어 | 옵션 정보 |
-| `location` | 뚱 베어 | 옵션 정보 |
-| `status` | 문자열의 배열 | 옵션 정보 |
-| `phase` | 문자열의 배열 | 옵션 정보 |
-| `study_type` | 뚱 베어 | 선택 사항; 줌: &#91;"INTERVENTIONAL", "OBSERVATIONAL", "EXPANDED_ACCESS"&#93; |
-| `advanced_query` | 뚱 베어 | 옵션 정보 |
-| `page_size` | 뚱 베어 | 선택 사항; 기본: 10; 최소: 1; 최대: 1000 |
-| `page_token` | 뚱 베어 | 옵션 정보 |
-| `count_total` | boolean의 특징 | 선택 사항; 기본값: false |
+| `condition` | 문자열 | 옵션 정보 |
+| `intervention` | 문자열 | 옵션 정보 |
+| `sponsor` | 문자열 | 옵션 정보 |
+| `location` | 문자열 | 옵션 정보 |
+| `status` | 문자열 배열 | 옵션 정보 |
+| `phase` | 문자열 배열 | 옵션 정보 |
+| `study_type` | 문자열 | 선택 사항; 줌: &#91;"INTERVENTIONAL", "OBSERVATIONAL", "EXPANDED_ACCESS"&#93; |
+| `advanced_query` | 문자열 | 옵션 정보 |
+| `page_size` | 정수 | 선택 사항; 기본: 10; 최소: 1; 최대: 1000 |
+| `page_token` | 문자열 | 옵션 정보 |
+| `count_total` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_trials", {"condition": "lung cancer", "status": ["RECRUITING"], "phase": ["PHASE3"], "count_total": true, "page_size": 10})
@@ -1037,7 +1039,7 @@ NCT id (format "NCT")에 의해 하나의 평가에 대한 포괄적 인 세부 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `nct_id` | 뚱 베어 | **(주)** |
+| `nct_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "get_trial_details", {"nct_id": "NCT03661411"})
@@ -1049,13 +1051,13 @@ const result = await host.mcp("clinical-trials", "get_trial_details", {"nct_id":
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `sponsor_name` | 뚱 베어 | **(주)** |
-| `condition` | 뚱 베어 | 옵션 정보 |
-| `phase` | 문자열의 배열 | 옵션 정보 |
-| `status` | 문자열의 배열 | 옵션 정보 |
-| `page_size` | 뚱 베어 | 선택 사항; 기본: 10; 최소: 1; 최대: 1000 |
-| `page_token` | 뚱 베어 | 옵션 정보 |
-| `count_total` | boolean의 특징 | 선택 사항; 기본값: false |
+| `sponsor_name` | 문자열 | **필수** |
+| `condition` | 문자열 | 옵션 정보 |
+| `phase` | 문자열 배열 | 옵션 정보 |
+| `status` | 문자열 배열 | 옵션 정보 |
+| `page_size` | 정수 | 선택 사항; 기본: 10; 최소: 1; 최대: 1000 |
+| `page_token` | 문자열 | 옵션 정보 |
+| `count_total` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_by_sponsor", {"sponsor_name": "Pfizer", "phase": ["PHASE3"], "count_total": true})
@@ -1067,12 +1069,12 @@ const result = await host.mcp("clinical-trials", "search_by_sponsor", {"sponsor_
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `condition` | 뚱 베어 | 옵션 정보 |
-| `institution` | 뚱 베어 | 옵션 정보 |
-| `location` | 뚱 베어 | 옵션 정보 |
-| `investigator_name` | 뚱 베어 | 옵션 정보 |
-| `status` | 문자열의 배열 | 옵션 정보 |
-| `page_size` | 뚱 베어 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
+| `condition` | 문자열 | 옵션 정보 |
+| `institution` | 문자열 | 옵션 정보 |
+| `location` | 문자열 | 옵션 정보 |
+| `investigator_name` | 문자열 | 옵션 정보 |
+| `status` | 문자열 배열 | 옵션 정보 |
+| `page_size` | 정수 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_investigators", {"condition": "Alzheimer", "institution": "Mayo Clinic", "page_size": 20})
@@ -1084,11 +1086,11 @@ const result = await host.mcp("clinical-trials", "search_investigators", {"condi
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `nct_id` | 뚱 베어 | 옵션 정보 |
-| `condition` | 뚱 베어 | 옵션 정보 |
-| `phase` | 문자열의 배열 | 옵션 정보 |
-| `start_date_after` | 뚱 베어 | 옵션 정보 |
-| `page_size` | 뚱 베어 | 선택 사항; 기본: 50; 최소: 1; 최대: 1000 |
+| `nct_id` | 문자열 | 옵션 정보 |
+| `condition` | 문자열 | 옵션 정보 |
+| `phase` | 문자열 배열 | 옵션 정보 |
+| `start_date_after` | 문자열 | 옵션 정보 |
+| `page_size` | 정수 | 선택 사항; 기본: 50; 최소: 1; 최대: 1000 |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "analyze_endpoints", {"nct_id": "NCT03661411"})
@@ -1100,14 +1102,14 @@ const result = await host.mcp("clinical-trials", "analyze_endpoints", {"nct_id":
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `condition` | 뚱 베어 | 옵션 정보 |
-| `eligibility_keywords` | 뚱 베어 | 옵션 정보 |
-| `min_age` | 뚱 베어 | 옵션 정보 |
-| `max_age` | 뚱 베어 | 옵션 정보 |
-| `sex` | 뚱 베어 | 선택 사항; 모델 번호: "ALL", "MALE", "FEMALE" |
-| `status` | 문자열의 배열 | 옵션 정보 |
-| `page_size` | 뚱 베어 | 선택 사항; 기본: 10; 최소: 1; 최대: 1000 |
-| `page_token` | 뚱 베어 | 옵션 정보 |
+| `condition` | 문자열 | 옵션 정보 |
+| `eligibility_keywords` | 문자열 | 옵션 정보 |
+| `min_age` | 문자열 | 옵션 정보 |
+| `max_age` | 문자열 | 옵션 정보 |
+| `sex` | 문자열 | 선택 사항; 모델 번호: "ALL", "MALE", "FEMALE" |
+| `status` | 문자열 배열 | 옵션 정보 |
+| `page_size` | 정수 | 선택 사항; 기본: 10; 최소: 1; 최대: 1000 |
+| `page_token` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("clinical-trials", "search_by_eligibility", {"condition": "diabetes", "min_age": "65 Years", "sex": "FEMALE"})
@@ -1126,7 +1128,7 @@ ClinGen 유전자 배제 유효성 치료 (그런 증거는 유전자의 변형�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene` | 뚱 베어 | 옵션 정보 |
+| `gene` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_gene_validity", {"gene": "BRCA2"})
@@ -1138,8 +1140,8 @@ ClinGen 노출량 감도 치료: 유전자 (선택적으로 ISCA genomic/CNV 지
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene` | 뚱 베어 | 옵션 정보 |
-| `include_regions` | boolean의 특징 | 선택 사항; 기본값: false |
+| `gene` | 문자열 | 옵션 정보 |
+| `include_regions` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_dosage_sensitivity", {"gene": "TP53"})
@@ -1151,8 +1153,8 @@ ClinGen 임상 작용성 치료 : 유전자와 관련된 장애는 사전 증상
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene` | 뚱 베어 | 옵션 정보 |
-| `context` | 뚱 베어 | 선택 사항; 기본: "both"; koum: &#91;"adult", "pediatric", "both"&#93; |
+| `gene` | 문자열 | 옵션 정보 |
+| `context` | 문자열 | 선택 사항; 기본: "both"; koum: &#91;"adult", "pediatric", "both"&#93; |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_actionability", {"gene": "BRCA1", "context": "adult"})
@@ -1164,9 +1166,9 @@ ClinGen Evidence Repository (ERepo) 전문가 패널 변종 병원성 분류 (AC
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene` | 뚱 베어 | 옵션 정보 |
-| `caid` | 뚱 베어 | 옵션 정보 |
-| `hgvs` | 뚱 베어 | 옵션 정보 |
+| `gene` | 문자열 | 옵션 정보 |
+| `caid` | 문자열 | 옵션 정보 |
+| `hgvs` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "clingen_variant_classifications", {"gene": "BRCA1"})
@@ -1178,7 +1180,7 @@ const result = await host.mcp("clinical-genomics", "clingen_variant_classificati
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `entrez_symbol` | 뚱 베어 | **(주)** |
+| `entrez_symbol` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_genes", {"entrez_symbol": "BRAF"})
@@ -1190,7 +1192,7 @@ CIViC 유전자의 모든 변형 (CIViC 유전자 id에 의해), 완전히 질�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_id` | 뚱 베어 | **(주)** |
+| `gene_id` | 정수 | **필수** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_gene_variants", {"gene_id": 5})
@@ -1202,7 +1204,7 @@ CIViC 변종 id (aliases, 변형 유형, 기능/진 링크, 유전자 변종에 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `variant_id` | 뚱 베어 | **(주)** |
+| `variant_id` | 정수 | **필수** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_variant", {"variant_id": 12})
@@ -1214,8 +1216,8 @@ name substring (e.g.에 의한 CIViC 변형 검색 "V600")는 CIViC 유전자 ID
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `name` | 뚱 베어 | **(주)** |
-| `gene_id` | 뚱 베어 | 옵션 정보 |
+| `name` | 문자열 | **필수** |
+| `gene_id` | 정수 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_variants", {"name": "V600", "gene_id": 5})
@@ -1227,7 +1229,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_variants", {"na
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `evidence_id` | 뚱 베어 | **(주)** |
+| `evidence_id` | 정수 | **필수** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_evidence_item", {"evidence_id": 1409})
@@ -1239,23 +1241,23 @@ const result = await host.mcp("clinical-genomics", "civic_get_evidence_item", {"
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `disease_name` | 뚱 베어 | 옵션 정보 |
-| `therapy_name` | 뚱 베어 | 옵션 정보 |
-| `evidence_level` | 뚱 베어 | 옵션 정보 |
-| `evidence_type` | 뚱 베어 | 옵션 정보 |
-| `evidence_direction` | 뚱 베어 | 옵션 정보 |
-| `significance` | 뚱 베어 | 옵션 정보 |
-| `variant_origin` | 뚱 베어 | 옵션 정보 |
-| `evidence_rating` | 뚱 베어 | 옵션 정보 |
-| `status` | 뚱 베어 | 옵션 정보 |
-| `molecular_profile_name` | 뚱 베어 | 옵션 정보 |
-| `molecular_profile_id` | 뚱 베어 | 옵션 정보 |
-| `variant_id` | 뚱 베어 | 옵션 정보 |
-| `disease_id` | 뚱 베어 | 옵션 정보 |
-| `therapy_id` | 뚱 베어 | 옵션 정보 |
-| `phenotype_id` | 뚱 베어 | 옵션 정보 |
-| `source_id` | 뚱 베어 | 옵션 정보 |
-| `assertion_id` | 뚱 베어 | 옵션 정보 |
+| `disease_name` | 문자열 | 옵션 정보 |
+| `therapy_name` | 문자열 | 옵션 정보 |
+| `evidence_level` | 문자열 | 옵션 정보 |
+| `evidence_type` | 문자열 | 옵션 정보 |
+| `evidence_direction` | 문자열 | 옵션 정보 |
+| `significance` | 문자열 | 옵션 정보 |
+| `variant_origin` | 문자열 | 옵션 정보 |
+| `evidence_rating` | 정수 | 옵션 정보 |
+| `status` | 문자열 | 옵션 정보 |
+| `molecular_profile_name` | 문자열 | 옵션 정보 |
+| `molecular_profile_id` | 정수 | 옵션 정보 |
+| `variant_id` | 정수 | 옵션 정보 |
+| `disease_id` | 정수 | 옵션 정보 |
+| `therapy_id` | 정수 | 옵션 정보 |
+| `phenotype_id` | 정수 | 옵션 정보 |
+| `source_id` | 정수 | 옵션 정보 |
+| `assertion_id` | 정수 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_evidence", {"disease_name": "melanoma", "evidence_level": "A"})
@@ -1267,7 +1269,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_evidence", {"di
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `assertion_id` | 뚱 베어 | **(주)** |
+| `assertion_id` | 정수 | **필수** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_assertion", {"assertion_id": 7})
@@ -1279,22 +1281,22 @@ const result = await host.mcp("clinical-genomics", "civic_get_assertion", {"asse
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `disease_name` | 뚱 베어 | 옵션 정보 |
-| `therapy_name` | 뚱 베어 | 옵션 정보 |
-| `assertion_type` | 뚱 베어 | 옵션 정보 |
-| `assertion_direction` | 뚱 베어 | 옵션 정보 |
-| `significance` | 뚱 베어 | 옵션 정보 |
-| `amp_level` | 뚱 베어 | 옵션 정보 |
-| `status` | 뚱 베어 | 옵션 정보 |
-| `molecular_profile_name` | 뚱 베어 | 옵션 정보 |
-| `molecular_profile_id` | 뚱 베어 | 옵션 정보 |
-| `variant_id` | 뚱 베어 | 옵션 정보 |
-| `variant_name` | 뚱 베어 | 옵션 정보 |
-| `disease_id` | 뚱 베어 | 옵션 정보 |
-| `therapy_id` | 뚱 베어 | 옵션 정보 |
-| `phenotype_id` | 뚱 베어 | 옵션 정보 |
-| `evidence_id` | 뚱 베어 | 옵션 정보 |
-| `summary` | 뚱 베어 | 옵션 정보 |
+| `disease_name` | 문자열 | 옵션 정보 |
+| `therapy_name` | 문자열 | 옵션 정보 |
+| `assertion_type` | 문자열 | 옵션 정보 |
+| `assertion_direction` | 문자열 | 옵션 정보 |
+| `significance` | 문자열 | 옵션 정보 |
+| `amp_level` | 문자열 | 옵션 정보 |
+| `status` | 문자열 | 옵션 정보 |
+| `molecular_profile_name` | 문자열 | 옵션 정보 |
+| `molecular_profile_id` | 정수 | 옵션 정보 |
+| `variant_id` | 정수 | 옵션 정보 |
+| `variant_name` | 문자열 | 옵션 정보 |
+| `disease_id` | 정수 | 옵션 정보 |
+| `therapy_id` | 정수 | 옵션 정보 |
+| `phenotype_id` | 정수 | 옵션 정보 |
+| `evidence_id` | 정수 | 옵션 정보 |
+| `summary` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_assertions", {"disease_name": "melanoma"})
@@ -1306,7 +1308,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_assertions", {"
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `mp_id` | 뚱 베어 | **(주)** |
+| `mp_id` | 정수 | **필수** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_get_molecular_profile", {"mp_id": 12})
@@ -1318,7 +1320,7 @@ name substring (e.g.)에 의한 CIViC 분자 프로파일 검색 "BRAF V600E"). 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `name` | 뚱 베어 | **(주)** |
+| `name` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_molecular_profiles", {"name": "BRAF V600E"})
@@ -1330,7 +1332,7 @@ const result = await host.mcp("clinical-genomics", "civic_search_molecular_profi
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `name` | 뚱 베어 | **(주)** |
+| `name` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_diseases", {"name": "melanoma"})
@@ -1342,7 +1344,7 @@ Name substring (e.g.)에 의한 CIViC 치료 기록 검색 "vemurafenib"). NCIt 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `name` | 뚱 베어 | **(주)** |
+| `name` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "civic_search_therapies", {"name": "vemurafenib"})
@@ -1354,8 +1356,8 @@ Open Targets Platform API (targets, 질병, 약, 표적 질병 협회 점수, �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `variables` | 기타 제품 | 옵션 정보 |
+| `query` | 문자열 | **필수** |
+| `variables` | 객체 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "open_targets_graphql", {"query": "query($id: String!){ target(ensemblId: $id){ approvedSymbol associatedDiseases{ count } } }", "variables": {"id": "ENSG00000157764"}})
@@ -1367,8 +1369,8 @@ const result = await host.mcp("clinical-genomics", "open_targets_graphql", {"que
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `efo_id` | 뚱 베어 | **(주)** |
-| `size` | 뚱 베어 | 선택 사항; 기본: 25 |
+| `efo_id` | 문자열 | **필수** |
+| `size` | 정수 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "open_targets_disease_drugs", {"efo_id": "MONDO_0004992", "size": 25})
@@ -1380,8 +1382,8 @@ const result = await host.mcp("clinical-genomics", "open_targets_disease_drugs",
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `efo_id` | 뚱 베어 | **(주)** |
-| `size` | 뚱 베어 | 선택 사항; 기본: 25 |
+| `efo_id` | 문자열 | **필수** |
+| `size` | 정수 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "open_targets_disease_targets", {"efo_id": "MONDO_0004992", "size": 25})
@@ -1393,7 +1395,7 @@ ChEMBL id (Open Targets Platform)의 약물 세부 사항 - 이름, 유형, 최�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `chembl_id` | 뚱 베어 | **(주)** |
+| `chembl_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("clinical-genomics", "open_targets_drug", {"chembl_id": "CHEMBL1201583"})
@@ -1412,7 +1414,7 @@ Fetch는 EMDB cryo-EM 3D 맵 항목에 대한 메타 데이터 레코드를 구�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `emdb_ids` | 문자열의 배열 | **(주)** |
+| `emdb_ids` | 문자열 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_entries", {"emdb_ids": ["EMD-11638", "emd-3061", "1234"]})
@@ -1424,8 +1426,8 @@ Solr-style 쿼리와 EMDB 검색; 컴팩트 한 행의 완전한 페이지를 re
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 1000 |
+| `query` | 문자열 | **필수** |
+| `max_rows` | 정수 | 선택 사항; 기본: 1000 |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_search_entries", {"query": "title:\"apoferritin\" AND resolution:[0 TO 1.5]", "max_rows": 500})
@@ -1437,8 +1439,8 @@ EMDB 항목에 대한 자세한 메타 데이터 섹션을 Fetch하십시오. �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `emdb_ids` | 문자열의 배열 | **(주)** |
-| `section` | 뚱 베어 | **(주)**; koum: &#91;"publications", "map", "sample", "imaging"&#93; |
+| `emdb_ids` | 문자열 배열 | **필수** |
+| `section` | 문자열 | **필수**; koum: &#91;"publications", "map", "sample", "imaging"&#93; |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_entry_section", {"emdb_ids": ["EMD-11638"], "section": "imaging"})
@@ -1450,7 +1452,7 @@ EMDB 항목에 대한 Fetch numeric validation-analysis 메트릭. 항목 당 (E
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `emdb_ids` | 문자열의 배열 | **(주)** |
+| `emdb_ids` | 문자열 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("structures", "emdb_get_validation", {"emdb_ids": ["EMD-11638", "EMD-3061"]})
@@ -1462,7 +1464,7 @@ CPX 액세스에 의해 Fetch curated Complex Portal 레코드. 각 기록 : 복
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `complex_acs` | 문자열의 배열 | **(주)** |
+| `complex_acs` | 문자열 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("structures", "complexportal_get_complexes", {"complex_acs": ["CPX-2158", "CPX-2419"]})
@@ -1474,8 +1476,8 @@ const result = await host.mcp("structures", "complexportal_get_complexes", {"com
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
-| `participants_only` | boolean의 특징 | 선택 사항; 기본값: true |
+| `accession` | 문자열 | **필수** |
+| `participants_only` | 불리언 | 선택 사항; 기본값: true |
 
 ```javascript
 const result = await host.mcp("structures", "complexportal_search_by_participant", {"accession": "P69905", "participants_only": true})
@@ -1487,11 +1489,11 @@ const result = await host.mcp("structures", "complexportal_search_by_participant
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `min_mi_score` | 이름 &#42; | 선택 사항; 기본: 0 |
-| `max_mi_score` | 이름 &#42; | 선택 사항; 기본: 1 |
-| `interactor_species` | 문자열의 배열 | 옵션 정보 |
-| `max_records_returned` | 뚱 베어 | 선택 사항; 기본: 500 |
+| `query` | 문자열 | **필수** |
+| `min_mi_score` | 숫자 | 선택 사항; 기본: 0 |
+| `max_mi_score` | 숫자 | 선택 사항; 기본: 1 |
+| `interactor_species` | 문자열 배열 | 옵션 정보 |
+| `max_records_returned` | 정수 | 선택 사항; 기본: 500 |
 
 ```javascript
 const result = await host.mcp("structures", "intact_fetch_interactions", {"query": "P04637", "min_mi_score": 0.45, "interactor_species": ["Homo sapiens"], "max_records_returned": 200})
@@ -1503,7 +1505,7 @@ IntAct 상호 작용기 기록 (s)에 분자를 해결하십시오. `query`은 U
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
+| `query` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("structures", "intact_get_interactor", {"query": "P04637"})
@@ -1515,8 +1517,8 @@ const result = await host.mcp("structures", "intact_get_interactor", {"query": "
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `interaction_ac` | 뚱 베어 | **(주)** |
-| `include_participants` | boolean의 특징 | 선택 사항; 기본값: true |
+| `interaction_ac` | 문자열 | **필수** |
+| `include_participants` | 불리언 | 선택 사항; 기본값: true |
 
 ```javascript
 const result = await host.mcp("structures", "intact_get_interaction_details", {"interaction_ac": "EBI-15635490", "include_participants": true})
@@ -1528,10 +1530,10 @@ const result = await host.mcp("structures", "intact_get_interaction_details", {"
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `seed_accessions` | 문자열의 배열 | **(주)** |
-| `min_mi_score` | 이름 &#42; | 선택 사항; 기본: 0.45 |
-| `max_interactors_expanded` | 뚱 베어 | 선택 사항; 기본: 25 |
-| `interactor_species` | 문자열의 배열 | 옵션 정보 |
+| `seed_accessions` | 문자열 배열 | **필수** |
+| `min_mi_score` | 숫자 | 선택 사항; 기본: 0.45 |
+| `max_interactors_expanded` | 정수 | 선택 사항; 기본: 25 |
+| `interactor_species` | 문자열 배열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("structures", "intact_build_network", {"seed_accessions": ["P04637", "Q00987"], "min_mi_score": 0.45, "max_interactors_expanded": 25})
@@ -1543,15 +1545,15 @@ const result = await host.mcp("structures", "intact_build_network", {"seed_acces
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `text` | 뚱 베어 | 옵션 정보 |
-| `organism` | 뚱 베어 | 옵션 정보 |
-| `taxonomy_id` | 뚱 베어 | 옵션 정보 |
-| `uniprot_accession` | 뚱 베어 | 옵션 정보 |
-| `experimental_method` | 뚱 베어 | 옵션 정보 |
-| `max_resolution_angstrom` | 이름 &#42; | 옵션 정보 |
-| `ligand_comp_id` | 뚱 베어 | 옵션 정보 |
-| `include_computed_models` | boolean의 특징 | 선택 사항; 기본값: false |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `text` | 문자열 | 옵션 정보 |
+| `organism` | 문자열 | 옵션 정보 |
+| `taxonomy_id` | 정수 | 옵션 정보 |
+| `uniprot_accession` | 문자열 | 옵션 정보 |
+| `experimental_method` | 문자열 | 옵션 정보 |
+| `max_resolution_angstrom` | 숫자 | 옵션 정보 |
+| `ligand_comp_id` | 문자열 | 옵션 정보 |
+| `include_computed_models` | 불리언 | 선택 사항; 기본값: false |
+| `max_rows` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_search_structures", {"uniprot_accession": "P04637", "experimental_method": "X-RAY DIFFRACTION", "max_rows": 50})
@@ -1563,7 +1565,7 @@ PDB 항목 (배치, 최대 25 ids)에 대한 Fetch Entry-level summaries. 4-char
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `pdb_ids` | 문자열의 배열 | **(주)** |
+| `pdb_ids` | 문자열 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_get_structures", {"pdb_ids": ["1TUP", "1tup", "6XYZ"]})
@@ -1575,10 +1577,10 @@ const result = await host.mcp("structures", "pdb_get_structures", {"pdb_ids": ["
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `pdb_id` | 뚱 베어 | **(주)** |
-| `entity_ids` | 문자열의 배열 | 옵션 정보 |
-| `include_sequences` | boolean의 특징 | 선택 사항; 기본값: false |
-| `max_bytes` | 뚱 베어 | 선택 사항; 기본: 400000 |
+| `pdb_id` | 문자열 | **필수** |
+| `entity_ids` | 문자열 배열 | 옵션 정보 |
+| `include_sequences` | 불리언 | 선택 사항; 기본값: false |
+| `max_bytes` | 정수 | 선택 사항; 기본: 400000 |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_get_entities", {"pdb_id": "1TUP", "include_sequences": true})
@@ -1590,8 +1592,8 @@ Bound ligands (nonpolymer 구성 요소)의 1 PDB 항목, 화학. 엔트리's �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `pdb_id` | 뚱 베어 | **(주)** |
-| `max_ligands` | 뚱 베어 | 선택 사항; 기본: 25 |
+| `pdb_id` | 문자열 | **필수** |
+| `max_ligands` | 정수 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("structures", "pdb_get_ligands", {"pdb_id": "1TUP"})
@@ -1603,8 +1605,8 @@ AlphaFold DB 1개의 UniProt 접근을 위한 예측 구조 메타데이터. has
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `uniprot_accession` | 뚱 베어 | **(주)** |
-| `include_sequence` | boolean의 특징 | 선택 사항; 기본값: false |
+| `uniprot_accession` | 문자열 | **필수** |
+| `include_sequence` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("structures", "alphafold_get_prediction", {"uniprot_accession": "P04637"})
@@ -1616,7 +1618,7 @@ const result = await host.mcp("structures", "alphafold_get_prediction", {"unipro
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `uniprot_accessions` | 문자열의 배열 | **(주)** |
+| `uniprot_accessions` | 문자열 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("structures", "alphafold_check_coverage", {"uniprot_accessions": ["P04637", "P38398", "Q9Y6K9"]})
@@ -1635,12 +1637,12 @@ const result = await host.mcp("structures", "alphafold_check_coverage", {"unipro
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `name` | 뚱 베어 | 옵션 정보 |
-| `chembl_id` | 뚱 베어 | 옵션 정보 |
-| `smiles` | 뚱 베어 | 옵션 정보 |
-| `similarity_threshold` | 뚱 베어 | 선택 사항; 최소: 70; 최대: 100 |
-| `max_phase` | 뚱 베어 | 선택 사항; 크기: 0, 1, 2, 3, 4 |
-| `limit` | 뚱 베어 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
+| `name` | 문자열 | 옵션 정보 |
+| `chembl_id` | 문자열 | 옵션 정보 |
+| `smiles` | 문자열 | 옵션 정보 |
+| `similarity_threshold` | 정수 | 선택 사항; 최소: 70; 최대: 100 |
+| `max_phase` | 정수 | 선택 사항; 크기: 0, 1, 2, 3, 4 |
+| `limit` | 정수 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
 
 ```javascript
 const result = await host.mcp("chembl", "compound_search", {"name": "aspirin", "limit": 5})
@@ -1652,12 +1654,12 @@ const result = await host.mcp("chembl", "compound_search", {"name": "aspirin", "
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `indication` | 뚱 베어 | **(주)** |
-| `drug_name` | 뚱 베어 | 옵션 정보 |
-| `molecule_chembl_id` | 뚱 베어 | 옵션 정보 |
-| `max_phase` | 뚱 베어 | 선택 사항; 크기: 0, 1, 2, 3, 4 |
-| `only_approved` | boolean의 특징 | 선택 사항; 기본값: false |
-| `limit` | 뚱 베어 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
+| `indication` | 문자열 | **필수** |
+| `drug_name` | 문자열 | 옵션 정보 |
+| `molecule_chembl_id` | 문자열 | 옵션 정보 |
+| `max_phase` | 정수 | 선택 사항; 크기: 0, 1, 2, 3, 4 |
+| `only_approved` | 불리언 | 선택 사항; 기본값: false |
+| `limit` | 정수 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
 
 ```javascript
 const result = await host.mcp("chembl", "drug_search", {"indication": "hypertension", "only_approved": true, "limit": 10})
@@ -1669,7 +1671,7 @@ ChEMBL은 1개의 분자 (ALogP, 분자량, PSA, HBA/HBD, rotatable 유대, 방�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `molecule_chembl_id` | 뚱 베어 | **(주)** |
+| `molecule_chembl_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("chembl", "get_admet", {"molecule_chembl_id": "CHEMBL25"})
@@ -1681,14 +1683,14 @@ const result = await host.mcp("chembl", "get_admet", {"molecule_chembl_id": "CHE
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `molecule_chembl_id` | 뚱 베어 | 옵션 정보 |
-| `target_chembl_id` | 뚱 베어 | 옵션 정보 |
-| `activity_type` | 뚱 베어 | 선택 사항; 모델 번호: "IC50", "EC50", "Ki", "Kd", "AC50", "GI50", "ED50", "Potency" |
-| `min_pchembl` | 이름 &#42; | 선택 사항; 최소: 0; 최대: 14 |
-| `min_value` | 이름 &#42; | 옵션 정보 |
-| `max_value` | 이름 &#42; | 옵션 정보 |
-| `unit` | 뚱 베어 | 선택 사항; 크기: "nM", "uM", "mM", "pM", "M" |
-| `limit` | 뚱 베어 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
+| `molecule_chembl_id` | 문자열 | 옵션 정보 |
+| `target_chembl_id` | 문자열 | 옵션 정보 |
+| `activity_type` | 문자열 | 선택 사항; 모델 번호: "IC50", "EC50", "Ki", "Kd", "AC50", "GI50", "ED50", "Potency" |
+| `min_pchembl` | 숫자 | 선택 사항; 최소: 0; 최대: 14 |
+| `min_value` | 숫자 | 옵션 정보 |
+| `max_value` | 숫자 | 옵션 정보 |
+| `unit` | 문자열 | 선택 사항; 크기: "nM", "uM", "mM", "pM", "M" |
+| `limit` | 정수 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
 
 ```javascript
 const result = await host.mcp("chembl", "get_bioactivity", {"molecule_chembl_id": "CHEMBL25", "activity_type": "IC50", "limit": 10})
@@ -1700,10 +1702,10 @@ const result = await host.mcp("chembl", "get_bioactivity", {"molecule_chembl_id"
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `molecule_chembl_id` | 뚱 베어 | 옵션 정보 |
-| `target_chembl_id` | 뚱 베어 | 옵션 정보 |
-| `action_type` | 뚱 베어 | 선택 사항; 한국어 (ko)"채용 정보"· "제품정보"· "회사연혁"· "블럭러"· "모듈"· "(주)이엔텍"· "ACTIVATOR 소개"· "POSITIVE ALLOSTERIC 모듈"· "NEGATIVE ALLOSTERIC 모듈"· "관련 기사"· "채용 정보"· |
-| `limit` | 뚱 베어 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
+| `molecule_chembl_id` | 문자열 | 옵션 정보 |
+| `target_chembl_id` | 문자열 | 옵션 정보 |
+| `action_type` | 문자열 | 선택 사항; 한국어 (ko)"채용 정보"· "제품정보"· "회사연혁"· "블럭러"· "모듈"· "(주)이엔텍"· "ACTIVATOR 소개"· "POSITIVE ALLOSTERIC 모듈"· "NEGATIVE ALLOSTERIC 모듈"· "관련 기사"· "채용 정보"· |
+| `limit` | 정수 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
 
 ```javascript
 const result = await host.mcp("chembl", "get_mechanism", {"molecule_chembl_id": "CHEMBL25"})
@@ -1715,12 +1717,12 @@ const result = await host.mcp("chembl", "get_mechanism", {"molecule_chembl_id": 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `target_name` | 뚱 베어 | 옵션 정보 |
-| `gene_symbol` | 뚱 베어 | 옵션 정보 |
-| `target_chembl_id` | 뚱 베어 | 옵션 정보 |
-| `organism` | 뚱 베어 | 옵션 정보 |
-| `target_type` | 뚱 베어 | 선택 사항; 한국어 (ko)"SINGLE 프로틴"· "프로틴 COMPLEX"· "PROTEIN 가족"· "오존스M"· "팟캐스트"· "CELL 라인"· "NUCLEIC-ACID의 특징"· "수탁업체"· |
-| `limit` | 뚱 베어 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
+| `target_name` | 문자열 | 옵션 정보 |
+| `gene_symbol` | 문자열 | 옵션 정보 |
+| `target_chembl_id` | 문자열 | 옵션 정보 |
+| `organism` | 문자열 | 옵션 정보 |
+| `target_type` | 문자열 | 선택 사항; 한국어 (ko)"SINGLE 프로틴"· "프로틴 COMPLEX"· "PROTEIN 가족"· "오존스M"· "팟캐스트"· "CELL 라인"· "NUCLEIC-ACID의 특징"· "수탁업체"· |
+| `limit` | 정수 | 선택 사항; 기본: 20; 최소: 1; 최대: 1000 |
 
 ```javascript
 const result = await host.mcp("chembl", "target_search", {"gene_symbol": "EGFR", "organism": "Homo sapiens", "limit": 5})
@@ -1751,14 +1753,14 @@ const result = await host.mcp("biorxiv", "get_categories", {})
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `server` | 뚱 베어 | 선택 사항; 기본: "biorxiv"; koum : &#91;"biorxiv", "medrxiv"&#93; |
-| `category` | 뚱 베어 | 선택 사항; 한국어 (ko)"동물의 행동과 인식"· "바이오화학"· "Bioengineering의 장점"· "생물 정보학"· "생명 물리학"· "암 생물학"· "세포 생물학"· "임상시험"· "개발 biology"· "학회소개"· "학회소개"· "진화 생물학"· "학회소개"· "genomics의 장점"· "면역학"· "미생물학"· "분자 생물학"· "신경 과학"· "고추학"· "학회소개"· "약리학 및 독성학"· "생리학"· "식물 생물학"· "과학 통신 및 교육"· "합성 생물학"· "시스템 생물학"· "zoology의"· |
-| `date_from` | 뚱 베어 | 옵션 정보 |
-| `date_to` | 뚱 베어 | 옵션 정보 |
-| `recent_days` | 뚱 베어 | 선택 사항; 최소: 1 |
-| `recent_count` | 뚱 베어 | 선택 사항; 최소: 1 |
-| `limit` | 뚱 베어 | 선택 사항; 기본: 10; 최소: 1; 최대: 100 |
-| `cursor` | 뚱 베어 | 선택 사항; 기본: 0; 최소: 0 |
+| `server` | 문자열 | 선택 사항; 기본: "biorxiv"; koum : &#91;"biorxiv", "medrxiv"&#93; |
+| `category` | 문자열 | 선택 사항; 한국어 (ko)"동물의 행동과 인식"· "바이오화학"· "Bioengineering의 장점"· "생물 정보학"· "생명 물리학"· "암 생물학"· "세포 생물학"· "임상시험"· "개발 biology"· "학회소개"· "학회소개"· "진화 생물학"· "학회소개"· "genomics의 장점"· "면역학"· "미생물학"· "분자 생물학"· "신경 과학"· "고추학"· "학회소개"· "약리학 및 독성학"· "생리학"· "식물 생물학"· "과학 통신 및 교육"· "합성 생물학"· "시스템 생물학"· "zoology의"· |
+| `date_from` | 문자열 | 옵션 정보 |
+| `date_to` | 문자열 | 옵션 정보 |
+| `recent_days` | 정수 | 선택 사항; 최소: 1 |
+| `recent_count` | 정수 | 선택 사항; 최소: 1 |
+| `limit` | 정수 | 선택 사항; 기본: 10; 최소: 1; 최대: 100 |
+| `cursor` | 정수 | 선택 사항; 기본: 0; 최소: 0 |
 
 ```javascript
 const result = await host.mcp("biorxiv", "search_preprints", {"recent_days": 30, "category": "neuroscience", "limit": 20})
@@ -1770,8 +1772,8 @@ DOI (bare " 10.1101/..." 또는 전체 [https://doi.org/](https://doi.org/) URL)
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `doi` | 뚱 베어 | 옵션 정보 |
-| `server` | 뚱 베어 | 선택 사항; 기본: "biorxiv"; koum : &#91;"biorxiv", "medrxiv"&#93; |
+| `doi` | 문자열 | **필수** |
+| `server` | 문자열 | 선택 사항; 기본: "biorxiv"; koum : &#91;"biorxiv", "medrxiv"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_preprint", {"doi": "10.1101/339747"})
@@ -1783,15 +1785,15 @@ const result = await host.mcp("biorxiv", "get_preprint", {"doi": "10.1101/339747
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `server` | 뚱 베어 | 선택 사항; 기본: "biorxiv"; koum : &#91;"biorxiv", "medrxiv"&#93; |
-| `publisher` | 뚱 베어 | 옵션 정보 |
-| `include_details` | boolean의 특징 | 선택 사항; 기본값: true |
-| `date_from` | 뚱 베어 | 옵션 정보 |
-| `date_to` | 뚱 베어 | 옵션 정보 |
-| `recent_days` | 뚱 베어 | 선택 사항; 최소: 1 |
-| `recent_count` | 뚱 베어 | 선택 사항; 최소: 1 |
-| `limit` | 뚱 베어 | 선택 사항; 기본: 10; 최소: 1; 최대: 100 |
-| `cursor` | 뚱 베어 | 선택 사항; 기본: 0; 최소: 0 |
+| `server` | 문자열 | 선택 사항; 기본: "biorxiv"; koum : &#91;"biorxiv", "medrxiv"&#93; |
+| `publisher` | 문자열 | 옵션 정보 |
+| `include_details` | 불리언 | 선택 사항; 기본값: true |
+| `date_from` | 문자열 | 옵션 정보 |
+| `date_to` | 문자열 | 옵션 정보 |
+| `recent_days` | 정수 | 선택 사항; 최소: 1 |
+| `recent_count` | 정수 | 선택 사항; 최소: 1 |
+| `limit` | 정수 | 선택 사항; 기본: 10; 최소: 1; 최대: 100 |
+| `cursor` | 정수 | 선택 사항; 기본: 0; 최소: 0 |
 
 ```javascript
 const result = await host.mcp("biorxiv", "search_published_preprints", {"publisher": "10.1038", "date_from": "2024-01-01", "date_to": "2024-01-05", "limit": 10})
@@ -1803,13 +1805,13 @@ ROR id (9-char, e.g.에 의해 확인 된 펀처를 태우십시오. " 021nxhr62
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `funder_ror_id` | 뚱 베어 | 옵션 정보 |
-| `date_from` | 뚱 베어 | 옵션 정보 |
-| `date_to` | 뚱 베어 | 옵션 정보 |
-| `server` | 뚱 베어 | 선택 사항; 기본: "biorxiv"; koum : &#91;"biorxiv", "medrxiv"&#93; |
-| `category` | 뚱 베어 | 선택 사항; 한국어 (ko)"동물의 행동과 인식"· "바이오화학"· "Bioengineering의 장점"· "생물 정보학"· "생명 물리학"· "암 생물학"· "세포 생물학"· "임상시험"· "개발 biology"· "학회소개"· "학회소개"· "진화 생물학"· "학회소개"· "genomics의 장점"· "면역학"· "미생물학"· "분자 생물학"· "신경 과학"· "고추학"· "학회소개"· "약리학 및 독성학"· "생리학"· "식물 생물학"· "과학 통신 및 교육"· "합성 생물학"· "시스템 생물학"· "zoology의"· |
-| `limit` | 뚱 베어 | 선택 사항; 기본: 10; 최소: 1; 최대: 100 |
-| `cursor` | 뚱 베어 | 선택 사항; 기본: 0; 최소: 0 |
+| `funder_ror_id` | 문자열 | **필수** |
+| `date_from` | 문자열 | **필수** |
+| `date_to` | 문자열 | **필수** |
+| `server` | 문자열 | 선택 사항; 기본: "biorxiv"; koum : &#91;"biorxiv", "medrxiv"&#93; |
+| `category` | 문자열 | 선택 사항; 한국어 (ko)"동물의 행동과 인식"· "바이오화학"· "Bioengineering의 장점"· "생물 정보학"· "생명 물리학"· "암 생물학"· "세포 생물학"· "임상시험"· "개발 biology"· "학회소개"· "학회소개"· "진화 생물학"· "학회소개"· "genomics의 장점"· "면역학"· "미생물학"· "분자 생물학"· "신경 과학"· "고추학"· "학회소개"· "약리학 및 독성학"· "생리학"· "식물 생물학"· "과학 통신 및 교육"· "합성 생물학"· "시스템 생물학"· "zoology의"· |
+| `limit` | 정수 | 선택 사항; 기본: 10; 최소: 1; 최대: 100 |
+| `cursor` | 정수 | 선택 사항; 기본: 0; 최소: 0 |
 
 ```javascript
 const result = await host.mcp("biorxiv", "search_by_funder", {"funder_ror_id": "021nxhr62", "date_from": "2025-04-10", "date_to": "2025-05-10", "limit": 10})
@@ -1821,7 +1823,7 @@ BioRxiv 제출 통계 모든 역사 — 새로운 대 개정된 종이 카운트
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `interval` | 뚱 베어 | 선택 사항; 기본: "monthly"; koum: &#91;"monthly", "yearly"&#93; |
+| `interval` | 문자열 | 선택 사항; 기본: "monthly"; koum: &#91;"monthly", "yearly"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_content_statistics", {"interval": "yearly"})
@@ -1833,7 +1835,7 @@ const result = await host.mcp("biorxiv", "get_content_statistics", {"interval": 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `interval` | 뚱 베어 | 선택 사항; 기본: "monthly"; koum: &#91;"monthly", "yearly"&#93; |
+| `interval` | 문자열 | 선택 사항; 기본: "monthly"; koum: &#91;"monthly", "yearly"&#93; |
 
 ```javascript
 const result = await host.mcp("biorxiv", "get_usage_statistics", {"interval": "yearly"})
@@ -1852,20 +1854,20 @@ const result = await host.mcp("biorxiv", "get_usage_statistics", {"interval": "y
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `brand` | 뚱 베어 | 옵션 정보 |
-| `generic` | 뚱 베어 | 옵션 정보 |
-| `active_ingredient` | 뚱 베어 | 옵션 정보 |
-| `sponsor` | 뚱 베어 | 옵션 정보 |
-| `marketing_status` | 뚱 베어 | 선택 사항; enum: &#91;"Prescription", "Over-the-counter", "Discontinued", "None (Tentative 승인) "&#93; |
-| `dosage_form` | 뚱 베어 | 옵션 정보 |
-| `route` | 뚱 베어 | 옵션 정보 |
-| `pharm_class` | 뚱 베어 | 옵션 정보 |
-| `pharm_class_type` | 뚱 베어 | 선택 사항; 크기: "epc", "moa", "cs", "pe"&#93; |
-| `search_type` | 뚱 베어 | 선택 사항; 기본: "and"; koum : &#91;"and", "or"&#93; |
-| `submission_date_from` | 뚱 베어 | 옵션 정보 |
-| `submission_date_to` | 뚱 베어 | 옵션 정보 |
-| `raw_search` | 뚱 베어 | 옵션 정보 |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 50 |
+| `brand` | 문자열 | 옵션 정보 |
+| `generic` | 문자열 | 옵션 정보 |
+| `active_ingredient` | 문자열 | 옵션 정보 |
+| `sponsor` | 문자열 | 옵션 정보 |
+| `marketing_status` | 문자열 | 선택 사항; enum: &#91;"Prescription", "Over-the-counter", "Discontinued", "None (Tentative 승인) "&#93; |
+| `dosage_form` | 문자열 | 옵션 정보 |
+| `route` | 문자열 | 옵션 정보 |
+| `pharm_class` | 문자열 | 옵션 정보 |
+| `pharm_class_type` | 문자열 | 선택 사항; 크기: "epc", "moa", "cs", "pe"&#93; |
+| `search_type` | 문자열 | 선택 사항; 기본: "and"; koum : &#91;"and", "or"&#93; |
+| `submission_date_from` | 문자열 | 옵션 정보 |
+| `submission_date_to` | 문자열 | 옵션 정보 |
+| `raw_search` | 문자열 | 옵션 정보 |
+| `max_records` | 정수 | 선택 사항; 기본: 50 |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "search_drug_applications", {"generic": "ATORVASTATIN CALCIUM", "marketing_status": "Prescription", "max_records": 25})
@@ -1877,7 +1879,7 @@ const result = await host.mcp("drug-regulatory", "search_drug_applications", {"g
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `application_number` | 뚱 베어 | **(주)** |
+| `application_number` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "get_drug_application", {"application_number": "NDA020702"})
@@ -1889,21 +1891,21 @@ Aggregate Drugs@FDA Bucket은 search_drug_applications과 같은 필터에 의�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `count_field` | 뚱 베어 | **(주)** |
-| `brand` | 뚱 베어 | 옵션 정보 |
-| `generic` | 뚱 베어 | 옵션 정보 |
-| `active_ingredient` | 뚱 베어 | 옵션 정보 |
-| `sponsor` | 뚱 베어 | 옵션 정보 |
-| `marketing_status` | 뚱 베어 | 옵션 정보 |
-| `dosage_form` | 뚱 베어 | 옵션 정보 |
-| `route` | 뚱 베어 | 옵션 정보 |
-| `pharm_class` | 뚱 베어 | 옵션 정보 |
-| `pharm_class_type` | 뚱 베어 | 선택 사항; 크기: "epc", "moa", "cs", "pe"&#93; |
-| `search_type` | 뚱 베어 | 선택 사항; 기본: "and"; koum : &#91;"and", "or"&#93; |
-| `submission_date_from` | 뚱 베어 | 옵션 정보 |
-| `submission_date_to` | 뚱 베어 | 옵션 정보 |
-| `raw_search` | 뚱 베어 | 옵션 정보 |
-| `max_buckets` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `count_field` | 문자열 | **필수** |
+| `brand` | 문자열 | 옵션 정보 |
+| `generic` | 문자열 | 옵션 정보 |
+| `active_ingredient` | 문자열 | 옵션 정보 |
+| `sponsor` | 문자열 | 옵션 정보 |
+| `marketing_status` | 문자열 | 옵션 정보 |
+| `dosage_form` | 문자열 | 옵션 정보 |
+| `route` | 문자열 | 옵션 정보 |
+| `pharm_class` | 문자열 | 옵션 정보 |
+| `pharm_class_type` | 문자열 | 선택 사항; 크기: "epc", "moa", "cs", "pe"&#93; |
+| `search_type` | 문자열 | 선택 사항; 기본: "and"; koum : &#91;"and", "or"&#93; |
+| `submission_date_from` | 문자열 | 옵션 정보 |
+| `submission_date_to` | 문자열 | 옵션 정보 |
+| `raw_search` | 문자열 | 옵션 정보 |
+| `max_buckets` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "count_drug_applications", {"count_field": "marketing_status"})
@@ -1927,8 +1929,8 @@ const result = await host.mcp("drug-regulatory", "get_drug_statistics", {})
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `class_type` | 뚱 베어 | 선택 사항; 기본: "epc"; 크기: "epc", "moa", "cs", "pe"&#93; |
-| `max_buckets` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `class_type` | 문자열 | 선택 사항; 기본: "epc"; 크기: "epc", "moa", "cs", "pe"&#93; |
+| `max_buckets` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "list_pharmacologic_classes", {"class_type": "epc", "max_buckets": 50})
@@ -1940,7 +1942,7 @@ const result = await host.mcp("drug-regulatory", "list_pharmacologic_classes", {
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `brand` | 뚱 베어 | **(주)** |
+| `brand` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "get_generic_equivalents", {"brand": "Lipitor"})
@@ -1952,15 +1954,15 @@ const result = await host.mcp("drug-regulatory", "get_generic_equivalents", {"br
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `active_ingredient` | 뚱 베어 | 옵션 정보 |
-| `generic_name` | 뚱 베어 | 옵션 정보 |
-| `brand_name` | 뚱 베어 | 옵션 정보 |
-| `route` | 뚱 베어 | 옵션 정보 |
-| `product_type` | 뚱 베어 | 선택 사항; koum: &#91;"HUMAN 구조 DRUG", "HUMAN OTC DRUG"&#93; |
-| `exact` | boolean의 특징 | 선택 사항; 기본값: false |
-| `raw_search` | 뚱 베어 | 옵션 정보 |
-| `sections` | 문자열의 배열 | 옵션 정보 |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 25 |
+| `active_ingredient` | 문자열 | 옵션 정보 |
+| `generic_name` | 문자열 | 옵션 정보 |
+| `brand_name` | 문자열 | 옵션 정보 |
+| `route` | 문자열 | 옵션 정보 |
+| `product_type` | 문자열 | 선택 사항; koum: &#91;"HUMAN 구조 DRUG", "HUMAN OTC DRUG"&#93; |
+| `exact` | 불리언 | 선택 사항; 기본값: false |
+| `raw_search` | 문자열 | 옵션 정보 |
+| `sections` | 문자열 배열 | 옵션 정보 |
+| `max_records` | 정수 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("drug-regulatory", "search_drug_labels", {"brand_name": "Tylenol", "max_records": 5})
@@ -1979,8 +1981,8 @@ GWAS 카탈로그 협회는 1개의 변종 (rsID), 가장 뜻깊은 첫번째를
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `rs_id` | 뚱 베어 | **(주)** |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 500 |
+| `rs_id` | 문자열 | **필수** |
+| `max_records` | 정수 | 선택 사항; 기본: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_associations_for_variant", {"rs_id": "rs7412", "max_records": 100})
@@ -1992,8 +1994,8 @@ GWAS 카탈로그 협회의 변형은 MAPPED 유전자 (catalog's Ensembl 파이
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_symbol` | 뚱 베어 | **(주)** |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 500 |
+| `gene_symbol` | 문자열 | **필수** |
+| `max_records` | 정수 | 선택 사항; 기본: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_associations_for_gene", {"gene_symbol": "PCSK9", "max_records": 100})
@@ -2005,9 +2007,9 @@ GWAS 카탈로그 협회는 하나의 EFO trait에 할당, 가장 중요한 첫 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `efo_id` | 뚱 베어 | 옵션 정보 |
-| `efo_trait` | 뚱 베어 | 옵션 정보 |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 500 |
+| `efo_id` | 문자열 | 옵션 정보 |
+| `efo_trait` | 문자열 | 옵션 정보 |
+| `max_records` | 정수 | 선택 사항; 기본: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_associations_for_trait", {"efo_id": "MONDO_0005010", "max_records": 100})
@@ -2019,8 +2021,8 @@ const result = await host.mcp("human-genetics", "gwas_associations_for_trait", {
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 500 |
+| `query` | 문자열 | **필수** |
+| `max_records` | 정수 | 선택 사항; 기본: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_search_traits", {"query": "coronary", "max_records": 50})
@@ -2032,10 +2034,10 @@ const result = await host.mcp("human-genetics", "gwas_search_traits", {"query": 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `efo_id` | 뚱 베어 | 옵션 정보 |
-| `efo_trait` | 뚱 베어 | 옵션 정보 |
-| `pubmed_id` | 뚱 베어 | 옵션 정보 |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 500 |
+| `efo_id` | 문자열 | 옵션 정보 |
+| `efo_trait` | 문자열 | 옵션 정보 |
+| `pubmed_id` | 문자열 | 옵션 정보 |
+| `max_records` | 정수 | 선택 사항; 기본: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_search_studies", {"efo_id": "MONDO_0005010", "max_records": 50})
@@ -2047,7 +2049,7 @@ GCST 액세스에 의해 하나의 GWAS 카탈로그 연구를 Fetch. Args: acce
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession_id` | 뚱 베어 | **(주)** |
+| `accession_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_get_study", {"accession_id": "GCST90841394"})
@@ -2059,7 +2061,7 @@ Ftch one GWAS 카탈로그 변형 기록 (위치, mapped genes, result) by rsID 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `rs_id` | 뚱 베어 | **(주)** |
+| `rs_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("human-genetics", "gwas_get_variant", {"rs_id": "rs7412"})
@@ -2071,10 +2073,10 @@ eQTL 카탈로그 데이터셋 리스트(one dataset = one study xissue/cell typ
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `study_label` | 뚱 베어 | 옵션 정보 |
-| `tissue_label` | 뚱 베어 | 옵션 정보 |
-| `quant_method` | 뚱 베어 | 옵션 정보 |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 1000 |
+| `study_label` | 문자열 | 옵션 정보 |
+| `tissue_label` | 문자열 | 옵션 정보 |
+| `quant_method` | 문자열 | 옵션 정보 |
+| `max_records` | 정수 | 선택 사항; 기본: 1000 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "eqtl_list_datasets", {"study_label": "Alasoo_2018", "quant_method": "ge"})
@@ -2086,13 +2088,13 @@ const result = await host.mcp("human-genetics", "eqtl_list_datasets", {"study_la
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `dataset_id` | 뚱 베어 | **(주)** |
-| `gene_id` | 뚱 베어 | 옵션 정보 |
-| `rsid` | 뚱 베어 | 옵션 정보 |
-| `variant` | 뚱 베어 | 옵션 정보 |
-| `pos` | 뚱 베어 | 옵션 정보 |
-| `nlog10p_min` | 이름 &#42; | 옵션 정보 |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 1000 |
+| `dataset_id` | 문자열 | **필수** |
+| `gene_id` | 문자열 | 옵션 정보 |
+| `rsid` | 문자열 | 옵션 정보 |
+| `variant` | 문자열 | 옵션 정보 |
+| `pos` | 문자열 | 옵션 정보 |
+| `nlog10p_min` | 숫자 | 옵션 정보 |
+| `max_records` | 정수 | 선택 사항; 기본: 1000 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "eqtl_associations", {"dataset_id": "QTD000266", "gene_id": "ENSG00000130203", "nlog10p_min": 2})
@@ -2116,9 +2118,9 @@ const result = await host.mcp("human-genetics", "phewas_instances", {})
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `instance` | 뚱 베어 | **(주)**; koum : &#91;"finngen", "bbj"&#93; |
-| `variant` | 뚱 베어 | **(주)** |
-| `max_phenos` | 뚱 베어 | 선택 사항; 기본: 200 |
+| `instance` | 문자열 | **필수**; koum : &#91;"finngen", "bbj"&#93; |
+| `variant` | 문자열 | **필수** |
+| `max_phenos` | 정수 | 선택 사항; 기본: 200 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "phewas_variant", {"instance": "finngen", "variant": "19-44908822-C-T", "max_phenos": 50})
@@ -2130,8 +2132,8 @@ FinnGen R12의 Gene-level PheWAS : 모든 질병의 끝점, 유전자 영역에�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_symbol` | 뚱 베어 | **(주)** |
-| `max_phenos` | 뚱 베어 | 선택 사항; 기본: 200 |
+| `gene_symbol` | 문자열 | **필수** |
+| `max_phenos` | 정수 | 선택 사항; 기본: 200 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "phewas_finngen_gene", {"gene_symbol": "PCSK9", "max_phenos": 50})
@@ -2143,8 +2145,8 @@ PheWeb 인스턴스의 완전한 phenotype (disease endpoint) 카탈로그, case
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `instance` | 뚱 베어 | 선택 사항; 기본: "finngen"; enum: &#91;"finngen"&#93; |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 3000 |
+| `instance` | 문자열 | 선택 사항; 기본: "finngen"; enum: &#91;"finngen"&#93; |
+| `max_records` | 정수 | 선택 사항; 기본: 3000 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "phewas_list_phenotypes", {"instance": "finngen", "max_records": 3000})
@@ -2156,9 +2158,9 @@ PheWeb 인스턴스를 검색's 페형 (및 엔티티티티티) 이름 - 페니�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `instance` | 뚱 베어 | 선택 사항; 기본: "finngen"; koum : &#91;"finngen", "bbj"&#93; |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 500 |
+| `query` | 문자열 | **필수** |
+| `instance` | 문자열 | 선택 사항; 기본: "finngen"; koum : &#91;"finngen", "bbj"&#93; |
+| `max_records` | 정수 | 선택 사항; 기본: 500 |
 
 ```javascript
 const result = await host.mcp("human-genetics", "phewas_search_phenotypes", {"query": "diabetes", "instance": "finngen"})
@@ -2177,7 +2179,7 @@ const result = await host.mcp("human-genetics", "phewas_search_phenotypes", {"qu
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `dataset_id` | 뚱 베어 | 선택 사항; 기본: "gtex_v8" |
+| `dataset_id` | 문자열 | 선택 사항; 기본: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_tissue_sites", {"dataset_id": "gtex_v8"})
@@ -2189,8 +2191,8 @@ metadata: datasetId, GENCODE version, genome build, dbSNP build 및 sample/subje
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `dataset_id` | 뚱 베어 | 옵션 정보 |
-| `organization_name` | 뚱 베어 | 옵션 정보 |
+| `dataset_id` | 문자열 | 옵션 정보 |
+| `organization_name` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_dataset_info", {})
@@ -2202,11 +2204,11 @@ pinned GTEx 릴리스에 대 한 샘플 및 donor 메타 데이터, 선택적으
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `tissue_site_detail_id` | 뚱 베어 | 옵션 정보 |
-| `data_type` | 뚱 베어 | 옵션 정보 |
-| `subject_id` | 뚱 베어 | 옵션 정보 |
-| `max_samples` | 뚱 베어 | 옵션 정보 |
-| `dataset_id` | 뚱 베어 | 선택 사항; 기본: "gtex_v8" |
+| `tissue_site_detail_id` | 문자열 | 옵션 정보 |
+| `data_type` | 문자열 | 옵션 정보 |
+| `subject_id` | 문자열 | 옵션 정보 |
+| `max_samples` | 정수 | 옵션 정보 |
+| `dataset_id` | 문자열 | 선택 사항; 기본: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_sample_info", {"tissue_site_detail_id": "Liver", "data_type": "RNASEQ", "max_samples": 100})
@@ -2218,8 +2220,8 @@ GENCODE ids 버전으로 된 Ensembl ids 또는 unversioned Ensembl ids를 해�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `genes` | 문자열의 배열 | **(주)** | 7 / 0 / 0 |
-| `dataset_id` | 뚱 베어 | 선택 사항; 기본: "gtex_v8" |
+| `genes` | 문자열 배열 | **필수** | 7 / 0 / 0 |
+| `dataset_id` | 문자열 | 선택 사항; 기본: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_resolve_genes", {"genes": ["GAPDH", "BRCA2"]})
@@ -2231,9 +2233,9 @@ TPM(Median gene expression, TPM)는 조직 전체에 걸쳐 1개 이상의 VERSI
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gencode_ids` | 문자열의 배열 | **(주)** |
-| `tissue_site_detail_ids` | 문자열의 배열 | 옵션 정보 |
-| `dataset_id` | 뚱 베어 | 선택 사항; 기본: "gtex_v8" |
+| `gencode_ids` | 문자열 배열 | **필수** |
+| `tissue_site_detail_ids` | 문자열 배열 | 옵션 정보 |
+| `dataset_id` | 문자열 | 선택 사항; 기본: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_median_expression", {"gencode_ids": ["ENSG00000111640.14"]})
@@ -2245,8 +2247,8 @@ median TPM을 내려받은 모든 조직의 유전자의 표현을 요약합니�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene` | 뚱 베어 | **(주)** |
-| `dataset_id` | 뚱 베어 | 선택 사항; 기본: "gtex_v8" |
+| `gene` | 문자열 | **필수** |
+| `dataset_id` | 문자열 | 선택 사항; 기본: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_expression_summary", {"gene": "GAPDH"})
@@ -2258,9 +2260,9 @@ const result = await host.mcp("expression", "gtex_expression_summary", {"gene": 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gencode_id` | 뚱 베어 | **(주)** |
-| `tissue_site_detail_ids` | 문자열의 배열 | 옵션 정보 |
-| `dataset_id` | 뚱 베어 | 선택 사항; 기본: "gtex_v8" |
+| `gencode_id` | 문자열 | **필수** |
+| `tissue_site_detail_ids` | 문자열 배열 | 옵션 정보 |
+| `dataset_id` | 문자열 | 선택 사항; 기본: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_gene_expression", {"gencode_id": "ENSG00000111640.14", "tissue_site_detail_ids": ["Whole_Blood"]})
@@ -2272,10 +2274,10 @@ API 측면 순위를 사용하여 한 조직에서 미디어 TPM에 의해 상�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `tissue_site_detail_id` | 뚱 베어 | **(주)** |
-| `n` | 뚱 베어 | 선택 사항; 기본: 100 |
-| `filter_mt_gene` | boolean의 특징 | 선택 사항; 기본값: true |
-| `dataset_id` | 뚱 베어 | 선택 사항; 기본: "gtex_v8" |
+| `tissue_site_detail_id` | 문자열 | **필수** |
+| `n` | 정수 | 선택 사항; 기본: 100 |
+| `filter_mt_gene` | 불리언 | 선택 사항; 기본값: true |
+| `dataset_id` | 문자열 | 선택 사항; 기본: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_top_expressed_genes", {"tissue_site_detail_id": "Whole_Blood", "n": 20})
@@ -2287,9 +2289,9 @@ const result = await host.mcp("expression", "gtex_top_expressed_genes", {"tissue
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `tissue_site_detail_id` | 뚱 베어 | **(주)** |
-| `max_genes` | 뚱 베어 | 옵션 정보 |
-| `dataset_id` | 뚱 베어 | 선택 사항; 기본: "gtex_v8" |
+| `tissue_site_detail_id` | 문자열 | **필수** |
+| `max_genes` | 정수 | 옵션 정보 |
+| `dataset_id` | 문자열 | 선택 사항; 기본: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_eqtl_genes", {"tissue_site_detail_id": "Pancreas", "max_genes": 100})
@@ -2301,11 +2303,11 @@ const result = await host.mcp("expression", "gtex_eqtl_genes", {"tissue_site_det
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gencode_id` | 뚱 베어 | 옵션 정보 |
-| `variant_id` | 뚱 베어 | 옵션 정보 |
-| `tissue_site_detail_id` | 뚱 베어 | 옵션 정보 |
-| `max_results` | 뚱 베어 | 옵션 정보 |
-| `dataset_id` | 뚱 베어 | 선택 사항; 기본: "gtex_v8" |
+| `gencode_id` | 문자열 | 옵션 정보 |
+| `variant_id` | 문자열 | 옵션 정보 |
+| `tissue_site_detail_id` | 문자열 | 옵션 정보 |
+| `max_results` | 정수 | 옵션 정보 |
+| `dataset_id` | 문자열 | 선택 사항; 기본: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_single_tissue_eqtls", {"gencode_id": "ENSG00000111640.14"})
@@ -2317,9 +2319,9 @@ const result = await host.mcp("expression", "gtex_single_tissue_eqtls", {"gencod
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gencode_id` | 뚱 베어 | **(주)** |
-| `variant_id` | 뚱 베어 | 옵션 정보 |
-| `dataset_id` | 뚱 베어 | 선택 사항; 기본: "gtex_v8" |
+| `gencode_id` | 문자열 | **필수** |
+| `variant_id` | 문자열 | 옵션 정보 |
+| `dataset_id` | 문자열 | 선택 사항; 기본: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_multi_tissue_eqtls", {"gencode_id": "ENSG00000111640.14"})
@@ -2331,10 +2333,10 @@ const result = await host.mcp("expression", "gtex_multi_tissue_eqtls", {"gencode
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gencode_id` | 뚱 베어 | **(주)** |
-| `variant_id` | 뚱 베어 | **(주)** |
-| `tissue_site_detail_id` | 뚱 베어 | **(주)** |
-| `dataset_id` | 뚱 베어 | 선택 사항; 기본: "gtex_v8" |
+| `gencode_id` | 문자열 | **필수** |
+| `variant_id` | 문자열 | **필수** |
+| `tissue_site_detail_id` | 문자열 | **필수** |
+| `dataset_id` | 문자열 | 선택 사항; 기본: "gtex_v8" |
 
 ```javascript
 const result = await host.mcp("expression", "gtex_calculate_eqtl", {"gencode_id": "ENSG00000111640.14", "variant_id": "chr12_6452899_G_A_b38", "tissue_site_detail_id": "Whole_Blood"})
@@ -2353,7 +2355,7 @@ const result = await host.mcp("expression", "gtex_calculate_eqtl", {"gencode_id"
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accessions` | 문자열의 배열 | **(주)** |
+| `accessions` | 문자열 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_domain_architecture", {"accessions": ["P04637"]})
@@ -2365,10 +2367,10 @@ InterPro 또는 회원 데이터베이스 항목 (Pfam, SMART, PROSITE, PANTHER,
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | 옵션 정보 |
-| `entry_type` | 뚱 베어 | 옵션 정보 |
-| `source_db` | 뚱 베어 | 선택 사항; 기본: "interpro" |
-| `go_term` | 뚱 베어 | 옵션 정보 |
+| `query` | 문자열 | 옵션 정보 |
+| `entry_type` | 문자열 | 옵션 정보 |
+| `source_db` | 문자열 | 선택 사항; 기본: "interpro" |
+| `go_term` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_interpro_entries", {"query": "kinase", "source_db": "pfam"})
@@ -2380,7 +2382,7 @@ InterPro 항목 (IPRxxxxxx) 또는 Pfam 가족 (PFxxxxx)에 대한 세부 기록
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
+| `accession` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_interpro_entry", {"accession": "IPR000719"})
@@ -2392,7 +2394,7 @@ Pfam Kinds (InterPro set, Accessions CLxxxx)에서 키워드 검색.
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | 옵션 정보 |
+| `query` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_pfam_clans", {"query": "kinase"})
@@ -2404,7 +2406,7 @@ Pfam Kind는 완전한 분류된 회원 가족 목록을 포함하여 세부 정
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `clan_accession` | 뚱 베어 | **(주)** |
+| `clan_accession` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_clan", {"clan_accession": "CL0016"})
@@ -2416,10 +2418,10 @@ Pfam 가족의 회원 단백질 (완전한 카운트 검증된 도보 또는 계
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `pfam_accession` | 뚱 베어 | **(주)** |
-| `reviewed_only` | boolean의 특징 | 선택 사항; 기본값: false |
-| `tax_id` | 뚱 베어 | 옵션 정보 |
-| `count_only` | boolean의 특징 | 선택 사항; 기본값: false |
+| `pfam_accession` | 문자열 | **필수** |
+| `reviewed_only` | 불리언 | 선택 사항; 기본값: false |
+| `tax_id` | 정수 | 옵션 정보 |
+| `count_only` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_family_proteins", {"pfam_accession": "PF00069", "count_only": true})
@@ -2431,8 +2433,8 @@ Pfam 가족 구성원을 포함하는 Proteomes. count_only 기본적으로 true
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `pfam_accession` | 뚱 베어 | **(주)** |
-| `count_only` | boolean의 특징 | 선택 사항; 기본값: true |
+| `pfam_accession` | 문자열 | **필수** |
+| `count_only` | 불리언 | 선택 사항; 기본값: true |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_pfam_family_proteomes", {"pfam_accession": "PF00069"})
@@ -2444,8 +2446,8 @@ const result = await host.mcp("protein-annotation", "get_pfam_family_proteomes",
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene` | 뚱 베어 | **(주)** |
-| `full` | boolean의 특징 | 선택 사항; 기본값: false |
+| `gene` | 문자열 | **필수** |
+| `full` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_protein_atlas_gene", {"gene": "TP53"})
@@ -2457,8 +2459,8 @@ const result = await host.mcp("protein-annotation", "get_protein_atlas_gene", {"
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `columns` | 뚱 베어 | 선택 사항; 기본: "g, g, gd, up, chr, chrp, scl" |
+| `query` | 문자열 | **필수** |
+| `columns` | 문자열 | 선택 사항; 기본: "g, g, gd, up, chr, chrp, scl" |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "search_protein_atlas", {"query": "kinase"})
@@ -2470,8 +2472,8 @@ const result = await host.mcp("protein-annotation", "search_protein_atlas", {"qu
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `symbols` | 문자열의 배열 | **(주)** |
-| `species` | 뚱 베어 | 선택 사항; 기본: 9606 |
+| `symbols` | 문자열 배열 | **필수** |
+| `species` | 정수 | 선택 사항; 기본: 9606 |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "map_string_ids", {"symbols": ["TP53", "BRCA1", "EGFR"]})
@@ -2483,9 +2485,9 @@ const result = await host.mcp("protein-annotation", "map_string_ids", {"symbols"
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `symbols` | 문자열의 배열 | **(주)** |
-| `species` | 뚱 베어 | 선택 사항; 기본: 9606 |
-| `required_score` | 뚱 베어 | 선택 사항; 기본: 700 |
+| `symbols` | 문자열 배열 | **필수** |
+| `species` | 정수 | 선택 사항; 기본: 9606 |
+| `required_score` | 정수 | 선택 사항; 기본: 700 |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_string_network", {"symbols": ["TP53", "BRCA1", "EGFR"], "required_score": 700})
@@ -2497,8 +2499,8 @@ Smith-Waterman 단백질 유사성 비트 코어 (STRING /homology). Sparse: STR
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `symbols` | 문자열의 배열 | **(주)** |
-| `species` | 뚱 베어 | 선택 사항; 기본: 9606 |
+| `symbols` | 문자열 배열 | **필수** |
+| `species` | 정수 | 선택 사항; 기본: 9606 |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_string_similarity_scores", {"symbols": ["TP53", "MDM2", "MDM4"]})
@@ -2510,9 +2512,9 @@ const result = await host.mcp("protein-annotation", "get_string_similarity_score
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `symbols` | 문자열의 배열 | **(주)** |
-| `species` | 뚱 베어 | 선택 사항; 기본: 9606 |
-| `target_species` | 뚱 베어 | 옵션 정보 |
+| `symbols` | 문자열 배열 | **필수** |
+| `species` | 정수 | 선택 사항; 기본: 9606 |
+| `target_species` | 정수 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("protein-annotation", "get_string_best_similarity_hits", {"symbols": ["TP53"], "target_species": 10090})
@@ -2531,9 +2533,9 @@ cBioPortal 암 연구 목록은, 선택적으로 자유로운 원본 키워드 (
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `keyword` | 뚱 베어 | 옵션 정보 |
-| `cancer_type_id` | 뚱 베어 | 옵션 정보 |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 500 |
+| `keyword` | 문자열 | 옵션 정보 |
+| `cancer_type_id` | 문자열 | 옵션 정보 |
+| `max_records` | 정수 | 선택 사항; 기본: 500 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_list_studies", {"keyword": "glioma"})
@@ -2545,7 +2547,7 @@ id : metadata, per-data-type sample counts, true sample/patient counts (연구 �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `study_id` | 뚱 베어 | **(주)** |
+| `study_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_get_study", {"study_id": "msk_impact_2017"})
@@ -2557,9 +2559,9 @@ cBioPortal 연구에서 한 유전자 (HUGO 기호)의 모든 mutations, 재발�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_symbol` | 뚱 베어 | **(주)** |
-| `study_id` | 뚱 베어 | **(주)** |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `gene_symbol` | 문자열 | **필수** |
+| `study_id` | 문자열 | **필수** |
+| `max_records` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_mutations_in_gene", {"gene_symbol": "IDH1", "study_id": "difg_msk_2023"})
@@ -2571,8 +2573,8 @@ const result = await host.mcp("cancer-models", "cbioportal_mutations_in_gene", {
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_symbol` | 뚱 베어 | **(주)** |
-| `study_ids` | 문자열의 배열 | **(주)**; 최소품목: 1; 최대품목: 12 |
+| `gene_symbol` | 문자열 | **필수** |
+| `study_ids` | 문자열 배열 | **필수**; 최소품목: 1; 최대품목: 12 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_mutation_frequency", {"gene_symbol": "KRAS", "study_ids": ["msk_impact_2017", "difg_msk_2023"]})
@@ -2584,10 +2586,10 @@ cBioPortal 연구에서 한 유전자의 분리 사본 번호 변경, 이벤트 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `gene_symbol` | 뚱 베어 | **(주)** |
-| `study_id` | 뚱 베어 | **(주)** |
-| `event_type` | 뚱 베어 | 선택 사항; 기본: "HOMDEL_AND_AMP"; 한국어 (ko)"HOMDEL_AND_AMP의 특징"· "제품정보"· "AMP의 장점"· "인기 카테고리"· "HETLOSS의 장점"· "사이트맵"· "의 모든 것"· |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `gene_symbol` | 문자열 | **필수** |
+| `study_id` | 문자열 | **필수** |
+| `event_type` | 문자열 | 선택 사항; 기본: "HOMDEL_AND_AMP"; 한국어 (ko)"HOMDEL_AND_AMP의 특징"· "제품정보"· "AMP의 장점"· "인기 카테고리"· "HETLOSS의 장점"· "사이트맵"· "의 모든 것"· |
+| `max_records` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_cna_in_gene", {"gene_symbol": "CDKN2A", "study_id": "msk_impact_2017"})
@@ -2599,8 +2601,8 @@ cBioPortal 연구 (특허 및 샘플 수준 필드)에서 정의 된 임상 속�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `study_id` | 뚱 베어 | **(주)** |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 200 |
+| `study_id` | 문자열 | **필수** |
+| `max_records` | 정수 | 선택 사항; 기본: 200 |
 
 ```javascript
 const result = await host.mcp("cancer-models", "cbioportal_clinical_attributes", {"study_id": "brca_tcga_pan_can_atlas_2018"})
@@ -2619,7 +2621,7 @@ const result = await host.mcp("cancer-models", "cbioportal_clinical_attributes",
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `family` | 뚱 베어 | **(주)** |
+| `family` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("rna", "get_family", {"family": "RF00005"})
@@ -2631,9 +2633,9 @@ const result = await host.mcp("rna", "get_family", {"family": "RF00005"})
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `family` | 뚱 베어 | **(주)** |
-| `fmt` | 뚱 베어 | 선택 사항; 기본: "stockholm"; koum : &#91;"stockholm", "fasta"&#93; |
-| `max_bytes` | 뚱 베어 | 선택 사항; 기본: 400000 |
+| `family` | 문자열 | **필수** |
+| `fmt` | 문자열 | 선택 사항; 기본: "stockholm"; koum : &#91;"stockholm", "fasta"&#93; |
+| `max_bytes` | 정수 | 선택 사항; 기본: 400000 |
 
 ```javascript
 const result = await host.mcp("rna", "get_seed_alignment", {"family": "RF00162", "fmt": "stockholm"})
@@ -2645,8 +2647,8 @@ Rfam 가족의 Infernal covariance 모델 (CM 파일), cmsearch / cmscan과 직�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `family` | 뚱 베어 | **(주)** |
-| `max_bytes` | 뚱 베어 | 선택 사항; 기본: 400000 |
+| `family` | 문자열 | **필수** |
+| `max_bytes` | 정수 | 선택 사항; 기본: 400000 |
 
 ```javascript
 const result = await host.mcp("rna", "get_covariance_model", {"family": "RF00162"})
@@ -2658,7 +2660,7 @@ Rfam 가족의 씨앗 phylogenetic 나무 (NHX / Newick 텍스트).
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `family` | 뚱 베어 | **(주)** |
+| `family` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("rna", "get_tree", {"family": "RF00162"})
@@ -2670,7 +2672,7 @@ const result = await host.mcp("rna", "get_tree", {"family": "RF00162"})
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `family` | 뚱 베어 | **(주)** |
+| `family` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("rna", "get_sequence_regions", {"family": "RF00162"})
@@ -2682,7 +2684,7 @@ PDB 잔류물 수준 구조 Rfam 가족의 매핑, deterministically 분류.
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `family` | 뚱 베어 | **(주)** |
+| `family` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("rna", "get_structure_mapping", {"family": "RF00162"})
@@ -2694,7 +2696,7 @@ Rfam Accession을 가족 ID로 변환하십시오 (예를 들어. RF00005 - > "t
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
+| `accession` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("rna", "accession_to_id", {"accession": "RF00005"})
@@ -2706,7 +2708,7 @@ Rfam 가족 ID를 그것의 접근 (예를들면. "tRNA"의 특징 -> RF00005).
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `family_id` | 뚱 베어 | **(주)** |
+| `family_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("rna", "id_to_accession", {"family_id": "tRNA"})
@@ -2718,9 +2720,9 @@ const result = await host.mcp("rna", "id_to_accession", {"family_id": "tRNA"})
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `sequence` | 뚱 베어 | **(주)** |
-| `max_wait_s` | 이름 &#42; | 선택 사항; 기본: 300 |
-| `poll_interval_s` | 이름 &#42; | 선택 사항; 기본: 5 |
+| `sequence` | 문자열 | **필수** |
+| `max_wait_s` | 숫자 | 선택 사항; 기본: 300 |
+| `poll_interval_s` | 숫자 | 선택 사항; 기본: 5 |
 
 ```javascript
 const result = await host.mcp("rna", "search_sequence", {"sequence": "GGUUCCGGGAAGGCAGCAGGUGGAAACCUGCCA"})
@@ -2739,14 +2741,14 @@ const result = await host.mcp("rna", "search_sequence", {"sequence": "GGUUCCGGGA
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | 옵션 정보 |
-| `organism` | 뚱 베어 | 옵션 정보 |
-| `study_type` | 뚱 베어 | 옵션 정보 |
-| `technology` | 뚱 베어 | 옵션 정보 |
-| `released_after` | 뚱 베어 | 옵션 정보 |
-| `released_before` | 뚱 베어 | 옵션 정보 |
-| `extra_facets` | 기타 제품 | 옵션 정보 |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 50 |
+| `query` | 문자열 | 옵션 정보 |
+| `organism` | 문자열 | 옵션 정보 |
+| `study_type` | 문자열 | 옵션 정보 |
+| `technology` | 문자열 | 옵션 정보 |
+| `released_after` | 문자열 | 옵션 정보 |
+| `released_before` | 문자열 | 옵션 정보 |
+| `extra_facets` | 객체 | 옵션 정보 |
+| `max_records` | 정수 | 선택 사항; 기본: 50 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_search_experiments", {"organism": "Homo sapiens", "study_type": "ChIP-seq", "max_records": 50})
@@ -2758,7 +2760,7 @@ Fetch one ArrayExpress experiment (BioStudies) as a flattened analyst record - �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
+| `accession` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment", {"accession": "E-MTAB-5061"})
@@ -2770,7 +2772,7 @@ const result = await host.mcp("omics-archives", "arrayexpress_get_experiment", {
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
+| `accession` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment_files", {"accession": "E-MTAB-5061"})
@@ -2782,8 +2784,8 @@ const result = await host.mcp("omics-archives", "arrayexpress_get_experiment_fil
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
-| `max_rows_returned` | 뚱 베어 | 선택 사항; 기본: 200 |
+| `accession` | 문자열 | **필수** |
+| `max_rows_returned` | 정수 | 선택 사항; 기본: 200 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "arrayexpress_get_experiment_samples", {"accession": "E-MTAB-5061", "max_rows_returned": 200})
@@ -2795,8 +2797,8 @@ const result = await host.mcp("omics-archives", "arrayexpress_get_experiment_sam
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `term` | 뚱 베어 | **(주)** |
-| `retmax` | 뚱 베어 | 선택 사항; 기본: 500 |
+| `term` | 문자열 | **필수** |
+| `retmax` | 정수 | 선택 사항; 기본: 500 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "geo_search_series", {"term": "asthma AND gse[ETYP]", "retmax": 20})
@@ -2808,7 +2810,7 @@ const result = await host.mcp("omics-archives", "geo_search_series", {"term": "a
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accessions` | 문자열의 배열 | **(주)** |
+| `accessions` | 문자열 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "geo_get_series", {"accessions": ["GSE131907"]})
@@ -2832,9 +2834,9 @@ MetaboLights 연구 (MTBLSxxx)에 대한 Fetch 구조화 된 메타 데이터는
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accessions` | 문자열의 배열 | **(주)** |
-| `include_samples` | boolean의 특징 | 선택 사항; 기본값: false |
-| `max_sample_rows_returned` | 뚱 베어 | 선택 사항; 기본: 200 |
+| `accessions` | 문자열 배열 | **필수** |
+| `include_samples` | 불리언 | 선택 사항; 기본값: false |
+| `max_sample_rows_returned` | 정수 | 선택 사항; 기본: 200 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_get_studies", {"accessions": ["MTBLS1"], "include_samples": false})
@@ -2846,8 +2848,8 @@ const result = await host.mcp("omics-archives", "metabolights_get_studies", {"ac
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
-| `include_data_files` | boolean의 특징 | 선택 사항; 기본값: true |
+| `accession` | 문자열 | **필수** |
+| `include_data_files` | 불리언 | 선택 사항; 기본값: true |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_get_study_files", {"accession": "MTBLS1"})
@@ -2859,8 +2861,8 @@ MetaboLights 연구's raw-data 폴더 (FILES 트리)를 통해 Glob 검색. `pat
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
-| `pattern` | 뚱 베어 | 옵션 정보 |
+| `accession` | 문자열 | **필수** |
+| `pattern` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "metabolights_search_data_files", {"accession": "MTBLS1", "pattern": "*.zip"})
@@ -2872,8 +2874,8 @@ MGnify metagenomics 연구 무료 텍스트 또는 biome lineage (특히 한 것
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | 옵션 정보 |
-| `biome_lineage` | 뚱 베어 | 옵션 정보 |
+| `query` | 문자열 | 옵션 정보 |
+| `biome_lineage` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_search_studies", {"query": "coral"})
@@ -2885,8 +2887,8 @@ MGnify 연구에 대한 Fetch 구조화 된 레코드 (MGYS Accessions). include
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accessions` | 문자열의 배열 | **(주)** |
-| `include_analyses` | boolean의 특징 | 선택 사항; 기본값: false |
+| `accessions` | 문자열 배열 | **필수** |
+| `include_analyses` | 불리언 | 선택 사항; 기본값: false |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_get_studies", {"accessions": ["MGYS00000410"], "include_analyses": false})
@@ -2898,7 +2900,7 @@ const result = await host.mcp("omics-archives", "mgnify_get_studies", {"accessio
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
+| `accession` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "mgnify_get_study_analyses", {"accession": "MGYS00000410"})
@@ -2910,12 +2912,12 @@ PRIDE Archive proteomics 프로젝트 검색 (완전한, api_total-verified retr
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `keyword` | 뚱 베어 | 옵션 정보 |
-| `organism` | 뚱 베어 | 옵션 정보 |
-| `instrument` | 뚱 베어 | 옵션 정보 |
-| `disease` | 뚱 베어 | 옵션 정보 |
-| `extra_filters` | 기타 제품 | 옵션 정보 |
-| `max_records_returned` | 뚱 베어 | 선택 사항; 기본: 50 |
+| `keyword` | 문자열 | 옵션 정보 |
+| `organism` | 문자열 | 옵션 정보 |
+| `instrument` | 문자열 | 옵션 정보 |
+| `disease` | 문자열 | 옵션 정보 |
+| `extra_filters` | 객체 | 옵션 정보 |
+| `max_records_returned` | 정수 | 선택 사항; 기본: 50 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_search_projects", {"keyword": "phosphoproteome", "organism": "Homo sapiens (human)", "max_records_returned": 50})
@@ -2927,7 +2929,7 @@ const result = await host.mcp("omics-archives", "pride_search_projects", {"keywo
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accessions` | 문자열의 배열 | **(주)** |
+| `accessions` | 문자열 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_get_projects", {"accessions": ["PXD010154"]})
@@ -2939,8 +2941,8 @@ const result = await host.mcp("omics-archives", "pride_get_projects", {"accessio
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `project_accession` | 뚱 베어 | **(주)** |
-| `keyword` | 뚱 베어 | 옵션 정보 |
+| `project_accession` | 문자열 | **필수** |
+| `keyword` | 문자열 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_search_project_proteins", {"project_accession": "PXD010154"})
@@ -2952,7 +2954,7 @@ const result = await host.mcp("omics-archives", "pride_search_project_proteins",
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `protein_accession` | 뚱 베어 | **(주)** |
+| `protein_accession` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("omics-archives", "pride_find_projects_for_protein", {"protein_accession": "P04637"})
@@ -2971,7 +2973,7 @@ CellGuide(CELLxGENE) Cell Ontology id 또는 name: name, synonyms, tology descri
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `cell_type` | 뚱 베어 | **(주)** |
+| `cell_type` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_cell_type_info", {"cell_type": "acinar cell"})
@@ -2983,8 +2985,8 @@ const result = await host.mcp("cellguide", "get_cell_type_info", {"cell_type": "
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `limit` | 뚱 베어 | 선택 사항; 기본: 25 |
+| `query` | 문자열 | **필수** |
+| `limit` | 정수 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("cellguide", "search_cell_types", {"query": "T cell", "limit": 25})
@@ -2996,9 +2998,9 @@ CellGuide 마커 유전자 (id 또는 name) : computational (data-derived, score
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `cell_type` | 뚱 베어 | **(주)** |
-| `marker_type` | 뚱 베어 | 선택 사항; 기본: "computational"; enum: &#91;"computational", "canonical"&#93; |
-| `limit` | 뚱 베어 | 선택 사항; 기본: 25 |
+| `cell_type` | 문자열 | **필수** |
+| `marker_type` | 문자열 | 선택 사항; 기본: "computational"; enum: &#91;"computational", "canonical"&#93; |
+| `limit` | 정수 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_marker_genes", {"cell_type": "CL:0000084", "marker_type": "computational", "limit": 25})
@@ -3010,7 +3012,7 @@ CellGuide 소스 데이터 세트 및 간행물은 세포 유형 (id 또는 이�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `cell_type` | 뚱 베어 | **(주)** |
+| `cell_type` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_source_data", {"cell_type": "CL:0000622"})
@@ -3022,7 +3024,7 @@ const result = await host.mcp("cellguide", "get_source_data", {"cell_type": "CL:
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `cell_type` | 뚱 베어 | **(주)** |
+| `cell_type` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("cellguide", "get_cell_tissues", {"cell_type": "T cell"})
@@ -3041,13 +3043,13 @@ ENCODE 기능 게놈 실험 검색 (ChIP-seq, ATAC-seq, ...). 필터: assay_titl
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `assay_title` | 뚱 베어 | 옵션 정보 |
-| `target` | 뚱 베어 | 옵션 정보 |
-| `organism` | 뚱 베어 | 옵션 정보 |
-| `status` | 뚱 베어 | 선택 사항; 기본: "released" |
-| `date_released_before` | 뚱 베어 | 옵션 정보 |
-| `extra_filters` | 기타 제품 | 옵션 정보 |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `assay_title` | 문자열 | 옵션 정보 |
+| `target` | 문자열 | 옵션 정보 |
+| `organism` | 문자열 | 옵션 정보 |
+| `status` | 문자열 | 선택 사항; 기본: "released" |
+| `date_released_before` | 문자열 | 옵션 정보 |
+| `extra_filters` | 객체 | 옵션 정보 |
+| `max_rows` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_search_experiments", {"target": "CTCF", "assay_title": "TF ChIP-seq", "max_rows": 50})
@@ -3059,13 +3061,13 @@ ENCODE Biosamples 검색 (cell line, 조직, 주요 세포). 필터: term_name (
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `term_name` | 뚱 베어 | 옵션 정보 |
-| `classification` | 뚱 베어 | 옵션 정보 |
-| `organism` | 뚱 베어 | 옵션 정보 |
-| `status` | 뚱 베어 | 선택 사항; 기본: "released" |
-| `date_created_before` | 뚱 베어 | 옵션 정보 |
-| `extra_filters` | 기타 제품 | 옵션 정보 |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `term_name` | 문자열 | 옵션 정보 |
+| `classification` | 문자열 | 옵션 정보 |
+| `organism` | 문자열 | 옵션 정보 |
+| `status` | 문자열 | 선택 사항; 기본: "released" |
+| `date_created_before` | 문자열 | 옵션 정보 |
+| `extra_filters` | 객체 | 옵션 정보 |
+| `max_rows` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_search_biosamples", {"term_name": "K562", "classification": "cell line", "max_rows": 25})
@@ -3077,13 +3079,13 @@ ENCODE 데이터 파일 목록 형식으로 / assay / biosample. 필터: file_fo
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `file_format` | 뚱 베어 | 옵션 정보 |
-| `assay_term_name` | 뚱 베어 | 옵션 정보 |
-| `biosample_term_name` | 뚱 베어 | 옵션 정보 |
-| `status` | 뚱 베어 | 선택 사항; 기본: "released" |
-| `date_created_before` | 뚱 베어 | 옵션 정보 |
-| `extra_filters` | 기타 제품 | 옵션 정보 |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `file_format` | 문자열 | 옵션 정보 |
+| `assay_term_name` | 문자열 | 옵션 정보 |
+| `biosample_term_name` | 문자열 | 옵션 정보 |
+| `status` | 문자열 | 선택 사항; 기본: "released" |
+| `date_created_before` | 문자열 | 옵션 정보 |
+| `extra_filters` | 객체 | 옵션 정보 |
+| `max_rows` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_list_files", {"file_format": "bed", "assay_term_name": "ChIP-seq", "biosample_term_name": "K562", "extra_filters": {"output_type": "peaks", "assembly": "GRCh38"}, "max_rows": 50})
@@ -3095,7 +3097,7 @@ Accession (e.g.에 의해 하나의 인코딩 실험을 가져옵니다. "ENCSR0
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
+| `accession` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_experiment", {"accession": "ENCSR000AKP"})
@@ -3107,7 +3109,7 @@ Accession (e.g.에 의해 하나의 인코딩 파일을 가져옵니다. "ENCFF0
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
+| `accession` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_file", {"accession": "ENCFF002JUR"})
@@ -3119,7 +3121,7 @@ Accession (e.g.에 의해 하나의 ENCODE 바이오 샘플 가져 오기 "ENCBS
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `accession` | 뚱 베어 | **(주)** |
+| `accession` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("regulation", "encode_get_biosample", {"accession": "ENCBS013JZP"})
@@ -3131,7 +3133,7 @@ VERSIONED matrix id (e.g.에 의해 하나의 JASPAR TF 바인딩 프로파일�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `matrix_id` | 뚱 베어 | **(주)** |
+| `matrix_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_get_matrix", {"matrix_id": "MA0002.2"})
@@ -3143,7 +3145,7 @@ JASPAR Base matrix id의 모든 버전 목록 (예를 들어. "MA0002"). matrix_
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `base_id` | 뚱 베어 | **(주)** |
+| `base_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_matrix_versions", {"base_id": "MA0002"})
@@ -3155,13 +3157,13 @@ Search/list JASPAR TF 바인딩 프로파일 (전체 프로필 카탈로그). �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `collection` | 뚱 베어 | 옵션 정보 |
-| `tax_group` | 뚱 베어 | 옵션 정보 |
-| `tax_id` | 뚱 베어 | 옵션 정보 |
-| `name` | 뚱 베어 | 옵션 정보 |
-| `search` | 뚱 베어 | 옵션 정보 |
-| `version` | 뚱 베어 | 옵션 정보 |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 1000 |
+| `collection` | 문자열 | 옵션 정보 |
+| `tax_group` | 문자열 | 옵션 정보 |
+| `tax_id` | 정수 | 옵션 정보 |
+| `name` | 문자열 | 옵션 정보 |
+| `search` | 문자열 | 옵션 정보 |
+| `version` | 문자열 | 옵션 정보 |
+| `max_rows` | 정수 | 선택 사항; 기본: 1000 |
 
 ```javascript
 const result = await host.mcp("regulation", "jaspar_list_matrices", {"tax_id": 9606, "collection": "CORE", "version": "latest", "max_rows": 200})
@@ -3221,13 +3223,13 @@ UniBind ChIP-seq datasets를 사용하여 높은 confidence TFBS 예측 (unibind
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `tf_name` | 뚱 베어 | 옵션 정보 |
-| `cell_line` | 뚱 베어 | 옵션 정보 |
-| `species` | 뚱 베어 | 옵션 정보 |
-| `collection` | 뚱 베어 | 선택 사항; koum : &#91;"Robust", "Permissive"&#93; |
-| `jaspar_id` | 뚱 베어 | 옵션 정보 |
-| `search` | 뚱 베어 | 옵션 정보 |
-| `max_rows` | 뚱 베어 | 선택 사항; 기본: 200 |
+| `tf_name` | 문자열 | 옵션 정보 |
+| `cell_line` | 문자열 | 옵션 정보 |
+| `species` | 문자열 | 옵션 정보 |
+| `collection` | 문자열 | 선택 사항; koum : &#91;"Robust", "Permissive"&#93; |
+| `jaspar_id` | 문자열 | 옵션 정보 |
+| `search` | 문자열 | 옵션 정보 |
+| `max_rows` | 정수 | 선택 사항; 기본: 200 |
 
 ```javascript
 const result = await host.mcp("regulation", "unibind_search_tfbs", {"tf_name": "CTCF", "collection": "Robust", "max_rows": 50})
@@ -3239,7 +3241,7 @@ UniBind dataset's 자세히 보기: per-model TFBS counts + 파일 URL. tf_id는
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `tf_id` | 뚱 베어 | **(주)** |
+| `tf_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("regulation", "unibind_get_dataset", {"tf_id": "ENCSR000AUE.A549_lung_carcinoma.CTCF"})
@@ -3251,13 +3253,13 @@ TF 바인딩 사이트는 게놈 지역을 겹쳐 쌓입니다 (UniBind 2021 지
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `genome` | 뚱 베어 | **(주)** |
-| `chrom` | 뚱 베어 | **(주)** |
-| `start` | 뚱 베어 | **(주)** |
-| `end` | 뚱 베어 | **(주)** |
-| `tf_name` | 뚱 베어 | 옵션 정보 |
-| `collection` | 뚱 베어 | 선택 사항; 기본: "Robust"; koum : &#91;"Robust", "Permissive"&#93; |
-| `max_sites` | 뚱 베어 | 선택 사항; 기본: 2000 |
+| `genome` | 문자열 | **필수** |
+| `chrom` | 문자열 | **필수** |
+| `start` | 정수 | **필수** |
+| `end` | 정수 | **필수** |
+| `tf_name` | 문자열 | 옵션 정보 |
+| `collection` | 문자열 | 선택 사항; 기본: "Robust"; koum : &#91;"Robust", "Permissive"&#93; |
+| `max_sites` | 정수 | 선택 사항; 기본: 2000 |
 
 ```javascript
 const result = await host.mcp("regulation", "unibind_tfbs_in_region", {"genome": "hg38", "chrom": "chr1", "start": 1000000, "end": 1010000, "collection": "Robust"})
@@ -3276,17 +3278,17 @@ Search2 API (complete, count-verified retrieval)를 통해 Grants.gov 자금 조
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `keyword` | 뚱 베어 | 옵션 정보 |
-| `opportunity_number` | 뚱 베어 | 옵션 정보 |
-| `aln` | 뚱 베어 | 옵션 정보 |
-| `agencies` | 문자열의 배열 | 옵션 정보 |
-| `opportunity_statuses` | 문자열의 배열 | 옵션 정보 |
-| `eligibilities` | 문자열의 배열 | 옵션 정보 |
-| `funding_categories` | 문자열의 배열 | 옵션 정보 |
-| `funding_instruments` | 문자열의 배열 | 옵션 정보 |
-| `count_only` | boolean의 특징 | 선택 사항; 기본값: false |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 100 |
-| `include_facets` | boolean의 특징 | 선택 사항; 기본값: true |
+| `keyword` | 문자열 | 옵션 정보 |
+| `opportunity_number` | 문자열 | 옵션 정보 |
+| `aln` | 문자열 | 옵션 정보 |
+| `agencies` | 문자열 배열 | 옵션 정보 |
+| `opportunity_statuses` | 문자열 배열 | 옵션 정보 |
+| `eligibilities` | 문자열 배열 | 옵션 정보 |
+| `funding_categories` | 문자열 배열 | 옵션 정보 |
+| `funding_instruments` | 문자열 배열 | 옵션 정보 |
+| `count_only` | 불리언 | 선택 사항; 기본값: false |
+| `max_records` | 정수 | 선택 사항; 기본: 100 |
+| `include_facets` | 불리언 | 선택 사항; 기본값: true |
 
 ```javascript
 const result = await host.mcp("research-resources", "search_grants", {"keyword": "cancer", "agencies": ["HHS-NIH11"], "max_records": 25})
@@ -3298,10 +3300,10 @@ const result = await host.mcp("research-resources", "search_grants", {"keyword":
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `query` | 뚱 베어 | **(주)** |
-| `page` | 뚱 베어 | 옵션 정보 |
-| `page_size` | 뚱 베어 | 선택 사항; 기본: 100 |
-| `max_records` | 뚱 베어 | 선택 사항; 기본: 500 |
+| `query` | 문자열 | **필수** |
+| `page` | 정수 | 옵션 정보 |
+| `page_size` | 정수 | 선택 사항; 기본: 100 |
+| `max_records` | 정수 | 선택 사항; 기본: 500 |
 
 ```javascript
 const result = await host.mcp("research-resources", "search_antibodies", {"query": "CD4", "max_records": 100})
@@ -3313,7 +3315,7 @@ Fetch Antibody Registry 세부 기록 (s) 한 항체 액세스 / RRID. 일반 �
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `antibody_id` | 뚱 베어 | **(주)** |
+| `antibody_id` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("research-resources", "get_antibody", {"antibody_id": "RRID:AB_3643095"})
@@ -3325,9 +3327,9 @@ const result = await host.mcp("research-resources", "get_antibody", {"antibody_i
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `catalog_number` | 뚱 베어 | **(주)** |
-| `vendor` | 뚱 베어 | 옵션 정보 |
-| `page_size` | 뚱 베어 | 선택 사항; 기본: 100 |
+| `catalog_number` | 문자열 | **필수** |
+| `vendor` | 문자열 | 옵션 정보 |
+| `page_size` | 정수 | 선택 사항; 기본: 100 |
 
 ```javascript
 const result = await host.mcp("research-resources", "find_antibodies_by_catalog", {"catalog_number": "ab32572"})
@@ -3370,7 +3372,7 @@ const result = await host.mcp("biomart", "list_marts", {})
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `mart` | 뚱 베어 | **(주)** |
+| `mart` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_datasets", {"mart": "ENSEMBL_MART_ENSEMBL"})
@@ -3382,8 +3384,8 @@ dataset에 대한 통용되는 속성을 나열합니다 (높은 신호 subset).
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `mart` | 뚱 베어 | **(주)** |
-| `dataset` | 뚱 베어 | **(주)** |
+| `mart` | 문자열 | **필수** |
+| `dataset` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_common_attributes", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3395,8 +3397,8 @@ dataset, minus dynamiclogs 및 microarray probes에 사용할 수 있는 모든 
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `mart` | 뚱 베어 | **(주)** |
-| `dataset` | 뚱 베어 | **(주)** |
+| `mart` | 문자열 | **필수** |
+| `dataset` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_all_attributes", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3408,8 +3410,8 @@ dataset에 사용할 수있는 필터 목록. 필터 좁은 get_data 쿼리 (예
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `mart` | 뚱 베어 | **(주)** |
-| `dataset` | 뚱 베어 | **(주)** |
+| `mart` | 문자열 | **필수** |
+| `dataset` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("biomart", "list_filters", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl"})
@@ -3421,10 +3423,10 @@ BioMart 쿼리를 실행: dataset에 대한 요청된 속성을 검색, 선택�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `mart` | 뚱 베어 | **(주)** |
-| `dataset` | 뚱 베어 | **(주)** |
-| `attributes` | 문자열의 배열 | **(주)** |
-| `filters` | 기타 제품 | 옵션 정보 |
+| `mart` | 문자열 | **필수** |
+| `dataset` | 문자열 | **필수** |
+| `attributes` | 문자열 배열 | **필수** |
+| `filters` | 객체 | 옵션 정보 |
 
 ```javascript
 const result = await host.mcp("biomart", "get_data", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "attributes": ["ensembl_gene_id", "external_gene_name", "chromosome_name"], "filters": {"chromosome_name": "Y", "biotype": "protein_coding"}})
@@ -3436,11 +3438,11 @@ const result = await host.mcp("biomart", "get_data", {"mart": "ENSEMBL_MART_ENSE
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `mart` | 뚱 베어 | **(주)** |
-| `dataset` | 뚱 베어 | **(주)** |
-| `from_attr` | 뚱 베어 | **(주)** |
-| `to_attr` | 뚱 베어 | **(주)** |
-| `target` | 뚱 베어 | **(주)** |
+| `mart` | 문자열 | **필수** |
+| `dataset` | 문자열 | **필수** |
+| `from_attr` | 문자열 | **필수** |
+| `to_attr` | 문자열 | **필수** |
+| `target` | 문자열 | **필수** |
 
 ```javascript
 const result = await host.mcp("biomart", "get_translation", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "from_attr": "hgnc_symbol", "to_attr": "ensembl_gene_id", "target": "TP53"})
@@ -3452,11 +3454,11 @@ const result = await host.mcp("biomart", "get_translation", {"mart": "ENSEMBL_MA
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `mart` | 뚱 베어 | **(주)** |
-| `dataset` | 뚱 베어 | **(주)** |
-| `from_attr` | 뚱 베어 | **(주)** |
-| `to_attr` | 뚱 베어 | **(주)** |
-| `targets` | 문자열의 배열 | **(주)** |
+| `mart` | 문자열 | **필수** |
+| `dataset` | 문자열 | **필수** |
+| `from_attr` | 문자열 | **필수** |
+| `to_attr` | 문자열 | **필수** |
+| `targets` | 문자열 배열 | **필수** |
 
 ```javascript
 const result = await host.mcp("biomart", "batch_translate", {"mart": "ENSEMBL_MART_ENSEMBL", "dataset": "hsapiens_gene_ensembl", "from_attr": "hgnc_symbol", "to_attr": "ensembl_gene_id", "targets": ["TP53", "BRCA1", "BRCA2"]})
@@ -3475,9 +3477,9 @@ ZINC 식별자에 의해 ZINC22/ZINC20에 있는 순차할 수 있는 화합물�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'string', 'array'&#93; | **(주)** |
-| `max_results` | 뚱 베어 | 선택 사항; 기본: 50 |
-| `timeout_s` | 이름 &#42; | 선택 사항; 기본: 25 |
+| `zinc_ids` | ['string', 'array'] | **필수** |
+| `max_results` | 정수 | 선택 사항; 기본: 50 |
+| `timeout_s` | 숫자 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_id", {"zinc_ids": ["ZINC000000000012"]})
@@ -3489,11 +3491,11 @@ ZINC22's는 구조에 의하여 믿을 수 있는 화학 공간을 찾아냅니�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `smiles` | 뚱 베어 | **(주)** |
-| `dist` | 뚱 베어 | 선택 사항; 기본: 0 |
-| `adist` | 뚱 베어 | 옵션 정보 |
-| `max_results` | 뚱 베어 | 선택 사항; 기본: 50 |
-| `timeout_s` | 이름 &#42; | 선택 사항; 기본: 25 |
+| `smiles` | 문자열 | **필수** |
+| `dist` | 정수 | 선택 사항; 기본: 0 |
+| `adist` | 정수 | 옵션 정보 |
+| `max_results` | 정수 | 선택 사항; 기본: 50 |
+| `timeout_s` | 숫자 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_smiles", {"smiles": "CC(=O)Oc1ccccc1C(=O)O", "dist": 2})
@@ -3505,9 +3507,9 @@ ZINC 화합물에 납품업자 카탈로그 수를 해결하십시오 — "에 Z
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `supplier_codes` | &#91;'string', 'array'&#93; | **(주)** |
-| `max_results` | 뚱 베어 | 선택 사항; 기본: 50 |
-| `timeout_s` | 이름 &#42; | 선택 사항; 기본: 25 |
+| `supplier_codes` | ['string', 'array'] | **필수** |
+| `max_results` | 정수 | 선택 사항; 기본: 50 |
+| `timeout_s` | 숫자 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_search_by_supplier", {"supplier_codes": ["MCULE-2311834287"]})
@@ -3519,9 +3521,9 @@ ZINC22에서 순차적 화합물의 무작위 샘플을 그릴 — 건물 검열
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `count` | 뚱 베어 | 선택 사항; 기본: 50 |
-| `subset` | 뚱 베어 | 옵션 정보 |
-| `timeout_s` | 이름 &#42; | 선택 사항; 기본: 25 |
+| `count` | 정수 | 선택 사항; 기본: 50 |
+| `subset` | 문자열 | 옵션 정보 |
+| `timeout_s` | 숫자 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_random_sample", {"count": 25, "subset": "lead-like"})
@@ -3533,8 +3535,8 @@ ZINC 화합물을 위한 docking-ready 3D 구조를 찾아내십시오. ZINC22�
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
-| `zinc_ids` | &#91;'string', 'array'&#93; | **(주)** |
-| `timeout_s` | 이름 &#42; | 선택 사항; 기본: 25 |
+| `zinc_ids` | ['string', 'array'] | **필수** |
+| `timeout_s` | 숫자 | 선택 사항; 기본: 25 |
 
 ```javascript
 const result = await host.mcp("zinc", "zinc_get_3d", {"zinc_ids": ["ZINC000000000012"]})

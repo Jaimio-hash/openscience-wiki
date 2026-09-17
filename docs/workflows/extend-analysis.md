@@ -57,12 +57,12 @@ Reference files: <ExampleDownload path="/examples/theoph/theoph-input.csv">input
 
 ## 3. Add the exposure metrics
 
-Download the <ExampleDownload path="/examples/theoph/nca-conventions.md">official Skill's NCA reference</ExampleDownload> and add it through **+ → Attach files**. This is an unchanged reference from the installed package. In the recorded configuration, Notebook could read the conversation attachment but could not read the reference inside the Skill installation directory.
+Download the <ExampleDownload path="/examples/theoph/nca-conventions.md">reviewed NCA methods reference</ExampleDownload> and add it through **+ → Attach files**. This Wiki adaptation corrects the packaged reference’s integration and terminal-window explanations. The worked example uses observed Cmax/Tmax and an explicitly chosen all-linear AUC; it does not estimate a terminal slope. Use the conversation attachment because Notebook could not read the reference inside the Skill installation directory in the recorded configuration.
 
 Select `/pkpd-modeling` again in the same conversation, then send:
 
 ```text
-Read the attached nca-conventions.md from the official Skill package.
+Read the attached reviewed nca-conventions.md methods reference.
 Extend the baseline using the same theoph-input.csv and base R Notebook.
 For each subject calculate observed Cmax (mg/L), earliest observed Tmax (h),
 linear-trapezoidal AUC from time zero to the last observation (mg*h/L),

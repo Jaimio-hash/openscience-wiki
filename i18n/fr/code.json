@@ -929,7 +929,7 @@
     "message": "Compte tenu d'une revendication dans une ébauche ou une note de réunion, localisez les passages et les méthodes pertinents de PDF, conservez les preuves de pages et produisez une conclusion étayée, qualifiée ou non étayée."
   },
   "docs.outline.workflows.database-search.title": {
-    "message": "Contrôles croisés des dossiers scientifiques"
+    "message": "Récupérer des enregistrements de bases de données structurées"
   },
   "docs.outline.workflows.database-search.scope": {
     "message": "Examiner les sujets inclus et leur portée prévue ci-dessous."
@@ -1139,7 +1139,7 @@
     "message": "Comparer deux méthodes d'analyse sur le même ensemble de données"
   },
   "docs.outline.workflows.compare-branches.scope": {
-    "message": "Lors du choix entre les méthodes, brancher à partir d'un point de départ partagé, exécuter à la fois avec des hypothèses documentées et produire une comparaison des résultats et des limites."
+    "message": "Utiliser les mêmes entrées documentées et le prétraitement pour deux méthodes, exécuter les deux et comparer les résultats, les hypothèses et les limites."
   },
   "docs.outline.workflows.save-method.title": {
     "message": "Réutiliser une analyse validée sur un nouvel ensemble de données"
@@ -1605,5 +1605,17 @@
   },
   "docs.outline.reference.v0301.scope": {
     "message": "Brouillons Side Chat, révision des mises à jour Skill, PDF dans les paquets de recherche et outils de récupération."
+  },
+  "docs.outline.workflows.focused-literature-search.title": {
+    "message": "Recherche dans des revues et des dates spécifiées"
+  },
+  "docs.outline.workflows.focused-literature-search.scope": {
+    "message": "Exécutez une recherche limitée PubMed, vérifiez chaque enregistrement retourné et conservez des décisions d'admissibilité incertaines."
+  },
+  "docs.outline.workflows.cross-check-records.title": {
+    "message": "Recoupez deux sources de données scientifiques"
+  },
+  "docs.outline.workflows.cross-check-records.scope": {
+    "message": "Aligner les définitions, les unités, les années et les périodes de référence avant de comparer les relevés annuels de température de la NASA et de HadCRUT."
   }
 }

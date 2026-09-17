@@ -57,12 +57,12 @@ CSV 미리 보기에는 처음 100개 행이 표시됩니다. 저장된 입력 �
 
 ## 3. 노출 메트릭 추가 {/* #3-add-the-exposure-metrics */}
 
-<ExampleDownload path="/examples/theoph/nca-conventions.md">공식 Skill's NCA 참조</ExampleDownload>을 다운로드하고 **+ → Attach files**을 통해 추가하십시오. 설치된 패키지에서 변경되지 않은 참조입니다. 기록된 윤곽에서, Notebook는 대화 부착을 읽을 수 있었습니다 그러나 Skill 임명 디렉토리 안쪽에 참고를 읽을 수 있었습니다.
+<ExampleDownload path="/examples/theoph/nca-conventions.md">검토·수정된 NCA 방법 자료</ExampleDownload>를 내려받아 **+ → Attach files**로 첨부하세요. 이 Wiki 버전은 패키지에 포함된 자료의 적분법과 말기 구간 선택에 관한 설명을 수정한 것입니다. 본 예제는 관측된 Cmax/Tmax와 모든 구간에 선형 사다리꼴 공식을 적용한 AUC만 계산하며, 말기 기울기는 추정하지 않습니다. 기록 당시 Notebook에서 Skill 설치 폴더의 자료를 읽을 수 없었으므로 대화에 파일을 첨부합니다.
 
 동일한 대화에서 `/pkpd-modeling`을 다시 선택하면 다음을 보내주십시오.
 
 ```text
-Read the attached nca-conventions.md from the official Skill package.
+Read the attached reviewed nca-conventions.md methods reference.
 Extend the baseline using the same theoph-input.csv and base R Notebook.
 For each subject calculate observed Cmax (mg/L), earliest observed Tmax (h),
 linear-trapezoidal AUC from time zero to the last observation (mg*h/L),
