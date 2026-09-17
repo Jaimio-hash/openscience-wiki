@@ -1,7 +1,7 @@
 ---
 title: "Autorisations et agréments"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Autorisations et agréments {/* #permissions-and-approvals */}
@@ -24,7 +24,7 @@ Utilisez **Agent controls** pour choisir comment la conversation actuelle demand
 
 Ouvrez **Agent controls** à côté du compositeur et lisez le mode sélectionné. Vérifiez tout message de compatibilité montrant comment le cadre l'implémente. Le contrôle d'accès complet a sa propre confirmation. **Auto-review** est un contrôle différent pour l'examen des résultats et ne signifie pas l'approbation automatique des modifications.
 
-![Le sélecteur de mode d'autorisation en anglais](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![Le sélecteur de mode d'autorisation en anglais](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 Vérifiez le mode effectif affiché pour votre Agent; Le comportement d'approbation soutenu peut différer par cadre. Tous les modes n'ont pas été appliqués dans les quatre cadres.
 
@@ -34,7 +34,7 @@ Vérifiez le mode effectif affiché pour votre Agent; Le comportement d'approbat
 
 Lisez l'opération, l'environnement sélectionné et le code proposé avant d'approuver. Pour une vérification des données, confirmez qu'il lit l'entrée prévue et n'écrit que les sorties demandées. Installer une dépendance manquante est une opération séparée avec un but et un effet différents.
 
-![Approbation d'exécution Python du dossier public GSE60450](/img/open-science/guides-walkthrough/25-python-permission.png)
+![Approbation d'exécution Python du dossier public GSE60450](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | Contrôle ou information | Que faire ou que inspecter |
 | --- | --- |
@@ -53,6 +53,10 @@ Le bouton principal Autoriser utilise normalement la portée de la conversation 
 ### Souvenez-vous de l'approbation de la lecture sur le Web {/* #remember-web-reading-approval */}
 
 Pour une requête **Lire des pages web** prise en charge, choisissez **Allow for this conversation** pour vous souvenir de cette capacité pour les lectures web ultérieures dans la même conversation. Il peut couvrir d'autres sites Web, pas seulement la première URL. **Allow once** s'applique uniquement à cet appel. Examiner ou révoquer la subvention en vertu de **Autorisations mémorisées**; il n'ajoute pas d'hôtes à la liste d'autorisation du réseau Notebook ni n'autorise les téléchargements.
+
+### Souvenez-vous de l'approbation de la recherche en ligne {/* #remember-web-search */}
+
+Depuis v0.30.2, les requêtes natives **Search the web** prises en charge par Claude Agent proposent aussi **Allow for this conversation**. Les recherches suivantes admissibles dans cette conversation peuvent réutiliser cette autorisation. **Allow once** ne couvre que la requête actuelle. Consultez ou révoquez **Search the web** dans **Remembered permissions**. La recherche et **Read web pages** sont deux permissions distinctes. Cette option ne s’applique pas à tous les frameworks ou Connectors : vérifiez la portée affichée.
 
 ## Gérer l'accès mémorisé {/* #manage-remembered-access */}
 
@@ -83,7 +87,7 @@ Inspecter le qualificatif Connector/tool, **Global / Projet / Session** et **Tou
 
 La révocation a une incidence sur l'autorisation future. Il n'inverse pas les modifications complétées ou les demandes de réseau, et une subvention plus large peut encore autoriser l'exploitation.
 
-![Une nouvelle demande d'exécution après la révocation du groupe Session](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![Une nouvelle demande d'exécution après la révocation du groupe Session](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 Si l'inventaire est incomplet, attendez qu'il charge ou réessaye la demande échouée avant d'utiliser la révocation du groupe. Revérifier le champ sélectionné après la révocation.
 

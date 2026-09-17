@@ -25,11 +25,11 @@ last_update:
 5. プレビューを閉じ、候補を選択し、**インポート選択 (1)**を選択します。
 6. インポートされた行を検索し、最終的な名前とソースを調べます。
 
-![インポートする前にパッケージ全体を調べる](/img/open-science/capabilities-walkthrough/11-skill-package-preview.jpg)
+![インポートする前にパッケージ全体を調べる](/img/open-science/capabilities-walkthrough/11-skill-package-preview.webp)
 
 この例では、元の個人的なSkillは既に存在しました。 プレビューは **Name exists** を表示し、別の **インポート済み `rnaseq-count-qc-2`** を作成しました。 元のSpecialistの結合は残ります。 既存のパッケージのインポート更新を想定しないでください。 候補者のソースおよび更新/取り替えの診断を点検して下さい。
 
-![インポートされたコピーと元の個人 Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.jpg)
+![インポートされたコピーと元の個人 Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.webp)
 
 | インポート制御 | 業務内容 |
 | --- | --- |
@@ -53,9 +53,9 @@ last_update:
 4. Skillsに戻り、`peer-review`を検索し、インポートされた行を調べます。 ソースフォルダは、所定の位置に留まります。 Open-Scienceは輸入コピーを使用します。
 5. インストールされたフォルダを変更した後に**Rescan**を使用してください。 再度インポートする前に、オリジン、セレクション、ステータスをリセットします。
 
-![ローカルインストールされたピアレビューパッケージをプレビュー](/img/open-science/local-todo-batch/12-installed-skill-preview.png)
+![ローカルインストールされたピアレビューパッケージをプレビュー](/img/open-science/local-todo-batch/12-installed-skill-preview.webp)
 
-![Skillsリストにインポートされたパッケージを見つける](/img/open-science/local-todo-batch/13-installed-skill-imported.png)
+![Skillsリストにインポートされたパッケージを見つける](/img/open-science/local-todo-batch/13-installed-skill-imported.webp)
 
 インポート後、Skill の詳細でテンプレートと参照ファイルを調べます。 別のアシスタントからメソッドを使用する前に、その必要なツールとランタイム機能がこのセッションで利用可能であることを確認します。
 
@@ -69,7 +69,7 @@ last_update:
 4. プレビューを閉じ、意図した候補を選択し、**インポート選択 (1)**を選択します。 結果が待ってから、**Imported skills**でその名前を確認してください。
 5. Skillsに戻り、その名前を検索します。 使用する前にソースと可用性を調べます。
 
-![インポート前に GitHub Skill とピン留めされたソースを確認します。](/img/open-science/local-todo-batch/15-github-skill-preview.png)
+![インポート前に GitHub Skill とピン留めされたソースを確認します。](/img/open-science/local-todo-batch/15-github-skill-preview.webp)
 
 製品リポジトリから `fair-esm2` をインポートすると、ビルドイン名が既に存在していたため、**`fair-esm2-2`** が作成されました。 組み込みのパッケージは残ります。 インポート手順は、モデル重量をインストールしたり、その推論作品を確立しません。
 
@@ -77,7 +77,7 @@ last_update:
 
 意図した新しい ref で同じリポジトリをスキャンします。 既存の候補は **Update available** を表示できます。 その候補だけを選択し、それをインポートします。 既存のインポートされた行とプレビューを後で検査します。 ESM-2 チェックでは、同じ `fair-esm2-2` コピーが更新され、再び参照するスキャンが **Imported** を示しました。 更新された命令ボディはリポジトリの源に一致しました。 輸入業者は、フロントマッターとコリジョンセーフの名前を書き換えるので、全ファイルバイトは元のSKILL.mdと一致しない必要があります。
 
-![インポートされたコピーに上流のリビジョンが使用可能です](/img/open-science/local-todo-batch/16-github-update-available.png)
+![インポートされたコピーに上流のリビジョンが使用可能です](/img/open-science/local-todo-batch/16-github-update-available.webp)
 
 ### GitHubのレート制限から回復する {/* #recover-from-github-rate-limiting */}
 
@@ -87,7 +87,7 @@ last_update:
 
 **Manage** を開き、ソース/スタタスでフィルタリングし、特定のメソッドを検索します。 アクションを適用する前に結果を選択します。 **選択済み (n)**は選択を示します; **Clear selection** はそれを空にします。 フィルター変更時に選択したセットをすべて見直します。
 
-![インポートされたコピーは一括管理で無効になっています](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.jpg)
+![インポートされたコピーは一括管理で無効になっています](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.webp)
 
 空室状況変更後、 Skill の詳細を再オープンし、その状態を確認します。 削除する前に必要な方法のエクスポートを保持します。
 

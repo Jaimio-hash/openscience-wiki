@@ -33,7 +33,7 @@ last_update:
 5. 새로운 초안 행을 검토합니다. **&#91;hostname&#93; 제거**을 사용하지 않도록 사용하십시오.
 6. **Save changes**을 선택하여 의도된 리스트를 지속합니다.
 
-![Exact-hostname 검증은 와일드카드를 거부합니다.](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.png)
+![Exact-hostname 검증은 와일드카드를 거부합니다.](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.webp)
 
 `data.example.org`과 같은 호스트명을 입력하고, 계획, 경로, 포트, 와일드 카드 또는 IP 주소가 없습니다. **Enter a hostname only, without a scheme, path, port, or wildcard.**의 경우, 그 부분을 제거하고 hostname을 저장합니다.
 
@@ -89,7 +89,7 @@ deny network-outbound pypi.org:443
 | **Save** | 후속 패키지 작업에 대한 구성 저장 |
 | **Cancel** | 초안을 덮어 |
 
-![포장 거울과 CA-bundle 입력](/img/open-science/walkthrough-2026-09-08/56-package-mirror.png)
+![포장 거울과 CA-bundle 입력](/img/open-science/walkthrough-2026-09-08/56-package-mirror.webp)
 
 패키지 미러는 패키지 소스를 변경합니다. 미러의 필수 루트 / 인덱스 형식을 확인, 저장, 선택한 실행 시간에 작은 패키지 작동을 복원. Model-provider 프록시 설정은 별도입니다.
 

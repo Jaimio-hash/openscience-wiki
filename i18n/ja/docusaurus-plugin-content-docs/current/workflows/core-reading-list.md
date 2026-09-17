@@ -49,13 +49,13 @@ claim to have read full text unless you actually retrieved it.
 
 **Save to Literature Inbox?**が現れた場合、動作を確認し、意図した保存を承認します。 候補者の保存は、それらをライブラリに受け入れることとは異なる。
 
-![舞台文献候補への許可](/img/open-science/prisma-walkthrough/03-inbox-save-approval.png)
+![舞台文献候補への許可](/img/open-science/prisma-walkthrough/03-inbox-save-approval.webp)
 
 ## 2. 受諾前に各候補を審査する {/* #2-review-each-candidate-before-accepting */}
 
 **Library → Inbox** を開きます。 これにより、バッジが**3**を示し、各行はタイトル、最初の著者、出版年、**クロスリーフで発見**を表示します。
 
-![3つの実質PRISMAはレビューを待っています](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![3つの実質PRISMAはレビューを待っています](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 1. 候補者のタイトルを選択し、詳細を開きます。
 2. **Provider**、そのソースリンク、および**Identifiers → DOI**を意図した紙にチェックします。
@@ -63,7 +63,7 @@ claim to have read full text unless you actually retrieved it.
 4. アイデンティティが一致したときに**Accept**を選択します。 候補者は、受信トレイから消え、ライブラリレコードになります。
 5. 他の2つを繰り返します。 バッジは3から2から1に変更しました。 最後の状態は **Inbox is clear** でした。
 
-![候補者のクロスリーフソースと正確なDOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.png)
+![候補者のクロスリーフソースと正確なDOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.webp)
 
 | 受信トレイ制御 | アウトカム | 利用場面 |
 | --- | --- | --- |
@@ -81,25 +81,25 @@ claim to have read full text unless you actually retrieved it.
 - **説明:** は、更新された履歴レポートガイダンスを含む状態です。 説明は、エージェントの指示ではなく、組織的なテキストです。
 - **Create collection** を選択します。 記述は任意です間、名前は要求されます。 **Cancel**と**Close**はドラフトを破棄します。
 
-![目的別読書コレクション](/img/open-science/prisma-walkthrough/06-create-collection.png)
+![目的別読書コレクション](/img/open-science/prisma-walkthrough/06-create-collection.webp)
 
 **All references**では、`PRISMA`を検索します。 意図したレコードを正確に確認し、チェックボックスを選択し、**Add to collection → PRISMA reporting - Core reading**を使用します。 操作は選択をクリアします。 3つのレコードをもう一度選択し、**Add to project → PRISMA - Systematic review reading pack**を使用します。
 
 コレクションを開き、その3つのレコードを確認します。 プロジェクトとコレクションのチェックボックスの両方が選択されていることを確認するために参照の詳細を開きます。 これらは、共有レコードへのリンクです, ない 3 バイブリソグラフィの追加のコピー.
 
-![完成した3枚の紙コレクション](/img/open-science/prisma-walkthrough/07-core-reading-collection.png)
+![完成した3枚の紙コレクション](/img/open-science/prisma-walkthrough/07-core-reading-collection.webp)
 
 ## 4. 十分なテキストを添付 {/* #4-attach-usable-full-text */}
 
 2021 用紙を開き、**Find full-text PDF** を選択します。 この実行でヨーロッパPMCを返したルックアップ。 **Add attachment** を選択する前に **Open source** を調べます。
 
-![発見された全文ソース](/img/open-science/prisma-walkthrough/08-full-text-source.png)
+![発見された全文ソース](/img/open-science/prisma-walkthrough/08-full-text-source.webp)
 
 **Add attachment** が **PDF could not be added** を返しました。 メッセージは、サインインの要件、期限切れのリンク、50 MBの制限を含む可能性のある原因をリストします。 ここで発生した原因は特定しません。
 
 回復するには、[出版社の記事ページ](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003583)からオープンに利用可能なPDFをダウンロードしてください。 同じ参照に戻り、**Add PDF**を使用します。 ダウンロードしたファイルを選択し、添付ファイルの下に**プレビューprisma-2020-statement.pdf**を開きます。 **806.1のKB** と **15ページ** のプレビューが正常に添付されたファイルです。 タイトルとDOIを1ページ目で確認します。
 
-![出版者 PDF は首尾よく付く、開きました](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![出版者 PDF は首尾よく付く、開きました](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 PDF は、可視のソース結果が付属していません。 付属のPDFは、エージェントがそれを読むことを証明していません。 **Read with agent**は、その後の要求に対して、読み文を供給する別のアクションです。
 

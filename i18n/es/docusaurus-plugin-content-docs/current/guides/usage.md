@@ -17,7 +17,7 @@ Utilice el período mostrado y métrica para interpretar cada gráfico. Los núm
 3. Compare los cuatro campos de token y los contadores de actividad New/Total.
 4. Verifique la etiqueta de su propio período antes de compararla con el sumario.
 
-![Resumen de hoy con las cartas diarias separadas](/img/open-science/guides-walkthrough/13-usage-today.png)
+![Resumen de hoy con las cartas diarias separadas](/img/open-science/guides-walkthrough/13-usage-today.webp)
 
 | Campo | Interpretación |
 | --- | --- |

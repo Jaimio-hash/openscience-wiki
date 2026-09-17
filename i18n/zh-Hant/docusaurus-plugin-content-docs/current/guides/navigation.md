@@ -12,7 +12,7 @@ last_update:
 
 更改應用語言或主題，請開啟 **Settings → General → Appearance**。[設定中心](../settings/overview.md) 按用途分組，也提供獨立搜尋。
 
-![包含基因表達與文獻專案的 Home](/img/open-science/v0.27.0/01-home.png)
+![包含基因表達與文獻專案的 Home](/img/open-science/v0.27.0/01-home.webp)
 
 | 入口 | 操作 | 開啟後檢查 |
 | --- | --- | --- |

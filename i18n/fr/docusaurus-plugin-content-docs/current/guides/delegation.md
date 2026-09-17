@@ -1,7 +1,7 @@
 ---
 title: "Délégation et Side Chat"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Délégation et Side Chat {/* #delegation-and-side-chat */}
@@ -34,7 +34,7 @@ Les signets privés **For me** sont un outil de lecture différent; Voir [Lectur
 - **Paramètres du modèle :** Un nouveau Side Chat hérite du modèle et de l'effort de raisonnement de la conversation principale actuelle. Vous pouvez les modifier dans Side Chat; la sélection s'applique à son prochain envoi. Les abonnements Codex sont pris en charge. Vérifiez le sélecteur avant d'envoyer.
 - **Transmission et actions :** Les réponses ordinaires ne sont pas automatiquement envoyées à Main. Side Chat ne peut pas accorder les permissions de Main; confirmer la livraison avant de demander à Main de prendre des mesures.
 - **Fermeture d’un onglet :** Lire **Close Side chat?** avant de confirmer. Fermer l’onglet arrête ce Side Chat et supprime définitivement la conversation enregistrée. Sélectionnez **Cancel** pour le conserver et transférez des conseils utiles vers Main ou un rapport enregistré avant de fermer. Si le nettoyage échoue, l'onglet retourne; Inspecter l'erreur avant de réessayer.
-- **Entrée indisponible :** Lisez l'explication du bouton et résolvez les approbations en attente, les transferts de pièces jointes ou la restauration de session. Pour les problèmes de connexion, voir [Dépannage](troubleshooting.md).
+- **Disponibilité :** Depuis v0.30.2, une exécution ou une attente d’approbation dans Main ne bloque pas à elle seule Side Chat. Envoyez d’abord au moins un message dans Main. Une session importée en lecture seule ou une session parente indisponible empêche son ouverture. L’envoi attend aussi l’enregistrement et la restauration de l’historique. Side Chat n’accepte pas les pièces jointes. Suivez le message du bouton ; pour les problèmes de connexion, consultez le [dépannage](troubleshooting.md).
 
 ## Délégation de tâches {/* #task-delegation */}
 

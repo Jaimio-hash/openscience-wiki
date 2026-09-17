@@ -28,7 +28,7 @@ Pour une table intégrée dans une littérature PDF, utilisez [Extraction de PDF
 4. Lire la plage affichée avant d'estimer la taille des ensembles de données. Utilisez un calcul de fichier complet lorsque l'aperçu est limité.
 5. Comparer les valeurs de l'échantillon avec la [base de référence de QC partagée](../reference/example-data.md#sample-qc-baseline).
 
-![Tableau échantillon-QC avec identifiants complets et colonnes numériques](/img/open-science/capabilities-walkthrough/32-csv-preview.jpg)
+![Tableau échantillon-QC avec identifiants complets et colonnes numériques](/img/open-science/capabilities-walkthrough/32-csv-preview.webp)
 
 <ToolOperationGroup>
 <summary>Tableau QC : significations des colonnes</summary>

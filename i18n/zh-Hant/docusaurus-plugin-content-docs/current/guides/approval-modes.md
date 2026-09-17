@@ -1,7 +1,7 @@
 ---
 title: "權限與審批"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # 權限與審批 {/* #权限与审批 */}
@@ -26,7 +26,7 @@ last_update:
 
 開啟輸入框旁的 **Agent controls**，閱讀當前模式和框架相容性說明。Full access 控制元件有自己的確認流程。**Auto-review** 是另一個結果稽核選項，不表示自動批准編輯。
 
-![實際英文權限模式選擇器](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![實際英文權限模式選擇器](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 檢查當前 Agent 顯示的實際模式，不同框架支援的審批行為可能不同。選擇前閱讀當前模式的說明。
 
@@ -34,7 +34,7 @@ last_update:
 
 批准前核對操作、選定環境與程式碼。資料檢查應讀取指定輸入並寫入所需結果；安裝缺失依賴屬於另一項操作，需要單獨檢查其目的和影響。
 
-![公開 GSE60450 案例中的 Python 執行授權](/img/open-science/guides-walkthrough/25-python-permission.png)
+![公開 GSE60450 案例中的 Python 執行授權](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | 控制元件或資訊 | 檢查內容或操作 |
 | --- | --- |
@@ -53,6 +53,10 @@ last_update:
 ### 記住網頁讀取授權 {/* #记住网页读取授权 */}
 
 遇到支援該範圍的 **Read web pages** 請求時，可選擇 **Allow for this conversation**，讓同一會話後續的網頁讀取複用授權。這項授權可覆蓋其他網站，並非只允許第一個 URL；**Allow once** 僅批准當前呼叫。可在 **Remembered permissions** 中檢視或撤銷，它不會向 Notebook 網路白名單新增域名，也不代表允許上傳。
+
+### 記住網頁搜尋授權 {/* #remember-web-search */}
+
+從 v0.30.2 起，受支援的 Claude Agent 原生 **Search the web** 請求也可選擇 **Allow for this conversation**。同一會話後續符合條件的搜尋可以複用授權；**Allow once** 只批准當前請求。在 **Remembered permissions** 中檢視或撤銷 **Search the web**。搜尋與 **Read web pages** 是兩項獨立權限；此原生搜尋選項並非所有框架或 Connector 都支援，應以實際提供的範圍為準。
 
 ## 管理記住的權限 {/* #管理记住的权限 */}
 
@@ -83,7 +87,7 @@ last_update:
 
 撤銷影響後續審批，不會逆轉已完成的編輯或網路請求；更寬範圍的授權仍可能允許該操作。
 
-![撤銷會話分組後重新出現執行授權](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![撤銷會話分組後重新出現執行授權](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 權限清單不完整時，先等待載入或重試失敗請求，再執行分組撤銷；完成後重新檢查所選範圍。
 

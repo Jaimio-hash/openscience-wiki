@@ -17,7 +17,7 @@ Utilice las siguientes políticas de tareas cuando Main, Subagent, Reviewer, Vis
 3. Seleccione **Reasoning effort**. Utilice las opciones realmente mostradas para ese modelo. Este modelo inspeccionado ofrece Default, Low, Medium, High, XHigh y Ultra; otros modelos tienen diferentes escaleras.
 4. Cerrar y reabrir Modelo para comprobar la selección guardada. Comience una pequeña solicitud e inspeccione su resultado antes de un análisis largo.
 
-![Modelo Main y proveedor conectado](/img/open-science/guides-walkthrough/10-model-main.png)
+![Modelo Main y proveedor conectado](/img/open-science/guides-walkthrough/10-model-main.webp)
 
 Los cambios se aplican a las solicitudes posteriores. No cambian retroactivamente el modelo detrás de una respuesta existente. Cuando los modelos cambian, la aplicación intenta preservar la fuerza relativa de razonamiento; un backend puede aproximarse a un esfuerzo sin apoyo. El esfuerzo más alto puede aumentar el tiempo y el uso de token y no es una garantía de corrección.
 
@@ -32,7 +32,7 @@ Seleccione una fila de escenario para ampliarla. Abrir otra fila se derrumba el 
 | **Vision** | Un modelo configurado de imagen | No está configurado significa que no hay una selección de Visión dedicada. Si se necesita un relé depende del soporte de imagen del backend activo. |
 | **Session details** | Siga Main o elija un modelo compatible; inspeccionar su esfuerzo y su capacidad | Esto genera el título de sesión/descripción utilizando una llamada restringida. Está separado de la tarea científica y de sus artefactos. |
 
-![Subagent inheritance and disabled effort control](/img/open-science/guides-walkthrough/11-model-scenarios.png)
+![Subagent inheritance and disabled effort control](/img/open-science/guides-walkthrough/11-model-scenarios.webp)
 
 El selector de detalles de sesión filtra los modelos de suscripción Codex. Un modelo visible en Main o Vision puede por lo tanto estar ausente aquí. Con un proveedor local compatible y OpenCode seleccionado, el modelo local se puso a disposición como opción fija. **Not supported** junto a su esfuerzo de razonamiento significa que el control de esfuerzo no está disponible; es diferente de si el modelo puede recibir una solicitud de texto.
 
@@ -51,9 +51,9 @@ Use Vision cuando el modelo Main de la conversación no puede aceptar imágenes.
 5. Compare la respuesta con la imagen original. Utilice la tabla fuente para comparaciones numéricas exactas: en este ejemplo, dos etiquetas redondeadas a **24.7M** no prueban que sus conteos subyacentes son iguales.
 6. Vuelva Visión a **Not configured** cuando ya no desea un modelo de imagen separado. Esto no elimina al proveedor de modelos.
 
-![Selección de Visión Separada junto con el modelo Main texto](/img/open-science/sept11-completion/vision-configuration.png)
+![Selección de Visión Separada junto con el modelo Main texto](/img/open-science/sept11-completion/vision-configuration.webp)
 
-![Marcas de gráficos y los límites de los valores redondeados](/img/open-science/sept11-completion/vision-result.png)
+![Marcas de gráficos y los límites de los valores redondeados](/img/open-science/sept11-completion/vision-result.webp)
 
 El relé de imagen actual excluye a los proveedores de suscripción de Codex aunque puedan aparecer en el selector de Visión. Si un modelo Main solo de texto todavía rechaza una imagen después de esa selección, elija otro proveedor de Visión elegible o un modelo Main de imagen. No trate un valor de selector guardado como una solicitud de imagen exitosa.
 

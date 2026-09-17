@@ -78,7 +78,7 @@ Um mehrere in der Warteschlange stehende Nachrichten zu überarbeiten, bearbeite
 4. Verwenden Sie **Remove queued message** neben einer Erinnerung oder Anweisung, die Sie nicht mehr benötigen.
 5. Überprüfen Sie nach der Lieferung das gespeicherte Transkript auf den endgültigen Text und die endgültige Bestellung. Entfernte Anfragen sollten nicht als gelieferte Anweisungen erscheinen.
 
-![Die beiden verbleibenden Anfragen nach Bearbeitung und Neubestellung](/img/open-science/local-todo-batch/14-queue-reordered.png)
+![Die beiden verbleibenden Anfragen nach Bearbeitung und Neubestellung](/img/open-science/local-todo-batch/14-queue-reordered.webp)
 
 Prüfen Sie, ob die gelieferten Antworten dem bearbeiteten Inhalt und der Bestellung folgen. Elemente mit der Bezeichnung **Nicht gerettet** haben das gespeicherte Transkript nicht eingegeben; Kopieren Sie wichtigen nicht gesendeten Text vor dem Schließen oder Neustarten.
 
@@ -88,7 +88,7 @@ Prüfen Sie, ob die gelieferten Antworten dem bearbeiteten Inhalt und der Bestel
 
 Wenn eine in der Warteschlange stehende Anforderung eine Datei enthält, bestätigen Sie, dass der Anlagechip immer noch vorhanden ist, wenn Sie den Editor erneut öffnen. Ändern Sie die Anweisungen und wählen Sie dann **Add message to queue**. Vergleichen Sie nach der Lieferung die in der gespeicherten Benutzernachricht angezeigte Datei mit der beabsichtigten Eingabe. Fragen Sie nach einer Dateiprüfsumme, wenn die genaue Dateiidentität wichtig ist.
 
-![Die bearbeitete Anlageanforderung, die mit ihrer Datei und Prüfsumme geliefert wird](/img/open-science/sept11-completion/queue-result.png)
+![Die bearbeitete Anlageanforderung, die mit ihrer Datei und Prüfsumme geliefert wird](/img/open-science/sept11-completion/queue-result.webp)
 
 ### Ein Warteschlangen-Anhang wird nicht verfügbar {/* #a-queued-attachment-becomes-unavailable */}
 
@@ -112,7 +112,7 @@ Erweitern Sie eine Werkzeugkarte, um ihre Argumente, ihren Code und ihre Ausgabe
 
 Bewegen oder fokussieren Sie die Antworttabelle, um **Kopiertabelle** (Markdown, CSV oder TSV), **Downloadtabelle** (CSV oder Markdown) und **Vollbild anzeigen** anzuzeigen. Wählen Sie das erforderliche Format, bestätigen Sie das Ziel und öffnen Sie die Datei erneut, um Zeilen und Kopfzeilen zu überprüfen. Diese Aktionen exportieren eine bestehende Antwort; Sie führen kein Connector erneut aus oder erstellen eine verwaltete Artefaktversion.
 
-![Die zurückgegebene Metadatentabelle in ihrer Vollbildansicht](/img/open-science/guides-walkthrough/60-response-table.png)
+![Die zurückgegebene Metadatentabelle in ihrer Vollbildansicht](/img/open-science/guides-walkthrough/60-response-table.webp)
 
 Verwenden Sie [Hintergrundaufgaben](notebook.md#background-tasks-and-result-delivery) für lang laufende Arbeiten, um den spezifischen Lauf zu öffnen oder abzubrechen. Ein Warteschlangen-Follow-up ist eine ausstehende Anweisung; eine Hintergrundaufgabe ist bereits zugelassene Arbeit. Durch das Schließen der Aufgabenliste wird die Ausführung nicht gestoppt.
 

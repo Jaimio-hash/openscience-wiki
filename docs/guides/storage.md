@@ -10,7 +10,7 @@ Use **Settings → Storage** to inspect the managed data location and disk usage
 
 ## Read and refresh disk usage
 
-![Actual managed storage after the research examples](/img/open-science/local-acceptance/storage-installed-location.png)
+![Actual managed storage after the research examples](/img/open-science/local-acceptance/storage-installed-location.webp)
 
 Read **Data location** before backing up or diagnosing a missing file. This is the app's managed root, separate from an external source folder granted to a project. **Refresh** rescans usage; check the last-scanned time before comparing measurements.
 
@@ -43,7 +43,7 @@ Finish active tasks and keep exports of important inputs, outputs and execution 
 4. Check the source, destination, available space and rebuild notice.
 5. **Change location** submits a valid move; **Cancel** leaves the current location unchanged.
 
-![Relocation form with runtime rebuild requirements](/img/open-science/local-acceptance/storage-destination-form.png)
+![Relocation form with runtime rebuild requirements](/img/open-science/local-acceptance/storage-destination-form.webp)
 
 The app moves existing research data. Python/R environments are **rebuilt after restart, not copied**. The shared runtime package cache is copied to support offline rebuilds, but pip- or CRAN-only packages are not guaranteed to be restored. Additional rebuild space cannot be predicted reliably. Record environment/package requirements before a real move and test the needed runtime afterward.
 
@@ -65,7 +65,7 @@ For an external R interpreter, confirm that the selected executable still exists
 
 After returning, reopen an existing project, input and saved report. Confirm the managed runtime is ready, then run a small calculation and save a new result. Reopen it to check that the default data location is in use.
 
-![Saved R result reopened after returning to the default location](/img/open-science/local-acceptance/r-default-chart.png)
+![Saved R result reopened after returning to the default location](/img/open-science/local-acceptance/r-default-chart.webp)
 
 If **A different folder named OpenScience already exists here. Choose another location.** appears, the app blocks overwriting it. Cancel and preserve that directory. Establish its ownership, contents and backup before resolving the conflict; do not simply delete a same-named folder. Retry migration only after destination validation passes.
 
@@ -78,7 +78,7 @@ If **A different folder named OpenScience already exists here. Choose another lo
 3. **Finish move** attempts to complete the existing copy. **Discard copy** abandons that unfinished copy while retaining the original location. Read the confirmation scope first.
 4. If **Conversation storage needs attention** appears, resolve the unfinished move, choose **Retry**, and reopen the original project and report.
 
-![Recovery choices for the unfinished storage move](/img/open-science/local-todo-batch/46-storage-recovery-choice.png)
+![Recovery choices for the unfinished storage move](/img/open-science/local-todo-batch/46-storage-recovery-choice.webp)
 
 If retrying the final switch repeatedly fails, finish active work, quit and reopen the app, then retry the move. If the error persists, keep the original location and collect the failure details before making another change.
 
@@ -104,7 +104,7 @@ Choose the **row's Restore** to restore an archived session. The window-level Re
 4. Choose **Restore project**.
 5. Reopen the project, its conversation and a saved report.
 
-![Managing the archived GSE60450 project](/img/open-science/local-todo-batch/34-archived-project-manage.png)
+![Managing the archived GSE60450 project](/img/open-science/local-todo-batch/34-archived-project-manage.webp)
 
 Reopen a saved report and its revisions after restoration. Archiving organizes the project; it does not rerun the analysis or remove the report’s version history.
 
@@ -114,7 +114,7 @@ Reopen a saved report and its revisions after restoration. Archiving organizes t
 
 **Delete project** opens a permanent-deletion confirmation. Read its scope before confirming: managed artifacts and uploads are separate from external working-folder files, which are not deleted. Check which tasks and kernels will stop and which managed Session workspaces remain in Storage. Archiving and deleting have different outcomes.
 
-![Deletion scope for a separately created empty project](/img/open-science/local-todo-batch/35-disposable-project-delete.png)
+![Deletion scope for a separately created empty project](/img/open-science/local-todo-batch/35-disposable-project-delete.webp)
 
 Use an empty disposable project if you are learning the deletion flow. Inspect the confirmation’s affected records before deleting a project containing research.
 

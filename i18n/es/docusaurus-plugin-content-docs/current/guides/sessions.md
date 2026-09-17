@@ -23,7 +23,7 @@ Para la ejecución GSE60450 completada, usamos **Edit…** para guardar esta inf
 | Guardar | Persiste los cambios | Revisa el título de la barra lateral después de cerrar |
 | Cancelar / Cerrar | Salir sin aplicar el borrador | Esto no cancela la investigación |
 
-![Título de sesión y editor de descripción](/img/open-science/guides-walkthrough/40-session-edit.png)
+![Título de sesión y editor de descripción](/img/open-science/guides-walkthrough/40-session-edit.webp)
 
 Elija **Pin** del menú de filas para mantener la sesión en el grupo Pinned. **Unpin** lo devuelve a la lista ordinaria. Pinning organiza el acceso; no mantiene un núcleo vivo o protege una sesión de la eliminación.
 
@@ -35,7 +35,7 @@ Utilice [marcadores privados de lectura](bookmarks.md) para guardar un pasaje o 
 
 ## Lea el menú de sesión correctamente {/* #read-the-session-menu-correctly */}
 
-![Medidas que pertenecen al período de sesiones de RNA-seq](/img/open-science/guides-walkthrough/41-session-actions.png)
+![Medidas que pertenecen al período de sesiones de RNA-seq](/img/open-science/guides-walkthrough/41-session-actions.webp)
 
 | Medida | Resultado | Check |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ Supongamos que desea discutir la anotación de la muestra aguas abajo mientras m
 4. Renombrarlo a `GSE60450 - follow-up interpretation` con **Edit…**.
 5. Inspeccione la transcripción heredada antes de presentar la siguiente solicitud. Referencia de los artefactos originales del proyecto explícitamente cuando sea necesario.
 
-![Una rama de nombre independiente al lado del original de pinned](/img/open-science/guides-walkthrough/57-session-branch.png)
+![Una rama de nombre independiente al lado del original de pinned](/img/open-science/guides-walkthrough/57-session-branch.webp)
 
 Una rama conserva la historia de la conversación seleccionada, pero no recrea el núcleo vivo original. Para una actividad copiada etiquetada **code shown** o un enlace histórico bloqueado, abra el artefacto original del panel Archivos del proyecto e inspeccione su sesión de producción.
 
@@ -76,7 +76,7 @@ Para este ejemplo de QC, elija **Edit message** en la pregunta completada, reemp
 
 La misma vía de revisión también se ejecutó con OpenCode y un modelo local: la solicitud revisada produjo la nueva frase, Anterior restableció la respuesta original, y Next restauró la respuesta revisada. Este solo ejemplo de conexión no establece que el estado de la herramienta o los efectos secundarios externos se invierten.
 
-![Controles para cambiar las revisiones del mensaje histórico](/img/open-science/local-todo-batch/18-message-revision.png)
+![Controles para cambiar las revisiones del mensaje histórico](/img/open-science/local-todo-batch/18-message-revision.webp)
 
 **Cancel** deja sin enviar la edición. **Send** solicita una nueva respuesta; compruébalo antes de continuar. Use un seguimiento para corregir la siguiente acción o una rama para una investigación por separado.
 
@@ -99,7 +99,7 @@ Elija **Export → Export conversation…** en el menú de la fila de sesión pa
 
 <p className="example-label"><strong>Ejemplo práctico</strong> Exportar sólo las definiciones finales GSE60450 QC turn</p>
 
-![Seleccionando las definiciones finales de QC recurre para la exportación PDF](/img/open-science/local-todo-batch/20-selected-conversation-export.png)
+![Seleccionando las definiciones finales de QC recurre para la exportación PDF](/img/open-science/local-todo-batch/20-selected-conversation-export.webp)
 
 En **GSE60450 — Methods and claim audit**, la selección de la vuelta final produjo un PDF de una página con sólo esa petición y sus cuatro definiciones métricas. La discusión anterior estaba ausente. El PDF de conversación completa también fue reabierto y comprobado. La exportación de marcación de vuelta seleccionada anterior comenzó con su seguimiento seleccionado. Un giro puede contener varios mensajes auxiliares, por lo que seleccionar un turno no necesita exportar exactamente dos mensajes.
 
@@ -109,13 +109,13 @@ La exportación de conversación no sustituye la descarga del archivo de investi
 
 Elija **Download all artifacts**, seleccione los archivos, elija **Descargar artefactos N**, y elija una carpeta de destino. Esta entrada guarda archivos separados. Los dos métodos descargados y los archivos de Markdown de claim-audit fueron reabiertos y coincidieron con sus artefactos guardados byte for byte.
 
-![Selección de los dos informes guardados en la sesión](/img/open-science/local-todo-batch/21-session-artifact-selection.png)
+![Selección de los dos informes guardados en la sesión](/img/open-science/local-todo-batch/21-session-artifact-selection.webp)
 
 ### Descargar un paquete de archivo de proyecto {/* #download-a-project-file-bundle */}
 
 Abra el menú de nombre de proyecto en la parte superior izquierda → **Download artifacts…**. Los archivos se agrupan bajo **Generated** y **Uploads**. Todos se seleccionan inicialmente; use **Uncheck all**, elija los archivos para entregar, y guarde el ZIP.
 
-![Selección de informes, la tabla QC y la entrada de cuenta original del proyecto](/img/open-science/local-todo-batch/22-project-artifact-selection.png)
+![Selección de informes, la tabla QC y la entrada de cuenta original del proyecto](/img/open-science/local-todo-batch/22-project-artifact-selection.webp)
 
 Elija **Cancel** en el sistema ahorre diálogo para abandonar que ahorra; su selección de archivos sigue disponible. Una vez que la escritura comienza, la aplicación desactiva la cancelación y el cierre. Esperar el resultado; cancelar el diálogo de destino es diferente de detener una escritura en progreso.
 

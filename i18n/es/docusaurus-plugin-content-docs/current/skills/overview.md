@@ -28,7 +28,7 @@ Comience con [directorio Skill](./directory.md) para encontrar un método, o [re
 4. Abre el resultado. Lea la descripción, instrucciones, **Files**, licencia y **Availability**. Un nombre de pantalla puede diferir del ID del paquete.
 5. Volver a la lista e inspeccionar **Used by**. Identifica qué agentes pueden utilizar el paquete; no lista las carreras completadas.
 
-![Buscando el RNA-seq Skill salvado](/img/open-science/capabilities-walkthrough/02-skill-search.jpg)
+![Buscando el RNA-seq Skill salvado](/img/open-science/capabilities-walkthrough/02-skill-search.webp)
 
 | Control | Qué cambios |
 | --- | --- |
@@ -51,7 +51,7 @@ El directorio todavía contiene 23 public packd Skills. El soporte interno Skill
 
 La captura muestra la explicación para **Customize**. Estos Skills requeridos permanecen habilitados incluso cuando usted deshabilita otros métodos opcionales.
 
-![Personalizar las estancias habilitadas y explica por qué](/img/open-science/v0.27.0/08-always-enabled-skill.png)
+![Personalizar las estancias habilitadas y explica por qué](/img/open-science/v0.27.0/08-always-enabled-skill.webp)
 
 ## Úsalo en una conversación {/* #use-it-in-a-conversation */}
 

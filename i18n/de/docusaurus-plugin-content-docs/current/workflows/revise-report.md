@@ -29,11 +29,11 @@ read and flag unavailable figure inspection. Do not invent measurements.
 Save and reopen the draft. Do not overwrite it in later revisions.
 ```
 
-![Die Quell-PDFs und erste Briefing-Anfrage in Open-Science](/img/open-science/workflow-extensions/report-input.png)
+![Die Quell-PDFs und erste Briefing-Anfrage in Open-Science](/img/open-science/workflow-extensions/report-input.webp)
 
 Genehmigen Sie die entsprechende Datei liest, wenn angefordert. Öffnen Sie **catalyst-brief-v1.md** aus **Generated** oder **Files** und lesen Sie den gespeicherten Entwurf. Eine Antwort im Gespräch ist kein Ersatz für die Überprüfung der eigentlichen Datei.
 
-![Der gespeicherte erste Entwurf vor der redaktionellen Überarbeitung](/img/open-science/workflow-extensions/report-draft.png)
+![Der gespeicherte erste Entwurf vor der redaktionellen Überarbeitung](/img/open-science/workflow-extensions/report-draft.webp)
 
 ## 2. Machen Sie das Feedback umsetzbar {/* #2-make-the-feedback-actionable */}
 
@@ -64,7 +64,7 @@ Die eigentliche Revision las die angehängte Kommentardatei und produzierte beid
 
 Öffnen Sie **catalyst-brief-v2.md**. Dieser Lauf ergab einen **117-Wortzusammenfassung**, eine zweireihige Betriebspunkttabelle und drei gekennzeichnete Folgevorschläge.
 
-![Die überarbeitete Zusammenfassung und die Tabelle, in der die Selektivität von der Dauerhaftigkeit getrennt wird](/img/open-science/workflow-extensions/report-revised.png)
+![Die überarbeitete Zusammenfassung und die Tabelle, in der die Selektivität von der Dauerhaftigkeit getrennt wird](/img/open-science/workflow-extensions/report-revised.webp)
 
 Die Hauptunterscheidung ist **98.9% CO Faradaic Effizienz bei -1.2 V vs RHE** gegenüber einem separaten **20 h Stromhaltetest bei -0.8 V vs RHE**. Kombinieren Sie sie nicht in "98.9% für 20 h." Main PDF p. 6, Fig. 6b–d und p. 7, Fig. 6e die einschlägigen Nachweise zu nennen; p. 8 beschreibt die H-Zell-Messungen. Ergänzende PDF pp. 47–48, Fig. 51–52 betreffen Wasserstoffselektivität und NMR-Produktprüfungen.
 
@@ -74,7 +74,7 @@ In diesem Durchlauf konnte der Agent die Volltextpassagen und Bildunterschriften
 
 Öffnen Sie **catalyst-brief-v2-response.md**. Suchen Sie C1–C6, öffnen Sie jeden benannten überarbeiteten Abschnitt und bestätigen Sie, dass er tatsächlich die versprochene Änderung enthält. Ein "Resolved"-Label allein ist unzureichend.
 
-![Die gespeicherte Antworttabelle bildet alle sechs Kommentare zu überarbeiteten Abschnitten ab](/img/open-science/workflow-extensions/report-response.png)
+![Die gespeicherte Antworttabelle bildet alle sechs Kommentare zu überarbeiteten Abschnitten ab](/img/open-science/workflow-extensions/report-response.webp)
 
 Prüfen Sie, ob die Vorschläge als Vorschläge gekennzeichnet bleiben, der DOI bleibt **10.1038/s41467-019-12510-0** und **catalyst-brief-v1.md** existiert unverändert. In der Antwort sollten alle Beweise angegeben werden, die nicht verfügbar sind.
 

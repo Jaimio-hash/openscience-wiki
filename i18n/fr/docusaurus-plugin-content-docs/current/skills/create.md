@@ -47,13 +47,13 @@ Utilisez ceci après qu'une procédure répétable a effectivement fonctionné �
 
 Après avoir terminé GSE60450 QC dans une nouvelle session, sélectionnez **+ → Save as skill** et demandez un paquet **naseq-descriptive-qc** séparé, en conservant les paquets existants. Le workflow natif a créé un brouillon contenant un **SKILL.md**. La validation n'a renvoyé aucune erreur ou avertissement.
 
-![Native Skill ébauche et résultat de validation](/img/open-science/v0.27.0/16-native-skill-draft-validated.png)
+![Native Skill ébauche et résultat de validation](/img/open-science/v0.27.0/16-native-skill-draft-validated.webp)
 
 Vérifiez le nom, la description de déclenchement, les entrées, les définitions métriques et les conditions d'arrêt avant de confirmer la publication à Personal Skills. Ensuite, utilisez **Settings → Skills → Search skills**, ouvrez les instructions sauvegardées et inspectez **Availability** et **Files**. Télécharger la version réelle de <ExampleDownload path="/examples/capabilities/rnaseq-descriptive-qc/SKILL.md">COUVERTURE</ExampleDownload>.
 
-![Publication autochtone trouvée dans Personal](/img/open-science/v0.27.0/17-native-skill-published.png)
+![Publication autochtone trouvée dans Personal](/img/open-science/v0.27.0/17-native-skill-published.webp)
 
-![Directives et disponibilités rouvertes](/img/open-science/v0.27.0/18-native-skill-instructions.png)
+![Directives et disponibilités rouvertes](/img/open-science/v0.27.0/18-native-skill-instructions.webp)
 
 ### Pourquoi le bouton n'est pas disponible {/* #why-the-button-is-unavailable */}
 
@@ -105,7 +105,7 @@ La référence définit les mesures de l'échantillon et leur interprétation. C
 5. Vérifiez le nombre de références et la taille du paquet, puis sélectionnez **Publish**.
 6. Faites une recherche dans la nouvelle ligne personnelle et rouvrez-la. Confirmer les instructions, la disponibilité et les fichiers; exporter le colis pour inspecter les deux entrées.
 
-![Corps RNA-seq Skill et fichier support](/img/open-science/capabilities-walkthrough/01-skill-create.jpg)
+![Corps RNA-seq Skill et fichier support](/img/open-science/capabilities-walkthrough/01-skill-create.webp)
 
 | Champ ou bouton | Que saisir ou vérifier |
 | --- | --- |
@@ -145,7 +145,7 @@ Pour un brouillon assisté par un agent, utilisez **Add skill → Chat with agen
 
 Rouvrir le nouveau CSV et le rapporter et les comparer par l'identificateur de l'échantillon complet avec le [niveau de référence partagé](../reference/example-data.md). Vérifiez le hash d'entrée. Lors de l'application du Skill à une autre étude, répétez ces vérifications en fonction de l'entrée et de la conception expérimentale de cette étude.
 
-![Une invocation séparée et la réouverture QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.png)
+![Une invocation séparée et la réouverture QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.webp)
 
 Référence de mise en œuvre: [CompétenceÉditeur.tsx](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/SkillEditor.tsx), [host-skills-service.ts](https://github.com/aipoch/open-science/blob/v0.26.0/src/main/skills/host-skills-service.ts).
 

@@ -34,7 +34,7 @@ Do not retrieve full text or infer clinical recommendations.
 Write in English, do not delegate, and reopen the saved files.
 ```
 
-![Open-Science 中实际发送的精准检索请求](/img/open-science/workflow-extensions/focused-search-input.png)
+![Open-Science 中实际发送的精准检索请求](/img/open-science/workflow-extensions/focused-search-input.webp)
 
 截图展示初次请求，上方的筛选规则已纳入本次复核后的修正。
 
@@ -55,12 +55,12 @@ AND ("JAMA Psychiatry"[Journal] OR "Behaviour Research and Therapy"[Journal])
 
 回答完成后，在 **Generated** 中打开 **mindfulness-search-audit.csv**。表中应保留全部检索到的 PMID，包括排除和待确认记录。通过 PubMed 链接核对标题、期刊、DOI 和日期，再把筛选结论与摘要逐项对照。
 
-![保留待确认和排除记录的候选文献表](/img/open-science/workflow-extensions/focused-search-table.png)
+![保留待确认和排除记录的候选文献表](/img/open-science/workflow-extensions/focused-search-table.webp)
 
 本次初稿存在排除理由不准确的情况。例如，PMID **38837133** 是更广义心理治疗的原始随机试验，不是二次分析；修订表把它是否符合正念干预范围标为 **uncertain**。PMID **34009273** 是荟萃分析，修正理由后仍排除。要求修改时，应点明记录和具体错误；修改结束后重新打开 CSV，确认文件内容确实更新。
 
 本例复核后的表格有 **20 条纳入、37 条排除、5 条待确认**，合计 **62 条**。这些是依据摘要作出的筛选判断，不代表已经完整评估了 20 项独立试验。同一试验也可能有多篇报告。
-![Notebook 中的实际筛选修订和保存文件检查](/img/open-science/workflow-extensions/focused-search-notebook.png)
+![Notebook 中的实际筛选修订和保存文件检查](/img/open-science/workflow-extensions/focused-search-notebook.webp)
 
 
 ## 4. 保留未解决的疑点
@@ -69,7 +69,7 @@ PMID **41418645** 被 PubMed 的 2019–2025 年发表日期条件检出，但�
 
 打开 **mindfulness-search-notes.md**，确认其中的数量、筛选规则和局限与 CSV 一致。本例同时修订了这两个文件，并保留未改动的原始元数据快照。
 
-![修订后的检索说明及 20/37/5 筛选数量](/img/open-science/workflow-extensions/focused-search-notes.png)
+![修订后的检索说明及 20/37/5 筛选数量](/img/open-science/workflow-extensions/focused-search-notes.webp)
 
 下载<ExampleDownload path="/examples/workflow-extensions/mindfulness-search-audit.csv">复核后的候选表</ExampleDownload>和<ExampleDownload path="/examples/workflow-extensions/mindfulness-search-notes.md">检索说明</ExampleDownload>。Wiki 不重新分发完整摘要，可通过来源链接查看。
 

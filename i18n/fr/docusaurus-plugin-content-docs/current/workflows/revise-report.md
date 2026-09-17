@@ -29,11 +29,11 @@ read and flag unavailable figure inspection. Do not invent measurements.
 Save and reopen the draft. Do not overwrite it in later revisions.
 ```
 
-![Les PDF source et la demande initiale de briefing en Open-Science](/img/open-science/workflow-extensions/report-input.png)
+![Les PDF source et la demande initiale de briefing en Open-Science](/img/open-science/workflow-extensions/report-input.webp)
 
 Approuver le fichier pertinent sur demande. Ouvrez **catalyst-brief-v1.md** depuis **Generated** ou **Files** et lisez le brouillon enregistré. Une réponse dans la conversation n'est pas un substitut à l'inspection du fichier réel.
 
-![Le premier projet sauvegardé avant la révision rédactionnelle](/img/open-science/workflow-extensions/report-draft.png)
+![Le premier projet sauvegardé avant la révision rédactionnelle](/img/open-science/workflow-extensions/report-draft.webp)
 
 ## 2. Faire en sorte que la rétroaction puisse donner lieu à une action {/* #2-make-the-feedback-actionable */}
 
@@ -64,7 +64,7 @@ La révision réelle lisait le fichier de commentaires ci-joint et produisait le
 
 Ouvrez **catalyst-brief-v2.md**. Cette opération a produit un **Sommaire des mots 117**, une table de deux lignes et trois propositions de suivi étiquetées.
 
-![Le résumé révisé et le tableau qui sépare la sélectivité de la durabilité](/img/open-science/workflow-extensions/report-revised.png)
+![Le résumé révisé et le tableau qui sépare la sélectivité de la durabilité](/img/open-science/workflow-extensions/report-revised.webp)
 
 La distinction clé est **98.9% CO Efficacité Faradaic à −1.2 V vs RHE** par rapport à un **Essai de rétention de courant de 20 h à −0.8 V vs RHE** séparé. Ne les combinez pas en98.9% pour 20 Voir aussi le paragraphe 3 de l'annexe I. Main PDF Voir également l'arrêt de la Cour de justice dans l'affaire C-41/94, point 3 de l'arrêt du Tribunal de première instance, précité, point 3 de l'arrêt du Tribunal de première instance, précité. 6, Fig. 6b–d, et p. 7, Fig. 6e, identifier les éléments de preuve pertinents; Voir également l'arrêt de la Cour de justice dans l'affaire C-41/94, point 3 de l'arrêt du Tribunal de première instance, précité, point 3 de l'arrêt du Tribunal de première instance, précité, point 3 de l'arrêt du Tribunal de première instance, précité, point 3 de l'arrêt du Tribunal de première instance, précité, point 3 de l'arrêt du Tribunal de première instance, précité. 8 décrit les mesures des cellules H. Supplémentaire PDF pp. 47–48, Fig. 51–52, concernent la sélectivité de l'hydrogène et les contrôles des produits RMN.
 
@@ -74,7 +74,7 @@ Dans cette exécution, l'Agent pouvait lire les passages en texte intégral et l
 
 Ouvrez **catalyst-brief-v2-response.md**. Localiser C1–C6, ouvrir chaque section modifiée nommée et confirmer qu'elle contient réellement le changement promis. Un seul label "Résolu" est insuffisant.
 
-![Le tableau des réponses enregistrées permet de cartographier les six commentaires dans les sections révisées.](/img/open-science/workflow-extensions/report-response.png)
+![Le tableau des réponses enregistrées permet de cartographier les six commentaires dans les sections révisées.](/img/open-science/workflow-extensions/report-response.webp)
 
 Vérifier que les propositions restent étiquetées comme des propositions, que le DOI reste **10.1038/s41467-019-12510-0**, et que le **catalyst-brief-v1.md** demeure inchangé. La réponse doit indiquer toute preuve qui n'est pas disponible.
 

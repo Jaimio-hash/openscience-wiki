@@ -29,11 +29,11 @@ read and flag unavailable figure inspection. Do not invent measurements.
 Save and reopen the draft. Do not overwrite it in later revisions.
 ```
 
-![Open-Science의 소스 PDF 및 초기 간략한 요청](/img/open-science/workflow-extensions/report-input.png)
+![Open-Science의 소스 PDF 및 초기 간략한 요청](/img/open-science/workflow-extensions/report-input.webp)
 
 요청시 관련 파일이 읽을 수 있습니다. **Generated** 또는 **Files**에서 **catalyst-brief-v1.md**을 열고 저장된 초안을 읽으십시오. 대화에 대한 답변은 실제 파일 검사에 대한 대용품이 아닙니다.
 
-![편집 개정 전에 저장 된 첫 번째 초안](/img/open-science/workflow-extensions/report-draft.png)
+![편집 개정 전에 저장 된 첫 번째 초안](/img/open-science/workflow-extensions/report-draft.webp)
 
 ## 2. 관련 기사 {/* #2-make-the-feedback-actionable */}
 
@@ -64,7 +64,7 @@ Reopen both saved files and check them against the comments. Use English.
 
 **catalyst-brief-v2.md**을 엽니다. 이 실행은 **117-word 요약**, 두 줄 운영 지점 테이블 및 세 개의 라벨링 후속 제안을 생산합니다.
 
-![수정된 요약과 내구성에서 선택성을 분리하는 테이블](/img/open-science/workflow-extensions/report-revised.png)
+![수정된 요약과 내구성에서 선택성을 분리하는 테이블](/img/open-science/workflow-extensions/report-revised.webp)
 
 열쇠 구별은 **−1.2 V 대 RHE에 98.9% CO Faradaic 효율성**는 분리되는 **20 h 현재 보유 테스트 −0.8 V vs RHE**를 versus입니다. 20 h의 "98.9%"로 결합하지 마십시오. Main PDF p. 6, 그림. 6b–d, 그리고 p. 7, 그림. 6e는, 관련 증거를 확인합니다; ₢ 킹 8은 H-cell 측정을 설명합니다. 보충 PDF PP. 47–48, 그림. 51–52, 관심사 수소 선택성 및 NMR 제품 체크.
 
@@ -74,7 +74,7 @@ Reopen both saved files and check them against the comments. Use English.
 
 **catalyst-brief-v2-response.md**을 엽니다. C1–C6를 찾아, 각 이름을 변경된 섹션을 열고, 실제로 약속된 변경을 포함합니다. “Resolved” 상표는 혼자 충분합니다.
 
-![저장된 응답 표는 개정된 단면도에 6개의 코멘트를 맵니다](/img/open-science/workflow-extensions/report-response.png)
+![저장된 응답 표는 개정된 단면도에 6개의 코멘트를 맵니다](/img/open-science/workflow-extensions/report-response.webp)
 
 제안이 제안으로 라벨을 유지한다는 것을 확인, DOI은 **10.1038 / s41467-019-12510-0** 남아, **catalyst-brief-v1.md**는 여전히 변경되지 않습니다. 응답은 사용할 수없는 증거를 주어야한다.
 

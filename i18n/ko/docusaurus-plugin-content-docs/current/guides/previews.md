@@ -36,7 +36,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 `rnaseq-sample-qc.csv`을 엽니다. 이 예에서 **12 행 · 6 열**을 표시하고 헤더로 첫 번째 행을 사용합니다. 수평 스크롤은 긴 소스 명명과 오른쪽에 미터를 노출합니다. 테이블의 행 번호는 표시 위치, 유전자 또는 샘플 ID입니다.
 
-![12 샘플 QC 테이블](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![12 샘플 QC 테이블](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 열 라벨 및 전체 식별자는 읽기 할 수 있습니다. 필드 정의와 공유 기본에 대한 체크는 [테이블 및 데이터 세트](../tools/tables.md)입니다.
 
@@ -46,7 +46,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 `rnaseq-library-sizes.png`을 엽니다. **Zoom in**, **Zoom out** 및 **Reset zoom**를 사용하십시오; 축 라벨이 너무 작을 때 전체 화면을 엽니 다. Zoom은 전망 만 변경합니다. 그것은 소스 매트릭스 또는 통계 결과를 업데이트하지 않습니다.
 
-![전체 화면 미리보기에서 실제 원시 총 수치](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+![전체 화면 미리보기에서 실제 원시 총 수치](/img/open-science/guides-walkthrough/54-rnaseq-figure.webp)
 
 CSV/report에서 모든 12 개의 샘플 라벨과 매핑을 읽으십시오. 다른 막대기 고도는 혼자서 차별 표정을 설치하지 않습니다. 예제는 정상적인화 또는 hypothesis 테스트 없이 descriptive pre-analysis 체크입니다.
 
@@ -71,9 +71,9 @@ Markdown는 headings, 목록, 코드 및 링크를 렌더링합니다. 보고서
 | JSON | 열기 <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.json">자주 묻는 질문</ExampleDownload> 소스 텍스트, 식별자 및 값을 검사합니다. 확장 가능한 객체 트리보다는 코드로 표시됩니다. |
 | HTML | 열기 <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.html">독서 테이블</ExampleDownload>. **Source** HTML를 보여줍니다; **Render** 포맷 된 문서를 복원합니다. Neither 형태는 QC를 재회합니다. |
 
-![실제 작업 책 미리보기에서 샘플 선택](/img/open-science/local-todo-batch/47-workbook-samples.png)
+![실제 작업 책 미리보기에서 샘플 선택](/img/open-science/local-todo-batch/47-workbook-samples.webp)
 
-![실제 TIFF의 두 번째 페이지](/img/open-science/local-todo-batch/50-tiff-second-page.png)
+![실제 TIFF의 두 번째 페이지](/img/open-science/local-todo-batch/50-tiff-second-page.webp)
 
 **Preview unavailable → Open this Office file in your default app to view it.**이 나타나면 로컬 파일에 **Open**을 사용하거나 관리 업로드를 위해 **Download**를 사용하면 호환되는 응용 프로그램에서 열 수 있습니다. 이 fallback는 내장 미리보기가 표시할 수 없을 때 사용할 수있는 원본 파일을 유지합니다.
 

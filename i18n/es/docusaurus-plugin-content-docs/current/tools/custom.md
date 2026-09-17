@@ -36,7 +36,7 @@ Guarda ambos archivos localmente y nota sus caminos completos. El servidor utili
 
 <PlatformContent platform="macos">
 
-![Configuración MCP local real](/img/open-science/capabilities-walkthrough/08-mcp-local-config.jpg)
+![Configuración MCP local real](/img/open-science/capabilities-walkthrough/08-mcp-local-config.webp)
 
 </PlatformContent>
 
@@ -90,7 +90,7 @@ En este ejemplo, la aplicación nativa devolvió **Los números totales de 23,22
 
 <PlatformContent platform="macos">
 
-![El Connector personalizado conectado con éxito](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![El Connector personalizado conectado con éxito](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 </PlatformContent>
 
@@ -98,7 +98,7 @@ En este ejemplo, la aplicación nativa devolvió **Los números totales de 23,22
 
 Abra la actividad Notebook para ambas llamadas de herramientas, luego vuelva a abrir el JSON guardado y compare sus IDs de muestra y métricas con el CSV. El Windows ejecuta a continuación utiliza el ID de conector `gse60450-qc-win`; use su propio ID configurado en la solicitud.
 
-![Windows llamadas locales MCP con salida JSON y Notebook](/img/open-science/windows/mcp-tool-results.png)
+![Windows llamadas locales MCP con salida JSON y Notebook](/img/open-science/windows/mcp-tool-results.webp)
 
 </PlatformContent>
 

@@ -1,7 +1,7 @@
 ---
 title: "Permissions and approvals"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Permissions and approvals
@@ -24,7 +24,7 @@ Use **Agent controls** to choose how the current conversation requests approval.
 
 Open **Agent controls** beside the composer and read the selected mode. Check any compatibility message showing how the framework implements it. The Full access control has its own confirmation. **Auto-review** is a different control for reviewing results and does not mean auto-approving edits.
 
-![The actual English permission-mode selector](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![The actual English permission-mode selector](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 Check the effective mode shown for your Agent; supported approval behavior can differ by framework. Not every mode has been exercised across all four frameworks.
 
@@ -34,7 +34,7 @@ Check the effective mode shown for your Agent; supported approval behavior can d
 
 Read the operation, selected environment and proposed code before approving. For a data check, confirm that it reads the intended input and writes only the requested outputs. Installing a missing dependency is a separate operation with a different purpose and effect.
 
-![Python execution approval from the public GSE60450 case](/img/open-science/guides-walkthrough/25-python-permission.png)
+![Python execution approval from the public GSE60450 case](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | Control or information | What to inspect or do |
 | --- | --- |
@@ -53,6 +53,10 @@ The primary Allow button normally uses conversation scope when the request suppo
 ### Remember web-reading approval
 
 For a supported **Read web pages** request, choose **Allow for this conversation** to remember that capability for later web reads in the same conversation. It can cover other websites, not only the first URL. **Allow once** applies only to that call. Review or revoke the grant under **Remembered permissions**; it does not add hosts to the Notebook network allowlist or authorize uploads.
+
+### Remember web-search approval {/* #remember-web-search */}
+
+From v0.30.2, a supported Claude Agent native **Search the web** request also offers **Allow for this conversation**. Later matching searches in that conversation can reuse the grant; **Allow once** covers only the current request. Inspect or revoke **Search the web** under **Remembered permissions**. Search and **Read web pages** are separate permissions. This native-search option does not apply to every framework or Connector; read the scope actually offered.
 
 ## Manage remembered access
 
@@ -83,7 +87,7 @@ Inspect the Connector/tool, **Global / Project / Session** scope, and **Any call
 
 Revocation affects future authorization. It does not reverse completed edits or network requests, and a broader grant can still authorize the operation.
 
-![A new execution request after Session group revocation](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![A new execution request after Session group revocation](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 If the inventory is incomplete, wait for it to load or retry the failed request before using group revocation. Recheck the selected scope after revoking.
 

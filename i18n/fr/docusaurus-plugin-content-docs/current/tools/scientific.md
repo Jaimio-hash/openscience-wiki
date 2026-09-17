@@ -95,7 +95,7 @@ Pour exécuter via Open-Science, donnez le dossier préparé en utilisant **Your
 
 ### Vérifiez les séquences conçues {/* #check-the-designed-sequences */}
 
-![Réalisation du rapport de comparaison du CPU local et réouverture](/img/open-science/local-todo-batch/42-cpu-model-comparison.png)
+![Réalisation du rapport de comparaison du CPU local et réouverture](/img/open-science/local-todo-batch/42-cpu-model-comparison.webp)
 
 Les sorties enregistrées dans cet exemple contenaient les résultats suivants :
 

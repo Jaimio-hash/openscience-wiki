@@ -36,7 +36,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 <PlatformContent platform="macos">
 
-![実際のローカル MCP 設定](/img/open-science/capabilities-walkthrough/08-mcp-local-config.jpg)
+![実際のローカル MCP 設定](/img/open-science/capabilities-walkthrough/08-mcp-local-config.webp)
 
 </PlatformContent>
 
@@ -90,7 +90,7 @@ Windowsでは、**Other…**を使用して、インストールされた`python
 
 <PlatformContent platform="macos">
 
-![正常に接続されたカスタムConnector](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![正常に接続されたカスタムConnector](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 </PlatformContent>
 
@@ -98,7 +98,7 @@ Windowsでは、**Other…**を使用して、インストールされた`python
 
 Notebook アクティビティをツールコールの両方で開き、保存した JSON を再オープンし、CSV でサンプル ID とメトリックを比較します。 Windows はコネクター ID `gse60450-qc-win` を使用します; 独自の設定した ID をリクエストに使用してください。
 
-![Windows ローカル MCP は保存された JSON および Notebook 出力と呼びます](/img/open-science/windows/mcp-tool-results.png)
+![Windows ローカル MCP は保存された JSON および Notebook 出力と呼びます](/img/open-science/windows/mcp-tool-results.webp)
 
 </PlatformContent>
 

@@ -30,7 +30,7 @@ PythonまたはR、[互換性のあるランタイムを有効にします。](r
 
 <PlatformContent platform="macos">
 
-![Python実行とNotebookで出力](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![Python実行とNotebookで出力](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 
@@ -83,7 +83,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![変数リストを名前でフィルタリングする](/img/open-science/guides-walkthrough/47-notebook-variable-filter.png)
+![変数リストを名前でフィルタリングする](/img/open-science/guides-walkthrough/47-notebook-variable-filter.webp)
 
 </PlatformContent>
 
@@ -107,7 +107,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![R サンプルQCは適用で開けました](/img/open-science/guides-walkthrough/76-r-qc-table.jpg)
+![R サンプルQCは適用で開けました](/img/open-science/guides-walkthrough/76-r-qc-table.webp)
 
 </PlatformContent>
 
@@ -119,7 +119,7 @@ CSV の **Provenance → Execution Log → Download notebook** を保存しま�
 
 <PlatformContent platform="macos">
 
-![R 結果のキャプチャ環境](/img/open-science/guides-walkthrough/77-r-environment-evidence.jpg)
+![R 結果のキャプチャ環境](/img/open-science/guides-walkthrough/77-r-environment-evidence.webp)
 
 </PlatformContent>
 
@@ -138,7 +138,7 @@ Python、R、永続的なREPL、またはシェルのタスクが他の場所で
 
 <PlatformContent platform="macos">
 
-![背景タスクの状態とオープンコントロール](/img/open-science/v0.27.0/13-background-task-completed.png)
+![背景タスクの状態とオープンコントロール](/img/open-science/v0.27.0/13-background-task-completed.webp)
 
 </PlatformContent>
 
@@ -164,7 +164,7 @@ Python、R、永続的なREPL、またはシェルのタスクが他の場所で
 
 <PlatformContent platform="macos">
 
-![保存された結果のために収集されたプロデューサーコード](/img/open-science/provenance-code.png)
+![保存された結果のために収集されたプロデューサーコード](/img/open-science/provenance-code.webp)
 
 </PlatformContent>
 
@@ -213,7 +213,7 @@ Python、R、永続的なREPL、またはシェルのタスクが他の場所で
 3. 保存したファイルを開き、表示されたコードと比較します。 PowerShell では、同じ Python インタープリターで実行します。 引用された実行可能なパスの前に `&` 呼び出し演算子を使用します。
 4. Notebookと保存されたレポートで出力を比較します。 コードと一緒に必要な入力ファイルを保存してください。
 
-<Screenshot src="/img/open-science/windows/captured-code-download.png" alt="Windowsは、プロデューサーのコードとダウンロード制御をキャプチャ" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.png" linkLabel="完全なWindowsスクリーンショットを開く" />
+<Screenshot src="/img/open-science/windows/captured-code-download.webp" alt="Windowsは、プロデューサーのコードとダウンロード制御をキャプチャ" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.webp" linkLabel="完全なWindowsスクリーンショットを開く" />
 
 記録されたコードをダウンロードします。 **Generate script**は別々の再建操作です。 生成が失敗した場合は、完全なエラーを保ちましょう。 キャプチャされたコードをダウンロードしても、再構築が成功するわけではありません。
 
@@ -230,7 +230,7 @@ Python、R、永続的なREPL、またはシェルのタスクが他の場所で
 
 <PlatformContent platform="macos">
 
-![生成されたスクリプトのプレビューとダウンロード制御](/img/open-science/priority-completion/19-generated-script.png)
+![生成されたスクリプトのプレビューとダウンロード制御](/img/open-science/priority-completion/19-generated-script.webp)
 
 </PlatformContent>
 

@@ -18,7 +18,7 @@ In batch management, review the selected count in the bottom action area before 
 
 Open **Settings → Connectors**, search **Omics Archives**, and open its detail. This built-in family includes GEO, ArrayExpress, MetaboLights, MGnify and PRIDE tools. Expand a tool row before choosing it.
 
-![GEO metadata tool and its explicit download boundary](/img/open-science/guides-walkthrough/36-omics-tools.png)
+![GEO metadata tool and its explicit download boundary](/img/open-science/guides-walkthrough/36-omics-tools.webp)
 
 `geo_get_series` returns GEO series metadata, samples, platforms and supplementary-file URLs. Download the required data table from the returned source and attach it to your project before requesting a calculation.
 
@@ -50,7 +50,7 @@ Open **Settings → Connectors → Manage**, filter the list and select the inte
 3. Choose **Require approval**, **Block** or **Always allow** for the access you intend to permit. Require approval displays **Ask when no Session, Project, or Global permission applies.**
 4. Enable PubMed and inspect **Used by**. Availability for Main is shown as **Main only**; disabled availability shows **Not in use**.
 
-![PubMed tool description and approval controls](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.png)
+![PubMed tool description and approval controls](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.webp)
 
 The detail lists `search_articles`, `get_article_metadata`, `find_related_articles`, `lookup_article_by_citation`, `convert_article_ids`, `get_full_text_article` and `get_copyright_status`. Choose **Always allow**, **Require approval** or **Block** per tool. Review the separate Connector-wide **Skip approvals** switch before enabling it. Opening a description only displays the tool's instructions.
 
@@ -69,7 +69,7 @@ The directory placed PubMed under **Directory**, while its detail displayed a **
 4. Review the actual result. For this accession, check the returned **GSE60450**, **Mus musculus**, **12 samples**, and the title “Transcriptome analysis of luminal and basal cell subpopulations in the lactating versus pregnant mammary gland”.
 5. Keep the returned GSM identifiers with their characteristics. Do not infer a mapping to the matrix's MCL1 column names from resemblance alone.
 
-![Actual GEO sample characteristics returned through the Connector](/img/open-science/guides-walkthrough/59-geo-sample-metadata.png)
+![Actual GEO sample characteristics returned through the Connector](/img/open-science/guides-walkthrough/59-geo-sample-metadata.webp)
 
 The returned sample range was **GSM1480291–GSM1480302**, covering luminal/basal populations and virgin, 18.5-day pregnancy and 2-day lactation stages. These are returned metadata, not labels inferred from the count totals. The full twelve-row response table was downloaded as <a href="/docs/examples/gse60450/geo-sample-metadata.csv" download>geo-sample-metadata.csv</a>. This is a conversation-table export, separate from the managed QC artifacts.
 
@@ -105,7 +105,7 @@ If the Connector instruction file cannot be read, retain its EPERM error and che
 | Fields / Text | Enter names as structured rows or one `KEY=` per line; secret values live in Credentials. |
 | Command preview | Inspect the launcher shown after the bindings. |
 
-![Local command editor and credential-bound environment variables](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.png)
+![Local command editor and credential-bound environment variables](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.webp)
 
 A launcher entry alone does not prove that its executable or service is operational. Use the invocation below to check the imported local command.
 
@@ -125,13 +125,13 @@ The current editor binds named credentials; it is not a plain secret-value text 
 4. Use **Add header** for another row or **Remove header** to discard a row.
 5. **Fields / Text** changes how names are entered. Text mode expects one header name per line as `Name:`; credential values are managed separately.
 
-![Static header name and credential selector](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.png)
+![Static header name and credential selector](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.webp)
 
 #### OAuth binding
 
 Choose an **OAuth credential** matching the resource URL, transport, and registration. **New credential** opens the [credential editor](../tools/credentials.md#new-credential). In this empty profile, the form reported **No OAuth credential matches this Connector's resource URL, transport, and registration.** The final action changes to **Add and sign in**.
 
-![OAuth credential matching](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.png)
+![OAuth credential matching](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.webp)
 
 ## Import, export, and connection tests
 
@@ -142,7 +142,7 @@ Choose **Add connector → Import configuration** and select one JSON file up to
 3. Choose **Use configuration** to open the prefilled editor. Review every field, bind the required local credentials and select **I trust this connector**.
 4. Choose **Add connector**, inspect connection state in the list, then invoke a small read-only tool.
 
-![Selecting a server and reviewing required credentials](/img/open-science/local-todo-batch/23-mcp-multi-server.png)
+![Selecting a server and reviewing required credentials](/img/open-science/local-todo-batch/23-mcp-multi-server.webp)
 
 When an imported server references an environment variable such as `QC_EXAMPLE_TOKEN`, bind that name to a credential stored on this device. **Add** remains unavailable until required bindings are complete. After adding, check **Connected** and execute the intended tool; a saved binding alone does not validate remote authentication.
 
@@ -152,13 +152,13 @@ Call `get_dataset_summary`, then pass one returned full sample ID to `get_sample
 
 Choose the row's **Actions → Export**, select **Open Science Connector** or **MCP client config**, inspect the preview, and choose **Save configuration**.
 
-![Export retaining credential names and reporting local paths](/img/open-science/local-todo-batch/24-mcp-export-binding.png)
+![Export retaining credential names and reporting local paths](/img/open-science/local-todo-batch/24-mcp-export-binding.webp)
 
 The actual exported file retained the variable name in `required_secrets.environment`. It contained no demonstration credential value, local trust or permissions. Reimport requires local credential selection and trust again.
 
 When the same ID already exists, the preview reports **A custom Connector with ID … is already installed**, and **Use configuration** is unavailable. Use **Edit** to change an existing connection; import is not an overwrite operation.
 
-![An existing ID blocks duplicate import](/img/open-science/local-todo-batch/26-mcp-reimport-collision.png)
+![An existing ID blocks duplicate import](/img/open-science/local-todo-batch/26-mcp-reimport-collision.webp)
 
 When restoring an exported connection, inspect the prefilled fields and bind the required named credentials again. Complete trust and test a bounded call before using it in research. Import does not overwrite an existing Connector with the same ID.
 

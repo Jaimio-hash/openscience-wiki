@@ -111,7 +111,7 @@ Recovery means the startup screen clears and the expected projects open. If a **
 
 If the startup screen only offers **Quit**, exit the app, resolve the reported cause, and launch it again. Use **Retry** only when the page provides it. After recovery, reopen your expected projects and files.
 
-![Startup guidance when the database cannot open](/img/open-science/local-acceptance/startup-database-error.png)
+![Startup guidance when the database cannot open](/img/open-science/local-acceptance/startup-database-error.webp)
 
 ### Recovery messages
 
@@ -197,7 +197,7 @@ Select **Report this error** beside a conversation error. A startup screen can a
 4. Check the public-sharing acknowledgment to enable **Open GitHub issue**. Editing the error text requires reviewing and acknowledging the revised content again.
 5. Open the GitHub form, inspect the prefilled fields, add useful reproduction steps, then submit when ready. Opening the report preview alone does not submit an issue.
 
-![Editable error details and the public-sharing confirmation](/img/open-science/sept11-completion/report-preview.png)
+![Editable error details and the public-sharing confirmation](/img/open-science/sept11-completion/report-preview.webp)
 
 ## Common questions
 

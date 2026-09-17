@@ -40,7 +40,7 @@ Los metadatos de literatura siempre están incluidos. Si una literatura PDF es n
 
 Las siguientes pantallas utilizan una sesión que resume el [GSE60450 muestra tabla QC](../reference/example-data.md). En la vista previa de exportación, compare **Essential export** y **Full export**, inspeccionar el tamaño estimado, luego elegir **Export**. El contenido y el tamaño dependen de su sesión.
 
-![Previsualización de exportación de paquetes de investigación con exportación esencial, exportación completa y contenido personalizado](/img/open-science/feature-guides-2026-09/research-package-export.png)
+![Previsualización de exportación de paquetes de investigación con exportación esencial, exportación completa y contenido personalizado](/img/open-science/feature-guides-2026-09/research-package-export.webp)
 
 ## Importar en un proyecto {/* #import-and-inspect-a-package */}
 

@@ -1,7 +1,7 @@
 ---
 title: "Extend an analysis with an installed Specialist"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -21,11 +21,11 @@ The input is R's public [Theoph dataset](https://www.stat.ethz.ch/R-manual/R-dev
 3. Open a new conversation in your research project. Choose an available model, then **Agent controls → Specialist → pharmacometrics-pkpd-designer**. The recorded run used **Codex subscription / gpt-5.6-sol**.
 4. At the start of **each analysis message**, type `/pkpd`, then select **pkpd-modeling** from the suggestions. Confirm that it becomes a Skill chip before pasting the prompt.
 
-Selecting the role alone returned `Unknown skill` in this version. Explicitly selecting the Skill enabled the genuine loader. This step is required for the recorded configuration; this example does not establish automatic loading of all Specialist-bound Skills.
+**Version note:** The screenshots and outputs below were recorded in v0.30.1. In that configuration, selecting the role alone returned `Unknown skill`, and the per-message Skill selection above enabled the loader. v0.30.2 fixes preparation of Specialist-bound Skills, including delegated tasks. On the newer version, first select the Specialist and inspect the actual Skill-loading result; use explicit selection if needed. This example has not yet been rerun on v0.30.2, so its historical workaround is not a universal requirement and the new fix is not a verified pass for this case.
 
-![Installed Pharmacometrics Specialist and package version](/img/open-science/theoph-specialist/installed.jpg)
+![Installed Pharmacometrics Specialist and package version](/img/open-science/theoph-specialist/installed.webp)
 
-![Selecting the genuine pkpd-modeling Skill for the current message](/img/open-science/theoph-specialist/skill-selection.jpg)
+![Selecting the genuine pkpd-modeling Skill for the current message](/img/open-science/theoph-specialist/skill-selection.webp)
 
 ## 2. Check the data and draw the concentration curves
 
@@ -49,9 +49,9 @@ Open the generated CSV and plot. Subjects 1, 7 and 10 have nonzero concentration
 
 The CSV preview shows the first 100 rows; the saved input file contains all 132 observations.
 
-![The saved input table in Open-Science](/img/open-science/theoph-specialist/input.jpg)
+![The saved input table in Open-Science](/img/open-science/theoph-specialist/input.webp)
 
-![The executed baseline and twelve concentration-time curves](/img/open-science/theoph-specialist/baseline.jpg)
+![The executed baseline and twelve concentration-time curves](/img/open-science/theoph-specialist/baseline.webp)
 
 Reference files: <ExampleDownload path="/examples/theoph/theoph-input.csv">input CSV</ExampleDownload>, <ExampleDownload path="/examples/theoph/theoph-concentration-time.png">concentration plot</ExampleDownload>, <ExampleDownload path="/examples/theoph/theoph-data-check.md">data check</ExampleDownload>.
 
@@ -83,7 +83,7 @@ Approve the file reads and R calculation after inspecting them. If a supporting 
 
 Open **theoph-nca-summary.csv** from the generated files. There should be one row for each of the twelve subjects. Check the units and the last-observation time as well as the metric values.
 
-![Saved subject-level exposure metrics](/img/open-science/theoph-specialist/results.jpg)
+![Saved subject-level exposure metrics](/img/open-science/theoph-specialist/results.webp)
 
 | Subject | Cmax (mg/L) | Tmax (h) | AUC₀–last (mg·h/L) | Last observation (h) |
 | --- | --- | --- | --- | --- |

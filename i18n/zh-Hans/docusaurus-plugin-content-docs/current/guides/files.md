@@ -38,7 +38,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 添加已有文件夹时，打开 **Files**，展开 **Artifacts** 下拉菜单，选择 **This computer → Add folder…**。在应用自己的 **Grant folder access** 对话框中选择具体子文件夹和 **Read-only**，再点击 **Grant this folder**。用户主目录根位置可能不可选，请进入研究资料所在的子文件夹。阅读可能出现的 Notebook 内核影响确认；返回 Files 后，核对当前目录及文件列表。
 
-<Screenshot src="/img/open-science/windows/granted-folder-files.png" alt="Windows 已授权文件夹，列出公开脚本与 CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.png" linkLabel="打开完整 Windows 截图" />
+<Screenshot src="/img/open-science/windows/granted-folder-files.webp" alt="Windows 已授权文件夹，列出公开脚本与 CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.webp" linkLabel="打开完整 Windows 截图" />
 
 在 Windows 的 **Attach files** 窗口中，可以选择含中文或空格路径下的文件，也可以在“文件名”框输入完整文件路径后打开。返回应用后先确认附件名称，再打开预览，核对表格行列和内容。不想附加时，点击 **Cancel**，并确认草稿没有新增附件。
 
@@ -55,7 +55,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![真实 RNA-seq 结果的文件筛选](/img/open-science/guides-walkthrough/56-files-search.png)
+![真实 RNA-seq 结果的文件筛选](/img/open-science/guides-walkthrough/56-files-search.webp)
 
 </PlatformContent>
 数量对应当前筛选。无结果不代表文件被删除。**No more** 表示该组已加载完成，点击组标题可收起。文件主体打开独立预览；**Open … in split view beside the session** 将文件放在对话旁。下载针对相应视图选择的文件或版本。
@@ -85,7 +85,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![报告 v2 与原始版本的差异](/img/open-science/guides-walkthrough/55-report-version-diff.png)
+![报告 v2 与原始版本的差异](/img/open-science/guides-walkthrough/55-report-version-diff.webp)
 
 </PlatformContent>
 | 控件或状态 | 处理 |
@@ -111,7 +111,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![另一版本已保存，当前草稿被拦截](/img/open-science/local-todo-batch/37-file-save-conflict.png)
+![另一版本已保存，当前草稿被拦截](/img/open-science/local-todo-batch/37-file-save-conflict.webp)
 
 </PlatformContent>
 保存后确认最新修订同时包含另一位写入者的更改和你保留的草稿。通过版本控件仍可查看先前文件修订；文件修订与对话消息修订是不同记录。

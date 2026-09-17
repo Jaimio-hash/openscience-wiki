@@ -41,9 +41,9 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 | **Cancel** | 離開，不登錄檔單中的主機 |
 | **Add** | 提交有效連線；密碼模式必須透過連線測試才新增主機 |
 
-![英文 SSH 配置覆蓋欄位](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.png)
+![英文 SSH 配置覆蓋欄位](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.webp)
 
-![真實表單中的密碼認證和 Slurm 模式](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.png)
+![真實表單中的密碼認證和 Slurm 模式](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.webp)
 
 密碼模式依賴應用的密碼認證和安全儲存能力。不可用時，請檢視錶單顯示的原因。憑據只填入對應欄位，不要寫進主機說明或代理請求。
 
@@ -59,7 +59,7 @@ SSH 配置模式會先建立記錄、開啟詳情，再在後臺探測。因此�
 
 英文截圖顯示密碼認證與探測成功：256 個 CPU、504 GB 記憶體、一張 NVIDIA A100 80GB PCIe，並檢測到 Slurm 排程器。**Configured mode** 仍是 **Direct SSH**，需要手動更改才會使用 Slurm。這些是示例伺服器的登入主機資源，不是最低要求，也不代表作業已獲排程分配。截圖已遮蓋主機和賬號標識。
 
-![密碼認證成功與主機資源探測](/img/open-science/remote-compute/03-host-probe.png)
+![密碼認證成功與主機資源探測](/img/open-science/remote-compute/03-host-probe.webp)
 
 ## 檢查和維護主機詳情 {/* #检查和维护主机详情 */}
 
@@ -133,9 +133,9 @@ Slurm 場景需要向叢集負責人確認賬號／分割槽、資源申請、�
 
 出現 **success** 和退出碼 **0** 後，確認應用回收兩個輸出，且儲存表格與報告可以重開。按完整樣本標識與[公共基準](../reference/example-data.md)比較指標，並核對遠端計算前後的輸入校驗值。該 Direct SSH 示例已透過這些檢查。
 
-![Direct SSH 作業完成、作業 ID 與遠端目錄](/img/open-science/remote-compute/05-direct-job-completed.png)
+![Direct SSH 作業完成、作業 ID 與遠端目錄](/img/open-science/remote-compute/05-direct-job-completed.webp)
 
-![重新開啟遠端 RNA-seq QC 表，顯示十二個樣本](/img/open-science/remote-compute/06-remote-qc-table.png)
+![重新開啟遠端 RNA-seq QC 表，顯示十二個樣本](/img/open-science/remote-compute/06-remote-qc-table.webp)
 
 下載示例<a href="/docs/examples/gse60450/remote-rnaseq-qc.csv" download>質控表</a>和<a href="/docs/examples/gse60450/remote-rnaseq-qc-report.md" download>方法報告</a>。這些原始計數檢查不替代歸一化、實驗設計審查或差異表達分析；正計數中位數不包括零值。
 
@@ -145,7 +145,7 @@ Slurm 場景需要向叢集負責人確認賬號／分割槽、資源申請、�
 
 下圖的獨立準備檢查點在本地應用重啟時仍在執行。應用恢復了同一作業 ID，隨後收集到完成日誌。等待過程正常結束；這張截圖驗證恢復能力，不表示取消成功，也不表示完成了科學計算。
 
-![應用重啟後恢復同一個準備任務](/img/open-science/remote-compute/07-job-recovered-after-restart.png)
+![應用重啟後恢復同一個準備任務](/img/open-science/remote-compute/07-job-recovered-after-restart.webp)
 
 ### 取消指定的遠端任務 {/* #取消指定的远程任务 */}
 
@@ -153,7 +153,7 @@ Slurm 場景需要向叢集負責人確認賬號／分割槽、資源申請、�
 
 下圖的準備檢查點透過此控制元件取消，之後獨立確認遠端程序已不存在，已有日誌仍可讀取。取消成功不表示該分析已產生完整結果，使用保留檔案前應檢查內容。
 
-![所選準備任務已確認取消](/img/open-science/remote-compute/09-job-cancelled.png)
+![所選準備任務已確認取消](/img/open-science/remote-compute/09-job-cancelled.webp)
 
 
 </ToolOperationGroup>
@@ -177,7 +177,7 @@ Slurm 場景需要向叢集負責人確認賬號／分割槽、資源申請、�
 5. 對照申請資源與實際分配。本例每任務申請一個 CPU 和 1 GiB，Slurm 記錄一個任務、實際分配兩個邏輯 CPU。解釋資源使用時，應以實際分配記錄為準。
 6. 確認終態並完成檔案回收後，再發布結果。伺服器上出現輸出檔案，不代表應用已經回收該檔案。
 
-![在主機執行模式中明確選擇 Slurm](/img/open-science/remote-compute/10-slurm-execution-mode.png)
+![在主機執行模式中明確選擇 Slurm](/img/open-science/remote-compute/10-slurm-execution-mode.webp)
 
 ### 伺服器已完成，但應用仍在等待 {/* #服务器已完成但应用仍在等待 */}
 
@@ -189,7 +189,7 @@ slurm_poll_failed: Slurm accounting storage is disabled
 
 排程器顯示 **COMPLETED / ExitCode 0:0**，但應用仍為 **submitted**、**result_final false** 或沒有已回收檔案時，保留兩個作業 ID 並檢查輪詢錯誤。排程器完成和應用結果回收是兩個階段。
 
-![Slurm 負載已完成，應用仍等待終態確認](/img/open-science/remote-compute/11-slurm-accounting-unavailable.png)
+![Slurm 負載已完成，應用仍等待終態確認](/img/open-science/remote-compute/11-slurm-accounting-unavailable.webp)
 
 請叢集管理員提供該賬號與作業可用的 `sacct` 記賬查詢。`squeue` 不再列出任務，並不足以證明成功。修復期間保留原工作目錄與作業 ID，恢復後檢查同一個任務；不要為了清除監控錯誤而重跑已經完成的分析。Slurm 取消、恢復和應用結果回收，仍需在這一環境條件解決後驗證。
 

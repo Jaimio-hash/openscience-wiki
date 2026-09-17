@@ -22,7 +22,7 @@ last_update:
 
 **両方のファイル名**が送信されたリクエストの上に表示されることを確認します。 ファイル名をクリックすると、プレビューが開きます。 2 の間で切り替えると、引用されたページがどのドキュメントに所属しているかを検証できます。
 
-![記事とサプリメントの両方が実際の証拠チェック要求に添付されています](/img/open-science/research-workflows/catalyst-two-inputs.png)
+![記事とサプリメントの両方が実際の証拠チェック要求に添付されています](/img/open-science/research-workflows/catalyst-two-inputs.webp)
 
 ## 特定の証拠の質問に答える {/* #ask-a-specific-evidence-question */}
 
@@ -44,7 +44,7 @@ delegate. This is a source check, not an experimental replication.
 
 PDFプレビューでは、ページコントロールを使用して、**図6**と関連する結果を含む**6 のページ**を開きます。 テキストで図のキャプションを比較します。 図**51–53**用のサプリメントページ**47–49**を開きます。
 
-![Open-Scienceの元の記事の図6と実験条件](/img/open-science/research-workflows/catalyst-figure6-source.png)
+![Open-Scienceの元の記事の図6と実験条件](/img/open-science/research-workflows/catalyst-figure6-source.webp)
 
 Ni-SAC-2.5 のソースコードは **98.9% 偏光効率をCOに-1.2 V対RHE** です。 耐久性実験では**20時間用0.8 V**を使用しています。 これらの条件は別々でなければなりません。後者は、ピーク選択可能で20時間の耐久性を確立しません。 ファラダックの効率性は、製品に割り当てられた充電を記述します。 エネルギー効率やCO2変換の接近の分数と同じではありません。
 
@@ -52,12 +52,12 @@ Ni-SAC-2.5 のソースコードは **98.9% 偏光効率をCOに-1.2 V対RHE** �
 
 ページに移動するには、PDF プレビューを展開し、ページカウンターをクリックし、完全な番号を入力して **エントリー** を押します。 読み込む前に結果のカウンターを確認します。 補足のページ 47 は **補足図 51** を含んでいます、軸線は **H2 ファラダック効率** です; 結果の誤りはしないでください。
 
-![52の実際のPDFページ47の補足図51](/img/open-science/research-workflows/catalyst-supplement-47.png)
+![52の実際のPDFページ47の補足図51](/img/open-science/research-workflows/catalyst-supplement-47.webp)
 
 ## レポートの確認と保存 {/* #check-and-save-the-report */}
 
 回答完了後、**catalyst-claim-check.md** を開きます。 ソースのアイデンティティ、ページ番号、図ラベル、および結論の文言をチェックしてください。 特に、報告書は**報告結果**を保持し、実験的な再生の要求に文献チェックを回すことを避けるべきです。
 
-![保存されたクレーム、証拠、条件、および制限レポート](/img/open-science/research-workflows/catalyst-claim-report.png)
+![保存されたクレーム、証拠、条件、および制限レポート](/img/open-science/research-workflows/catalyst-claim-report.webp)
 
 <a href="/docs/examples/research-workflows/catalyst-claim-check.md" download>事例紹介</a> をダウンロードします。 あなた自身の仕事で科学的な結論を使用する前に、引用された元の証拠および出版者の訂正を点検して下さい。 図やテーブルの証拠を別のファイルに抽出するには、[PDF抽出物](../guides/previews.md#pdf-extraction)を参照してください。

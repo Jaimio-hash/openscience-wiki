@@ -32,7 +32,7 @@ Do not retrieve full text or run the later update yet. Use English.
 
 This run returned **12 of 3,643 matches**, retained **7** and excluded **5**. Open **freshwater-search-plan.md** to check the criteria and dates before continuing. The saved plan describes the state before the update.
 
-![Saved baseline search specification and retained records](/img/open-science/workflow-extensions/freshwater-search-plan.png)
+![Saved baseline search specification and retained records](/img/open-science/workflow-extensions/freshwater-search-plan.webp)
 
 Review the evidence level: some candidates supplied only title/metadata, while others included a license-permitted abstract. Broad transport-pathway reviews are included as context; their inclusion does not prove a freshwater-specific experimental result.
 
@@ -40,11 +40,11 @@ Review the evidence level: some candidates supplied only title/metadata, while o
 
 Download <ExampleDownload path="/examples/workflow-extensions/freshwater-baseline.ris">the baseline RIS</ExampleDownload>. In **Library → New collection**, create **Freshwater Microplastic Transport**, select it, then choose **Import references**. Select the RIS and check the destination and matching behavior before importing.
 
-![Baseline import preview for the named collection](/img/open-science/workflow-extensions/freshwater-import-baseline.png)
+![Baseline import preview for the named collection](/img/open-science/workflow-extensions/freshwater-import-baseline.webp)
 
 The recorded import completed with **7 Created, 0 Reused, 0 Skipped, 0 Failed**. Click **Done** and confirm the collection has seven references. Existing matches in another library can change the created/reused split.
 
-![The seven-reference baseline collection](/img/open-science/workflow-extensions/freshwater-collection-baseline.png)
+![The seven-reference baseline collection](/img/open-science/workflow-extensions/freshwater-collection-baseline.webp)
 
 ## 3. Search the next date window in the same conversation
 
@@ -67,7 +67,7 @@ Write in English and reopen the outputs.
 
 This update returned **12 of 7,600 matches**, with **7 additions, 0 baseline overlaps and 5 exclusions**. Both searches are truncated to 12 candidates. Database ranking and coverage can change; the counts describe the September 16, 2026 run.
 
-![Saved update audit with additions and exclusions](/img/open-science/workflow-extensions/freshwater-update-audit.png)
+![Saved update audit with additions and exclusions](/img/open-science/workflow-extensions/freshwater-update-audit.webp)
 
 Check the actual DOI sets rather than subtracting totals. Save the dated <ExampleDownload path="/examples/workflow-extensions/freshwater-update-review.csv">update audit</ExampleDownload> and <ExampleDownload path="/examples/workflow-extensions/freshwater-update-notes.md">update notes</ExampleDownload> alongside the baseline.
 
@@ -75,11 +75,11 @@ Check the actual DOI sets rather than subtracting totals. Save the dated <Exampl
 
 Download <ExampleDownload path="/examples/workflow-extensions/freshwater-update.ris">the additions RIS</ExampleDownload>. Select **Freshwater Microplastic Transport** in Library and choose **Import references**. Keep **Reuse existing reference** so an already-present item can be reused safely.
 
-![The update import preview showing seven additions](/img/open-science/workflow-extensions/freshwater-import-update.png)
+![The update import preview showing seven additions](/img/open-science/workflow-extensions/freshwater-import-update.webp)
 
 The actual update import completed with **7 Created, 0 Reused, 0 Skipped, 0 Failed**. The collection now contains **14 references**. This agrees with the normalized DOI union of the two retained sets.
 
-![The updated collection with fourteen references](/img/open-science/workflow-extensions/freshwater-collection-updated.png)
+![The updated collection with fourteen references](/img/open-science/workflow-extensions/freshwater-collection-updated.webp)
 
 The baseline itself was not rewritten. Preserve its date range and search record so later readers can distinguish the original evidence base from the update. To support a proposal or a scientific claim, retrieve and read the relevant full texts next; metadata inclusion alone is not evidence appraisal. For overlapping query batches, see [combine search batches](merge-literature-searches.md).
 

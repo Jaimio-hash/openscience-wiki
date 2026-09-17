@@ -27,4 +27,4 @@ Verwenden Sie **&lt;0xE2>&lt;0x8C>&lt;0x98>K / Strg + K**, um Titel, Überschrif
 
 ## Changelog {/* #changelog */}
 
-[Durchsuchen Sie die neuesten Release Notes](../changelog/v0.30.1.md).
+[Durchsuchen Sie die neuesten Release Notes](../changelog/v0.30.2.md).

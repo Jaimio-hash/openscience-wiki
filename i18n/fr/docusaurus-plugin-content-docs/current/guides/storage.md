@@ -10,7 +10,7 @@ Utilisez **Settings → Storage** pour inspecter l'emplacement des données gér
 
 ## Lire et rafraîchir l'utilisation du disque {/* #read-and-refresh-disk-usage */}
 
-![Stockage géré réel après les exemples de recherche](/img/open-science/local-acceptance/storage-installed-location.png)
+![Stockage géré réel après les exemples de recherche](/img/open-science/local-acceptance/storage-installed-location.webp)
 
 Lire **Data location** avant de sauvegarder ou de diagnostiquer un fichier manquant. Ceci est la racine gérée de l'application, séparée d'un dossier source externe accordé à un projet. L'utilisation de rescans **Refresh**; vérifier le temps de la dernière analyse avant de comparer les mesures.
 
@@ -43,7 +43,7 @@ Terminer les tâches actives et conserver les exportations d'intrants, de produi
 4. Vérifiez la source, la destination, l'espace disponible et l'avis de reconstruction.
 5. **Change location** soumet un déménagement valide; **Cancel** laisse l'emplacement actuel inchangé.
 
-![Formulaire de réinstallation avec les exigences de reconstruction de l'exécution](/img/open-science/local-acceptance/storage-destination-form.png)
+![Formulaire de réinstallation avec les exigences de reconstruction de l'exécution](/img/open-science/local-acceptance/storage-destination-form.webp)
 
 L'application déplace les données de recherche existantes. Les environnements Python/R sont **reconstruit après redémarrage, non copié**. Le cache de paquets partagé d'exécution est copié pour prendre en charge les reconstructions hors ligne, mais les paquets pip- ou CRAN-seulement ne sont pas garantis pour être restaurés. Un espace supplémentaire de reconstruction ne peut pas être prédit de façon fiable. Consigner les exigences en matière d'environnement/de conditionnement avant un déplacement réel et tester le temps d'exécution nécessaire après.
 
@@ -65,7 +65,7 @@ Pour un interpréteur externe R, confirmez que l'exécutable sélectionné exist
 
 Après le retour, rouvrez un projet existant, entrez et enregistrez le rapport. Confirmez que l'exécution gérée est prête, puis lancez un petit calcul et enregistrez un nouveau résultat. Réouvrez-le pour vérifier que l'emplacement des données par défaut est utilisé.
 
-![Enregistrer le résultat R rouvert après le retour à l'emplacement par défaut](/img/open-science/local-acceptance/r-default-chart.png)
+![Enregistrer le résultat R rouvert après le retour à l'emplacement par défaut](/img/open-science/local-acceptance/r-default-chart.webp)
 
 Si **Un autre dossier nommé OpenScience existe déjà ici. Choisissez un autre endroit.** apparaît, l'application bloque l'écraser. Annuler et conserver ce répertoire. Établir sa propriété, son contenu et sa sauvegarde avant de résoudre le conflit; ne supprimez pas simplement un dossier du même nom. Réessayer la migration seulement après la validation de destination passe.
 
@@ -78,7 +78,7 @@ Si **Un autre dossier nommé OpenScience existe déjà ici. Choisissez un autre 
 3. **Finish move** tente de compléter la copie existante. **Discard copy** abandonne cette copie inachevée tout en conservant l'emplacement original. Lisez d'abord le champ de confirmation.
 4. Si **Conversation storage needs attention** apparaît, résolvez le mouvement inachevé, choisissez **Retry** et rouvrez le projet et le rapport original.
 
-![Choix de récupération pour le déménagement de stockage inachevé](/img/open-science/local-todo-batch/46-storage-recovery-choice.png)
+![Choix de récupération pour le déménagement de stockage inachevé](/img/open-science/local-todo-batch/46-storage-recovery-choice.webp)
 
 Si réessayer le commutateur final échoue à plusieurs reprises, terminer le travail actif, quitter et rouvrir l'application, puis réessayer le mouvement. Si l'erreur persiste, conservez l'emplacement original et recueillez les détails de la défaillance avant de procéder à un autre changement.
 
@@ -104,7 +104,7 @@ Choisissez le **Restaurer la rangée** pour restaurer une session archivée. Le 
 4. Choisissez **Restore project**.
 5. Réouvrir le projet, sa conversation et un rapport sauvegardé.
 
-![Gestion du projet GSE60450 archivé](/img/open-science/local-todo-batch/34-archived-project-manage.png)
+![Gestion du projet GSE60450 archivé](/img/open-science/local-todo-batch/34-archived-project-manage.webp)
 
 Réouvrir un rapport sauvegardé et ses révisions après restauration. L'archivage organise le projet; il ne réexécute pas l'analyse ou ne supprime pas l'historique de la version du rapport.
 
@@ -114,7 +114,7 @@ Réouvrir un rapport sauvegardé et ses révisions après restauration. L'archiv
 
 **Delete project** ouvre une confirmation de suppression permanente. Lisez sa portée avant de confirmer : les artefacts gérés et les téléchargements sont séparés des fichiers externes de work-folder, qui ne sont pas supprimés. Vérifiez quelles tâches et quels noyaux s'arrêteront et quels espaces de travail Session gérés restent dans Stockage. L'archivage et la suppression ont des résultats différents.
 
-![Suppression de la portée d'un projet vide créé séparément](/img/open-science/local-todo-batch/35-disposable-project-delete.png)
+![Suppression de la portée d'un projet vide créé séparément](/img/open-science/local-todo-batch/35-disposable-project-delete.webp)
 
 Utilisez un projet jetable vide si vous apprenez le flux de suppression. Inspectez les dossiers de confirmation avant de supprimer un projet contenant de la recherche.
 

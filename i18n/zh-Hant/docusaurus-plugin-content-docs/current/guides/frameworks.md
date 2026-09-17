@@ -12,7 +12,7 @@ last_update:
 
 開啟 **Settings → Agent**，先區分 Installed 和 Available，再檢查已安裝卡片的版本、路徑和 Active 標識。
 
-![重新檢測後的 Codex](/img/open-science/local-acceptance/agent-codex-active.png)
+![重新檢測後的 Codex](/img/open-science/local-acceptance/agent-codex-active.webp)
 
 | 控制元件或狀態 | 含義與操作 |
 | --- | --- |
@@ -63,11 +63,11 @@ OpenCode 的 **Install → App-managed download (recommended)** 會下載自包�
 4. 選擇 **Install OpenCode → App-managed download (recommended)**。等待 **Installed** 卡片出現，再點選卡片並確認 **Switch**。
 5. 檢查 **Active**、執行時路徑及相容模型。重灌後端不會替你配置模型提供方。
 
-![應用管理的 OpenCode 解除安裝範圍](/img/open-science/priority-completion/01-opencode-uninstall.png)
+![應用管理的 OpenCode 解除安裝範圍](/img/open-science/priority-completion/01-opencode-uninstall.webp)
 
 移除後端前先切換到其他可用後端；當前活動後端不能透過該控制元件解除安裝。重灌後重新檢測並啟用，再開啟已有專案執行一個小請求，檢查連線。
 
-![重新安裝並選中的 OpenCode](/img/open-science/priority-completion/03-opencode-reinstalled.png)
+![重新安裝並選中的 OpenCode](/img/open-science/priority-completion/03-opencode-reinstalled.webp)
 
 安裝按鈕禁用時檢查是否已有安裝或切換進行中，以及頁面的前置條件錯誤。檢測成功但請求失敗時，分別檢查模型認證和後端/API 相容性。
 

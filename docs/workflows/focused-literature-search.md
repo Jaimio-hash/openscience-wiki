@@ -34,7 +34,7 @@ Do not retrieve full text or infer clinical recommendations.
 Write in English, do not delegate, and reopen the saved files.
 ```
 
-![The actual focused-search request in Open-Science](/img/open-science/workflow-extensions/focused-search-input.png)
+![The actual focused-search request in Open-Science](/img/open-science/workflow-extensions/focused-search-input.webp)
 
 The screenshot shows the initial request. The operational screening rule above incorporates the subsequent review of that run.
 
@@ -55,11 +55,11 @@ The broad concept query deliberately retains non-trials. Trial eligibility is a 
 
 When the response completes, open **mindfulness-search-audit.csv** under **Generated**. It should retain every retrieved PMID, including excluded and uncertain records. Check the title, journal, DOI and date against the linked PubMed record, then compare the decision with the abstract.
 
-![The saved candidate table, including uncertain and excluded records](/img/open-science/workflow-extensions/focused-search-table.png)
+![The saved candidate table, including uncertain and excluded records](/img/open-science/workflow-extensions/focused-search-table.webp)
 
 Review found inaccurate reasons in the initial draft: for example, PMID **38837133** is a primary randomized trial of a broader psychotherapy, not a secondary analysis. The revised table marks its mindfulness eligibility **uncertain**. PMID **34009273** is a meta-analysis and remains excluded with the corrected reason. Naming the record and the specific error gives the Agent a concrete revision request; then reopen the saved CSV to confirm the change.
 
-![The actual screening revision and saved-file checks in Notebook](/img/open-science/workflow-extensions/focused-search-notebook.png)
+![The actual screening revision and saved-file checks in Notebook](/img/open-science/workflow-extensions/focused-search-notebook.webp)
 
 The reviewed example table contains **20 included, 37 excluded and 5 uncertain records**, accounting for all **62** hits. These are abstract-level screening decisions, not a declaration that 20 distinct trials have been fully appraised. Multiple publications can concern the same underlying trial.
 
@@ -69,7 +69,7 @@ PMID **41418645** was returned by the 2019–2025 PubMed publication-date filter
 
 Open **mindfulness-search-notes.md** and verify that its counts, eligibility rule and limitations match the CSV. This run revised both files and retained the unchanged raw metadata snapshot.
 
-![The revised search note with the 20/37/5 screening counts](/img/open-science/workflow-extensions/focused-search-notes.png)
+![The revised search note with the 20/37/5 screening counts](/img/open-science/workflow-extensions/focused-search-notes.webp)
 
 Download the <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-audit.csv">reviewed candidate table</ExampleDownload> and <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-notes.md">search note</ExampleDownload>. Full abstracts are not redistributed here; follow the source links to inspect them.
 

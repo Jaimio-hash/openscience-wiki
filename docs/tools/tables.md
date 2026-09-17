@@ -28,7 +28,7 @@ For a table embedded in a literature PDF, use [PDF extraction](../guides/preview
 4. Read the displayed range before estimating dataset size. Use a full-file calculation when the preview is bounded.
 5. Compare sample values with the [shared QC baseline](../reference/example-data.md#sample-qc-baseline).
 
-![Sample-QC table with full identifiers and numerical columns](/img/open-science/capabilities-walkthrough/32-csv-preview.jpg)
+![Sample-QC table with full identifiers and numerical columns](/img/open-science/capabilities-walkthrough/32-csv-preview.webp)
 
 <ToolOperationGroup>
 <summary>QC table: column meanings</summary>

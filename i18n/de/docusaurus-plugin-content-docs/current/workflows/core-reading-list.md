@@ -49,13 +49,13 @@ Wählen Sie das beabsichtigte Modell, lassen Sie **Ask for approval** aktiviert 
 
 Wenn **Save to Literature Inbox?** erscheint, überprüfen Sie die Operation und autorisieren Sie das beabsichtigte Speichern. Das Speichern von Kandidaten unterscheidet sich von der Annahme in Ihrer Bibliothek.
 
-![Erlaubnis, Literaturkandidaten zu inszenieren](/img/open-science/prisma-walkthrough/03-inbox-save-approval.png)
+![Erlaubnis, Literaturkandidaten zu inszenieren](/img/open-science/prisma-walkthrough/03-inbox-save-approval.webp)
 
 ## 2. Überprüfen Sie jeden Kandidaten vor der Annahme {/* #2-review-each-candidate-before-accepting */}
 
 Öffnen Sie **Library → Inbox**. In diesem Lauf zeigte das Abzeichen **3**, und jede Zeile zeigte einen Titel, erste Autoren, Veröffentlichungsjahr und **Gefunden via crossref**.
 
-![Drei echte PRISMA-Papiere warten auf Überprüfung](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![Drei echte PRISMA-Papiere warten auf Überprüfung](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 1. Wählen Sie den Kandidatentitel aus, um die Details zu öffnen.
 2. Überprüfen Sie **Provider**, seinen Quelllink und **Identifiers → DOI** gegen das beabsichtigte Papier.
@@ -63,7 +63,7 @@ Wenn **Save to Literature Inbox?** erscheint, überprüfen Sie die Operation und
 4. Wählen Sie **Accept**, wenn die Identität übereinstimmt. Der Kandidat verschwindet aus dem Posteingang und wird zu einem Bibliotheksdatensatz.
 5. Wiederholen Sie für die anderen beiden. Das Badge wechselte von 3 zu 2 zu 1; Der Endzustand war **Inbox is clear**.
 
-![Die Crossref-Quelle eines Kandidaten und das genaue DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.png)
+![Die Crossref-Quelle eines Kandidaten und das genaue DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.webp)
 
 | Posteingangskontrolle | Ergebnis | Einsatzmöglichkeiten |
 | --- | --- | --- |
@@ -81,25 +81,25 @@ Erstellen Sie eine Sammlung mit dem **New collection**-Steuerelement der Seitenl
 - **Beschreibung:** gibt an, dass es aktualisierte und historische Berichtsleitlinien enthält. Die Beschreibung ist Organisationstext, nicht Agent Anweisungen.
 - Wählen Sie **Create collection**; Name ist erforderlich, während Beschreibung optional ist. **Cancel** und **Close** verwerfen den Entwurf.
 
-![Eine zweckspezifische Lesesammlung](/img/open-science/prisma-walkthrough/06-create-collection.png)
+![Eine zweckspezifische Lesesammlung](/img/open-science/prisma-walkthrough/06-create-collection.webp)
 
 In **All references** suchen Sie `PRISMA`. Bestätigen Sie, dass genau die drei beabsichtigten Datensätze sichtbar sind, aktivieren Sie deren Kontrollkästchen und verwenden Sie **Add to collection → PRISMA reporting - Core reading**. Die Operation löscht die Auswahl. Wählen Sie die drei Datensätze erneut aus und verwenden Sie dann **Add to project → PRISMA - Systematic review reading pack**.
 
 Öffnen Sie die Sammlung und überprüfen Sie die drei Datensätze. Öffnen Sie ein Referenzdetail, um zu bestätigen, dass sowohl die Checkboxen für das Projekt als auch für die Sammlung ausgewählt sind. Dies sind Links zu freigegebenen Datensätzen, nicht drei zusätzliche Kopien der Bibliographie.
 
-![Die abgeschlossene Drei-Papier-Sammlung](/img/open-science/prisma-walkthrough/07-core-reading-collection.png)
+![Die abgeschlossene Drei-Papier-Sammlung](/img/open-science/prisma-walkthrough/07-core-reading-collection.webp)
 
 ## 4. Nutzbarer Volltext beifügen {/* #4-attach-usable-full-text */}
 
 Öffnen Sie das 2021-Papier und wählen Sie **Find full-text PDF**. Der Lookup hat Europe PMC in diesem Lauf zurückgegeben. Überprüfen Sie **Open source**, bevor Sie **Add attachment** auswählen.
 
-![Eine entdeckte Volltextquelle](/img/open-science/prisma-walkthrough/08-full-text-source.png)
+![Eine entdeckte Volltextquelle](/img/open-science/prisma-walkthrough/08-full-text-source.webp)
 
 Die Quelle war auffindbar, aber **Add attachment** gab **PDF could not be added** zurück. Die Nachricht listet mögliche Ursachen auf, einschließlich Anmeldeanforderungen, abgelaufene Links und das 50-MB-Limit; Es wird nicht identifiziert, welche Ursache hier aufgetreten ist.
 
 Um wiederherzustellen, laden Sie das offen verfügbare PDF aus dem [Herausgeber Artikelseite](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003583) herunter. Kehren Sie zur gleichen Referenz zurück und verwenden Sie **Add PDF**. Wählen Sie die heruntergeladene Datei aus und öffnen Sie dann **Preview prisma-2020-statement.pdf** unter Attachments. Die erfolgreich angehängte Datei zeigte **806.1 KB** und eine **15-Seite**-Vorschau. Überprüfen Sie den Titel und DOI auf Seite eins gegen den Datensatz.
 
-![Publisher PDF erfolgreich angehängt und geöffnet](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![Publisher PDF erfolgreich angehängt und geöffnet](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 Ein sichtbares Quellergebnis ist kein angehängtes PDF. Ein angehängtes PDF ist kein Beweis dafür, dass der Agent es gelesen hat. **Read with agent** ist eine separate Aktion, die Lesekontext für eine nachfolgende Anforderung liefert.
 

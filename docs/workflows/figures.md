@@ -24,7 +24,7 @@ Download the <a href="/docs/examples/research-workflows/conductivity-temperature
 
 Click the attached CSV to open the preview. It should show **26 rows · 6 columns**, including material, temperature, conductivity, SD and source sheet/row. Open the source note too; the captured run used the filename `README.md` for the note supplied here as `conductivity-source.md`.
 
-![The attached conductivity table with values, units and source rows](/img/open-science/research-workflows/conductivity-input.png)
+![The attached conductivity table with values, units and source rows](/img/open-science/research-workflows/conductivity-input.webp)
 
 ## Ask for the figure and the data behind it
 
@@ -45,19 +45,19 @@ Review any code or package request, then inspect the actual Notebook result. A c
 
 Choose **Notebook** in the conversation. Open the completed Python cell and inspect its output: 26 total rows, 13 rows for each material, the 275–390 K range and the plotted figure. If input resolution fails, have the Agent use the CSV attached to this conversation, then verify a successful execution before continuing.
 
-![The actual Notebook execution reports the input checks and renders the plot](/img/open-science/research-workflows/conductivity-notebook.png)
+![The actual Notebook execution reports the input checks and renders the plot](/img/open-science/research-workflows/conductivity-notebook.webp)
 
 ## Check the figure and export
 
 Open the generated PNG. Confirm that both materials are distinguishable, the endpoints are visible, the axes state units and the uncertainty note says **reported SD**. The lines only connect measurements; the dip in AZO conductivity after 300 K remains visible.
 
-![Actual Open-Science preview of the conductivity plot and reported SD error bars](/img/open-science/research-workflows/conductivity-figure.png)
+![Actual Open-Science preview of the conductivity plot and reported SD error bars](/img/open-science/research-workflows/conductivity-figure.webp)
 
 Open **plotted-conductivity.csv** and compare it with the input. In this run all **26 rows** preserved the temperatures, conductivity values, SDs and source sheet/row identities. Open **conductivity-methods.md** to check the source DOI and uncertainty definition.
 
 The **Generated** area should contain four files. Open the methods file and use the download icon in each preview to save the version you checked. If one output is missing, request that specific file and reopen it; a successful PNG does not prove the SVG or data table was saved.
 
-![The four saved outputs and the reopened methods note](/img/open-science/research-workflows/conductivity-methods.png)
+![The four saved outputs and the reopened methods note](/img/open-science/research-workflows/conductivity-methods.webp)
 
 Use PNG for quick sharing and SVG where vector artwork is useful. This run's <a href="/docs/examples/research-workflows/conductivity-temperature.png" download>PNG</a>, <a href="/docs/examples/research-workflows/conductivity-temperature.svg" download>SVG</a>, <a href="/docs/examples/research-workflows/plotted-conductivity.csv" download>plotted data</a> and <a href="/docs/examples/research-workflows/conductivity-methods.md" download>methods</a> are available for comparison.
 

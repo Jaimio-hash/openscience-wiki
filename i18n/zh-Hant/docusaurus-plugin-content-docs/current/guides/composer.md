@@ -78,7 +78,7 @@ original column-name mapping in the CSV/report.
 4. 對不再需要的提醒或指令，點選旁邊的 **Remove queued message**。
 5. 送達後核對已儲存對話中的最終文字和順序。被移除的請求不應作為已傳送指令出現。
 
-![編輯和排序後保留的兩條請求](/img/open-science/local-todo-batch/14-queue-reordered.png)
+![編輯和排序後保留的兩條請求](/img/open-science/local-todo-batch/14-queue-reordered.webp)
 
 檢查已送達請求的內容和順序。標為 **Not saved** 的條目尚未進入已儲存對話，關閉或重啟前請複製重要的未傳送文字。
 
@@ -88,7 +88,7 @@ original column-name mapping in the CSV/report.
 
 排隊請求包含檔案時，每次重新開啟編輯器，都要確認附件標籤仍在。修改指令後點選 **Add message to queue**。送達後，核對已儲存使用者訊息中的檔案是否為目標輸入；需要確認準確檔案身份時，可以要求計算檔案校驗值。
 
-![編輯後的附件請求已送達，並返回檔案校驗值](/img/open-science/sept11-completion/queue-result.png)
+![編輯後的附件請求已送達，並返回檔案校驗值](/img/open-science/sept11-completion/queue-result.webp)
 
 ### 佇列附件提示不可用 {/* #队列附件提示不可用 */}
 
@@ -112,7 +112,7 @@ original column-name mapping in the CSV/report.
 
 懸停或聚焦回答表格，顯示 **Copy table**（Markdown、CSV、TSV）、**Download table**（CSV、Markdown）與 **View fullscreen**。選擇所需格式，確認儲存位置並重開檔案，檢查行與表頭。這些操作匯出現有回答，不會重新呼叫 Connector 或建立託管產物版本。
 
-![回答後設資料表的全屏檢視](/img/open-science/guides-walkthrough/60-response-table.png)
+![回答後設資料表的全屏檢視](/img/open-science/guides-walkthrough/60-response-table.webp)
 
 長時間執行的工作可透過[後臺任務](notebook.md)開啟或取消指定執行。佇列中的追問是待送達指令，後臺任務則是已接收執行的工作。收起任務列表不會停止執行。
 

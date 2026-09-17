@@ -27,7 +27,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 Перед удалением роли проверьте возможность удаления Skills. Держите общий Skills, если другие роли все еще используют их. Удаление дубликата не требует удаления исходной роли.
 
-![Удаление одноразовой роли при сохранении общего Skills](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.jpg)
+![Удаление одноразовой роли при сохранении общего Skills](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.webp)
 
 ## Поделиться и импортировать пакет {/* #share-and-import-a-package */}
 
@@ -39,7 +39,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 2. В **Choose Skills to include** выберите `rnaseq-count-qc`, если получателю нужны его файлы. Установленный персональный/импортный Skill не обязательно включается по умолчанию.
 3. Экспортируйте и проверяйте архив перед обменом.
 
-![Выбор Skill для включения в пакет Specialist](/img/open-science/capabilities-walkthrough/07-specialist-export.jpg)
+![Выбор Skill для включения в пакет Specialist](/img/open-science/capabilities-walkthrough/07-specialist-export.webp)
 
 Фактический <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.zip">Пакет с Skill</ExampleDownload> содержит `manifest.json`, `specialist.json`, `skills/rnaseq-count-qc/SKILL.md` и его эталонную схему. Минимальный экспорт может содержать только два файла JSON. Connector ID – это ссылки. Удостоверения, местный траст и полный доступ не передаются в качестве готового к использованию разрешения.
 
@@ -52,7 +52,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 5. Импортная роль сохраняется **Нетрудоспособный / SETUP INCOMPLELE**. Осмотрите инструкции и привязки к возможностям в редакторе, выберите предполагаемый объем доступа, затем **Save changes** для завершения настройки и включите его.
 6. Откройте установленную роль и запустите небольшую, масштабированную задачу.
 
-![Разрешение реального конфликта RNA-seq Skill во время импорта](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.jpg)
+![Разрешение реального конфликта RNA-seq Skill во время импорта](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.webp)
 
 **Версия без изменений** может сопровождать конфликт Skill. Выберите предполагаемый источник Skill, а затем повторно откройте импортируемую роль, чтобы подтвердить ее привязку и объем доступа.
 
@@ -71,11 +71,11 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 Откройте **Browse Marketplace**, найдите роль и выберите **View details**. Проверьте издателя, источник, версию, лицензию, размер загрузки и включите Skills / Connectors. **Refresh Marketplace** обновляет каталог **Manage Marketplace sources** управляет настроенными источниками. Фильтры All/Official/Community касаются происхождения каталога, а не готовности к работе.
 
-![Детали пакета Auto Research Specialist](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.jpg)
+![Детали пакета Auto Research Specialist](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.webp)
 
 Выберите **Install Specialist**, затем подтвердите, что роль появляется в **Marketplace**, и проверьте состояние включения и связывания. Подсчет пакетов каталогов описывает этот пакет, а не все возможности приложения. Установка не выполняет исследовательскую задачу или не подготавливает каждую внешнюю зависимость. Завершите любую необходимую настройку перед использованием.
 
-![Автоисследование установлено и включено](/img/open-science/capabilities-walkthrough/23-marketplace-installed.jpg)
+![Автоисследование установлено и включено](/img/open-science/capabilities-walkthrough/23-marketplace-installed.webp)
 
 ## Проверяйте, прежде чем делиться {/* #verify-before-sharing */}
 

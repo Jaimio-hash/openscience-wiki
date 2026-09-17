@@ -22,7 +22,7 @@ El resultado `re78` y las variables de base `re74` y `re75` son ganancias reales
 
 Haga clic en el CSV adjunto para previsualizarlo antes de enviar la solicitud de cálculo. Chequee `train`, `re78`, `re74` y `re75`, incluyendo filas con cero ganancias. La vista previa puede mostrar sólo filas 100; el Notebook debe contar todo el archivo.
 
-![La entrada adjunta CSV y sus columnas originales](/img/open-science/research-workflows/job-training-input.png)
+![La entrada adjunta CSV y sus columnas originales](/img/open-science/research-workflows/job-training-input.webp)
 
 ## Ejecute la comparación preespeciada {/* #run-the-prespecified-comparison */}
 
@@ -42,7 +42,7 @@ Revise el código solicitado cuando aparezca la aprobación. Debe leer el CSV ad
 
 En la conversación, elija **Notebook**, abra la célula Python ejecutada e inspeccione su salida. Busque la fila y el grupo cuenta antes del resumen de regresión. Si la versión adjunta no puede ser resuelta, pídale al Agente que lea el archivo montado del apego y la reiniciación de esta conversación; una célula fallida no es un resultado. Mantenga la célula exitosa y su salida con los archivos guardados.
 
-![La salida Notebook registrada contiene comprobaciones de muestras reales y estimaciones de regresión](/img/open-science/research-workflows/job-training-notebook.png)
+![La salida Notebook registrada contiene comprobaciones de muestras reales y estimaciones de regresión](/img/open-science/research-workflows/job-training-notebook.webp)
 
 ## Inspeccione el resultado salvado {/* #inspect-the-saved-result */}
 
@@ -55,13 +55,13 @@ El ejemplo se completó con **Renglones 445**, **185 asignado a la formación**,
 
 Los coeficientes y los intervalos están en **miles de dólares**. Estos son los resultados del cálculo de este ejemplo, no las estimaciones citadas del papel original.
 
-![El informe de regresión en inglés ahorrado con cheques de muestra y estimaciones](/img/open-science/research-workflows/job-training-report.png)
+![El informe de regresión en inglés ahorrado con cheques de muestra y estimaciones](/img/open-science/research-workflows/job-training-report.webp)
 
 Abra ambos archivos generados después de que la respuesta termine. Compare las filas `train` en el CSV con el informe y Notebook. Puede descargar <a href="/docs/examples/research-workflows/job-training-regression.csv" download>Cuadro de coeficientes</a> y <a href="/docs/examples/research-workflows/job-training-report.md" download>informe</a>.
 
 En **Generated**, abre el CSV y expande su vista previa. La tabla de coeficiente guardada tiene **filas 12 · columnas 9**: dos filas para el modelo no ajustado y diez para el modelo ajustado. Localice la fila `train` de cada modelo y compare su estimación, error estándar robusto, intervalo, `n` y unidad. No agregue un año base de inflación que el diccionario fuente no indica. Utilice el botón **Download** de la vista previa para mantener la versión revisada.
 
-![El coeficiente reabierto CSV con ambos modelos y unidades consistentes](/img/open-science/research-workflows/job-training-coefficients.png)
+![El coeficiente reabierto CSV con ambos modelos y unidades consistentes](/img/open-science/research-workflows/job-training-coefficients.webp)
 
 ## Decidir qué soporta la comparación {/* #decide-what-the-comparison-supports */}
 

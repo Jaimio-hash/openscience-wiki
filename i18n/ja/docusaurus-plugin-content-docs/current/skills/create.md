@@ -47,13 +47,13 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 GSE60450 QC を新しいセッションで完了した後、**+ → Save as skill** を選択し、既存のパッケージを予約する別の **rnaseq-記述-qc** パッケージを要求します。 ネイティブワークフローでは、**SKILL.md** を含むドラフトを作成しました。 バリデーションはエラーや警告を返しません。
 
-![ネイティブSkillドラフトと検証結果](/img/open-science/v0.27.0/16-native-skill-draft-validated.png)
+![ネイティブSkillドラフトと検証結果](/img/open-science/v0.27.0/16-native-skill-draft-validated.webp)
 
 個人的なSkillsに出版物を確認する前に、名前、トリガーの説明、入力、メトリック定義、および停止条件を確認してください。 それから使用して下さい **Settings → Skills → Search skills**保存された指示を開け、点検して下さい **Availability** そして、 **Files**. . . . 実際の公開された<ExampleDownload path="/examples/capabilities/rnaseq-descriptive-qc/SKILL.md">SKILL.mdの特長</ExampleDownload>をダウンロードしてください。
 
-![個人で見つけられたネイティブ出版物](/img/open-science/v0.27.0/17-native-skill-published.png)
+![個人で見つけられたネイティブ出版物](/img/open-science/v0.27.0/17-native-skill-published.webp)
 
-![再開の手順と可用性](/img/open-science/v0.27.0/18-native-skill-instructions.png)
+![再開の手順と可用性](/img/open-science/v0.27.0/18-native-skill-instructions.webp)
 
 ### ボタンが使えなくなった理由 {/* #why-the-button-is-unavailable */}
 
@@ -105,7 +105,7 @@ rnaseq-count-qc/
 5. 参照数とパッケージサイズを確認し、**Publish**を選択します。
 6. 新しい個人行を検索し、それを再開します。 指示、可用性、ファイルを確認します。 パッケージをエクスポートして、両方のエントリを検査します。
 
-![RNA-seq Skillボディおよび支持ファイル](/img/open-science/capabilities-walkthrough/01-skill-create.jpg)
+![RNA-seq Skillボディおよび支持ファイル](/img/open-science/capabilities-walkthrough/01-skill-create.webp)
 
 | フィールドまたはボタン | 入るか、または点検して下さい |
 | --- | --- |
@@ -145,7 +145,7 @@ rnaseq-count-qc/
 
 新しい CSV を再オープンし、[共有ベースライン](../reference/example-data.md) で全サンプル識別子によってそれらを報告し、比較して下さい。 入力ハッシュを確認します。 Skillを別の研究に適用するときは、これらのチェックをその研究の入力と実験的な設計に対して繰り返します。
 
-![別の呼び出しと再オープンQC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.png)
+![別の呼び出しと再オープンQC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.webp)
 
 実装参照: [スキルエディタ.tsx](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/SkillEditor.tsx)、[host-skills-service.ts をホストする](https://github.com/aipoch/open-science/blob/v0.26.0/src/main/skills/host-skills-service.ts)。
 

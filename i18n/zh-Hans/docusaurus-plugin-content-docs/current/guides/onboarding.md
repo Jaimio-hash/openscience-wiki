@@ -35,19 +35,19 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![macOS 首次设置中的环境检查已完成](/img/open-science/macos/setup-environment.png)
+![macOS 首次设置中的环境检查已完成](/img/open-science/macos/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-![Windows 首次设置中的环境检查](/img/open-science/windows/setup-environment.png)
+![Windows 首次设置中的环境检查](/img/open-science/windows/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="linux">
 
-![Linux 首次设置中四项环境检查均已通过](/img/open-science/linux/setup-environment.png)
+![Linux 首次设置中四项环境检查均已通过](/img/open-science/linux/setup-environment.webp)
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![选择文件夹前的数据位置页面](/img/open-science/walkthrough-2026-09-08/02-data-location.png)
+![选择文件夹前的数据位置页面](/img/open-science/walkthrough-2026-09-08/02-data-location.webp)
 
 </PlatformContent>
 在安装运行时之前确定大型文件的存放位置。产物、Notebook 和环境使用数据目录；配置和历史记录留在配置位置。页面显示的路径是只读摘要，不能直接在其中输入。
@@ -73,14 +73,14 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![选择父文件夹后显示最终应用数据路径](/img/open-science/local-acceptance/data-location-selected.png)
+![选择父文件夹后显示最终应用数据路径](/img/open-science/local-acceptance/data-location-selected.webp)
 
 </PlatformContent>
 点击 **Browse…**，在空间充足的磁盘上选择空父文件夹，检查向导显示的完整受管理路径。选择 **Continue** 并阅读重启确认。研究数据应放在稳定位置，不要使用临时目录。
 
 <PlatformContent platform="macos">
 
-![数据位置重启确认](/img/open-science/local-acceptance/data-location-confirm.png)
+![数据位置重启确认](/img/open-science/local-acceptance/data-location-confirm.webp)
 
 </PlatformContent>
 | 确认框控件 | 结果 |
@@ -105,7 +105,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![实际配置写入失败与恢复入口](/img/open-science/local-todo-batch/56-onboarding-config-write-error.png)
+![实际配置写入失败与恢复入口](/img/open-science/local-todo-batch/56-onboarding-config-write-error.webp)
 
 </PlatformContent>
 如果重启在新位置生效前失败，恢复应用配置目录的写入权限后重新打开向导。先核对当前生效路径并打开已有文件，再决定是否重试切换位置。具体检查见[存储与归档内容](storage.md)。
@@ -116,7 +116,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Codex 安装来源菜单](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.png)
+![Codex 安装来源菜单](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.webp)
 
 </PlatformContent>
 1. 打开 **Install Codex**。
@@ -127,7 +127,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Codex 安装完成并成为活动运行时](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.png)
+![Codex 安装完成并成为活动运行时](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.webp)
 
 </PlatformContent>
 版本标签指的是已安装代理或适配器，不是所选模型；核对实际安装值，无需与截图版本完全相同。
@@ -136,7 +136,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 已有兼容代理时，选择其卡片并确认 **Active**，再继续。下方 Windows 界面使用已有 Codex 安装；无需为了完成向导而重新安装它。
 
-![Windows 设置向导中已有 Codex 代理被选为 Active](/img/open-science/windows/setup-agent-active.jpg)
+![Windows 设置向导中已有 Codex 代理被选为 Active](/img/open-science/windows/setup-agent-active.webp)
 
 </PlatformContent>
 
@@ -158,14 +158,14 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![尚未认证的英文 Codex 订阅表单](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![尚未认证的英文 Codex 订阅表单](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 </PlatformContent>
 使用 API 提供商时，选择类型，填写其要求的端点和模型信息，然后选择 **Test & continue**。向导先检查必填字段，再执行连接测试。测试成功后推进向导；输入或连接错误会保留在表单中供修改。
 
 <PlatformContent platform="macos">
 
-![Custom Gateway 必填字段校验](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![Custom Gateway 必填字段校验](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 </PlatformContent>
 认证方式、高级字段及连接失败的处理见[提供方设置](providers.md)。
@@ -189,7 +189,7 @@ API Key 只填写在专用凭据字段中，不放入截图、项目指令或对
 
 Windows 的 **Notebook runtime** 页面还可能显示 **Local Shell · WSL2 Bash Preview**。阅读底部 **Optional — nothing here is required to finish setup.**：暂不配置 Python/R、没有安装 WSL2 时，也可以点击 **Finish**。请求代码执行前仍需准备相应运行环境；完成向导不会自动安装这些可选环境。
 
-![Windows 可选 Notebook 与 WSL2 设置，Finish 按钮可用](/img/open-science/windows/setup-optional-runtimes.jpg)
+![Windows 可选 Notebook 与 WSL2 设置，Finish 按钮可用](/img/open-science/windows/setup-optional-runtimes.webp)
 
 </PlatformContent>
 

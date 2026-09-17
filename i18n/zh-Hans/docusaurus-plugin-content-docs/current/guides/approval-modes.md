@@ -1,7 +1,7 @@
 ---
 title: "权限与审批"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # 权限与审批
@@ -26,7 +26,7 @@ last_update:
 
 打开输入框旁的 **Agent controls**，阅读当前模式和框架兼容性说明。Full access 控件有自己的确认流程。**Auto-review** 是另一个结果审核选项，不表示自动批准编辑。
 
-![实际英文权限模式选择器](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![实际英文权限模式选择器](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 检查当前 Agent 显示的实际模式，不同框架支持的审批行为可能不同。选择前阅读当前模式的说明。
 
@@ -34,7 +34,7 @@ last_update:
 
 批准前核对操作、选定环境与代码。数据检查应读取指定输入并写入所需结果；安装缺失依赖属于另一项操作，需要单独检查其目的和影响。
 
-![公开 GSE60450 案例中的 Python 执行授权](/img/open-science/guides-walkthrough/25-python-permission.png)
+![公开 GSE60450 案例中的 Python 执行授权](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | 控件或信息 | 检查内容或操作 |
 | --- | --- |
@@ -53,6 +53,10 @@ last_update:
 ### 记住网页读取授权
 
 遇到支持该范围的 **Read web pages** 请求时，可选择 **Allow for this conversation**，让同一会话后续的网页读取复用授权。这项授权可覆盖其他网站，并非只允许第一个 URL；**Allow once** 仅批准当前调用。可在 **Remembered permissions** 中查看或撤销，它不会向 Notebook 网络白名单添加域名，也不代表允许上传。
+
+### 记住网页搜索授权 {/* #remember-web-search */}
+
+从 v0.30.2 起，受支持的 Claude Agent 原生 **Search the web** 请求也可选择 **Allow for this conversation**。同一会话后续符合条件的搜索可以复用授权；**Allow once** 只批准当前请求。在 **Remembered permissions** 中查看或撤销 **Search the web**。搜索与 **Read web pages** 是两项独立权限；此原生搜索选项并非所有框架或 Connector 都支持，应以实际提供的范围为准。
 
 ## 管理记住的权限
 
@@ -83,7 +87,7 @@ last_update:
 
 撤销影响后续审批，不会逆转已完成的编辑或网络请求；更宽范围的授权仍可能允许该操作。
 
-![撤销会话分组后重新出现执行授权](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![撤销会话分组后重新出现执行授权](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 权限清单不完整时，先等待加载或重试失败请求，再执行分组撤销；完成后重新检查所选范围。
 

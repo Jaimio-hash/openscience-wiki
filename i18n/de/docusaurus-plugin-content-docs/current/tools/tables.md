@@ -28,7 +28,7 @@ Verwenden Sie für eine Tabelle, die in eine Literatur PDF eingebettet ist, [PDF
 4. Lesen Sie den angezeigten Bereich, bevor Sie die Größe des Datensatzes schätzen. Verwenden Sie eine Volldateiberechnung, wenn die Vorschau begrenzt ist.
 5. Vergleichen Sie die Abtastwerte mit dem [Gemeinsames QC-Baseline](../reference/example-data.md#sample-qc-baseline).
 
-![Muster-QC-Tabelle mit vollständigen Kennungen und numerischen Spalten](/img/open-science/capabilities-walkthrough/32-csv-preview.jpg)
+![Muster-QC-Tabelle mit vollständigen Kennungen und numerischen Spalten](/img/open-science/capabilities-walkthrough/32-csv-preview.webp)
 
 <ToolOperationGroup>
 <summary>QC-Tabelle: Spaltenbedeutungen</summary>

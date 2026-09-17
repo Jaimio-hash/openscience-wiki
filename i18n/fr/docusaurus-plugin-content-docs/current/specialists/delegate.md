@@ -37,7 +37,7 @@ Téléchargez le <ExampleDownload path="/examples/gse60450/rnaseq-sample-qc.csv"
 
 > Délégué à RNA-seq QC examinateur. N'utilisez que la ligne complète CSV ci-dessous. Exécutez l'arithmétique en Python, vérifiez douze identifiants d'échantillon complets distincts et vérifiez zero_count_genes + detected_genes_count_gt_0 = 27179 pour chaque ligne. Retournez chaque résultat et indiquez que ces vérifications ont fourni des données sommaires, et non un accès indépendant à la matrice de comptage originale.
 
-![La sous-tâche Specialist complétée avec des vérifications par échantillon](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.jpg)
+![La sous-tâche Specialist complétée avec des vérifications par échantillon](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.webp)
 
 Dans cet exemple, l'enfant a lancé un Python Notebook et a retourné **12 lignes, 12 identifiants distincts non manquants, et 12/12 sommes égales à 27,179**. Pour le premier ID de l'échantillon complet, `8,664 + 18,515 = 27,179`. Les champs numériques étaient complets et non négatifs.
 

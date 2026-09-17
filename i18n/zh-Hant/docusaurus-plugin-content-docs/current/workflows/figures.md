@@ -24,7 +24,7 @@ last_update:
 
 點選附加的 CSV 開啟預覽，應為 **26 rows · 6 columns**，包含材料、溫度、電導率、SD 和來源工作表/行號。也開啟來源說明；截圖中的實操使用檔名 `README.md`，本文提供的同一說明命名為 `conductivity-source.md`。
 
-![附加的電導率資料表保留數值、單位及來源行](/img/open-science/research-workflows/conductivity-input.png)
+![附加的電導率資料表保留數值、單位及來源行](/img/open-science/research-workflows/conductivity-input.webp)
 
 ## 同時要求圖表和繪圖資料 {/* #同时要求图表和绘图数据 */}
 
@@ -45,19 +45,19 @@ Keep all labels and notes in English. Execute the code and save files.
 
 在會話中點選 **Notebook**，開啟已完成的 Python 單元，檢查輸出：共 26 行、每種材料 13 行、溫度範圍 275–390 K，以及實際生成的圖。如果輸入解析失敗，要求 Agent 使用本會話附加的 CSV，確認成功執行後再繼續。
 
-![Notebook 實際執行後顯示輸入檢查結果和圖表](/img/open-science/research-workflows/conductivity-notebook.png)
+![Notebook 實際執行後顯示輸入檢查結果和圖表](/img/open-science/research-workflows/conductivity-notebook.webp)
 
 ## 檢查圖表並匯出 {/* #检查图表并导出 */}
 
 開啟生成的 PNG，確認兩種材料容易區分，首尾資料點可見，座標軸註明單位，不確定性標註為 **reported SD**。連線只連線觀測值，AZO 在 300 K 後的電導率下降仍應保留。
 
-![在 Open-Science 中實際預覽電導率圖和原文報告的 SD 誤差棒](/img/open-science/research-workflows/conductivity-figure.png)
+![在 Open-Science 中實際預覽電導率圖和原文報告的 SD 誤差棒](/img/open-science/research-workflows/conductivity-figure.webp)
 
 開啟 **plotted-conductivity.csv** 與輸入對照。本次執行的 **26 行**溫度、電導率、SD，以及來源工作表和行號均保持一致。再開啟 **conductivity-methods.md**，核對來源 DOI 和誤差定義。
 
 **Generated** 區應有四份檔案。開啟方法說明，並透過各檔案預覽中的下載圖示儲存核對後的版本。缺少檔案時，明確要求補存該檔案並重新開啟；PNG 成功不代表 SVG 和資料表也已儲存。
 
-![四份已儲存結果與重新開啟的方法說明](/img/open-science/research-workflows/conductivity-methods.png)
+![四份已儲存結果與重新開啟的方法說明](/img/open-science/research-workflows/conductivity-methods.webp)
 
 快速分享可使用 PNG，需要向量圖時使用 SVG。可下載本次執行的 <a href="/docs/examples/research-workflows/conductivity-temperature.png" download>PNG</a>、<a href="/docs/examples/research-workflows/conductivity-temperature.svg" download>SVG</a>、<a href="/docs/examples/research-workflows/plotted-conductivity.csv" download>繪圖資料</a>和<a href="/docs/examples/research-workflows/conductivity-methods.md" download>方法說明</a>進行對照。
 

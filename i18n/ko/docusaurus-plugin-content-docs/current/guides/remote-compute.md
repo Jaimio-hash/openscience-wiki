@@ -39,9 +39,9 @@ Slurm 선택은 모든 명령을 컴파일 노드에 이동하지 않습니다. 
 | **Cancel** | 양식을 등록하지 않고 남겨 |
 | **Add** | 유효한 연결을 제출하십시오; 비밀번호 인증은 호스트가 추가되기 전에 연결 테스트를 통과해야 합니다. |
 
-![영어 SSH 구성 overrides](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.png)
+![영어 SSH 구성 overrides](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.webp)
 
-![실제 양식에서 선택된 비밀번호 인증 및 Slurm](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.png)
+![실제 양식에서 선택된 비밀번호 인증 및 Slurm](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.webp)
 
 비밀번호 모드는 애플리케이션의 비밀번호 유지 관리 및 보안 저장 기능에 따라 다릅니다. 사용할 수없는 경우, 양식에 표시된 이유를 검사합니다. 해당 분야에서의 자격 증명을 입력하고, 호스트 노트 또는 에이전트 요청에서 아닙니다.
 
@@ -57,7 +57,7 @@ SSH 구성 호스트의 경우, 앱은 레코드를 생성하고 세부보기를
 
 영어 예제는 성공적인 암호 전용 프로브를 보여줍니다 : 256 CPU, 504 GB RAM, NVIDIA A100 80GB PCIe 및 감지 된 Slurm 스케줄러. 설정된 모드는 **Direct SSH**을 명시적으로 변경할 때까지 남아 있습니다. 이 서버의 로그인 호스트 리소스는 최소 요구 사항이나 예정된 할당이 아닙니다. 호스트 및 계정 식별자는 스크린 샷에서 obscured.
 
-![성공적인 비밀번호 인증 및 호스트 리소스 프로브](/img/open-science/remote-compute/03-host-probe.png)
+![성공적인 비밀번호 인증 및 호스트 리소스 프로브](/img/open-science/remote-compute/03-host-probe.webp)
 
 ## Inspect 및 호스트 세부 정보 유지 {/* #inspect-and-maintain-host-details */}
 
@@ -133,9 +133,9 @@ Slurm의 경우, 올바른 계정/출입, 자원 요청, 벽 시간, 클러스�
 
 **이름 &#42;** 및 종료 코드 **0** 후 앱이 출력을 수집하고 저장된 테이블과 보고서를 다시 열 수 있음을 확인합니다. [공유 baseline](../reference/example-data.md)을 가진 가득 차있는 표본 식별자 그리고 미터를 비교하고, 먼 계산 후에 입력 해시를 검사하십시오. 이 Direct SSH 예제는 그 체크를 통과했습니다.
 
-![ID 및 작업 디렉토리에 Direct SSH 작업 완료](/img/open-science/remote-compute/05-direct-job-completed.png)
+![ID 및 작업 디렉토리에 Direct SSH 작업 완료](/img/open-science/remote-compute/05-direct-job-completed.webp)
 
-![모든 12개의 표본을 가진 먼 RNA-seq QC 테이블을 Reopened](/img/open-science/remote-compute/06-remote-qc-table.png)
+![모든 12개의 표본을 가진 먼 RNA-seq QC 테이블을 Reopened](/img/open-science/remote-compute/06-remote-qc-table.webp)
 
 예를 들어 <a href="/docs/examples/gse60450/remote-rnaseq-qc.csv" download>QC 테이블</a> 및 <a href="/docs/examples/gse60450/remote-rnaseq-qc-report.md" download>방법 보고서</a>을 다운로드하십시오. 이 원시 체크는 정상화, 실험 설계 검토 또는 차압 분석을 대체하지 않습니다. 긍정적 인 미디어는 Zeros를 제외합니다.
 
@@ -145,7 +145,7 @@ Slurm의 경우, 올바른 계정/출입, 자원 요청, 벽 시간, 클러스�
 
 아래의 별도의 준비 체크 포인트는 로컬 앱이 재시작했을 때 실행되었습니다. 앱은 동일한 작업 ID를 복구하고 나중에 완료 로그를 수집했습니다. 대기는 일반적으로 끝냈습니다; 이 스크린 샷은 복구, 취소 또는 과학적 계산을 보여줍니다.
 
-![같은 준비 작업은 응용 프로그램 재시작 후 복구](/img/open-science/remote-compute/07-job-recovered-after-restart.png)
+![같은 준비 작업은 응용 프로그램 재시작 후 복구](/img/open-science/remote-compute/07-job-recovered-after-restart.webp)
 
 ### 1개의 먼 일을 취소하십시오 {/* #cancel-one-remote-job */}
 
@@ -153,7 +153,7 @@ Slurm의 경우, 올바른 계정/출입, 자원 요청, 벽 시간, 클러스�
 
 아래 준비 체크 포인트는이 제어를 통해 취소되었습니다. 원격 프로세스는 독립적으로 확인 된 absent 후. 기존 로그는 readable 남아있다. 이것은 취소 된 분석이 전체 결과를 생성하지 않습니다; 그들을 사용하기 전에 유지 된 파일을 검사합니다.
 
-![선택된 준비 작업에 대한 취소 확인](/img/open-science/remote-compute/09-job-cancelled.png)
+![선택된 준비 작업에 대한 취소 확인](/img/open-science/remote-compute/09-job-cancelled.webp)
 
 
 </ToolOperationGroup>
@@ -177,7 +177,7 @@ Slurm의 경우, 올바른 계정/출입, 자원 요청, 벽 시간, 클러스�
 5. 실제 할당과 관련된 리소스를 비교합니다. 예를 들어 작업과 1 GiB 당 하나의 CPU를 요청했습니다. Slurm는 1개의 작업과 2개의 할당된 논리 CPU를 기록했습니다. 리소스 사용을 설명할 때 스케줄러의 할당 레코드를 사용합니다.
 6. 확인 된 터미널 상태 및 수집 된 파일을 기다리고 결과를 게시하기 전에. 서버 측 출력 파일은 응용 프로그램이 수확 한 것을 설정하지 않습니다.
 
-![Slurm은 호스트의 실행 모드에서 명시적으로 선택](/img/open-science/remote-compute/10-slurm-execution-mode.png)
+![Slurm은 호스트의 실행 모드에서 명시적으로 선택](/img/open-science/remote-compute/10-slurm-execution-mode.webp)
 
 ### 서버가 완료되면 앱이 대기 상태로 유지됩니다. {/* #when-the-server-completes-but-the-app-keeps-waiting */}
 
@@ -189,7 +189,7 @@ slurm_poll_failed: Slurm accounting storage is disabled
 
 스케줄러가 **완료 / 종료 코드 0:0**을 보여주면 앱은 **제출하기**, **result_final 거짓** 또는 수집된 파일을 보여 주며 작업 ID를 유지하고 오염 오류를 검사합니다. 치료 스케줄러 완료 및 응용 프로그램 결과 수집 별도의 단계로.
 
-![응용 프로그램은 여전히 완료된 Slurm 작업 부하에 대한 터미널 상태를 기다립니다](/img/open-science/remote-compute/11-slurm-accounting-unavailable.png)
+![응용 프로그램은 여전히 완료된 Slurm 작업 부하에 대한 터미널 상태를 기다립니다](/img/open-science/remote-compute/11-slurm-accounting-unavailable.webp)
 
 클러스터 관리자에게 계정과 작업에 대해 `sacct` 회계를 제공하도록 요청하십시오. `squeue` 더 이상 직업 목록은 성공의 충분한 증거입니다. 기존의 작업 디렉토리 및 작업 ID를 유지하면서 회계는 수리되고, 다시 동일한 작업을 검사합니다. 모니터링 오류를 취소하기 위해 완료된 분석을 resubmitmit하지 마십시오. Slurm 취소, 복구 및 응용 프로그램 수확은이 환경 요구 사항이 해결 될 때까지 종료됩니다.
 

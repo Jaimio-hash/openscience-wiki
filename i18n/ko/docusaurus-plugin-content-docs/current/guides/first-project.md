@@ -37,7 +37,7 @@ last_update:
 3. 12개의 견본 줄을 확인하십시오. 전체 샘플 식별자 및 총 카운트의 열을 검사, 제로 카운트 유전자, 검출 된 유전자 및 미디어 긍정 조사.
 4. 작곡가로 돌아가는 미리보기를 닫습니다. 요청에 첨부 파일을 유지하십시오.
 
-![표본 QC 테이블은 신청에서 열립니다](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![표본 QC 테이블은 신청에서 열립니다](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 미리보기가 비어 있거나 열이 분리되지 않은 경우 CSV 대신 HTML 다운로드 페이지에 첨부하십시오. delimiter 및 미리보기 컨트롤에 대한 [사이트맵](../tools/tables.md) 참조.
 

@@ -35,19 +35,19 @@ Read each check’s explanation alongside its status. When an agent is already i
 
 <PlatformContent platform="macos">
 
-![Environment checks completed during macOS first-time setup](/img/open-science/macos/setup-environment.png)
+![Environment checks completed during macOS first-time setup](/img/open-science/macos/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-![Environment checks during Windows first-time setup](/img/open-science/windows/setup-environment.png)
+![Environment checks during Windows first-time setup](/img/open-science/windows/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="linux">
 
-![All four environment checks passed during Linux first-time setup](/img/open-science/linux/setup-environment.png)
+![All four environment checks passed during Linux first-time setup](/img/open-science/linux/setup-environment.webp)
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ Read each check’s explanation alongside its status. When an agent is already i
 
 <PlatformContent platform="macos">
 
-![Data location before choosing a folder](/img/open-science/walkthrough-2026-09-08/02-data-location.png)
+![Data location before choosing a folder](/img/open-science/walkthrough-2026-09-08/02-data-location.webp)
 
 </PlatformContent>
 Choose the location for large files before installing runtimes. Artifacts, notebooks, and environments use the data location; settings and history remain in the configuration location. The displayed path is a read-only summary, not a text field.
@@ -73,14 +73,14 @@ Choose the location for large files before installing runtimes. Artifacts, noteb
 
 <PlatformContent platform="macos">
 
-![Custom parent selected and final app-managed path displayed](/img/open-science/local-acceptance/data-location-selected.png)
+![Custom parent selected and final app-managed path displayed](/img/open-science/local-acceptance/data-location-selected.webp)
 
 </PlatformContent>
 Select **Browse…**, choose an empty parent folder on a disk with enough space and inspect the complete managed path shown by the wizard. Select **Continue** and read the restart confirmation. Use a stable research-data location rather than a temporary folder.
 
 <PlatformContent platform="macos">
 
-![Restart confirmation for the selected data location](/img/open-science/local-acceptance/data-location-confirm.png)
+![Restart confirmation for the selected data location](/img/open-science/local-acceptance/data-location-confirm.webp)
 
 </PlatformContent>
 | Confirmation control | Result |
@@ -105,7 +105,7 @@ If the page reports **Could not finish setting up storage: EACCES: permission de
 
 <PlatformContent platform="macos">
 
-![Actual configuration-write failure and recovery controls](/img/open-science/local-todo-batch/56-onboarding-config-write-error.png)
+![Actual configuration-write failure and recovery controls](/img/open-science/local-todo-batch/56-onboarding-config-write-error.webp)
 
 </PlatformContent>
 If restart fails before the location changes, restore configuration write access and reopen the wizard. Check the active path and existing files before retrying a move; see [Storage](storage.md).
@@ -116,7 +116,7 @@ Choose the coding-agent backend that will run sessions. Select a detected instal
 
 <PlatformContent platform="macos">
 
-![Codex installation source menu](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.png)
+![Codex installation source menu](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.webp)
 
 </PlatformContent>
 1. Open **Install Codex**.
@@ -127,7 +127,7 @@ Choose the coding-agent backend that will run sessions. Select a detected instal
 
 <PlatformContent platform="macos">
 
-![Codex installed and selected as the active runtime](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.png)
+![Codex installed and selected as the active runtime](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.webp)
 
 </PlatformContent>
 The version labels identify the installed agent or adapter, not the selected model. Inspect the installed values instead of expecting the screenshot’s exact versions.
@@ -136,7 +136,7 @@ The version labels identify the installed agent or adapter, not the selected mod
 
 If a compatible agent is already installed, select its card and confirm **Active** before continuing. The Windows screen below uses an existing Codex installation; reinstalling it is unnecessary just to proceed through the wizard.
 
-![An existing Codex agent selected as Active in the Windows setup wizard](/img/open-science/windows/setup-agent-active.jpg)
+![An existing Codex agent selected as Active in the Windows setup wizard](/img/open-science/windows/setup-agent-active.webp)
 
 </PlatformContent>
 
@@ -158,14 +158,14 @@ The form changes according to **Provider type**, the selected agent, and the aut
 
 <PlatformContent platform="macos">
 
-![English Codex subscription form before authentication](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![English Codex subscription form before authentication](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 </PlatformContent>
 For an API provider, select its type, enter the endpoint and model details required by that provider, and use **Test & continue**. The wizard validates required fields before sending a test. A successful test advances the wizard; a validation or connection error remains visible for correction.
 
 <PlatformContent platform="macos">
 
-![Custom Gateway showing required-field errors](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![Custom Gateway showing required-field errors](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 </PlatformContent>
 See [Provider setup](providers.md) for authentication choices, advanced fields and recovery from connection errors.
@@ -189,7 +189,7 @@ After **Finish**, confirm Home opens, then use [First project](first-project.md)
 
 The Windows **Notebook runtime** page can also show **Local Shell · WSL2 Bash Preview**. Read **Optional — nothing here is required to finish setup.** You can choose **Finish** while Python/R setup is deferred and WSL2 is unavailable. Prepare the required runtime before requesting code execution; completing the wizard does not install those optional environments.
 
-![Windows optional Notebook and WSL2 settings with Finish available](/img/open-science/windows/setup-optional-runtimes.jpg)
+![Windows optional Notebook and WSL2 settings with Finish available](/img/open-science/windows/setup-optional-runtimes.webp)
 
 </PlatformContent>
 

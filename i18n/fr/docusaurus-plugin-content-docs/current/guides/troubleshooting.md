@@ -111,7 +111,7 @@ La récupération signifie que l'écran de démarrage s'ouvre et que les projets
 
 Si l'écran de démarrage offre uniquement **Quit**, quittez l'application, résolvez la cause signalée et lancez-la à nouveau. Utilisez **Retry** seulement lorsque la page le fournit. Après la récupération, rouvrez vos projets et fichiers attendus.
 
-![Guide de démarrage lorsque la base de données ne peut pas s'ouvrir](/img/open-science/local-acceptance/startup-database-error.png)
+![Guide de démarrage lorsque la base de données ne peut pas s'ouvrir](/img/open-science/local-acceptance/startup-database-error.webp)
 
 ### Messages de récupération {/* #recovery-messages */}
 
@@ -197,7 +197,7 @@ Sélectionnez **Report this error** à côté d'une erreur de conversation. Un �
 4. Vérifiez la reconnaissance de partage public pour activer **Open GitHub issue**. Modifier le texte d'erreur nécessite de revoir et de reconnaitre à nouveau le contenu révisé.
 5. Ouvrez le formulaire GitHub, inspectez les champs préremplis, ajoutez des étapes utiles de reproduction, puis soumettez-le quand vous êtes prêt. L'ouverture de l'aperçu du rapport à elle seule ne présente pas de problème.
 
-![Détails d'erreur modifiables et confirmation du partage public](/img/open-science/sept11-completion/report-preview.png)
+![Détails d'erreur modifiables et confirmation du partage public](/img/open-science/sept11-completion/report-preview.webp)
 
 ## Questions communes {/* #common-questions */}
 

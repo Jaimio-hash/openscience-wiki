@@ -1,7 +1,7 @@
 ---
 title: "Permisos y aprobaciones"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Permisos y aprobaciones {/* #permissions-and-approvals */}
@@ -24,7 +24,7 @@ Utilice **Agent controls** para elegir cómo la conversación actual solicita ap
 
 Abra **Agent controls** junto al compositor y lea el modo seleccionado. Revise cualquier mensaje de compatibilidad que muestre cómo el marco lo implementa. El control de acceso completo tiene su propia confirmación. **Auto-review** es un control diferente para revisar los resultados y no significa ediciones de auto-aprobación.
 
-![El selector de permisos en inglés real](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![El selector de permisos en inglés real](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 Revise el modo efectivo mostrado para su agente; El comportamiento de aprobación soportado puede diferir por marco. No todos los modos se han ejercido en los cuatro marcos.
 
@@ -34,7 +34,7 @@ Revise el modo efectivo mostrado para su agente; El comportamiento de aprobació
 
 Lea la operación, el entorno seleccionado y el código propuesto antes de aprobar. Para una comprobación de datos, confirme que lee la entrada prevista y escribe sólo los productos solicitados. La instalación de una dependencia desaparecida es una operación separada con un propósito y efecto diferentes.
 
-![Python aprobación de la ejecución del caso GSE60450 público](/img/open-science/guides-walkthrough/25-python-permission.png)
+![Python aprobación de la ejecución del caso GSE60450 público](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | Control o información | Qué inspeccionar o hacer |
 | --- | --- |
@@ -53,6 +53,10 @@ El botón principal Permitir normalmente utiliza el alcance de la conversación 
 ### Recuerde la aprobación de la lectura web {/* #remember-web-reading-approval */}
 
 Para una solicitud de **Leer páginas web** compatible, elija **Allow for this conversation** para recordar que la capacidad para más tarde lee la web en la misma conversación. Puede cubrir otros sitios web, no sólo la primera URL. **Allow once** sólo se aplica a esa llamada. Revisar o revocar la subvención en virtud de **Permisos recordados**; no añade hosts a la red Notebook permitlist o autoriza cargas.
+
+### Recuerde la aprobación de la búsqueda web {/* #remember-web-search */}
+
+Desde v0.30.2, las solicitudes nativas **Search the web** compatibles de Claude Agent también ofrecen **Allow for this conversation**. Las búsquedas posteriores que correspondan dentro de esa conversación pueden reutilizar el permiso. **Allow once** solo autoriza la solicitud actual. Consulta o revoca **Search the web** en **Remembered permissions**. La búsqueda y **Read web pages** son permisos distintos. No todos los frameworks ni Connectors admiten esta opción; comprueba el alcance indicado.
 
 ## Administrar acceso recordado {/* #manage-remembered-access */}
 
@@ -83,7 +87,7 @@ Inspeccione el Connector/tool, **Global / Project / Session** y el calificador *
 
 La revocación afecta a la futura autorización. No revierte las ediciones completadas ni las solicitudes de red, y una subvención más amplia todavía puede autorizar la operación.
 
-![Una nueva solicitud de ejecución después de la revocación del grupo de sesión](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![Una nueva solicitud de ejecución después de la revocación del grupo de sesión](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 Si el inventario es incompleto, espere a que cargue o vuelva a enviar la solicitud fallida antes de utilizar la revocación del grupo. Revise el alcance seleccionado después de revocar.
 

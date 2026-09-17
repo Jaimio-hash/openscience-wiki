@@ -28,7 +28,7 @@ Skill は、エージェントに反復可能なメソッドを与えます。�
 4. 結果を開きます。 説明、指示、**Files**、ライセンス、**Availability** をお読みください。 パッケージIDとは表示名が異なります。
 5. リストに戻り、**Used by**を調べます。 どのエージェントがパッケージを使用できるかを識別します。 完了した実行はリストされません。
 
-![保存したRNA-seq Skillを検索する](/img/open-science/capabilities-walkthrough/02-skill-search.jpg)
+![保存したRNA-seq Skillを検索する](/img/open-science/capabilities-walkthrough/02-skill-search.webp)
 
 | コントロール | 変更点 |
 | --- | --- |
@@ -51,7 +51,7 @@ Skill は、エージェントに反復可能なメソッドを与えます。�
 
 スクリーンショットは、説明を説明します **Customize**. . . . これらは、他のオプションメソッドを無効にしても、Skills が有効になっている必要があります。
 
-![滞在の有効化をカスタマイズし、理由を説明する](/img/open-science/v0.27.0/08-always-enabled-skill.png)
+![滞在の有効化をカスタマイズし、理由を説明する](/img/open-science/v0.27.0/08-always-enabled-skill.webp)
 
 ## 会話で使う {/* #use-it-in-a-conversation */}
 

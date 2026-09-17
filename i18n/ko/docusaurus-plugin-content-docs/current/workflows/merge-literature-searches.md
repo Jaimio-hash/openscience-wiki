@@ -39,7 +39,7 @@ Write in English and reopen the saved files.
 
 **Generated** 아래 **electrolyte-merged.csv**을 엽니다. 유지된 타이틀, DOIs 및 소스 회원을 2개의 RIS 수출 및 후보 감사에 대하여 확인하십시오. 실제 조합에는 15 줄이 있습니다; DOI **10.1007/s41918-024-00212-1**은 일괄 처리에서 발생하며 라벨 **A&#124;B**입니다.
 
-![검색 배치의 저장된 조합, 유지 소스 회원](/img/open-science/workflow-extensions/batches-merged.png)
+![검색 배치의 저장된 조합, 유지 소스 회원](/img/open-science/workflow-extensions/batches-merged.webp)
 
 비교를 위해, 손질 DOI whitespace는, 선택적인 DOI URL 접두사를 제거하고 case-insensitively 비교합니다. 원본 식별자를 소스 레코드에 보존합니다. 혼자서 비슷한 제목은 두 개의 레코드가 동일하다는 충분한 증거입니다; unsolved 식별자 분쟁이 검토해야합니다.
 
@@ -52,7 +52,7 @@ Write in English and reopen the saved files.
 3. `electrolyte-batch-a.ris`을 선택하십시오. **Import to**이 의도한 컬렉션을 이름을 지정합니다.
 4. **When identifiers match → Reuse existing reference**을 선택 해제하십시오. **View details** 검사, 다음 **Import references**을 선택합니다.
 
-![First-batch 가져오기 미리보기: 선택된 컬렉션의 8개의 새로운 기준](/img/open-science/workflow-extensions/batches-import-a.png)
+![First-batch 가져오기 미리보기: 선택된 컬렉션의 8개의 새로운 기준](/img/open-science/workflow-extensions/batches-import-a.webp)
 
 기록된 라이브러리에서, **8 생성, 0 재사용, 0 Skipped, 0 실패**로 완료된 첫 번째 가져오기. **Done**을 클릭하고 수집을 확인합니다. 라이브러리가 이미 일치하는 레코드를 포함하면 생성 된 / 재사용 된 분할이 다를 수 있습니다.
 
@@ -60,16 +60,16 @@ Write in English and reopen the saved files.
 
 선택한 동일한 컬렉션으로 `electrolyte-batch-b.ris`을 가져옵니다. 미리보기는 import를 커밋하기 전에 기존 레코드를 식별해야 합니다. 이 실행에서 **7 새로운 참고, 1 기존, 0 Skipped**을 보여주었습니다.
 
-![Second-batch 미리보기는 Existing으로 공유된 종이를 식별합니다.](/img/open-science/workflow-extensions/batches-import-b.png)
+![Second-batch 미리보기는 Existing으로 공유된 종이를 식별합니다.](/img/open-science/workflow-extensions/batches-import-b.webp)
 
 **Reuse existing reference** 유지, 공유 제목을 검사, 다음 가져 오기. 실제 완료 요약 읽기 : **7 생성, 1 재사용, 0 Skipped, 0 실패**. Reuse는 기존 메타 데이터를 유지하고 목적지에 일치하는 참조를 추가합니다. 두 번째 사본을 만들거나 PDF을 다운로드하지 않습니다.
 
-![7개의 생성한 1개의 재사용을 가진 2개의 수입품을 완료했습니다](/img/open-science/workflow-extensions/batches-import-result.png)
+![7개의 생성한 1개의 재사용을 가진 2개의 수입품을 완료했습니다](/img/open-science/workflow-extensions/batches-import-result.webp)
 
 ## 5. 결과 수집 확인 {/* #5-check-the-resulting-collection */}
 
 **Done**을 클릭합니다. 컬렉션에는 **15 참조**이 포함되어 있으며 DOI 조합으로 제공됩니다. 2개의 오리지널 수출과 검증된 CSV을 유지하므로 각 후보가 어디에서 왔는지 재구성할 수 있습니다.
 
-![15개의 문헌을 가진 최종 수집](/img/open-science/workflow-extensions/batches-collection.png)
+![15개의 문헌을 가진 최종 수집](/img/open-science/workflow-extensions/batches-collection.webp)
 
 카운트 일치는 유용한 검사, 과잉 DOI 및 대표 제목을 검사하기위한 교체가 아닙니다. 나중에 게시 된 창을 추가하려면 baseline을 보존하고 [기존 문학 컬렉션 업데이트](update-literature.md)을 계속하십시오.

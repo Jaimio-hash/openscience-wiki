@@ -25,11 +25,11 @@ last_update:
 5. 关闭预览，勾选候选，点击 **Import selected (1)**。
 6. 搜索导入结果，检查最终名称和来源。
 
-![导入前检查完整包](/img/open-science/capabilities-walkthrough/11-skill-package-preview.jpg)
+![导入前检查完整包](/img/open-science/capabilities-walkthrough/11-skill-package-preview.webp)
 
 本例中，回导时原 Personal 包已存在，预览显示 **Name exists**，导入产生了独立的 **Imported `rnaseq-count-qc-2`**。原包与 Specialist 绑定仍保留。不能认为每次导入都在更新原包，应检查来源与更新/替换诊断。
 
-![导入副本与原 Personal Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.jpg)
+![导入副本与原 Personal Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.webp)
 
 | 控件 | 作用 |
 | --- | --- |
@@ -53,9 +53,9 @@ Markdown 文件需要 YAML `name` 和 `description`，ZIP/`.skill` 需要包含 
 4. 返回 Skills 搜索 `peer-review`，检查 Imported 行。来源目录保留，Open-Science 使用导入副本。
 5. 本地安装目录变化后点击 **Rescan**，重新核对来源、选择和状态。
 
-![预览本机安装的 peer-review 包](/img/open-science/local-todo-batch/12-installed-skill-preview.png)
+![预览本机安装的 peer-review 包](/img/open-science/local-todo-batch/12-installed-skill-preview.webp)
 
-![在 Skills 列表确认导入结果](/img/open-science/local-todo-batch/13-installed-skill-imported.png)
+![在 Skills 列表确认导入结果](/img/open-science/local-todo-batch/13-installed-skill-imported.webp)
 
 导入后在 Skill 详情中检查模板与引用文件。使用来自其他助手的方法前，确认它依赖的工具和运行能力在当前会话可用。
 
@@ -69,7 +69,7 @@ Markdown 文件需要 YAML `name` 和 `description`，ZIP/`.skill` 需要包含 
 4. 关闭预览，勾选目标，点击 **Import selected (1)**，等待结果并检查 **Imported skills** 中的最终名称。
 5. 返回 Skills，搜索该名称，核对来源和可用状态后再使用。
 
-![导入前检查 GitHub Skill 和固定来源](/img/open-science/local-todo-batch/15-github-skill-preview.png)
+![导入前检查 GitHub Skill 和固定来源](/img/open-science/local-todo-batch/15-github-skill-preview.webp)
 
 从产品仓库导入 `fair-esm2` 时，因内置名称已存在，应用创建 **`fair-esm2-2`**，原内置包保留。导入说明不会安装模型权重，也不能证明推理已经通过。
 
@@ -77,7 +77,7 @@ Markdown 文件需要 YAML `name` 和 `description`，ZIP/`.skill` 需要包含 
 
 使用目标新 ref 再次扫描同一仓库，已有候选可以显示 **Update available**。仅选择该候选导入，然后检查已有导入行及预览。例如，更新已有 ESM-2 副本后，再扫描相同 ref 应显示 **Imported**。核对更新后正文与所选 ref 的内容；导入器会重写 frontmatter 及避让重名后的名称，因此整个文件不一定与原 SKILL.md 字节一致。
 
-![已有导入副本发现上游更新](/img/open-science/local-todo-batch/16-github-update-available.png)
+![已有导入副本发现上游更新](/img/open-science/local-todo-batch/16-github-update-available.webp)
 
 ### 处理 GitHub 限流
 
@@ -87,7 +87,7 @@ Markdown 文件需要 YAML `name` 和 `description`，ZIP/`.skill` 需要包含 
 
 进入 **Manage**，按来源、状态筛选并搜索具体方法，先勾选再执行。**Selected (n)** 查看选择范围，**Clear selection** 清空选择；改变筛选后仍需检查完整选择集。
 
-![批量管理中已禁用的导入副本](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.jpg)
+![批量管理中已禁用的导入副本](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.webp)
 
 实操完成了副本禁用、重新启用和删除，原 Skill 保留。
 

@@ -1,7 +1,7 @@
 ---
 title: "Extrahieren Sie eine Literaturnachweistabelle"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Extrahieren Sie eine Literaturnachweistabelle {/* #extract-a-literature-evidence-table */}
@@ -26,7 +26,9 @@ Wählen Sie in einem Open-Science-Projekt ein Arbeitsmodell aus und fügen Sie d
 
 Klicken Sie auf den Anhang, um seine Vorschau zu öffnen. Jede Studie beginnt mit einem Titel, DOI und dem ursprünglichen Quelllink, gefolgt von Abschnittstext und Tabellen. Passen Sie diese zehn Identitäten mit der Quellliste ab; Zählen Sie nicht wiederholte Abschnittsüberschriften als zusätzliche Studien.
 
-![Das tatsächlich angehängte Volltextpaket behält die Quellidentität und Artikelabschnitte bei](/img/open-science/research-workflows/mask-trials-input.png)
+![Das tatsächlich angehängte Volltextpaket behält die Quellidentität und Artikelabschnitte bei](/img/open-science/research-workflows/mask-trials-input.webp)
+
+Bevor Sie ein Papier als Beweismittel verwenden, überprüfen Sie an der Quelle nach Korrekturen oder Rückzügen. Von v0.30.2 aus überprüft der `verify_dois`-Helfer des `literature-review` Skill die Crossref-Aktualisierungsbeziehungen in beide Richtungen. `retracted: true` kann ein zurückgezogenes Papier oder einen Widerrufsbescheid identifizieren; die verknüpfte Beziehung zu prüfen. `false` bedeutet, dass kein geprüfter Marker gefunden wurde, kein Beweis dafür, dass das Papier nie zurückgezogen wurde. Diese zusätzliche Überprüfung war nicht Teil des aufgezeichneten Zehn-Papier-Laufs unten.
 
 ## Bitten Sie um eine Zeile pro Versuch {/* #ask-for-one-row-per-trial */}
 
@@ -51,7 +53,7 @@ Erlauben Sie die beabsichtigten Quellausleseanforderungen. Stellen Sie sicher, d
 
 Öffnen Sie den CSV, nachdem die Antwort abgeschlossen ist. Vergleichen Sie die zehn DOI-Werte mit der Quellliste und überprüfen Sie dann die gemeldete Schätzungs- und Analysepopulation mit dem Ergebnisabschnitt oder der Tabelle jedes Papiers.
 
-![Die Zehn-Prozess-Beweistabelle in Open-Science](/img/open-science/research-workflows/mask-trials-evidence.png)
+![Die Zehn-Prozess-Beweistabelle in Open-Science](/img/open-science/research-workflows/mask-trials-evidence.webp)
 
 Achten Sie besonders auf diese Unterscheidungen:
 
@@ -64,7 +66,7 @@ Verwenden Sie <a href="/docs/examples/research-workflows/mask-trials-evidence.cs
 
 Öffnen Sie **mask-trials-reading-notes.md** sowie das CSV. Der Finaltisch dieses Laufs hat **Zeilen 10 · Spalten 12**. Erweitern Sie eine Vorschau oder laden Sie die Datei herunter, um lange Zellen zu lesen; Es fehlt nicht der Quelltext an verkürzten Zellen. Die Notizen behalten die zehn Studienidentitäten bei und erklären, warum ihre Ergebnisse und Populationen nicht automatisch gepoolt werden sollten.
 
-![Die gespeicherten Lesenotizen und die abgeschlossene zehnreihige Ausgabe](/img/open-science/research-workflows/mask-trials-notes.png)
+![Die gespeicherten Lesenotizen und die abgeschlossene zehnreihige Ausgabe](/img/open-science/research-workflows/mask-trials-notes.webp)
 
 Wenn eine Zeile falsch oder unvollständig ist, benennen Sie die Studie und den exakten Quellabschnitt / die Tabelle, fordern Sie eine Überarbeitung der **beide**-Dateien an und öffnen Sie sie dann erneut. Halten Sie beispielsweise den randomisierten Haushaltsfluss von Cowling 2008 von seiner analysierten Teilmenge getrennt. Das Aktualisieren einer Prosa-Antwort aktualisiert die gespeicherte Tabelle nicht von selbst.
 

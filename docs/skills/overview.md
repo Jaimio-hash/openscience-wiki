@@ -28,7 +28,7 @@ Start with [Skill directory](./directory.md) to find a method, or [recipes](./re
 4. Open the result. Read the description, instructions, **Files**, license and **Availability**. A display name can differ from the package ID.
 5. Return to the list and inspect **Used by**. It identifies which agents can use the package; it does not list completed runs.
 
-![Searching the saved RNA-seq Skill](/img/open-science/capabilities-walkthrough/02-skill-search.jpg)
+![Searching the saved RNA-seq Skill](/img/open-science/capabilities-walkthrough/02-skill-search.webp)
 
 | Control | What changes |
 | --- | --- |
@@ -51,7 +51,7 @@ The directory still contains 23 public bundled Skills. Internal supporting Skill
 
 The screenshot shows the explanation for **Customize**. These required Skills remain enabled even when you disable other optional methods.
 
-![Customize stays enabled and explains why](/img/open-science/v0.27.0/08-always-enabled-skill.png)
+![Customize stays enabled and explains why](/img/open-science/v0.27.0/08-always-enabled-skill.webp)
 
 ## Use it in a conversation
 

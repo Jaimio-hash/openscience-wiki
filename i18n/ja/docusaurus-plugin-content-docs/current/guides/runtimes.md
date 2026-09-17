@@ -1,7 +1,7 @@
 ---
 title: "PythonとRのランタイム"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -45,7 +45,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 **Settings → Runtimes** で両方の言語カードを確認してください。 それぞれ独自の**Ready**ステータス、バージョン、**Enable**スイッチ、**Packages**ボタンがあります。 以下のカードは、PythonとRが有効になっています。 上記の警告は、Notebookネットワーク保護に関係しています。これは別に構成されています。 これらのスクリーンショットで個人パスが隠されています。 自分のコンピュータ上での完全なパスを調べます。
 
-<Screenshot src="/img/open-science/windows/runtimes-ready.png" alt="Python および R Ready を管理し、有効化した Windows のランタイム カード" width={1919} height={991} windowBounds={[480, 152, 960, 688]} href="/docs/img/open-science/windows/runtimes-ready.png" linkLabel="完全なWindowsスクリーンショットを開く" />
+<Screenshot src="/img/open-science/windows/runtimes-ready.webp" alt="Python および R Ready を管理し、有効化した Windows のランタイム カード" width={1919} height={991} windowBounds={[480, 152, 960, 688]} href="/docs/img/open-science/windows/runtimes-ready.webp" linkLabel="完全なWindowsスクリーンショットを開く" />
 
 </PlatformContent>
 
@@ -53,7 +53,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Python設定前のランタイム設定](/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.png)
+![Python設定前のランタイム設定](/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.webp)
 
 </PlatformContent>
 1. **Python → App-managed environment** を検索します。
@@ -64,12 +64,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![アプリ管理Python環境の構築](/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.png)
+![アプリ管理Python環境の構築](/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.webp)
 
 </PlatformContent>
 <PlatformContent platform="macos">
 
-![Pythonセットアップ完了](/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.png)
+![Pythonセットアップ完了](/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.webp)
 
 </PlatformContent>
 **Ready**、選択されたインタープリアーパス、および有効な状態を確認します。 パッケージのカウントとバージョンは、インストールソースと異なる場合があります。 スクリーンショットの一時的なパスを恒久的な環境の場所として使用しないでください。
@@ -84,25 +84,25 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="linux">
 
-![App-managed R は Linux で準備が整え、有効になっています](/img/open-science/linux/r-managed-ready.png)
+![App-managed R は Linux で準備が整え、有効になっています](/img/open-science/linux/r-managed-ready.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="macos">
 
-![アプリ管理R環境のダウンロード](/img/open-science/guides-walkthrough/70-r-managed-download.jpg)
+![アプリ管理R環境のダウンロード](/img/open-science/guides-walkthrough/70-r-managed-download.webp)
 
 </PlatformContent>
 <PlatformContent platform="macos">
 
-![アプリ管理 R のインストールと有効化](/img/open-science/guides-walkthrough/71-r-managed-ready.jpg)
+![アプリ管理 R のインストールと有効化](/img/open-science/guides-walkthrough/71-r-managed-ready.webp)
 
 </PlatformContent>
 `r-base` のフィルタリングは、バージョンとチャネルでインストールされた R パッケージを返します。 パッケージの合計はあなたの環境を反映し、スクリーンショットと異なる場合があります。
 
 <PlatformContent platform="macos">
 
-![Rパッケージの在庫のrベースをチェックする](/img/open-science/guides-walkthrough/72-r-package-filter.jpg)
+![Rパッケージの在庫のrベースをチェックする](/img/open-science/guides-walkthrough/72-r-package-filter.webp)
 
 </PlatformContent>
 ## 既存の通訳者を接続する {/* #connect-an-existing-interpreter */}
@@ -131,7 +131,7 @@ R Notebookでは、使用中の環境を確認するために`R.home()`を確認
 
 `/usr/bin/python3`などのシステム通訳者は、既に**Ready**として表示されている可能性があります。 エージェントが選択する前に使用する環境を有効にします。 下記のPythonインタープリターは無効になっており、アプリ管理のPython環境は設定されていません。 管理された環境を準備するには、**Download and set up** を使用します。
 
-![Linux は、既存の Python 通訳者を Ready として検出し、有効化スイッチをオフにします。](/img/open-science/linux/python-detected-disabled.png)
+![Linux は、既存の Python 通訳者を Ready として検出し、有効化スイッチをオフにします。](/img/open-science/linux/python-detected-disabled.webp)
 
 </PlatformContent>
 
@@ -187,7 +187,7 @@ macOSファイルピッカーでシンリンク通訳が選択できない場合
 
 <PlatformContent platform="macos">
 
-![インストールしたPythonパッケージのフィルタリング](/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.png)
+![インストールしたPythonパッケージのフィルタリング](/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.webp)
 
 </PlatformContent>
 テーブルの列は**Name**、**Version**、**Build**、**Channel**です。 ビルドのダッシュはビルド値が示されていないことを意味します。 このダイアログはインベントリです。パッケージインストールやアンインストールボタンはありません。 このダイアログ内で「パッケージのインストール」フィールドを探さないでください。
@@ -196,9 +196,9 @@ macOSファイルピッカーでシンリンク通訳が選択できない場合
 
 Pythonカードで、**Packages**と`pip`のフィルタを選択します。 Rカードでは、`r-base`のフィルタリングを行います。 バージョンを比較する前に、ダイアログのタイトルに名前を付けた環境を確認してください。 これらのスクリーンショットは、インストールされたパッケージを表示します。 新規パッケージのインストールは表示されません。
 
-<Screenshot src="/img/open-science/windows/python-packages.png" alt="Windows Pythonのパッケージの在庫はピップにろ過しました" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/python-packages.png" linkLabel="完全なWindowsスクリーンショットを開く" />
+<Screenshot src="/img/open-science/windows/python-packages.webp" alt="Windows Pythonのパッケージの在庫はピップにろ過しました" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/python-packages.webp" linkLabel="完全なWindowsスクリーンショットを開く" />
 
-<Screenshot src="/img/open-science/windows/r-packages.png" alt="Windows Rのパッケージの在庫はrベースにろ過しました" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/r-packages.png" linkLabel="完全なWindowsスクリーンショットを開く" />
+<Screenshot src="/img/open-science/windows/r-packages.webp" alt="Windows Rのパッケージの在庫はrベースにろ過しました" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/r-packages.webp" linkLabel="完全なWindowsスクリーンショットを開く" />
 
 </PlatformContent>
 
@@ -210,7 +210,7 @@ Pythonカードで、**Packages**と`pip`のフィルタを選択します。 R�
 
 <PlatformContent platform="macos">
 
-![成功した本当のNotebook計算](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![成功した本当のNotebook計算](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 インポートが失敗した場合は、選択したランタイムとそのインストールパッケージを調べます。 ホスト名が予約されたアドレスに解決するので、ダウンロード拒否のために、[ネットワーク](network.md)に従ってください。 既存のパッケージでコードを実行すると、追加のパッケージがインストールできるわけではありません。
@@ -248,7 +248,9 @@ R.home()
 
 Notebookの出力を開き、保存されたレポートと比較します。 詳しくはこちら Windows 10 例: Open-Science v0.28.0 レポート Python **3.12.13** そして、 `pip` **26.1.2**. . . . パッケージメタデータを読み込むと、パッケージのインストールやインポートは行いません。
 
-<Screenshot src="/img/open-science/windows/python-runtime-output.png" alt="Windows Python Notebook 実行されたコードおよび実際のバージョンの出力を示す" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.png" linkLabel="完全なWindowsスクリーンショットを開く" />
+<Screenshot src="/img/open-science/windows/python-runtime-output.webp" alt="Windows Python Notebook 実行されたコードおよび実際のバージョンの出力を示す" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.webp" linkLabel="完全なWindowsスクリーンショットを開く" />
+
+WindowsコンダRの起動やカーネル回復の失敗のために、再試行する前にv0.30.2以上を使用してください。 リリースは、環境の準備とRカーネルの回復後の実行可能なルックアップを修正しました。 更新後、環境を再確認し、Notebookで小さなR計算を実行します。 **Ready**単独では実行結果ではありません。 以下のスクリーンショットは、元の実行のバージョンと結果を保持します。
 
 Windows Rは**Rアクセスを許可する前に保護モードを有効にします。**を報告し、**Network settings**およびRカードの**Authorize and verify**の指示を点検することを実行します。 再実行前に報告された承認前提条件を解決して下さい; **Ready**カードだけでは実行が確認できません。 リクエストがブロックされ、[トラブルシューティング](troubleshooting.md)に従うと、完全なエラーを保ちましょう。
 
@@ -267,18 +269,18 @@ Windows Rは**Rアクセスを許可する前に保護モードを有効にし�
 以下は、**Inputs**とキャプチャされたコードを示しています。 画像をクリックすると、保存されたレポートで完全なスクリーンショットが開きます。
 
 <Screenshot
-  src="/img/open-science/windows/runtime-python-producer.png"
+  src="/img/open-science/windows/runtime-python-producer.webp"
   alt="Python結果のProvenanceコードビューの詳細、インプットとキャプチャされたプロデューサーコードを表示"
   width={2302}
   height={1158}
   windowBounds={[1385, 65, 917, 1030]}
-  href="/docs/img/open-science/windows/runtime-python-producer.png"
+  href="/docs/img/open-science/windows/runtime-python-producer.webp"
   linkLabel="保存されたレポートとキャプチャされたコードで、完全なWindows Pythonスクリーンショットを開きます。"
 />
 
 **Rと同じテーブルを読みます。** エージェントは、セッションNotebookで選択したR環境を使用するように依頼し、ベースRのみを使用してください。 `R.version.string`、`R.home()`、同じ4つのチェックと別の保存レポートをリクエストします。 **Notebook run**カードを拡張し、そのコードを検査し、レポートを開き、結果を比較します。 この例では、R は **4.4.3** と `runtime/envs/.r/Lib/R` で終わるホームディレクトリを報告しています。
 
-![Windows R Notebook コールおよび保存されたレポートは活動的な R 取付けおよびサンプルQC の結果を示します](/img/open-science/windows/runtime-r-execution.jpg)
+![Windows R Notebook コールおよび保存されたレポートは活動的な R 取付けおよびサンプルQC の結果を示します](/img/open-science/windows/runtime-r-execution.webp)
 
 これらのスクリーンショットのインストールパスは、例のコンピュータに属しています。 自分のマシン上の異なるドライブ文字、フォルダ、インタープリターバージョンは正常です。
 
@@ -303,7 +305,7 @@ Windows Rは**Rアクセスを許可する前に保護モードを有効にし�
 
 <PlatformContent platform="macos">
 
-![キャンセルされたセットアップおよび利用できる再試行](/img/open-science/local-todo-batch/29-setup-cancelled.png)
+![キャンセルされたセットアップおよび利用できる再試行](/img/open-science/local-todo-batch/29-setup-cancelled.webp)
 
 </PlatformContent>
 <span id="review-a-reinstall-before-committing-it" />
@@ -318,14 +320,14 @@ Windows Rは**Rアクセスを許可する前に保護モードを有効にし�
 
 <PlatformContent platform="macos">
 
-![Notebookセッション中に確認を再インストールする](/img/open-science/local-todo-batch/31-runtime-reinstall.png)
+![Notebookセッション中に確認を再インストールする](/img/open-science/local-todo-batch/31-runtime-reinstall.webp)
 
 </PlatformContent>
 再インストールは環境を削除し、再作成します。 運動回復では、**キャンセル: このセルが実行中にランタイムが停止しました。**でアクティブセルがキャンセルされました。 古いNotebookの歴史は見えてきましたが、その名前空間はもはや存在しません。 以前の変数が存在しないことを確認した新鮮なセル。 変更されていないCSVはまだ12行と269,027,617カウントを返し、保存されたレポートは再開しました。
 
 <PlatformContent platform="macos">
 
-![カーネルが停止した後、Notebookの履歴を保持](/img/open-science/local-todo-batch/33-reinstalled-kernel-history.png)
+![カーネルが停止した後、Notebookの履歴を保持](/img/open-science/local-todo-batch/33-reinstalled-kernel-history.webp)
 
 </PlatformContent>
 保持されたファイルと保持されたカーネルのメモリは異なります。 必要なコードを再実行することで変数を再作成します。 追加パッケージを再インストールする必要があります。 ベース環境の回復は、すべての追加依存症の回復を確立しません。
@@ -336,7 +338,7 @@ Windows Rは**Rアクセスを許可する前に保護モードを有効にし�
 
 <PlatformContent platform="macos">
 
-![ソースビルドにおける実際の欠損微生物のエラー](/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.png)
+![ソースビルドにおける実際の欠損微生物のエラー](/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.webp)
 
 </PlatformContent>
 パッケージアプリケーションには、このバイナリが含まれています。 ソースビルドでは、そのプロセスの起動環境で実行可能な有効なマイクロマバで`OPEN_SCIENCE_MICROMAMBA_BIN`を指し、開発インスタンスを再起動します。 バイナリパスを互換性のあるインストールから使用し、再発する前に実行可能であることを確認します。

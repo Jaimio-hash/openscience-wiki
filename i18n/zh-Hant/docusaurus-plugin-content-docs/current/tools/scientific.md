@@ -99,7 +99,7 @@ CUDA_VISIBLE_DEVICES="" .venv/bin/python ProteinMPNN/protein_mpnn_run.py \
 
 ### 檢查設計序列 {/* #检查设计序列 */}
 
-![CPU 實際執行結果與重開的對比報告](/img/open-science/local-todo-batch/42-cpu-model-comparison.png)
+![CPU 實際執行結果與重開的對比報告](/img/open-science/local-todo-batch/42-cpu-model-comparison.webp)
 
 本例儲存的輸出結果如下：
 

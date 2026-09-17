@@ -1,7 +1,7 @@
 ---
 title: "설치 및 업데이트"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -70,7 +70,7 @@ Homebrew는 Apple Silicon 또는 Intel을 자동으로 선택합니다. 설치 �
 
 Git, Node.js 22, npm 및 Electron을 위한 플랫폼 빌드가 필요합니다. 응용 프로그램에서 에이전트 프레임 워크를 설치하거나 선택합니다. 설치 중에 저장소는 Prisma Client를 생성하고 앱 패치를 적용하고 Electron native Dependencies를 준비합니다.
 
-재현 가능한 소스 설치를 위해, 의존성을 설치하기 전에 [관련 링크](../changelog/v0.30.1.md)에서 의도한 릴리스 태그를 선택하십시오. 기본적으로 clone은 고정 릴리스보다는 분기를 따릅니다. 선택된 태그, 소스 커밋 및 런타임 버전을 기록하므로 다른 사람이 환경을 재현 할 수 있습니다.
+재현 가능한 소스 설치를 위해, 의존성을 설치하기 전에 [관련 링크](../changelog/v0.30.2.md)에서 의도한 릴리스 태그를 선택하십시오. 기본적으로 clone은 고정 릴리스보다는 분기를 따릅니다. 선택된 태그, 소스 커밋 및 런타임 버전을 기록하므로 다른 사람이 환경을 재현 할 수 있습니다.
 
 선택된 릴리즈에 표시된 정확한 태그로 아래 `RELEASE_TAG`을 대체하십시오. (`v`)를 포함합니다. 지속적인 개발을 따르기 위하여 대신, omit `--branch RELEASE_TAG --depth 1`; 체크 아웃은 기본 지점을 따라합니다.
 

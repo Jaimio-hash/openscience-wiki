@@ -41,9 +41,9 @@ Select **Add SSH host**. Pick an existing alias or type the host identifier. The
 | **Cancel** | Leave without registering the form |
 | **Add** | Submit a valid connection; password authentication must pass its connection test before the host is added |
 
-![English SSH configuration overrides](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.png)
+![English SSH configuration overrides](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.webp)
 
-![Password authentication and Slurm selected in the real form](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.png)
+![Password authentication and Slurm selected in the real form](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.webp)
 
 Password mode depends on the application's password-authentication and secure-storage capability. If it is unavailable, inspect the reason displayed in the form. Enter credentials in that field, not in host notes or an agent request.
 
@@ -59,7 +59,7 @@ For an SSH-configuration host, the app creates the record, opens the detail view
 
 The English example shows a successful password-authenticated probe: 256 CPUs, 504 GB RAM, one NVIDIA A100 80GB PCIe and a detected Slurm scheduler. The configured mode remains **Direct SSH** until you explicitly change it. These are this server's login-host resources, not minimum requirements or a scheduled allocation. Host and account identifiers are obscured in the screenshot.
 
-![Successful password authentication and host resource probe](/img/open-science/remote-compute/03-host-probe.png)
+![Successful password authentication and host resource probe](/img/open-science/remote-compute/03-host-probe.webp)
 
 ## Inspect and maintain host details
 
@@ -135,9 +135,9 @@ Example request:
 
 After **success** and exit code **0**, confirm that the app collects both outputs and that the saved table and report reopen. Compare full sample identifiers and metrics with the [shared baseline](../reference/example-data.md), and check the input hash before and after the remote computation. This Direct SSH example passed those checks.
 
-![Completed Direct SSH job with its ID and work directory](/img/open-science/remote-compute/05-direct-job-completed.png)
+![Completed Direct SSH job with its ID and work directory](/img/open-science/remote-compute/05-direct-job-completed.webp)
 
-![Reopened remote RNA-seq QC table with all twelve samples](/img/open-science/remote-compute/06-remote-qc-table.png)
+![Reopened remote RNA-seq QC table with all twelve samples](/img/open-science/remote-compute/06-remote-qc-table.webp)
 
 Download the example <a href="/docs/examples/gse60450/remote-rnaseq-qc.csv" download>QC table</a> and <a href="/docs/examples/gse60450/remote-rnaseq-qc-report.md" download>methods report</a>. These raw-count checks do not replace normalization, experimental-design review or differential-expression analysis. The positive-count median excludes zeros.
 
@@ -147,7 +147,7 @@ Open the same project and conversation, then use **Compute** or the job's **Back
 
 The separate preparation checkpoint shown below was running when the local app restarted. The app recovered the same job ID and later collected its completion log. The wait finished normally; this screenshot demonstrates recovery, not cancellation or a scientific computation.
 
-![Same preparation job recovered after an application restart](/img/open-science/remote-compute/07-job-recovered-after-restart.png)
+![Same preparation job recovered after an application restart](/img/open-science/remote-compute/07-job-recovered-after-restart.webp)
 
 ### Cancel one remote job
 
@@ -155,7 +155,7 @@ Open **Background tasks**, select the intended job and compare its **Job ID** wi
 
 The preparation checkpoint below was cancelled through this control. The remote process was independently confirmed absent afterward. Its existing log remained readable. This does not imply that a cancelled analysis produced a complete result; inspect retained files before using them.
 
-![Cancellation confirmed for the selected preparation job](/img/open-science/remote-compute/09-job-cancelled.png)
+![Cancellation confirmed for the selected preparation job](/img/open-science/remote-compute/09-job-cancelled.webp)
 
 
 </ToolOperationGroup>
@@ -179,7 +179,7 @@ Use your site's partition rather than copying `local` unconditionally. The job's
 5. Compare the requested resources with the actual allocation. The example requested one CPU per task and 1 GiB; Slurm recorded one task and two allocated logical CPUs. Use the scheduler's allocation record when explaining resource use.
 6. Wait for a confirmed terminal state and collected files before publishing the result. A server-side output file does not establish that the application has harvested it.
 
-![Slurm selected explicitly in the host's execution mode](/img/open-science/remote-compute/10-slurm-execution-mode.png)
+![Slurm selected explicitly in the host's execution mode](/img/open-science/remote-compute/10-slurm-execution-mode.webp)
 
 ### When the server completes but the app keeps waiting
 
@@ -191,7 +191,7 @@ slurm_poll_failed: Slurm accounting storage is disabled
 
 If the scheduler shows **COMPLETED / ExitCode 0:0** but the app still shows **submitted**, **result_final false** or no collected files, keep both job IDs and inspect the polling error. Treat scheduler completion and application result collection as separate stages.
 
-![The application still awaiting terminal status for a completed Slurm workload](/img/open-science/remote-compute/11-slurm-accounting-unavailable.png)
+![The application still awaiting terminal status for a completed Slurm workload](/img/open-science/remote-compute/11-slurm-accounting-unavailable.webp)
 
 Ask the cluster administrator to provide working `sacct` accounting for the account and job. `squeue` no longer listing a job is insufficient evidence of success. Keep the existing work directory and job IDs while accounting is repaired, then inspect the same job again. Do not resubmit a completed analysis to clear a monitoring error. Slurm cancellation, recovery and application harvest remain pending until this environment requirement is resolved.
 

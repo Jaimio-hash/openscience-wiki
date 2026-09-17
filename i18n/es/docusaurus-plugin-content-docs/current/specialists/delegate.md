@@ -37,7 +37,7 @@ Descargue el <ExampleDownload path="/examples/gse60450/rnaseq-sample-qc.csv">mue
 
 > Delegado a RNA-seq QC Reviewer. Utilice sólo el CSV completo a continuación. Ejecute la aritmética en Python, verifique doce identificadores de muestras completas distintos, y compruebe zero_count_genes + detected_genes_count_gt_0 = 27179 para cada fila. Devuelve cada resultado y declara que este cheques proporcionó datos sumarios, no acceso independiente a la matriz de recuento original.
 
-![La subtarea Specialist completada con cheques por muestreo](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.jpg)
+![La subtarea Specialist completada con cheques por muestreo](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.webp)
 
 En este ejemplo, el niño corrió un Python Notebook y regresó **Renglones 12, identificadores distintos de 12 y sumas 12/12 iguales a 27,179**. Para el primer ID de muestra completa, `8,664 + 18,515 = 27,179`. Los campos numéricos eran completos y no negativos.
 

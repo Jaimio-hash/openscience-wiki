@@ -28,7 +28,7 @@ Para una tabla incrustada en una literatura PDF, utilice [Extracción PDF](../gu
 4. Lea el rango mostrado antes de estimar el tamaño del conjunto de datos. Utilice un cálculo de archivo completo cuando la vista previa está atada.
 5. Compare los valores de la muestra con el [base de referencia de QC](../reference/example-data.md#sample-qc-baseline).
 
-![Mesa de muestra-QC con identificadores completos y columnas numéricas](/img/open-science/capabilities-walkthrough/32-csv-preview.jpg)
+![Mesa de muestra-QC con identificadores completos y columnas numéricas](/img/open-science/capabilities-walkthrough/32-csv-preview.webp)
 
 <ToolOperationGroup>
 <summary>Tabla QC: significados de columna</summary>

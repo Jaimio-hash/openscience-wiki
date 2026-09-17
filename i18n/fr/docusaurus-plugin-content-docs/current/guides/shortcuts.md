@@ -45,12 +45,12 @@ Ouvrez la recherche de l'application avec le raccourci pour votre plateforme et 
 Dans l'application de bureau Windows, cliquez à l'intérieur du brouillon Compositeur avant d'utiliser **Ctrl+Z** pour annuler ou **Ctrl+Shift+Z** pour refaire. Vérifiez le texte résultant avant de poursuivre ou d'envoyer. Lors de l'utilisation de **Tab / Maj + Tab**, recherchez les contours de la commande ciblée, comme le bouton de fixation ci-dessous. Confirmer à nouveau la concentration après ouverture d'un panneau ou changement de l'état d'un contrôle; ne pas compter sur un nombre fixe de keypresses.
 
 <Screenshot
-  src="/img/open-science/windows/keyboard-attachment-focus.png"
+  src="/img/open-science/windows/keyboard-attachment-focus.webp"
   alt="Le bouton de fixation a un contour visible du clavier-focus dans le compositeur Windows"
   width={1916}
   height={1014}
   windowBounds={[215, 850, 920, 150]}
-  href="/docs/img/open-science/windows/keyboard-attachment-focus.png"
+  href="/docs/img/open-science/windows/keyboard-attachment-focus.webp"
   linkLabel="Ouvrir la capture d&#39;écran complète de Windows montrant la mise au point du bouton de fixation"
 />
 

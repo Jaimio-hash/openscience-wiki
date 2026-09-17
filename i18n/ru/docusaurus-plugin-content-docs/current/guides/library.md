@@ -1,7 +1,7 @@
 ---
 title: "Библиотека литературы и цитаты"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
@@ -27,7 +27,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 | Проект | Ссылки, связанные с этим проектом | Сохраняйте библиографию актуальной для исследовательского вопроса |
 | Коллекция | Тематическая группа, включая вложенные коллекции | Повторное использование набора чтения в проектах |
 
-![Три признанные работы в реальной коллекции PRISMA](/img/open-science/guides-walkthrough/51-library-collection.png)
+![Три признанные работы в реальной коллекции PRISMA](/img/open-science/guides-walkthrough/51-library-collection.webp)
 
 ## Добавить или импортировать запись {/* #add-or-import-a-record */}
 
@@ -60,11 +60,11 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 В партии можно показать **Pending**, **Reading…**, **Ready**, **Importing…**, **Completed**, **Failed** или **Skipped**. Отбор, готовность к метаданным и завершение импорта являются отдельными государствами. Если приложение сообщает **PDF upload cancelled. The reference was kept.**, проверьте, сохранились ли вложения в записи; Отмена загрузки не удалила запись библиографии.
 
-![Два настоящих PRISMA PDF готовы к импорту](/img/open-science/v0.27.0/02-pdf-batch-ready.png)
+![Два настоящих PRISMA PDF готовы к импорту](/img/open-science/v0.27.0/02-pdf-batch-ready.webp)
 
 С **Reuse existing reference** PDF, чьё извлеченное название или DOI не совпадают, может по-прежнему создавать отдельную запись. После импорта откройте каждую бумагу и подтвердите ее название и DOI. Исправьте несоответствия перед [Слияние дубликатов](#resolve-duplicates-and-recover-references). **Completed** подтверждает импорт, а не точную идентификацию.
 
-![Завершенные результаты пакета и каждого файла](/img/open-science/v0.27.0/03-pdf-batch-completed.png)
+![Завершенные результаты пакета и каждого файла](/img/open-science/v0.27.0/03-pdf-batch-completed.webp)
 
 
 </ToolOperationGroup>
@@ -76,7 +76,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 Запрос **Stop** позволяет завершить текущий пункт. Проверяйте каждую строку: элементы **Completed** сохраняются и не могут быть выбраны снова. Выберите оставшиеся строки **Ready** и используйте **Import selected** для продолжения. Если сбои выявляют **Retry unfinished**, исправьте заявленную причину перед повторным использованием и проверьте, что заполненные записи не были дублированы.
 
-![Остановленный импорт PDF сохранил завершенный ряд](/img/open-science/local-todo-batch/09-pdf-import-stopped.png)
+![Остановленный импорт PDF сохранил завершенный ряд](/img/open-science/local-todo-batch/09-pdf-import-stopped.webp)
 
 **The reference was kept. Retry to finish adding its PDF.** означает, что запись в библиографии была сохранена, но ее вложение не завершено. Убедитесь, что исходный PDF по-прежнему доступен в выбранном месте и открывается нормально, а затем выберите **Retry unfinished**. После повторного использования, вернитесь в коллекцию адресатов и откройте PDF, чтобы проверить его содержимое. Если результат не может быть подтвержден, проверьте свою библиотеку, прежде чем начать другой импорт.
 
@@ -100,9 +100,9 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 Нажмите **Import references**, дождитесь **Import complete**, проверьте Созданный / Воспользуемый / Пропущенный / Неудавшийся, затем выберите **Done**. Вновь открыть запись: только количество импорта не устанавливает правильные метаданные. Заполнение пустых полей может добавить идентификаторы и сокращенное название журнала без замены полного названия журнала.
 
-![Импорт BibTeX с явной дублирующей политикой](/img/open-science/local-todo-batch/02-bibtex-import.png)
+![Импорт BibTeX с явной дублирующей политикой](/img/open-science/local-todo-batch/02-bibtex-import.webp)
 
-![Импорт NBIB заполняет недостающие библиографические поля](/img/open-science/local-todo-batch/05-nbib-fill-fields.png)
+![Импорт NBIB заполняет недостающие библиографические поля](/img/open-science/local-todo-batch/05-nbib-fill-fields.webp)
 
 
 </ToolOperationGroup>
@@ -113,7 +113,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 Откройте кандидатский титул или **View details**. Проверяйте его провайдера, исходную ссылку и DOI/другие идентификаторы, затем сравните год, заказ автора и публикацию с издателем. **Accept** продвигает его в библиотеку. **Dismiss** удаляет его из очереди обзора. Проверьте выбор строк перед пакетными действиями.
 
-![Три подлинных кандидата в PRISMA ждут рассмотрения](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![Три подлинных кандидата в PRISMA ждут рассмотрения](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 В этом примере три кандидата были приняты индивидуально, и Инбокс стал ясен. Матч провайдера — это стартовая запись, а не полная библиографическая валидация. Годом публикации заявления 2020 является **2021**. Две статьи 2009 имеют разные DOI и списки авторов.
 
@@ -121,7 +121,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 Откройте ссылку, затем **More actions → Edit metadata**. Просмотрите текущие значения перед использованием **Complete metadata**, который выполняет поиск, а не чисто локальное редактирование.
 
-![Сэкономленное поле для авторов организации вновь открыто](/img/open-science/v0.27.0/04-organization-author.png)
+![Сэкономленное поле для авторов организации вновь открыто](/img/open-science/v0.27.0/04-organization-author.webp)
 
 | Поле/контроль | Ввод и эффект |
 | --- | --- |
@@ -144,7 +144,9 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 Чтобы добавить **Группа PRISMA**, выберите **Add creator → Creator role: Author → Name type: Organization**, введите полное имя и **Save**. Откройте запись и проверьте, что организация следует за своими четырьмя личными авторами. Сравните сгенерированную цитату с [Список авторов издателя](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097).
 
-![Справка APA сохраняет автора организации](/img/open-science/v0.27.0/05-organization-citation.png)
+![Справка APA сохраняет автора организации](/img/open-science/v0.27.0/05-organization-citation.webp)
+
+v0.30.2 исправляет парсинг имени автора PubMed, включая фамилии, инициалы и суффиксы. При импорте или заполнении метаданных проверьте поля создателя и сгенерируйте цитату против связанного источника. Не думайте, что установка обновления переписывает метаданные, уже хранящиеся в вашей Библиотеке.
 
 ## Организуйте принятые записи {/* #organize-the-accepted-records */}
 
@@ -174,7 +176,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 Если **Add attachment** выходит из строя после обнаружения источника, загрузите общедоступный PDF издателя и используйте **Add PDF** на той же записи. Откройте прилагаемый PDF и сравните его название и DOI с записью издателя. В этом примере **Превью Prisma-2020-statement.pdf** показывает соответствующую бумагу PRISMA 2020: **806.1 KB и 15 страницы**.
 
-![Успешно прикрепленный издатель PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![Успешно прикрепленный издатель PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 Исходный результат не является сохраненной привязанностью. Прикрепленный PDF не является доказательством агентного чтения. **Read with agent** предоставляет контекст для последующего запроса. Ссылка Composer `@` может выбрать точную запись, библиотеку проекта или коллекцию: коллекция предоставляет область поиска, а не автоматическое включение полного текста каждой статьи. Контроль чтения PDF находится в [Превью](previews.md).
 
@@ -192,11 +194,11 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 5. Загрузка также поддерживает паузу и **Continue download**. Проверяйте конечные состояния **Добавлено / Провал / Пропущено** и повторно открывайте любое успешно добавленное вложение.
 6. Чтобы избавиться от нежелательной задачи, готовой к просмотру, используйте **Remove task** в **Background tasks**. После удаления подтвердите, что задача ушла и что ее ссылки и вложения все еще открыты. Удаление задачи не удаляет их.
 
-![Поиск приостановился после текущего пункта, сохранив ожидающие записи](/img/open-science/priority-completion/14-literature-batch-paused.png)
+![Поиск приостановился после текущего пункта, сохранив ожидающие записи](/img/open-science/priority-completion/14-literature-batch-paused.webp)
 
 Приостановленный поиск сохраняет свои проверенные и ожидающие записи. После продолжения или повторного открытия задания проверьте окончательные подсчеты и результаты каждого пункта. Открытие кандидата и успешное вложение PDF являются отдельными результатами.
 
-![Перезапуск завершенного пятизаписного поиска из фоновых задач](/img/open-science/priority-completion/15-literature-batch-resumed.png)
+![Перезапуск завершенного пятизаписного поиска из фоновых задач](/img/open-science/priority-completion/15-literature-batch-resumed.webp)
 
 
 </ToolOperationGroup>
@@ -228,7 +230,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 В **Library → Settings → Import CSL** выберите независимый файл `plos.csl` из [Репозиторий стилей CSL](https://github.com/citation-style-language/styles/blob/master/plos.csl). В этом примере **Imported styles** увеличился с нуля до единицы и показал **Публичная библиотека науки**. Возвращение к реальному PRISMA рекорд **Citation** Выберите этот стиль под **Citation style**.. Проверьте пронумерованную ссылку и цитирование `[1]` в тексте. Превью по стилю управления использует образец статьи; Проверьте свою фактическую запись перед копированием цитаты.
 
-![Импортный стиль PLOS применяется к реальному рекорду PRISMA](/img/open-science/v0.27.0/06-imported-csl-citation.png)
+![Импортный стиль PLOS применяется к реальному рекорду PRISMA](/img/open-science/v0.27.0/06-imported-csl-citation.webp)
 
 
 </ToolOperationGroup>
@@ -249,7 +251,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 | Копировать BibTeX | Ан `@article` запись с автором организации, заключенной в брекеты |
 | Копировать RIS | А. `TY  - JOUR` Запись с автором, названием, годом и полями DOI |
 
-![Контроль копирования цитирования для реальной записи PRISMA](/img/open-science/local-todo-batch/01-citation-copy.png)
+![Контроль копирования цитирования для реальной записи PRISMA](/img/open-science/local-todo-batch/01-citation-copy.webp)
 
 Для файла закройте Citation, выберите необходимые строки таблицы и выберите **Export → BibTeX** или **RIS**. Выберите место в системе, сохраните диалог и ждите **Saved**. Эти файлы содержат библиографические записи, а не пакет вложений PDF. Введите сохраненный файл в тестовую коллекцию с **Reuse existing reference** и проверьте его количество совпадений. Оба экспортированных файла PRISMA были реимпортированы и повторно использовали существующий DOI без создания другой записи.
 
@@ -273,11 +275,11 @@ BibTeX хранит здесь год и месяц, поэтому его кр�
 4. Прочитайте **After merging** и его приложение, коллекцию и количество проектов. Выберите только **Merge references**. **Cancel** оставляет записи отдельно.
 5. Откройте выжившего и проверьте метаданные, ссылки и содержимое PDF. Слияние записей появляется в Trash как **Merged duplicate**.
 
-![Сравните выжившие и противоречивые даты публикации](/img/open-science/local-todo-batch/03-merge-bibtex.png)
+![Сравните выжившие и противоречивые даты публикации](/img/open-science/local-todo-batch/03-merge-bibtex.webp)
 
 PDF с извлеченным именем файла вместо его заголовка не может входить в дублирующую группу. Исправьте его название и DOI с помощью записи издателя, а затем просмотрите соответствующую группу. После слияния подтвердите, что PDF все еще открыт, и ассоциации по сбору и проектам все еще присутствуют.
 
-![Объединённая запись сохраняет PDF и организационные связи.](/img/open-science/local-todo-batch/06-merged-attachment-links.png)
+![Объединённая запись сохраняет PDF и организационные связи.](/img/open-science/local-todo-batch/06-merged-attachment-links.webp)
 
 
 </ToolOperationGroup>
@@ -289,7 +291,7 @@ PDF с извлеченным именем файла вместо его заг
 
 Используйте строку **More actions → Move to Trash**. Исчезает из активных библиотечных, проектных и коллекционных видов. В **Trash**, выполните поиск по заголовку или идентификатору, откройте меню строк и выберите **Restore**. Восстановление перед редактированием, предварительным просмотром или экспортом: эти элементы управления отключены в Trash. Откройте оригинальный проект и коллекции, чтобы проверить восстановленные ссылки. В этом примере восстановление записи PRISMA сохранило свой PDF и все три ссылки.
 
-![Восстановите ссылку из своего меню строки Trash](/img/open-science/local-todo-batch/07-trash-restore.png)
+![Восстановите ссылку из своего меню строки Trash](/img/open-science/local-todo-batch/07-trash-restore.webp)
 
 
 </ToolOperationGroup>
@@ -303,7 +305,7 @@ PDF с извлеченным именем файла вместо его заг
 
 После удаления проверьте, что выбранная запись покинула Trash и что сохраненная ссылка по-прежнему открывается с ее вложениями. Удаление ссылки на сбор, перемещение записи в Trash и ее постоянное удаление имеют разные области применения.
 
-![Прочитайте точную область постоянного удаления](/img/open-science/local-todo-batch/08-reference-delete-scope.png)
+![Прочитайте точную область постоянного удаления](/img/open-science/local-todo-batch/08-reference-delete-scope.webp)
 
 
 </ToolOperationGroup>

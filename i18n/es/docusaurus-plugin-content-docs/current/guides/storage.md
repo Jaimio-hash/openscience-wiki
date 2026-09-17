@@ -10,7 +10,7 @@ Utilice **Settings → Storage** para inspeccionar la ubicación de datos gestio
 
 ## Leer y refrescar el uso del disco {/* #read-and-refresh-disk-usage */}
 
-![Almacenamiento gestionado real después de los ejemplos de investigación](/img/open-science/local-acceptance/storage-installed-location.png)
+![Almacenamiento gestionado real después de los ejemplos de investigación](/img/open-science/local-acceptance/storage-installed-location.webp)
 
 Lea **Data location** antes de respaldar o diagnosticar un archivo perdido. Esta es la raíz gestionada de la aplicación, separada de una carpeta de fuente externa otorgada a un proyecto. El uso de **Refresh** reescans; verifique el tiempo de última elección antes de comparar las mediciones.
 
@@ -43,7 +43,7 @@ Finalizar tareas activas y mantener las exportaciones de insumos importantes, pr
 4. Compruebe la fuente, el destino, el espacio disponible y el aviso de reconstrucción.
 5. **Change location** presenta un movimiento válido; **Cancel** deja la ubicación actual sin cambios.
 
-![Forma de reubicación con requerimientos de reconstrucción de tiempo de ejecución](/img/open-science/local-acceptance/storage-destination-form.png)
+![Forma de reubicación con requerimientos de reconstrucción de tiempo de ejecución](/img/open-science/local-acceptance/storage-destination-form.webp)
 
 La aplicación mueve los datos de investigación existentes. Los entornos Python/R son **reconstruido después de reiniciar, no copiado**. El caché de paquete compartido de tiempo de ejecución se copia para apoyar las reconstrucciones fuera de línea, pero los paquetes de pip- o CRAN-sólo no están garantizados para ser restaurados. No se puede predecir fiablemente el espacio de reconstrucción adicional. Recordar los requisitos de entorno/paquete antes de un movimiento real y probar el tiempo de funcionamiento necesario después.
 
@@ -65,7 +65,7 @@ Para un intérprete externo R, confirme que el ejecutable seleccionado todavía 
 
 Después de regresar, reabrir un proyecto existente, introducir y guardar informe. Confirme el tiempo de ejecución gestionado está listo, luego ejecute un pequeño cálculo y ahorre un nuevo resultado. Reabrir para comprobar que la ubicación de datos predeterminada está en uso.
 
-![Resultado R guardado reabrido después de regresar a la ubicación predeterminada](/img/open-science/local-acceptance/r-default-chart.png)
+![Resultado R guardado reabrido después de regresar a la ubicación predeterminada](/img/open-science/local-acceptance/r-default-chart.webp)
 
 Si aparece **Una carpeta diferente llamada OpenScience ya existe aquí. Elige otra ubicación.**, la aplicación bloquea la sobreescritura. Cancelar y preservar ese directorio. Establecer su propiedad, contenido y respaldo antes de resolver el conflicto; no simplemente eliminar una carpeta de la misma nombre. La migración de retorno sólo después de los pases de validación de destino.
 
@@ -78,7 +78,7 @@ Si aparece **Una carpeta diferente llamada OpenScience ya existe aquí. Elige ot
 3. **Finish move** intenta completar la copia existente. **Discard copy** abandona esa copia sin terminar mientras conserva la ubicación original. Lea el alcance de confirmación primero.
 4. Si **Conversation storage needs attention** aparece, resuelva el movimiento sin terminar, elija **Retry**, y reabrir el proyecto original e informe.
 
-![Opciones de recuperación para el movimiento de almacenamiento sin terminar](/img/open-science/local-todo-batch/46-storage-recovery-choice.png)
+![Opciones de recuperación para el movimiento de almacenamiento sin terminar](/img/open-science/local-todo-batch/46-storage-recovery-choice.webp)
 
 Si la reiniciación del interruptor final falla repetidamente, termine el trabajo activo, deje de funcionar y vuelva a abrir la aplicación, luego vuelva a iniciar el movimiento. Si el error persiste, mantenga la ubicación original y recoja los detalles del fallo antes de hacer otro cambio.
 
@@ -104,7 +104,7 @@ Elija el **Restore de filas** para restaurar una sesión archivada. La Restaurac
 4. Elige **Restore project**.
 5. Reabrir el proyecto, su conversación y un informe guardado.
 
-![Gestión del proyecto GSE60450 archivado](/img/open-science/local-todo-batch/34-archived-project-manage.png)
+![Gestión del proyecto GSE60450 archivado](/img/open-science/local-todo-batch/34-archived-project-manage.webp)
 
 Reabrir un informe guardado y sus revisiones después de la restauración. Archiving organiza el proyecto; no reimprime el análisis ni elimina la historia de la versión del informe.
 
@@ -114,7 +114,7 @@ Reabrir un informe guardado y sus revisiones después de la restauración. Archi
 
 **Delete project** abre una confirmación de eliminación permanente. Lea su alcance antes de confirmar: los artefactos gestionados y las subidas están separados de los archivos externos de trabajo-carpeta, que no se eliminan. Compruebe qué tareas y núcleos se detendrán y qué espacios de trabajo gestionados de sesión permanecen en Almacenamiento. Archivar y borrar tienen diferentes resultados.
 
-![Alcance de eliminación para un proyecto vacío creado por separado](/img/open-science/local-todo-batch/35-disposable-project-delete.png)
+![Alcance de eliminación para un proyecto vacío creado por separado](/img/open-science/local-todo-batch/35-disposable-project-delete.webp)
 
 Utilice un proyecto desechable vacío si está aprendiendo el flujo de eliminación. Inspeccione los registros afectados de la confirmación antes de borrar un proyecto que contenga investigación.
 

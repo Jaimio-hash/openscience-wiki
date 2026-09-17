@@ -34,7 +34,7 @@ Do not retrieve full text or infer clinical recommendations.
 Write in English, do not delegate, and reopen the saved files.
 ```
 
-![La demande de recherche ciblée réelle dans Open-Science](/img/open-science/workflow-extensions/focused-search-input.png)
+![La demande de recherche ciblée réelle dans Open-Science](/img/open-science/workflow-extensions/focused-search-input.webp)
 
 La capture d'écran affiche la demande initiale. La règle de sélection opérationnelle ci-dessus intègre l'examen ultérieur de cette opération.
 
@@ -55,11 +55,11 @@ La question de concept large conserve délibérément les non-procès. L'admissi
 
 Une fois la réponse terminée, ouvrez **mindfulness-search-audit.csv** sous **Generated**. Il devrait conserver chaque PMID récupéré, y compris les enregistrements exclus et incertains. Vérifiez le titre, la revue, DOI et la date par rapport à l'enregistrement PubMed lié, puis comparez la décision avec l'abrégé.
 
-![Le tableau des candidats sauvegardés, y compris les dossiers incertains et exclus](/img/open-science/workflow-extensions/focused-search-table.png)
+![Le tableau des candidats sauvegardés, y compris les dossiers incertains et exclus](/img/open-science/workflow-extensions/focused-search-table.webp)
 
 L'examen a révélé des raisons inexactes dans l'ébauche initiale : par exemple, PMID **38837133** est un essai randomisé primaire d'une psychothérapie plus large, et non une analyse secondaire. Le tableau révisé indique son admissibilité à la pleine conscience **incertain**. PMID **34009273** est une méta-analyse et reste exclue avec la raison corrigée. Nommer l'enregistrement et l'erreur spécifique donne à l'Agent une demande de révision concrète; puis rouvrez le CSV sauvegardé pour confirmer le changement.
 
-![La révision de la sélection et les vérifications de fichier sauvegardées dans Notebook](/img/open-science/workflow-extensions/focused-search-notebook.png)
+![La révision de la sélection et les vérifications de fichier sauvegardées dans Notebook](/img/open-science/workflow-extensions/focused-search-notebook.webp)
 
 Le tableau d'exemples examiné contient **20 inclus, 37 exclu et 5 enregistrements incertains**, qui comptabilise tous les résultats **62**. Il s'agit de décisions de présélection au niveau abstrait, et non d'une déclaration selon laquelle les essais distincts de 20 ont été pleinement évalués. Plusieurs publications peuvent concerner le même essai sous-jacent.
 
@@ -69,7 +69,7 @@ PMID **41418645** a été retourné par le filtre de publication 2019–2025 Pub
 
 Ouvrez **mindfulness-search-notes.md** et vérifiez que ses nombres, ses règles d'admissibilité et ses limites correspondent à la CSV. Cette opération a révisé les deux fichiers et conservé l'instantané de métadonnées brutes inchangé.
 
-![La note de recherche révisée avec les nombres de dépistage 20/37/5](/img/open-science/workflow-extensions/focused-search-notes.png)
+![La note de recherche révisée avec les nombres de dépistage 20/37/5](/img/open-science/workflow-extensions/focused-search-notes.webp)
 
 Téléchargez les <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-audit.csv">Tableau des candidats examinés</ExampleDownload> et <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-notes.md">Note de recherche</ExampleDownload>. Les résumés complets ne sont pas redistribués ici; suivre les liens sources pour les inspecter.
 

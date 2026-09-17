@@ -40,7 +40,7 @@ Les métadonnées bibliographiques sont toujours incluses. Si une documentation 
 
 Les écrans suivants utilisent une session qui résume le [Tableau QC de l'échantillon GSE60450](../reference/example-data.md). Dans l'aperçu d'exportation, comparez **Essential export** et **Full export**, inspectez la taille estimée, puis choisissez **Export**. Le contenu et la taille dépendent de votre session.
 
-![Aperçu de l'exportation des paquets de recherche avec l'exportation essentielle, l'exportation complète et personnaliser le contenu](/img/open-science/feature-guides-2026-09/research-package-export.png)
+![Aperçu de l'exportation des paquets de recherche avec l'exportation essentielle, l'exportation complète et personnaliser le contenu](/img/open-science/feature-guides-2026-09/research-package-export.webp)
 
 ## Importation dans un projet {/* #import-and-inspect-a-package */}
 

@@ -23,13 +23,13 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Общие настройки внешнего вида](/img/open-science/v0.27.0/07-general-appearance.png)
+![Общие настройки внешнего вида](/img/open-science/v0.27.0/07-general-appearance.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-<Screenshot src="/img/open-science/windows/general-settings.png" alt="Контроль темы и языка в общих настройках Windows" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.png" linkLabel="Откройте полный скриншот общих настроек Windows" />
+<Screenshot src="/img/open-science/windows/general-settings.webp" alt="Контроль темы и языка в общих настройках Windows" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.webp" linkLabel="Откройте полный скриншот общих настроек Windows" />
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 Тот же доклад остается читаемым в более широком масштабе. Используйте горизонтальную полосу прокрутки, чтобы увидеть колонки за пределами текущего поля обзора таблицы; Масштаб дисплея изменяет вид, а не сохраненные данные.
 
-![Open-Science при масштабировании 125 % с горизонтальной полосой прокрутки в предварительном просмотре таблицы](/img/open-science/windows/app-scale-125.png)
+![Open-Science при масштабировании 125 % с горизонтальной полосой прокрутки в предварительном просмотре таблицы](/img/open-science/windows/app-scale-125.webp)
 
 </PlatformContent>
 
@@ -104,7 +104,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Английская система оповещения о завершении задания со скрытыми деталями](/img/open-science/priority-completion/07-system-completion-notification.png)
+![Английская система оповещения о завершении задания со скрытыми деталями](/img/open-science/priority-completion/07-system-completion-notification.webp)
 
 </PlatformContent>
 Выключите **Show task content in system notifications**, чтобы использовать общие оповещения. Выберите оповещение о завершении или одобрении, чтобы возобновить разговор; Ответить на одобрение внутри приложения.
@@ -136,7 +136,7 @@ import Screenshot from '@site/src/components/Screenshot';
 | Вы хотите... | Куда пойти |
 | --- | --- |
 | Проверьте обновление приложения | **General → About → Check now**; следовать [Установка и обновления](installation.md#choose-a-reproducible-version-and-update-deliberately). |
-| Прочитайте изменения в версии или получите помощь | **About → Release notes / Help Center** Открывает соответствующую внешнюю страницу. У этой вики также есть [Изменить](../changelog/v0.30.1.md). |
+| Прочитайте изменения в версии или получите помощь | **About → Release notes / Help Center** Открывает соответствующую внешнюю страницу. У этой вики также есть [Изменить](../changelog/v0.30.2.md). |
 | Найти или открыть диагностический журнал | **General → Diagnostics → Reveal / Open**; смотреть [устранение неполадок](troubleshooting.md). Логотипы остаются локальными, пока вы не поделитесь ими. |
 | Установите вход командной строки | **General → Install command**; смотреть [Ссылка на CLI](../reference/cli.md). Использование рабочего стола не требует этой команды. |
 | Управление местоположением данных или архивной работой | [Хранение и архивная работа](storage.md). |

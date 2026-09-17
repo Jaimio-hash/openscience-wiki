@@ -30,7 +30,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Выполнение и вывод Python в Notebook](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![Выполнение и вывод Python в Notebook](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 
@@ -83,7 +83,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![Фильтрация списка переменных по имени](/img/open-science/guides-walkthrough/47-notebook-variable-filter.png)
+![Фильтрация списка переменных по имени](/img/open-science/guides-walkthrough/47-notebook-variable-filter.webp)
 
 </PlatformContent>
 
@@ -107,7 +107,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![Вывод R sample-QC открывается в приложении](/img/open-science/guides-walkthrough/76-r-qc-table.jpg)
+![Вывод R sample-QC открывается в приложении](/img/open-science/guides-walkthrough/76-r-qc-table.webp)
 
 </PlatformContent>
 
@@ -119,7 +119,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![Захваченная среда для результата R](/img/open-science/guides-walkthrough/77-r-environment-evidence.jpg)
+![Захваченная среда для результата R](/img/open-science/guides-walkthrough/77-r-environment-evidence.webp)
 
 </PlatformContent>
 
@@ -138,7 +138,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![Справочное состояние задачи и ее открытый контроль](/img/open-science/v0.27.0/13-background-task-completed.png)
+![Справочное состояние задачи и ее открытый контроль](/img/open-science/v0.27.0/13-background-task-completed.webp)
 
 </PlatformContent>
 
@@ -164,7 +164,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![Код производителя, захваченный для сохраненного результата](/img/open-science/provenance-code.png)
+![Код производителя, захваченный для сохраненного результата](/img/open-science/provenance-code.webp)
 
 </PlatformContent>
 
@@ -213,7 +213,7 @@ cat("R home:", R.home(), "\n")
 3. Откройте сохраненный файл и сравните его с отображаемым кодом. В PowerShell запустите его с тем же интерпретатором Python. используйте оператор вызова `&` перед указанным исполняемым путем.
 4. Сравните результаты с Notebook и сохраненным отчетом. Храните все необходимые файлы ввода вместе с кодом.
 
-<Screenshot src="/img/open-science/windows/captured-code-download.png" alt="Windows захватил код производителя и его контроль загрузки" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.png" linkLabel="Откройте полный скриншот Windows" />
+<Screenshot src="/img/open-science/windows/captured-code-download.webp" alt="Windows захватил код производителя и его контроль загрузки" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.webp" linkLabel="Откройте полный скриншот Windows" />
 
 Это загружает записанный код. **Generate script** — это отдельная операция по реконструкции. Если генерация терпит неудачу, сохраняйте ее полную ошибку. Загрузка захваченного кода не означает, что реконструкция прошла успешно.
 
@@ -230,7 +230,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![Сгенерированный предварительный просмотр сценария и контроль загрузки](/img/open-science/priority-completion/19-generated-script.png)
+![Сгенерированный предварительный просмотр сценария и контроль загрузки](/img/open-science/priority-completion/19-generated-script.webp)
 
 </PlatformContent>
 

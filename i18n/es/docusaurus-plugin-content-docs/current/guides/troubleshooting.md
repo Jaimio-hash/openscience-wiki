@@ -111,7 +111,7 @@ La recuperación significa que la pantalla de inicio se aclara y los proyectos e
 
 Si la pantalla de inicio solo ofrece **Quit**, salga de la aplicación, resuelva la causa reportada y la ponga de nuevo. Utilice **Retry** sólo cuando la página lo proporciona. Después de la recuperación, vuelva a abrir sus proyectos y archivos esperados.
 
-![Orientación de inicio cuando la base de datos no puede abrirse](/img/open-science/local-acceptance/startup-database-error.png)
+![Orientación de inicio cuando la base de datos no puede abrirse](/img/open-science/local-acceptance/startup-database-error.webp)
 
 ### Mensajes de recuperación {/* #recovery-messages */}
 
@@ -197,7 +197,7 @@ Seleccione **Report this error** junto a un error de conversación. Una pantalla
 4. Compruebe el reconocimiento público para permitir el **Open GitHub issue**. La edición del texto de error requiere revisar y reconocer el contenido revisado de nuevo.
 5. Abra la forma GitHub, inspeccione los campos prellenados, agregue pasos de reproducción útiles, luego envíe cuando esté listo. Abrir el informe previsualización por sí solo no presenta un problema.
 
-![Datos de error editables y confirmación del intercambio público](/img/open-science/sept11-completion/report-preview.png)
+![Datos de error editables y confirmación del intercambio público](/img/open-science/sept11-completion/report-preview.webp)
 
 ## Cuestiones comunes {/* #common-questions */}
 

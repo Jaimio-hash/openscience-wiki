@@ -78,7 +78,7 @@ To revise several queued messages, edit the intended request, adjust its order, 
 4. Use **Remove queued message** beside a reminder or instruction you no longer need.
 5. After delivery, check the saved transcript for the final text and order. Removed requests should not appear as delivered instructions.
 
-![The two remaining requests after editing and reordering](/img/open-science/local-todo-batch/14-queue-reordered.png)
+![The two remaining requests after editing and reordering](/img/open-science/local-todo-batch/14-queue-reordered.webp)
 
 Check that delivered replies follow the edited content and order. Items labeled **Not saved** have not entered the saved transcript; copy important unsent text before closing or restarting.
 
@@ -88,7 +88,7 @@ Check that delivered replies follow the edited content and order. Items labeled 
 
 When a queued request includes a file, confirm its attachment chip is still present each time you reopen the editor. Change the instructions, then select **Add message to queue**. After delivery, compare the file shown in the saved user message with the intended input. Ask for a file checksum when the exact file identity matters.
 
-![The edited attachment request delivered with its file and checksum](/img/open-science/sept11-completion/queue-result.png)
+![The edited attachment request delivered with its file and checksum](/img/open-science/sept11-completion/queue-result.webp)
 
 ### A queued attachment becomes unavailable
 
@@ -112,7 +112,7 @@ Expand a tool card to inspect its arguments, code and output. After completion, 
 
 Hover or focus the response table to reveal **Copy table** (Markdown, CSV or TSV), **Download table** (CSV or Markdown), and **View fullscreen**. Choose the needed format, confirm the destination and reopen the file to check rows and headers. These actions export an existing answer; they do not rerun a Connector or create a managed artifact version.
 
-![The returned metadata table in its full-screen view](/img/open-science/guides-walkthrough/60-response-table.png)
+![The returned metadata table in its full-screen view](/img/open-science/guides-walkthrough/60-response-table.webp)
 
 For long-running work, use [Background tasks](notebook.md#background-tasks-and-result-delivery) to open or cancel the specific run. A queued follow-up is a pending instruction; a background task is already admitted work. Closing the task list does not stop execution.
 

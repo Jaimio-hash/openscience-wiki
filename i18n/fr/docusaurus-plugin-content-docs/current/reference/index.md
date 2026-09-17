@@ -27,4 +27,4 @@ Utilisez **Ctrl+K** pour rechercher les titres, les en-têtes et le texte du cor
 
 ## Changer de journal {/* #changelog */}
 
-[Parcourez les dernières notes de publication](../changelog/v0.30.1.md).
+[Parcourez les dernières notes de publication](../changelog/v0.30.2.md).

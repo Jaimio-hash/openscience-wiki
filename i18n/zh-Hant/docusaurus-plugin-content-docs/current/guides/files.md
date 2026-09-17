@@ -38,7 +38,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 新增已有資料夾時，開啟 **Files**，展開 **Artifacts** 下拉選單，選擇 **This computer → Add folder…**。在應用自己的 **Grant folder access** 對話方塊中選擇具體子資料夾和 **Read-only**，再點選 **Grant this folder**。使用者主目錄根位置可能不可選，請進入研究資料所在的子資料夾。閱讀可能出現的 Notebook 核心影響確認；返回 Files 後，核對當前目錄及檔案列表。
 
-<Screenshot src="/img/open-science/windows/granted-folder-files.png" alt="Windows 已授權資料夾，列出公開指令碼與 CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.png" linkLabel="開啟完整 Windows 截圖" />
+<Screenshot src="/img/open-science/windows/granted-folder-files.webp" alt="Windows 已授權資料夾，列出公開指令碼與 CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.webp" linkLabel="開啟完整 Windows 截圖" />
 
 在 Windows 的 **Attach files** 視窗中，可以選擇含中文或空格路徑下的檔案，也可以在“檔名”框輸入完整檔案路徑後開啟。返回應用後先確認附件名稱，再開啟預覽，核對表格行列和內容。不想附加時，點選 **Cancel**，並確認草稿沒有新增附件。
 
@@ -55,7 +55,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![真實 RNA-seq 結果的檔案篩選](/img/open-science/guides-walkthrough/56-files-search.png)
+![真實 RNA-seq 結果的檔案篩選](/img/open-science/guides-walkthrough/56-files-search.webp)
 
 </PlatformContent>
 數量對應當前篩選。無結果不代表檔案被刪除。**No more** 表示該組已載入完成，點選組標題可收起。檔案主體開啟獨立預覽；**Open … in split view beside the session** 將檔案放在對話旁。下載針對相應檢視選擇的檔案或版本。
@@ -85,7 +85,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![報告 v2 與原始版本的差異](/img/open-science/guides-walkthrough/55-report-version-diff.png)
+![報告 v2 與原始版本的差異](/img/open-science/guides-walkthrough/55-report-version-diff.webp)
 
 </PlatformContent>
 | 控制元件或狀態 | 處理 |
@@ -111,7 +111,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![另一版本已儲存，當前草稿被攔截](/img/open-science/local-todo-batch/37-file-save-conflict.png)
+![另一版本已儲存，當前草稿被攔截](/img/open-science/local-todo-batch/37-file-save-conflict.webp)
 
 </PlatformContent>
 儲存後確認最新修訂同時包含另一位寫入者的更改和你保留的草稿。透過版本控制元件仍可檢視先前檔案修訂；檔案修訂與對話訊息修訂是不同記錄。

@@ -23,13 +23,13 @@ Choisissez un thème confortable, définissez votre langage d'interface et recev
 
 <PlatformContent platform="macos">
 
-![Paramètres généraux d'apparence](/img/open-science/v0.27.0/07-general-appearance.png)
+![Paramètres généraux d'apparence](/img/open-science/v0.27.0/07-general-appearance.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-<Screenshot src="/img/open-science/windows/general-settings.png" alt="Contrôles des thèmes et des langues dans Windows Paramètres généraux" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.png" linkLabel="Ouvrir la capture d&#39;écran complète des paramètres généraux de Windows" />
+<Screenshot src="/img/open-science/windows/general-settings.webp" alt="Contrôles des thèmes et des langues dans Windows Paramètres généraux" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.webp" linkLabel="Ouvrir la capture d&#39;écran complète des paramètres généraux de Windows" />
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ Pour demander un rapport dans une autre langue, précisez-le dans votre conversa
 
 Le même rapport reste lisible à grande échelle. Utilisez la barre de défilement horizontale pour voir les colonnes à l'extérieur de la fenêtre de la table actuelle; l'échelle d'affichage modifie la vue, et non les données enregistrées.
 
-![Open-Science à l'échelle 125 pour cent avec une barre de défilement horizontale dans l'aperçu de la table](/img/open-science/windows/app-scale-125.png)
+![Open-Science à l'échelle 125 pour cent avec une barre de défilement horizontale dans l'aperçu de la table](/img/open-science/windows/app-scale-125.webp)
 
 </PlatformContent>
 
@@ -104,7 +104,7 @@ Si vous avez raté la bannière, trouvez l'alerte dans le centre de notification
 
 <PlatformContent platform="macos">
 
-![Alerte d'achèvement du système en anglais avec des détails de tâches cachés](/img/open-science/priority-completion/07-system-completion-notification.png)
+![Alerte d'achèvement du système en anglais avec des détails de tâches cachés](/img/open-science/priority-completion/07-system-completion-notification.webp)
 
 </PlatformContent>
 Éteignez **Show task content in system notifications** pour utiliser des alertes génériques. Choisir une alerte de fin de mandat ou d'approbation pour rouvrir sa conversation; répondre aux approbations à l'intérieur de l'application.
@@ -136,7 +136,7 @@ Avec **General → Close button behaviour → Ask every time**, fermer la fenêt
 | Tu veux... | Où aller |
 | --- | --- |
 | Vérifiez une mise à jour de l'application | **General → About → Check now**; suivre [Installation et mises à jour](installation.md#choose-a-reproducible-version-and-update-deliberately). |
-| Lire les modifications de version ou obtenir de l'aide | **About → Release notes / Help Center** ouvre la page externe correspondante. Ce wiki a aussi un [Changer de journal](../changelog/v0.30.1.md). |
+| Lire les modifications de version ou obtenir de l'aide | **About → Release notes / Help Center** ouvre la page externe correspondante. Ce wiki a aussi un [Changer de journal](../changelog/v0.30.2.md). |
 | Localiser ou ouvrir le journal de diagnostic | **General → Diagnostics → Reveal / Open**; voir [Dépannage](troubleshooting.md). Les journaux restent locaux jusqu'à ce que vous les partagez. |
 | Installez l'entrée en ligne de commande | **General → Install command**; voir [Référence CLI](../reference/cli.md). L'utilisation du bureau ne nécessite pas cette commande. |
 | Gérer l'emplacement des données ou les travaux archivés | [Stockage et travaux archivés](storage.md). |

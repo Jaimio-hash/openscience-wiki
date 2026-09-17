@@ -18,7 +18,7 @@ Laden Sie das öffentliche [psych::bfi CSV](https://vincentarelbundock.github.io
 
 In **Settings → Runtimes**, bestätigen R ist **Ready** und aktiviert. Der aufgezeichnete Durchlauf **R 4.4.3**, mit Base/empfohlen R Funktionen und keine zusätzliche Paketinstallation. Fügen Sie das CSV an eine Projektkonversation über **+ → Attach files** an.
 
-![Der öffentliche BFI-Datensatz, der einem Vergleich der gleichen Datenmethode beigefügt ist](/img/open-science/workflow-extensions/bfi-input.png)
+![Der öffentliche BFI-Datensatz, der einem Vergleich der gleichen Datenmethode beigefügt ist](/img/open-science/workflow-extensions/bfi-input.webp)
 
 ## 2. Beheben Sie die Vorverarbeitung, bevor Sie eine der beiden Methoden anpassen {/* #2-fix-the-preprocessing-before-fitting-either-method */}
 
@@ -48,7 +48,7 @@ Wenn eine methode stillschweigend eine andere gruppe von befragten verwendet, st
 
 Öffnen Sie **bfi-method-metrics.csv** von **Generated** oder **Files**. Die aufgezeichnete Datei enthält **metrische Zeilen 77**, einschließlich der Anzahl der Proben, des Fehlens, der PCA-Varianz, der FA-Einzigartigkeiten, der Passform, der Konvergenz, der Seed- und Eingabeidentität.
 
-![Gespeicherte numerische Metriken aus der gemeinsamen Vorverarbeitung und beiden angepassten Methoden](/img/open-science/workflow-extensions/bfi-metrics.png)
+![Gespeicherte numerische Metriken aus der gemeinsamen Vorverarbeitung und beiden angepassten Methoden](/img/open-science/workflow-extensions/bfi-metrics.webp)
 
 | Nicht gedrehte PCA-Komponente | Genormte Gesamtvarianz erklärt |
 | --- | --- |
@@ -65,7 +65,7 @@ Der FA-Optimierer konvergierte, aber die Wahrscheinlichkeits-Verhältnis-Statist
 
 Öffnen Sie **bfi-method-comparison.png**. Seine drei Panels zeigen unrotierte PCA-Varianz, varimax-rotierte PCA-Ladungen und varimax FA-Ladungen. Die genauen Ladewerte sind in **bfi-loadings.csv**, mit **250-Zeilen**: 25 Elemente × 5 Dimensionen × 2 Methoden.
 
-![Unrotierte PCA-Varianz und die beiden gedrehten Ladematrizen](/img/open-science/workflow-extensions/bfi-comparison-plot.png)
+![Unrotierte PCA-Varianz und die beiden gedrehten Ladematrizen](/img/open-science/workflow-extensions/bfi-comparison-plot.webp)
 
 Passen Sie "Spalte 1" nicht mechanisch über die Methoden hinweg an. Faktor/Komponenten-Reihenfolge und -Zeichen können sich ändern, ohne die Lösung zu ändern. Die Heatmaps verwenden Blau für negative und Rot für positive Belastungen; Artikelmuster und numerische Werte vergleichen.
 
@@ -75,7 +75,7 @@ PCA-Partitionen insgesamt beobachtete Varianz; FA-Modelle teilten Kovarianz mit 
 
 Öffnen Sie **bfi-method-report.md**. Prüfen Sie, ob die gleiche Probe und Vorverarbeitung, das fixierte Saatgut und der Unterschied zwischen Konvergenz und Passform gemeldet werden. Diese 1-6-Ordinalantworten werden als annähernd kontinuierlich behandelt; Eine vollständige Löschung kann sich ergeben, wenn die fehlenden Antworten oder Teilnehmermerkmale vorliegen.
 
-![Im Abschlussbericht werden die Beschränkungen für Vorverarbeitung, Saatgut, Varianz und Anpassung erfasst.](/img/open-science/workflow-extensions/bfi-report.png)
+![Im Abschlussbericht werden die Beschränkungen für Vorverarbeitung, Saatgut, Varianz und Anpassung erfasst.](/img/open-science/workflow-extensions/bfi-report.webp)
 
 Laden Sie <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.R">R Skript</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-loadings.csv">Beladungen</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-method-metrics.csv">Metriken</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.png">Abbildung</ExampleDownload> und <ExampleDownload path="/examples/workflow-extensions/bfi-method-report.md">Bericht</ExampleDownload> herunter. Setzen Sie das Skript und die heruntergeladene Eingabe in einen neuen Ordner, öffnen Sie dort ein Terminal und führen Sie aus:
 

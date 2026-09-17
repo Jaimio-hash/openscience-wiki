@@ -26,7 +26,7 @@ Konfigurieren Sie die Anmeldeinformationen in **Settings → Credentials** für 
 3. **Save key** speichert den eingegebenen Schlüssel und nimmt den Warteruf bei Erfolg wieder auf. **Not now** lässt das Credential unkonfiguriert.
 4. Lesen Sie den endgültigen Werkzeugstatus. Die Wahl von **Not now** kann **credential_required** zurückgeben; Konfigurieren Sie den Schlüssel vor dem erneuten Versuch.
 
-![OpenAlex Credential Request in der englischen App](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.jpg)
+![OpenAlex Credential Request in der englischen App](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.webp)
 
 Die Eingabeaufforderung besagt, dass der Schlüssel auf diesem Computer verschlüsselt ist und nur an `api.openalex.org` gesendet wird. In den Einstellungen bietet das OpenAlex-Formular auch **Validate**, **Save**, **Remove key**, wenn eines vorhanden ist, und **Cancel**. Ein Ersatzfeld zeigt den gespeicherten Schlüssel nicht an. Secure-Storage-Fehler erfordern das Auflösen des Schlüsselbundzustands des Systems, bevor Geheimnisse gespeichert werden.
 
@@ -49,7 +49,7 @@ Erstellen Sie hier den Berechtigungsnachweis und wählen Sie dann seinen Namen i
 | Entdeckung | Falls zutreffend, Server-Metadaten entdecken; Dies ist keine erfolgreiche Anmeldung an sich. |
 | Stornieren / Speichern | Verwerfen Sie den Entwurf oder speichern Sie eine gültige Anmeldekonfiguration. |
 
-![OAuth erweiterte Registrierungsfelder](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.png)
+![OAuth erweiterte Registrierungsfelder](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.webp)
 
 Binden Sie in einem benutzerdefinierten Connector den Berechtigungsnachweis an einen Header, eine Umgebungsvariable oder einen OAuth-Selektor. Der Name ist die Referenz; Platzieren Sie keine geheimen Werte in Beschreibungen oder Projektanweisungen. Exportierte tragbare Konfigurationen ersetzen Geheimnisse durch Platzhalter. Ein gespeicherter Nachweis benötigt noch einen tatsächlichen Service / Connector-Test, um festzustellen, dass er funktioniert.
 

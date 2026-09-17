@@ -49,13 +49,13 @@ Choose the intended model, leave **Ask for approval** enabled, and select **Send
 
 When **Save to Literature Inbox?** appears, review the operation and authorize the intended save. Saving candidates is distinct from accepting them into your library.
 
-![Permission to stage literature candidates](/img/open-science/prisma-walkthrough/03-inbox-save-approval.png)
+![Permission to stage literature candidates](/img/open-science/prisma-walkthrough/03-inbox-save-approval.webp)
 
 ## 2. Review each candidate before accepting
 
 Open **Library → Inbox**. In this run the badge showed **3**, and each row displayed a title, first authors, publication year and **Found via crossref**.
 
-![Three real PRISMA papers awaiting review](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![Three real PRISMA papers awaiting review](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 1. Select the candidate title to open its details.
 2. Check **Provider**, its source link, and **Identifiers → DOI** against the intended paper.
@@ -63,7 +63,7 @@ Open **Library → Inbox**. In this run the badge showed **3**, and each row dis
 4. Select **Accept** when the identity matches. The candidate disappears from Inbox and becomes a library record.
 5. Repeat for the other two. The badge changed from 3 to 2 to 1; the final state was **Inbox is clear**.
 
-![A candidate's Crossref source and exact DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.png)
+![A candidate's Crossref source and exact DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.webp)
 
 | Inbox control | Outcome | When to use it |
 | --- | --- | --- |
@@ -81,25 +81,25 @@ Create a collection with the sidebar **New collection** control:
 - **Description:** state that it contains updated and historical reporting guidance. The description is organizational text, not agent instructions.
 - Select **Create collection**; Name is required, while Description is optional. **Cancel** and **Close** discard the draft.
 
-![A purpose-specific reading collection](/img/open-science/prisma-walkthrough/06-create-collection.png)
+![A purpose-specific reading collection](/img/open-science/prisma-walkthrough/06-create-collection.webp)
 
 In **All references**, search `PRISMA`. Confirm exactly the three intended records are visible, select their checkboxes, and use **Add to collection → PRISMA reporting - Core reading**. The operation clears the selection. Select the three records again, then use **Add to project → PRISMA - Systematic review reading pack**.
 
 Open the collection and check its three records. Open a reference detail to confirm both the project and collection checkboxes are selected. These are links to shared records, not three additional copies of the bibliography.
 
-![The completed three-paper collection](/img/open-science/prisma-walkthrough/07-core-reading-collection.png)
+![The completed three-paper collection](/img/open-science/prisma-walkthrough/07-core-reading-collection.webp)
 
 ## 4. Attach usable full text
 
 Open the 2021 paper and select **Find full-text PDF**. The lookup returned Europe PMC in this run. Inspect **Open source** before selecting **Add attachment**.
 
-![A discovered full-text source](/img/open-science/prisma-walkthrough/08-full-text-source.png)
+![A discovered full-text source](/img/open-science/prisma-walkthrough/08-full-text-source.webp)
 
 The source was discoverable, but **Add attachment** returned **PDF could not be added**. The message lists possible causes including sign-in requirements, expired links and the 50 MB limit; it does not identify which cause occurred here.
 
 To recover, download the openly available PDF from the [publisher article page](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003583). Return to the same reference and use **Add PDF**. Select the downloaded file, then open **Preview prisma-2020-statement.pdf** under Attachments. The successfully attached file showed **806.1 KB** and a **15-page** preview. Check the title and DOI on page one against the record.
 
-![Publisher PDF successfully attached and opened](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![Publisher PDF successfully attached and opened](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 A visible source result is not an attached PDF. An attached PDF is not proof that the agent read it. **Read with agent** is a separate action that supplies reading context for a subsequent request.
 

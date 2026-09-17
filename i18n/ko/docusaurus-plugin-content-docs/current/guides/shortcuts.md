@@ -45,12 +45,12 @@ import Screenshot from '@site/src/components/Screenshot';
 Windows 데스크톱 앱에서 **Ctrl + Z를**을 사용하여 통일 또는 **Ctrl + 시프트 + Z**를 재사용하기 전에 Composer 초안을 클릭하십시오. 계속 또는 전송하기 전에 결과 텍스트를 확인합니다. **탭 / Shift+Tab**을 사용할 때, 아래의 첨부 파일 버튼과 같은 집중 제어의 개요를 찾습니다. 패널을 열거나 통제의 국가를 바꾸기 후에 다시 초점을 확인하십시오; keypresses의 고정 번호에 의존하지 마십시오.
 
 <Screenshot
-  src="/img/open-science/windows/keyboard-attachment-focus.png"
+  src="/img/open-science/windows/keyboard-attachment-focus.webp"
   alt="연결 단추에는 Windows Composer에 있는 눈에 보이는 키보드 초점 윤곽이 있습니다"
   width={1916}
   height={1014}
   windowBounds={[215, 850, 920, 150]}
-  href="/docs/img/open-science/windows/keyboard-attachment-focus.png"
+  href="/docs/img/open-science/windows/keyboard-attachment-focus.webp"
   linkLabel="완벽한 Windows 스크린 샷을 열고 첨부 파일 버튼 초점"
 />
 

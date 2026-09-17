@@ -37,7 +37,7 @@ Download the complete <ExampleDownload path="/examples/gse60450/rnaseq-sample-qc
 
 > Delegate to RNA-seq QC Reviewer. Use only the complete inline CSV below. Execute the arithmetic in Python, verify twelve distinct full sample identifiers, and check zero_count_genes + detected_genes_count_gt_0 = 27179 for every row. Return each result and state that this checks supplied summary data, not independent access to the original count matrix.
 
-![The completed Specialist subtask with per-sample checks](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.jpg)
+![The completed Specialist subtask with per-sample checks](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.webp)
 
 In this example, the child ran a Python Notebook and returned **12 rows, 12 distinct non-missing identifiers, and 12/12 sums equal to 27,179**. For the first full sample ID, `8,664 + 18,515 = 27,179`. Numeric fields were complete and nonnegative.
 

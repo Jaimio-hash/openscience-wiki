@@ -26,7 +26,7 @@ Configure credenciales en **Settings → Credentials** para el servicio que real
 3. **Save key** almacena la llave entrada y retoma la llamada de espera cuando tenga éxito. **Not now** deja el credencial inconfigurado.
 4. Lea el estado final de la herramienta. Elegir **Not now** puede devolver **credential_required**; configure la clave antes de reintentar.
 
-![Solicitud credencial OpenAlex en la aplicación Inglés](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.jpg)
+![Solicitud credencial OpenAlex en la aplicación Inglés](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.webp)
 
 El aviso indica que la clave está encriptada en este ordenador y enviada sólo a `api.openalex.org`. En Ajustes, el formulario OpenAlex también ofrece **Validate**, **Save**, **Remove key** cuando existe, y **Cancel**. Un campo de reemplazo no revela la llave almacenada. Los errores de almacenamiento seguro requieren resolver el estado de llavero del sistema antes de guardar secretos.
 
@@ -49,7 +49,7 @@ Cree la credencial aquí, luego seleccione su nombre en el [Configuración del c
 | Discovery | Cuando sea aplicable, descubra metadatos del servidor; Esto no es un exitoso signo por sí mismo. |
 | Cancelar / Guardar | Descarte el borrador o almacene una configuración creíble válida. |
 
-![Campos avanzados de registro OAuth](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.png)
+![Campos avanzados de registro OAuth](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.webp)
 
 En un Connector personalizado, une la credencial a un encabezado, variable de entorno o selector OAuth. El nombre es la referencia; no colocar valores secretos en descripciones o instrucciones del proyecto. Las configuraciones portables exportadas reemplazan secretos con titulares de puestos. Una credencial salvada todavía necesita una prueba de servicio/Connector real para establecer que funciona.
 

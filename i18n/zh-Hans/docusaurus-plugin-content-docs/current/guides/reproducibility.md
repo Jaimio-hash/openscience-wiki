@@ -2,7 +2,7 @@
 title: 可复现性
 description: 根据捕获的研究步骤重新运行、比较保存结果，并保留验证记录。
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # 可复现性
@@ -48,7 +48,7 @@ last_update:
 
 下图使用 Notebook 根据 [GSE60450 样本质控表](../reference/example-data.md)生成汇总结果。打开文件的 **Provenance → Reproducibility**，查看捕获的输入和执行记录。图中的 **Not verified yet** 和 **Unavailable** 表示缺少精确环境锁。打开 **View details** 后，按[环境准备步骤](#prepare-environment)生成新版本。该状态不代表复现成功。
 
-![已保存的质控汇总表及 Reproducibility 面板，显示捕获证据和暂不可用的检查](/img/open-science/feature-guides-2026-09/reproducibility-evidence.png)
+![已保存的质控汇总表及 Reproducibility 面板，显示捕获证据和暂不可用的检查](/img/open-science/feature-guides-2026-09/reproducibility-evidence.webp)
 
 ## 运行复现检查
 
@@ -82,6 +82,8 @@ last_update:
 ## 检查无法完成时
 
 先查看 **Areas needing attention** 和日志中的首条相关错误。输入缺失、证据不完整或操作不受支持都可能阻止验证。大型 RDS/H5AD 文件不会载入进行内容比较；没有比较结果不能认定输出一致。
+
+v0.30.2 修复了同一轮中先前生成输入的重放、受支持的 Python 标准库导入，以及 Windows 验证环境中的 pip 入口。旧版若在这些步骤停止，可更新后对同一份已捕获结果重试，再检查新日志和比较结果。这些修复不会补出缺失的环境锁，也不代表所有历史运行均可重放。
 
 若准备过程依赖之前的 Notebook 状态，查看[执行证据](notebook.md)，重新运行必要准备步骤，再生成新结果。保留已停止或未完成检查的实际状态。
 

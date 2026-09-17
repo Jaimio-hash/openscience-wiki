@@ -28,7 +28,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 4. データセットのサイズを推定する前に表示される範囲を読んで下さい。 プレビューがバインドされたときにフルファイル計算を使用します。
 5. [共有QCのベースライン](../reference/example-data.md#sample-qc-baseline) でサンプル値を比較します。
 
-![完全な識別子および数字のコラムが付いているサンプルQCのテーブル](/img/open-science/capabilities-walkthrough/32-csv-preview.jpg)
+![完全な識別子および数字のコラムが付いているサンプルQCのテーブル](/img/open-science/capabilities-walkthrough/32-csv-preview.webp)
 
 <ToolOperationGroup>
 <summary>QCのテーブル:コラムの意味</summary>

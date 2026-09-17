@@ -41,9 +41,9 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 | **Cancel** | 离开，不注册表单中的主机 |
 | **Add** | 提交有效连接；密码模式必须通过连接测试才添加主机 |
 
-![英文 SSH 配置覆盖字段](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.png)
+![英文 SSH 配置覆盖字段](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.webp)
 
-![真实表单中的密码认证和 Slurm 模式](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.png)
+![真实表单中的密码认证和 Slurm 模式](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.webp)
 
 密码模式依赖应用的密码认证和安全存储能力。不可用时，请查看表单显示的原因。凭据只填入对应字段，不要写进主机说明或代理请求。
 
@@ -59,7 +59,7 @@ SSH 配置模式会先创建记录、打开详情，再在后台探测。因此�
 
 英文截图显示密码认证与探测成功：256 个 CPU、504 GB 内存、一张 NVIDIA A100 80GB PCIe，并检测到 Slurm 调度器。**Configured mode** 仍是 **Direct SSH**，需要手动更改才会使用 Slurm。这些是示例服务器的登录主机资源，不是最低要求，也不代表作业已获调度分配。截图已遮盖主机和账号标识。
 
-![密码认证成功与主机资源探测](/img/open-science/remote-compute/03-host-probe.png)
+![密码认证成功与主机资源探测](/img/open-science/remote-compute/03-host-probe.webp)
 
 ## 检查和维护主机详情
 
@@ -133,9 +133,9 @@ Slurm 场景需要向集群负责人确认账号／分区、资源申请、时�
 
 出现 **success** 和退出码 **0** 后，确认应用回收两个输出，且保存表格与报告可以重开。按完整样本标识与[公共基准](../reference/example-data.md)比较指标，并核对远程计算前后的输入校验值。该 Direct SSH 示例已通过这些检查。
 
-![Direct SSH 作业完成、作业 ID 与远程目录](/img/open-science/remote-compute/05-direct-job-completed.png)
+![Direct SSH 作业完成、作业 ID 与远程目录](/img/open-science/remote-compute/05-direct-job-completed.webp)
 
-![重新打开远程 RNA-seq QC 表，显示十二个样本](/img/open-science/remote-compute/06-remote-qc-table.png)
+![重新打开远程 RNA-seq QC 表，显示十二个样本](/img/open-science/remote-compute/06-remote-qc-table.webp)
 
 下载示例<a href="/docs/examples/gse60450/remote-rnaseq-qc.csv" download>质控表</a>和<a href="/docs/examples/gse60450/remote-rnaseq-qc-report.md" download>方法报告</a>。这些原始计数检查不替代归一化、实验设计审查或差异表达分析；正计数中位数不包括零值。
 
@@ -145,7 +145,7 @@ Slurm 场景需要向集群负责人确认账号／分区、资源申请、时�
 
 下图的独立准备检查点在本地应用重启时仍在运行。应用恢复了同一作业 ID，随后收集到完成日志。等待过程正常结束；这张截图验证恢复能力，不表示取消成功，也不表示完成了科学计算。
 
-![应用重启后恢复同一个准备任务](/img/open-science/remote-compute/07-job-recovered-after-restart.png)
+![应用重启后恢复同一个准备任务](/img/open-science/remote-compute/07-job-recovered-after-restart.webp)
 
 ### 取消指定的远程任务
 
@@ -153,7 +153,7 @@ Slurm 场景需要向集群负责人确认账号／分区、资源申请、时�
 
 下图的准备检查点通过此控件取消，之后独立确认远程进程已不存在，已有日志仍可读取。取消成功不表示该分析已产生完整结果，使用保留文件前应检查内容。
 
-![所选准备任务已确认取消](/img/open-science/remote-compute/09-job-cancelled.png)
+![所选准备任务已确认取消](/img/open-science/remote-compute/09-job-cancelled.webp)
 
 
 </ToolOperationGroup>
@@ -177,7 +177,7 @@ Slurm 场景需要向集群负责人确认账号／分区、资源申请、时�
 5. 对照申请资源与实际分配。本例每任务申请一个 CPU 和 1 GiB，Slurm 记录一个任务、实际分配两个逻辑 CPU。解释资源使用时，应以实际分配记录为准。
 6. 确认终态并完成文件回收后，再发布结果。服务器上出现输出文件，不代表应用已经回收该文件。
 
-![在主机执行模式中明确选择 Slurm](/img/open-science/remote-compute/10-slurm-execution-mode.png)
+![在主机执行模式中明确选择 Slurm](/img/open-science/remote-compute/10-slurm-execution-mode.webp)
 
 ### 服务器已完成，但应用仍在等待
 
@@ -189,7 +189,7 @@ slurm_poll_failed: Slurm accounting storage is disabled
 
 调度器显示 **COMPLETED / ExitCode 0:0**，但应用仍为 **submitted**、**result_final false** 或没有已回收文件时，保留两个作业 ID 并检查轮询错误。调度器完成和应用结果回收是两个阶段。
 
-![Slurm 负载已完成，应用仍等待终态确认](/img/open-science/remote-compute/11-slurm-accounting-unavailable.png)
+![Slurm 负载已完成，应用仍等待终态确认](/img/open-science/remote-compute/11-slurm-accounting-unavailable.webp)
 
 请集群管理员提供该账号与作业可用的 `sacct` 记账查询。`squeue` 不再列出任务，并不足以证明成功。修复期间保留原工作目录与作业 ID，恢复后检查同一个任务；不要为了清除监控错误而重跑已经完成的分析。Slurm 取消、恢复和应用结果回收，仍需在这一环境条件解决后验证。
 

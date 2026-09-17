@@ -36,7 +36,7 @@ Save both files locally and note their full paths. The server uses Python's stan
 
 <PlatformContent platform="macos">
 
-![Actual local MCP configuration](/img/open-science/capabilities-walkthrough/08-mcp-local-config.jpg)
+![Actual local MCP configuration](/img/open-science/capabilities-walkthrough/08-mcp-local-config.webp)
 
 </PlatformContent>
 
@@ -90,7 +90,7 @@ In this example, the native application returned **23,227,641 total counts, 8,66
 
 <PlatformContent platform="macos">
 
-![The custom Connector connected successfully](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![The custom Connector connected successfully](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 </PlatformContent>
 
@@ -98,7 +98,7 @@ In this example, the native application returned **23,227,641 total counts, 8,66
 
 Open the Notebook activity for both tool calls, then reopen the saved JSON and compare its sample IDs and metrics with the CSV. The Windows run below uses the connector ID `gse60450-qc-win`; use your own configured ID in the request.
 
-![Windows local MCP calls with saved JSON and Notebook output](/img/open-science/windows/mcp-tool-results.png)
+![Windows local MCP calls with saved JSON and Notebook output](/img/open-science/windows/mcp-tool-results.webp)
 
 </PlatformContent>
 

@@ -2,7 +2,7 @@
 title: "再現性"
 description: "収集した研究の手順を再実行し、保存された結果を比較し、検証記録を保持します。"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # 再現性 {/* #reproducibility */}
@@ -48,7 +48,7 @@ last_update:
 
 [GSE60450サンプルQCテーブル](../reference/example-data.md) から Notebook で生成されたサマリーが表示されます。 ファイルの **Provenance → Reproducibility** タブを開き、キャプチャされた入力と実行を検査します。 ここでは、**Not verified yet**と**Unavailable**は、正確な環境ロックが欠落していることを示しています。 **View details** を使用して、[環境準備のステップ](#prepare-environment) に従って新しいバージョンを作成します。 この画面は、結果の再現に成功したことを示すものではありません。
 
-![保存されたQCの要約およびその再現性パネル、捕獲された証拠および利用できなくなった点検を示す](/img/open-science/feature-guides-2026-09/reproducibility-evidence.png)
+![保存されたQCの要約およびその再現性パネル、捕獲された証拠および利用できなくなった点検を示す](/img/open-science/feature-guides-2026-09/reproducibility-evidence.webp)
 
 ## チェックを実行する {/* #run-a-check */}
 
@@ -82,6 +82,8 @@ last_update:
 ## チェックが終了することができないとき {/* #when-a-check-cannot-finish */}
 
 **Areas needing attention** と最初の関連するログメッセージのインスペクト。 入力、不完全な証拠、またはサポートされていない操作を見逃すことは、検証を防ぐことができます。 大きいRDS/H5ADは内容比較のために荷を積まれません; 比較の不在は一致を確立しません。
+
+v0.30.2は、同じターンで作成された入力の再生を修正し、Python標準ライブラリのインポートをサポートし、Windows検証環境のピップエントリ ポイント. 古いバージョンがこれらのステップの1つで停止した場合、同じキャプチャされた結果を更新し、再試行し、新しいログと比較を調べます。 これらの修正は、不足している環境ロックを供給しないか、すべての履歴実行再生可能にする。
 
 準備が以前のNotebook状態に依存している場合は、[実行証拠](notebook.md)を調べて、新しい結果を生成する前に必要な準備を再実行します。 完了した比較から、停止または不完全なチェックを区別します。
 

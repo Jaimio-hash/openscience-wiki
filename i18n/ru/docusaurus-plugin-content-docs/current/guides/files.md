@@ -38,7 +38,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 Для существующей папки откройте **Files**, выберите выпадающий **Artifacts**, затем **This computer → Add folder…**. В диалоге **Grant folder access** приложения выберите конкретную подпапку и **Read-only**, а затем **Grant this folder**. Корень профиля пользователя может быть недоступен; Вместо этого выберите подпапку исследования. Прочитайте любое подтверждение воздействия ядра Notebook. При возврате в Файлы проверьте выбранную папку и ее файлы.
 
-<Screenshot src="/img/open-science/windows/granted-folder-files.png" alt="Предоставленная папка Windows с публичным сценарием и CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.png" linkLabel="Откройте полный скриншот Windows" />
+<Screenshot src="/img/open-science/windows/granted-folder-files.webp" alt="Предоставленная папка Windows с публичным сценарием и CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.webp" linkLabel="Откройте полный скриншот Windows" />
 
 В диалоге Windows **Attach files** выберите файл из пути, содержащего китайские символы или пробелы, или введите его полный путь в поле **File name** и откройте его. Вернитесь в приложение, проверьте имя вложения и предварительно просмотрите размеры и содержимое таблицы. Чтобы отказаться от выбора, выберите **Cancel** и проверьте, не было ли добавлено новое приложение к проекту.
 
@@ -55,7 +55,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Отфильтрованный реальный результат RNA-seq в файловой библиотеке](/img/open-science/guides-walkthrough/56-files-search.png)
+![Отфильтрованный реальный результат RNA-seq в файловой библиотеке](/img/open-science/guides-walkthrough/56-files-search.webp)
 
 </PlatformContent>
 График описывает текущий фильтр. Поиск без совпадений не удаляет файлы. **No more** означает, что группа завершила загрузку. Уничтожить группу по ее направлению. Используйте действие предварительного просмотра файлового тела для модала или **Открытый ... в разделенном виде рядом с сессией**, чтобы сохранить разговор рядом с ним. Загрузка действует на файл/версию, выбранную этой поверхностью.
@@ -85,7 +85,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Отчет v2 по сравнению с его первоначальной версией](/img/open-science/guides-walkthrough/55-report-version-diff.png)
+![Отчет v2 по сравнению с его первоначальной версией](/img/open-science/guides-walkthrough/55-report-version-diff.webp)
 
 </PlatformContent>
 | Редактирование контроля / состояния | Что делать |
@@ -111,7 +111,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Сохранение заблокировано, потому что существует другая версия.](/img/open-science/local-todo-batch/37-file-save-conflict.png)
+![Сохранение заблокировано, потому что существует другая версия.](/img/open-science/local-todo-batch/37-file-save-conflict.webp)
 
 </PlatformContent>
 После сохранения подтвердите, что последняя редакция содержит как изменение другого автора, так и ваш сохраненный черновик. Предыдущие изменения файлов остаются доступными через элементы управления версиями; Они отделены от переписок разговорных сообщений.

@@ -18,7 +18,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 В **Settings → Runtimes** подтвердите, что R является **Ready** и включен. Записанный запуск использовал **R 4.4.3**, с базовыми/рекомендованными функциями R и без дополнительной установки пакета. Прикрепите CSV к разговору о проекте через **+ → Attach files**.
 
-![Публичный набор данных bfi, прикрепленный к методу сравнения одних и тех же данных](/img/open-science/workflow-extensions/bfi-input.png)
+![Публичный набор данных bfi, прикрепленный к методу сравнения одних и тех же данных](/img/open-science/workflow-extensions/bfi-input.webp)
 
 ## 2. Исправьте предварительную обработку перед установкой любого способа {/* #2-fix-the-preprocessing-before-fitting-either-method */}
 
@@ -48,7 +48,7 @@ Use English and do not install packages or delegate.
 
 Откройте **bfi-method-metrics.csv** от **Generated** или **Files**. Записанный файл содержит **Метрические строки 77**, включая количество выборок, пропущенность, дисперсию PCA, уникальность FA, соответствие, конвергенцию, семенную и входную идентичность.
 
-![Сохранение числовых метрик из общей предварительной обработки и обоих установленных методов](/img/open-science/workflow-extensions/bfi-metrics.png)
+![Сохранение числовых метрик из общей предварительной обработки и обоих установленных методов](/img/open-science/workflow-extensions/bfi-metrics.webp)
 
 | Неповторяющийся компонент PCA | Общая стандартизированная дисперсия объясняется |
 | --- | --- |
@@ -65,7 +65,7 @@ Use English and do not install packages or delegate.
 
 Открыть **bfi-method-comparison.png**. Его три панели показывают невращенную дисперсию PCA, варимакс-вращенные нагрузки PCA и варимакс FA. Точные значения загрузки находятся в **bfi-loadings.csv**, с **250 строки**: 25 элементы × 5 размеры × 2 методы.
 
-![Невращенная дисперсия PCA и две вращающиеся матрицы загрузки](/img/open-science/workflow-extensions/bfi-comparison-plot.png)
+![Невращенная дисперсия PCA и две вращающиеся матрицы загрузки](/img/open-science/workflow-extensions/bfi-comparison-plot.webp)
 
 Не сопоставляйте «колонну 1» механически по всем методам. Фактор/компонентный порядок и знаки могут изменяться без изменения решения. тепловые карты используют синий для отрицательных и красный для положительных нагрузок; Сравните паттерны элементов и числовые значения.
 
@@ -75,7 +75,7 @@ Use English and do not install packages or delegate.
 
 Открыть **bfi-method-report.md**. Убедитесь, что он сообщает об одном и том же образце и предварительной обработке, фиксированном семени и разнице между конвергенцией и подгонкой. Эти порядковые ответы 1-6 рассматриваются как приблизительно непрерывные. Удаление полного дела может привести к искажению результатов, когда пропущенность связана с ответами или характеристиками участника.
 
-![В окончательном докладе приводятся данные о предварительной обработке, семенах, дисперсии и ограничениях по пригодности.](/img/open-science/workflow-extensions/bfi-report.png)
+![В окончательном докладе приводятся данные о предварительной обработке, семенах, дисперсии и ограничениях по пригодности.](/img/open-science/workflow-extensions/bfi-report.webp)
 
 Скачать <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.R">Скрипт R</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-loadings.csv">погрузка</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-method-metrics.csv">метрики</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.png">фигура</ExampleDownload> и <ExampleDownload path="/examples/workflow-extensions/bfi-method-report.md">доклад</ExampleDownload>. Поместите сценарий и загруженный вход в свежую папку, откройте там терминал и запустите:
 

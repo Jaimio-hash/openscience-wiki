@@ -2,7 +2,7 @@
 title: "재현성"
 description: "Rerun 캡처 된 연구 단계, 저장된 결과를 비교하고 검증 기록을 유지합니다."
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # 재현성 {/* #reproducibility */}
@@ -48,7 +48,7 @@ last_update:
 
 스크린 샷은 [GSE60450 샘플 QC 테이블](../reference/example-data.md)에서 Notebook에서 생성 된 요약을 보여줍니다. 파일의 **Provenance → Reproducibility** 탭을 열고 캡처 입력 및 실행을 검사합니다. 여기에서 **Not verified yet** 및 **Unavailable**는 정확한 환경 자물쇠가 누락된다는 것을 나타냅니다. **View details**을 사용하여 [환경 준비 단계](#prepare-environment)을 따라 새로운 버전을 만듭니다. 이 화면은 결과 재현에 성공했음을 보여 주는 화면이 아닙니다.
 
-![저장된 QC 요약과 그 Reproducibility 패널은, 붙잡힌 증거 및 unavailable 체크를 보여주었습니다](/img/open-science/feature-guides-2026-09/reproducibility-evidence.png)
+![저장된 QC 요약과 그 Reproducibility 패널은, 붙잡힌 증거 및 unavailable 체크를 보여주었습니다](/img/open-science/feature-guides-2026-09/reproducibility-evidence.webp)
 
 ## 자주 묻는 질문 {/* #run-a-check */}
 
@@ -82,6 +82,8 @@ last_update:
 ## 체크가 완료될 수 없을 때 {/* #when-a-check-cannot-finish */}
 
 Inspect **Areas needing attention** 및 첫 번째 관련 로그 메시지. 입력, 불완전한 증거 또는 지원되지 않는 가동은 검증을 방지할 수 있습니다. 큰 RDS/H5AD 파일은 내용 비교를 위해 적재되지 않습니다; 비교의 부재는 일치하지 않습니다.
+
+v0.30.2는 동일한 회전과 지원된 Python 표준 리브 가져 오기, Windows 검증 환경 핍 항목 포인트 플러스 입력의 재생을 수정합니다. 이전 버전이 이러한 단계 중 하나에서 중지되면 업데이트 및 동일한 캡처 된 결과를 다시 복원 한 다음 새로운 로그와 비교를 검사합니다. 이 수정은 누락된 환경 자물쇠를 공급하지 않거나 모든 역사적인 실행 재생할 수 없습니다.
 
 준비가 이전 Notebook 상태에 따라 [실행 증거](notebook.md)을 검사하고 새로운 결과를 생성하기 전에 필요한 준비를 다시 실행하십시오. 완료된 비교에서 멈출 수 없거나 불완전한 검사.
 

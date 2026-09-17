@@ -23,7 +23,7 @@ Pour l'exécution GSE60450 terminée, nous avons utilisé **Edit…** pour enreg
 | Enregistrer | Persistez les changements | Vérifiez le titre de la barre latérale après la fermeture |
 | Annuler / Fermer | Laisser sans appliquer le projet | Cela n'annule pas la recherche |
 
-![Titre de la session et éditeur de description](/img/open-science/guides-walkthrough/40-session-edit.png)
+![Titre de la session et éditeur de description](/img/open-science/guides-walkthrough/40-session-edit.webp)
 
 Choisissez **Pin** dans le menu ligne pour garder la session dans le groupe Pinned. **Unpin** le renvoie à la liste ordinaire. Pinning organise l'accès; il ne maintient pas un noyau en vie ou ne protège pas une session contre la suppression.
 
@@ -35,7 +35,7 @@ Utilisez [signets de lecture privés](bookmarks.md) pour enregistrer un passage 
 
 ## Lire correctement le menu de session {/* #read-the-session-menu-correctly */}
 
-![Actions appartenant à la session RNA-seq](/img/open-science/guides-walkthrough/41-session-actions.png)
+![Actions appartenant à la session RNA-seq](/img/open-science/guides-walkthrough/41-session-actions.webp)
 
 | Décision | Résultat | Vérifier |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ Supposons que vous vouliez discuter de l'annotation de l'échantillon en aval to
 4. Renommer en `GSE60450 - follow-up interpretation` avec **Edit…**.
 5. Inspectez la transcription héritée avant de soumettre la demande suivante. Référencez les artefacts originaux du projet explicitement au besoin.
 
-![Une branche nommée indépendamment à côté de l'original épinglé](/img/open-science/guides-walkthrough/57-session-branch.png)
+![Une branche nommée indépendamment à côté de l'original épinglé](/img/open-science/guides-walkthrough/57-session-branch.webp)
 
 Une branche conserve l'historique de conversation sélectionné, mais elle ne recrée pas le noyau en direct original. Pour une activité copiée portant le nom de **code shown** ou un lien historique bloqué, ouvrez l'artefact original du panneau Fichiers du projet et inspectez sa session de production.
 
@@ -76,7 +76,7 @@ Pour cet exemple de QC, choisissez **Edit message** sur la question remplie, rem
 
 Le même chemin de révision a également été exercé avec OpenCode et un modèle local: la requête révisée a produit la nouvelle phrase, Précédent a restauré la réponse originale, et Suivant a restauré la réponse révisée. Cet exemple de connexion seulement n'établit pas que l'état de l'outil ou les effets secondaires externes sont inversés.
 
-![Contrôles de commutation des révisions des messages historiques](/img/open-science/local-todo-batch/18-message-revision.png)
+![Contrôles de commutation des révisions des messages historiques](/img/open-science/local-todo-batch/18-message-revision.webp)
 
 **Cancel** quitte sans soumettre l'édition. **Send** demande une nouvelle réponse; Vérifiez avant de continuer. Utilisez un suivi pour corriger la prochaine action ou une succursale pour une enquête nommée séparément.
 
@@ -99,7 +99,7 @@ Choisissez **Export → Export conversation…** dans le menu de la ligne de ses
 
 <p className="example-label"><strong>Exemple pratique</strong> Exporter seulement les définitions finales de GSE60450 QC tourner</p>
 
-![Sélection du virage final des définitions de QC pour l'exportation de PDF](/img/open-science/local-todo-batch/20-selected-conversation-export.png)
+![Sélection du virage final des définitions de QC pour l'exportation de PDF](/img/open-science/local-todo-batch/20-selected-conversation-export.webp)
 
 Dans **GSE60450 — Methods and claim audit**, la sélection du tour final a produit un PDF d'une page contenant seulement cette requête et ses quatre définitions métriques. Les discussions précédentes étaient absentes. La conversation entière PDF a également été rouverte et vérifiée. L'exportation précédente de Markdown a commencé par son suivi sélectionné. Un tour peut contenir plusieurs messages d'assistant, de sorte que la sélection d'un tour n'a pas besoin d'exporter exactement deux messages.
 
@@ -109,13 +109,13 @@ L'exportation de conversation ne remplace pas le téléchargement de fichiers de
 
 Choisissez **Download all artifacts**, sélectionnez les fichiers, choisissez **Télécharger les artefacts N** et choisissez un dossier de destination. Cette entrée enregistre des fichiers séparés. Les deux méthodes téléchargées et les fichiers de Markdown d'audit de réclamation ont été rouverts et correspondent à leur octet d'artefacts sauvegardés pour octet.
 
-![Sélection des deux rapports enregistrés dans la session](/img/open-science/local-todo-batch/21-session-artifact-selection.png)
+![Sélection des deux rapports enregistrés dans la session](/img/open-science/local-todo-batch/21-session-artifact-selection.webp)
 
 ### Télécharger un paquet de fichiers de projet {/* #download-a-project-file-bundle */}
 
 Ouvrez le menu nom du projet en haut à gauche → **Download artifacts…**. Les fichiers sont regroupés sous **Generated** et **Uploads**. Tous sont initialement sélectionnés; Utilisez **Uncheck all**, choisissez les fichiers à remettre et enregistrez le ZIP.
 
-![Sélection des rapports, du tableau QC et de l'entrée originale du compte du projet](/img/open-science/local-todo-batch/22-project-artifact-selection.png)
+![Sélection des rapports, du tableau QC et de l'entrée originale du compte du projet](/img/open-science/local-todo-batch/22-project-artifact-selection.webp)
 
 Choisissez **Cancel** dans la boîte de dialogue de sauvegarde du système pour abandonner cette sauvegarde; votre sélection de fichiers reste disponible. Une fois l'écriture commencée, l'application désactive l'annulation et la fermeture. Attendez le résultat; annuler la boîte de dialogue de destination est différent d'arrêter une écriture en cours.
 

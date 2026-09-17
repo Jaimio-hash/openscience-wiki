@@ -43,7 +43,7 @@ Do not perform differential-expression testing or delegate.
 
 Klicken Sie vor dem Senden auf den Anhang, um die Kopfzeile zu überprüfen: zwei Metadatenspalten gefolgt von zwölf Beispielspalten. Die Textvorschau lädt nur einen Teil einer großen Datei; Der Notebook muss die gesamte Matrix lesen. Dieser Lauf schickte die Berechnung direkt. Wenn Sie sich zuerst auf einen Plan einigen möchten, verwenden Sie den separaten [Planung](../guides/planning.md)-Flow.
 
-![Die tatsächliche angehängte Matrix und ihre Spaltendefinitionen](/img/open-science/research-workflows/rnaseq-qc-input.png)
+![Die tatsächliche angehängte Matrix und ihre Spaltendefinitionen](/img/open-science/research-workflows/rnaseq-qc-input.webp)
 
 ## 2. Metadaten aus Stichprobenberechnungen heraushalten {/* #2-keep-metadata-out-of-sample-calculations */}
 
@@ -59,7 +59,7 @@ Lesen Sie die Python-Berechtigungsanforderung, einschließlich der Eingabedatei 
 
 Wenn die Eingabe-Versions-ID nicht aufgelöst werden kann, bitten Sie den Agenten, die Eingabe aus der Anlage dieser Konversation zu verwenden und erneut zu versuchen. Dieser Lauf nutzte diese Erholung. Behandeln Sie den fehlgeschlagenen Versuch nicht als abgeschlossene Berechnung oder ersetzen Sie stillschweigend eine andere Datei.
 
-![Erfolgreiche Notebook-Ausgabe mit Dimensionen, Hashes und berechneten Beispielmetriken](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.png)
+![Erfolgreiche Notebook-Ausgabe mit Dimensionen, Hashes und berechneten Beispielmetriken](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.webp)
 
 Die abgeschlossene Wiederholung validiert **27,179-Genreihen und 12-Probenspalten** ohne fehlerhafte Zeilen, doppelte IDs, fehlende Einträge oder ungültige Zählungen. Alle drei angeforderten Dateien erschienen unter **Generated**. Öffnen Sie jede Datei dort; Eine Arbeitsdatei, die nie als Artefakt gespeichert wurde, ist noch nicht lieferbar.
 
@@ -69,7 +69,7 @@ Die abgeschlossene Wiederholung validiert **27,179-Genreihen und 12-Probenspalte
 
 Vergleichen Sie alle Sample-Metriken mit dem [Basistabelle](../reference/example-data.md#sample-qc-baseline), wobei die Zeilen mit dem vollständigen Sample-Identifier übereinstimmen.
 
-![Der wiedereröffnete zwölfreihige Tisch aus dem abgeschlossenen Rerun](/img/open-science/research-workflows/rnaseq-qc-rerun-table.png)
+![Der wiedereröffnete zwölfreihige Tisch aus dem abgeschlossenen Rerun](/img/open-science/research-workflows/rnaseq-qc-rerun-table.webp)
 
 Für diesen Input sollte die Nullzählung plus nachgewiesene Gene in jeder Zeile gleich **27,179** sein. Vergleichen Sie die **48**-Stichprobenmetriken mit der unabhängigen Baseline. Die Vereinbarung überprüft diese Berechnungen für die gelieferten Vorleistungen; Nachgelagerte Annahmen bedürfen noch einer eigenen Bewertung.
 
@@ -77,7 +77,7 @@ Für diesen Input sollte die Nullzählung plus nachgewiesene Gene in jeder Zeile
 
 Öffnen Sie `rnaseq-library-sizes.png` und vergrößern Sie es. Überprüfen Sie alle zwölf Beispieletiketten, die Rohzählachse und den Hinweis, dass die Werte nicht normalisiert sind. Die Gesamtzahlen reichen von **20,015,386** bis **24,723,827** in dieser Matrix.
 
-![Das gespeicherte rohe Bibliotheks-Größe-Plot aus der gleichen Wiederholung](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.png)
+![Das gespeicherte rohe Bibliotheks-Größe-Plot aus der gleichen Wiederholung](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.webp)
 
 Eine größere Bibliothekssumme bedeutet an sich nicht, dass ein Gen differentiell exprimiert wird. Vor einer separaten nachgelagerten Analyse die Stichprobenmerkmale den GEO-Metadaten zuordnen und das Design, die Kontraste, die Normierung und die Filterregeln angeben. Ein separates Connector-Follow-up holte die GEO-Eigenschaften der zwölf Proben ab. die GSM-zu-Matrix-Spalten-Zuordnung, das Analysedesign und die statistischen Schritte wurden hier nicht validiert. Siehe [Konnektoren](../guides/connectors.md).
 

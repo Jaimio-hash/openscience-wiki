@@ -32,7 +32,7 @@ Stage verified candidates in Literature Inbox for my review; do not accept
 them automatically. Stop before downloading PDFs. Keep everything in English.
 ```
 
-![Реальный журнал поиска с идентификаторами кандидатов и статусом поиска](/img/open-science/research-workflows/literature-topic-results.png)
+![Реальный журнал поиска с идентификаторами кандидатов и статусом поиска](/img/open-science/research-workflows/literature-topic-results.webp)
 
 <a href="/docs/examples/research-workflows/single-atom-search-log.md" download>Начальный поисковый журнал</a> записывает восемь кандидатов, найденных с помощью веб-поиска и метаданных Crossref. Это были еще не скачанные бумаги. Если источник требует учетных данных, настройте [Коннекторы](../guides/connectors.md) или попросите агента использовать доступный источник и назовите пробел.
 
@@ -54,7 +54,7 @@ Keep the old collection unchanged. Keep everything in English.
 
 Просмотрите <a href="/docs/examples/research-workflows/single-atom-open-access-selection.md" download>Заменить журнал выбора</a>, затем выберите четыре предполагаемых ряда Inbox и выберите **Accept**. Исходная ссылка с открытым доступом все еще должна быть протестирована путем сохранения и открытия PDF.
 
-![Четыре кандидата на замену, отобранные для ручного приема](/img/open-science/research-workflows/journal-open-access-inbox.png)
+![Четыре кандидата на замену, отобранные для ручного приема](/img/open-science/research-workflows/journal-open-access-inbox.webp)
 
 Создайте **Single-Atom Catalysis - Full-Text Journal Club** с помощью **New collection**. В **All references** выберите эти четыре принятые записи плюс Lang, затем выберите **Add to collection**. Используйте **Add to project**, чтобы связать набор с проектом, содержащим ваш разговор.
 
@@ -73,15 +73,15 @@ Keep the old collection unchanged. Keep everything in English.
 3. Открой эту привязанность. Сравните его заголовок и DOI с записью и проверьте количество страниц.
 4. Повторите для всех пяти ссылок, а затем снова откройте коллекцию. Каждый ряд теперь должен показывать иконку вложения.
 
-![Полнотекстовые источники, предлагаемые для газеты Lang](/img/open-science/research-workflows/literature-topic-fulltext.png)
+![Полнотекстовые источники, предлагаемые для газеты Lang](/img/open-science/research-workflows/literature-topic-fulltext.webp)
 
 В этом выпуске PDF от Lang был добавлен через Europe PMC. Остальные четыре были спасены из источников, обнаруженных через Unpaywall. Альтернативный источник может быть успешным, когда другой источник не может быть добавлен. При необходимости используйте **Open source** для получения копии, к которой вы имеете право получить доступ, и прикрепите ее к **Add PDF**. Если нет доступной для чтения копии, замените выбор или пометьте его отсутствие, прежде чем запрашивать полнотекстовые результаты.
 
-![Загруженная бумага открывается в английском предварительном просмотре PDF](/img/open-science/research-workflows/journal-qi-pdf.png)
+![Загруженная бумага открывается в английском предварительном просмотре PDF](/img/open-science/research-workflows/journal-qi-pdf.webp)
 
 Финальная коллекция содержит пять сохраненных PDF-файлов, а в порядке таблицы подсчитывает количество страниц **10, 9, 11, 10 и 11**. Иконка вложения подтверждает сохраненный файл; Открытие его подтверждает, что он читаемый и соответствует рекорду.
 
-![Финальная коллекция из пяти бумаг с приложением на каждой записи](/img/open-science/research-workflows/journal-five-fulltexts.png)
+![Финальная коллекция из пяти бумаг с приложением на каждой записи](/img/open-science/research-workflows/journal-five-fulltexts.webp)
 
 <span id="draft-the-reading-plan-then-deepen-it-with-full-text" />
 
@@ -108,17 +108,17 @@ do not delegate. I will open the results and check the original pages.
 
 После завершения работы откройте **single-atom-fulltext-reading-pack.md** от **Generated**. Проверяйте таблицу проверки из пяти бумаг, каждый вывод и его локатор, ограничения, вопросы и повестку дня. Повестка дня должна составлять 60 минут.
 
-![Сохраненный полнотекстовый пакет с теми же пятью документами и проверками источников.](/img/open-science/research-workflows/journal-fulltext-pack.png)
+![Сохраненный полнотекстовый пакет с теми же пятью документами и проверками источников.](/img/open-science/research-workflows/journal-fulltext-pack.webp)
 
 ## Проверьте карту бумаги по сравнению с оригинальными PDF-файлами {/* #check-the-paper-map-against-the-original-pdfs */}
 
 Откройте **single-atom-fulltext-paper-map.csv** и используйте его кнопку расширения для полноэкранного просмотра. Данная версия содержит **5 строки · 12 столбцы**. Сравните набор DOI с коллекцией. Пакет из другого набора не является результатом этого рабочего процесса. Прокрутите горизонтально или загрузите CSV, чтобы прочитать длинные ячейки в полном объеме.
 
-![Настоящая пятирядная, двенадцатиколонная бумажная карта](/img/open-science/research-workflows/journal-fulltext-paper-map.png)
+![Настоящая пятирядная, двенадцатиколонная бумажная карта](/img/open-science/research-workflows/journal-fulltext-paper-map.webp)
 
 Вернитесь в **Library**, откройте цитируемый PDF, нажмите на его счетчик страниц, введите запрашиваемую страницу и нажмите **Входить**. Проверьте фигуру или таблицу вместе с подписью и окружающим текстом. Например, He et al.'s Figure 5 находится на **Страница PDF 7**; Описание производственной линии находится на странице 3. Они поддерживают различные части резюме.
 
-![Рисунок 5, опубликованный на странице PDF 7 для сравнения](/img/open-science/research-workflows/journal-he-figure5.png)
+![Рисунок 5, опубликованный на странице PDF 7 для сравнения](/img/open-science/research-workflows/journal-he-figure5.webp)
 
 Запросите сохраненную версию, когда локатор или условие неверны, а затем снова откройте пересмотренный файл. Проверенная упаковка также сохраняет конфликт в Sun et al.: страница 2 и надпись на рисунке 5 дают различные композиции корма. Он записывает оба описания вместо того, чтобы выбирать одно безмолвно. Это полезный вопрос встречи, а не решенная экспериментальная деталь.
 

@@ -27,7 +27,7 @@ In batch management, review the selected count in the bottom action area before 
 
 Before deleting a role, inspect the option to delete its Skills. Keep shared Skills if other roles still use them. Deleting a duplicate does not require deleting the original role.
 
-![Deleting the disposable role while keeping shared Skills](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.jpg)
+![Deleting the disposable role while keeping shared Skills](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.webp)
 
 ## Share and import a package
 
@@ -39,7 +39,7 @@ Before deleting a role, inspect the option to delete its Skills. Keep shared Ski
 2. In **Choose Skills to include**, explicitly select `rnaseq-count-qc` if the recipient needs its files. An installed personal/imported Skill is not necessarily included by default.
 3. Export and inspect the archive before sharing.
 
-![Selecting a Skill to include in the Specialist package](/img/open-science/capabilities-walkthrough/07-specialist-export.jpg)
+![Selecting a Skill to include in the Specialist package](/img/open-science/capabilities-walkthrough/07-specialist-export.webp)
 
 The actual <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.zip">package with Skill</ExampleDownload> contains `manifest.json`, `specialist.json`, `skills/rnaseq-count-qc/SKILL.md` and its reference schema. A minimal export can contain just the two JSON files. Connector IDs are references; credentials, local trust and Full access are not transferred as ready-to-use authorization.
 
@@ -52,7 +52,7 @@ The actual <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-wit
 5. The imported role is saved **disabled / SETUP INCOMPLETE**. Inspect instructions and capability bindings in the editor, choose the intended access scope, then **Save changes** to complete setup and enable it.
 6. Reopen the installed role and run a small, scoped task.
 
-![Resolving the real RNA-seq Skill conflict during import](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.jpg)
+![Resolving the real RNA-seq Skill conflict during import](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.webp)
 
 **Version unchanged** can still accompany a Skill conflict. Choose the intended Skill source explicitly, then reopen the imported role to confirm its bindings and access scope.
 
@@ -71,11 +71,11 @@ The actual <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-wit
 
 Open **Browse Marketplace**, search a role and choose **View details**. Check publisher, source, version, license, download size and included Skills/Connectors. **Refresh Marketplace** updates the catalog; **Manage Marketplace sources** controls the configured sources. All/Official/Community filters concern catalog origin, not runtime readiness.
 
-![The actual Auto Research Specialist package detail](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.jpg)
+![The actual Auto Research Specialist package detail](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.webp)
 
 Select **Install Specialist**, then confirm the role appears in **Marketplace** and inspect its enable state and bindings. Catalog package counts describe that package, not all application capabilities. Installation does not execute a research task or prepare every external dependency; finish any required setup before use.
 
-![Auto Research installed and enabled](/img/open-science/capabilities-walkthrough/23-marketplace-installed.jpg)
+![Auto Research installed and enabled](/img/open-science/capabilities-walkthrough/23-marketplace-installed.webp)
 
 ## Verify before sharing
 

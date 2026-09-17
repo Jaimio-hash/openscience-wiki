@@ -1,7 +1,7 @@
 ---
 title: "Reviewer 與自動複核"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # Reviewer 與自動複核 {/* #reviewer-与自动复核 */}
@@ -76,6 +76,8 @@ Codex 訂閱、gpt-5.6-sol 下，人工複核返回 **四項檢查、一項問�
 2. 在目標會話開啟 **Agent controls → Auto-review**，確認顯示 **On**，再提交下一條請求。
 3. 回覆完成後，展開自動出現的 **Reviewer** 卡片。核對模型、檢查內容、證據及結果。
 4. 出現 **Corrections requested** 時，等待主任務的糾正操作和後續複核，再判斷問題是否解決。
+
+從 v0.30.2 起，啟動會話時會保留 Auto-review 設定，關聯的糾錯輪次也會保留糾錯所需的審閱反饋。傳送前啟用它，再檢查實際的 Reviewer 卡片與 Main 修改後的輸出。保留上下文不等於問題已經修正，仍需閱讀後續審閱和剩餘發現。
 
 ### resolved 說明了什麼 {/* #resolved-说明了什么 */}
 

@@ -1,7 +1,7 @@
 ---
 title: "Python 與 R 執行環境"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -47,7 +47,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 在 **Settings → Runtimes** 分別檢查兩種語言的卡片。每張卡片都有獨立的 **Ready** 狀態、版本、**Enable** 開關和 **Packages** 按鈕。下圖中的 Python 與 R 均已啟用；上方警告針對單獨配置的 Notebook 網路保護。截圖中的個人路徑已隱藏，請在自己的電腦上核對完整路徑。
 
-<Screenshot src="/img/open-science/windows/runtimes-ready.png" alt="Windows 託管 Python 與 R 卡片，均顯示 Ready 且已啟用" width={1919} height={991} windowBounds={[480, 152, 960, 688]} href="/docs/img/open-science/windows/runtimes-ready.png" linkLabel="開啟完整 Windows 截圖" />
+<Screenshot src="/img/open-science/windows/runtimes-ready.webp" alt="Windows 託管 Python 與 R 卡片，均顯示 Ready 且已啟用" width={1919} height={991} windowBounds={[480, 152, 960, 688]} href="/docs/img/open-science/windows/runtimes-ready.webp" linkLabel="開啟完整 Windows 截圖" />
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![安裝 Python 前的執行時設定](/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.png)
+![安裝 Python 前的執行時設定](/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.webp)
 
 </PlatformContent>
 1. 找到 **Python → App-managed environment**。
@@ -66,12 +66,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![正在建立應用管理的 Python 環境](/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.png)
+![正在建立應用管理的 Python 環境](/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.webp)
 
 </PlatformContent>
 <PlatformContent platform="macos">
 
-![Python 安裝完成](/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.png)
+![Python 安裝完成](/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.webp)
 
 </PlatformContent>
 確認 **Ready**、直譯器路徑和啟用狀態。包數量與版本隨安裝來源變化，不要把截圖中的臨時路徑用作長期環境位置。
@@ -86,25 +86,25 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="linux">
 
-![Linux 中應用管理的 R 已 Ready 並啟用](/img/open-science/linux/r-managed-ready.png)
+![Linux 中應用管理的 R 已 Ready 並啟用](/img/open-science/linux/r-managed-ready.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="macos">
 
-![下載應用管理的 R 環境](/img/open-science/guides-walkthrough/70-r-managed-download.jpg)
+![下載應用管理的 R 環境](/img/open-science/guides-walkthrough/70-r-managed-download.webp)
 
 </PlatformContent>
 <PlatformContent platform="macos">
 
-![應用管理的 R 已安裝並啟用](/img/open-science/guides-walkthrough/71-r-managed-ready.jpg)
+![應用管理的 R 已安裝並啟用](/img/open-science/guides-walkthrough/71-r-managed-ready.webp)
 
 </PlatformContent>
 篩選 `r-base` 後，確認顯示已安裝 R 包及其版本、渠道。包總數取決於你的環境，可以與截圖不同。
 
 <PlatformContent platform="macos">
 
-![檢查 R 包清單中的 r-base](/img/open-science/guides-walkthrough/72-r-package-filter.jpg)
+![檢查 R 包清單中的 r-base](/img/open-science/guides-walkthrough/72-r-package-filter.webp)
 
 </PlatformContent>
 ## 接入已有直譯器 {/* #接入已有解释器 */}
@@ -133,7 +133,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 `/usr/bin/python3` 等系統直譯器可能已經顯示為 **Ready**。先開啟目標環境的 **Enable** 開關，再要求代理選擇它。下圖中已檢測到的 Python 直譯器尚未啟用，應用管理的 Python 也尚未準備；需要託管環境時，選擇 **Download and set up**。
 
-![Linux 已檢測到現有 Python 直譯器並顯示 Ready，Enable 開關尚未開啟](/img/open-science/linux/python-detected-disabled.png)
+![Linux 已檢測到現有 Python 直譯器並顯示 Ready，Enable 開關尚未開啟](/img/open-science/linux/python-detected-disabled.webp)
 
 </PlatformContent>
 
@@ -189,7 +189,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![篩選 Python 安裝包](/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.png)
+![篩選 Python 安裝包](/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.webp)
 
 </PlatformContent>
 列名為 **Name**、**Version**、**Build**、**Channel**。Build 中的橫線表示未顯示構建值。這個對話方塊用於檢視清單；沒有安裝或解除安裝包的按鈕，不應在這裡尋找 “Install package” 輸入框。
@@ -198,9 +198,9 @@ import Screenshot from '@site/src/components/Screenshot';
 
 點選 Python 卡片的 **Packages**，篩選 `pip`；點選 R 卡片的 **Packages**，篩選 `r-base`。比較版本前，先核對對話方塊標題中的環境名稱。下圖展示已有安裝包，不表示正在安裝新包。
 
-<Screenshot src="/img/open-science/windows/python-packages.png" alt="Windows Python 包清單，按 pip 篩選" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/python-packages.png" linkLabel="開啟完整 Windows 截圖" />
+<Screenshot src="/img/open-science/windows/python-packages.webp" alt="Windows Python 包清單，按 pip 篩選" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/python-packages.webp" linkLabel="開啟完整 Windows 截圖" />
 
-<Screenshot src="/img/open-science/windows/r-packages.png" alt="Windows R 包清單，按 r-base 篩選" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/r-packages.png" linkLabel="開啟完整 Windows 截圖" />
+<Screenshot src="/img/open-science/windows/r-packages.webp" alt="Windows R 包清單，按 r-base 篩選" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/r-packages.webp" linkLabel="開啟完整 Windows 截圖" />
 
 </PlatformContent>
 
@@ -212,7 +212,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![成功的真實 Notebook 計算](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![成功的真實 Notebook 計算](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 匯入包失敗時，先檢查選中的執行環境及包清單。若下載因域名解析為保留地址而被拒絕，按[網路](network.md)處理。已有包能執行，不代表額外軟體包已經可以安裝。
@@ -250,7 +250,9 @@ R.home()
 
 開啟 Notebook 輸出，與儲存報告核對。本例使用 Windows 10、Open-Science v0.28.0，實際輸出 Python **3.12.13**、`pip` **26.1.2**。讀取包後設資料不會安裝或匯入該包。
 
-<Screenshot src="/img/open-science/windows/python-runtime-output.png" alt="Windows Python Notebook 中的實際執行程式碼與版本輸出" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.png" linkLabel="開啟完整 Windows 截圖" />
+<Screenshot src="/img/open-science/windows/python-runtime-output.webp" alt="Windows Python Notebook 中的實際執行程式碼與版本輸出" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.webp" linkLabel="開啟完整 Windows 截圖" />
+
+遇到 Windows conda R 啟動或核心恢復失敗時，可先更新至 v0.30.2 或後續版本再重試。該版本修復環境準備後的可執行檔案查詢及 R 核心恢復。更新後重新檢查環境，並在 Notebook 中執行一段簡單的 R 計算；**Ready** 本身不是執行結果。下方截圖仍保留原實操的版本與結果。
 
 Windows R 執行若提示 **Enable protected mode before authorizing R access.**，檢查 **Network settings** 與 R 卡片的 **Authorize and verify** 說明。處理提示中的授權前置條件後再執行；僅有 **Ready** 卡片不能證明執行成功。仍受阻時保留完整錯誤，按[故障排查](troubleshooting.md)處理。
 
@@ -269,18 +271,18 @@ Windows R 執行若提示 **Enable protected mode before authorizing R access.**
 下面展示 **Inputs** 與捕獲的程式碼。點選圖片可檢視包含儲存報告的完整截圖。
 
 <Screenshot
-  src="/img/open-science/windows/runtime-python-producer.png"
+  src="/img/open-science/windows/runtime-python-producer.webp"
   alt="Python 結果的 Provenance Code 區域性檢視，顯示 Inputs 與捕獲的產出程式碼"
   width={2302}
   height={1158}
   windowBounds={[1385, 65, 917, 1030]}
-  href="/docs/img/open-science/windows/runtime-python-producer.png"
+  href="/docs/img/open-science/windows/runtime-python-producer.webp"
   linkLabel="開啟包含儲存報告與捕獲程式碼的完整 Windows Python 截圖"
 />
 
 **用 R 讀取同一張表。** 要求代理在 Session Notebook 中使用選定的 R 環境，僅使用 base R，輸出 `R.version.string`、`R.home()` 和相同的四項檢查結果，另存一份報告。展開 **Notebook run** 卡片檢視程式碼，再開啟報告核對結果。本例中 R 為 **4.4.3**，安裝目錄以 `runtime/envs/.r/Lib/R` 結尾。
 
-![Windows R Notebook 呼叫與儲存的報告，顯示實際 R 安裝位置及樣本 QC 結果](/img/open-science/windows/runtime-r-execution.jpg)
+![Windows R Notebook 呼叫與儲存的報告，顯示實際 R 安裝位置及樣本 QC 結果](/img/open-science/windows/runtime-r-execution.webp)
 
 截圖中的安裝路徑屬於示例電腦；你的本機磁碟機代號、目錄和直譯器版本不同，屬於正常情況。
 
@@ -305,7 +307,7 @@ Windows R 執行若提示 **Enable protected mode before authorizing R access.**
 
 <PlatformContent platform="macos">
 
-![取消安裝與重試入口](/img/open-science/local-todo-batch/29-setup-cancelled.png)
+![取消安裝與重試入口](/img/open-science/local-todo-batch/29-setup-cancelled.webp)
 
 </PlatformContent>
 ### 重灌託管環境 {/* #重装托管环境 */}
@@ -318,14 +320,14 @@ Windows R 執行若提示 **Enable protected mode before authorizing R access.**
 
 <PlatformContent platform="macos">
 
-![Notebook 會話中的重灌確認](/img/open-science/local-todo-batch/31-runtime-reinstall.png)
+![Notebook 會話中的重灌確認](/img/open-science/local-todo-batch/31-runtime-reinstall.webp)
 
 </PlatformContent>
 重灌會刪除並重建環境，正在執行的單元可能被取消並顯示 **Run cancelled: the runtime was stopped while this cell was executing.** Notebook 歷史可保留，但舊名稱空間不會恢復。重灌後先執行直譯器檢查，再重新執行產生所需變數的程式碼，並開啟已儲存檔案確認可用。
 
 <PlatformContent platform="macos">
 
-![核心停止後保留的 Notebook 歷史](/img/open-science/local-todo-batch/33-reinstalled-kernel-history.png)
+![核心停止後保留的 Notebook 歷史](/img/open-science/local-todo-batch/33-reinstalled-kernel-history.webp)
 
 </PlatformContent>
 檔案保留不等於記憶體變數保留。繼續分析前重新執行必要程式碼。後來新增的軟體包可能需要重灌，基礎環境恢復不能證明每個額外依賴也已恢復。
@@ -336,7 +338,7 @@ Windows R 執行若提示 **Enable protected mode before authorizing R access.**
 
 <PlatformContent platform="macos">
 
-![原始碼構建缺少 micromamba 的真實錯誤](/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.png)
+![原始碼構建缺少 micromamba 的真實錯誤](/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.webp)
 
 </PlatformContent>
 正式安裝包包含該程式。開發構建可在啟動程序環境中，將 `OPEN_SCIENCE_MICROMAMBA_BIN` 指向有效的 micromamba 可執行檔案，然後重啟開發例項。確認程式可執行後再重試；不要修改已安裝應用的內部檔案。

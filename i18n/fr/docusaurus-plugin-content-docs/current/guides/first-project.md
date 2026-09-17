@@ -37,7 +37,7 @@ Confirmez le nom du projet au-dessus de la liste des sessions. Ce sont des noms 
 3. Confirmer douze rangées d'échantillons. Inspectez l'identificateur de l'échantillon complet et les colonnes pour les nombres totaux, les gènes à nombre zéro, les gènes détectés et le nombre médian positif.
 4. Fermez l'aperçu pour revenir au compositeur. Conserver la pièce jointe dans la demande.
 
-![Exemple de tableau QC ouvert dans la demande](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![Exemple de tableau QC ouvert dans la demande](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 Si l'aperçu est vide ou si les colonnes ne sont pas séparées, confirmez que vous avez joint la page de téléchargement CSV plutôt qu'une page de téléchargement HTML. Voir [Tableaux](../tools/tables.md) pour les contrôles de délimiteur et d'aperçu.
 

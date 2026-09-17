@@ -24,13 +24,13 @@ last_update:
 4. 查看导入结果。本例新建 **20** 条记录，复用、跳过、失败均为 **0**。
 5. 打开集合，选中记录，通过 **Add to project** 将它们关联到项目。
 
-![导入完成，显示新建 20 条文献记录](/img/open-science/research-workflows/perovskite-import-complete.png)
+![导入完成，显示新建 20 条文献记录](/img/open-science/research-workflows/perovskite-import-complete.webp)
 
 如果导出文件含有重复记录或缺少标识，应先处理这些记录，再确认交接清单。导入引文不会自动附上全文。已有 PDF 可通过文献详情中的 **Add PDF** 添加，再核对 PDF 标题和 DOI 是否与记录一致。参见[文献库与引用](../guides/library.md)。
 
 重新打开集合，检查底部的 **20 references**。请求综述前先查看 **Attachment** 列。本例各行都没有附件，因此下一步要求整理文献清单，不提取全文结论。
 
-![导入后的二十条文献集合及实际附件状态](/img/open-science/research-workflows/perovskite-collection.png)
+![导入后的二十条文献集合及实际附件状态](/img/open-science/research-workflows/perovskite-collection.webp)
 
 ## 生成可用的交接清单
 
@@ -53,11 +53,11 @@ Finish after saving the files; I will open them to check the results.
 
 回答完成后，从生成文件中打开 **perovskite-handover.csv**。本例保存的表格有 **20 行、6 列**，20 个 DOI 与导入集合一致，没有缺失 DOI 或发表年份。全文状态均如实标为尚未附 PDF。
 
-![在 Open-Science 中打开保存后的 20 行文献交接表](/img/open-science/research-workflows/perovskite-handover-table.png)
+![在 Open-Science 中打开保存后的 20 行文献交接表](/img/open-science/research-workflows/perovskite-handover-table.webp)
 
 打开 **perovskite-handover.md**，检查阅读顺序是否方便接手者使用。示例先安排稳定性概览，再阅读机制、材料改进和分析方法。这是根据集合整理的阅读建议，不是已经核实的实验结论。
 
-![保存后的阅读计划保留来源可用性和下一步操作](/img/open-science/research-workflows/perovskite-reading-plan.png)
+![保存后的阅读计划保留来源可用性和下一步操作](/img/open-science/research-workflows/perovskite-reading-plan.webp)
 
 使用预览的展开按钮阅读计划，再通过 **Download** 将它与 CSV 一起保存。检查后续动作是否能根据现有材料执行；推荐阅读顺序不代表已经读过论文。
 

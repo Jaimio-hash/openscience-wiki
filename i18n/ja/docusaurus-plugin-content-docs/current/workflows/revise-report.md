@@ -29,11 +29,11 @@ read and flag unavailable figure inspection. Do not invent measurements.
 Save and reopen the draft. Do not overwrite it in later revisions.
 ```
 
-![Open-Science のソースコード PDF と初期のブリーフリクエスト](/img/open-science/workflow-extensions/report-input.png)
+![Open-Science のソースコード PDF と初期のブリーフリクエスト](/img/open-science/workflow-extensions/report-input.webp)
 
 要求されると、関連するファイルを読み込む承認します。 **Generated** または **Files** から **catalyst-brief-v1.md** を開き、保存したドラフトを読みます。 会話中の回答は、実際のファイルの検査の代替ではありません。
 
-![エディタリビジョンの前に保存された最初のドラフト](/img/open-science/workflow-extensions/report-draft.png)
+![エディタリビジョンの前に保存された最初のドラフト](/img/open-science/workflow-extensions/report-draft.webp)
 
 ## 2. フィードバックを実用的なものにする {/* #2-make-the-feedback-actionable */}
 
@@ -64,7 +64,7 @@ Reopen both saved files and check them against the comments. Use English.
 
 **catalyst-brief-v2.md** を開きます。 この実行では、2列の操作ポイントテーブルと3つのラベリングフォローアップ提案である**117 単語のまとめ**を生成しました。
 
-![変更された要約および耐久性からの選択性を分離するテーブル](/img/open-science/workflow-extensions/report-revised.png)
+![変更された要約および耐久性からの選択性を分離するテーブル](/img/open-science/workflow-extensions/report-revised.webp)
 
 鍵の区別は、**98.9% CO 偏光効率 で −1.2 V 対 RHE** と別々の **20 h 現在の保持テスト で −0.8 V と RHE** です。 20 hの98.9%にそれらを結合しません。 Main PDF p。 6、図。 6b-d、p。 7、図。 6e、関連する証拠を識別します。 ツイート 8はH細胞の測定を記述します。 補足 PDF PP。 47–48、図。 51-52は、水素選択性およびNMR製品チェックに関心を寄せています。
 
@@ -74,7 +74,7 @@ Reopen both saved files and check them against the comments. Use English.
 
 **catalyst-brief-v2-response.md** を開きます。 C1-C6 を探し、それぞれに名前変更されたセクションを開き、実際に約束された変更が含まれていることを確認します。 ラベルだけでは不十分です。
 
-![保存された応答テーブルは、すべての6コメントを更新セクションにマップします](/img/open-science/workflow-extensions/report-response.png)
+![保存された応答テーブルは、すべての6コメントを更新セクションにマップします](/img/open-science/workflow-extensions/report-response.webp)
 
 提案は提案としてラベル付けされ続けることを確認し、DOIは**10.1038/s41467-019-12510-0**のままであり、**catalyst-brief-v1.md**はまだ変更されていません。 応答は利用できなくなった証拠を述べるべきです。
 

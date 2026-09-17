@@ -32,7 +32,7 @@ CnH2nO2, neutral charge and linear structures. Reopen the files.
 Keep all outputs in English and do not delegate.
 ```
 
-![Der zusammengesetzte umfang und die angeforderten dateien in der eigentlichen konversation.](/img/open-science/workflow-extensions/pubchem-input.png)
+![Der zusammengesetzte umfang und die angeforderten dateien in der eigentlichen konversation.](/img/open-science/workflow-extensions/pubchem-input.webp)
 
 ## 2. Überprüfen Sie die tatsächlichen Datenbankaufrufe {/* #2-check-the-actual-database-calls */}
 
@@ -40,7 +40,7 @@ Erweitern Sie nach dem Senden die Werkzeugaktivität oder öffnen Sie **Notebook
 
 Das Beispiel verwendete genaue Säurenamen und die erste zurückgegebene CID, dann überprüfte die Batch-Eigenschaften. Dies ist für diese eindeutigen Namen geeignet; Der erste Treffer ist keine allgemeine Identifikationsregel.
 
-![Die tatsächliche Abfrageaktivität und das Speicherdatei-Readback in Notebook](/img/open-science/workflow-extensions/pubchem-lookup.png)
+![Die tatsächliche Abfrageaktivität und das Speicherdatei-Readback in Notebook](/img/open-science/workflow-extensions/pubchem-lookup.webp)
 
 ## 3. Öffnen Sie die gespeicherte Tabelle {/* #3-open-the-saved-table */}
 
@@ -56,7 +56,7 @@ Warten Sie, bis die Antwort abgeschlossen ist und die Dateien unter **Generated*
 | Heptansäure | 8094 | C7H14O2 | 130.18 |
 | Octansäure | 379 | C8H16O2 | 144.21 |
 
-![Die wiedereröffnete Sieben-Verbindung CSV](/img/open-science/workflow-extensions/pubchem-table.png)
+![Die wiedereröffnete Sieben-Verbindung CSV](/img/open-science/workflow-extensions/pubchem-table.webp)
 
 Match Zeilen von **CID**, nicht ihre Anzeigereihenfolge. Überprüfen Sie die Formel und lineares Lächeln zusammen. Das Beispiel behält beide zurückgegebenen Feldnamen, `SMILES` und `ConnectivitySMILES`; Ihre Strings passen zufällig zu diesen Verbindungen. Benennen Sie einen nicht als einen anderen Identifikator um oder schließen Sie daraus experimentelle Stereochemie ab.
 
@@ -64,7 +64,7 @@ Match Zeilen von **CID**, nicht ihre Anzeigereihenfolge. Überprüfen Sie die Fo
 
 Öffnen Sie **pubchem-homologs-source.json**, um alle acht Operationen, genaue Lookup-Eingaben und Rohantworten zu überprüfen. Öffnen Sie **pubchem-homologs-notes.md** für die Prozedur und Prüfungen. Der gespeicherte CSV wurde mit den Rohdaten verglichen; die sieben vereinbarten Identitäten, Formeln und linearen Strukturen.
 
-![Das gespeicherte Verfahren, Validierungsergebnisse und Interpretationsgrenzen](/img/open-science/workflow-extensions/pubchem-notes.png)
+![Das gespeicherte Verfahren, Validierungsergebnisse und Interpretationsgrenzen](/img/open-science/workflow-extensions/pubchem-notes.webp)
 
 Verwenden Sie die **Download**-Taste der Vorschau, um eine lokale Kopie beizubehalten. Für diesen abgeschlossenen Lauf laden Sie <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs.csv">CSV</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-source.json">Quelldaten</ExampleDownload> und <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-notes.md">Anmerkungen</ExampleDownload> herunter. PubChem-Datensätze können sich ändern; Behalten Sie den Quell-Snapshot mit Ihrer Analyse.
 

@@ -31,11 +31,11 @@ air-report-v1.md. The script must accept one or more CSV paths plus
 input/script hashes. Stop after this baseline. Use English.
 ```
 
-![週1回の添付ファイルとベースラインの計算](/img/open-science/workflow-extensions/air-input-v1.png)
+![週1回の添付ファイルとベースラインの計算](/img/open-science/workflow-extensions/air-input-v1.webp)
 
 承認する前にファイルを読み、計算を見直します。 **Notebook** では、実行終了を確認し、**air-daily-v1.csv** を開きます。 ベースラインには、PM2.5値が見つからずに**168 時系列列と 7 日列**が含まれています。
 
-![保存された7日間のベースラインと有効時間のカウント](/img/open-science/workflow-extensions/air-baseline-table.png)
+![保存された7日間のベースラインと有効時間のカウント](/img/open-science/workflow-extensions/air-baseline-table.webp)
 
 ## 2. 方法を変更することなく新しい観察を追加 {/* #2-add-new-observations-without-changing-the-method */}
 
@@ -53,7 +53,7 @@ Reopen the saved results. This is a historical replay, not live data.
 Use English and do not make health or causal claims.
 ```
 
-![既存の分析会話に2週間のファイルを追加](/img/open-science/workflow-extensions/air-update-input.png)
+![既存の分析会話に2週間のファイルを追加](/img/open-science/workflow-extensions/air-update-input.webp)
 
 エージェントが既存のスクリプトを実行し、同じ欠落値と完全性ルールを保持していることを検証します。 結果が変更された理由を説明するために、データと方法の両方を変更することは困難になります。
 
@@ -61,7 +61,7 @@ Use English and do not make health or causal claims.
 
 **air-daily-v2.png** と **air-daily-v2.csv** を開きます。 結合された入力は含んでいます **336 時系列**と、 **重複または欠落したタイムスタンプなし**. . . . **1つの欠落PM2.5の観察**は1月11にございます。 表には、**14日** が搭載されており、例の 18-valid-hour ルールをすべて満たしています。
 
-![Open-Scienceで表示された14日間の結果が拡大](/img/open-science/workflow-extensions/air-update-plot.png)
+![Open-Scienceで表示された14日間の結果が拡大](/img/open-science/workflow-extensions/air-update-plot.webp)
 
 1月 11 は **11.652 μg/m3** で、**23 有効な時間** から計算されます。 ゼロだったら、見落した観察を分割しないでください。 完全なタイムスタンプシーケンスは、すべての測定値が存在することを保証しません。
 
@@ -69,17 +69,17 @@ Use English and do not make health or causal claims.
 
 **air-update-check.csv** を開きます。 すべての **7つの共有日数列** は出力フィールド全体に同じです。 1月の8-14は、新しい日付のみです。 元のスクリプトの SHA-256 は、更新前後に変更されません。
 
-![変更されていないベースラインの日付と保存された行ごとの比較](/img/open-science/workflow-extensions/air-update-check.png)
+![変更されていないベースラインの日付と保存された行ごとの比較](/img/open-science/workflow-extensions/air-update-check.webp)
 
 **air-update-notes.md** を開き、入力のアイデンティティ、欠落した観察、保持された v1 ファイルを確認します。 14の日常的な手段と、保存された出力と表示された精度に一致する有効な時間のカウントの独立した計算。
 
-![更新ノートは変更されていないコードを記録し、ベースラインファイルとデータチェックを保持しました](/img/open-science/workflow-extensions/air-update-notes.png)
+![更新ノートは変更されていないコードを記録し、ベースラインファイルとデータチェックを保持しました](/img/open-science/workflow-extensions/air-update-notes.webp)
 
 ## 5. 退去前にレポートの日付を確認してください {/* #5-check-the-report-dates-before-handing-it-off */}
 
 実際の入力間隔でレポートヘッディングが続くことを確認します。 初期スクリプトは、2週間のレポートで最初の週のタイトルを保持しました。 **air-analysis-reviewed.py** で発表エラーを修正しました。 見出しテンプレートのみが変更されました。 その後、レビューされたスクリプトは、1と2週間で変更されていない実行され、すべての以前のファイルを保存します。
 
-![修正されたレポートは、フル2週間の間隔を名前付けます](/img/open-science/workflow-extensions/air-reviewed-report.png)
+![修正されたレポートは、フル2週間の間隔を名前付けます](/img/open-science/workflow-extensions/air-reviewed-report.webp)
 
 **air-daily-baseline.csv** と **air-daily-updated.csv** は、すべてのフィールドで元の v1/v2 CSV にマッチします。 **air-update-verification.md** は、実行前後の同じレビューされたスクリプトハッシュを記録し、2 つのレポートヘッディングをチェックします。 数値メソッドの変更から修正されたラベルを分離します。
 

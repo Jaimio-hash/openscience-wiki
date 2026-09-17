@@ -25,7 +25,7 @@ NASA 檔案在表頭前還有一行說明，用 `***` 表示不可用值，不�
 
 開啟專案，透過 **+ → Attach files** 附加兩份 CSV。在 **Settings → Runtimes** 中確認 Python 為 **Ready** 且已啟用。本次環境為 Python 3.12.14、NumPy 2.5.3、pandas 2.3.3、Matplotlib 3.11.1、Pillow 12.3.0。
 
-![兩份來源 CSV 已附加到比較任務](/img/open-science/workflow-extensions/temperature-input.png)
+![兩份來源 CSV 已附加到比較任務](/img/open-science/workflow-extensions/temperature-input.webp)
 
 ## 2. 先要求對齊，再解釋差異 {/* #2-先要求对齐再解释差异 */}
 
@@ -52,7 +52,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 開啟 **temperature-aligned.csv**。本例比較 **45 個共同年份**；兩個來源各自都有參考期所需的 **30 個完整年度點估計**，沒有用零填補年度缺失值。
 
-![儲存後的逐年對齊值和差值](/img/open-science/workflow-extensions/temperature-table.png)
+![儲存後的逐年對齊值和差值](/img/open-science/workflow-extensions/temperature-table.webp)
 
 減去的參考均值分別為 NASA **0.61266667 °C**、HadCRUT **0.53799554 °C**。每個資料集減去自己的均值，不是對兩份資料減去同一個數。比較前核對單位、年份與相減方向。
 
@@ -60,7 +60,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 開啟 **temperature-comparison.png**。第一幅保留各自原參考期，第二幅展示以相同時間段重新定基準後的曲線。
 
-![Open-Science 中的原參考期與共同參考期溫度曲線](/img/open-science/workflow-extensions/temperature-plot.png)
+![Open-Science 中的原參考期與共同參考期溫度曲線](/img/open-science/workflow-extensions/temperature-plot.webp)
 
 | 本例結果，NASA 減 HadCRUT | 數值 |
 | --- | --- |
@@ -74,7 +74,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 開啟 **temperature-crosscheck.md**，核對來源定義、指標與 CSV、程式碼是否一致。表格保留 HadCRUT 原置信區間及其機械平移後的數值，但此次比較**沒有**傳播所估計參考均值的不確定性，也沒有處理兩個來源間的依賴關係。
 
-![儲存後的報告記錄實際指標與解釋邊界](/img/open-science/workflow-extensions/temperature-report.png)
+![儲存後的報告記錄實際指標與解釋邊界](/img/open-science/workflow-extensions/temperature-report.webp)
 
 下載<ExampleDownload path="/examples/workflow-extensions/temperature-aligned.csv">對齊 CSV</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/temperature-comparison.png">圖形</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.py">Python 指令碼</ExampleDownload>和<ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.md">報告</ExampleDownload>。準備好兩份輸入，在具有上述依賴的 Python 環境中執行：
 

@@ -27,7 +27,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 删除角色前，检查是否同时删除其 Skills。其他角色仍在使用时保留共享 Skill；删除副本不需要删除原角色。
 
-![删除验证副本并保留共享 Skill](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.jpg)
+![删除验证副本并保留共享 Skill](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.webp)
 
 ## 共享与导入包
 
@@ -39,7 +39,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 2. 在 **Choose Skills to include** 明确勾选 `rnaseq-count-qc`；Personal/Imported Skill 不一定默认包含。
 3. 导出后检查归档内容。
 
-![选择随 Specialist 包导出的 Skill](/img/open-science/capabilities-walkthrough/07-specialist-export.jpg)
+![选择随 Specialist 包导出的 Skill](/img/open-science/capabilities-walkthrough/07-specialist-export.webp)
 
 实际<ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.zip">含 Skill 的包</ExampleDownload>包含 `manifest.json`、`specialist.json`、`skills/rnaseq-count-qc/SKILL.md` 及参考结构。最小导出可只有两个 JSON。Connector ID 只是引用，凭据、本机信任和 Full access 不会作为现成授权迁移。
 
@@ -52,7 +52,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 5. 导入后角色处于 **disabled / SETUP INCOMPLETE**。在编辑器检查指令与能力，选择访问范围，再 **Save changes** 完成设置并启用。
 6. 重新打开角色，运行小范围任务验收。
 
-![回导时出现的真实 Skill 冲突](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.jpg)
+![回导时出现的真实 Skill 冲突](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.webp)
 
 **Version unchanged** 仍可能伴随 Skill 冲突。明确选择 Skill 来源，导入后重新打开角色，核对能力绑定和访问范围。
 
@@ -71,11 +71,11 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 打开 **Browse Marketplace**，搜索角色，选择 **View details**。检查发布者、来源、版本、许可证、下载大小、Skills 与 Connector 引用。**Refresh Marketplace** 刷新目录，**Manage Marketplace sources** 管理来源。All/Official/Community 表示来源类型，不表示运行环境已就绪。
 
-![实际 Auto Research Specialist 包详情](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.jpg)
+![实际 Auto Research Specialist 包详情](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.webp)
 
 点击 **Install Specialist**，确认角色出现在 **Marketplace**，核对启用状态与绑定。目录中的包数量仅描述该包，不是应用能力总数。安装不会执行研究任务，也不会准备全部外部依赖；使用前完成所需配置。
 
-![Auto Research 已安装并启用](/img/open-science/capabilities-walkthrough/23-marketplace-installed.jpg)
+![Auto Research 已安装并启用](/img/open-science/capabilities-walkthrough/23-marketplace-installed.webp)
 
 归档损坏、预览过期、绑定缺失或下载失败时，保留诊断代码、应用/包版本与来源 URL，通过[故障排除](../guides/troubleshooting.md)反馈，不在 issue 中公开密钥或研究数据。
 

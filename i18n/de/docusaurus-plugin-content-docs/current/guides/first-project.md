@@ -37,7 +37,7 @@ Bestätigen Sie den Projektnamen oberhalb der Sitzungsliste. Dies sind Beispieln
 3. Bestätigen Sie zwölf Musterzeilen. Die vollständige Probenkennung und die Spalten sind auf Gesamtzählungen, Nullzählungsgene, nachgewiesene Gene und den positiven Median zu untersuchen.
 4. Schließen Sie die Vorschau, um zum Komponisten zurückzukehren. Bewahren Sie die Anlage in der Anforderung auf.
 
-![Muster-QC-Tabelle in der Anwendung geöffnet](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![Muster-QC-Tabelle in der Anwendung geöffnet](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 Wenn die Vorschau leer ist oder die Spalten nicht voneinander getrennt sind, bestätigen Sie, dass Sie die CSV anstelle einer HTML-Download-Seite angehängt haben. Siehe [Tabellen](../tools/tables.md) für Trennzeichen und Vorschau-Steuerelemente.
 

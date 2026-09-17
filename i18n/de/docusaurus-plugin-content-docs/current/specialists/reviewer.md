@@ -1,7 +1,7 @@
 ---
 title: "Reviewer und Auto-Review"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # Reviewer und Auto-Review {/* #reviewer-and-auto-review */}
@@ -74,6 +74,8 @@ Die Korrekturen stießen auf Managed-Input-Zugriffsprobleme und erreichten **Fix
 2. Öffnen Sie **Agent controls → Auto-review** in der Zielkonversation, bestätigen Sie **On** und senden Sie dann die nächste Anfrage.
 3. Nach der Antwort erweitern Sie die automatisch erstellte **Reviewer**-Karte. Überprüfen Sie das Modell, das Kriterium, den Nachweis und das Ergebnis.
 4. Wenn **Corrections requested** erscheint, überprüfen Sie die Korrektur von Main und die anschließende Überprüfung, bevor Sie entscheiden, ob der Befund behoben ist.
+
+Von v0.30.2 aus behält Auto-review seine Einstellung bei, wenn eine Konversation beginnt, und verknüpfte Korrekturkurven behalten die für den Korrekturzyklus erforderliche Überprüfungsrückmeldung bei. Schalten Sie es vor dem Senden ein und überprüfen Sie dann die tatsächliche Reviewer-Karte und die überarbeitete Ausgabe von Main. Kontexterhaltung bedeutet nicht, dass ein Befund korrigiert wurde; Lesen Sie die anschließende Überprüfung und die verbleibenden Ergebnisse.
 
 ### Was "aufgelöst" ist, bestimmt {/* #what-resolved-establishes */}
 

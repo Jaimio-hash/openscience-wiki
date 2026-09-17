@@ -26,7 +26,7 @@ Le rôle sauvegardé a été créé, rouvert, exporté, dupliqué et utilisé da
 6. Désactivez **Full access**, assignez les archives RNA-seq Skill et Omics comme indiqué dans [Capacités](./capabilities.md), puis sélectionnez **Create specialist**.
 7. Recherchez la ligne enregistrée et rouvrez-la. Confirmez l'identité exacte, les instructions et deux liaisons de capacité.
 
-![Champs d'identité dans l'éditeur français Specialist](/img/open-science/capabilities-walkthrough/04-specialist-identity.jpg)
+![Champs d'identité dans l'éditeur français Specialist](/img/open-science/capabilities-walkthrough/04-specialist-identity.webp)
 
 ```text
 You review bulk RNA-seq raw-count quality. Use the rnaseq-count-qc Skill when validating a count matrix. For a precomputed QC table, inspect the full sample identifiers, numeric completeness, nonnegative values, and whether zero-count plus detected genes equals the stated gene count. Use available Notebook tools for arithmetic; do not install new packages for this bounded review. Cite source filenames and actual outputs. Separate verified findings from unresolved checks. Never infer differential expression, clinical significance, or quality cutoffs from library totals alone. For metadata queries, use only the assigned Omics Archives connector. Return a concise PASS/FAIL table and the limitations of the available input.

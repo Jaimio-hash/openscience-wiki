@@ -36,7 +36,7 @@ To save a reading location for yourself, select text or a PDF region and choose 
 
 Open `rnaseq-sample-qc.csv`. In this example, it shows **12 rows · 6 columns** and uses the first row as headers. Horizontal scrolling exposes long source-column names and the metrics to their right. The table's row numbers are display positions, not gene or sample IDs.
 
-![The twelve-sample QC table](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![The twelve-sample QC table](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 Check that column labels and full identifiers are readable. Field definitions and checks against the shared baseline are in [Tables and datasets](../tools/tables.md).
 
@@ -46,7 +46,7 @@ The source `.txt` is a tab-separated matrix; a text viewer may display it as tex
 
 Open `rnaseq-library-sizes.png`. Use **Zoom in**, **Zoom out** and **Reset zoom**; open full screen when axis labels are too small. Zoom changes only the view. It does not resample the source matrix or update a statistical result.
 
-![The actual raw-count totals figure in full-screen preview](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+![The actual raw-count totals figure in full-screen preview](/img/open-science/guides-walkthrough/54-rnaseq-figure.webp)
 
 Read the raw-count axis, all twelve sample labels and their mapping in the CSV/report. Different bar heights alone do not establish differential expression. The example is a descriptive pre-analysis check, with no normalization or hypothesis testing.
 
@@ -71,9 +71,9 @@ The <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-reading.docx">W
 | JSON | Open <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.json">the summary</ExampleDownload> to inspect source text, identifiers and values. It displays as code rather than an expandable object tree. |
 | HTML | Open <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.html">the reading table</ExampleDownload>. **Source** shows the HTML; **Render** restores the formatted document. Neither mode reruns the QC. |
 
-![Selecting Samples in the actual workbook preview](/img/open-science/local-todo-batch/47-workbook-samples.png)
+![Selecting Samples in the actual workbook preview](/img/open-science/local-todo-batch/47-workbook-samples.webp)
 
-![The second page of the actual TIFF](/img/open-science/local-todo-batch/50-tiff-second-page.png)
+![The second page of the actual TIFF](/img/open-science/local-todo-batch/50-tiff-second-page.webp)
 
 If **Preview unavailable → Open this Office file in your default app to view it.** appears, use **Open** for a local file, or **Download** for a managed upload, then open it in a compatible application. This fallback keeps the original file available when the built-in preview cannot display it.
 

@@ -25,7 +25,7 @@ El archivo de la NASA comienza con una línea descriptiva antes de su encabezado
 
 Abra un proyecto y adjunte ambos CSVs con **+ → Attach files**. En **Settings → Runtimes**, asegúrese de que Python es **Ready** y está habilitado. Esta carrera utilizó Python 3.12.14, NumPy 2.5.3, pandas 2.3.3, Matplotlib 3.11.1 y Pillow 12.3.0.
 
-![Los dos CSV fuente adjunta a la solicitud de comparación](/img/open-science/workflow-extensions/temperature-input.png)
+![Los dos CSV fuente adjunta a la solicitud de comparación](/img/open-science/workflow-extensions/temperature-input.webp)
 
 ## 2. Solicitar alineación antes de la interpretación {/* #2-ask-for-alignment-before-interpretation */}
 
@@ -52,7 +52,7 @@ Inspeccione el archivo propuesto leer y código Python antes de aprobar. Abra **
 
 Abre **temperature-aligned.csv**. La comparación registrada contiene **45 años compartidos**. Cada fuente tiene todas las estimaciones anuales de puntos **30** necesarias para su referencia 1991–2020; no faltaba un valor anual lleno de cero.
 
-![Los valores y diferencias anuales mejorados](/img/open-science/workflow-extensions/temperature-table.png)
+![Los valores y diferencias anuales mejorados](/img/open-science/workflow-extensions/temperature-table.webp)
 
 Los medios subcontratados son **0.61266667 °C** para la NASA y **0.53799554 °C** para HadCRUT. Retraer el propio medio de cada conjunto de datos, no un solo offset de ambos. Compruebe la unidad, año y dirección de resta antes de comparar las diferencias numéricas.
 
@@ -60,7 +60,7 @@ Los medios subcontratados son **0.61266667 °C** para la NASA y **0.53799554 °C
 
 Abre **temperature-comparison.png**. El primer panel conserva las diferentes bases de referencia originales; el segundo compara las dos series después de la rebasamiento de los períodos comunes.
 
-![Curvas de temperatura de base original y de base común en Open-Science](/img/open-science/workflow-extensions/temperature-plot.png)
+![Curvas de temperatura de base original y de base común en Open-Science](/img/open-science/workflow-extensions/temperature-plot.webp)
 
 | Resultado registrado, NASA menos HadCRUT | Valor |
 | --- | --- |
@@ -74,7 +74,7 @@ Las cifras son resultados para estas instantáneas descargadas. Las diferencias 
 
 Abra **temperature-crosscheck.md** y compare sus definiciones de origen y métricas con el CSV y el código. La tabla conserva los límites de confianza originales de HadCRUT y sus valores mecánicamente cambiados, pero la comparación hace que **no** difunda la incertidumbre en la base de referencia estimada o dependencia entre los recursos.
 
-![El informe guardado documenta las métricas y limitaciones reales](/img/open-science/workflow-extensions/temperature-report.png)
+![El informe guardado documenta las métricas y limitaciones reales](/img/open-science/workflow-extensions/temperature-report.webp)
 
 Descargue el <ExampleDownload path="/examples/workflow-extensions/temperature-aligned.csv">CSV alineado</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/temperature-comparison.png">gráfico</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.py">Python script</ExampleDownload> y <ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.md">informe</ExampleDownload>. Con los dos archivos de entrada disponibles, repetir en un entorno Python que contiene las bibliotecas listadas:
 

@@ -21,7 +21,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 3. 캔버스 아래에 표시된 것처럼, 회전, 스크롤, 또는 **Shift + 드래그** 팬에 드래그.
 4. 필요한 경우 원본 파일을 다운로드합니다. 대화로 돌아 가기 위해 전체 화면을 닫습니다.
 
-![실제 1UBQ 만화보기](/img/open-science/capabilities-walkthrough/26-pdb-cartoon.jpg)
+![실제 1UBQ 만화보기](/img/open-science/capabilities-walkthrough/26-pdb-cartoon.webp)
 
 | (주) | 무엇을 강조 |
 | --- | --- |
@@ -39,7 +39,7 @@ Representation controls 변경 렌더링 동안 보존 좌표. 공급된 구조�
 
 <ExampleDownload path="/examples/capabilities/P04637.fa">P04637 패션</ExampleDownload>, [UniProt의 FASTA 엔드포인트](https://rest.uniprot.org/uniprotkb/P04637.fasta)에서 다운로드. `>` 헤더의 accession/organism/gene를 검사하고 아래 순서. 네이티브 렌더는 소스 텍스트를 보존합니다; 순서 정렬 또는 편집 응용 프로그램이 아닙니다.
 
-![소스 미리보기의 실제 UniProt FASTA](/img/open-science/capabilities-walkthrough/31-fasta-preview.jpg)
+![소스 미리보기의 실제 UniProt FASTA](/img/open-science/capabilities-walkthrough/31-fasta-preview.webp)
 
 대화의 순서를 사용하려면 **+ → Attach files**과 현재 파일을 첨부하고 그 이름에서 infer 보다는 오히려 파일을 읽는 대리인을 요구하십시오. 이 P04637 입력을 위해, `P53_HUMAN` 우두머리, **393 아미노산** 및 처음 순서 **MEEPQSDPSV의 특징**를 검사하십시오. ID가 필요할 때 공급된 파일로 보고된 체크섬을 비교합니다.
 
@@ -51,7 +51,7 @@ Representation controls 변경 렌더링 동안 보존 좌표. 공급된 구조�
 
 `smiles: "CC(=O)Oc1ccccc1C(=O)O"` 및 `filename: "aspirin"`를 사용하여 `preview_molecule`을 실행하는 Molecule Connector에 문의하십시오. 생성 된 **아스피린. 몰** 카드 및 풀 스크린 미리보기를 엽니 다.
 
-![Aspirin는 내장 OpenChemLib 뷰어에 의해 렌더링](/img/open-science/capabilities-walkthrough/16-aspirin-viewer.jpg)
+![Aspirin는 내장 OpenChemLib 뷰어에 의해 렌더링](/img/open-science/capabilities-walkthrough/16-aspirin-viewer.webp)
 
 이 예에서, 통화는 유효 구조, 공식 **C9H8O4의 특징**, 분자 무게 **180.15852** 및 **13 무거운 원자** 및 저장 <ExampleDownload path="/examples/capabilities/aspirin.mol">아스피린. 몰</ExampleDownload>를 반환. 뷰어는 수동 열리고 검사되었습니다. 이것은 오프라인 구조 연출입니다; 그것은 바인딩 친화성, 도킹 포즈 또는 치료 활동을 예측하지 않습니다.
 

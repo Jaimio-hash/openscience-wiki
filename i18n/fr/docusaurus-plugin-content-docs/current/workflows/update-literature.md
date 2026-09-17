@@ -32,7 +32,7 @@ Do not retrieve full text or run the later update yet. Use English.
 
 Cette exécution a retourné **12 des allumettes 3,643**, conservé **7** et exclu **5**. Ouvrez **freshwater-search-plan.md** pour vérifier les critères et les dates avant de continuer. Le plan sauvegardé décrit l'état avant la mise à jour.
 
-![Spécification de la recherche de base sauvegardée et enregistrements conservés](/img/open-science/workflow-extensions/freshwater-search-plan.png)
+![Spécification de la recherche de base sauvegardée et enregistrements conservés](/img/open-science/workflow-extensions/freshwater-search-plan.webp)
 
 Examiner le niveau de preuve : certains candidats n'ont fourni que des titres/métadonnées, tandis que d'autres ont inclus un résumé autorisé par licence. Les grandes revues des voies de transport sont incluses dans le contexte; leur inclusion ne constitue pas un résultat expérimental spécifique à l'eau douce.
 
@@ -40,11 +40,11 @@ Examiner le niveau de preuve : certains candidats n'ont fourni que des titres/m�
 
 Télécharger <ExampleDownload path="/examples/workflow-extensions/freshwater-baseline.ris">le SIF de référence</ExampleDownload>. Dans **Library → New collection**, créez **Transport en eau douce Microplastique**, sélectionnez-le, puis choisissez **Import references**. Sélectionnez le RIS et vérifiez la destination et le comportement correspondant avant d'importer.
 
-![Aperçu des importations de base pour la collection nommée](/img/open-science/workflow-extensions/freshwater-import-baseline.png)
+![Aperçu des importations de base pour la collection nommée](/img/open-science/workflow-extensions/freshwater-import-baseline.webp)
 
 L'importation enregistrée est complétée par **7 Created, 0 réutilisé, 0 Skipped, 0 échoué**. Cliquez sur **Done** et confirmez que la collection a sept références. Les correspondances existantes dans une autre bibliothèque peuvent changer la division créée/réutilisée.
 
-![La collecte de référence de sept références](/img/open-science/workflow-extensions/freshwater-collection-baseline.png)
+![La collecte de référence de sept références](/img/open-science/workflow-extensions/freshwater-collection-baseline.webp)
 
 ## 3. Recherchez la fenêtre suivante dans la même conversation {/* #3-search-the-next-date-window-in-the-same-conversation */}
 
@@ -67,7 +67,7 @@ Write in English and reopen the outputs.
 
 Cette mise à jour a retourné **12 des allumettes 7,600**, avec **Ajouts de 7, chevauchements de référence de 0 et exclusions de 5**. Les deux recherches sont tronquées aux candidats 12. Le classement et la couverture des bases de données peuvent changer; les nombres décrivent la course de septembre 16, 2026.
 
-![Vérification de mise à jour sauvegardée avec ajouts et exclusions](/img/open-science/workflow-extensions/freshwater-update-audit.png)
+![Vérification de mise à jour sauvegardée avec ajouts et exclusions](/img/open-science/workflow-extensions/freshwater-update-audit.webp)
 
 Vérifiez les ensembles DOI réels plutôt que de soustraire les totaux. Enregistrez les <ExampleDownload path="/examples/workflow-extensions/freshwater-update-review.csv">de l ' audit actualisé</ExampleDownload> et <ExampleDownload path="/examples/workflow-extensions/freshwater-update-notes.md">Mise à jour des notes</ExampleDownload> datées à côté de la ligne de base.
 
@@ -75,11 +75,11 @@ Vérifiez les ensembles DOI réels plutôt que de soustraire les totaux. Enregis
 
 Télécharger <ExampleDownload path="/examples/workflow-extensions/freshwater-update.ris">les ajouts RIS</ExampleDownload>. Sélectionnez **Transport en eau douce Microplastique** dans la bibliothèque et choisissez **Import references**. Gardez **Reuse existing reference** afin qu'un élément déjà présent puisse être réutilisé en toute sécurité.
 
-![L'aperçu d'importation de mise à jour montrant sept ajouts](/img/open-science/workflow-extensions/freshwater-import-update.png)
+![L'aperçu d'importation de mise à jour montrant sept ajouts](/img/open-science/workflow-extensions/freshwater-import-update.webp)
 
 L'importation de mise à jour réelle est terminée avec **7 Created, 0 réutilisé, 0 Skipped, 0 échoué**. La collection contient désormais **Références 14**. Ceci est en accord avec l'union DOI normalisée des deux ensembles retenus.
 
-![La collection mise à jour avec quatorze références](/img/open-science/workflow-extensions/freshwater-collection-updated.png)
+![La collection mise à jour avec quatorze références](/img/open-science/workflow-extensions/freshwater-collection-updated.webp)
 
 La ligne de base elle-même n'a pas été réécrite. Préservez sa plage de dates et son dossier de recherche afin que les lecteurs plus tard puissent distinguer la base de preuves originale de la mise à jour. Pour appuyer une proposition ou une revendication scientifique, récupérer et lire les textes complets pertinents ci-après; L'inclusion des métadonnées à elle seule n'est pas une évaluation des preuves. Pour les lots de requêtes qui se chevauchent, voir [combiner des lots de recherche](merge-literature-searches.md).
 

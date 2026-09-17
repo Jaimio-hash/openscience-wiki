@@ -26,7 +26,7 @@ last_update:
 3. **Save key** は入力されたキーを貯え、成功すると待ち受けるコールを再開します。 **Not now** は、クレデンシャルを未設定のままにします。
 4. 最終的なツールのステータスをお読みください。 **Not now** を選択すると、**credential_required** を返すことができます。 再試行の前にキーを構成します。
 
-![OpenAlex は、英語アプリでクレデンシャルリクエストをリクエストします。](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.jpg)
+![OpenAlex は、英語アプリでクレデンシャルリクエストをリクエストします。](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.webp)
 
 プロンプトは、キーがこのコンピュータ上で暗号化され、`api.openalex.org`にのみ送信される状態を述べます。 設定では、OpenAlex フォームは、**Validate**、**Save**、**Remove key** を 1 つ存在し、**Cancel** も提供しています。 置換フィールドは、保存されたキーを明らかにしません。 セキュアなストレージエラーは、システムキーチェーンの状態を解凍して、秘密を保存する必要があります。
 
@@ -49,7 +49,7 @@ last_update:
 | ディスカバリー | 該当する場合、サーバーメタデータを発見します。 これは、それ自体によって成功したサインではありません。 |
 | キャンセル/保存 | 草案を破棄するか、有効なクレデンシャル設定を保存します。 |
 
-![OAuth 高度な登録フィールド](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.png)
+![OAuth 高度な登録フィールド](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.webp)
 
 カスタム Connector では、クレデンシャルをヘッダ、環境変数、または OAuth セレクターにバインドします。 名前は参照です; 説明やプロジェクトの指示に秘密の値を置かないでください。 輸出されたポータブル構成は、プレースホルダーとシークレットを交換します。 保存されたクレデンシャルはまだ実際のサービス/Connectorテストが必要です。
 

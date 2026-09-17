@@ -23,7 +23,7 @@ Notre projet exemple est **PRISMA - Systematic review reading pack**. Il utilise
 3. Sélectionnez **Create project**. Confirmez que la barre latérale gauche affiche le nom du projet et que le panneau principal ouvre **New conversation**.
 4. Ouvrez le menu nom du projet et **Project settings** pour vérifier les valeurs enregistrées. Un projet réussi d'économie est séparé de l'état de préparation modèle.
 
-![Projet PRISMA avec un objectif de recherche explicite et un contexte d'agent](/img/open-science/local-acceptance/prisma-project-form.png)
+![Projet PRISMA avec un objectif de recherche explicite et un contexte d'agent](/img/open-science/local-acceptance/prisma-project-form.webp)
 
 | Champ ou bouton | Exemple ou action | Ce qui change |
 | --- | --- | --- |

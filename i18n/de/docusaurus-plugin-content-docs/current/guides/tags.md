@@ -16,7 +16,7 @@ Nachdem Sie ein Tag zugewiesen haben, öffnen Sie dessen Detail und wählen Sie 
 2. Wählen Sie **Create**. Überprüfen Sie die neue Zeile und den Null-Ressourcenzustand.
 3. Wählen Sie **Edit Tag**, um die aktuellen Werte erneut zu überprüfen. **Save** verpflichtet eine Bearbeitung; **Cancel** verwirft den Entwurf.
 
-![Transcriptomics-Tag-Formular](/img/open-science/guides-walkthrough/30-tag-create.png)
+![Transcriptomics-Tag-Formular](/img/open-science/guides-walkthrough/30-tag-create.webp)
 
 | Feld/Steuerung | Optionen und Verhalten |
 | --- | --- |
@@ -40,19 +40,19 @@ Ein Tag-Name allein verbindet keinen Dienst, erteilt keine Berechtigung oder fü
 
 Weisen Sie **Transkriptomik** **Omics-Archive** zu und öffnen Sie dann das Tag-Detail. In diesem Beispiel zeigt es **1 Ressource**; Durch die Suche nach `Omics` bleibt das Connector sichtbar, und die Auswahl öffnet seine Details. Verwenden Sie Ihre eigenen Tag- und Ressourcennamen, wenn Sie diese Schritte wiederholen. Das Entfernen der Zuweisung lässt die Ressource intakt.
 
-![Zugeordnete Omics Archives-Ressource durch ihren Tag gefunden](/img/open-science/guides-walkthrough/35-tagged-connector.png)
+![Zugeordnete Omics Archives-Ressource durch ihren Tag gefunden](/img/open-science/guides-walkthrough/35-tagged-connector.webp)
 
 ## Bestellen Sie die Tagliste {/* #order-the-tag-list */}
 
 **Favorites** bleibt zuerst. Ziehen Sie **Reorder &#91;name&#93;** oder fokussieren Sie den Griff und verwenden Sie die Pfeiltasten, um ein benutzerdefiniertes Tag zu verschieben. Überprüfen Sie seine neue Position in der Liste.
 
-![Tag-Ordering und leere Ressourcenansicht](/img/open-science/guides-walkthrough/31-tag-reorder.png)
+![Tag-Ordering und leere Ressourcenansicht](/img/open-science/guides-walkthrough/31-tag-reorder.webp)
 
 ## Entfernen eines Tags {/* #remove-a-tag */}
 
 Wählen Sie **Delete Tag** und inspizieren Sie **Zu entfernende Aufgaben**. Das Löschen des Tags entfernt diese Zuweisungen, behält aber die Ressourcen. **Cancel** behält sowohl das Tag als auch seine Zuweisungen.
 
-![Löschumfang, abgebrochen in diesem Walkthrough](/img/open-science/guides-walkthrough/32-tag-delete-boundary.png)
+![Löschumfang, abgebrochen in diesem Walkthrough](/img/open-science/guides-walkthrough/32-tag-delete-boundary.webp)
 
 Wenn Ihr Zweck nur darin besteht, eine Zuweisung zu entfernen, tun Sie dies in der Ressource, anstatt das Tag überall zu löschen. Verwenden Sie [Literaturbibliothek](./library.md) zum Organisieren von Papieren in Sammlungen; Tags und Sammlungen dienen unterschiedlichen Zwecken.
 

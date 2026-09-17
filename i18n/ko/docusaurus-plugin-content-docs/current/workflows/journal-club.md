@@ -32,7 +32,7 @@ Stage verified candidates in Literature Inbox for my review; do not accept
 them automatically. Stop before downloading PDFs. Keep everything in English.
 ```
 
-![후보자 식별 및 검색 상태와 실제 검색 로그](/img/open-science/research-workflows/literature-topic-results.png)
+![후보자 식별 및 검색 상태와 실제 검색 로그](/img/open-science/research-workflows/literature-topic-results.webp)
 
 <a href="/docs/examples/research-workflows/single-atom-search-log.md" download>초기 검색 로그</a>은 웹 검색 및 Crossref 메타데이터를 통해 발견된 8개의 후보자를 기록합니다. 아직 종이를 다운로드하지 않았습니다. 소스가 자격 증명을 필요로 하는 경우, [커넥터](../guides/connectors.md)을 구성하거나, 에이전트를 요청하여 사용 가능한 소스와 간격을 사용합니다.
 
@@ -54,7 +54,7 @@ Keep the old collection unchanged. Keep everything in English.
 
 <a href="/docs/examples/research-workflows/single-atom-open-access-selection.md" download>관련 상품</a>을 검토 한 다음 4 개의 Inbox 행을 선택하고 **Accept**을 선택합니다. 오픈 액세스 소스 링크는 여전히 PDF을 저장하여 테스트해야합니다.
 
-![수동 합격을 위해 선정된 4개의 보충 후보자](/img/open-science/research-workflows/journal-open-access-inbox.png)
+![수동 합격을 위해 선정된 4개의 보충 후보자](/img/open-science/research-workflows/journal-open-access-inbox.webp)
 
 **New collection**을 사용하여 **Single-Atom Catalysis - Full-Text Journal Club**을 만듭니다. **All references**에서이 4 개의 허용 레코드를 선택하면 **Add to collection**을 선택합니다. **Add to project**을 사용하여 대화를 포함하는 프로젝트로 설정할 수 있습니다.
 
@@ -73,15 +73,15 @@ Keep the old collection unchanged. Keep everything in English.
 3. 첨부파일을 엽니다. 제목과 DOI을 기록과 비교하여 페이지 수를 확인합니다.
 4. 모든 5개의 참고를 위해 반복해서, 그 후에 수집을 다시 엽니다. 각 행은 이제 첨부 아이콘을 표시해야 합니다.
 
-![Lang 종이를 위해 제안되는 가득 차있 원본 소스](/img/open-science/research-workflows/literature-topic-fulltext.png)
+![Lang 종이를 위해 제안되는 가득 차있 원본 소스](/img/open-science/research-workflows/literature-topic-fulltext.webp)
 
 이 실행에서 Lang의 PDF은 유럽 PMC를 통해 추가되었습니다. 다른 4는 Unpaywall을 통해 발견 된 출판사 소스에서 저장되었습니다. 다른 소스가 추가될 수 없을 때 대체 소스가 성공할 수 있습니다. 필요한 경우 **Open source**을 사용하여 사본을 얻을 수 있으며 **Add PDF**에 액세스 할 수 있습니다. 읽을 수 없는 사본이 유효하지 않는 경우에, 선택 또는 표를 풀 텍스트 발견을 요구하기 전에 누락하십시오.
 
-![실제로 다운로드 된 종이는 영어로 열립니다 PDF 미리보기](/img/open-science/research-workflows/journal-qi-pdf.png)
+![실제로 다운로드 된 종이는 영어로 열립니다 PDF 미리보기](/img/open-science/research-workflows/journal-qi-pdf.webp)
 
 최종 수집에는 테이블의 순서에 **10, 9, 11, 10 및 11**을 계산하는 5개의 저장된 PDF가 포함되어 있습니다. 첨부 파일 아이콘은 저장된 파일을 확인합니다. 그것을 열어서 읽기 쉽고 기록을 일치합니다.
 
-![각 기록에 첨부된 5종의 논문 모음](/img/open-science/research-workflows/journal-five-fulltexts.png)
+![각 기록에 첨부된 5종의 논문 모음](/img/open-science/research-workflows/journal-five-fulltexts.webp)
 
 <span id="draft-the-reading-plan-then-deepen-it-with-full-text" />
 
@@ -108,17 +108,17 @@ do not delegate. I will open the results and check the original pages.
 
 완료 후 **Generated**에서 **single-atom-fulltext-reading-pack.md**을 엽니다. 5 종이 검증 테이블을 확인, 각 발견 및 그 위치, 제한, 질문 및 의제. 의제는 60 분을 합계해야합니다.
 
-![저장 된 풀 텍스트 팩, 같은 다섯 개의 종이와 소스 체크](/img/open-science/research-workflows/journal-fulltext-pack.png)
+![저장 된 풀 텍스트 팩, 같은 다섯 개의 종이와 소스 체크](/img/open-science/research-workflows/journal-fulltext-pack.webp)
 
 ## 원본 PDF에 대한 종이 지도 확인 {/* #check-the-paper-map-against-the-original-pdfs */}
 
 **single-atom-fulltext-paper-map.csv**을 열고 전체 화면보기에 확장 버튼을 사용합니다. 이 실행은 **5 행 · 12 열**이 포함되어 있습니다. 수집과 함께 DOI 세트를 비교하십시오; 다른 세트의 팩은이 작업 흐름의 결과가 아닙니다. 수평으로 스크롤하거나 CSV을 다운로드하여 전체에서 긴 세포를 읽습니다.
 
-![실제 5층, 12층 종이 지도](/img/open-science/research-workflows/journal-fulltext-paper-map.png)
+![실제 5층, 12층 종이 지도](/img/open-science/research-workflows/journal-fulltext-paper-map.webp)
 
 **Library**로 돌아가서 인용된 PDF을 열고, 그 페이지 카운터를 클릭하고, 요청한 페이지를 입력하고 **Enter**를 누릅니다. 그림이나 테이블을 캡션 및 주변 텍스트로 확인하십시오. 예를 들어, 그는 외. 's Figure 5은 **PDF 페이지 7**에 있습니다. 생산 라인 설명은 페이지 3에 있습니다. 그들은 요약의 다른 부분을 지원합니다.
 
-![그는 외. 그림 5은 PDF 페이지 7에 대한 자세한 내용을](/img/open-science/research-workflows/journal-he-figure5.png)
+![그는 외. 그림 5은 PDF 페이지 7에 대한 자세한 내용을](/img/open-science/research-workflows/journal-he-figure5.webp)
 
 위치 또는 상태가 잘못되었을 때 저장된 개정을 요청한 다음 개정된 파일을 다시 엽니다. 검사 팩은 또한 Sun et al. : 페이지 2 및 그림 5 캡션은 다른 피드 구성을 제공합니다. 그것은 모두 설명 대신 하나 침묵으로 선택. 이것은 유용한 회의 질문, 해결 된 실험적 세부 사항입니다.
 

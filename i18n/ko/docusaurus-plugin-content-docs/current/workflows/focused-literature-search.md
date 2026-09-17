@@ -34,7 +34,7 @@ Do not retrieve full text or infer clinical recommendations.
 Write in English, do not delegate, and reopen the saved files.
 ```
 
-![Open-Science의 실제 초점 연구 요청](/img/open-science/workflow-extensions/focused-search-input.png)
+![Open-Science의 실제 초점 연구 요청](/img/open-science/workflow-extensions/focused-search-input.webp)
 
 스크린 샷은 초기 요청을 보여줍니다. 위의 조작상 검열 규칙은 그 실행의 후속 검토를 통합합니다.
 
@@ -55,11 +55,11 @@ AND ("JAMA Psychiatry"[Journal] OR "Behaviour Research and Therapy"[Journal])
 
 응답이 완료되면 **Generated** 아래 **mindfulness-search-audit.csv**을 엽니다. 모든 검색 PMID, 제외 및 불확실한 레코드를 포함. 제목을 확인, 저널, DOI 및 연결된 PubMed 레코드에 대한 날짜, 다음 요약과 결정을 비교.
 
-![uncertain 및 제외된 레코드를 포함한 저장된 후보자 표](/img/open-science/workflow-extensions/focused-search-table.png)
+![uncertain 및 제외된 레코드를 포함한 저장된 후보자 표](/img/open-science/workflow-extensions/focused-search-table.webp)
 
 초기 초안에서 inaccurate 이유를 찾았습니다. 예를 들어 PMID **38837133**은 더 넓은 정신 요법의 1 차 무작위 시험이며, 이차 분석이 아닙니다. 개정된 테이블은 그것의 mindfulness eligibility **이름 &#42;**를 표합니다. PMID **34009273**은 메타 분석이며 정확한 이유와 제외됩니다. 기록과 특정 오류는 에이전트에게 구체적인 개정 요청을 제공합니다; 그런 다음 저장 된 CSV을 다시 변경을 확인.
 
-![Notebook의 실제 상영 개정 및 저장된 파일 체크](/img/open-science/workflow-extensions/focused-search-notebook.png)
+![Notebook의 실제 상영 개정 및 저장된 파일 체크](/img/open-science/workflow-extensions/focused-search-notebook.webp)
 
 검토 된 예 테이블은 **20 포함, 37 제외 및 5 불확실한 기록**, 모든 **62**에 대한 회계가 포함되어 있습니다. 이들은 20의 명백한 시험이 완전히 승인되었는지 선언하지 않는 요약 수준 검열 결정입니다. 다수 간행물은 동일한 underlying 재판을 걱정할 수 있습니다.
 
@@ -69,7 +69,7 @@ PMID **41418645**는 2019–2025 PubMed 출판 날짜 필터에 의해 반환되
 
 **mindfulness-search-notes.md**을 열고 계산, 자격 규칙 및 제한이 CSV과 일치한다는 것을 확인합니다. 이 실행은 모두 파일을 수정하고 unchanged raw metadata snapshot을 유지합니다.
 
-![20/37/5 스크린 카운트와 함께 검색 노트를 수정](/img/open-science/workflow-extensions/focused-search-notes.png)
+![20/37/5 스크린 카운트와 함께 검색 노트를 수정](/img/open-science/workflow-extensions/focused-search-notes.webp)
 
 <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-audit.csv">관련 기관</ExampleDownload> 및 <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-notes.md">관련 기사</ExampleDownload> 다운로드. 전체 요약은 여기에 적색되지 않습니다; 소스 링크를 따라 검사합니다.
 

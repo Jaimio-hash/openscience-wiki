@@ -23,7 +23,7 @@ Nuestro proyecto es **PRISMA - Systematic review reading pack**. Utiliza documen
 3. Seleccione **Create project**. Confirme que la barra lateral izquierda muestra el nombre del proyecto y el panel principal abre **New conversation**.
 4. Abra el menú de nombre de proyecto y **Project settings** para comprobar los valores guardados. Un ahorro de proyecto exitoso está separado de la preparación del modelo.
 
-![Proyecto PRISMA con un propósito de investigación explícito y Agente Context](/img/open-science/local-acceptance/prisma-project-form.png)
+![Proyecto PRISMA con un propósito de investigación explícito y Agente Context](/img/open-science/local-acceptance/prisma-project-form.webp)
 
 | Campo o botón | Ejemplo o acción | Qué cambios |
 | --- | --- | --- |

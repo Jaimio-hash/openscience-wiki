@@ -31,11 +31,11 @@ air-report-v1.md. The script must accept one or more CSV paths plus
 input/script hashes. Stop after this baseline. Use English.
 ```
 
-![Demande de saisie de première semaine et de calcul de base](/img/open-science/workflow-extensions/air-input-v1.png)
+![Demande de saisie de première semaine et de calcul de base](/img/open-science/workflow-extensions/air-input-v1.webp)
 
 Examinez le dossier et calculez-le avant d'approuver. Dans **Notebook**, vérifiez que l'exécution se termine, puis ouvrez **air-daily-v1.csv**. La base de référence contient **168 lignes horaires et 7 lignes quotidiennes**, sans valeurs PM2.5 manquantes.
 
-![Les valeurs de base de sept jours et les nombres d'heures valides enregistrés](/img/open-science/workflow-extensions/air-baseline-table.png)
+![Les valeurs de base de sept jours et les nombres d'heures valides enregistrés](/img/open-science/workflow-extensions/air-baseline-table.webp)
 
 ## 2. Ajouter de nouvelles observations sans modifier la méthode {/* #2-add-new-observations-without-changing-the-method */}
 
@@ -53,7 +53,7 @@ Reopen the saved results. This is a historical replay, not live data.
 Use English and do not make health or causal claims.
 ```
 
-![Le fichier de la deuxième semaine s'est ajouté à la conversation d'analyse existante](/img/open-science/workflow-extensions/air-update-input.png)
+![Le fichier de la deuxième semaine s'est ajouté à la conversation d'analyse existante](/img/open-science/workflow-extensions/air-update-input.webp)
 
 Vérifiez que l'Agent exécute le script existant et conserve les mêmes règles de valeur manquante et d'exhaustivité. Changer les données et les méthodes rendrait plus difficile d'expliquer pourquoi le résultat a changé.
 
@@ -61,7 +61,7 @@ Vérifiez que l'Agent exécute le script existant et conserve les mêmes règles
 
 Ouvrir **air-daily-v2.png** et **air-daily-v2.csv**. L'entrée combinée contient **Lignes horaires 336**, avec **pas de duplicata ou d'horodatage manquant**. Il y a **une observation manquante PM2.5**, le janvier 11. La table a **14 jours**, tous conformes à la règle 18-valid-heure de l'exemple.
 
-![Le résultat élargi de quatorze jours affiché dans Open-Science](/img/open-science/workflow-extensions/air-update-plot.png)
+![Le résultat élargi de quatorze jours affiché dans Open-Science](/img/open-science/workflow-extensions/air-update-plot.webp)
 
 La moyenne 11 de janvier est **11.652 μg/m3**, calculée à partir de **23 heures valides**. Ne divisez pas une observation manquante comme si elle était nulle. Une séquence complète d'horodatage ne garantit pas la présence de toutes les valeurs de mesure.
 
@@ -69,17 +69,17 @@ La moyenne 11 de janvier est **11.652 μg/m3**, calculée à partir de **23 heur
 
 Ouvrez **air-update-check.csv**. Tous les **sept lignes quotidiennes partagées** sont identiques dans chaque champ de sortie; les seules nouvelles dates sont janvier 8–14. Le script original SHA-256 est inchangé avant et après la mise à jour.
 
-![Comparaison ligne par ligne enregistrée avec des dates de référence inchangées](/img/open-science/workflow-extensions/air-update-check.png)
+![Comparaison ligne par ligne enregistrée avec des dates de référence inchangées](/img/open-science/workflow-extensions/air-update-check.webp)
 
 Ouvrez **air-update-notes.md** pour vérifier les identités d'entrée, les observations manquantes et les fichiers v1 conservés. Un calcul indépendant de tous les moyens quotidiens 14 et des nombres d'heures valides a permis de comparer la sortie sauvegardée à sa précision affichée.
 
-![Les notes de mise à jour enregistrent le code inchangé, conservent les fichiers de base et vérifient les données](/img/open-science/workflow-extensions/air-update-notes.png)
+![Les notes de mise à jour enregistrent le code inchangé, conservent les fichiers de base et vérifient les données](/img/open-science/workflow-extensions/air-update-notes.webp)
 
 ## 5. Vérifiez les dates du rapport avant de le remettre {/* #5-check-the-report-dates-before-handing-it-off */}
 
 Vérifiez que le titre du rapport suit l'intervalle d'entrée réel. Le scénario initial a conservé un titre de première semaine dans son rapport de deux semaines; cette erreur de présentation a été corrigée dans **air-analysis-reviewed.py**. Seul le modèle d'en-tête a changé. Le script examiné a ensuite été exécuté sans changement pendant la semaine 1 et les deux semaines, en conservant tous les fichiers précédents.
 
-![Le rapport corrigé énumère maintenant l'intervalle complet de deux semaines](/img/open-science/workflow-extensions/air-reviewed-report.png)
+![Le rapport corrigé énumère maintenant l'intervalle complet de deux semaines](/img/open-science/workflow-extensions/air-reviewed-report.webp)
 
 Les **air-daily-baseline.csv** et **air-daily-updated.csv** enregistrés correspondent aux VSV v1/v2 originaux dans chaque champ. **air-update-verification.md** enregistre le même hash de script examiné avant et après les deux exécutions, et vérifie les deux titres de rapport. Ceci sépare une étiquette corrigée d'une modification de la méthode numérique.
 

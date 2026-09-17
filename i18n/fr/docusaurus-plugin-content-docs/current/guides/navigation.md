@@ -12,7 +12,7 @@ Utilisez Home pour choisir l'enquête, la liste de sessions pour choisir sa conv
 
 Utilisez **Settings → General → Appearance** pour modifier le langage ou le thème de l'application. Le [paramètres centre](../settings/overview.md) regroupe les panneaux par but et fournit sa propre recherche.
 
-![Accueil avec les projets d'expression génétique et de littérature](/img/open-science/v0.27.0/01-home.png)
+![Accueil avec les projets d'expression génétique et de littérature](/img/open-science/v0.27.0/01-home.webp)
 
 | Entrée | Décision | Vérifier après ouverture |
 | --- | --- | --- |

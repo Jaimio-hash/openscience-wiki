@@ -49,13 +49,13 @@ claim to have read full text unless you actually retrieved it.
 
 При появлении **Save to Literature Inbox?** просмотрите операцию и авторизуйте предполагаемую экономию. Сохранение кандидатов отличается от принятия их в библиотеку.
 
-![Разрешение на подготовку литературных кандидатов](/img/open-science/prisma-walkthrough/03-inbox-save-approval.png)
+![Разрешение на подготовку литературных кандидатов](/img/open-science/prisma-walkthrough/03-inbox-save-approval.webp)
 
 ## 2. Проверить каждого кандидата перед принятием {/* #2-review-each-candidate-before-accepting */}
 
 Открыть **Library → Inbox**. В этом прогоне значок показывал **3**, а в каждой строке отображался заголовок, первые авторы, год публикации и **Найдено с помощью Crossref**.
 
-![Три реальные статьи PRISMA, ожидающие рассмотрения](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![Три реальные статьи PRISMA, ожидающие рассмотрения](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 1. Выберите название кандидата, чтобы раскрыть его детали.
 2. Проверьте **Provider**, его исходную ссылку и **Identifiers → DOI** на предполагаемой бумаге.
@@ -63,7 +63,7 @@ claim to have read full text unless you actually retrieved it.
 4. Выберите **Accept**, когда идентичность совпадает. Кандидат исчезает из Inbox и становится библиотечной записью.
 5. Повторите для двух других. Значок изменился с 3 на 2 на 1. Последним был **Inbox is clear**.
 
-![Источник Crossref кандидата и точный DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.png)
+![Источник Crossref кандидата и точный DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.webp)
 
 | Контроль входящих сообщений | Итоги | Когда использовать |
 | --- | --- | --- |
@@ -81,25 +81,25 @@ claim to have read full text unless you actually retrieved it.
 - **Описание:** содержит обновленные и исторические руководства по отчетности. Описание — это организационный текст, а не агентские инструкции.
 - Выберите **Create collection**; Имя требуется, а описание является необязательным. **Cancel** и **Close** отбрасывают проект.
 
-![Целенаправленная коллекция для чтения](/img/open-science/prisma-walkthrough/06-create-collection.png)
+![Целенаправленная коллекция для чтения](/img/open-science/prisma-walkthrough/06-create-collection.webp)
 
 В **All references** ищите `PRISMA`. Подтвердите, что все три записи видны, выберите их флажок и используйте **Add to collection → PRISMA reporting - Core reading**. Операция очищает выбор. Выберите три записи снова, затем используйте **Add to project → PRISMA - Systematic review reading pack**.
 
 Откройте коллекцию и проверьте ее три записи. Откройте рекомендательную деталь, чтобы подтвердить, что выбраны как флажок проекта, так и флажок сбора. Это ссылки на общие записи, а не три дополнительных копии библиографии.
 
-![Завершенная трехбумажная коллекция](/img/open-science/prisma-walkthrough/07-core-reading-collection.png)
+![Завершенная трехбумажная коллекция](/img/open-science/prisma-walkthrough/07-core-reading-collection.webp)
 
 ## 4. Прикрепить полезный полный текст {/* #4-attach-usable-full-text */}
 
 Откройте 2021 и выберите **Find full-text PDF**. Поиски вернули Европе ЧВК в этом забеге. Проверьте **Open source** перед выбором **Add attachment**.
 
-![Обнаружен полнотекстовый источник](/img/open-science/prisma-walkthrough/08-full-text-source.png)
+![Обнаружен полнотекстовый источник](/img/open-science/prisma-walkthrough/08-full-text-source.webp)
 
 Источник был обнаружен, но **Add attachment** вернул **PDF could not be added**. В сообщении перечислены возможные причины, включая требования к входу, просроченные ссылки и ограничение 50 MB. Он не указывает, какая причина произошла здесь.
 
 Чтобы восстановиться, скачайте открыто доступный PDF из [Страница статьи издательства](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003583). Вернитесь к той же ссылке и используйте **Add PDF**. Выберите загруженный файл, затем откройте **Превью Prisma-2020-statement.pdf** в разделе Приложения. Успешно прикрепленный файл показал **806.1 KB** и предварительный просмотр **15-страница**. Проверьте заголовок и DOI на первой странице против записи.
 
-![Издатель PDF успешно прикреплен и открыт](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![Издатель PDF успешно прикреплен и открыт](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 Видимый исходный результат не является прикрепленным PDF. Прикрепленный PDF не является доказательством того, что агент прочитал его. **Read with agent** - это отдельное действие, которое предоставляет контекст для чтения для последующего запроса.
 

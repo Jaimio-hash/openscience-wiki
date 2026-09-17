@@ -27,4 +27,4 @@ last_update:
 
 ## 変更履歴 {/* #changelog */}
 
-[最新のリリースノートを参照](../changelog/v0.30.1.md).
+[最新のリリースノートを参照](../changelog/v0.30.2.md).

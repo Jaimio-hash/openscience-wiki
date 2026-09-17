@@ -1,7 +1,7 @@
 ---
 title: "提取文獻證據表"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # 提取文獻證據表 {/* #提取文献证据表 */}
@@ -26,7 +26,9 @@ python3 prepare-mask-sources.py
 
 點選附件開啟預覽。每篇研究以標題、DOI 和原始來源連結開頭，後面保留正文分節和表格。將十篇身份與來源清單逐一對照；重複的章節標題不代表多了一項研究。
 
-![實際附加的全文包保留論文身份和正文分節](/img/open-science/research-workflows/mask-trials-input.png)
+![實際附加的全文包保留論文身份和正文分節](/img/open-science/research-workflows/mask-trials-input.webp)
+
+將論文用作證據前，先在來源檢查更正或撤稿。自 v0.30.2 起，`literature-review` Skill 的 `verify_dois` 輔助方法會檢查 Crossref 兩個方向的更新關係。`retracted: true` 可能標記被撤稿論文，也可能標記撤稿通知，應開啟關聯記錄區分；`false` 只表示未發現所檢查的標記，不能證明論文從未撤稿。下方十篇論文的既有實操記錄未包含這項新增檢查。
 
 ## 要求每項試驗佔一行 {/* #要求每项试验占一行 */}
 
@@ -51,7 +53,7 @@ Use only the supplied sources, write in English and do not delegate.
 
 回答完成後開啟 CSV，將十個 DOI 與來源清單對照，再逐篇核對結果章節或表格中的效應估計和分析人群。
 
-![Open-Science 中的十項試驗證據表](/img/open-science/research-workflows/mask-trials-evidence.png)
+![Open-Science 中的十項試驗證據表](/img/open-science/research-workflows/mask-trials-evidence.webp)
 
 重點保留以下區別：
 
@@ -64,7 +66,7 @@ Use only the supplied sources, write in English and do not delegate.
 
 除 CSV 外，也開啟 **mask-trials-reading-notes.md**。本次最終表為 **10 rows · 12 columns**。可展開預覽或下載檔案閱讀長單元格；單元格被截斷不等於原文缺失。說明檔案保留十篇研究身份，並解釋為何不能自動合併不同結局與人群。
 
-![儲存後的閱讀說明及已完成的十行結果](/img/open-science/research-workflows/mask-trials-notes.png)
+![儲存後的閱讀說明及已完成的十行結果](/img/open-science/research-workflows/mask-trials-notes.webp)
 
 某行錯誤或不完整時，指出論文及具體章節/表格，要求同時修訂**兩份檔案**，然後重新開啟。例如 Cowling 2008 的隨機分配家庭流程與實際分析子集應分別保留。回答文字更新不代表儲存的表格也已更新。
 

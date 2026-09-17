@@ -27,7 +27,7 @@ Dans la gestion des lots, examiner le nombre sélectionné dans la zone d'action
 
 Avant de supprimer un rôle, inspecter l'option pour supprimer son Skills. Conserver Skills partagé si d'autres rôles les utilisent encore. Supprimer un duplicata ne nécessite pas la suppression du rôle original.
 
-![Suppression du rôle jetable tout en conservant Skills partagé](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.jpg)
+![Suppression du rôle jetable tout en conservant Skills partagé](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.webp)
 
 ## Partager et importer un paquet {/* #share-and-import-a-package */}
 
@@ -39,7 +39,7 @@ Avant de supprimer un rôle, inspecter l'option pour supprimer son Skills. Conse
 2. Dans **Choose Skills to include**, sélectionnez explicitement `rnaseq-count-qc` si le destinataire a besoin de ses fichiers. Un Skill personnel/importé installé n'est pas nécessairement inclus par défaut.
 3. Exportez et inspectez les archives avant de les partager.
 
-![Sélection d'un Skill à inclure dans le paquet Specialist](/img/open-science/capabilities-walkthrough/07-specialist-export.jpg)
+![Sélection d'un Skill à inclure dans le paquet Specialist](/img/open-science/capabilities-walkthrough/07-specialist-export.webp)
 
 Le <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.zip">paquet avec Skill</ExampleDownload> réel contient `manifest.json`, `specialist.json`, `skills/rnaseq-count-qc/SKILL.md` et son schéma de référence. Une exportation minimale peut contenir seulement les deux fichiers JSON. Les identifiants Connector sont des références; les titres de compétence, la confiance locale et le plein accès ne sont pas transférés comme autorisation prête à l'emploi.
 
@@ -52,7 +52,7 @@ Le <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.
 5. Le rôle importé est enregistré **désactivé / SETUP INCOMPLETE**. Inspectez les instructions et les liaisons de capacité dans l'éditeur, choisissez la portée d'accès prévue, puis **Save changes** pour terminer la configuration et l'activer.
 6. Réouvrir le rôle installé et exécuter une petite tâche de portée.
 
-![Résolution du vrai conflit RNA-seq Skill pendant l'importation](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.jpg)
+![Résolution du vrai conflit RNA-seq Skill pendant l'importation](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.webp)
 
 **Version inchangée** peut encore accompagner un conflit Skill. Choisissez explicitement la source Skill prévue, puis rouvrez le rôle importé pour confirmer ses liaisons et sa portée d'accès.
 
@@ -71,11 +71,11 @@ Le <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.
 
 Ouvrez **Browse Marketplace**, recherchez un rôle et choisissez **View details**. Vérifiez l'éditeur, la source, la version, la licence, la taille de téléchargement et inclus Skills/Connectors. **Refresh Marketplace** met à jour le catalogue; **Manage Marketplace sources** contrôle les sources configurées. Tous les filtres/officiels/communautaires concernent l'origine du catalogue et non l'état de préparation à l'exécution.
 
-![Le détail du paquet Auto Research Specialist](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.jpg)
+![Le détail du paquet Auto Research Specialist](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.webp)
 
 Sélectionnez **Install Specialist**, puis confirmez le rôle apparaît dans **Marketplace** et inspectez son état d'activation et ses liaisons. Le nombre de paquets de catalogues décrit ce paquet, pas toutes les capacités d'application. L'installation n'exécute pas de tâche de recherche ou ne prépare pas toutes les dépendances externes; terminer toute configuration requise avant utilisation.
 
-![Auto Recherche installée et activée](/img/open-science/capabilities-walkthrough/23-marketplace-installed.jpg)
+![Auto Recherche installée et activée](/img/open-science/capabilities-walkthrough/23-marketplace-installed.webp)
 
 ## Vérifier avant le partage {/* #verify-before-sharing */}
 

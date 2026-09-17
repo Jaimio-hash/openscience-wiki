@@ -16,7 +16,7 @@ Après l'attribution d'une balise, ouvrez son détail et sélectionnez une resso
 2. Sélectionnez **Create**. Vérifiez la nouvelle ligne et l'état de la ressource zéro.
 3. Choisissez **Edit Tag** pour revoir les valeurs actuelles. **Save** commet une modification; **Cancel** rejette le projet.
 
-![Transcriptomics tag formulaire](/img/open-science/guides-walkthrough/30-tag-create.png)
+![Transcriptomics tag formulaire](/img/open-science/guides-walkthrough/30-tag-create.webp)
 
 | Champ/contrôle | Options et comportement |
 | --- | --- |
@@ -40,19 +40,19 @@ Un nom de balise seul ne connecte pas un service, n'accorde pas la permission ou
 
 Assignez **Transcriptomique** à **Archives Omics**, puis ouvrez le détail de la balise. Dans cet exemple, il montre **Ressources de 1**; recherche `Omics` garde que Connector visible, et la sélection il ouvre ses détails. Utilisez vos propres noms d'étiquette et de ressource lors de la répétition de ces étapes. L'élimination de l'affectation laisse la ressource intacte.
 
-![Ressources des archives d'Omics assignées trouvées par son étiquette](/img/open-science/guides-walkthrough/35-tagged-connector.png)
+![Ressources des archives d'Omics assignées trouvées par son étiquette](/img/open-science/guides-walkthrough/35-tagged-connector.webp)
 
 ## Commandez la liste des étiquettes {/* #order-the-tag-list */}
 
 **Favorites** reste en premier. Faites glisser **Récommander &#91;nom&#93;**, ou concentrez la poignée et utilisez les touches fléchées, pour déplacer une balise personnalisée. Vérifiez sa nouvelle position dans la liste.
 
-![Commande d'étiquettes et vue vide des ressources](/img/open-science/guides-walkthrough/31-tag-reorder.png)
+![Commande d'étiquettes et vue vide des ressources](/img/open-science/guides-walkthrough/31-tag-reorder.webp)
 
 ## Supprimer une balise {/* #remove-a-tag */}
 
 Sélectionnez **Delete Tag** et inspectez **Attributions à supprimer**. Supprimer la balise supprime ces affectations mais garde les ressources. **Cancel** conserve à la fois la balise et ses attributions.
 
-![Suppression du champ d'application, annulée dans ce passage](/img/open-science/guides-walkthrough/32-tag-delete-boundary.png)
+![Suppression du champ d'application, annulée dans ce passage](/img/open-science/guides-walkthrough/32-tag-delete-boundary.webp)
 
 Si votre but est seulement de supprimer une tâche, faites-le sur la ressource plutôt que de supprimer la balise partout. Utiliser [Bibliothèque de références](./library.md) pour organiser les documents en collections; les étiquettes et les collections servent à des fins différentes.
 

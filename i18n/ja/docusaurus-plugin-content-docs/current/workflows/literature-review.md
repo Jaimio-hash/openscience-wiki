@@ -1,7 +1,7 @@
 ---
 title: "文献証拠表を抽出する"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # 文献証拠表を抽出する {/* #extract-a-literature-evidence-table */}
@@ -26,7 +26,9 @@ Open-Scienceプロジェクトでは、作業モデルを選択し、結果のMa
 
 添付ファイルをクリックしてプレビューを開きます。 各研究は、タイトル、DOI、元のソースリンクから始まり、セクションテキストとテーブルで続きます。 ソースリストで10のアイデンティティを一致させます。 追加の研究として繰り返されたセクション見出しをカウントしません。
 
-![実際の添付のフルテキストパックは、ソースのアイデンティティと記事セクションを保持します](/img/open-science/research-workflows/mask-trials-input.png)
+![実際の添付のフルテキストパックは、ソースのアイデンティティと記事セクションを保持します](/img/open-science/research-workflows/mask-trials-input.webp)
+
+論文を証拠として使用する前に、そのソースで修正または引き込みを確認してください。 v0.30.2 から、`literature-review` Skill の `verify_dois` ヘルパーは、両方の方向で Crossref の更新関係をチェックします。 `retracted: true`は引き込み紙か引き込みの通知を識別できます; リンクされた関係を点検して下さい。 `false` は、紙が引き起こさなかった証拠ではなく、チェックマーカーが発見されていないことを意味します。 この追加チェックは、レコードのレコードの10枚の紙の実行の一部ではありませんでした。
 
 ## トライアル1列につき1列を申し込む {/* #ask-for-one-row-per-trial */}
 
@@ -51,7 +53,7 @@ Use only the supplied sources, write in English and do not delegate.
 
 応答が完了した後、CSVを開きます。 ソースリストで10のDOI値を比較し、各論文の結果セクションまたはテーブルに対して報告された推定値と分析人口を確認します。
 
-![Open-Scienceの10兆証拠表](/img/open-science/research-workflows/mask-trials-evidence.png)
+![Open-Scienceの10兆証拠表](/img/open-science/research-workflows/mask-trials-evidence.webp)
 
 これらの差別に注意を払う:
 
@@ -64,7 +66,7 @@ Use only the supplied sources, write in English and do not delegate.
 
 **mask-trials-reading-notes.md** と CSV を開きます。 最後のテーブルは**10行・12列**です。 プレビューを拡大するか、長いセルを読むためにファイルをダウンロードします。 truncatedセルは、ソーステキストが欠落していない。 ノートは10件の研究のアイデンティティを保持し、その結果と人口が自動的にプールされない理由を説明しています。
 
-![保存された読書ノートおよび完了された10列の出力](/img/open-science/research-workflows/mask-trials-notes.png)
+![保存された読書ノートおよび完了された10列の出力](/img/open-science/research-workflows/mask-trials-notes.webp)
 
 行が間違っているか、不完全な場合は、研究と正確なソースセクション/テーブルを名前付け、**両方とも**ファイルへのリビジョンを要求し、それらを再オープンします。 例えば、Cowling 2008の分析されたサブセットとは別々にランダム化した世帯の流れを保ちましょう。 プロス回答の更新は、保存されたテーブルを更新しない。
 

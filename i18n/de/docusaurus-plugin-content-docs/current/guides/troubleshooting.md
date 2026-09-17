@@ -111,7 +111,7 @@ Recovery bedeutet, dass der Startbildschirm gelöscht und die erwarteten Projekt
 
 Wenn der Startbildschirm nur **Quit** bietet, beenden Sie die App, beheben Sie die gemeldete Ursache und starten Sie sie erneut. Verwenden Sie **Retry** nur, wenn die Seite es bereitstellt. Öffnen Sie nach der Wiederherstellung Ihre erwarteten Projekte und Dateien erneut.
 
-![Startanleitung, wenn die Datenbank nicht geöffnet werden kann](/img/open-science/local-acceptance/startup-database-error.png)
+![Startanleitung, wenn die Datenbank nicht geöffnet werden kann](/img/open-science/local-acceptance/startup-database-error.webp)
 
 ### Wiederherstellungsmeldungen {/* #recovery-messages */}
 
@@ -197,7 +197,7 @@ Wählen Sie **Report this error** neben einem Gesprächsfehler. Ein Startbildsch
 4. Überprüfen Sie die Public-Sharing-Bestätigung, um **Open GitHub issue** zu aktivieren. Das Bearbeiten des Fehlertextes erfordert eine erneute Überprüfung und Bestätigung des überarbeiteten Inhalts.
 5. Öffnen Sie das GitHub-Formular, prüfen Sie die vorab ausgefüllten Felder, fügen Sie nützliche Reproduktionsschritte hinzu und senden Sie sie dann, wenn sie fertig sind. Das Öffnen der Berichtsvorschau allein stellt kein Problem dar.
 
-![Angaben zu belegbaren Fehlern und Bestätigung der gemeinsamen Nutzung](/img/open-science/sept11-completion/report-preview.png)
+![Angaben zu belegbaren Fehlern und Bestätigung der gemeinsamen Nutzung](/img/open-science/sept11-completion/report-preview.webp)
 
 ## Gemeinsame Fragen {/* #common-questions */}
 

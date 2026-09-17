@@ -35,19 +35,19 @@ Lea la explicación de cada cheque junto con su estado. Cuando un agente ya est�
 
 <PlatformContent platform="macos">
 
-![Comprobaciones de medio ambiente completadas durante la configuración de macOS por primera vez](/img/open-science/macos/setup-environment.png)
+![Comprobaciones de medio ambiente completadas durante la configuración de macOS por primera vez](/img/open-science/macos/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-![Comprobaciones ambientales durante la configuración de Windows por primera vez](/img/open-science/windows/setup-environment.png)
+![Comprobaciones ambientales durante la configuración de Windows por primera vez](/img/open-science/windows/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="linux">
 
-![Los cuatro cheques de entorno pasaron durante la configuración de Linux por primera vez](/img/open-science/linux/setup-environment.png)
+![Los cuatro cheques de entorno pasaron durante la configuración de Linux por primera vez](/img/open-science/linux/setup-environment.webp)
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ Lea la explicación de cada cheque junto con su estado. Cuando un agente ya est�
 
 <PlatformContent platform="macos">
 
-![Ubicación de los datos antes de elegir una carpeta](/img/open-science/walkthrough-2026-09-08/02-data-location.png)
+![Ubicación de los datos antes de elegir una carpeta](/img/open-science/walkthrough-2026-09-08/02-data-location.webp)
 
 </PlatformContent>
 Elija la ubicación para archivos grandes antes de instalar tiempos de ejecución. Los artefactos, los cuadernos y los entornos utilizan la ubicación de los datos; Los ajustes y la historia permanecen en la ubicación de configuración. El camino mostrado es un resumen sólo lectura, no un campo de texto.
@@ -73,14 +73,14 @@ Elija la ubicación para archivos grandes antes de instalar tiempos de ejecució
 
 <PlatformContent platform="macos">
 
-![Pareja personalizada seleccionada y la ruta final administrada por la aplicación](/img/open-science/local-acceptance/data-location-selected.png)
+![Pareja personalizada seleccionada y la ruta final administrada por la aplicación](/img/open-science/local-acceptance/data-location-selected.webp)
 
 </PlatformContent>
 Seleccione **Browse…**, elija una carpeta padre vacía en un disco con suficiente espacio e inspeccione el camino completo manejado mostrado por el mago. Seleccione **Continue** y lea la confirmación del reinicio. Utilice una ubicación estable de datos de investigación en lugar de una carpeta temporal.
 
 <PlatformContent platform="macos">
 
-![Confirmación de reinicio para la ubicación de datos seleccionada](/img/open-science/local-acceptance/data-location-confirm.png)
+![Confirmación de reinicio para la ubicación de datos seleccionada](/img/open-science/local-acceptance/data-location-confirm.webp)
 
 </PlatformContent>
 | Control de confirmación | Resultado |
@@ -105,7 +105,7 @@ Si la página informa **No podía terminar de configurar el almacenamiento: EACC
 
 <PlatformContent platform="macos">
 
-![Controles de falla y recuperación de la configuración real](/img/open-science/local-todo-batch/56-onboarding-config-write-error.png)
+![Controles de falla y recuperación de la configuración real](/img/open-science/local-todo-batch/56-onboarding-config-write-error.webp)
 
 </PlatformContent>
 Si reiniciar falla antes de que cambie la ubicación, restaurar la configuración escribir acceso y reabrir el asistente. Revise el camino activo y los archivos existentes antes de volver a iniciar un movimiento; ver [Almacenamiento](storage.md).
@@ -116,7 +116,7 @@ Elija el backend de codificación-agente que se llevará a cabo sesiones. Selecc
 
 <PlatformContent platform="macos">
 
-![Menú fuente de instalación Codex](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.png)
+![Menú fuente de instalación Codex](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.webp)
 
 </PlatformContent>
 1. Abre **Instalar Codex**.
@@ -127,7 +127,7 @@ Elija el backend de codificación-agente que se llevará a cabo sesiones. Selecc
 
 <PlatformContent platform="macos">
 
-![Codex instalado y seleccionado como el tiempo de ejecución activo](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.png)
+![Codex instalado y seleccionado como el tiempo de ejecución activo](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.webp)
 
 </PlatformContent>
 Las etiquetas de la versión identifican al agente o adaptador instalado, no al modelo seleccionado. Inspeccione los valores instalados en lugar de esperar las versiones exactas de la captura de pantalla.
@@ -136,7 +136,7 @@ Las etiquetas de la versión identifican al agente o adaptador instalado, no al 
 
 Si un agente compatible ya está instalado, seleccione su tarjeta y confirme **Active** antes de continuar. La pantalla Windows a continuación utiliza una instalación Codex existente; reinstalar es innecesario sólo para proceder a través del mago.
 
-![Un agente Codex existente seleccionado como activo en el asistente de configuración Windows](/img/open-science/windows/setup-agent-active.jpg)
+![Un agente Codex existente seleccionado como activo en el asistente de configuración Windows](/img/open-science/windows/setup-agent-active.webp)
 
 </PlatformContent>
 
@@ -158,14 +158,14 @@ El formulario cambia según **Provider type**, el agente seleccionado, y el mét
 
 <PlatformContent platform="macos">
 
-![Formulario de suscripción de Codex en inglés antes de la autenticación](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![Formulario de suscripción de Codex en inglés antes de la autenticación](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 </PlatformContent>
 Para un proveedor de API, seleccione su tipo, introduzca el punto final y los detalles del modelo requeridos por ese proveedor, y use **Test & continue**. El mago valida los campos requeridos antes de enviar una prueba. Una prueba exitosa adelanta al mago; un error de validación o conexión sigue siendo visible para la corrección.
 
 <PlatformContent platform="macos">
 
-![Puerta de entrada personalizada mostrando errores de campo requerido](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![Puerta de entrada personalizada mostrando errores de campo requerido](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 </PlatformContent>
 Vea [Configuración del proveedor](providers.md) para opciones de autenticación, campos avanzados y recuperación de errores de conexión.
@@ -189,7 +189,7 @@ Después de **Finish**, confirme Inicio se abre, luego utilice [Primer proyecto]
 
 La página Windows **Notebook runtime** también puede mostrar **Local Shell · WSL2 Bash Preview**. Lea **Optional — nothing here is required to finish setup.** Usted puede elegir **Finish** mientras que Python/R se defere y WSL2 no está disponible. Prepare el plazo de ejecución requerido antes de solicitar la ejecución del código; completar el mago no instala esos entornos opcionales.
 
-![Ajustes Windows opcionales Notebook y WSL2 con acabado disponible](/img/open-science/windows/setup-optional-runtimes.jpg)
+![Ajustes Windows opcionales Notebook y WSL2 con acabado disponible](/img/open-science/windows/setup-optional-runtimes.webp)
 
 </PlatformContent>
 

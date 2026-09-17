@@ -12,7 +12,7 @@ Verwenden Sie Home, um die Untersuchung auszuwählen, die Sitzungsliste, um die 
 
 Verwenden Sie **Settings → General → Appearance**, um die Sprache oder das Thema der App zu ändern. Das [Einstellungen Center](../settings/overview.md) gruppiert Panels nach Zweck und bietet eine eigene Suche.
 
-![Home mit den Genexpressions- und Literaturprojekten](/img/open-science/v0.27.0/01-home.png)
+![Home mit den Genexpressions- und Literaturprojekten](/img/open-science/v0.27.0/01-home.webp)
 
 | Eingang | Aktion | Kontrolle nach dem Öffnen |
 | --- | --- | --- |

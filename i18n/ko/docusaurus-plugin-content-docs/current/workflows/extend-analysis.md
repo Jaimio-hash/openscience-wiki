@@ -1,7 +1,7 @@
 ---
 title: "설치 된 Specialist 분석 확장"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -21,11 +21,11 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 3. 연구 프로젝트에 새로운 대화를 엽니다. 유효한 모형을, 그 후에 **Agent controls → Specialist → pharmacometrics-pkpd-designer** 선택하십시오. 기록된 실행은 **Codex 구독 / gpt-5.6-sol**을 사용했습니다.
 4. **각 분석 메시지**의 시작에서 `/pkpd`을 입력한 다음 제안에서 **pkpd 모델**를 선택하십시오. 프롬프트를 지나기 전에 Skill 칩이 됩니다.
 
-혼자 의지를 선택하면 `Unknown skill`이 버전에 반환됩니다. Skill을 선택하여 정품 로더를 활성화합니다. 이 단계는 기록된 윤곽을 위해 요구됩니다; 이 예제는 모든 Specialist-bound Skills의 자동 로딩을 설정하지 않습니다.
+**버전 안내:** 아래 스크린샷과 결과는 v0.30.1에서 기록했습니다. 당시에는 역할만 선택하면 `Unknown skill`이 반환되어 메시지마다 Skill을 직접 선택해야 했습니다. v0.30.2는 위임된 작업을 포함하여 Specialist에 연결된 Skill의 준비 과정을 수정했습니다. 새 버전에서는 먼저 Specialist를 선택하고 실제 로딩 결과를 확인한 뒤, 필요한 경우 Skill을 직접 선택하세요. 이 예제는 v0.30.2에서 아직 다시 실행하지 않았습니다. 이전 버전의 우회 절차가 항상 필요한 것은 아니며, 이 수정만으로 예제의 재검증 성공을 의미하지도 않습니다.
 
-![Pharmacometrics Specialist 및 그 기능 설치](/img/open-science/theoph-specialist/installed.jpg)
+![Pharmacometrics Specialist 및 그 기능 설치](/img/open-science/theoph-specialist/installed.webp)
 
-![현재 메시지에 대한 정품 pkpd-modeling Skill 선택](/img/open-science/theoph-specialist/skill-selection.jpg)
+![현재 메시지에 대한 정품 pkpd-modeling Skill 선택](/img/open-science/theoph-specialist/skill-selection.webp)
 
 ## 2. 데이터를 확인하고 농도 곡선을 그리십시오. {/* #2-check-the-data-and-draw-the-concentration-curves */}
 
@@ -49,9 +49,9 @@ Do not install packages or delegate. Keep everything in English.
 
 CSV 미리 보기에는 처음 100개 행이 표시됩니다. 저장된 입력 파일에는 132개 관측값이 모두 포함되어 있습니다.
 
-![Open-Science의 저장된 입력 테이블](/img/open-science/theoph-specialist/input.jpg)
+![Open-Science의 저장된 입력 테이블](/img/open-science/theoph-specialist/input.webp)
 
-![실행된 기본과 12개의 농도 시간 곡선](/img/open-science/theoph-specialist/baseline.jpg)
+![실행된 기본과 12개의 농도 시간 곡선](/img/open-science/theoph-specialist/baseline.webp)
 
 참조 파일 : <ExampleDownload path="/examples/theoph/theoph-input.csv">입력 CSV</ExampleDownload>, <ExampleDownload path="/examples/theoph/theoph-concentration-time.png">팟캐스트</ExampleDownload>, <ExampleDownload path="/examples/theoph/theoph-data-check.md">데이터 검사</ExampleDownload>.
 
@@ -83,7 +83,7 @@ Do not install packages, change permissions or delegate. Use English.
 
 생성된 파일에서 **theoph-nca-summary.csv**을 엽니다. 12개의 주제 각각을 위한 행이 있어야 합니다. 단위와 마지막 보존 시간 및 메트릭 값 확인.
 
-![저장된 주제 수준 노출 미터](/img/open-science/theoph-specialist/results.jpg)
+![저장된 주제 수준 노출 미터](/img/open-science/theoph-specialist/results.webp)
 
 | 이름 &#42; | Cmax (mg/L)를 | Tmax (시간) | AUC0-마지막 (mg·h/L) | 마지막 관측 (h) |
 | --- | --- | --- | --- | --- |

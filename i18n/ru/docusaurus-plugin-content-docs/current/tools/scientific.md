@@ -95,7 +95,7 @@ CUDA_VISIBLE_DEVICES="" .venv/bin/python ProteinMPNN/protein_mpnn_run.py \
 
 ### Проверьте разработанные последовательности {/* #check-the-designed-sequences */}
 
-![Завершен локальный запуск CPU и вновь открыт отчет о сравнении](/img/open-science/local-todo-batch/42-cpu-model-comparison.png)
+![Завершен локальный запуск CPU и вновь открыт отчет о сравнении](/img/open-science/local-todo-batch/42-cpu-model-comparison.webp)
 
 Сохраненные результаты в этом примере содержали следующие результаты:
 

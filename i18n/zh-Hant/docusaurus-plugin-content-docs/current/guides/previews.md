@@ -36,7 +36,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 開啟 `rnaseq-sample-qc.csv`，本例顯示 **12 rows · 6 columns**，首行作為表頭。橫向滾動可檢視較長的原始列名及右側指標。行號是顯示位置，不是基因或樣本編號。
 
-![十二樣本質控表](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![十二樣本質控表](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 檢查列名與完整標識是否可讀。欄位解釋與公共基準核對見[表格與資料集](../tools/tables.md)。
 
@@ -46,7 +46,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 開啟 `rnaseq-library-sizes.png`，使用 **Zoom in / Zoom out / Reset zoom**。標籤太小時開啟全屏。縮放只改變顯示，不重新取樣，也不更新統計結果。
 
-![全屏顯示實際原始計數總量圖](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+![全屏顯示實際原始計數總量圖](/img/open-science/guides-walkthrough/54-rnaseq-figure.webp)
 
 核對原始計數座標軸、十二個樣本標籤以及 CSV/報告中的名稱對應。柱高不同不能單獨證明差異表達。本例只做分析前的描述性檢查，沒有歸一化或假設檢驗。
 
@@ -71,9 +71,9 @@ Markdown 渲染標題、列表、程式碼和連結。接受圖表前檢查校�
 | JSON | 開啟<ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.json">摘要檔案</ExampleDownload>檢查原始碼、識別符號和數值。它以程式碼顯示，不是可展開的物件樹 |
 | HTML | 開啟<ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.html">閱讀表格</ExampleDownload>，**Source** 檢視 HTML，**Render** 返回排版檢視，兩者都不會重跑 QC |
 
-![實際工作簿中選擇 Samples](/img/open-science/local-todo-batch/47-workbook-samples.png)
+![實際工作簿中選擇 Samples](/img/open-science/local-todo-batch/47-workbook-samples.webp)
 
-![實際 TIFF 的第二頁](/img/open-science/local-todo-batch/50-tiff-second-page.png)
+![實際 TIFF 的第二頁](/img/open-science/local-todo-batch/50-tiff-second-page.webp)
 
 出現 **Preview unavailable → Open this Office file in your default app to view it.** 時，本地檔案可使用 **Open**，託管上傳檔案可使用 **Download**，再透過相容應用開啟。內建預覽無法顯示時，仍可用這條路徑檢視原檔案。
 

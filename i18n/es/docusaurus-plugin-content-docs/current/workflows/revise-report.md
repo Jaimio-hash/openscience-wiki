@@ -29,11 +29,11 @@ read and flag unavailable figure inspection. Do not invent measurements.
 Save and reopen the draft. Do not overwrite it in later revisions.
 ```
 
-![El PDF fuente y la solicitud de información inicial en Open-Science](/img/open-science/workflow-extensions/report-input.png)
+![El PDF fuente y la solicitud de información inicial en Open-Science](/img/open-science/workflow-extensions/report-input.webp)
 
 Aprobar el archivo correspondiente se lee cuando se solicita. Abra **catalyst-brief-v1.md** de **Generated** o **Files** y lea el borrador guardado. Una respuesta en la conversación no es un sustituto para inspeccionar el archivo real.
 
-![El primer borrador guardado antes de la revisión editorial](/img/open-science/workflow-extensions/report-draft.png)
+![El primer borrador guardado antes de la revisión editorial](/img/open-science/workflow-extensions/report-draft.webp)
 
 ## 2. Hacer que la retroalimentación sea viable {/* #2-make-the-feedback-actionable */}
 
@@ -64,7 +64,7 @@ La revisión real leyó el archivo de comentarios adjunto y produjo ambos tipos 
 
 Abre **catalyst-brief-v2.md**. Esta ejecución produjo un **Resumen de la palabra 117**, una mesa de dos filas y tres propuestas de seguimiento etiquetadas.
 
-![El resumen revisado y la tabla que separa la selectividad de la durabilidad](/img/open-science/workflow-extensions/report-revised.png)
+![El resumen revisado y la tabla que separa la selectividad de la durabilidad](/img/open-science/workflow-extensions/report-revised.webp)
 
 La distinción clave es **98.9% CO Eficiencia Faradaic −1.2 V vs RHE** contra un **20 h prueba de retención actual en −0.8 V vs RHE**. No los combine en “98.9% para 20 h.” Main PDF p. 6, Fig. 6b-d, y p. 7, Fig. 6e, identifique las pruebas pertinentes; p. 8 describe las mediciones de H-cell. Suplementario PDF pp. 47-48, Figs. 51–52, se refiere a la selectividad de hidrógeno y los controles de productos NMR.
 
@@ -74,7 +74,7 @@ En este sentido, el Agente podría leer los pasajes de texto completo y las capc
 
 Abre **catalyst-brief-v2-response.md**. Localice C1–C6, abra cada sección revisada llamada y confirme que realmente contiene el cambio prometido. Una etiqueta “Resolveda” por sí sola es insuficiente.
 
-![El cuadro de respuesta guarda los seis comentarios a las secciones revisadas](/img/open-science/workflow-extensions/report-response.png)
+![El cuadro de respuesta guarda los seis comentarios a las secciones revisadas](/img/open-science/workflow-extensions/report-response.webp)
 
 Compruebe que las propuestas siguen etiquetadas como propuestas, el DOI sigue siendo **10.1038/s41467-019-12510-0**, y **catalyst-brief-v1.md** todavía existe sin cambios. La respuesta debe indicar cualquier evidencia que no esté disponible.
 

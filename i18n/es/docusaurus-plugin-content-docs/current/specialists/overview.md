@@ -23,7 +23,7 @@ Abrir **Browse Marketplace** para encontrar roles publicados. El catálogo en l�
 
 Abre **Settings → Specialists**. **Installed** cuenta los roles registrados localmente, incluyendo el Revisor. Use **Search specialists** y **Filter specialists by category**, y luego abra una fila para inspeccionarlo. **Browse Marketplace** abre un catálogo diferente; una entrada de mercado lista no se instala hasta que complete su flujo de paquete/ajuste.
 
-![El revisor RNA-seq QC instalado localmente](/img/open-science/capabilities-walkthrough/06-specialist-list.jpg)
+![El revisor RNA-seq QC instalado localmente](/img/open-science/capabilities-walkthrough/06-specialist-list.webp)
 
 ## Funciones observadas en el mercado {/* #marketplace-roles-observed */}
 

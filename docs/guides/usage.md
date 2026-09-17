@@ -17,7 +17,7 @@ Use the displayed period and metric to interpret each chart. Reported token coun
 3. Compare the four token fields and the New/Total activity counters.
 4. Check the chart's own period label before comparing it with the summary.
 
-![Today summary with the separate daily charts](/img/open-science/guides-walkthrough/13-usage-today.png)
+![Today summary with the separate daily charts](/img/open-science/guides-walkthrough/13-usage-today.webp)
 
 | Field | Interpretation |
 | --- | --- |

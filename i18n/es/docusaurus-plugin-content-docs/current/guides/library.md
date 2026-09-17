@@ -1,7 +1,7 @@
 ---
 title: "Biblioteca de literatura y citas"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
@@ -27,7 +27,7 @@ Abra **Library** desde el hogar o el espacio de trabajo. **Back to Home** vuelve
 | Proyecto | Referencias vinculadas a ese proyecto | Mantener la bibliografía relevante para una pregunta de investigación |
 | Colección | Un grupo temático, incluyendo colecciones anidadas | Reutilizar un conjunto de lectura en proyectos |
 
-![Tres documentos aceptados en la colección PRISMA real](/img/open-science/guides-walkthrough/51-library-collection.png)
+![Tres documentos aceptados en la colección PRISMA real](/img/open-science/guides-walkthrough/51-library-collection.webp)
 
 ## Agregar o importar un registro {/* #add-or-import-a-record */}
 
@@ -60,11 +60,11 @@ Seleccione **Add** y elija la fuente. Seleccionar un PDF abre su editor de metad
 
 El lote puede mostrar **Pending**, **Reading…**, **Ready**, **Importing…**, **Completed**, **Failed** o **Skipped**. La selección, la preparación de metadatos y la finalización de las importaciones son estados separados. Si la aplicación reporta **PDF upload cancelled. The reference was kept.**, compruebe los archivos adjuntos del registro retenido; cancelar la subida no eliminar la entrada de bibliografía.
 
-![Dos PDFs PRISMA reales listos para importar](/img/open-science/v0.27.0/02-pdf-batch-ready.png)
+![Dos PDFs PRISMA reales listos para importar](/img/open-science/v0.27.0/02-pdf-batch-ready.webp)
 
 Con **Reuse existing reference**, un PDF cuyo título extraído o DOI no coincide todavía puede crear un registro separado. Después de importar, abra cada papel y confirme su título y DOI. Desigualdad correcta antes de [duplicados de fusión](#resolve-duplicates-and-recover-references). **Completed** confirma la importación, no la identificación exacta.
 
-![Resultados completos de lote y per-file](/img/open-science/v0.27.0/03-pdf-batch-completed.png)
+![Resultados completos de lote y per-file](/img/open-science/v0.27.0/03-pdf-batch-completed.webp)
 
 
 </ToolOperationGroup>
@@ -76,7 +76,7 @@ Con **Reuse existing reference**, un PDF cuyo título extraído o DOI no coincid
 
 Una solicitud **Stop** permite que el artículo actual termine. Inspeccione cada fila: los elementos **Completed** se conservan y no pueden ser seleccionados de nuevo; seleccione las filas **Ready** restantes y utilice **Import selected** para continuar. Si los fallos exponen **Retry unfinished**, corrige la causa reportada antes de volver a iniciar y comprobar que los registros completados no fueron duplicados.
 
-![La importación PDF suspendida conserva su fila completa](/img/open-science/local-todo-batch/09-pdf-import-stopped.png)
+![La importación PDF suspendida conserva su fila completa](/img/open-science/local-todo-batch/09-pdf-import-stopped.webp)
 
 **The reference was kept. Retry to finish adding its PDF.** significa que la entrada de bibliografía fue salvada pero su apego es inacabado. Compruebe que el PDF original todavía está disponible en la ubicación seleccionada y se abre normalmente, a continuación, seleccione **Retry unfinished**. Después de reiniciar, vuelva a la colección de destinos y abra el PDF para comprobar su contenido. Si el resultado no puede ser confirmado, inspeccione su biblioteca antes de comenzar otra importación.
 
@@ -100,9 +100,9 @@ Abra la colección de destinos primero, luego elija **Import references** y un a
 
 Haga clic en **Import references**, espere a **Import complete**, inspeccionar Creado/Reutilizado/Skipped/Failed, luego seleccione **Done**. Reabrir el registro: un recuento de importación por sí solo no establece metadatos correctos. Filling campos vacíos puede añadir identificadores y un nombre de revista abreviado sin reemplazar el título completo de la revista.
 
-![Importación BibTeX con una política explícita duplicada](/img/open-science/local-todo-batch/02-bibtex-import.png)
+![Importación BibTeX con una política explícita duplicada](/img/open-science/local-todo-batch/02-bibtex-import.webp)
 
-![Importación NBIB llena los campos bibliográficos desaparecidos](/img/open-science/local-todo-batch/05-nbib-fill-fields.png)
+![Importación NBIB llena los campos bibliográficos desaparecidos](/img/open-science/local-todo-batch/05-nbib-fill-fields.webp)
 
 
 </ToolOperationGroup>
@@ -113,7 +113,7 @@ Haga clic en **Import references**, espere a **Import complete**, inspeccionar C
 
 Abra el título de candidato o **View details**. Inspeccione su proveedor, enlace fuente y DOI/otros identificadores, luego compare año, orden de autor y publicación con el editor. **Accept** lo promueve en la Biblioteca; **Dismiss** lo elimina de la cola de revisión. Compruebe la selección de filas antes de las acciones de lote.
 
-![Tres candidatos PRISMA genuinos en espera de revisión](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![Tres candidatos PRISMA genuinos en espera de revisión](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 En este ejemplo, los tres candidatos fueron aceptados individualmente, y Inbox quedó claro. Un emparejamiento de proveedor es un registro inicial, no una validación bibliográfica completa. El año de publicación de la declaración 2020 es **2021**. Los dos documentos 2009 tienen distintos DOIs y listas de autores.
 
@@ -121,7 +121,7 @@ En este ejemplo, los tres candidatos fueron aceptados individualmente, y Inbox q
 
 Abre una referencia, luego **More actions → Edit metadata**. Revise los valores actuales antes de usar **Complete metadata**, que realiza una búsqueda en lugar de una edición puramente local.
 
-![Reabierto de la organización-autor](/img/open-science/v0.27.0/04-organization-author.png)
+![Reabierto de la organización-autor](/img/open-science/v0.27.0/04-organization-author.webp)
 
 | Campo/control | Entrada y efecto |
 | --- | --- |
@@ -144,7 +144,9 @@ Abre una referencia, luego **More actions → Edit metadata**. Revise los valore
 
 Para añadir **El Grupo PRISMA**, seleccione **Add creator → Creator role: Author → Name type: Organization**, introduzca el nombre completo y **Save**. Repita el registro y compruebe que la organización sigue a sus cuatro autores personales. Compare la cita generada con el [lista de autores del editor](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097).
 
-![APA reference preserves the organization author](/img/open-science/v0.27.0/05-organization-citation.png)
+![APA reference preserves the organization author](/img/open-science/v0.27.0/05-organization-citation.webp)
+
+v0.30.2 corrige la persiana de nombre de autor PubMed, incluyendo apellidos, iniciales y sufijos. Al importar o completar los metadatos, inspeccionar los campos creadores y generar cita contra la fuente vinculada. No asuma que instalar la actualización reescriba metadatos ya almacenados en su Biblioteca.
 
 ## Organizar los registros aceptados {/* #organize-the-accepted-records */}
 
@@ -174,7 +176,7 @@ Despejado búsqueda y filtros antes de concluir un registro ha desaparecido. Los
 
 Si **Add attachment** falla después de que se encuentra una fuente, descargue el PDF disponible públicamente desde el fabricante y use **Add PDF** en el mismo registro. Abra el PDF adjunto y compare su título y DOI con el registro de la editorial. En este ejemplo, **Avance prisma-2020-statement.pdf** muestra el papel PRISMA 2020 que coincide: **806.1 KB y 15 páginas**.
 
-![Publicador exitoso PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![Publicador exitoso PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 Un resultado fuente no es un apego salvado. Un PDF adjunto no es prueba de lectura de agente. **Read with agent** proporciona contexto para una solicitud posterior. Una referencia de Composer `@` puede seleccionar un registro exacto, una biblioteca de proyecto o una colección: una colección otorga margen de recuperación, no la inclusión automática del texto completo de cada papel. Los controles de lectura PDF están en [Avances](previews.md).
 
@@ -192,11 +194,11 @@ Si no se encuentra ninguna copia pública, retenga los metadatos comprobados y u
 5. La descarga también admite pausa y **Continue download**. Inspeccione los estados finales **Añadido / Failed / Skipped** y reabrir cualquier accesorio añadido con éxito.
 6. Para descartar una tarea no deseada, utilice **Remove task** en **Background tasks**. Después de la eliminación, confirme que la tarea se ha ido y que sus referencias y apegos aún están abiertos. La eliminación de la tarea no los elimina.
 
-![La búsqueda se detuvo después del tema actual, conservando los registros pendientes](/img/open-science/priority-completion/14-literature-batch-paused.png)
+![La búsqueda se detuvo después del tema actual, conservando los registros pendientes](/img/open-science/priority-completion/14-literature-batch-paused.webp)
 
 Una búsqueda pausada conserva sus registros comprobados y pendientes. Después de continuar o reabrir la tarea, inspeccione los recuentos finales y el resultado de cada tema. El descubrimiento de Candidato y el apego PDF exitoso son resultados separados.
 
-![Reapertura de la búsqueda completa de cinco discos de las tareas de fondo](/img/open-science/priority-completion/15-literature-batch-resumed.png)
+![Reapertura de la búsqueda completa de cinco discos de las tareas de fondo](/img/open-science/priority-completion/15-literature-batch-resumed.webp)
 
 
 </ToolOperationGroup>
@@ -228,7 +230,7 @@ Abre **More actions → Citation**. Seleccione **Citation style**, inspeccione e
 
 En **Library → Settings → Import CSL**, elija el archivo `plos.csl` independiente del [Repositorio de estilos CSL](https://github.com/citation-style-language/styles/blob/master/plos.csl). En este ejemplo, **Imported styles** aumentó de cero a uno y mostró **Public Library of Science**. Regrese al panel PRISMA real de registro **Citation** y seleccione ese estilo bajo **Citation style**. Compruebe la referencia numerada y la cita en texto de `[1]`. La vista previa de la gestión de estilo utiliza un artículo de muestra; inspeccionar su registro real antes de copiar una citación.
 
-![Estilo de PLOS importado aplicado al registro PRISMA real](/img/open-science/v0.27.0/06-imported-csl-citation.png)
+![Estilo de PLOS importado aplicado al registro PRISMA real](/img/open-science/v0.27.0/06-imported-csl-citation.webp)
 
 
 </ToolOperationGroup>
@@ -249,7 +251,7 @@ Los cuatro botones de copia de Citación escriben diferentes representaciones al
 | Copiar BibTeX | An `@article` entrada con el autor de la organización encerrado en |
 | Copiar RIS | A `TY  - JOUR` con autor, título, año y DOI campos |
 
-![Controles de copia de citación para el registro PRISMA real](/img/open-science/local-todo-batch/01-citation-copy.png)
+![Controles de copia de citación para el registro PRISMA real](/img/open-science/local-todo-batch/01-citation-copy.webp)
 
 Para un archivo, cierre Citación, seleccione las filas de mesa requeridas y seleccione **Export → BibTeX** o **RIS**. Elija la ubicación en el sistema guardar diálogo y esperar a **Saved**. Estos archivos contienen registros bibliográficos, no un paquete de archivos PDF. Reimportar el archivo guardado en una colección de pruebas con **Reuse existing reference** y comprobar su cuenta de coincidencia. Ambos archivos PRISMA exportados fueron reimportados y reutilizados el DOI existente sin crear otro registro.
 
@@ -273,11 +275,11 @@ BibTeX almacena año y mes aquí, por lo que su viaje de ida y vuelta regresó `
 4. Lea **After merging** y su adjunto, colección y cuenta de proyecto. Sólo entonces seleccione **Merge references**; **Cancel** deja los registros separados.
 5. Reabrir el sobreviviente y verificar los metadatos, enlaces y contenidos PDF. El registro de fusión aparece en Trash como **Merged duplicate**.
 
-![Compara las fechas de publicación sobreviviente y conflictiva](/img/open-science/local-todo-batch/03-merge-bibtex.png)
+![Compara las fechas de publicación sobreviviente y conflictiva](/img/open-science/local-todo-batch/03-merge-bibtex.webp)
 
 Un PDF con un nombre de archivo extraído en lugar de su título puede no entrar en un grupo duplicado. Corregir su título y DOI utilizando el registro de la editorial, y luego revisar el grupo de coincidencias. Después de fusionarse, confirme que las asociaciones retenidas PDF abren y colectan/proyectos todavía están presentes.
 
-![El registro fusionado conserva sus PDF y sus vínculos organizativos](/img/open-science/local-todo-batch/06-merged-attachment-links.png)
+![El registro fusionado conserva sus PDF y sus vínculos organizativos](/img/open-science/local-todo-batch/06-merged-attachment-links.webp)
 
 
 </ToolOperationGroup>
@@ -289,7 +291,7 @@ Un PDF con un nombre de archivo extraído en lugar de su título puede no entrar
 
 Usa el **More actions → Move to Trash** de la fila. Desaparece de la Biblioteca activa, las vistas de proyecto y colección. En **Trash**, busque por título o identificador, abra su menú de fila y elija **Restore**. Restaurar antes de editar, previsualizar o exportar: estos controles están deshabilitados en Trash. Repita el proyecto original y las colecciones para verificar los enlaces restaurados. En este ejemplo, restaurar el registro PRISMA retenía su PDF y los tres enlaces.
 
-![Restaurar una referencia de su menú de la fila de Trash](/img/open-science/local-todo-batch/07-trash-restore.png)
+![Restaurar una referencia de su menú de la fila de Trash](/img/open-science/local-todo-batch/07-trash-restore.webp)
 
 
 </ToolOperationGroup>
@@ -303,7 +305,7 @@ En Trash, elija **More actions → Delete permanently** y lea la confirmación. 
 
 Después de la eliminación, compruebe que el registro seleccionado ha dejado Trash y que la referencia retenida todavía se abre con sus apegos. Eliminando un enlace de colección, moviendo un registro a Trash y eliminando permanentemente tiene diferentes ámbitos.
 
-![Lea el alcance preciso de la eliminación permanente](/img/open-science/local-todo-batch/08-reference-delete-scope.png)
+![Lea el alcance preciso de la eliminación permanente](/img/open-science/local-todo-batch/08-reference-delete-scope.webp)
 
 
 </ToolOperationGroup>

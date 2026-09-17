@@ -22,7 +22,7 @@ last_update:
 
 確認傳送的請求上方出現**兩個檔名**。點選檔名即可預覽；在主文和補充材料之間切換，核對引用頁碼屬於哪份檔案。
 
-![實際論斷核查請求同時附加主文與補充材料](/img/open-science/research-workflows/catalyst-two-inputs.png)
+![實際論斷核查請求同時附加主文與補充材料](/img/open-science/research-workflows/catalyst-two-inputs.webp)
 
 ## 提出具體的證據問題 {/* #提出具体的证据问题 */}
 
@@ -44,7 +44,7 @@ delegate. This is a source check, not an experimental replication.
 
 在 PDF 預覽中，透過頁碼控制元件開啟**第 6 頁**，檢視 **Figure 6** 和相應結果段落，將圖注與正文對照。再開啟補充材料的 **47–49 頁**，檢視 **Figures 51–53**。
 
-![在 Open-Science 中檢視原論文 Figure 6 和實驗條件](/img/open-science/research-workflows/catalyst-figure6-source.png)
+![在 Open-Science 中檢視原論文 Figure 6 和實驗條件](/img/open-science/research-workflows/catalyst-figure6-source.webp)
 
 原文報告 Ni-SAC-2.5 在相對於 RHE 的 **−1.2 V** 下，生成 CO 的**法拉第效率為 98.9%**。耐久性實驗則使用 **−0.8 V，持續 20 小時**。兩組條件應分開說明：後者不能證明峰值選擇性電位下的 20 小時耐久性。法拉第效率描述分配給某產物的電荷比例，不等於能量效率，也不等於進料 CO₂ 的轉化比例。
 
@@ -52,12 +52,12 @@ delegate. This is a source check, not an experimental replication.
 
 跳頁時先展開 PDF 預覽，點選頁碼計數器，輸入完整頁碼並按 **Enter**，確認計數器已跳到目標頁再閱讀。補充材料第 47 頁是 **Supplementary Figure 51**，縱軸為 **H₂ Faradaic efficiency**，不能把它當成主文的 CO 結果。
 
-![實際開啟補充材料第 47/52 頁，核對 Supplementary Figure 51](/img/open-science/research-workflows/catalyst-supplement-47.png)
+![實際開啟補充材料第 47/52 頁，核對 Supplementary Figure 51](/img/open-science/research-workflows/catalyst-supplement-47.webp)
 
 ## 檢查並儲存報告 {/* #检查并保存报告 */}
 
 回答完成後開啟 **catalyst-claim-check.md**，檢查來源身份、頁碼、圖號和結論措辭。尤其要保留“原文報告的結果”這一含義，避免把文獻核查寫成已經完成實驗復現。
 
-![儲存後的論斷、證據、條件與邊界報告](/img/open-science/research-workflows/catalyst-claim-report.png)
+![儲存後的論斷、證據、條件與邊界報告](/img/open-science/research-workflows/catalyst-claim-report.webp)
 
 可下載<a href="/docs/examples/research-workflows/catalyst-claim-check.md" download>示例報告</a>參考其結構。將科學結論用於自己的工作前，應核對所引原始證據及出版方更正。如需把圖表證據單獨提取為檔案，參見 [PDF 提取](../guides/previews.md#pdf-extraction)。

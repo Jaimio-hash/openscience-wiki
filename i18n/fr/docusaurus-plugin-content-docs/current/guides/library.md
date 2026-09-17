@@ -1,7 +1,7 @@
 ---
 title: "Bibliothèque de littérature et citations"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
@@ -27,7 +27,7 @@ Ouvrez **Library** depuis la maison ou l'espace de travail. **Back to Home** ret
 | Projet | Références liées à ce projet | Garder la bibliographie pertinente à une question de recherche |
 | Collection | Un groupe thématique, comprenant des collections imbriquées | Réutiliser un ensemble de lectures à travers les projets |
 
-![Trois papiers acceptés dans la vraie collection PRISMA](/img/open-science/guides-walkthrough/51-library-collection.png)
+![Trois papiers acceptés dans la vraie collection PRISMA](/img/open-science/guides-walkthrough/51-library-collection.webp)
 
 ## Ajouter ou importer un enregistrement {/* #add-or-import-a-record */}
 
@@ -60,11 +60,11 @@ Sélectionnez **Add** et choisissez la source. Sélection d'un PDF ouvre son éd
 
 Le lot peut afficher **Pending**, **Reading…**, **Ready**, **Importing…**, **Completed**, **Failed** ou **Skipped**. La sélection, l'état de préparation des métadonnées et l'achèvement des importations sont des états distincts. Si l'application signale **PDF upload cancelled. The reference was kept.**, vérifiez que les pièces jointes de l'enregistrement ont été conservées; annuler le téléchargement n'a pas supprimé l'entrée de bibliographie.
 
-![Deux vrais PDF PRISMA prêts à l'importation](/img/open-science/v0.27.0/02-pdf-batch-ready.png)
+![Deux vrais PDF PRISMA prêts à l'importation](/img/open-science/v0.27.0/02-pdf-batch-ready.webp)
 
 Avec **Reuse existing reference**, un PDF dont le titre extrait ou DOI ne correspond pas peut encore créer un enregistrement séparé. Après l'importation, ouvrez chaque papier et confirmez son titre et DOI. Corriger les erreurs avant [fusion des duplicata](#resolve-duplicates-and-recover-references). **Completed** confirme l'importation, pas l'identification précise.
 
-![Résultats par lot et par dossier](/img/open-science/v0.27.0/03-pdf-batch-completed.png)
+![Résultats par lot et par dossier](/img/open-science/v0.27.0/03-pdf-batch-completed.webp)
 
 
 </ToolOperationGroup>
@@ -76,7 +76,7 @@ Avec **Reuse existing reference**, un PDF dont le titre extrait ou DOI ne corres
 
 Une requête **Stop** permet à l'élément actuel de terminer. Inspecter chaque ligne : les éléments **Completed** sont conservés et ne peuvent pas être sélectionnés à nouveau ; sélectionner les lignes restantes de **Ready** et utiliser **Import selected** pour continuer. Si les défaillances exposent **Retry unfinished**, corrigez la cause signalée avant de réessayer et vérifiez que les enregistrements complétés n'ont pas été dupliqués.
 
-![L'importation de PDF stoppé conserve sa ligne terminée](/img/open-science/local-todo-batch/09-pdf-import-stopped.png)
+![L'importation de PDF stoppé conserve sa ligne terminée](/img/open-science/local-todo-batch/09-pdf-import-stopped.webp)
 
 **The reference was kept. Retry to finish adding its PDF.** signifie que l'entrée de la bibliographie a été sauvegardée mais que sa pièce jointe n'est pas terminée. Vérifiez que le PDF d'origine est toujours disponible à l'emplacement sélectionné et s'ouvre normalement, puis sélectionnez **Retry unfinished**. Après réessayer, retourner à la collection de destination et ouvrir le PDF pour vérifier son contenu. Si le résultat n'a pas pu être confirmé, consultez votre bibliothèque avant de commencer une autre importation.
 
@@ -100,9 +100,9 @@ Ouvrez la collection de destination d'abord, puis choisissez **Import references
 
 Cliquez sur **Import references**, attendez **Import complete**, inspectez Created/Reused/Skipped/Failed, puis sélectionnez **Done**. Réouvrir l'enregistrement : un compte d'importation seul n'établit pas les métadonnées correctes. Remplir des champs vides peut ajouter des identifiants et un nom abrégé de journal sans remplacer le titre complet de la revue.
 
-![Importation de BibTeX avec une politique explicite de duplication](/img/open-science/local-todo-batch/02-bibtex-import.png)
+![Importation de BibTeX avec une politique explicite de duplication](/img/open-science/local-todo-batch/02-bibtex-import.webp)
 
-![L'importation NBIB remplit les champs bibliographiques manquants](/img/open-science/local-todo-batch/05-nbib-fill-fields.png)
+![L'importation NBIB remplit les champs bibliographiques manquants](/img/open-science/local-todo-batch/05-nbib-fill-fields.webp)
 
 
 </ToolOperationGroup>
@@ -113,7 +113,7 @@ Cliquez sur **Import references**, attendez **Import complete**, inspectez Creat
 
 Ouvrez le titre du candidat ou **View details**. Inspecter son fournisseur, son lien source et DOI/autres identifiants, puis comparer l'année, l'ordre des auteurs et la publication avec l'éditeur. **Accept** la fait entrer dans la bibliothèque; **Dismiss** le supprime de la file d'attente d'examen. Vérifiez la sélection de la ligne avant les actions de lot.
 
-![Trois vrais candidats PRISMA en attente d'examen](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![Trois vrais candidats PRISMA en attente d'examen](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 Dans cet exemple, les trois candidats ont été acceptés individuellement, et la boîte de réception est devenue claire. Une correspondance de fournisseur est un enregistrement de départ, pas une validation bibliographique complète. L'année de publication de l'état 2020 est **2021**. Les deux documents 2009 ont des DOI et des listes d'auteurs distinctes.
 
@@ -121,7 +121,7 @@ Dans cet exemple, les trois candidats ont été acceptés individuellement, et l
 
 Ouvrez une référence, puis **More actions → Edit metadata**. Passez en revue les valeurs actuelles avant d'utiliser **Complete metadata**, qui effectue une recherche plutôt qu'une modification purement locale.
 
-![Réouverture du champ organisme-auteur sauvegardé](/img/open-science/v0.27.0/04-organization-author.png)
+![Réouverture du champ organisme-auteur sauvegardé](/img/open-science/v0.27.0/04-organization-author.webp)
 
 | Champ/contrôle | Entrée et effet |
 | --- | --- |
@@ -144,7 +144,9 @@ Ouvrez une référence, puis **More actions → Edit metadata**. Passez en revue
 
 Pour ajouter **Le groupe PRISMA**, sélectionnez **Add creator → Creator role: Author → Name type: Organization**, entrez le nom complet et **Save**. Rouvrir le dossier et vérifier que l'organisation suit ses quatre auteurs personnels. Comparer la citation générée avec la [Liste des auteurs de l'éditeur](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097).
 
-![La référence APA préserve l'auteur de l'organisation](/img/open-science/v0.27.0/05-organization-citation.png)
+![La référence APA préserve l'auteur de l'organisation](/img/open-science/v0.27.0/05-organization-citation.webp)
+
+v0.30.2 corrige l'analyse du nom d'auteur PubMed, y compris les noms de famille, les initiales et les suffixes. Lorsque vous importez ou remplissez des métadonnées, inspectez les champs du créateur et produisez des citations en fonction de la source liée. Ne présumez pas que l'installation de la mise à jour réécrit les métadonnées déjà stockées dans votre bibliothèque.
 
 ## Organiser les dossiers acceptés {/* #organize-the-accepted-records */}
 
@@ -174,7 +176,7 @@ Effacer la recherche et les filtres avant de conclure un enregistrement a dispar
 
 Si **Add attachment** échoue après qu'une source ait été trouvée, téléchargez le PDF accessible au public de l'éditeur et utilisez **Add PDF** sur le même enregistrement. Ouvrez le PDF joint et comparez son titre et le DOI avec l'enregistrement de l'éditeur. Dans cet exemple, **Aperçu prisma-2020-statement.pdf** montre le papier correspondant PRISMA 2020 : **Pages 806.1 KB et 15**.
 
-![Succès de l'éditeur PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![Succès de l'éditeur PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 Un résultat source n'est pas une pièce jointe enregistrée. Un PDF ci-joint n'est pas une preuve de lecture de l'agent. **Read with agent** fournit le contexte pour une demande ultérieure. Une référence Compositeur `@` peut sélectionner un enregistrement exact, une bibliothèque de projet ou une collection : une collection accorde une portée de récupération, pas l'inclusion automatique du texte complet de chaque papier. Les commandes de lecture PDF sont en [Aperçus](previews.md).
 
@@ -192,11 +194,11 @@ Si aucune copie publique n'est trouvée, conservez les métadonnées vérifiées
 5. Le téléchargement prend également en charge la pause et **Continue download**. Inspectez le **Ajouté / échoué / sauté** final et rouvrez toute pièce jointe ajoutée avec succès.
 6. Pour rejeter une tâche non désirée, utilisez **Remove task** dans **Background tasks**. Après la suppression, confirmez que la tâche a disparu et que ses références et pièces jointes sont toujours ouvertes. La suppression de la tâche ne les supprime pas.
 
-![Recherche interrompue après l'élément actuel, en conservant les dossiers en attente](/img/open-science/priority-completion/14-literature-batch-paused.png)
+![Recherche interrompue après l'élément actuel, en conservant les dossiers en attente](/img/open-science/priority-completion/14-literature-batch-paused.webp)
 
 Une recherche en pause conserve ses dossiers vérifiés et en attente. Après avoir poursuivi ou rouvert la tâche, inspecter les comptes finals et chaque résultat de chaque article. La découverte du candidat et la pièce jointe PDF réussie sont des résultats distincts.
 
-![Réouverture de la recherche en cinq dossiers effectuée à partir des tâches de fond](/img/open-science/priority-completion/15-literature-batch-resumed.png)
+![Réouverture de la recherche en cinq dossiers effectuée à partir des tâches de fond](/img/open-science/priority-completion/15-literature-batch-resumed.webp)
 
 
 </ToolOperationGroup>
@@ -228,7 +230,7 @@ Ouvrez **More actions → Citation**. Sélectionnez **Citation style**, inspecte
 
 Dans **Library → Settings → Import CSL**, choisissez le fichier `plos.csl` indépendant dans le [CSL styles dépôt](https://github.com/citation-style-language/styles/blob/master/plos.csl). Dans cet exemple, **Imported styles** a augmenté de zéro à un et a montré **Bibliothèque publique des sciences**. Retourner au panneau **Citation** de l'enregistrement PRISMA réel et sélectionner ce style sous **Citation style**. Vérifiez la référence numérotée et la citation en texte de `[1]`. L'aperçu de la gestion de style utilise un exemple d'article; Inspectez votre dossier avant de copier une citation.
 
-![Style PLOS importé appliqué à l'enregistrement réel PRISMA](/img/open-science/v0.27.0/06-imported-csl-citation.png)
+![Style PLOS importé appliqué à l'enregistrement réel PRISMA](/img/open-science/v0.27.0/06-imported-csl-citation.webp)
 
 
 </ToolOperationGroup>
@@ -249,7 +251,7 @@ Les quatre boutons Citation copie écrivent des représentations différentes au
 | Copier le BibTeX | Une `@article` entrée avec l'auteur de l'organisation enfermé dans des accessoires |
 | Copier le RIS | A `TY  - JOUR` enregistrement avec les champs auteur, titre, année et DOI |
 
-![Contrôles de copie de citation pour l'enregistrement réel PRISMA](/img/open-science/local-todo-batch/01-citation-copy.png)
+![Contrôles de copie de citation pour l'enregistrement réel PRISMA](/img/open-science/local-todo-batch/01-citation-copy.webp)
 
 Pour un fichier, fermez Citation, sélectionnez les lignes de table requises et choisissez **Export → BibTeX** ou **RIS**. Choisissez l'emplacement dans la boîte de dialogue de sauvegarde du système et attendez **Saved**. Ces fichiers contiennent des notices bibliographiques, et non un ensemble de pièces jointes PDF. Réimportez le fichier enregistré dans une collection de test avec **Reuse existing reference** et vérifiez son nombre de correspondances. Les deux fichiers PRISMA exportés ont été réimportés et réutilisés le DOI existant sans créer un autre enregistrement.
 
@@ -273,11 +275,11 @@ BibTeX magasins année et mois ici, donc son voyage aller-retour retourné `2009
 4. Lire **After merging** et son annexe, collection et projet compte. C'est seulement alors que sélectionner **Merge references**; **Cancel** laisse les enregistrements séparés.
 5. Réouvrir le survivant et vérifier les métadonnées, les liens et le contenu de PDF. L'enregistrement fusionné apparaît dans la corbeille sous le nom de **Merged duplicate**.
 
-![Comparer les dates de publication du survivant et du conflit](/img/open-science/local-todo-batch/03-merge-bibtex.png)
+![Comparer les dates de publication du survivant et du conflit](/img/open-science/local-todo-batch/03-merge-bibtex.webp)
 
 Un PDF avec un nom de fichier extrait à la place de son titre ne peut pas entrer dans un groupe de duplicata. Corriger son titre et DOI en utilisant l'enregistrement de l'éditeur, puis passer en revue le groupe correspondant. Après fusion, confirmez les ouvertures de PDF conservées et les associations de collecte/projet sont toujours présentes.
 
-![L'enregistrement fusionné conserve ses liens PDF et organisationnels](/img/open-science/local-todo-batch/06-merged-attachment-links.png)
+![L'enregistrement fusionné conserve ses liens PDF et organisationnels](/img/open-science/local-todo-batch/06-merged-attachment-links.webp)
 
 
 </ToolOperationGroup>
@@ -289,7 +291,7 @@ Un PDF avec un nom de fichier extrait à la place de son titre ne peut pas entre
 
 Utilisez la ligne **More actions → Move to Trash**. Il disparaît des vues actives de la Bibliothèque, du projet et de la collection. Dans **Trash**, recherchez par titre ou identifiant, ouvrez son menu ligne et choisissez **Restore**. Restaurer avant d'éditer, de prévisualiser ou d'exporter : ces contrôles sont désactivés dans la corbeille. Rouvrir le projet original et les collections pour vérifier les liens restaurés. Dans cet exemple, la restauration de l'enregistrement PRISMA a conservé son PDF et les trois liens.
 
-![Restaurer une référence à partir de son menu ligne Corbeille](/img/open-science/local-todo-batch/07-trash-restore.png)
+![Restaurer une référence à partir de son menu ligne Corbeille](/img/open-science/local-todo-batch/07-trash-restore.webp)
 
 
 </ToolOperationGroup>
@@ -303,7 +305,7 @@ Dans la corbeille, choisissez **More actions → Delete permanently** et lisez l
 
 Après la suppression, vérifiez que l'enregistrement sélectionné a laissé la corbeille et que la référence conservée s'ouvre toujours avec ses pièces jointes. La suppression d'un lien de collection, le déplacement d'un enregistrement vers la corbeille et la suppression permanente de celui-ci ont des champs d'application différents.
 
-![Lire la portée précise de la suppression permanente](/img/open-science/local-todo-batch/08-reference-delete-scope.png)
+![Lire la portée précise de la suppression permanente](/img/open-science/local-todo-batch/08-reference-delete-scope.webp)
 
 
 </ToolOperationGroup>

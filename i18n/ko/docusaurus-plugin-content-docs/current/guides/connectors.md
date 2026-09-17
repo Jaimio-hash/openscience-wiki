@@ -18,7 +18,7 @@ A Connector은 에이전트에 사용할 수있는 서비스 도구입니다. �
 
 **Settings → Connectors**을 열고 **Omics 아카이브**을 검색하고 세부 정보를 엽니다. 이 내장 제품군에는 GEO, ArrayExpress, MetaboLights, MGnify 및 PRIDE 도구가 포함되어 있습니다. 선택하기 전에 도구 행을 확장합니다.
 
-![GEO 메타데이터 도구 및 명시된 다운로드 경계](/img/open-science/guides-walkthrough/36-omics-tools.png)
+![GEO 메타데이터 도구 및 명시된 다운로드 경계](/img/open-science/guides-walkthrough/36-omics-tools.webp)
 
 `geo_get_series`는 GEO 시리즈 메타데이터, 샘플, 플랫폼 및 보충 파일 URL을 반환합니다. 반환된 소스에서 필요한 데이터 테이블을 다운로드하고 계산을 요청하기 전에 프로젝트에 부착하십시오.
 
@@ -50,7 +50,7 @@ A Connector은 에이전트에 사용할 수있는 서비스 도구입니다. �
 3. **Require approval**, **Block** 또는 **Always allow**를 선택하십시오. Require 승인 표시 **Ask when no Session, Project, or Global permission applies.**
 4. pubMed를 활성화하고 **Used by**을 검사합니다. Main에 대한 가용성은 **Main only**로 표시됩니다. 사용 가능한 가용성은 **Not in use**을 보여줍니다.
 
-![PubMed 도구 설명 및 승인 관리](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.png)
+![PubMed 도구 설명 및 승인 관리](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.webp)
 
 상세 목록 `search_articles`, `get_article_metadata`, `find_related_articles`, `lookup_article_by_citation`, `convert_article_ids`, `get_full_text_article` 및 `get_copyright_status`. 공구 당 **Always allow**, **Require approval** 또는 **Block**를 선택하십시오. 별도의 Connector-wide **Skip approvals** 스위치를 검토하여 활성화하십시오. 설명을 열기 만 도구의 지시를 표시합니다.
 
@@ -69,7 +69,7 @@ A Connector은 에이전트에 사용할 수있는 서비스 도구입니다. �
 4. 실제 결과를 검토합니다. 이 접근을 위해, 반환된 **GSE60450**, **musculus의 장점**, **12 샘플**를 검사하고, “문자 및 분대 세포 subpopulations의 성적 분석은 모유 임신한 mammary 동맥에 있는”라는 제목의 “문자 분석.
 5. 자신의 특성을 가진 반환된 GSM 식별자를 지키십시오. 모체의 MCL1 열 이름에 매핑하지 마십시오.
 
-![실제 GEO 샘플 특성은 Connector을 통해 반환](/img/open-science/guides-walkthrough/59-geo-sample-metadata.png)
+![실제 GEO 샘플 특성은 Connector을 통해 반환](/img/open-science/guides-walkthrough/59-geo-sample-metadata.webp)
 
 반환된 샘플 범위는 **GSM1480291–GSM1480302**, luminal/basal 인구와 처녀, 18.5 일 임신 및 2-day lactation 단계 덮음이었다. 이것들은 메타데이터를 반환하고, 카운트 합계에서 인페레드를 표시하지 않습니다. 전체 12 줄 응답 테이블은 <a href="/docs/examples/gse60450/geo-sample-metadata.csv" download>지오 샘플-metadata.csv</a>로 다운로드되었습니다. 이것은 관리한 QC artifacts에서 분리되는 대화 테이블 수출입니다.
 
@@ -105,7 +105,7 @@ Connector 명령 파일이 읽을 수 없다면 EPERM 오류를 유지하고 활
 | 현장/텍스트 | 구조 행 또는 하나로 이름을 입력하십시오. `KEY=` 선 당; Credentials에 살고있는 비밀 값. |
 | 명령 미리보기 | 바인딩 후에 보이는 발사기를 검열하십시오. |
 
-![로컬 명령 편집기 및 credential-bound 환경 변수](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.png)
+![로컬 명령 편집기 및 credential-bound 환경 변수](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.webp)
 
 실행자 항목은 실행할 수 없거나 서비스가 운영되는 것을 증명하지 않습니다. 수입한 로컬 명령을 확인하기 위해 아래의 invocation를 사용하십시오.
 
@@ -125,13 +125,13 @@ Connector 명령 파일이 읽을 수 없다면 EPERM 오류를 유지하고 활
 4. 다른 행 또는 **Remove header**을 위해 **Add header**을 사용하여 행을 디버깅합니다.
 5. **현장/텍스트**은 이름이 입력되는 방법을 변경합니다. 텍스트 모드는 줄 당 하나의 헤더 이름을 `Name:`로 예상한다; 자격 증명 값은 별도로 관리됩니다.
 
-![정체되는 우두머리 이름과 credential selector](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.png)
+![정체되는 우두머리 이름과 credential selector](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.webp)
 
 #### OAuth 바인딩 {/* #oauth-binding */}
 
 리소스 URL, 수송, 등록과 일치하는 **OAuth credential**를 선택하십시오. **New credential**는 [credential 편집기](../tools/credentials.md#new-credential)을 엽니다. 이 빈 프로파일에서, 양식은 **No OAuth credential matches this Connector's resource URL, transport, and registration.**을보고 최종 행동은 **Add and sign in**로 변경됩니다.
 
-![OAuth 자격 일치](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.png)
+![OAuth 자격 일치](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.webp)
 
 ## 수입, 수출 및 연결 시험 {/* #import-export-and-connection-tests */}
 
@@ -142,7 +142,7 @@ Connector 명령 파일이 읽을 수 없다면 EPERM 오류를 유지하고 활
 3. **Use configuration**을 선택하여 사전 작성된 편집기를 엽니다. 모든 필드를 검토하고 필요한 로컬 자격 증명을 결합하고 **I trust this connector**을 선택합니다.
 4. **Add connector**을 선택하면 목록의 연결 상태를 검사 한 다음 작은 읽기 전용 도구를 호출합니다.
 
-![서버 선택 및 필요한 자격 증명을 검토](/img/open-science/local-todo-batch/23-mcp-multi-server.png)
+![서버 선택 및 필요한 자격 증명을 검토](/img/open-science/local-todo-batch/23-mcp-multi-server.webp)
 
 수입된 서버가 `QC_EXAMPLE_TOKEN`과 같은 환경 변수를 참조할 때, 이 장치에 저장된 자격 증명에 이름을 바인딩합니다. **Add**은 필수 바인딩이 완료 될 때까지 사용할 수 없습니다. 추가 후 **Connected**을 확인하고 의도한 도구를 실행하십시오. 저장된 바인딩은 원격 인증을 유효하지 않습니다.
 
@@ -152,13 +152,13 @@ Connector 명령 파일이 읽을 수 없다면 EPERM 오류를 유지하고 활
 
 행의 **Actions → Export**을 선택, **Open Science Connector** 또는 **MCP client config**를 선택, 미리보기를 검사하고 **Save configuration**를 선택합니다.
 
-![수출 유지 credential 이름 및 현지 경로보고](/img/open-science/local-todo-batch/24-mcp-export-binding.png)
+![수출 유지 credential 이름 및 현지 경로보고](/img/open-science/local-todo-batch/24-mcp-export-binding.webp)
 
 실제 수출된 파일은 `required_secrets.environment`의 변수 이름을 유지했습니다. 그것은 데모 자격 증명 값, 로컬 신뢰 또는 권한이 없습니다. Reimport는 지역 자격 선택과 신뢰를 다시 요구합니다.
 
 같은 ID가 이미 존재할 때 미리보기는 **ID가있는 사용자 정의 Connector ... 이미 설치** 및 **Use configuration**이 사용할 수 없습니다. 기존 연결을 변경하려면 **Edit**을 사용하십시오. import는 중복 동작이 아닙니다.
 
-![기존 ID 블록 중복 수입](/img/open-science/local-todo-batch/26-mcp-reimport-collision.png)
+![기존 ID 블록 중복 수입](/img/open-science/local-todo-batch/26-mcp-reimport-collision.webp)
 
 수출 연결을 복원 할 때, 미리 채워진 필드를 검사하고 자격 증명을 다시 바인딩합니다. 신뢰를 완료하고 연구에서 사용하기 전에 경계 전화를 테스트합니다. 기존 Connector을 동일한 ID로 덮어쓰지 않습니다.
 

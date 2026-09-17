@@ -11,7 +11,7 @@ last_update:
 
 ZIP、ローカルSkill、または特定のGitHubリポジトリに持ち込むには、[Skill インポートと管理](manage.md)を使用します。 研究方法とその入力の概要については、[Skillディレクトリ](directory.md)を参照してください。
 
-![検索、カテゴリフィルタ、インストールボタン付きSkillマーケットプレイス](/img/open-science/feature-guides-2026-09/marketplace-browse.png)
+![検索、カテゴリフィルタ、インストールボタン付きSkillマーケットプレイス](/img/open-science/feature-guides-2026-09/marketplace-browse.webp)
 
 ## 適切な方法を見つける {/* #find-a-suitable-method */}
 
@@ -21,7 +21,7 @@ ZIP、ローカルSkill、または特定のGitHubリポジトリに持ち込む
 
 カタログの署名により、配布アイデンティティが確認されます。 方法があなたの研究の質問に適するか、またはあなたのコンピュータにその依存関係があることを確立しません。
 
-![マーケットプレースSkillの詳細は、著者、バージョン、ライセンス、インストールアクションを示します。](/img/open-science/feature-guides-2026-09/marketplace-detail.png)
+![マーケットプレースSkillの詳細は、著者、バージョン、ライセンス、インストールアクションを示します。](/img/open-science/feature-guides-2026-09/marketplace-detail.webp)
 
 ## Skillのインストールと使用 {/* #install-and-use-a-skill */}
 

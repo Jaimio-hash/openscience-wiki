@@ -32,7 +32,7 @@ Do not retrieve full text or run the later update yet. Use English.
 
 Этот забег вернул **12 матчей 3,643**, сохранил **7** и исключил **5**. Откройте **freshwater-search-plan.md**, чтобы проверить критерии и даты, прежде чем продолжить. Сохраненный план описывает состояние перед обновлением.
 
-![Сохранена базовая спецификация поиска и сохранены записи](/img/open-science/workflow-extensions/freshwater-search-plan.png)
+![Сохранена базовая спецификация поиска и сохранены записи](/img/open-science/workflow-extensions/freshwater-search-plan.webp)
 
 Проанализируйте уровень доказательств: некоторые кандидаты предоставили только название / метаданные, в то время как другие включили разрешенную лицензию. Обзоры широких транспортных путей включены в качестве контекста; Их включение не доказывает экспериментального результата, характерного для пресной воды.
 
@@ -40,11 +40,11 @@ Do not retrieve full text or run the later update yet. Use English.
 
 Скачать <ExampleDownload path="/examples/workflow-extensions/freshwater-baseline.ris">Базовый RIS</ExampleDownload>. В **Library → New collection** создайте **Пресноводный микропластиковый транспорт**, выберите его, затем выберите **Import references**. Выберите RIS и проверьте пункт назначения и соответствующее поведение перед импортом.
 
-![Базовый предварительный просмотр импорта для названной коллекции](/img/open-science/workflow-extensions/freshwater-import-baseline.png)
+![Базовый предварительный просмотр импорта для названной коллекции](/img/open-science/workflow-extensions/freshwater-import-baseline.webp)
 
 Зарегистрированный импорт завершается **7 Created, 0 Reused, 0 Skipped, 0 Failed**. Нажмите **Done** и подтвердите, что в коллекции семь ссылок. Существующие спички в другой библиотеке могут изменить созданный/повторно используемый сплит.
 
-![Семь справочных базовых коллекций](/img/open-science/workflow-extensions/freshwater-collection-baseline.png)
+![Семь справочных базовых коллекций](/img/open-science/workflow-extensions/freshwater-collection-baseline.webp)
 
 ## 3. Поиск в окне следующей даты в том же разговоре {/* #3-search-the-next-date-window-in-the-same-conversation */}
 
@@ -67,7 +67,7 @@ Write in English and reopen the outputs.
 
 Это обновление вернуло **12 матчей 7,600** с **Добавления 7, перекрытия базовой линии 0 и исключения 5**. Оба поиска усечены до кандидатов 12. Рейтинг и охват базы данных могут меняться; В таблице приведены данные о сентябрьском запуске 16, 2026.
 
-![Сохраненный аудит обновлений с дополнениями и исключениями](/img/open-science/workflow-extensions/freshwater-update-audit.png)
+![Сохраненный аудит обновлений с дополнениями и исключениями](/img/open-science/workflow-extensions/freshwater-update-audit.webp)
 
 Проверяйте фактические наборы DOI, а не вычитайте итоговые значения. Сохраните датированные <ExampleDownload path="/examples/workflow-extensions/freshwater-update-review.csv">обновление аудита</ExampleDownload> и <ExampleDownload path="/examples/workflow-extensions/freshwater-update-notes.md">Обновление заметок</ExampleDownload> вместе с исходным уровнем.
 
@@ -75,11 +75,11 @@ Write in English and reopen the outputs.
 
 Скачать <ExampleDownload path="/examples/workflow-extensions/freshwater-update.ris">Добавления RIS</ExampleDownload>. Выберите **Пресноводный микропластиковый транспорт** в библиотеке и выберите **Import references** Храните **Reuse existing reference**, чтобы уже существующий элемент можно было безопасно использовать повторно.
 
-![Предварительный просмотр импорта обновления, показывающий семь дополнений](/img/open-science/workflow-extensions/freshwater-import-update.png)
+![Предварительный просмотр импорта обновления, показывающий семь дополнений](/img/open-science/workflow-extensions/freshwater-import-update.webp)
 
 Фактический импорт обновлений был завершен с помощью **7 Created, 0 Reused, 0 Skipped, 0 Failed**. В настоящее время коллекция содержит **14 ссылки**. Это согласуется с нормализованным объединением DOI двух сохранившихся наборов.
 
-![Обновленная коллекция с четырнадцатью ссылками](/img/open-science/workflow-extensions/freshwater-collection-updated.png)
+![Обновленная коллекция с четырнадцатью ссылками](/img/open-science/workflow-extensions/freshwater-collection-updated.webp)
 
 Сама базовая линия не была переписана. Сохраняйте диапазон дат и записи поиска, чтобы читатели могли отличить оригинальную доказательную базу от обновления. Чтобы поддержать предложение или научное утверждение, достаньте и прочитайте соответствующие полные тексты далее. Включение метаданных само по себе не является оценкой доказательств. Для перекрывающихся пакетов запросов см. [Объединить поисковые партии](merge-literature-searches.md).
 

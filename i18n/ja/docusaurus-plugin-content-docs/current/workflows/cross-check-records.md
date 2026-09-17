@@ -25,7 +25,7 @@ NASA ファイルは、ヘッダの前に記述された行で始まり、利用
 
 プロジェクトを開き、CSVを**+ → Attach files**で添付します。 **Settings → Runtimes**では、Pythonが**Ready**で有効になっていることを保証します。 この実行は、Python 3.12.14、NumPy 2.5.3、パンダ2.3.3、Matplotlib 3.11.1、ピロー12.3.0を使用しました。
 
-![比較リクエストに付随する2つのソースCSV](/img/open-science/workflow-extensions/temperature-input.png)
+![比較リクエストに付随する2つのソースCSV](/img/open-science/workflow-extensions/temperature-input.webp)
 
 ## 2. 通訳の前にアライメントを依頼 {/* #2-ask-for-alignment-before-interpretation */}
 
@@ -52,7 +52,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 **temperature-aligned.csv** を開きます。 録画比較には**45共有年**が含まれています。 各ソースには、1991-2020 参照手段に必要なすべての **30** 年間ポイントの推定値があります。 年間値がゼロに満たさなかった。
 
-![保存された年揃えの値と違い](/img/open-science/workflow-extensions/temperature-table.png)
+![保存された年揃えの値と違い](/img/open-science/workflow-extensions/temperature-table.webp)
 
 サブトラクトされた手段は、NASA と HadCRUT の **0.53799554 °Cの** の **0.61266667 °Cの** です。 各データセットの独自の意味を割くと、両方から単一のオフセットではありません。 数値差を比較する前に単位、年および減算方向を確認してください。
 
@@ -60,7 +60,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 **temperature-comparison.png** を開きます。 最初のパネルは、異なる元のベースラインを保持します。 2 番目は、一般的な期間の残留後 2 つのシリーズを比較します。
 
-![Open-Scienceの元のベースラインそして共通ベースライン温度のカーブ](/img/open-science/workflow-extensions/temperature-plot.png)
+![Open-Scienceの元のベースラインそして共通ベースライン温度のカーブ](/img/open-science/workflow-extensions/temperature-plot.webp)
 
 | 記録された結果、NASAのマイナスHadCRUT | 値 |
 | --- | --- |
@@ -74,7 +74,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 **temperature-crosscheck.md** を開き、ソースコードと CSV のソース定義とメトリックを比較します。 表は、元の HadCRUT の自信の限界と機械的にシフトされた値を保持しますが、比較は、推定ベースラインまたは間接的な依存の **コメントはありません。** の支柱の不確実性です。
 
-![保存されたレポートは、実際のメトリックと制限を文書化します](/img/open-science/workflow-extensions/temperature-report.png)
+![保存されたレポートは、実際のメトリックと制限を文書化します](/img/open-science/workflow-extensions/temperature-report.webp)
 
 <ExampleDownload path="/examples/workflow-extensions/temperature-aligned.csv">CSV の整列</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/temperature-comparison.png">プロフィール</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.py">Pythonスクリプト</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.md">レポート</ExampleDownload>をダウンロードしてください。 利用可能な2つの入力ファイルで、リストされたライブラリを含むPython環境で再実行します。
 

@@ -18,7 +18,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 **Settings → Runtimes**에서 R은 **Ready**이며 활성화됩니다. 기록 된 실행은 기본 / 권장 R 기능 및 추가 패키지 설치와 함께 **R 4.4.3**을 사용했습니다. **+ → Attach files**을 통해 프로젝트 대화에 CSV을 첨부합니다.
 
-![같은 데이터 방법 비교에 첨부 된 공개 bfi 데이터 세트](/img/open-science/workflow-extensions/bfi-input.png)
+![같은 데이터 방법 비교에 첨부 된 공개 bfi 데이터 세트](/img/open-science/workflow-extensions/bfi-input.webp)
 
 ## 2. 모든 방법을 피팅하기 전에 사전 처리 수정 {/* #2-fix-the-preprocessing-before-fitting-either-method */}
 
@@ -48,7 +48,7 @@ Use English and do not install packages or delegate.
 
 **Generated** 또는 **Files**에서 **bfi-method-metrics.csv**을 엽니 다. 기록된 파일에는 표본 조사, 누락, PCA variance, FA uniquenesses, 적합, 융합,씨 및 입력 ID를 포함하여 **77 미터 행**, 포함합니다.
 
-![공유된 사전 처리 및 두 개의 적절한 방법에서 수치 측정을 저장](/img/open-science/workflow-extensions/bfi-metrics.png)
+![공유된 사전 처리 및 두 개의 적절한 방법에서 수치 측정을 저장](/img/open-science/workflow-extensions/bfi-metrics.webp)
 
 | Unrotated PCA 성분 | 총 표준화 된 variance 설명 |
 | --- | --- |
@@ -65,7 +65,7 @@ FA 낙관은 융합되었지만, likelihood-ratio 통계는 **1490.587 무료 18
 
 **bfi-method-comparison.png**을 엽니다. 그것의 3개의 패널 쇼 unrotated PCA variance, varimax 자전 PCA 선적 및 varimax FA 선적. 정확한 로딩 값은 **bfi-loadings.csv**, **250 행** : 25 항목 × 5 치수 × 2 방법.
 
-![Unrotated PCA variance와 2개의 자전된 선적 모조](/img/open-science/workflow-extensions/bfi-comparison-plot.png)
+![Unrotated PCA variance와 2개의 자전된 선적 모조](/img/open-science/workflow-extensions/bfi-comparison-plot.webp)
 
 방법은 "column 1"과 기계적으로 일치하지 마십시오. Factor/component 순서와 표시는 해결책을 바꾸지 않고 변화할 수 있습니다. heatmaps는 부정적인을 위해 파랑과 긍정적인 적재를 위해 빨강을 이용합니다; 아이템 패턴과 숫자 값을 비교합니다.
 
@@ -75,7 +75,7 @@ PCA 파티션 총 관찰 variance; FA 모델은 별도의 고유성을 가진 �
 
 **bfi-method-report.md**을 엽니다. 동일한 샘플과 사전 처리, 고정된 씨앗과 융합과 적합의 차이를 보고합니다. 이 1–6 과실 응답은 대략 연속으로 대우됩니다; 완전한 케이스 deletion는 응답 또는 participant 특성에 누락될 때 결과 할 수 있습니다.
 
-![최종 보고서는 사전 처리, 씨앗, 다양한 및 적합 제한을 기록합니다.](/img/open-science/workflow-extensions/bfi-report.png)
+![최종 보고서는 사전 처리, 씨앗, 다양한 및 적합 제한을 기록합니다.](/img/open-science/workflow-extensions/bfi-report.webp)
 
 <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.R">R 스크립트</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-loadings.csv">제품정보</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-method-metrics.csv">미터</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.png">....</ExampleDownload> 및 <ExampleDownload path="/examples/workflow-extensions/bfi-method-report.md">- 연혁</ExampleDownload>를 다운로드하십시오. 스크립트를 넣어 신선한 폴더에 입력을 다운로드, 거기 터미널을 열고 실행:
 

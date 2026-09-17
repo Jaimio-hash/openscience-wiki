@@ -47,13 +47,13 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 После завершения GSE60450 QC в новой сессии выберите **+ → Save as skill** и запросите отдельный пакет **rnaseq-описательный-qc**, сохранив существующие пакеты. Нативный рабочий процесс создал черновик, содержащий один **SKILL.md**. Валидация не вернула ошибок или предупреждений.
 
-![Нативный проект Skill и результат проверки](/img/open-science/v0.27.0/16-native-skill-draft-validated.png)
+![Нативный проект Skill и результат проверки](/img/open-science/v0.27.0/16-native-skill-draft-validated.webp)
 
 Проверьте имя, описание запуска, входы, метрические определения и условия остановки перед подтверждением публикации в Personal Skills. Затем используйте **Settings → Skills → Search skills**, откройте сохраненные инструкции и проверьте **Availability** и **Files**. Скачайте фактически опубликованный <ExampleDownload path="/examples/capabilities/rnaseq-descriptive-qc/SKILL.md">SKILL.md</ExampleDownload>.
 
-![Родная публикация найдена в Личном](/img/open-science/v0.27.0/17-native-skill-published.png)
+![Родная публикация найдена в Личном](/img/open-science/v0.27.0/17-native-skill-published.webp)
 
-![Вновь открытые инструкции и доступность](/img/open-science/v0.27.0/18-native-skill-instructions.png)
+![Вновь открытые инструкции и доступность](/img/open-science/v0.27.0/18-native-skill-instructions.webp)
 
 ### Почему кнопка не доступна {/* #why-the-button-is-unavailable */}
 
@@ -105,7 +105,7 @@ rnaseq-count-qc/
 5. Проверьте количество ссылок и размер пакета, затем выберите **Publish**.
 6. Найдите новый Личный ряд и откройте его заново. Подтвердить инструкции, доступность и файлы; экспортировать пакет для проверки обоих входов.
 
-![Тело RNA-seq Skill и поддерживающий файл](/img/open-science/capabilities-walkthrough/01-skill-create.jpg)
+![Тело RNA-seq Skill и поддерживающий файл](/img/open-science/capabilities-walkthrough/01-skill-create.webp)
 
 | Поле или кнопка | Что вводить или проверять |
 | --- | --- |
@@ -145,7 +145,7 @@ rnaseq-count-qc/
 
 Откройте новый CSV и сравните его по полному идентификатору с [Общий базовый уровень](../reference/example-data.md). Проверьте входной хэш. При применении Skill к другому исследованию, повторите эти проверки против собственного вклада и экспериментального дизайна этого исследования.
 
-![Отдельный вызов и вновь открытый QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.png)
+![Отдельный вызов и вновь открытый QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.webp)
 
 Ссылка на осуществление: [SkillEditor.tsx](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/SkillEditor.tsx), [host-skills-service.ts](https://github.com/aipoch/open-science/blob/v0.26.0/src/main/skills/host-skills-service.ts).
 

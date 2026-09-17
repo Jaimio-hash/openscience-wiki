@@ -26,7 +26,7 @@ Configurez les identifiants dans **Settings → Credentials** pour le service qu
 3. **Save key** stocke la clé entrée et reprend l'appel d'attente lorsqu'il réussit. **Not now** laisse le titre de compétence non configuré.
 4. Lisez l'état final de l'outil. Choisir **Not now** peut renvoyer **credential_required**; configurer la clé avant de réessayer.
 
-![Demande de titre OpenAlex dans l'application anglaise](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.jpg)
+![Demande de titre OpenAlex dans l'application anglaise](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.webp)
 
 L'invite indique que la clé est chiffrée sur cet ordinateur et envoyée uniquement à `api.openalex.org`. Dans les paramètres, le formulaire OpenAlex offre également **Validate**, **Save**, **Remove key** lorsqu'il en existe, et **Cancel**. Un champ de remplacement ne révèle pas la clé stockée. Les erreurs de stockage sécurisé nécessitent de résoudre l'état du porte-clés système avant de sauvegarder des secrets.
 
@@ -49,7 +49,7 @@ Créez le titre ici, puis sélectionnez son nom dans le [Configuration du connec
 | Découverte | Le cas échéant, découvrez les métadonnées du serveur; Ce n'est pas un succès en soi. |
 | Annuler / Enregistrer | Jeter le brouillon ou stocker une configuration valide des justificatifs. |
 
-![Champs d'inscription avancés OAuth](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.png)
+![Champs d'inscription avancés OAuth](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.webp)
 
 Dans un Connector personnalisé, lier le justificatif à un en-tête, une variable d'environnement ou un sélecteur OAuth. Le nom est la référence; ne placent pas les valeurs secrètes dans les descriptions ou les instructions de projet. Les configurations portatives exportées remplacent les secrets par des détenteurs de place. Un titre de compétence sauvegardé a encore besoin d'un test de service réel/Connector pour établir qu'il fonctionne.
 

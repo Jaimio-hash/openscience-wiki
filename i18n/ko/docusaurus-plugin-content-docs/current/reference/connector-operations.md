@@ -2,7 +2,7 @@
 title: "Connector 가동 참고"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -34,9 +34,11 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 반환 필드 이름은 작업에 따라 다릅니다. 아래 설명 및 다운로드 가능한 스키마는 각 계약을 지정합니다. 테이블은 보편적 인 JSON 응답이 아닙니다. 올바른 손 가족 목록을 사용하여 점프 할 수 있으며 가족의 매개 변수를 확장합니다. 작업 이름 검색 또한 포함 된 그룹을 엽니다.
 
+**빈 결과에서 별도의 실패를 읽으십시오.** v0.30.2, CellGuide 마커/source/tissue 요청 표면 fetch 실패 대신 빈 증거로 치료; a absent 선택적인 자료 파일은 아직도 빈 일 수 있습니다. OLS 관계 쿼리는 불완전한 질 및 잘못된 응답을 거부합니다. 서비스 오류는 셀 유형이 마커가 없거나 투과율이 관련되지 않은 것을 증명하지 않습니다.
+
 ## 작업 입력 {/* #operation-inputs */}
 
-한 번에 Connector을 확장합니다. 필수 필드는 **(주)** 표시; 이 참조 및 다운로드는 Open-Science **v0.30.1** 스키마를 사용합니다. 배열된 `input.required` 명부는 권위입니다; 레거시 최고 수준의 `required` 목록은 absent 될 수 있습니다. JSON 스키마, 전체 반품 설명 및 에이전트 사이드 호출 예제를 배열 <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">완벽한 다운로드 레지스트리</ExampleDownload>을 상담하십시오. 도구가 `accessions`, `cids`, `rs_id` 또는 다른 네임스페이스 별 필드를 기대할 때 일반 `id`을 통과하지 마십시오.
+한 번에 Connector을 확장합니다. 필수 필드는 **필수** 표시; 이 참조 및 다운로드는 Open-Science **v0.30.2** 스키마를 사용합니다. 배열된 `input.required` 명부는 권위입니다; 레거시 최고 수준의 `required` 목록은 absent 될 수 있습니다. JSON 스키마, 전체 반품 설명 및 에이전트 사이드 호출 예제를 배열 <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.2.json">완벽한 다운로드 레지스트리</ExampleDownload>을 상담하십시오. 도구가 `accessions`, `cids`, `rs_id` 또는 다른 네임스페이스 별 필드를 기대할 때 일반 `id`을 통과하지 마십시오.
 
 
 ## 뚱 베어 {/* #family-1 */}
@@ -599,7 +601,7 @@ const result = await host.mcp("genes", "get_uniprot_entries", {"accessions": ["P
 
 ### `map_reactome_pathways` {/* #map_reactome_pathways */}
 
-Reactome Pathways (AnalysisService Token 워크플로우)에 대한 Map 유전자 기호 또는 UniProt 액세스. Args: 식별자 (id_type="symbol", "uniprot"가 있는 경우 UniProt Accessions ; 중복 없음); id_type ("symbol"/"uniprot"); 종 (과태 "Homo sapiens"); 자원 (AnalysisService 분자 자원 전망 "TOTAL" 기본; "UNIPROT"의 특징 단백질 수준 매핑에 제한); include_disease (서비스 기본 True); 콤팩트 (True → per-identifier 저수준 통로만 &#123;stId의 이름, species&#125; + reactome 릴리스 버전; False → 전체 결정 결과 : 엔터런트 / 반응 통계 (p-value, FDR, Found / 총) 및 일괄 요약 포함의 전체 경로 세트. identifiers_not_found). 반환: 콤팩트 &#123;tool, reactome_version, id_type, 종, n_input, 유전자: &#123;identifier: &#123;found, n_lowlevel_pathways, pathways&#125;&#125;&#125;; 전체는 통로 통계 및 batch_summary을 추가합니다.
+Reactome Pathways (AnalysisService Token 워크플로우)에 대한 Map 유전자 기호 또는 UniProt 액세스. Args: 식별자 (id_type="symbol", "uniprot"가 있는 경우 UniProt Accessions ; 중복 없음); id_type ("symbol"/"uniprot"); 종 (과태 "Homo sapiens"); 자원 (AnalysisService 분자 자원 전망 "TOTAL" 기본; "UNIPROT"의 특징 단백질 수준 매핑에 제한); include_disease (서비스 기본 True); 콤팩트 (True → per-identifier 저수준 통로만 &#123;stId의 이름, species&#125; + reactome 릴리스 버전; False → 전체 결정 결과 : 엔터런트 / 반응 통계 (p-value, FDR, Found / 총) 및 일괄 요약 포함의 전체 경로 세트. identifiers_not_found). 반환: 콤팩트 &#123;tool, reactome_version, id_type, 종, n_input, 유전자: &#123;identifier: &#123;found, n_lowlevel_pathways, pathways&#125;&#125;&#125;; 전체는 통로 통계 및 batch_summary을 추가합니다. 지도 식별자는 요청한 종에 통로를 식별하고, 인간에게 투구하지 않고. `Homo sapiens` 또는 `Mus musculus`와 같은 지원되는 과학적인 이름을 사용하십시오; 다운로드 가능한 스키마 목록 모두 지원되는 이름. 빈, 지원되지 않은 또는 잘못 된 종은 오류입니다. `found` 및 `n_found`은 식별자 인식을 나타내며, 경로 회원은 인식 식별자가 0 경로가있을 수 있습니다. 컴팩트 모드는 저수준 통로만 포함합니다.
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
@@ -623,7 +625,7 @@ const result = await host.mcp("genes", "map_reactome_pathways", {"identifiers": 
 
 ### `ensembl_lookup` {/* #ensembl_lookup */}
 
-Ensembl gene/transcript/protein을 안정된 ID 또는 기호에 의한 유전자를 찾습니다. 핵심 표기 기록(위치, 바이오타입, 원시적 특성, 설명)을 반환합니다. Args : 쿼리 (Ensembl 안정적인 ID ENSG ... / ENST ... / ENSP ..., 버전 허용; 또는 BRAF와 같은 유전자 기호 / 별 - 진정한 안정 ID &#91;ENS + 옵션 종 코드 + 기능 문자 + > = 6-digit 블록, 또는 LRG_N&#93; 경로 ID 엔드 포인트; 다른 모든 것, incl. "ENS" 시작하기 ENSA와 같은 기호 엔드포인트에); 종 (암호표에 대한 Ensembl 종 이름, 기본 homo_sapiens; 안정적인 ID를 무시); 확장 (아이 기능 트리 포함 - gene's transcripts/exons/translation; 기본 해제). &#123;found, 쿼리, 종, record&#125; 반환; 기록은 아무것도 일치하지 않을 때, 다른 업스트림 볼업 dict - 유전자 &#123;id, display_name, 설명, 바이오 타입, object_type, seq_region_name, 시작, 끝, 물가, assembly_name, canonical_transcript, 버전, ...&#125; 1 기반 포괄적 인 좌표로.
+Ensembl gene/transcript/protein을 안정된 ID 또는 기호에 의한 유전자를 찾습니다. 핵심 표기 기록(위치, 바이오타입, 원시적 특성, 설명)을 반환합니다. Args : 쿼리 (Ensembl 안정적인 ID ENSG ... / ENST ... / ENSP ..., 버전 허용; 또는 BRAF와 같은 유전자 기호 / 별 - 진정한 안정 ID &#91;ENS + 옵션 종 코드 + 기능 문자 + > = 6-digit 블록, 또는 LRG_N&#93; 경로 ID 엔드 포인트; 다른 모든 것, incl. "ENS" 시작하기 ENSA와 같은 기호 엔드포인트에); 종 (암호표에 대한 Ensembl 종 이름, 기본 homo_sapiens; 안정적인 ID를 무시); 확장 (아이 기능 트리 포함 - gene's transcripts/exons/translation; 기본 해제). &#123;found, 쿼리, 종, record&#125; 반환; 기록은 아무것도 일치하지 않을 때, 다른 업스트림 볼업 dict - 유전자 &#123;id, display_name, 설명, 바이오 타입, object_type, seq_region_name, 시작, 끝, 물가, assembly_name, canonical_transcript, 버전, ...&#125; 1 기반 포괄적 인 좌표로. 성공적인 조회를 위해, 반환된 `species`는 상류 기록에서 옵니다. 안정적인 ID는 자신의 종을 선택, 그래서 요청/기본 종은 그 경로에 대 한 무시. 잘못된 결과가 요청/기본 종을 정하고 `record: null`이 있습니다.
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
@@ -650,13 +652,14 @@ const result = await host.mcp("genomes", "ensembl_xrefs", {"stable_id": "ENSG000
 
 ### `ensembl_vep_variant` {/* #ensembl_vep_variant */}
 
-Ensembl VEP와 예측 변종 결과 - (거대한) per-transcript 결과 목록의 가장-severe-first 요약. EITHER variant_id 또는 region+allele을 통과하십시오. Args: variant_id (dbSNP rsID rs7412, COSMIC COSV..., 또는 HGMD ID); 지역 (GRCh38 1 기반 포함 크롬 : 스타트 엔드, 예를 들어. 7:140753336-140753336; SNV start==end; 삽입 start=end+1; 명시된 물가 suffix : 1 /:-1 허용); allele (지역 경로, 예를 들어 앞으로 물가에 다양 한 Allele. T 또는 - 탈취를 위해); 종 (과태 homo_sapiens); max_consequences (회전된 원-transcript 행, 기본 25에 캡; n_transcript_consequences의 전체 카운트는 가장 심한 HIGH>MODERATE>LOW>MODIFIER입니다. transcript_consequences_truncated는 캡을 플래그로 합니다. 의논하기 &#123;쿼리, n_results, 결과:&#91;&#123;입력, assembly_name· seq_region_name, 시작, 끝, 물가, allele_string· most_severe_consequence, 유전자:&#91;&#123;gene_id· gene_symbol· worst_impact, n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts&#125;&#93;, n_transcript_consequences, transcript_consequences_truncated· transcript_consequences:&#91;...&#93;, n_regulatory_feature_consequences, n_motif_feature_consequences, colocated_variants:&#91;...&#93;&#125;·&#125;... 알려지지 않은 rsIDs는 업스트림 메시지를 제기합니다.
+`variant_id`를 지정하면 ID 조회가 우선하며 `region`, `allele`, `allele_orientation`은 무시됩니다. `allele`로 ID 조회 결과를 필터링할 수 없습니다. 영역 조회는 해당 종의 현재 참조 유전체 조립본(사람은 GRCh38)을 사용합니다. 좌표는 1부터 시작하며 양 끝을 포함하고, 삽입은 `start = end + 1`로 지정합니다. `allele_orientation`의 기본값은 `forward`이며, 영역에 `:-1` 접미사가 있어도 대립유전자를 참조 유전체의 정방향 가닥으로 해석합니다. `region`을 선택한 역방향 영역의 서열 대립유전자는 요청 전에 역상보 서열로 변환됩니다. 역방향 영역에서 기호 대립유전자를 쓰려면 `forward`가 필요합니다. 모든 영역 요청은 정방향 가닥으로 전송되고 `normalization`에 원래 입력과 변환된 입력이 기록됩니다. 참조 조립본 간 좌표 변환이나 좌표 반전은 수행하지 않습니다. 유전자가 역방향 가닥에 있어도 역방향 입력이 필요한 것은 아닙니다.
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
 | `variant_id` | 문자열 | 옵션 정보 |
 | `region` | 문자열 | 옵션 정보 |
 | `allele` | 문자열 | 옵션 정보 |
+| `allele_orientation` | 문자열 | 선택 사항; 기본 : `forward`; 제품 이름: `forward`, `region` |
 | `species` | 문자열 | 선택 사항; 기본: "homo_sapiens" |
 | `max_consequences` | 정수 | 선택 사항; 기본: 25 |
 
@@ -729,14 +732,14 @@ const result = await host.mcp("genomes", "ucsc_list_tracks", {"genome": "hg38", 
 
 ### `ucsc_track_data` {/* #ucsc_track_data */}
 
-지역에있는 모든 UCSC 게놈 브라우저 트랙의 Fetch Raw rows — ucsc_conservation / ucsc_tfbs_clusters (진 트랙, ClinVar, GWAS 카탈로그, CpG 섬, 반복, ...). Args: 트랙 (ucsc_list_tracks, 예.g.의 이름) 알려진Gene, cpgIslandExt, clinvarMain); 크롬 (chr-prefixed, chr7/chrX — UCSC는 접두사를 요구합니다); 시작 (0 기반 반 오픈; Ensembl 1 기반 시작은 여기서 시작 1입니다. 끝 (포함); genome (과태 hg38); max_rows (API maxItemsOutput, 기본 1000; truncated는 API's 자신의 maxItemsLimit 깃발을 반영합니다. &#123;genome, 트랙, 크롬, 시작, 끝, track_type, items_returned, truncated, rows&#125;를 반환 - 업스트림 모양 (BED-like &#123;chrom, 크롬 시작, 크롬 끝, 이름, 점수, ...&#125;;의 행 wiggle &#123;start, 끝, value&#125;). 알 수없는 트랙 상승. Quirk: 일부 거대한 트랙에 대한 API 캡 출력 자체 및 dataDownloadUrl의 포인트를 출력 - 현재 경우 echoed.
+지역에있는 모든 UCSC 게놈 브라우저 트랙의 Fetch Raw rows — ucsc_conservation / ucsc_tfbs_clusters (진 트랙, ClinVar, GWAS 카탈로그, CpG 섬, 반복, ...). Args: 트랙 (ucsc_list_tracks, 예.g.의 이름) 알려진Gene, cpgIslandExt, clinvarMain); 크롬 (chr-prefixed, chr7/chrX — UCSC는 접두사를 요구합니다); 시작 (0 기반 반 오픈; Ensembl 1 기반 시작은 여기서 시작 1입니다. 끝 (포함); genome (과태 hg38); max_rows (API maxItemsOutput, 기본 1000; truncated는 API's 자신의 maxItemsLimit 깃발을 반영합니다. &#123;genome, 트랙, 크롬, 시작, 끝, track_type, items_returned, truncated, rows&#125;를 반환 - 업스트림 모양 (BED-like &#123;chrom, 크롬 시작, 크롬 끝, 이름, 점수, ...&#125;;의 행 wiggle &#123;start, 끝, value&#125;). 알 수없는 트랙 상승. Quirk: 일부 거대한 트랙에 대한 API 캡 출력 자체 및 dataDownloadUrl의 포인트를 출력 - 현재 경우 echoed. 좌표는 `end > start`과 더불어 비 부정적인 안전 정수이어야 합니다. 잘못된 값은 거절되지 않고, 다른 locus에 둥글거나 둥글게 되었습니다.
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
 | `track` | 문자열 | **필수** |
 | `chrom` | 문자열 | **필수** |
-| `start` | 정수 | **필수** |
-| `end` | 정수 | **필수** |
+| `start` | 정수 | **필수**; 최소: 0; 최대: 9007199254740991 |
+| `end` | 정수 | **필수**; 최소: 0; 최대: 9007199254740991 |
 | `genome` | 문자열 | 선택 사항; 기본: "hg38" |
 | `max_rows` | 정수 | 선택 사항; 기본: 1000 |
 
@@ -746,13 +749,13 @@ const result = await host.mcp("genomes", "ucsc_track_data", {"track": "cpgIsland
 
 ### `ucsc_conservation` {/* #ucsc_conservation */}
 
-UCSC phyloP / phastCons 트랙의 영역에 대한 진화 보수 요약 (다양한 정렬에 기초 현명한 점수). 아르그: 크롬 (chr prefixed); 시작 (0 기반 반 오픈); 끝 (exclusive; 100000 bp에서 캡핑 된 스팬 - 더 큰 분할); genome (과태 hg38); 궤도 (과태 phyloP100way; positive=conserved, 부정적인=fast 진화; 대안 hg38 phastCons100way, phyloP30way, phastCons30way, phyloP447way, phyloP470way; hg19 phyloP100wayAll/phastCons100way; include_values (또한 기초 &#123;start, 최후, value&#125;를 돌려보내십시오 max_values, values_truncated 플래그에서 캡핑 된 행 캡; default false = 요약만); max_values (기초 모자 기본 2000). &#123;genome, 트랙, 크롬, 시작, 끝, span_bp, n_bases_covered, coverage_fraction, 의미, 분, max&#125; 반환 (+values, 요청시 values_truncated). 각 row's 기초 경간에 의해 무게를 매는 통계, 창에 자르는; coverage_fraction의 0 득점되지 않는 기초. Non-score 트랙 인상; 업스트림-truncated 행 목록도 인상.
+UCSC phyloP / phastCons 트랙의 영역에 대한 진화 보수 요약 (다양한 정렬에 기초 현명한 점수). 아르그: 크롬 (chr prefixed); 시작 (0 기반 반 오픈); 끝 (exclusive; 100000 bp에서 캡핑 된 스팬 - 더 큰 분할); genome (과태 hg38); 궤도 (과태 phyloP100way; positive=conserved, 부정적인=fast 진화; 대안 hg38 phastCons100way, phyloP30way, phastCons30way, phyloP447way, phyloP470way; hg19 phyloP100wayAll/phastCons100way; include_values (또한 기초 &#123;start, 최후, value&#125;를 돌려보내십시오 max_values, values_truncated 플래그에서 캡핑 된 행 캡; default false = 요약만); max_values (기초 모자 기본 2000). &#123;genome, 트랙, 크롬, 시작, 끝, span_bp, n_bases_covered, coverage_fraction, 의미, 분, max&#125; 반환 (+values, 요청시 values_truncated). 각 row's 기초 경간에 의해 무게를 매는 통계, 창에 자르는; coverage_fraction의 0 득점되지 않는 기초. Non-score 트랙 인상; 업스트림-truncated 행 목록도 인상. 좌표는 `end > start`과 더불어 비 부정적인 안전 정수이어야 합니다. 잘못된 값은 거절되지 않고, 다른 locus에 둥글거나 둥글게 되었습니다.
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
 | `chrom` | 문자열 | **필수** |
-| `start` | 정수 | **필수** |
-| `end` | 정수 | **필수** |
+| `start` | 정수 | **필수**; 최소: 0; 최대: 9007199254740991 |
+| `end` | 정수 | **필수**; 최소: 0; 최대: 9007199254740991 |
 | `genome` | 문자열 | 선택 사항; 기본: "hg38" |
 | `track` | 문자열 | 선택 사항; 기본: "phyloP100way" |
 | `include_values` | 불리언 | 선택 사항; 기본값: false |
@@ -764,13 +767,13 @@ const result = await host.mcp("genomes", "ucsc_conservation", {"chrom": "chr7", 
 
 ### `ucsc_tfbs_clusters` {/* #ucsc_tfbs_clusters */}
 
-ENCODE transcription-factor 바인딩 사이트 클러스터는 지역 (세포 유형의 수백에 걸쳐 CHIP-seq 피크 클러스터)를 덮고 있습니다. TFs는 어디에 묶습니다. 아르그: 크롬 (chr prefixed); 시작 (0 기반 반 오픈); 끝 (포함); genome (hg38 기본 트랙 encRegTfbsClustered ENCODE 3, 또는 hg19 wgEncodeRegTfbsClusteredV3; 다른 집합 상승); max_rows (API maxItemsOutput 과태 1000; truncated 반사 maxItemsLimit). &#123;genome, 트랙, 크롬, 시작, 끝, items_returned, truncated, n_factors, 요소, clusters&#125; 반환 — 클러스터 정렬 (chromStart,name) &#123;name (TF 기호 예). CTCF), 크롬, 크롬 시작, 크롬 끝, 점수 (0-1000), 소스 카운터 (지원 실험) &#125;; 요인은 명백한 TF 명부입니다. Score>=~600 및 높은 소스Count ~ 강력한 바인딩.
+ENCODE transcription-factor 바인딩 사이트 클러스터는 지역 (세포 유형의 수백에 걸쳐 CHIP-seq 피크 클러스터)를 덮고 있습니다. TFs는 어디에 묶습니다. 아르그: 크롬 (chr prefixed); 시작 (0 기반 반 오픈); 끝 (포함); genome (hg38 기본 트랙 encRegTfbsClustered ENCODE 3, 또는 hg19 wgEncodeRegTfbsClusteredV3; 다른 집합 상승); max_rows (API maxItemsOutput 과태 1000; truncated 반사 maxItemsLimit). &#123;genome, 트랙, 크롬, 시작, 끝, items_returned, truncated, n_factors, 요소, clusters&#125; 반환 — 클러스터 정렬 (chromStart,name) &#123;name (TF 기호 예). CTCF), 크롬, 크롬 시작, 크롬 끝, 점수 (0-1000), 소스 카운터 (지원 실험) &#125;; 요인은 명백한 TF 명부입니다. Score>=~600 및 높은 소스Count ~ 강력한 바인딩. 좌표는 `end > start`과 더불어 비 부정적인 안전 정수이어야 합니다. 잘못된 값은 거절되지 않고, 다른 locus에 둥글거나 둥글게 되었습니다.
 
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
 | `chrom` | 문자열 | **필수** |
-| `start` | 정수 | **필수** |
-| `end` | 정수 | **필수** |
+| `start` | 정수 | **필수**; 최소: 0; 최대: 9007199254740991 |
+| `end` | 정수 | **필수**; 최소: 0; 최대: 9007199254740991 |
 | `genome` | 문자열 | 선택 사항; 기본: "hg38" |
 | `max_rows` | 정수 | 선택 사항; 기본: 1000 |
 
@@ -799,7 +802,7 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>작업 및 매개 변수 표시</summary>
 
-**gnomAD 좌표 규칙:**는 참고 집합을 가진 dataset 핀을 기록합니다. R2.1/ExAC 및 GRCh38 for r3/r4; 구조 가변 유전자 쿼리 사용 `gnomad_sv_r2_1` (GRCh37) 또는 `gnomad_sv_r4` (GRCh38); 핀을 변경하면 입력 좌표를 변환하지 않습니다. `gene_constraint` 및 gnomAD ClinVar 미러는 고정 GRCh38 유전자 검사를 사용하며 dataset 인수를 허용하지 않습니다. Mitochondrial 쿼리는 또한 고정 GRCh38 부모를 찾습니다; 유전자 또는 둘 다 주문한 지역 경계를 공급하고, 형태를 결코 두지 마십시오. 지역 경계는 1에서 2,147,483,647에 정수가 있어야 합니다. 1 백만 기초 차이 한계는 `region_variants`에 적용합니다; 별도의 mitochondrial 제한이 없습니다. 원래 SV dataset을 사용하여 release-specific Structure-variant ID를 유지하십시오.
+**gnomAD 좌표 규칙:**는 참고 집합을 가진 dataset 핀을 기록합니다. R2.1/ExAC 및 GRCh38 for r3/r4; 구조 가변 유전자 쿼리 사용 `gnomad_sv_r2_1` (GRCh37) 또는 `gnomad_sv_r4` (GRCh38); 핀을 변경하면 입력 좌표를 변환하지 않습니다. `gene_constraint` 및 gnomAD ClinVar 미러는 고정 GRCh38 유전자 검사를 사용하며 dataset 인수를 허용하지 않습니다. Mitochondrial 쿼리는 또한 고정 GRCh38 부모를 찾습니다; 유전자 또는 둘 다 주문한 지역 경계를 공급하고, 형태를 결코 두지 마십시오. 지역 경계는 1에서 999,999,999에 정수가 있어야 합니다. 1 백만 기초 차이 한계는 `region_variants`에 적용합니다; 별도의 mitochondrial 제한이 없습니다. 원래 SV dataset을 사용하여 release-specific Structure-variant ID를 유지하십시오.
 
 ### `get_variant` {/* #get_variant */}
 
@@ -861,8 +864,8 @@ genomic 지역의 모든 gnomAD 짧은 변형 목록 (최대 1 Mb - 연속 창�
 | (주) | 유형 | 필요조건 및 constraints |
 | --- | --- | --- |
 | `chrom` | 문자열 | **필수** |
-| `start` | 정수 | **필수**; 최소: 1; 최대: 2147483647 |
-| `stop` | 정수 | **필수**; 최소: 1; 최대: 2147483647 |
+| `start` | 정수 | **필수**; 최소: 1; 최대: 999999999 |
+| `stop` | 정수 | **필수**; 최소: 1; 최대: 999999999 |
 | `dataset` | 문자열 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
 
 ```javascript
@@ -930,8 +933,8 @@ gnomAD mitochondrial 변형을 나열하십시오. 이식성 인식 수 (`ac_het
 | --- | --- | --- |
 | `gene_symbol` | 문자열 | 옵션 정보 |
 | `gene_id` | 문자열 | 옵션 정보 |
-| `region_start` | 정수 | 선택 사항; 최소: 1; 최대: 2147483647 |
-| `region_stop` | 정수 | 선택 사항; 최소: 1; 최대: 2147483647 |
+| `region_start` | 정수 | 선택 사항; 최소: 1; 최대: 999999999 |
+| `region_stop` | 정수 | 선택 사항; 최소: 1; 최대: 999999999 |
 | `dataset` | 문자열 | 선택 사항; 기본: "gnomad_r4"; 한국어 (ko)"gnomad_r4"· "gnomad_r4_non_ukb"· "gnomad_r3"· "gnomad_r3_controls_and_biobanks"· "gnomad_r3_non_cancer"· "gnomad_r3_non_neuro"· "gnomad_r3_non_topmed"· "gnomad_r3_non_v2"· "gnomad_r2_1"· "gnomad_r2_1_controls"· "gnomad_r2_1_non_cancer"· "gnomad_r2_1_non_neuro"· "gnomad_r2_1_non_topmed"· "(주)아라"· |
 
 ```javascript

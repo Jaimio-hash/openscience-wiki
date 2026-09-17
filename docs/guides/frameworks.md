@@ -12,7 +12,7 @@ Choose an Agent framework to execute conversations and tools. After installing i
 
 Open **Settings → Agent**. The page separates **Installed** from **Available**. Read the version, path and **Active** marker on the installed card before changing anything.
 
-![Detected app-managed Codex](/img/open-science/local-acceptance/agent-codex-active.png)
+![Detected app-managed Codex](/img/open-science/local-acceptance/agent-codex-active.webp)
 
 | Control/status | Meaning and action |
 | --- | --- |
@@ -63,11 +63,11 @@ Use the app's repair flow for a broken managed runtime; do not delete its direct
 4. Choose **Install OpenCode → App-managed download (recommended)**. Wait for the **Installed** card, then select it and confirm **Switch**.
 5. Check **Active**, the runtime path and the compatible model selection. Reinstalling the backend does not configure a model provider for it.
 
-![Scope of the app-managed OpenCode uninstall](/img/open-science/priority-completion/01-opencode-uninstall.png)
+![Scope of the app-managed OpenCode uninstall](/img/open-science/priority-completion/01-opencode-uninstall.webp)
 
 Before removing a backend, switch to another available backend; the active backend cannot be removed through this control. After reinstalling, re-detect and activate it, then open an existing project and run a small request to check the connection.
 
-![OpenCode installed again and selected](/img/open-science/priority-completion/03-opencode-reinstalled.png)
+![OpenCode installed again and selected](/img/open-science/priority-completion/03-opencode-reinstalled.webp)
 
 If install actions are disabled, check for another installation/switch in progress and the stated prerequisite error. If detection succeeds but requests fail, inspect model authentication and framework/API compatibility separately.
 

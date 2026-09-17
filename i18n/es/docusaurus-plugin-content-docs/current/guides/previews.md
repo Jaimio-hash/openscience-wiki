@@ -36,7 +36,7 @@ Para guardar una ubicación de lectura para usted, seleccione texto o una regió
 
 Abre `rnaseq-sample-qc.csv`. En este ejemplo, muestra **filas 12 · columnas 6** y utiliza la primera fila como encabezados. El desplazamiento horizontal expone nombres de columna de larga fuente y las métricas a su derecha. Los números de fila de la mesa son posiciones de visualización, no identificaciones de genes o muestras.
 
-![La mesa QC de doce muestras](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![La mesa QC de doce muestras](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 Compruebe que las etiquetas de la columna y los identificadores completos son legibles. Las definiciones de campo y los controles contra la base de referencia compartida están en [Cuadros y conjuntos de datos](../tools/tables.md).
 
@@ -46,7 +46,7 @@ La fuente `.txt` es una matriz separada de pestañas; un visor de texto puede mo
 
 Abre `rnaseq-library-sizes.png`. Use **Zoom in**, **Zoom out** y **Reset zoom**; abrir pantalla completa cuando las etiquetas de eje son demasiado pequeñas. El zoom cambia sólo la vista. No remueva la matriz de origen ni actualiza un resultado estadístico.
 
-![El número total real de la cuenta en bruto figura en la vista previa de pantalla completa](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+![El número total real de la cuenta en bruto figura en la vista previa de pantalla completa](/img/open-science/guides-walkthrough/54-rnaseq-figure.webp)
 
 Lea el eje de cuenta cruda, las doce etiquetas de muestra y su asignación en el CSV/report. Las diferentes alturas de barras por sí solas no establecen expresión diferencial. El ejemplo es un control de preanálisis descriptivo, sin pruebas de normalización o hipótesis.
 
@@ -71,9 +71,9 @@ El <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-reading.docx">In
 | JSON | Abrir <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.json">el resumen</ExampleDownload> para inspeccionar el texto fuente, identificadores y valores. Se muestra como código en lugar de un árbol de objeto expandible. |
 | HTML | Abrir <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.html">la tabla de lectura</ExampleDownload>. **Source** muestra el HTML; **Render** restaura el documento formateado. Ninguno de los modos vuelve a funcionar el QC. |
 
-![Selección de muestras en la vista previa del libro de trabajo real](/img/open-science/local-todo-batch/47-workbook-samples.png)
+![Selección de muestras en la vista previa del libro de trabajo real](/img/open-science/local-todo-batch/47-workbook-samples.webp)
 
-![La segunda página del TIFF real](/img/open-science/local-todo-batch/50-tiff-second-page.png)
+![La segunda página del TIFF real](/img/open-science/local-todo-batch/50-tiff-second-page.webp)
 
 Si **Preview unavailable → Open this Office file in your default app to view it.** aparece, use **Open** para un archivo local, o **Download** para una carga gestionada, a continuación, abra en una aplicación compatible. Este inconveniente mantiene el archivo original disponible cuando la vista previa incorporada no puede mostrarlo.
 

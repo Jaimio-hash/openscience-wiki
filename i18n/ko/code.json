@@ -1606,5 +1606,11 @@
   },
   "docs.outline.workflows.cross-check-records.scope": {
     "message": "Align 정의, 단위, 년 및 NASA와 HadCRUT 연간 온도 기록을 비교하기 전에 참조 기간."
+  },
+  "docs.outline.reference.v0302.title": {
+    "message": "v0.30.2"
+  },
+  "docs.outline.reference.v0302.scope": {
+    "message": "Specialist Skill 로딩, 독립적인 Side Chat, 데이터 쿼리 및 Notebook 복구."
   }
 }

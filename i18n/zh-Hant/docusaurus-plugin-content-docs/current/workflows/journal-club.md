@@ -34,7 +34,7 @@ Stage verified candidates in Literature Inbox for my review; do not accept
 them automatically. Stop before downloading PDFs. Keep everything in English.
 ```
 
-![實際檢索記錄顯示候選論文身份與獲取狀態](/img/open-science/research-workflows/literature-topic-results.png)
+![實際檢索記錄顯示候選論文身份與獲取狀態](/img/open-science/research-workflows/literature-topic-results.webp)
 
 <a href="/docs/examples/research-workflows/single-atom-search-log.md" download>初次檢索記錄</a>包含透過網頁檢索與 Crossref 後設資料找到的八篇候選，此時尚未下載全文。如果來源要求憑據，先配置[聯結器](../guides/connectors.md)，或要求 Agent 使用可用來源並說明缺口。
 
@@ -58,7 +58,7 @@ Keep the old collection unchanged. Keep everything in English.
 
 檢視<a href="/docs/examples/research-workflows/single-atom-open-access-selection.md" download>補選記錄</a>，在 Inbox 中勾選目標四篇，點選 **Accept**。有開放獲取連結不等於全文已可用，仍需實際儲存並開啟 PDF。
 
-![四篇補選論文等待人工接受](/img/open-science/research-workflows/journal-open-access-inbox.png)
+![四篇補選論文等待人工接受](/img/open-science/research-workflows/journal-open-access-inbox.webp)
 
 使用 **New collection** 建立 **Single-Atom Catalysis - Full-Text Journal Club**。在 **All references** 中選擇新接受的四篇及 Lang，使用 **Add to collection** 加入集合；再用 **Add to project** 將它們關聯到會話所在專案。
 
@@ -79,15 +79,15 @@ Keep the old collection unchanged. Keep everything in English.
 3. 開啟附件，核對標題、DOI 與頁數。
 4. 對五篇逐一操作，再回到集合，確認每行都有附件圖示。
 
-![Lang 論文可選的全文來源](/img/open-science/research-workflows/literature-topic-fulltext.png)
+![Lang 論文可選的全文來源](/img/open-science/research-workflows/literature-topic-fulltext.webp)
 
 本次 Lang 透過 Europe PMC 新增；其餘四篇透過 Unpaywall 找到的出版方來源儲存。一個來源新增失敗時，可嘗試另一個來源。必要時透過 **Open source** 獲取有權訪問的檔案，再用 **Add PDF** 新增。如果沒有可讀副本，先調整選文或明確標記缺失，再要求提取全文結論。
 
-![實際下載的論文在英文 PDF 預覽中開啟](/img/open-science/research-workflows/journal-qi-pdf.png)
+![實際下載的論文在英文 PDF 預覽中開啟](/img/open-science/research-workflows/journal-qi-pdf.webp)
 
 最終集合儲存了五份 PDF，按上表順序分別為 **10、9、11、10、11 頁**。附件圖示表示檔案已儲存；開啟預覽才能確認可讀、且與文獻記錄一致。
 
-![最終集合中的五篇論文均有附件](/img/open-science/research-workflows/journal-five-fulltexts.png)
+![最終集合中的五篇論文均有附件](/img/open-science/research-workflows/journal-five-fulltexts.webp)
 
 <span id="draft-the-reading-plan-then-deepen-it-with-full-text" />
 
@@ -116,7 +116,7 @@ do not delegate. I will open the results and check the original pages.
 
 完成後，從 **Generated** 開啟 **single-atom-fulltext-reading-pack.md**。檢查五篇論文核對表、各篇結論與定位、限制、討論問題和議程，確認議程合計 60 分鐘。
 
-![已儲存的全文資料包使用同一組五篇論文，並保留原文核對資訊](/img/open-science/research-workflows/journal-fulltext-pack.png)
+![已儲存的全文資料包使用同一組五篇論文，並保留原文核對資訊](/img/open-science/research-workflows/journal-fulltext-pack.webp)
 
 <span id="check-the-paper-map-against-the-original-pdfs" />
 
@@ -124,11 +124,11 @@ do not delegate. I will open the results and check the original pages.
 
 開啟 **single-atom-fulltext-paper-map.csv**，點選展開按鈕進入全屏預覽。本次為 **5 rows · 12 columns**。核對 DOI 集合與文獻庫一致；另一組選文的資料包不能作為本次結果。長單元格可橫向滾動，或下載 CSV 後完整閱讀。
 
-![實際儲存的五行、十二列論文對照表](/img/open-science/research-workflows/journal-fulltext-paper-map.png)
+![實際儲存的五行、十二列論文對照表](/img/open-science/research-workflows/journal-fulltext-paper-map.webp)
 
 回到 **Library**，開啟被引用的 PDF，點選頁碼計數器，輸入目標頁後按 **Enter**。把圖表、圖注和附近正文一起檢查。例如 He 等論文的 Figure 5 在 **PDF 第 7 頁**，生產線描述在第 3 頁，支援的是總結中的不同部分。
 
-![開啟 He 等論文 PDF 第 7 頁核對 Figure 5](/img/open-science/research-workflows/journal-he-figure5.png)
+![開啟 He 等論文 PDF 第 7 頁核對 Figure 5](/img/open-science/research-workflows/journal-he-figure5.webp)
 
 發現定位或條件有誤時，要求儲存修訂版，再重新開啟檢查。本次資料包還保留了 Sun 等論文中的一處矛盾：第 2 頁與 Figure 5 圖注給出的進料組成不同。資料包分別記錄兩種說法，沒有自行統一；這可以作為組會問題，不能當作已解決的實驗細節。
 

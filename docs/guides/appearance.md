@@ -23,13 +23,13 @@ Choose a comfortable theme, set your interface language and receive task alerts 
 
 <PlatformContent platform="macos">
 
-![General appearance settings](/img/open-science/v0.27.0/07-general-appearance.png)
+![General appearance settings](/img/open-science/v0.27.0/07-general-appearance.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-<Screenshot src="/img/open-science/windows/general-settings.png" alt="Theme and Language controls in Windows General settings" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.png" linkLabel="Open the complete Windows General settings screenshot" />
+<Screenshot src="/img/open-science/windows/general-settings.webp" alt="Theme and Language controls in Windows General settings" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.webp" linkLabel="Open the complete Windows General settings screenshot" />
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ To request a report in a different language, specify that in your conversation. 
 
 The same report remains readable at the larger scale. Use the horizontal scrollbar to see columns outside the current table viewport; the display scale changes the view, not the saved data.
 
-![Open-Science at 125 percent scaling with a horizontal scrollbar in the table preview](/img/open-science/windows/app-scale-125.png)
+![Open-Science at 125 percent scaling with a horizontal scrollbar in the table preview](/img/open-science/windows/app-scale-125.webp)
 
 </PlatformContent>
 
@@ -104,7 +104,7 @@ If you missed the banner, find the alert in Windows Notification Center. If no a
 
 <PlatformContent platform="macos">
 
-![English system completion alert with task details hidden](/img/open-science/priority-completion/07-system-completion-notification.png)
+![English system completion alert with task details hidden](/img/open-science/priority-completion/07-system-completion-notification.webp)
 
 </PlatformContent>
 Turn **Show task content in system notifications** off to use generic alerts. Select a completion or approval alert to reopen its conversation; respond to approvals inside the app.
@@ -136,7 +136,7 @@ With **General → Close button behaviour → Ask every time**, closing the wind
 | You want to… | Where to go |
 | --- | --- |
 | Check for an app update | **General → About → Check now**; follow [Installation and updates](installation.md#choose-a-reproducible-version-and-update-deliberately). |
-| Read version changes or get help | **About → Release notes / Help Center** opens the corresponding external page. This wiki also has a [Changelog](../changelog/v0.30.1.md). |
+| Read version changes or get help | **About → Release notes / Help Center** opens the corresponding external page. This wiki also has a [Changelog](../changelog/v0.30.2.md). |
 | Locate or open the diagnostic log | **General → Diagnostics → Reveal / Open**; see [Troubleshooting](troubleshooting.md). Logs stay local until you share them. |
 | Install the command-line entry | **General → Install command**; see [CLI reference](../reference/cli.md). Desktop use does not require this command. |
 | Manage data location or archived work | [Storage and archived work](storage.md). |

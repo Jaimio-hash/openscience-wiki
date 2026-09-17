@@ -33,7 +33,7 @@ Network 显示 **Ready** 但工具失败时，展开该工具的错误。状态�
 5. 检查新增草稿行，使用 **Remove [hostname]** 撤销。
 6. 选择 **Save changes** 保存预期清单。
 
-![通配符被域名校验拒绝](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.png)
+![通配符被域名校验拒绝](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.webp)
 
 填写 `data.example.org` 这样的主机名，不带协议、路径、端口、通配符或 IP 地址。若显示 **Enter a hostname only, without a scheme, path, port, or wildcard.**，去掉这些部分后再保存。
 
@@ -89,7 +89,7 @@ deny network-outbound pypi.org:443
 | **Save** | 保存，供后续软件包操作使用 |
 | **Cancel** | 放弃草稿 |
 
-![镜像与 CA bundle 字段](/img/open-science/walkthrough-2026-09-08/56-package-mirror.png)
+![镜像与 CA bundle 字段](/img/open-science/walkthrough-2026-09-08/56-package-mirror.webp)
 
 包镜像改变软件包来源。核对镜像所需的根地址或索引格式，保存后在所选环境中重试小规模安装。模型提供方代理需单独配置。
 

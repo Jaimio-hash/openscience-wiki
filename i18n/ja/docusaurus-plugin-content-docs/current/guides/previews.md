@@ -36,7 +36,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 `rnaseq-sample-qc.csv` を開きます。 この例では、**12行・6列** を表示し、先頭行をヘッダとして使用します。 水平スクロールは、長いソース列の名前とメトリクスを右側に露出します。 テーブルの行番号は、遺伝子やサンプルIDではなく、表示位置です。
 
-![12サンプルQCテーブル](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![12サンプルQCテーブル](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 列ラベルとフル識別子が読みやすくなることを確認します。 フィールド定義と共有ベースラインに対するチェックは[テーブルとデータセット](../tools/tables.md)です。
 
@@ -46,7 +46,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 `rnaseq-library-sizes.png` を開きます。 **Zoom in**、**Zoom out**および**Reset zoom**を使用して下さい; 軸ラベルが小さすぎるとフルスクリーンが開きます。 ズームはビューだけを変更します。 ソース行列を再サンプルしたり、統計結果を更新したりしません。
 
-![フルスクリーンのプレビューで実際の生計の合計数字](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+![フルスクリーンのプレビューで実際の生計の合計数字](/img/open-science/guides-walkthrough/54-rnaseq-figure.webp)
 
 CSV/report内の全12個のサンプルラベルとマッピングを読み込みます。 異なるバー高さだけでは、差動式を確立しません。 例は、正規化または仮説テストなしで記述的事前解析チェックです。
 
@@ -71,9 +71,9 @@ Markdownは見出し、リスト、コード、リンクをレンダリングし
 | JSON | 開く <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.json">概要 概要</ExampleDownload> ソースのテキスト、識別子、値をチェックします。 拡張可能なオブジェクトツリーではなくコードとして表示されます。 |
 | HTML | 開く <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.html">読書テーブル</ExampleDownload>. **Source** HTML を表示します。 **Render** フォーマットされた文書を復元します。 ネザーモードはQCを再実行します。 |
 
-![実際のワークブックプレビューのサンプルの選択](/img/open-science/local-todo-batch/47-workbook-samples.png)
+![実際のワークブックプレビューのサンプルの選択](/img/open-science/local-todo-batch/47-workbook-samples.webp)
 
-![実際のTIFFの2番目のページ](/img/open-science/local-todo-batch/50-tiff-second-page.png)
+![実際のTIFFの2番目のページ](/img/open-science/local-todo-batch/50-tiff-second-page.webp)
 
 もしも **Preview unavailable → Open this Office file in your default app to view it.** 出現、使用 **Open** ローカルファイルの場合、または **Download** 管理されたアップロードのために、それから多用性がある適用でそれを開けて下さい。 このフォールバックは、組み込みのプレビューが表示できないときに利用可能な元のファイルを保持します。
 

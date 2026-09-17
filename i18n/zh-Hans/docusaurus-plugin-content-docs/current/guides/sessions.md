@@ -23,7 +23,7 @@ GSE60450 实际运行完成后，通过 **Edit…** 保存了以下内容：
 | Save | 保存更改 | 关闭后核对侧栏标题 |
 | Cancel / Close | 不应用草稿 | 不取消科研任务 |
 
-![会话名称与说明编辑器](/img/open-science/guides-walkthrough/40-session-edit.png)
+![会话名称与说明编辑器](/img/open-science/guides-walkthrough/40-session-edit.webp)
 
 会话行菜单 **Pin** 将会话放入 Pinned，**Unpin** 返回普通列表。固定仅便于访问，不维持内核运行，也不防止删除。
 
@@ -35,7 +35,7 @@ GSE60450 实际运行完成后，通过 **Edit…** 保存了以下内容：
 
 ## 区分会话菜单操作
 
-![RNA-seq 会话操作菜单](/img/open-science/guides-walkthrough/41-session-actions.png)
+![RNA-seq 会话操作菜单](/img/open-science/guides-walkthrough/41-session-actions.webp)
 
 | 操作 | 结果 | 检查 |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ GSE60450 实际运行完成后，通过 **Edit…** 保存了以下内容：
 4. 通过 **Edit…** 改名为 `GSE60450 - follow-up interpretation`。
 5. 检查继承历史，后续请求需要原结果时明确引用项目文件。
 
-![单独命名的分支与固定的原会话](/img/open-science/guides-walkthrough/57-session-branch.png)
+![单独命名的分支与固定的原会话](/img/open-science/guides-walkthrough/57-session-branch.webp)
 
 分支保留所选对话历史，但不会重建原来的实时内核。复制活动标为 **code shown** 或旧链接不可用时，从项目 Files 打开原产物，并检查其产出会话。
 
@@ -76,7 +76,7 @@ GSE60450 实际运行完成后，通过 **Edit…** 保存了以下内容：
 
 在 OpenCode 中，修改请求后可用 Previous 查看原回答、Next 查看修改后的回答。切换回答版本不会撤销已经完成的工具操作或外部变化。
 
-![历史消息的修订切换控件](/img/open-science/local-todo-batch/18-message-revision.png)
+![历史消息的修订切换控件](/img/open-science/local-todo-batch/18-message-revision.webp)
 
 **Cancel** 退出编辑而不提交；**Send** 请求新回答，继续前应检查结果。修正下一步用追问，需要独立命名的研究则创建分支。
 
@@ -99,7 +99,7 @@ GSE60450 实际运行完成后，通过 **Edit…** 保存了以下内容：
 
 <p className="example-label"><strong>案例演示</strong> 只导出 GSE60450 的最后一轮质控指标问答</p>
 
-![选择最后一轮质控指标问答，导出 PDF](/img/open-science/local-todo-batch/20-selected-conversation-export.png)
+![选择最后一轮质控指标问答，导出 PDF](/img/open-science/local-todo-batch/20-selected-conversation-export.webp)
 
 在 **GSE60450 — Methods and claim audit** 中，选择最后一轮四项质控指标定义，导出的单页 PDF 只包含该请求与对应回答，更早的讨论没有出现。整段对话 PDF 也已重新打开核对。此前选段 Markdown 已确认从所选追问开始。一轮可以含多条助手消息，选中一轮不一定只导出两条消息。
 
@@ -109,13 +109,13 @@ GSE60450 实际运行完成后，通过 **Edit…** 保存了以下内容：
 
 在会话菜单选择 **Download all artifacts**，勾选所需文件，点击 **Download N artifacts**，然后选择保存文件夹。此入口保存独立文件。下载后逐个打开，确认名称、内容及数量与所选产物一致。
 
-![选择会话内的两个已保存报告](/img/open-science/local-todo-batch/21-session-artifact-selection.png)
+![选择会话内的两个已保存报告](/img/open-science/local-todo-batch/21-session-artifact-selection.webp)
 
 ### 下载项目文件包
 
 点击左上角项目名称 → **Download artifacts…**。列表按 **Generated** 和 **Uploads** 分组；默认全选，用 **Uncheck all** 后只勾选需要交付的文件，再保存 ZIP。
 
-![从项目中选择报告、质控表与原始计数输入](/img/open-science/local-todo-batch/22-project-artifact-selection.png)
+![从项目中选择报告、质控表与原始计数输入](/img/open-science/local-todo-batch/22-project-artifact-selection.webp)
 
 在系统保存窗口点击 **Cancel** 可取消本次保存，返回后文件选择仍保留。写入开始后，应用会禁用取消和关闭操作；等待结果，不要把关闭保存窗口与中途停止写盘混为一谈。
 

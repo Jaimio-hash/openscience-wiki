@@ -49,13 +49,13 @@ claim to have read full text unless you actually retrieved it.
 
 出現 **Save to Literature Inbox?** 時，檢查操作並批准預期的暫存。允許儲存候選與接受文獻入庫是不同步驟。
 
-![暫存文獻候選時的真實審批](/img/open-science/prisma-walkthrough/03-inbox-save-approval.png)
+![暫存文獻候選時的真實審批](/img/open-science/prisma-walkthrough/03-inbox-save-approval.webp)
 
 ## 2. 逐條稽核再接受 {/* #2-逐条审核再接受 */}
 
 開啟 **Library → Inbox**。本次徽標顯示 **3**，每條候選顯示標題、首位作者、發表年份以及 **Found via crossref**。
 
-![三篇真實論文在 Inbox 中等待稽核](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![三篇真實論文在 Inbox 中等待稽核](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 1. 點選候選標題開啟詳情。
 2. 核對 **Provider**、來源連結與 **Identifiers → DOI**。
@@ -63,7 +63,7 @@ claim to have read full text unless you actually retrieved it.
 4. 確認身份符合預期後點選 **Accept**。候選從 Inbox 消失，成為文獻庫記錄。
 5. 繼續核對其他兩篇。計數依次從 3 變為 2、1，最後顯示 **Inbox is clear**。
 
-![候選的 Crossref 來源和準確 DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.png)
+![候選的 Crossref 來源和準確 DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.webp)
 
 | Inbox 控制元件 | 結果 | 使用時機 |
 | --- | --- | --- |
@@ -81,25 +81,25 @@ claim to have read full text unless you actually retrieved it.
 - **Description：** 說明集合包含更新版及歷史版報告規範。描述用於組織資訊，不作為代理指令。
 - 點選 **Create collection**。名稱必填，描述可選；**Cancel** 與 **Close** 放棄草稿。
 
-![為具體研究目的建立閱讀集合](/img/open-science/prisma-walkthrough/06-create-collection.png)
+![為具體研究目的建立閱讀集合](/img/open-science/prisma-walkthrough/06-create-collection.webp)
 
 在 **All references** 搜尋 `PRISMA`。確認只顯示目標三篇，勾選後點選 **Add to collection → PRISMA reporting - Core reading**。該操作完成後會清除選擇。再次勾選這三篇，點選 **Add to project → PRISMA - Systematic review reading pack**。
 
 開啟集合檢查三條記錄，再開啟一篇詳情，確認專案和集合核取方塊均已選中。這裡建立的是共享記錄的關聯，不是額外複製三條書目。
 
-![包含三篇真實論文的核心閱讀集合](/img/open-science/prisma-walkthrough/07-core-reading-collection.png)
+![包含三篇真實論文的核心閱讀集合](/img/open-science/prisma-walkthrough/07-core-reading-collection.webp)
 
 ## 4. 附加可用全文 {/* #4-附加可用全文 */}
 
 開啟 2021 年論文，點選 **Find full-text PDF**。本次查詢返回 Europe PMC。點選 **Add attachment** 前先檢查 **Open source**。
 
-![應用發現的開放全文來源](/img/open-science/prisma-walkthrough/08-full-text-source.png)
+![應用發現的開放全文來源](/img/open-science/prisma-walkthrough/08-full-text-source.webp)
 
 雖然來源可被找到，實際新增時卻顯示 **PDF could not be added**。提示列出需登入、連結過期和超過 50 MB 等可能原因，但沒有確定本次具體原因。
 
 恢復方式是從[出版方文章頁面](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003583)下載開放獲取 PDF，再返回同一文獻點選 **Add PDF**。選擇檔案後，在 Attachments 中開啟 **Preview prisma-2020-statement.pdf**。本次成功附件顯示 **806.1 KB**，預覽為 **15 頁**。核對首頁標題、DOI 是否與記錄一致。
 
-![成功附加並開啟的出版方原始 PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![成功附加並開啟的出版方原始 PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 找到來源不等於已經附加 PDF；附加 PDF 也不等於代理已經閱讀全文。**Read with agent** 是為後續請求提供閱讀上下文的獨立操作。
 

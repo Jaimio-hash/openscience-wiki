@@ -40,7 +40,7 @@ Literatur-Metadaten sind immer enthalten. Wenn eine Literatur PDF erforderlich i
 
 Die folgenden Bildschirme verwenden eine Sitzung, die den [GSE60450 Proben-QC-Tabelle](../reference/example-data.md) zusammenfasst. Vergleichen Sie in der Exportvorschau **Essential export** und **Full export**, prüfen Sie die geschätzte Größe und wählen Sie dann **Export**. Inhalt und Größe hängen von Ihrer Sitzung ab.
 
-![Recherchierte Paket-Exportvorschau mit Essential Export, Full Export und Customize Inhalten](/img/open-science/feature-guides-2026-09/research-package-export.png)
+![Recherchierte Paket-Exportvorschau mit Essential Export, Full Export und Customize Inhalten](/img/open-science/feature-guides-2026-09/research-package-export.webp)
 
 ## Import in ein Projekt {/* #import-and-inspect-a-package */}
 

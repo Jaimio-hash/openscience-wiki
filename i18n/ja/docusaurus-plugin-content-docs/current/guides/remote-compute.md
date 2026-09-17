@@ -39,9 +39,9 @@ Slurm を選択すると、すべてのコマンドを計算ノードに移動�
 | **Cancel** | フォームを登録せずに退去 |
 | **Add** | 有効な接続を送信して下さい; パスワード認証は、ホストが追加される前に接続テストを渡す必要があります |
 
-![英語 SSH の設定オーバーライド](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.png)
+![英語 SSH の設定オーバーライド](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.webp)
 
-![パスワード認証と実際のフォームで選択したSlurm](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.png)
+![パスワード認証と実際のフォームで選択したSlurm](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.webp)
 
 パスワードモードは、アプリケーションのパスワード認証と安全なストレージ機能に依存します。 利用できない場合は、フォームに表示されている理由を調べてください。 ホストノートやエージェントリクエストではなく、そのフィールドに資格情報を入力します。
 
@@ -57,7 +57,7 @@ SSH-configuration ホストの場合、アプリはレコードを作成し、�
 
 英語の例では、成功したパスワード認証プローブ:256 CPU、504 GB RAM、1 NVIDIA A100 80GB PCIeと検出されたSlurmスケジューラを示しています。 設定されたモードは、明示的に変更するまで**Direct SSH**のままです。 これらは、最小限の要件やスケジュールされた割り当てではなく、このサーバーのログインホストリソースです。 ホストとアカウントの識別子はスクリーンショットで隠されています。
 
-![パスワード認証とホストリソースプローブの成功](/img/open-science/remote-compute/03-host-probe.png)
+![パスワード認証とホストリソースプローブの成功](/img/open-science/remote-compute/03-host-probe.webp)
 
 ## ホストの詳細を調べて維持する {/* #inspect-and-maintain-host-details */}
 
@@ -133,9 +133,9 @@ Slurmでは、クラスターの所有者から正しいアカウント/パー�
 
 **成功事例** と終了コード **0** の後、アプリが出力と保存されたテーブルとレポートのリオープンを収集することを確認します。 フルサンプル識別子とメトリックを[共有ベースライン](../reference/example-data.md)と比較し、リモート計算前後の入力ハッシュを確認します。 このDirect SSHの例は、これらのチェックを渡しました。
 
-![Direct SSH ジョブを ID と作業ディレクトリで完了](/img/open-science/remote-compute/05-direct-job-completed.png)
+![Direct SSH ジョブを ID と作業ディレクトリで完了](/img/open-science/remote-compute/05-direct-job-completed.webp)
 
-![すべての12のサンプルが付いているReopenedリモートRNA-seq QCのテーブル](/img/open-science/remote-compute/06-remote-qc-table.png)
+![すべての12のサンプルが付いているReopenedリモートRNA-seq QCのテーブル](/img/open-science/remote-compute/06-remote-qc-table.webp)
 
 <a href="/docs/examples/gse60450/remote-rnaseq-qc.csv" download>QCのテーブル</a> と <a href="/docs/examples/gse60450/remote-rnaseq-qc-report.md" download>方法報告</a> の例をダウンロードします。 これらの生計チェックは、正規化、実験的設計検討、差圧解析を置き換えません。 正反対のメディアンはゼロを除外します。
 
@@ -145,7 +145,7 @@ Slurmでは、クラスターの所有者から正しいアカウント/パー�
 
 ローカルアプリが再起動したときに、以下に示す別の準備チェックポイントが実行されました。 アプリは同じジョブ ID を回復し、完了ログを収集しました。 待ち時間は正常に終了します。 このスクリーンショットは、キャンセルや科学的な計算ではなく、回復を実証します。
 
-![アプリケーションを再起動した後、同じ準備ジョブが回復しました](/img/open-science/remote-compute/07-job-recovered-after-restart.png)
+![アプリケーションを再起動した後、同じ準備ジョブが回復しました](/img/open-science/remote-compute/07-job-recovered-after-restart.webp)
 
 ### 1つのリモートジョブをキャンセルする {/* #cancel-one-remote-job */}
 
@@ -153,7 +153,7 @@ Slurmでは、クラスターの所有者から正しいアカウント/パー�
 
 以下の準備チェックポイントは、この制御でキャンセルされました。 リモート・プロセスは独立して前方に不在確認されました。 既存のログは読みやすくなります。 これは、キャンセルされた生成された分析が完全な結果に及ぼすことを意味するものではありません。 保存したファイルを使用する前に検査します。
 
-![選択された準備の仕事のために確認されるキャンセル](/img/open-science/remote-compute/09-job-cancelled.png)
+![選択された準備の仕事のために確認されるキャンセル](/img/open-science/remote-compute/09-job-cancelled.webp)
 
 
 </ToolOperationGroup>
@@ -177,7 +177,7 @@ Slurmでは、クラスターの所有者から正しいアカウント/パー�
 5. 要求されたリソースを実際の割り当てと比較します。 例では、タスクごとに1 CPU と 1 GiB を要求しました。 Slurmは1つのタスクと2つの割り当てられた論理CPUを記録しました。 リソース使用を説明する際にスケジューラの割り当てレコードを使用します。
 6. 確認された端末の状態を待ってから、結果を公開する前にファイルを収集します。 サーバ側の出力ファイルは、アプリケーションがそれを収穫したことを確立しません。
 
-![Slurm は、ホストの実行モードで明示的に選択した](/img/open-science/remote-compute/10-slurm-execution-mode.png)
+![Slurm は、ホストの実行モードで明示的に選択した](/img/open-science/remote-compute/10-slurm-execution-mode.webp)
 
 ### サーバが完了したが、アプリが待ち続けるとき {/* #when-the-server-completes-but-the-app-keeps-waiting */}
 
@@ -189,7 +189,7 @@ slurm_poll_failed: Slurm accounting storage is disabled
 
 スケジューラが**完了 / 終了コード 0:0**を示しているが、アプリは**提出書類**、**result_final 偽物**、または収集されていないファイルが表示された場合は、ジョブIDの両方を保ち、ポーリングエラーを検査します。 スケジューラの完成と適用結果のコレクションを別々の段階として扱います。
 
-![アプリケーションはまだ完了したSlurmのワークロードのための末端の状態を待っています](/img/open-science/remote-compute/11-slurm-accounting-unavailable.png)
+![アプリケーションはまだ完了したSlurmのワークロードのための末端の状態を待っています](/img/open-science/remote-compute/11-slurm-accounting-unavailable.webp)
 
 クラスター管理者にアカウントとジョブの `sacct` の会計機能を提供するように依頼してください。 `squeue` は、もはや仕事のリストを主張することは、成功の不十分な証拠ではありません。 会計が修理される間、既存の仕事のディレクトリおよび仕事 ID を保って下さい、そして同じ仕事を再度点検して下さい。 監視エラーをクリアするために、完了した解析を再サブミットしないでください。 Slurmのキャンセル、回復および適用収穫はこの環境の条件が解決されるまで保留します。
 

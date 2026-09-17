@@ -26,7 +26,7 @@ last_update:
 3. **Save key** 成功儲存後繼續等待中的呼叫；**Not now** 保持未配置。
 4. 檢查最終狀態。選擇 **Not now** 可返回 **credential_required**；配置金鑰後再重試。
 
-![英文應用中的 OpenAlex 憑據請求](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.jpg)
+![英文應用中的 OpenAlex 憑據請求](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.webp)
 
 介面說明金鑰在本機加密並只傳送到 `api.openalex.org`。Settings 表單另有 **Validate、Save、Remove key**（已有金鑰時）和 **Cancel**。替換欄位不顯示舊金鑰；安全儲存不可用時需先解決系統鑰匙串狀態。
 
@@ -49,7 +49,7 @@ last_update:
 | Discovery | 適用時發現伺服器後設資料；發現成功本身不是登入成功 |
 | Cancel / Save | 放棄草稿或儲存有效配置 |
 
-![OAuth 高階註冊欄位](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.png)
+![OAuth 高階註冊欄位](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.webp)
 
 在自定義 Connector 中，將命名憑據繫結到請求頭、環境變數或 OAuth 選擇器。名稱用於引用，不應把金鑰放進描述或專案指令。匯出的可移植配置以佔位符替換金鑰；儲存憑據後仍需實際服務測試才能確認可用。
 

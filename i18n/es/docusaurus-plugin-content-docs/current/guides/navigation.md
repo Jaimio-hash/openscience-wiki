@@ -12,7 +12,7 @@ Use Home para elegir la investigación, la lista de sesiones para elegir su conv
 
 Utilice **Settings → General → Appearance** para cambiar el idioma o tema de la aplicación. Los paneles de grupos [centro de configuración](../settings/overview.md) por propósito y proporciona su propia búsqueda.
 
-![Inicio con los proyectos de expresión genética y literatura](/img/open-science/v0.27.0/01-home.png)
+![Inicio con los proyectos de expresión genética y literatura](/img/open-science/v0.27.0/01-home.webp)
 
 | Entrada | Medida | Check after opening |
 | --- | --- | --- |

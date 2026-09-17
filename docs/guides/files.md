@@ -38,7 +38,7 @@ A read-only grant protects the external directory while still allowing outputs i
 
 For an existing folder, open **Files**, select the **Artifacts** dropdown, then **This computer → Add folder…**. In the app’s **Grant folder access** dialog, choose a specific subfolder and **Read-only**, then **Grant this folder**. The user-profile root may be unavailable; select the research subfolder instead. Read any Notebook-kernel impact confirmation. On returning to Files, verify the selected folder and its files.
 
-<Screenshot src="/img/open-science/windows/granted-folder-files.png" alt="A granted Windows folder showing the public script and CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.png" linkLabel="Open the complete Windows screenshot" />
+<Screenshot src="/img/open-science/windows/granted-folder-files.webp" alt="A granted Windows folder showing the public script and CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.webp" linkLabel="Open the complete Windows screenshot" />
 
 In the Windows **Attach files** dialog, select a file from a path containing Chinese characters or spaces, or enter its full path in the **File name** field and open it. Back in the app, check the attachment name and preview the table dimensions and contents. To abandon a selection, choose **Cancel** and check that no new attachment was added to the draft.
 
@@ -55,7 +55,7 @@ In the Windows **Attach files** dialog, select a file from a path containing Chi
 
 <PlatformContent platform="macos">
 
-![Filtered real RNA-seq results in the file library](/img/open-science/guides-walkthrough/56-files-search.png)
+![Filtered real RNA-seq results in the file library](/img/open-science/guides-walkthrough/56-files-search.webp)
 
 </PlatformContent>
 The count describes the current filter. A search with no matches does not delete files. **No more** means the group has finished loading. Collapse a group by its heading. Use a file body's preview action for a modal, or **Open … in split view beside the session** to retain the conversation beside it. Download acts on the file/version selected by that surface.
@@ -85,7 +85,7 @@ Open a supported managed text or Markdown file. The example below adds a reading
 
 <PlatformContent platform="macos">
 
-![Report v2 compared with its original version](/img/open-science/guides-walkthrough/55-report-version-diff.png)
+![Report v2 compared with its original version](/img/open-science/guides-walkthrough/55-report-version-diff.webp)
 
 </PlatformContent>
 | Editing control/state | What to do |
@@ -111,7 +111,7 @@ If another writer saves the report while your editor remains open, **Save change
 
 <PlatformContent platform="macos">
 
-![Save blocked because another version exists](/img/open-science/local-todo-batch/37-file-save-conflict.png)
+![Save blocked because another version exists](/img/open-science/local-todo-batch/37-file-save-conflict.webp)
 
 </PlatformContent>
 After saving, confirm that the latest revision contains both the other writer’s change and your retained draft. Earlier file revisions remain available through the version controls; these are separate from conversation-message revisions.

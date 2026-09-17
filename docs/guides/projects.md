@@ -23,7 +23,7 @@ Our example project is **PRISMA - Systematic review reading pack**. It uses publ
 3. Select **Create project**. Confirm that the left sidebar displays the project name and the main panel opens **New conversation**.
 4. Open the project-name menu and **Project settings** to check the saved values. A successful project save is separate from model readiness.
 
-![PRISMA project with an explicit research purpose and Agent Context](/img/open-science/local-acceptance/prisma-project-form.png)
+![PRISMA project with an explicit research purpose and Agent Context](/img/open-science/local-acceptance/prisma-project-form.webp)
 
 | Field or button | Example or action | What changes |
 | --- | --- | --- |

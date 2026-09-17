@@ -27,4 +27,4 @@ Use **⌘K / Ctrl+K** to search titles, headings and body text in the current do
 
 ## Changelog
 
-[Browse the latest release notes](../changelog/v0.30.1.md).
+[Browse the latest release notes](../changelog/v0.30.2.md).

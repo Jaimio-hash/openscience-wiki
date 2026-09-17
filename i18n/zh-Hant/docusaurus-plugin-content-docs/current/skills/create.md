@@ -47,13 +47,13 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 在新會話完成 GSE60450 QC 後，點選 **+ → Save as skill**，要求建立獨立的 **rnaseq-descriptive-qc**，保留已有包。應用原生流程建立了只含一個 **SKILL.md** 的草稿，校驗結果無錯誤、無警告。
 
-![原生 Skill 草稿及校驗結果](/img/open-science/v0.27.0/16-native-skill-draft-validated.png)
+![原生 Skill 草稿及校驗結果](/img/open-science/v0.27.0/16-native-skill-draft-validated.webp)
 
 檢查名稱、觸發條件、輸入要求、指標定義與停止條件，再確認釋出到 Personal Skills。釋出後透過 **Settings → Skills → Search skills** 搜尋名稱，開啟說明，核對 **Availability** 與 **Files**。該示例的檔案可下載為 <ExampleDownload path="/examples/capabilities/rnaseq-descriptive-qc/SKILL.md">SKILL.md</ExampleDownload>。
 
-![原生髮布後在 Personal 中找到 Skill](/img/open-science/v0.27.0/17-native-skill-published.png)
+![原生髮布後在 Personal 中找到 Skill](/img/open-science/v0.27.0/17-native-skill-published.webp)
 
-![開啟已釋出的說明與可用範圍](/img/open-science/v0.27.0/18-native-skill-instructions.png)
+![開啟已釋出的說明與可用範圍](/img/open-science/v0.27.0/18-native-skill-instructions.webp)
 
 ### 按鈕為什麼不可用 {/* #按钮为什么不可用 */}
 
@@ -105,7 +105,7 @@ rnaseq-count-qc/
 5. 檢查參考檔案數量與包大小，點選 **Publish**。
 6. 搜尋新的 Personal 條目，重新開啟指令、可用性與檔案，再匯出檢查兩個包條目。
 
-![RNA-seq Skill 指令與參考檔案](/img/open-science/capabilities-walkthrough/01-skill-create.jpg)
+![RNA-seq Skill 指令與參考檔案](/img/open-science/capabilities-walkthrough/01-skill-create.webp)
 
 | 欄位或按鈕 | 填寫和檢查方式 |
 | --- | --- |
@@ -145,7 +145,7 @@ rnaseq-count-qc/
 
 重新開啟新 CSV 與報告，按完整樣本標識與[公共基準](../reference/example-data.md)比較，並檢查輸入雜湊。用於其他研究時，需要針對該研究的輸入與實驗設計重新核對。
 
-![獨立呼叫與重新開啟的 QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.png)
+![獨立呼叫與重新開啟的 QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.webp)
 
 實現依據: [SkillEditor.tsx](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/SkillEditor.tsx), [host-skills-service.ts](https://github.com/aipoch/open-science/blob/v0.26.0/src/main/skills/host-skills-service.ts)。
 

@@ -1,7 +1,7 @@
 ---
 title: "Python и R Runtimes"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -45,7 +45,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 Проверьте обе языковые карты в **Settings → Runtimes**. Каждый из них имеет свой статус **Ready**, версию, переключатель **Enable** и кнопку **Packages**. Карты ниже показывают, что Python и R включены. Предупреждение выше касается защиты сети Notebook, которая настраивается отдельно. Личные пути скрыты в этих скриншотах. Проверьте полные пути на своем компьютере.
 
-<Screenshot src="/img/open-science/windows/runtimes-ready.png" alt="Карты времени выполнения Windows с управляемыми Python и R Готовы и включены" width={1919} height={991} windowBounds={[480, 152, 960, 688]} href="/docs/img/open-science/windows/runtimes-ready.png" linkLabel="Откройте полный скриншот Windows" />
+<Screenshot src="/img/open-science/windows/runtimes-ready.webp" alt="Карты времени выполнения Windows с управляемыми Python и R Готовы и включены" width={1919} height={991} windowBounds={[480, 152, 960, 688]} href="/docs/img/open-science/windows/runtimes-ready.webp" linkLabel="Откройте полный скриншот Windows" />
 
 </PlatformContent>
 
@@ -53,7 +53,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Настройки времени выполнения перед установкой Python](/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.png)
+![Настройки времени выполнения перед установкой Python](/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.webp)
 
 </PlatformContent>
 1. Найдите **Python → App-managed environment**.
@@ -64,12 +64,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Создание среды Python, управляемой приложением](/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.png)
+![Создание среды Python, управляемой приложением](/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.webp)
 
 </PlatformContent>
 <PlatformContent platform="macos">
 
-![Python полная настройка](/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.png)
+![Python полная настройка](/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.webp)
 
 </PlatformContent>
 Подтвердите **Ready**, выбранный путь интерпретатора и включенное состояние. Количество пакетов и версии могут варьироваться в зависимости от источника установки; Не используйте временный путь скриншота в качестве постоянного места.
@@ -84,25 +84,25 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="linux">
 
-![Приложение R готово и включено в Linux](/img/open-science/linux/r-managed-ready.png)
+![Приложение R готово и включено в Linux](/img/open-science/linux/r-managed-ready.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="macos">
 
-![Загрузка среды R, управляемой приложением](/img/open-science/guides-walkthrough/70-r-managed-download.jpg)
+![Загрузка среды R, управляемой приложением](/img/open-science/guides-walkthrough/70-r-managed-download.webp)
 
 </PlatformContent>
 <PlatformContent platform="macos">
 
-![Управляемый приложениями R установлен и включен](/img/open-science/guides-walkthrough/71-r-managed-ready.jpg)
+![Управляемый приложениями R установлен и включен](/img/open-science/guides-walkthrough/71-r-managed-ready.webp)
 
 </PlatformContent>
 Подтвердите, что фильтрация `r-base` возвращает установленный пакет R с его версией и каналом. Итоги пакетов отражают вашу среду и могут отличаться от скриншота.
 
 <PlatformContent platform="macos">
 
-![Проверка r-базы в инвентаре пакета R](/img/open-science/guides-walkthrough/72-r-package-filter.jpg)
+![Проверка r-базы в инвентаре пакета R](/img/open-science/guides-walkthrough/72-r-package-filter.webp)
 
 </PlatformContent>
 ## Подключение существующего переводчика {/* #connect-an-existing-interpreter */}
@@ -131,7 +131,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 Системный интерпретатор, такой как `/usr/bin/python3`, может уже отображаться как **Ready**. Включите среду, которую вы собираетесь использовать, прежде чем попросить агента выбрать ее. Обнаруженные ниже интерпретаторы Python отключены, а среда Python, управляемая приложением, не была настроена. Для подготовки управляемой среды используйте **Download and set up**.
 
-![Linux обнаруживает существующие интерпретаторы Python как Ready, с выключенным Enable](/img/open-science/linux/python-detected-disabled.png)
+![Linux обнаруживает существующие интерпретаторы Python как Ready, с выключенным Enable](/img/open-science/linux/python-detected-disabled.webp)
 
 </PlatformContent>
 
@@ -187,7 +187,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Фильтрация установленных пакетов Python](/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.png)
+![Фильтрация установленных пакетов Python](/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.webp)
 
 </PlatformContent>
 Колонки таблиц **Name**, **Version**, **Build** и **Channel**. Dash in Build означает, что стоимость сборки не отображается. Этот диалог является инвентаризацией: он не имеет кнопок установки пакетов или удаления. Не ищите поле «Установить пакет» в этом диалоге.
@@ -196,9 +196,9 @@ import Screenshot from '@site/src/components/Screenshot';
 
 На карте Python выберите **Packages** и фильтр для `pip`. На карте R фильтр для `r-base`. Проверьте среду, названную в заголовке диалога, прежде чем сравнивать версии. Эти скриншоты показывают установленные пакеты; Они не показывают новую установку пакета.
 
-<Screenshot src="/img/open-science/windows/python-packages.png" alt="Windows Python пакетный инвентарь отфильтрован до pip" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/python-packages.png" linkLabel="Откройте полный скриншот Windows" />
+<Screenshot src="/img/open-science/windows/python-packages.webp" alt="Windows Python пакетный инвентарь отфильтрован до pip" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/python-packages.webp" linkLabel="Откройте полный скриншот Windows" />
 
-<Screenshot src="/img/open-science/windows/r-packages.png" alt="Windows R пакетный инвентарь отфильтрован до r-базы" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/r-packages.png" linkLabel="Откройте полный скриншот Windows" />
+<Screenshot src="/img/open-science/windows/r-packages.webp" alt="Windows R пакетный инвентарь отфильтрован до r-базы" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/r-packages.webp" linkLabel="Откройте полный скриншот Windows" />
 
 </PlatformContent>
 
@@ -210,7 +210,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Успешное реальное вычисление Notebook](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![Успешное реальное вычисление Notebook](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 Если импорт не удается, проверьте выбранное время выполнения и установленные пакеты. Для загрузки, отклоненной, потому что имя хоста решает на зарезервированный адрес, следуйте [Сеть](network.md). Запуск кода с существующими пакетами не устанавливает возможности установки дополнительных пакетов.
@@ -248,7 +248,9 @@ R.home()
 
 Откройте выход Notebook и сравните его с сохраненным отчетом. Этот пример Windows 10 в Open-Science v0.28.0 сообщает о Python **3.12.13** и `pip` **26.1.2**. Метаданные пакета чтения не устанавливают и не импортируют этот пакет.
 
-<Screenshot src="/img/open-science/windows/python-runtime-output.png" alt="Windows Python Notebook показывает исполняемый код и фактический выход версии" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.png" linkLabel="Откройте полный скриншот Windows" />
+<Screenshot src="/img/open-science/windows/python-runtime-output.webp" alt="Windows Python Notebook показывает исполняемый код и фактический выход версии" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.webp" linkLabel="Откройте полный скриншот Windows" />
+
+Для запуска Windows conda R или сбоев восстановления ядра используйте v0.30.2 или более поздние варианты перед повторным использованием. Релиз исправляет выполняемый поиск после подготовки среды и восстановления ядра R. После обновления перепроверьте окружающую среду и запустите небольшой расчет R в Notebook. **Ready** сам по себе не является результатом. Скриншоты ниже сохраняют версии и результаты их оригинальных прогонов.
 
 Для запуска Windows R, который сообщает о **Включите защищенный режим перед авторизацией доступа R.**, проверьте инструкции **Network settings** и R карты **Authorize and verify**. Устранить заявленное предварительное условие авторизации перед повторным запуском; Карта **Ready** сама по себе не подтверждает исполнение. Сохраняйте полную ошибку, если запрос заблокирован, и следуйте за [устранение неполадок](troubleshooting.md).
 
@@ -267,18 +269,18 @@ R.home()
 В приведенной ниже детали показан **Inputs** и захваченный код. Нажмите на изображение, чтобы открыть полный скриншот с сохраненным отчетом рядом с ним.
 
 <Screenshot
-  src="/img/open-science/windows/runtime-python-producer.png"
+  src="/img/open-science/windows/runtime-python-producer.webp"
   alt="Подробная информация о виде кода Python в результате Provenance, показывающая входы и захваченный код производителя"
   width={2302}
   height={1158}
   windowBounds={[1385, 65, 917, 1030]}
-  href="/docs/img/open-science/windows/runtime-python-producer.png"
+  href="/docs/img/open-science/windows/runtime-python-producer.webp"
   linkLabel="Откройте полный скриншот Windows Python с сохраненным отчетом и захваченным кодом."
 />
 
 **Прочитайте ту же таблицу с R.** Попросите Агента использовать выбранную среду R в сеансе Notebook, только с базовой R. Запросить `R.version.string`, `R.home()`, те же четыре чека и отдельный сохраненный отчет. Расширьте карту **Notebook run**, чтобы проверить ее код, затем откройте отчет и сравните результаты. В этом примере R сообщает о версии **4.4.3** и домашнем каталоге, заканчивающемся на `runtime/envs/.r/Lib/R`.
 
-![Windows R Notebook вызов и сохраненный отчет, показывающий активную установку R и результаты выборки-QC](/img/open-science/windows/runtime-r-execution.jpg)
+![Windows R Notebook вызов и сохраненный отчет, показывающий активную установку R и результаты выборки-QC](/img/open-science/windows/runtime-r-execution.webp)
 
 Пути установки на этих скриншотах принадлежат примерному компьютеру. Различные буквы диска, папки и версии интерпретатора на вашем собственном компьютере являются нормальными.
 
@@ -303,7 +305,7 @@ R.home()
 
 <PlatformContent platform="macos">
 
-![Отмененная настройка и доступная повторная запись](/img/open-science/local-todo-batch/29-setup-cancelled.png)
+![Отмененная настройка и доступная повторная запись](/img/open-science/local-todo-batch/29-setup-cancelled.webp)
 
 </PlatformContent>
 <span id="review-a-reinstall-before-committing-it" />
@@ -318,14 +320,14 @@ R.home()
 
 <PlatformContent platform="macos">
 
-![Установить подтверждение во время сессии Notebook](/img/open-science/local-todo-batch/31-runtime-reinstall.png)
+![Установить подтверждение во время сессии Notebook](/img/open-science/local-todo-batch/31-runtime-reinstall.webp)
 
 </PlatformContent>
 Реинсталляция удаляет и воссоздает окружающую среду. При восстановлении активная ячейка была отменена с **Бег отменен: время выполнения было остановлено, пока эта ячейка выполняла.** Старая история Notebook оставалась видимой, но ее пространство имен больше не существовало. Свежие клетки подтвердили, что более ранняя переменная отсутствует. Неизменный CSV по-прежнему возвращал строки 12 и подсчеты 269,027,617, и сохраненный отчет снова открылся.
 
 <PlatformContent platform="macos">
 
-![Сохранил историю Notebook после остановки ядра](/img/open-science/local-todo-batch/33-reinstalled-kernel-history.png)
+![Сохранил историю Notebook после остановки ядра](/img/open-science/local-todo-batch/33-reinstalled-kernel-history.webp)
 
 </PlatformContent>
 Сохраненные файлы и сохраненная память ядра отличаются. Восстановление переменных путем повторного запуска необходимого кода. Дополнительные пакеты могут нуждаться в переустановке; Успешное восстановление базовой среды не приводит к восстановлению каждой дополнительной зависимости.
@@ -336,7 +338,7 @@ R.home()
 
 <PlatformContent platform="macos">
 
-![Фактическая ошибка Missing-micromamba в сборке источника](/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.png)
+![Фактическая ошибка Missing-micromamba в сборке источника](/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.webp)
 
 </PlatformContent>
 Упакованное приложение включает в себя этот двоичный. Для сборки исходного кода наведите `OPEN_SCIENCE_MICROMAMBA_BIN` на действительный исполняемый файл micromamba в среде запуска этого процесса и перезапустите экземпляр разработки. Используйте двоичный путь от совместимой установки и подтвердите, что он выполняется до перезапуска.

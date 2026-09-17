@@ -32,7 +32,7 @@ Do not retrieve full text or run the later update yet. Use English.
 
 **12의 3,643 경기**을 반환하고 **7**을 유지하고 **5**를 제외합니다. **freshwater-search-plan.md** 을 열고 계속하기 전에 기준을 확인하고 날짜를 확인하십시오. 저장된 계획은 갱신의 앞에 국가를 설명합니다.
 
-![Saved 기본 검색 사양 및 유지 기록](/img/open-science/workflow-extensions/freshwater-search-plan.png)
+![Saved 기본 검색 사양 및 유지 기록](/img/open-science/workflow-extensions/freshwater-search-plan.webp)
 
 증거 수준을 검토: 일부 후보자는 제목 / 메타 데이터 만 제공, 다른 사람은 라이센스를 포함. Broad 수송 경로 리뷰는 상황에 따라 포함되어 있습니다; 그들의 포함은 민물 특정 실험 결과를 증명하지 않습니다.
 
@@ -40,11 +40,11 @@ Do not retrieve full text or run the later update yet. Use English.
 
 다운로드 <ExampleDownload path="/examples/workflow-extensions/freshwater-baseline.ris">기본 RIS</ExampleDownload>. **Library → New collection**에서 **민물 Microplastic 수송**을 만들고, **Import references**를 선택합니다. RIS를 선택하여 수입하기 전에 목적지와 일치한 행동을 확인하십시오.
 
-![Baseline import는 수집을 위한 미리보기를 가져옵니다](/img/open-science/workflow-extensions/freshwater-import-baseline.png)
+![Baseline import는 수집을 위한 미리보기를 가져옵니다](/img/open-science/workflow-extensions/freshwater-import-baseline.webp)
 
 **7 생성, 0 재사용, 0 Skipped, 0 실패**로 완료된 기록적인 수입. **Done**을 클릭하고 수집을 확인 7 참조. 다른 라이브러리의 기존 일치는 생성 / 재사용 된 분할을 변경할 수 있습니다.
 
-![7가지 기본 컬렉션](/img/open-science/workflow-extensions/freshwater-collection-baseline.png)
+![7가지 기본 컬렉션](/img/open-science/workflow-extensions/freshwater-collection-baseline.webp)
 
 ## 3. 같은 대화에서 다음 날짜 창을 검색 {/* #3-search-the-next-date-window-in-the-same-conversation */}
 
@@ -67,7 +67,7 @@ Write in English and reopen the outputs.
 
 이 업데이트는 **12의 7,600 경기**, **7 추가, 0 기본 오버랩 및 5 제외**로 반환됩니다. 두 검색은 12 후보에 따라 결정됩니다. 데이터베이스 순위 및 적용을 변경할 수 있습니다; 카운트는 9 월 16, 2026 실행을 설명합니다.
 
-![추가 및 제외로 저장 된 업데이트 감사](/img/open-science/workflow-extensions/freshwater-update-audit.png)
+![추가 및 제외로 저장 된 업데이트 감사](/img/open-science/workflow-extensions/freshwater-update-audit.webp)
 
 실제 DOI 세트를 빼기 보다는 오히려 총을 검사하십시오. 기본 라인에 따라 dated <ExampleDownload path="/examples/workflow-extensions/freshwater-update-review.csv">업데이트 감사</ExampleDownload> 및 <ExampleDownload path="/examples/workflow-extensions/freshwater-update-notes.md">업데이트 노트</ExampleDownload>을 저장하십시오.
 
@@ -75,11 +75,11 @@ Write in English and reopen the outputs.
 
 다운로드 <ExampleDownload path="/examples/workflow-extensions/freshwater-update.ris">추가 RIS</ExampleDownload>. 라이브러리에서 **민물 Microplastic 수송**을 선택하고 **Import references**을 선택합니다. **Reuse existing reference**을 유지하면 이미 존재하는 아이템을 안전하게 재사용할 수 있습니다.
 
-![업데이트 가져오기 미리보기 7 추가 표시](/img/open-science/workflow-extensions/freshwater-import-update.png)
+![업데이트 가져오기 미리보기 7 추가 표시](/img/open-science/workflow-extensions/freshwater-import-update.webp)
 
 실제 업데이트 가져오기 완료 **7 생성, 0 재사용, 0 Skipped, 0 실패**. 컬렉션에는 **14 참조**이 포함되어 있습니다. 이것은 2개의 유지한 세트의 정상적인 DOI 조합에 동의합니다.
 
-![업데이트 된 컬렉션 4teen 참조](/img/open-science/workflow-extensions/freshwater-collection-updated.png)
+![업데이트 된 컬렉션 4teen 참조](/img/open-science/workflow-extensions/freshwater-collection-updated.webp)
 
 기본 자체는 rewritten하지 않았습니다. 그 날짜 범위와 검색 기록을 보존하기 때문에 나중에 독자는 업데이트에서 원본 증거 기초를 구별 할 수 있습니다. 제안이나 과학적 주장을 지원하기 위해, 검색하고 다음 관련 전체 텍스트를 읽으십시오; metadata 포함은 단지 증거 appraisal 아닙니다. overlapping 조회 배치를 위해, [결합 검색 배치](merge-literature-searches.md)를 보십시오.
 

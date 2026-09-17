@@ -95,7 +95,7 @@ Open-Science で実行するには、**Your files → Grant folder…** を使�
 
 ### 設計されているシーケンスをチェックする {/* #check-the-designed-sequences */}
 
-![ローカルCPUの実行が完了し、比較レポートを再オープン](/img/open-science/local-todo-batch/42-cpu-model-comparison.png)
+![ローカルCPUの実行が完了し、比較レポートを再オープン](/img/open-science/local-todo-batch/42-cpu-model-comparison.webp)
 
 この例の保存された出力には、次の結果が含まれています。
 

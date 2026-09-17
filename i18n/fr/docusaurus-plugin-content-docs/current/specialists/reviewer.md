@@ -1,7 +1,7 @@
 ---
 title: "examinateur et auto-examen"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # examinateur et auto-examen {/* #reviewer-and-auto-review */}
@@ -74,6 +74,8 @@ Ouvrez **Agent controls → Auto-review** pour configurer l'examen après les r�
 2. Ouvrez **Agent controls → Auto-review** dans la conversation cible, validez **On**, puis envoyez la prochaine requête.
 3. Après la réponse, étendez la carte **Reviewer** créée automatiquement. Vérifiez son modèle, son critère, ses preuves et son résultat.
 4. Lorsque **Corrections requested** apparaît, inspecter la correction de Main et l'examen subséquent avant de décider si la conclusion est résolue.
+
+À partir de v0.30.2, Auto-review conserve son réglage quand une conversation commence, et les tours de correction liés conservent les commentaires d'examen nécessaires pour le cycle de correction. Activez-le avant d'envoyer, puis vérifiez la carte d'examinateur et la sortie révisée de Main. La préservation du contexte ne signifie pas qu'une constatation a été corrigée; lire l'examen subséquent et les conclusions restantes.
 
 ### Qu'est-ce que "resolved" {/* #what-resolved-establishes */}
 

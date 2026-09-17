@@ -47,13 +47,13 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 새로운 세션에서 GSE60450 QC를 마친 후 **+ → Save as skill**을 선택하고 기존 패키지를 보존하는 별도의 **rnaseq-descriptive-qc에 대한 의견** 패키지를 요청하십시오. 네이티브 워크플로우는 하나의 **SKILL.md**을 포함하는 초안을 만들었습니다. 유효성 검사는 오류 또는 경고를 반환하지 않습니다.
 
-![Native Skill 초안 및 검증 결과](/img/open-science/v0.27.0/16-native-skill-draft-validated.png)
+![Native Skill 초안 및 검증 결과](/img/open-science/v0.27.0/16-native-skill-draft-validated.webp)
 
 이름 확인, 설명 트리거, 입력, 미터 정의 및 개인 Skills에 게시를 확인 하기 전에 중지 조건. 그런 다음 **Settings → Skills → Search skills**을 사용하여 저장된 지침을 열고 **Availability** 및 **Files**를 검사합니다. 실제 출판 <ExampleDownload path="/examples/capabilities/rnaseq-descriptive-qc/SKILL.md">SKILL.md의 특징</ExampleDownload> 다운로드.
 
-![개인 정보 보호 정책](/img/open-science/v0.27.0/17-native-skill-published.png)
+![개인 정보 보호 정책](/img/open-science/v0.27.0/17-native-skill-published.webp)
 
-![Reopened 지침 및 가용성](/img/open-science/v0.27.0/18-native-skill-instructions.png)
+![Reopened 지침 및 가용성](/img/open-science/v0.27.0/18-native-skill-instructions.webp)
 
 ### 왜 버튼이 사용되지 않습니다. {/* #why-the-button-is-unavailable */}
 
@@ -105,7 +105,7 @@ rnaseq-count-qc/
 5. 참조 수와 패키지 크기를 검증 한 다음 **Publish**을 선택하십시오.
 6. 새로운 개인 행을 검색하고 다시 열 수 있습니다. 지침, 가용성 및 파일 확인; 패키지를 내보내기하여 두 항목 모두 검사합니다.
 
-![RNA-seq Skill 몸과 지원 파일](/img/open-science/capabilities-walkthrough/01-skill-create.jpg)
+![RNA-seq Skill 몸과 지원 파일](/img/open-science/capabilities-walkthrough/01-skill-create.webp)
 
 | 필드 또는 버튼 | 자주 묻는 질문 |
 | --- | --- |
@@ -145,7 +145,7 @@ rnaseq-count-qc/
 
 새로운 CSV 및 보고서를 다시 열고 [공유 baseline](../reference/example-data.md)과 전체 샘플 식별자에 의해 비교합니다. 입력 해시를 확인합니다. Skill을 다른 연구에 적용할 때, 그 연구의 자신의 입력 및 실험적인 디자인에 대한 이러한 검사를 반복합니다.
 
-![별도의 재고 및 재개 QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.png)
+![별도의 재고 및 재개 QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.webp)
 
 구현 참조 : [기술Editor.tsx](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/SkillEditor.tsx), [호스트-skills-service.ts](https://github.com/aipoch/open-science/blob/v0.26.0/src/main/skills/host-skills-service.ts).
 

@@ -24,7 +24,7 @@ Descargue el <a href="/docs/examples/research-workflows/conductivity-temperature
 
 Haga clic en el CSV adjunto para abrir la vista previa. Debe mostrar **filas 26 · columnas 6**, incluyendo material, temperatura, conductividad, SD y hoja de origen/row. Abrir la nota fuente también; la ejecución capturada usó el nombre de archivo `README.md` para la nota suministrada aquí como `conductivity-source.md`.
 
-![La tabla de conductividad adjunta con valores, unidades y filas de origen](/img/open-science/research-workflows/conductivity-input.png)
+![La tabla de conductividad adjunta con valores, unidades y filas de origen](/img/open-science/research-workflows/conductivity-input.webp)
 
 ## Solicitar la figura y los datos detrás de ella {/* #ask-for-the-figure-and-the-data-behind-it */}
 
@@ -45,19 +45,19 @@ Revise cualquier solicitud de código o paquete, y luego inspeccione el resultad
 
 Elija **Notebook** en la conversación. Abra la celda Python completa e inspeccione su salida: filas totales 26, filas 13 para cada material, la gama 275-390 K y la figura trazada. Si la resolución de entrada falla, haga que el agente use el CSV conectado a esta conversación, a continuación, verifique una ejecución exitosa antes de continuar.
 
-![La ejecución Notebook real reporta los cheques de entrada y hace la trama](/img/open-science/research-workflows/conductivity-notebook.png)
+![La ejecución Notebook real reporta los cheques de entrada y hace la trama](/img/open-science/research-workflows/conductivity-notebook.webp)
 
 ## Compruebe la cifra y la exportación {/* #check-the-figure-and-export */}
 
 Abre el PNG generado. Confirme que ambos materiales son distinguibles, los puntos finales son visibles, las unidades del estado de los ejes y la nota de incertidumbre dice **reportada SD**. Las líneas sólo conectan las mediciones; el dip en la conductividad AZO después de 300 K sigue siendo visible.
 
-![Actual Open-Science previsualización de la trama de conductividad y reportó barras de error SD](/img/open-science/research-workflows/conductivity-figure.png)
+![Actual Open-Science previsualización de la trama de conductividad y reportó barras de error SD](/img/open-science/research-workflows/conductivity-figure.webp)
 
 Abrir **plotted-conductivity.csv** y compararlo con la entrada. En este sentido, todos los **Renglones 26** conservaban las temperaturas, los valores de conductividad, los SDs y las identidades de hoja de origen/row. Abra **conductivity-methods.md** para comprobar la fuente DOI y la definición de incertidumbre.
 
 El área **Generated** debe contener cuatro archivos. Abra el archivo de métodos y utilice el icono de descarga en cada previsualización para guardar la versión que comprobó. Si falta una salida, solicite ese archivo específico y vuelva a abrirlo; un PNG exitoso no prueba que el SVG o la tabla de datos fue guardada.
 
-![Las cuatro salidas guardadas y la nota de los métodos reabiertos](/img/open-science/research-workflows/conductivity-methods.png)
+![Las cuatro salidas guardadas y la nota de los métodos reabiertos](/img/open-science/research-workflows/conductivity-methods.webp)
 
 Utilice PNG para compartir rápidamente y SVG donde el arte vectorial es útil. Esta carrera es <a href="/docs/examples/research-workflows/conductivity-temperature.png" download>PNG</a>, <a href="/docs/examples/research-workflows/conductivity-temperature.svg" download>SVG</a>, <a href="/docs/examples/research-workflows/plotted-conductivity.csv" download>Datos trazados</a> y <a href="/docs/examples/research-workflows/conductivity-methods.md" download>métodos</a> están disponibles para la comparación.
 

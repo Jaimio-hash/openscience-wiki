@@ -10,7 +10,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## 选择访问方式
 
-![英文首次设置中的 Codex 订阅连接](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![英文首次设置中的 Codex 订阅连接](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 `Provider type` 用来选择订阅登录、官方 API 或 `Custom Gateway`。订阅选项受当前智能体框架影响。Codex 的提供方选项包括 Codex subscription、xAI OAuth、官方 API 和 Custom Gateway；其他框架不一定显示完全相同的选项。
 
@@ -38,7 +38,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 6. 在 **Main model** 选择订阅可用模型。例如，账号提供 **gpt-5.6-sol** 时可选择该条目。有多个提供方时，同时核对模型名称和提供方。
 7. 打开项目发送范围明确的请求。连接测试检查认证，实际回复检查请求链路。确认该会话中出现回复及适用的工具审批请求。
 
-![订阅连接已验证，并选定主模型](/img/open-science/walkthrough-2026-09-08/70-codex-subscription-connected.png)
+![订阅连接已验证，并选定主模型](/img/open-science/walkthrough-2026-09-08/70-codex-subscription-connected.webp)
 
 | 提供方行操作 | 使用时机 | 检查结果 |
 | --- | --- | --- |
@@ -62,7 +62,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## Custom Gateway：逐项填写
 
-![自定义网关的必填项错误](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![自定义网关的必填项错误](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 先选择 `Custom Gateway`。切换类型时，显示名称可能保留上一类型的值，因此需要手动检查名称。
 
@@ -159,7 +159,7 @@ OLLAMA_HOST=127.0.0.1:11435 ollama pull qwen3:0.6b
 | Advanced settings → Maximum output tokens | `4096` |
 | Image input / Thinking mode | 此文本示例保持关闭；只有模型和网关支持时才启用 |
 
-![本地地址、接口格式与准确模型 ID](/img/open-science/non-workflow-completion/08-local-provider-form.png)
+![本地地址、接口格式与准确模型 ID](/img/open-science/non-workflow-completion/08-local-provider-form.webp)
 
 表单会在网关根地址后补充 `/v1`。Open-Science 允许 `localhost`、`127.0.0.1`、`[::1]` 等回环地址的 API key 留空，旧截图中可能仍显示占位值。远程或局域网网关仍需要 HTTPS 和 API key；API 格式应与本地服务支持的格式一致。
 
@@ -171,7 +171,7 @@ OLLAMA_HOST=127.0.0.1:11435 ollama pull qwen3:0.6b
 
 本例通过配置的本地端点和 OpenCode 正常完成请求，返回 **Local model connected.**，验证的是文本连接，不是生物医学分析。
 
-![本地模型连接检查正常完成](/img/open-science/non-workflow-completion/09-local-model-reply.png)
+![本地模型连接检查正常完成](/img/open-science/non-workflow-completion/09-local-model-reply.webp)
 
 使用期间保持模型服务运行。Agent 在另一台主机运行时，`localhost` 指向那台主机；浏览器可以访问某个地址，不代表 Agent 同样可以访问。
 
@@ -188,7 +188,7 @@ print((8664 + 18515) == 27179)
 
 这些数字对应 GSE60450 第一个样本的零计数与检出基因数。检查权限面板中的代码，批准后打开 **Notebook**，核对输出 **27179 / True**。
 
-![本地模型发起的 Notebook 代码与真实输出](/img/open-science/priority-completion/21-local-model-python-result.png)
+![本地模型发起的 Notebook 代码与真实输出](/img/open-science/priority-completion/21-local-model-python-result.webp)
 
 如果本地模型提出不存在的辅助模块，先检查代码，再明确提供上方无依赖代码。确认 Notebook 实际执行并返回预期结果后，才继续较复杂任务；一次小计算不能保证完整分析可靠。
 

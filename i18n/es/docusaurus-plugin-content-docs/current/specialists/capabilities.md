@@ -18,7 +18,7 @@ La lista de capacidades de Specialist determina qué Skills y Connectors puede a
 4. En **Connectors**, seleccione **Añadir un conector** y elija **Archivos de Omics**. Confirme **Conectores 1**.
 5. Abra el detalle de la capacidad para verificar que haya seleccionado el recurso previsto. Guardar y reabrir el papel para confirmar la persistencia.
 
-![El Specialist con una selección explícita de la capacidad](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.jpg)
+![El Specialist con una selección explícita de la capacidad](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.webp)
 
 | Control | Efecto |
 | --- | --- |

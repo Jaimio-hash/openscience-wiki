@@ -10,7 +10,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## Wählen Sie eine Zugangsmethode {/* #choose-an-access-method */}
 
-![Codex-Abonnementverbindung im englischen Erstaufbau](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![Codex-Abonnementverbindung im englischen Erstaufbau](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 `Provider type` wählt den Abonnementzugriff, einen offiziellen API oder `Custom Gateway` aus. Verfügbare Abonnement-Optionen hängen vom Active Agent Framework ab. Das erfasste Codex-Setup zeigt `Codex subscription`, xAI OAuth, offizielle APIs und Custom Gateway; Gehen Sie nicht davon aus, dass ein anderer Rahmen die gleichen Optionen bietet.
 
@@ -38,7 +38,7 @@ Für Gateways wie **OpenRouter** oder **OpenCode Zen** wählen Sie ein kostenlos
 6. Wählen Sie in **Main model** ein verfügbares Abonnementmodell aus. Wählen Sie beispielsweise einen verfügbaren **gpt-5.6-sol**-Eintrag aus, wenn Ihr Konto ihn anbietet. Überprüfen Sie den Modellnamen und den Anbieter zusammen, insbesondere wenn mehrere Anbieter ähnlich benannte Modelle anbieten.
 7. Öffnen Sie ein Projekt und senden Sie eine begrenzte Anfrage. Ein Verbindungstest überprüft die Authentifizierung, während eine tatsächliche Antwort den Anforderungspfad überprüft. Bestätigen Sie die Antwort und jede Tool-Permission-Anfrage erscheint in dieser Sitzung.
 
-![Codex-Abonnement verifiziert und Hauptmodell ausgewählt](/img/open-science/walkthrough-2026-09-08/70-codex-subscription-connected.png)
+![Codex-Abonnement verifiziert und Hauptmodell ausgewählt](/img/open-science/walkthrough-2026-09-08/70-codex-subscription-connected.webp)
 
 | Anbieterleitungskontrolle | Verwenden Sie es, wenn | Erfolgskontrolle |
 | --- | --- | --- |
@@ -62,7 +62,7 @@ Nach **Connection verified**, füllen Sie eine kleine Anfrage mit diesem Anbiete
 
 ## Custom Gateway: jedes sichtbare Feld {/* #custom-gateway-every-visible-field */}
 
-![Erforderliche Feldfehler im benutzerdefinierten Gateway-Formular](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![Erforderliche Feldfehler im benutzerdefinierten Gateway-Formular](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 Beginnen Sie mit der Auswahl von `Custom Gateway`. Durch Ändern des Anbietertyps kann der Anzeigename aus der vorherigen Auswahl beibehalten werden, also überprüfen Sie den Namen, anstatt anzunehmen, dass er zurückgesetzt wurde.
 
@@ -159,7 +159,7 @@ Warten Sie, bis der Download abgeschlossen ist. Wenn der Server läuft, aber das
 | Erweiterte Einstellungen → Maximale Output-Token | `4096` |
 | Bildeingabe / Denkmodus | Aus für diese Verbindung Check |
 
-![Lokale Modelladresse, API-Format und genaue Modell-ID](/img/open-science/non-workflow-completion/08-local-provider-form.png)
+![Lokale Modelladresse, API-Format und genaue Modell-ID](/img/open-science/non-workflow-completion/08-local-provider-form.webp)
 
 Das Formular fügt `/v1` an die Gateway-Root an. Open-Science akzeptiert einen leeren API-Schlüssel für Loopback-Adressen wie `localhost`, `127.0.0.1` und `[::1]`; Der ältere Screenshot kann einen Platzhalter zeigen. Ein Remote- oder LAN-Gateway benötigt weiterhin HTTPS und einen API-Schlüssel. Verwenden Sie das API-Format, das Ihr lokaler Server unterstützt.
 
@@ -171,7 +171,7 @@ Installieren Sie in **Settings → Agent** **OpenCode → App-managed download**
 
 Die Verbindungsüberprüfung wurde mit **Lokales Modell verbunden.** mit dem konfigurierten lokalen Endpunkt und OpenCode abgeschlossen. Es überprüft eine Textanfrage, keine biomedizinische Analyse.
 
-![Prüfung der lokalen Modellverbindung abgeschlossen](/img/open-science/non-workflow-completion/09-local-model-reply.png)
+![Prüfung der lokalen Modellverbindung abgeschlossen](/img/open-science/non-workflow-completion/09-local-model-reply.webp)
 
 Halten Sie den Server am Laufen, während Sie das Modell verwenden. Für einen Agenten auf einem anderen Host bezieht sich `localhost` auf diesen Host. Ein Browser, der einen Endpunkt erreicht, beweist nicht, dass der Agent ihn erreichen kann.
 
@@ -188,7 +188,7 @@ print((8664 + 18515) == 27179)
 
 Dies sind die Null-Zählung der ersten GSE60450-Probe und die erkannten Genzahlen. Überprüfen Sie den vorgeschlagenen Code im Berechtigungsfeld, genehmigen Sie ihn, öffnen Sie dann **Notebook** und überprüfen Sie **27179 / True**.
 
-![Notebook-Code und tatsächliche Ausgabe von einem lokalen Modell-Toolaufruf](/img/open-science/priority-completion/21-local-model-python-result.png)
+![Notebook-Code und tatsächliche Ausgabe von einem lokalen Modell-Toolaufruf](/img/open-science/priority-completion/21-local-model-python-result.webp)
 
 Lokales `qwen2.5:7b` hat diesen Aufruf über das Codex-Framework und einen lokalen Chat Completions-Endpunkt abgeschlossen. Sein ursprünglicher Vorschlag verwies auf ein nicht verfügbares Hilfsmodul; die Überprüfung erfolgreich war, nachdem dieser Vorschlag abgelehnt und der oben genannte abhängigkeitsfreie Code angegeben wurde. Dies verifiziert eine begrenzte Werkzeugoperation, keine zuverlässige Planung einer vollständigen RNA-seq-Analyse oder eines gleichwertigen Verhaltens unter einem anderen Agent-Framework.
 

@@ -49,13 +49,13 @@ Choisissez le modèle prévu, laissez **Ask for approval** activé et sélection
 
 Lorsque **Save to Literature Inbox?** apparaît, examinez l'opération et autorisez l'enregistrement prévu. Sauver des candidats est différent de les accepter dans votre bibliothèque.
 
-![Autorisation de participer à des concours de littérature](/img/open-science/prisma-walkthrough/03-inbox-save-approval.png)
+![Autorisation de participer à des concours de littérature](/img/open-science/prisma-walkthrough/03-inbox-save-approval.webp)
 
 ## 2. Examiner chaque candidat avant d'accepter {/* #2-review-each-candidate-before-accepting */}
 
 Ouvrez **Library → Inbox**. Dans cette exécution, le badge a montré **3**, et chaque ligne a affiché un titre, les premiers auteurs, l'année de publication et **Trouvé par Crossref**.
 
-![Trois vraies communications PRISMA en attente d'examen](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![Trois vraies communications PRISMA en attente d'examen](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 1. Sélectionnez le titre du candidat pour ouvrir ses détails.
 2. Cochez **Provider**, son lien source, et **Identifiers → DOI** par rapport au papier prévu.
@@ -63,7 +63,7 @@ Ouvrez **Library → Inbox**. Dans cette exécution, le badge a montré **3**, e
 4. Sélectionnez **Accept** lorsque l'identité correspond. Le candidat disparaît de la boîte de réception et devient un dossier de bibliothèque.
 5. Répétez pour les deux autres. Le badge est passé de 3 à 2 à 1; l'état final était **Inbox is clear**.
 
-![Source Crossref d'un candidat et exact DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.png)
+![Source Crossref d'un candidat et exact DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.webp)
 
 | Commande de la boîte de réception | Résultat | Quand l’utiliser |
 | --- | --- | --- |
@@ -81,25 +81,25 @@ Créez une collection avec le contrôle de la barre latérale **New collection**
 - **Exposé succinct:** indique qu'il contient des lignes directrices actualisées et historiques en matière de rapports. La description est le texte de l'organisation, et non les instructions de l'agent.
 - Sélectionner **Create collection**; Le nom est requis, tandis que la description est facultative. **Cancel** et **Close** rejettent le projet.
 
-![Une collection de lecture spécifique](/img/open-science/prisma-walkthrough/06-create-collection.png)
+![Une collection de lecture spécifique](/img/open-science/prisma-walkthrough/06-create-collection.webp)
 
 Dans **All references**, recherchez `PRISMA`. Confirmez exactement les trois enregistrements prévus sont visibles, sélectionnez leurs cases à cocher et utilisez **Add to collection → PRISMA reporting - Core reading**. L'opération efface la sélection. Sélectionnez à nouveau les trois enregistrements, puis utilisez **Add to project → PRISMA - Systematic review reading pack**.
 
 Ouvrez la collection et vérifiez ses trois enregistrements. Ouvrez un détail de référence pour confirmer à la fois le projet et les cases de collecte sont sélectionnées. Il s'agit de liens vers des documents partagés, et non de trois copies supplémentaires de la bibliographie.
 
-![La collection de trois documents achevée](/img/open-science/prisma-walkthrough/07-core-reading-collection.png)
+![La collection de trois documents achevée](/img/open-science/prisma-walkthrough/07-core-reading-collection.webp)
 
 ## 4. Joindre le texte complet utilisable {/* #4-attach-usable-full-text */}
 
 Ouvrez le papier 2021 et sélectionnez **Find full-text PDF**. La recherche a rendu l'Europe PMC dans cette course. Inspectez **Open source** avant de sélectionner **Add attachment**.
 
-![Une source de texte intégral découverte](/img/open-science/prisma-walkthrough/08-full-text-source.png)
+![Une source de texte intégral découverte](/img/open-science/prisma-walkthrough/08-full-text-source.webp)
 
 La source a été découverte, mais **Add attachment** a renvoyé **PDF could not be added**. Le message énumère les causes possibles, y compris les exigences de connexion, les liens expirés et la limite 50 MB; il n'identifie pas la cause qui s'est produite ici.
 
 Pour récupérer, téléchargez le PDF disponible à partir du [page de l'article éditeur](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003583). Retour à la même référence et utiliser **Add PDF**. Sélectionnez le fichier téléchargé, puis ouvrez **Aperçu prisma-2020-statement.pdf** sous Pièces jointes. Le fichier attaché avec succès a montré **806.1 KB** et un aperçu **Page 15**. Vérifiez le titre et DOI à la page une en regard de l'enregistrement.
 
-![L'éditeur PDF a attaché et ouvert avec succès](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![L'éditeur PDF a attaché et ouvert avec succès](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 Un résultat source visible n'est pas un PDF attaché. Un PDF ci-joint n'est pas une preuve que l'agent l'a lu. **Read with agent** est une action distincte qui fournit le contexte de lecture pour une demande ultérieure.
 

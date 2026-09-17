@@ -17,7 +17,7 @@ Main、Subagent、Reviewer、Vision 和 Session details 需要不同模型時，
 3. 選擇 **Reasoning effort**，以當前模型顯示的選項為準。例如部分模型提供 Default、Low、Medium、High、XHigh、Ultra，其他模型可能不同。
 4. 關閉並重新開啟設定，確認儲存狀態；先執行一個小請求，再開始長分析。
 
-![主模型與已連線的 Provider](/img/open-science/guides-walkthrough/10-model-main.png)
+![主模型與已連線的 Provider](/img/open-science/guides-walkthrough/10-model-main.webp)
 
 更改影響後續請求，不會改變歷史回答使用的模型。切換模型時，應用嘗試保持相近推理強度；後端可能近似對映不支援的檔位。更高強度可能增加耗時和用量，不代表結果一定正確。
 
@@ -32,7 +32,7 @@ Main、Subagent、Reviewer、Vision 和 Session details 需要不同模型時，
 | Vision | 支援影象輸入的已配置模型 | Not configured 表示未指定專用 Vision 模型；是否需要轉交影象取決於當前後端能力 |
 | Session details | 跟隨主模型或指定相容模型；檢查強度與啟用狀態 | 用受限呼叫生成會話標題和說明，與科研任務和產物分開 |
 
-![Subagent 繼承與禁用的獨立強度控制元件](/img/open-science/guides-walkthrough/11-model-scenarios.png)
+![Subagent 繼承與禁用的獨立強度控制元件](/img/open-science/guides-walkthrough/11-model-scenarios.webp)
 
 固定場景模型時先選 Provider/模型，再選支援的強度。希望未來主模型變更自動傳遞時，改回繼承選項。**Unavailable** 可能保留已移除或不再相容的舊模型名，需要重新選擇有效項。
 
@@ -52,9 +52,9 @@ Session details 選擇器不接受 Codex 訂閱模型；Main 或 Vision 中能�
 5. 對照原圖核對回答。精確數值比較應檢視源表格：本例中兩個標籤都四捨五入為 **24.7M**，不代表原始計數相等。
 6. 不再需要獨立影象模型時，將 Vision 改回 **Not configured**；這不會刪除模型提供方。
 
-![文字 Main 模型與獨立 Vision 配置](/img/open-science/sept11-completion/vision-configuration.png)
+![文字 Main 模型與獨立 Vision 配置](/img/open-science/sept11-completion/vision-configuration.webp)
 
-![核對圖表標籤及四捨五入數值的限制](/img/open-science/sept11-completion/vision-result.png)
+![核對圖表標籤及四捨五入數值的限制](/img/open-science/sept11-completion/vision-result.webp)
 
 當前圖片轉交邏輯排除了 Codex 訂閱提供方，但它們仍可能出現在 Vision 選擇器中。如果選擇後，文字 Main 仍拒絕接收圖片，請改用其他相容的 Vision 提供方，或選擇本身支援圖片的 Main 模型。選擇已儲存不代表圖片請求已成功。
 

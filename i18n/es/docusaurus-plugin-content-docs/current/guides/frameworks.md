@@ -12,7 +12,7 @@ Elija un framework Agent para ejecutar conversaciones y herramientas y configure
 
 Abre **Settings → Agent**. La página separa **Installed** de **Available**. Lea la versión, la ruta y el marcador **Active** en la tarjeta instalada antes de cambiar cualquier cosa.
 
-![Detectado Codex gestionado por aplicaciones](/img/open-science/local-acceptance/agent-codex-active.png)
+![Detectado Codex gestionado por aplicaciones](/img/open-science/local-acceptance/agent-codex-active.webp)
 
 | Control/establecimiento | Significado y acción |
 | --- | --- |
@@ -63,11 +63,11 @@ Utilice el flujo de reparación de la aplicación para un tiempo de ejecución g
 4. Elige **Install OpenCode → App-managed download (recommended)**. Espere a la tarjeta **Installed**, luego seleccione y confirme **Switch**.
 5. Chequee **Active**, la ruta de ejecución y la selección de modelos compatibles. Reinstalar el backend no configura un proveedor de modelo para él.
 
-![Ámbito de desinstalación OpenCode gestionado por la aplicación](/img/open-science/priority-completion/01-opencode-uninstall.png)
+![Ámbito de desinstalación OpenCode gestionado por la aplicación](/img/open-science/priority-completion/01-opencode-uninstall.webp)
 
 Antes de eliminar un backend, cambie a otro backend disponible; el backend activo no puede ser eliminado a través de este control. Después de reinstalar, re-detectar y activarlo, luego abrir un proyecto existente y ejecutar una pequeña solicitud para comprobar la conexión.
 
-![OpenCode instalado de nuevo y seleccionado](/img/open-science/priority-completion/03-opencode-reinstalled.png)
+![OpenCode instalado de nuevo y seleccionado](/img/open-science/priority-completion/03-opencode-reinstalled.webp)
 
 Si las acciones de instalación son deshabilitadas, compruebe otra instalación/switch en progreso y el error previo declarado. Si la detección tiene éxito pero las solicitudes fallan, inspeccione la autenticación del modelo y compatibilidad marco/API por separado.
 

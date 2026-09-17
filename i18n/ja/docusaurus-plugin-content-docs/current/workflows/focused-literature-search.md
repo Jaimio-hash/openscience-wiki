@@ -34,7 +34,7 @@ Do not retrieve full text or infer clinical recommendations.
 Write in English, do not delegate, and reopen the saved files.
 ```
 
-![Open-Scienceの実際の集中調査の要求](/img/open-science/workflow-extensions/focused-search-input.png)
+![Open-Scienceの実際の集中調査の要求](/img/open-science/workflow-extensions/focused-search-input.webp)
 
 スクリーンショットは初期リクエストを表示します。 上記の運用審査ルールは、その実行のその後のレビューを組み込んでいます。
 
@@ -55,11 +55,11 @@ AND ("JAMA Psychiatry"[Journal] OR "Behaviour Research and Therapy"[Journal])
 
 応答が完了したら、**Generated** で **mindfulness-search-audit.csv** を開きます。 除外されたレコードや不確実なレコードを含む、すべての取得されたPMIDを保持する必要があります。 タイトル、ジャーナル、DOI、リンクされたパブのレコードに対する日付をチェックし、抽象的な決定を比較します。
 
-![保存された候補テーブル、不確実性および除外されたレコードを含む](/img/open-science/workflow-extensions/focused-search-table.png)
+![保存された候補テーブル、不確実性および除外されたレコードを含む](/img/open-science/workflow-extensions/focused-search-table.webp)
 
 初期ドラフトの不正確な理由:例えば、PMID **38837133**は、二次的な分析ではなく、より広範な心理療法の第一次ランダム化試験です。 変更されたテーブルは、そのマインドフルネスの適格性**不確実性**をマークします。 PMID **34009273**は、メタ解析であり、修正された理由で除外されたままです。 レコードと特定のエラーを浪費すると、エージェントは具体的なリビジョンリクエストを与えます。 保存した CSV を再起動して、変更を確認します。
 
-![Notebookの実際のスクリーニングリビジョンと保存ファイルチェック](/img/open-science/workflow-extensions/focused-search-notebook.png)
+![Notebookの実際のスクリーニングリビジョンと保存ファイルチェック](/img/open-science/workflow-extensions/focused-search-notebook.webp)
 
 見直しされた例表には、**20は含まれて、37はおよび5不確実な記録を除外しました** が含まれているので、すべての **62** がヒットします。 これらは、20の異なる試験が完全に承認されているという宣言ではなく、抽象的なレベルのスクリーニング決定です。 複数の出版物は同じ基礎試験に気づくことができます。
 
@@ -69,7 +69,7 @@ PMID **41418645**は2019–2025 PubMedの出版物日付フィルターによっ
 
 **mindfulness-search-notes.md** を開き、そのカウント、適格性ルール、制限が CSV に一致していることを検証します。 この実行は、両方のファイルを変更し、変更されていない生のメタデータスナップショットを保持しました。
 
-![20/37/5スクリーニングカウントで修正された検索ノート](/img/open-science/workflow-extensions/focused-search-notes.png)
+![20/37/5スクリーニングカウントで修正された検索ノート](/img/open-science/workflow-extensions/focused-search-notes.webp)
 
 <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-audit.csv">候補者テーブルのレビュー</ExampleDownload>と<ExampleDownload path="/examples/workflow-extensions/mindfulness-search-notes.md">検索ノート</ExampleDownload>をダウンロードします。 完全な抽象化は、ここに再配布されていません。 ソースリンクに従ってそれらを検査します。
 

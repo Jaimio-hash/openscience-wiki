@@ -22,7 +22,7 @@ Remote.It 可能已經接受服務變更，但後臺代理尚未報告就緒。�
 | App access | 透過已登入的移動應用訪問，並完成兩步驗證 |
 | Browser access | 透過持久 HTTPS 連結訪問，並完成兩步驗證 |
 
-![實查的 Off 頁面](/img/open-science/walkthrough-2026-09-08/63-remote-off.png)
+![實查的 Off 頁面](/img/open-science/walkthrough-2026-09-08/63-remote-off.webp)
 
 訪問模式只能在本機桌面視窗修改。有權限的已連線瀏覽器可管理配對/信任，但不能代替本機修改模式。
 

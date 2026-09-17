@@ -27,7 +27,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 역할을 삭제하기 전에 Skills을 삭제하는 옵션을 검사합니다. 다른 역할이 여전히 그들을 사용하는 경우 공유 Skills 유지. 중복을 삭제하는 것은 원래의 역할을 삭제하지 않습니다.
 
-![공유 Skills을 유지하면서 일회용 역할을 삭제](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.jpg)
+![공유 Skills을 유지하면서 일회용 역할을 삭제](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.webp)
 
 ## 공유 및 패키지 가져 오기 {/* #share-and-import-a-package */}
 
@@ -39,7 +39,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 2. **Choose Skills to include**에서 수신자가 파일을 필요로 하는 경우 `rnaseq-count-qc`을 명시적으로 선택합니다. 설치된 개인/수입 Skill 기본적으로 포함되지 않습니다.
 3. 수출하고 공유하기 전에 아카이브를 검사합니다.
 
-![Specialist 패키지에 포함하려면 Skill 선택](/img/open-science/capabilities-walkthrough/07-specialist-export.jpg)
+![Specialist 패키지에 포함하려면 Skill 선택](/img/open-science/capabilities-walkthrough/07-specialist-export.webp)
 
 실제 <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.zip">Skill와 패키지</ExampleDownload>에는 `manifest.json`, `specialist.json`, `skills/rnaseq-count-qc/SKILL.md` 및 참조 스키마가 포함되어 있습니다. 최소 수출은 두 JSON 파일을 포함 할 수 있습니다. Connector ID는 참고입니다; credentials, 현지 신뢰 및 전체 액세스는 사용 허가로 전송되지 않습니다.
 
@@ -52,7 +52,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 5. 수입된 역할은 **장애인/SETUP**를 저장됩니다. 편집기에서 지침 및 기능 바인딩을 검사하고, 의도 된 액세스 범위를 선택, 다음 **Save changes**을 완료 설정하고 활성화.
 6. 설치 된 역할을 다시 열고 작은 범위를 작업 실행합니다.
 
-![수입 중 실제 RNA-seq Skill 충돌 해결](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.jpg)
+![수입 중 실제 RNA-seq Skill 충돌 해결](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.webp)
 
 **버전 변경되지 않음**은 여전히 Skill 충돌을 동반 할 수 있습니다. 지정된 Skill 소스를 명시적으로 선택하고, 그 바인딩 및 액세스 범위를 확인하기 위해 수입 된 역할을 다시 엽니다.
 
@@ -71,11 +71,11 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 **Browse Marketplace**을 열고, 역할을 검색하고 **View details**을 선택합니다. 게시자, 소스, 버전, 라이센스, 다운로드 크기 및 포함 Skills/Connectors. **Refresh Marketplace** 카탈로그 업데이트; **Manage Marketplace sources**는 구성 소스를 제어합니다. All/Official/Community 필터 관심 카탈로그 원산지, 런타임 읽기.
 
-![실제 자동 연구 Specialist 패키지 세부 사항](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.jpg)
+![실제 자동 연구 Specialist 패키지 세부 사항](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.webp)
 
 **Install Specialist**을 선택하면 **Marketplace**에서 역할이 나타나고 활성화 상태 및 바인딩을 검사합니다. 카탈로그 패키지는 패키지가 아닌 모든 응용 기능에 대해 설명합니다. 설치는 연구 작업을 수행하거나 모든 외부 의존도를 준비하지 않습니다; 사용 전에 필요한 설정 완료.
 
-![Auto Research 설치 및 활성화](/img/open-science/capabilities-walkthrough/23-marketplace-installed.jpg)
+![Auto Research 설치 및 활성화](/img/open-science/capabilities-walkthrough/23-marketplace-installed.webp)
 
 ## 공유하기 전에 검증 {/* #verify-before-sharing */}
 

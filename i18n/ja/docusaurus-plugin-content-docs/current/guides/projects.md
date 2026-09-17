@@ -23,7 +23,7 @@ last_update:
 3. **Create project** を選択します。 左側のサイドバーがプロジェクト名を表示し、メインパネルが**New conversation**を開くことを確認します。
 4. プロジェクト名メニューと **Project settings** を開き、保存した値を確認します。 成功するプロジェクト保存は、モデルの信頼性とは別々です。
 
-![明示的な研究目的とエージェントのコンテキストを持つPRISMAプロジェクト](/img/open-science/local-acceptance/prisma-project-form.png)
+![明示的な研究目的とエージェントのコンテキストを持つPRISMAプロジェクト](/img/open-science/local-acceptance/prisma-project-form.webp)
 
 | フィールドまたはボタン | 事例・行動 | 変更点 |
 | --- | --- | --- |

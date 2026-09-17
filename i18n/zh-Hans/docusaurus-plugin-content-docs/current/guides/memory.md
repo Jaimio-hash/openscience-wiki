@@ -20,11 +20,11 @@ Memory 保存可复用笔记；上下文窗口是单次模型请求可用的材�
 4. Create 后选 Add，输入笔记并 Save。
 5. 返回分类，检查内容与数量。
 
-![分类字段和 Auto-recall](/img/open-science/guides-walkthrough/17-memory-category.png)
+![分类字段和 Auto-recall](/img/open-science/guides-walkthrough/17-memory-category.webp)
 
 本例笔记要求保留 GEO 原始矩阵、把 Entrez Gene ID 作为文本、区分基因长度和样本计数，并记录 SHA-256。这是工作约定，不是分析结果。
 
-![Memory 关闭时手动保存的笔记](/img/open-science/guides-walkthrough/18-memory-note.png)
+![Memory 关闭时手动保存的笔记](/img/open-science/guides-walkthrough/18-memory-note.webp)
 
 | 控件 | 影响与边界 |
 | --- | --- |
@@ -47,7 +47,7 @@ Memory 保存可复用笔记；上下文窗口是单次模型请求可用的材�
 3. 若出现授权请求，检查 **Save memory** 中拟保存的内容、分类和项目范围，再选择 **Allow once**。内容不符合已确认约定时选择 **Deny**。
 4. 重新打开分类，检查笔记实际存在、文字正确，并归属预期项目。**auto** 表示由 Agent 创建，不代表应用已通过计算验证这条约定。
 
-![Agent 保存的报告约定与手动维护的来源管理笔记](/img/open-science/non-workflow-completion/05-memory-note-category.png)
+![Agent 保存的报告约定与手动维护的来源管理笔记](/img/open-science/non-workflow-completion/05-memory-note-category.webp)
 
 ## 在新会话检查召回
 
@@ -65,7 +65,7 @@ Memory 保存可复用笔记；上下文窗口是单次模型请求可用的材�
 
 使用 OpenCode 时，如果上下文弹层提供 **Compact**，点击后等待 **Context compacted**。原消息可能仍然可见，但后端会从摘要继续。继续执行前，要求 Agent 列出保留的约束，并与原要求逐项核对。如有遗漏或错误，先重新说明，再开始下一步操作。压缩不保证信息无损；Provider 统计也可能与本地估算不同。
 
-![压缩完成及 Provider 报告的上下文占用](/img/open-science/non-workflow-completion/11-context-compacted.png)
+![压缩完成及 Provider 报告的上下文占用](/img/open-science/non-workflow-completion/11-context-compacted.webp)
 
 继续任务时写清目标、已接受决策、输入/输出文件、已验证结果和未解决问题，并链接保存的证据。分支与导出见[会话](./sessions.md)，累计用量见[Usage](./usage.md)。
 

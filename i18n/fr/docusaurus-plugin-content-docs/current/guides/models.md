@@ -17,7 +17,7 @@ Utilisez les politiques de tâches ci-dessous lorsque Main, Subagent, examinateu
 3. Sélectionnez **Reasoning effort**. Utilisez les choix réellement affichés pour ce modèle. Ce modèle inspecté offrait par défaut, bas, moyen, haut, XHigh et ultra; d'autres modèles ont différentes échelles.
 4. Fermer et rouvrir Model pour vérifier la sélection enregistrée. Commencez une petite demande et inspectez son résultat avant une longue analyse.
 
-![Modèle Main et fournisseur connecté](/img/open-science/guides-walkthrough/10-model-main.png)
+![Modèle Main et fournisseur connecté](/img/open-science/guides-walkthrough/10-model-main.webp)
 
 Les modifications s'appliquent aux demandes subséquentes. Ils ne modifient pas rétroactivement le modèle derrière une réponse existante. Lorsque les modèles changent, l'application tente de préserver la force relative du raisonnement; un moteur peut approximationner un effort non soutenu. Un effort plus important peut augmenter le temps et l'utilisation des jetons et n'est pas une garantie d'exactitude.
 
@@ -32,7 +32,7 @@ Sélectionnez une ligne de scénario pour l'étendre. Ouverture d'une autre rang
 | **Vision** | Un modèle compatible avec l'image configuré | Non configuré signifie qu'il n'y a pas de sélection de Vision dédiée. Le fait qu'un relais soit nécessaire dépend du support d'image du moteur actif. |
 | **Session details** | Suivre Main ou choisir un modèle compatible; d'inspecter ses efforts et ses moyens | Cela génère un titre/description de session en utilisant un appel restreint. Il est séparé de la tâche scientifique et de ses artefacts. |
 
-![Héritage du sous-agent et maîtrise de l'effort](/img/open-science/guides-walkthrough/11-model-scenarios.png)
+![Héritage du sous-agent et maîtrise de l'effort](/img/open-science/guides-walkthrough/11-model-scenarios.webp)
 
 Le sélecteur de détails Session filtre les modèles d'abonnement Codex. Un modèle visible en Main ou Vision peut donc être absent ici. Avec un fournisseur local compatible et OpenCode sélectionné, le modèle local est devenu disponible comme un choix fixe. **Not supported** à côté de son effort de raisonnement signifie que le contrôle de l'effort n'est pas disponible; il est séparé de la question de savoir si le modèle peut recevoir une demande de texte.
 
@@ -51,9 +51,9 @@ Utilisez Vision lorsque le modèle Main de la conversation ne peut pas accepter 
 5. Comparez la réponse avec l'image originale. Utilisez le tableau source pour des comparaisons numériques exactes : dans cet exemple, deux étiquettes arrondies à **24,7M** ne prouvent pas que leurs nombres sous-jacents sont égaux.
 6. Retournez Vision à **Not configured** lorsque vous ne voulez plus d'un modèle d'image séparé. Cela ne supprime pas le fournisseur de modèle.
 
-![Sélection de vision séparée à côté du modèle texte Main](/img/open-science/sept11-completion/vision-configuration.png)
+![Sélection de vision séparée à côté du modèle texte Main](/img/open-science/sept11-completion/vision-configuration.webp)
 
-![Vérification des étiquettes des cartes et des limites des valeurs arrondies](/img/open-science/sept11-completion/vision-result.png)
+![Vérification des étiquettes des cartes et des limites des valeurs arrondies](/img/open-science/sept11-completion/vision-result.webp)
 
 Le relais d'image actuel exclut les fournisseurs d'abonnement Codex même s'ils peuvent apparaître dans le sélecteur Vision. Si un modèle Main seulement en texte rejette toujours une image après cette sélection, choisissez un autre fournisseur de Vision admissible ou un modèle Main compatible avec l'image. Ne traitez pas une valeur de sélecteur enregistrée comme une requête d'image réussie.
 

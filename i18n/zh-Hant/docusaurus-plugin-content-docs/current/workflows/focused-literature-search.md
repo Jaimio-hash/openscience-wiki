@@ -34,7 +34,7 @@ Do not retrieve full text or infer clinical recommendations.
 Write in English, do not delegate, and reopen the saved files.
 ```
 
-![Open-Science 中實際傳送的精準檢索請求](/img/open-science/workflow-extensions/focused-search-input.png)
+![Open-Science 中實際傳送的精準檢索請求](/img/open-science/workflow-extensions/focused-search-input.webp)
 
 截圖展示初次請求，上方的篩選規則已納入本次複核後的修正。
 
@@ -55,12 +55,12 @@ AND ("JAMA Psychiatry"[Journal] OR "Behaviour Research and Therapy"[Journal])
 
 回答完成後，在 **Generated** 中開啟 **mindfulness-search-audit.csv**。表中應保留全部檢索到的 PMID，包括排除和待確認記錄。透過 PubMed 連結核對標題、期刊、DOI 和日期，再把篩選結論與摘要逐項對照。
 
-![保留待確認和排除記錄的候選文獻表](/img/open-science/workflow-extensions/focused-search-table.png)
+![保留待確認和排除記錄的候選文獻表](/img/open-science/workflow-extensions/focused-search-table.webp)
 
 本次初稿存在排除理由不準確的情況。例如，PMID **38837133** 是更廣義心理治療的原始隨機試驗，不是二次分析；修訂表把它是否符合正念干預範圍標為 **uncertain**。PMID **34009273** 是薈萃分析，修正理由後仍排除。要求修改時，應點明記錄和具體錯誤；修改結束後重新開啟 CSV，確認檔案內容確實更新。
 
 本例複核後的表格有 **20 條納入、37 條排除、5 條待確認**，合計 **62 條**。這些是依據摘要作出的篩選判斷，不代表已經完整評估了 20 項獨立試驗。同一試驗也可能有多篇報告。
-![Notebook 中的實際篩選修訂和儲存檔案檢查](/img/open-science/workflow-extensions/focused-search-notebook.png)
+![Notebook 中的實際篩選修訂和儲存檔案檢查](/img/open-science/workflow-extensions/focused-search-notebook.webp)
 
 
 ## 4. 保留未解決的疑點 {/* #4-保留未解决的疑点 */}
@@ -69,7 +69,7 @@ PMID **41418645** 被 PubMed 的 2019–2025 年發表日期條件檢出，但�
 
 開啟 **mindfulness-search-notes.md**，確認其中的數量、篩選規則和侷限與 CSV 一致。本例同時修訂了這兩個檔案，並保留未改動的原始後設資料快照。
 
-![修訂後的檢索說明及 20/37/5 篩選數量](/img/open-science/workflow-extensions/focused-search-notes.png)
+![修訂後的檢索說明及 20/37/5 篩選數量](/img/open-science/workflow-extensions/focused-search-notes.webp)
 
 下載<ExampleDownload path="/examples/workflow-extensions/mindfulness-search-audit.csv">複核後的候選表</ExampleDownload>和<ExampleDownload path="/examples/workflow-extensions/mindfulness-search-notes.md">檢索說明</ExampleDownload>。Wiki 不重新分發完整摘要，可透過來源連結檢視。
 

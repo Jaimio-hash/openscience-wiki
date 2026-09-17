@@ -32,7 +32,7 @@ Do not retrieve full text or run the later update yet. Use English.
 
 この実行は、**3,643の12は一致します** を返し、**7** を保持し、**5** を除外しました。 **freshwater-search-plan.md** を開き、継続する前に条件と日付を確認してください。 保存されたプランは更新前に状態を記述します。
 
-![保存されたベースライン検索仕様と保持されたレコード](/img/open-science/workflow-extensions/freshwater-search-plan.png)
+![保存されたベースライン検索仕様と保持されたレコード](/img/open-science/workflow-extensions/freshwater-search-plan.webp)
 
 証拠レベルを見直し: 一部の候補者は、タイトル/メタデータのみを供給しましたが、他の人にはライセンス許可された抽象が含まれていました。 広範囲の輸送経路レビューは、コンテキストとして含まれています。 それらのインクルージョンは、淡水固有の実験結果が証明されていません。
 
@@ -40,11 +40,11 @@ Do not retrieve full text or run the later update yet. Use English.
 
 <ExampleDownload path="/examples/workflow-extensions/freshwater-baseline.ris">ベースラインRIS</ExampleDownload>をダウンロード **Library → New collection** では、**淡水マイクロプラスチック輸送** を作成し、それを選択し、**Import references** を選択します。 RIS を選択し、インポートする前に目的地とマッチングの動作を確認します。
 
-![名前付きコレクションのベースラインインポートプレビュー](/img/open-science/workflow-extensions/freshwater-import-baseline.png)
+![名前付きコレクションのベースラインインポートプレビュー](/img/open-science/workflow-extensions/freshwater-import-baseline.webp)
 
 **7は、0の再利用、0のスキップ、0の失敗を作成しました**で録画したインポートが完了しました。 **Done** をクリックし、コレクションに 7 つの参照があることを確認します。 別のライブラリの既存のマッチは、作成/再利用されたスプリットを変更できます。
 
-![7つの基準ベースラインコレクション](/img/open-science/workflow-extensions/freshwater-collection-baseline.png)
+![7つの基準ベースラインコレクション](/img/open-science/workflow-extensions/freshwater-collection-baseline.webp)
 
 ## 3. 同じ会話で次の日付ウィンドウを検索します {/* #3-search-the-next-date-window-in-the-same-conversation */}
 
@@ -67,7 +67,7 @@ Write in English and reopen the outputs.
 
 **7追加、0ベースラインオーバーラップと5エクスクルージョン**で**7,600の12は一致します**を返しました。 どちらの検索も12候補にトランクされます。 データベースのランキングとカバレッジは変更できます。 カウントは、9月16、2026を実行します。
 
-![追加と除外による更新監査を保存](/img/open-science/workflow-extensions/freshwater-update-audit.png)
+![追加と除外による更新監査を保存](/img/open-science/workflow-extensions/freshwater-update-audit.webp)
 
 実際のDOIセットは、合計を割くのではなくチェックします。 ベースラインと一緒に日付<ExampleDownload path="/examples/workflow-extensions/freshwater-update-review.csv">更新監査</ExampleDownload>と<ExampleDownload path="/examples/workflow-extensions/freshwater-update-notes.md">更新ノート</ExampleDownload>を保存します。
 
@@ -75,11 +75,11 @@ Write in English and reopen the outputs.
 
 <ExampleDownload path="/examples/workflow-extensions/freshwater-update.ris">RISの追加</ExampleDownload>をダウンロード ライブラリで**淡水マイクロプラスチック輸送**を選択し、**Import references**を選択します。 **Reuse existing reference** を保ちながら、既に現行のアイテムを安全に再利用することができます。
 
-![更新インポートプレビュー 7つの追加を示す](/img/open-science/workflow-extensions/freshwater-import-update.png)
+![更新インポートプレビュー 7つの追加を示す](/img/open-science/workflow-extensions/freshwater-import-update.webp)
 
 **7は、0の再利用、0のスキップ、0の失敗を作成しました**で完成した実際のアップデートインポート。 このコレクションには**14 リファレンス**が含まれています。 これは、2つの保持されたセットの正規化DOIユニオンに同意します。
 
-![更新されたコレクションには、14の参考文献があります。](/img/open-science/workflow-extensions/freshwater-collection-updated.png)
+![更新されたコレクションには、14の参考文献があります。](/img/open-science/workflow-extensions/freshwater-collection-updated.webp)
 
 ベースライン自体は書き換えられませんでした。 日付範囲と検索レコードを保存して、後で読者は、更新から元の証拠ベースを区別することができます。 提案や科学的な主張をサポートするために、関連する完全なテキストを次から取得および読み込みます。 メタデータだけでは、鑑定書ではない。 クエリのバッチをオーバーラップするには、[検索バッチを組み合わせる](merge-literature-searches.md)を参照してください。
 

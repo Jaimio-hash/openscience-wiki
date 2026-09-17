@@ -37,7 +37,7 @@ Confirm the project name above the session list. These are example names: use a 
 3. Confirm twelve sample rows. Inspect the full sample identifier and the columns for total counts, zero-count genes, detected genes and the median positive count.
 4. Close the preview to return to the composer. Keep the attachment in the request.
 
-![Sample QC table opened in the application](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![Sample QC table opened in the application](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 If the preview is empty or the columns are not separated, confirm you attached the CSV rather than an HTML download page. See [Tables](../tools/tables.md) for delimiter and preview controls.
 

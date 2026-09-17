@@ -18,7 +18,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 在 **Settings → Runtimes** 中確認 R 為 **Ready** 且已啟用。本次使用 **R 4.4.3** 的基礎及推薦函式，沒有額外安裝包。透過 **+ → Attach files** 將 CSV 附加到專案會話。
 
-![同一資料方法比較任務中附加的公開 bfi 資料](/img/open-science/workflow-extensions/bfi-input.png)
+![同一資料方法比較任務中附加的公開 bfi 資料](/img/open-science/workflow-extensions/bfi-input.webp)
 
 ## 2. 擬合前固定預處理規則 {/* #2-拟合前固定预处理规则 */}
 
@@ -48,7 +48,7 @@ Use English and do not install packages or delegate.
 
 從 **Generated** 或 **Files** 開啟 **bfi-method-metrics.csv**。本次檔案包含 **77 行指標**，記錄樣本數、缺失數、PCA 方差、FA 獨特性、擬合、收斂、隨機種子與輸入身份。
 
-![共同預處理與兩種擬合方法儲存後的數值指標](/img/open-science/workflow-extensions/bfi-metrics.png)
+![共同預處理與兩種擬合方法儲存後的數值指標](/img/open-science/workflow-extensions/bfi-metrics.webp)
 
 | 未旋轉的 PCA 主成分 | 解釋的標準化總方差 |
 | --- | --- |
@@ -65,7 +65,7 @@ FA 最佳化器收斂，但似然比統計量為 **1490.587，自由度 185**，
 
 開啟 **bfi-method-comparison.png**。三個面板分別是未旋轉 PCA 方差、varimax 旋轉後的 PCA 載荷、varimax FA 載荷。準確載荷儲存在 **bfi-loadings.csv**，共 **250 行**：25 項 × 5 個維度 × 2 種方法。
 
-![未旋轉 PCA 方差與兩組旋轉載荷矩陣](/img/open-science/workflow-extensions/bfi-comparison-plot.png)
+![未旋轉 PCA 方差與兩組旋轉載荷矩陣](/img/open-science/workflow-extensions/bfi-comparison-plot.webp)
 
 不要機械地對齊兩種方法的“第一列”。維度順序和整列符號改變，不一定改變解的含義。熱圖用藍色表示負載荷、紅色表示正載荷，應結合條目模式與具體數值閱讀。
 
@@ -75,7 +75,7 @@ PCA 分解觀測總方差；FA 建模共同協方差，並單獨估計獨特性�
 
 開啟 **bfi-method-report.md**，核對樣本和預處理是否一致，是否記錄固定隨機種子，以及收斂和擬合的區別。這裡將 1—6 分的有序回答近似當作連續值；如果缺失與回答或受訪者特徵相關，只保留完整答卷可能帶來偏差。
 
-![最終報告記錄預處理、隨機種子、解釋方差與擬合邊界](/img/open-science/workflow-extensions/bfi-report.png)
+![最終報告記錄預處理、隨機種子、解釋方差與擬合邊界](/img/open-science/workflow-extensions/bfi-report.webp)
 
 下載 <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.R">R 指令碼</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/bfi-loadings.csv">載荷表</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/bfi-method-metrics.csv">指標表</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.png">圖形</ExampleDownload>與<ExampleDownload path="/examples/workflow-extensions/bfi-method-report.md">報告</ExampleDownload>。將指令碼和下載的輸入放入新資料夾，在該資料夾開啟終端執行：
 

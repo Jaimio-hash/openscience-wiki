@@ -28,7 +28,7 @@ Skill 為 Agent 提供可重複使用的方法，包括適用條件、輸入要�
 4. 開啟結果，閱讀描述、指令、**Files**、許可證和 **Availability**。顯示名稱可能與包 ID 不同。
 5. 返回列表檢視 **Used by**。這裡表示哪些 Agent 可以使用，並非已完成執行次數。
 
-![搜尋已儲存的 RNA-seq Skill](/img/open-science/capabilities-walkthrough/02-skill-search.jpg)
+![搜尋已儲存的 RNA-seq Skill](/img/open-science/capabilities-walkthrough/02-skill-search.webp)
 
 | 控制元件 | 實際作用 |
 | --- | --- |
@@ -51,7 +51,7 @@ Skill 為 Agent 提供可重複使用的方法，包括適用條件、輸入要�
 
 下圖展示 **Customize** 的原因提示。關閉其他可選方法時，這些必需 Skill 仍保持啟用。
 
-![Customize 固定啟用及原因提示](/img/open-science/v0.27.0/08-always-enabled-skill.png)
+![Customize 固定啟用及原因提示](/img/open-science/v0.27.0/08-always-enabled-skill.webp)
 
 ## 在對話中使用 {/* #在对话中使用 */}
 

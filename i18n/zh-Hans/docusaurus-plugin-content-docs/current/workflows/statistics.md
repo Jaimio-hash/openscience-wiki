@@ -22,7 +22,7 @@ last_update:
 
 计算前点击附加的 CSV 预览，检查 `train`、`re78`、`re74`、`re75` 及收入为零的记录。预览可能只显示 100 行，完整文件的行数应由 Notebook 计算。
 
-![附加的数据 CSV 及原始字段](/img/open-science/research-workflows/job-training-input.png)
+![附加的数据 CSV 及原始字段](/img/open-science/research-workflows/job-training-input.webp)
 
 ## 运行预先指定的比较
 
@@ -42,7 +42,7 @@ Run the calculations; do not invent results or delegate.
 
 在会话中点击 **Notebook**，打开实际执行的 Python 单元，先检查输出中的行数和分组人数，再看回归结果。若附件版本无法解析，要求 Agent 读取本会话附件挂载的文件并重试；失败的单元不能作为计算结果。保留成功执行的代码和输出。
 
-![Notebook 记录中显示实际样本检查与回归估计值](/img/open-science/research-workflows/job-training-notebook.png)
+![Notebook 记录中显示实际样本检查与回归估计值](/img/open-science/research-workflows/job-training-notebook.webp)
 
 ## 检查保存后的结果
 
@@ -55,13 +55,13 @@ Run the calculations; do not invent results or delegate.
 
 系数与区间的单位均为**千美元**。这些是本例计算所得的结果，不是直接引用原论文的估计值。
 
-![保存后的英文回归报告，含样本检查和估计结果](/img/open-science/research-workflows/job-training-report.png)
+![保存后的英文回归报告，含样本检查和估计结果](/img/open-science/research-workflows/job-training-report.webp)
 
 回答完成后打开两个生成文件，将 CSV 中的 `train` 行与报告和 Notebook 对照。可下载本次运行的<a href="/docs/examples/research-workflows/job-training-regression.csv" download>系数表</a>和<a href="/docs/examples/research-workflows/job-training-report.md" download>报告</a>。
 
 在 **Generated** 中打开 CSV，展开预览。本次系数表为 **12 rows · 9 columns**：未调整模型两行，调整模型十行。分别找到两个模型的 `train` 行，检查估计值、稳健标准误、区间、`n` 和单位。数据字典未注明的通胀基年不要自行补写。使用预览的 **Download** 按钮保存核对后的版本。
 
-![重新打开系数 CSV，核对两个模型及一致的单位](/img/open-science/research-workflows/job-training-coefficients.png)
+![重新打开系数 CSV，核对两个模型及一致的单位](/img/open-science/research-workflows/job-training-coefficients.webp)
 
 ## 判断这次比较说明了什么
 

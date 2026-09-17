@@ -47,13 +47,13 @@ Use this after a repeatable procedure has actually worked—for example, checkin
 
 After completing GSE60450 QC in a new session, select **+ → Save as skill** and request a separate **rnaseq-descriptive-qc** package, preserving existing packages. The native workflow created a draft containing one **SKILL.md**. Validation returned no errors or warnings.
 
-![Native Skill draft and validation result](/img/open-science/v0.27.0/16-native-skill-draft-validated.png)
+![Native Skill draft and validation result](/img/open-science/v0.27.0/16-native-skill-draft-validated.webp)
 
 Check the name, triggering description, inputs, metric definitions and stop conditions before confirming publication to Personal Skills. Then use **Settings → Skills → Search skills**, open the saved instructions, and inspect **Availability** and **Files**. Download the actual published <ExampleDownload path="/examples/capabilities/rnaseq-descriptive-qc/SKILL.md">SKILL.md</ExampleDownload>.
 
-![Native publication found in Personal](/img/open-science/v0.27.0/17-native-skill-published.png)
+![Native publication found in Personal](/img/open-science/v0.27.0/17-native-skill-published.webp)
 
-![Reopened instructions and availability](/img/open-science/v0.27.0/18-native-skill-instructions.png)
+![Reopened instructions and availability](/img/open-science/v0.27.0/18-native-skill-instructions.webp)
 
 ### Why the button is unavailable
 
@@ -105,7 +105,7 @@ The reference defines the sample metrics and their interpretation. Keep study da
 5. Verify the reference count and package size, then select **Publish**.
 6. Search the new Personal row and reopen it. Confirm the instructions, availability and files; export the package to inspect both entries.
 
-![RNA-seq Skill body and supporting file](/img/open-science/capabilities-walkthrough/01-skill-create.jpg)
+![RNA-seq Skill body and supporting file](/img/open-science/capabilities-walkthrough/01-skill-create.webp)
 
 | Field or button | What to enter or check |
 | --- | --- |
@@ -145,7 +145,7 @@ For an agent-assisted draft, use **Add skill → Chat with agent** or the **Cust
 
 Reopen the new CSV and report and compare them by full sample identifier with the [shared baseline](../reference/example-data.md). Check the input hash. When applying the Skill to another study, repeat these checks against that study's own input and experimental design.
 
-![A separate invocation and the reopened QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.png)
+![A separate invocation and the reopened QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.webp)
 
 Implementation reference: [SkillEditor.tsx](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/SkillEditor.tsx), [host-skills-service.ts](https://github.com/aipoch/open-science/blob/v0.26.0/src/main/skills/host-skills-service.ts).
 

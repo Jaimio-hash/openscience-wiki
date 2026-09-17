@@ -18,7 +18,7 @@ last_update:
 4. В **Connectors** выберите **Добавить разъем** и выберите **Архивы Omics**. Подтвердите **Коннектор 1**.
 5. Откройте подробную информацию о возможности, чтобы убедиться, что вы выбрали предполагаемый ресурс. Сохранить и вновь открыть роль, чтобы подтвердить настойчивость.
 
-![Specialist с явным выбором возможностей](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.jpg)
+![Specialist с явным выбором возможностей](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.webp)
 
 | Контроль | Эффект |
 | --- | --- |

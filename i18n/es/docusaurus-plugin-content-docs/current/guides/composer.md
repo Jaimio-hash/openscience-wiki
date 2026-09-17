@@ -78,7 +78,7 @@ Para revisar varios mensajes solicitados, editar la solicitud prevista, ajustar 
 4. Use **Remove queued message** junto a un recordatorio o instrucción que ya no necesita.
 5. Después de la entrega, compruebe la transcripción guardada para el texto final y el orden. Las solicitudes eliminadas no deben aparecer como instrucciones entregadas.
 
-![Las dos solicitudes restantes después de la edición y reordenación](/img/open-science/local-todo-batch/14-queue-reordered.png)
+![Las dos solicitudes restantes después de la edición y reordenación](/img/open-science/local-todo-batch/14-queue-reordered.webp)
 
 Compruebe que las respuestas entregadas siguen el contenido y el orden editados. Los artículos etiquetados **No se salva** no han entrado en la transcripción guardada; copiar el texto no deseado importante antes de cerrar o reiniciar.
 
@@ -88,7 +88,7 @@ Compruebe que las respuestas entregadas siguen el contenido y el orden editados.
 
 Cuando una solicitud queued incluye un archivo, confirme su chip adjunto está todavía presente cada vez que reabrir el editor. Cambia las instrucciones y selecciona **Add message to queue**. Después de la entrega, compare el archivo mostrado en el mensaje de usuario guardado con la entrada prevista. Pida una suma de verificación de archivos cuando importe la identidad exacta de archivo.
 
-![La solicitud de apego editada entregada con su archivo y suma de comprobación](/img/open-science/sept11-completion/queue-result.png)
+![La solicitud de apego editada entregada con su archivo y suma de comprobación](/img/open-science/sept11-completion/queue-result.webp)
 
 ### Un apego queued se vuelve indisponible {/* #a-queued-attachment-becomes-unavailable */}
 
@@ -112,7 +112,7 @@ Ampliar una tarjeta de herramientas para inspeccionar sus argumentos, código y 
 
 Agitar o enfocar la tabla de respuesta para revelar **Copiar la mesa** (Markdown, CSV o TSV), **Descargar mesa** (CSV o Markdown), y **Ver pantalla completa**. Elija el formato necesario, confirme el destino y vuelva a abrir el archivo para comprobar filas y encabezados. Estas acciones exportan una respuesta existente; no reimprimen un Connector ni crean una versión de artefacto gestionado.
 
-![La tabla de metadatos devuelta en su vista de pantalla completa](/img/open-science/guides-walkthrough/60-response-table.png)
+![La tabla de metadatos devuelta en su vista de pantalla completa](/img/open-science/guides-walkthrough/60-response-table.webp)
 
 Para trabajos de larga duración, utilice [Tareas en segundo plano](notebook.md#background-tasks-and-result-delivery) para abrir o cancelar la ejecución específica. Un seguimiento frustrado es una instrucción pendiente; una tarea de antecedentes ya se admite trabajo. Cerrar la lista de tareas no detiene la ejecución.
 

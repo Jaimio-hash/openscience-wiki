@@ -30,7 +30,7 @@ Avant d'exécuter Python ou R, [activer un temps d'exécution compatible](runtim
 
 <PlatformContent platform="macos">
 
-![Exécution et sortie de Python dans Notebook](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![Exécution et sortie de Python dans Notebook](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 
@@ -83,7 +83,7 @@ Pour une vérification de l'interpréteur et des résultats enregistrés, ouvrez
 
 <PlatformContent platform="macos">
 
-![Filtrage de la liste des variables par nom](/img/open-science/guides-walkthrough/47-notebook-variable-filter.png)
+![Filtrage de la liste des variables par nom](/img/open-science/guides-walkthrough/47-notebook-variable-filter.webp)
 
 </PlatformContent>
 
@@ -107,7 +107,7 @@ Utilisez [Environnements d'exécution](runtimes.md#maintain-and-repair-environme
 
 <PlatformContent platform="macos">
 
-![Sortie R sample-QC ouverte dans l'application](/img/open-science/guides-walkthrough/76-r-qc-table.jpg)
+![Sortie R sample-QC ouverte dans l'application](/img/open-science/guides-walkthrough/76-r-qc-table.webp)
 
 </PlatformContent>
 
@@ -119,7 +119,7 @@ Ouvrez le **Provenance → Execution Log → Download notebook** enregistré de 
 
 <PlatformContent platform="macos">
 
-![Environnement capté pour un résultat R](/img/open-science/guides-walkthrough/77-r-environment-evidence.jpg)
+![Environnement capté pour un résultat R](/img/open-science/guides-walkthrough/77-r-environment-evidence.webp)
 
 </PlatformContent>
 
@@ -138,7 +138,7 @@ Demandez l'exécution de l'arrière-plan lorsqu'une tâche Python, R, REPL persi
 
 <PlatformContent platform="macos">
 
-![État de la tâche d'arrière-plan et son contrôle ouvert](/img/open-science/v0.27.0/13-background-task-completed.png)
+![État de la tâche d'arrière-plan et son contrôle ouvert](/img/open-science/v0.27.0/13-background-task-completed.webp)
 
 </PlatformContent>
 
@@ -164,7 +164,7 @@ Ouvrez un fichier enregistré et sélectionnez **File actions → Provenance** o
 
 <PlatformContent platform="macos">
 
-![Code producteur capturé pour un résultat enregistré](/img/open-science/provenance-code.png)
+![Code producteur capturé pour un résultat enregistré](/img/open-science/provenance-code.webp)
 
 </PlatformContent>
 
@@ -213,7 +213,7 @@ Choisissez l'exportation qui correspond à votre objectif :
 3. Ouvrez le fichier enregistré et comparez-le avec le code affiché. Dans PowerShell, exécutez-le avec le même interpréteur Python; utilisez l'opérateur d'appel `&` avant un chemin exécutable cité.
 4. Comparer la sortie avec le rapport Notebook et enregistré. Conservez tous les fichiers d'entrée requis à côté du code.
 
-<Screenshot src="/img/open-science/windows/captured-code-download.png" alt="Windows capturé code producteur et son contrôle de téléchargement" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.png" linkLabel="Ouvrez la capture d&#39;écran complète de Windows" />
+<Screenshot src="/img/open-science/windows/captured-code-download.webp" alt="Windows capturé code producteur et son contrôle de téléchargement" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.webp" linkLabel="Ouvrez la capture d&#39;écran complète de Windows" />
 
 Ceci télécharge le code enregistré. **Generate script** est une opération de reconstruction séparée. Si la génération échoue, gardez sa pleine erreur; télécharger le code capturé ne signifie pas que la reconstruction a réussi.
 
@@ -230,7 +230,7 @@ Ceci télécharge le code enregistré. **Generate script** est une opération de
 
 <PlatformContent platform="macos">
 
-![Prévisualisation du script généré et contrôle du téléchargement](/img/open-science/priority-completion/19-generated-script.png)
+![Prévisualisation du script généré et contrôle du téléchargement](/img/open-science/priority-completion/19-generated-script.webp)
 
 </PlatformContent>
 

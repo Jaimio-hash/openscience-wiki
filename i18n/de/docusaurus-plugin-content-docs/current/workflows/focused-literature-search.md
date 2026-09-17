@@ -34,7 +34,7 @@ Do not retrieve full text or infer clinical recommendations.
 Write in English, do not delegate, and reopen the saved files.
 ```
 
-![Die eigentliche fokussierte Suchanfrage in Open-Science](/img/open-science/workflow-extensions/focused-search-input.png)
+![Die eigentliche fokussierte Suchanfrage in Open-Science](/img/open-science/workflow-extensions/focused-search-input.webp)
 
 Der Screenshot zeigt die erste Anfrage. Die obige Operational Screening-Regel beinhaltet die nachfolgende Überprüfung dieses Laufs.
 
@@ -55,11 +55,11 @@ Die breite Konzeptabfrage behält bewusst Nicht-Versuche bei. Die Prüfungsberec
 
 Wenn die Antwort abgeschlossen ist, öffnen Sie **mindfulness-search-audit.csv** unter **Generated**. Es sollte jeden abgerufenen PMID behalten, einschließlich ausgeschlossener und unsicherer Datensätze. Überprüfen Sie den Titel, das Journal, DOI und das Datum mit dem verknüpften PubMed-Datensatz und vergleichen Sie dann die Entscheidung mit dem Abstract.
 
-![Die gespeicherte Kandidatentabelle, einschließlich unsicherer und ausgeschlossener Datensätze](/img/open-science/workflow-extensions/focused-search-table.png)
+![Die gespeicherte Kandidatentabelle, einschließlich unsicherer und ausgeschlossener Datensätze](/img/open-science/workflow-extensions/focused-search-table.webp)
 
 Die Überprüfung fand im ursprünglichen Entwurf ungenaue Gründe: PMID **38837133** ist beispielsweise eine primäre randomisierte Studie einer breiteren Psychotherapie, keine Sekundäranalyse. Die überarbeitete Tabelle markiert ihre Achtsamkeitsberechtigung **unsicher**. PMID **34009273** ist eine Meta-Analyse und bleibt mit dem korrigierten Grund ausgeschlossen. Die Benennung des Datensatzes und des spezifischen Fehlers gibt dem Agenten eine konkrete Änderungsanfrage; Öffnen Sie dann das gespeicherte CSV erneut, um die Änderung zu bestätigen.
 
-![Die eigentliche Überprüfung des Screenings und der gespeicherten Dateien in Notebook](/img/open-science/workflow-extensions/focused-search-notebook.png)
+![Die eigentliche Überprüfung des Screenings und der gespeicherten Dateien in Notebook](/img/open-science/workflow-extensions/focused-search-notebook.webp)
 
 Die überprüfte Beispieltabelle enthält **20 enthalten, 37 ausgeschlossen und 5 unsichere Datensätze**, die alle **62**-Hits berücksichtigt. Dies sind Screening-Entscheidungen auf abstrakter Ebene, keine Erklärung, dass 20 verschiedene Studien vollständig bewertet wurden. Mehrere Veröffentlichungen können die gleiche zugrunde liegende Studie betreffen.
 
@@ -69,7 +69,7 @@ PMID **41418645** wurde vom 2019-2025 PubMed-Publikationsdatum-Filter zurückgeg
 
 Öffnen Sie **mindfulness-search-notes.md** und überprüfen Sie, ob seine Zählungen, Förderfähigkeitsregeln und Einschränkungen mit dem CSV übereinstimmen. Dieser Lauf überarbeitete beide Dateien und behielt den unveränderten Roh-Metadaten-Snapshot bei.
 
-![Die überarbeitete Suchnote mit dem 20/37/5 Screening zählt](/img/open-science/workflow-extensions/focused-search-notes.png)
+![Die überarbeitete Suchnote mit dem 20/37/5 Screening zählt](/img/open-science/workflow-extensions/focused-search-notes.webp)
 
 Laden Sie <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-audit.csv">geprüfte Kandidatentabelle</ExampleDownload> und <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-notes.md">Suchanfrage</ExampleDownload> herunter. Vollständige Abstracts werden hier nicht umverteilt; Folgen Sie den Quelllinks, um sie zu überprüfen.
 

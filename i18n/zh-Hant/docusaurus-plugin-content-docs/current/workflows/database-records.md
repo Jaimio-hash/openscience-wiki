@@ -32,7 +32,7 @@ CnH2nO2, neutral charge and linear structures. Reopen the files.
 Keep all outputs in English and do not delegate.
 ```
 
-![實際會話中的化合物範圍和輸出要求](/img/open-science/workflow-extensions/pubchem-input.png)
+![實際會話中的化合物範圍和輸出要求](/img/open-science/workflow-extensions/pubchem-input.webp)
 
 ## 2. 檢視實際資料庫呼叫 {/* #2-查看实际数据库调用 */}
 
@@ -40,7 +40,7 @@ Keep all outputs in English and do not delegate.
 
 本例使用明確的酸名稱，取首個返回 CID 後再核對整批屬性。這適用於本例的明確名稱，不能把“總取第一條”當作通用識別規則。
 
-![真實查詢活動和 Notebook 中的檔案回讀](/img/open-science/workflow-extensions/pubchem-lookup.png)
+![真實查詢活動和 Notebook 中的檔案回讀](/img/open-science/workflow-extensions/pubchem-lookup.webp)
 
 ## 3. 開啟已儲存的表格 {/* #3-打开已保存的表格 */}
 
@@ -56,7 +56,7 @@ Keep all outputs in English and do not delegate.
 | 庚酸 | 8094 | C7H14O2 | 130.18 |
 | 辛酸 | 379 | C8H16O2 | 144.21 |
 
-![回讀的七種化合物 CSV](/img/open-science/workflow-extensions/pubchem-table.png)
+![回讀的七種化合物 CSV](/img/open-science/workflow-extensions/pubchem-table.webp)
 
 按 **CID** 對應記錄，不要依賴顯示順序。同時核對分子式和直鏈 SMILES。本例保留返回欄位名 `SMILES` 和 `ConnectivitySMILES`，這組化合物的兩列內容恰好相同；不要把其中一列改稱其他識別符號，也不能由此推斷實驗測定的立體化學資訊。
 
@@ -64,7 +64,7 @@ Keep all outputs in English and do not delegate.
 
 開啟 **pubchem-homologs-source.json**，檢查八次操作、精確輸入和原始響應。開啟 **pubchem-homologs-notes.md** 檢視操作與核對說明。本例已將儲存的 CSV 與原始返回記錄逐行比較，七種化合物的身份、分子式及直鏈結構一致。
 
-![儲存的操作步驟、核對結果與解釋範圍](/img/open-science/workflow-extensions/pubchem-notes.png)
+![儲存的操作步驟、核對結果與解釋範圍](/img/open-science/workflow-extensions/pubchem-notes.webp)
 
 使用預覽中的 **Download** 按鈕保留本地副本，也可以下載本次實操的 <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs.csv">CSV</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-source.json">來源記錄</ExampleDownload>和<ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-notes.md">說明</ExampleDownload>。PubChem 記錄會更新，應把本次來源快照與分析結果一起儲存。
 

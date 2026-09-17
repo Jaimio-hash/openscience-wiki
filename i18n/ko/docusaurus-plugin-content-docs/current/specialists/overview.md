@@ -23,7 +23,7 @@ Specialist는 저장된 연구 역할입니다: 정체성, 지시 및 허용된 
 
 **Settings → Specialists**을 엽니다. **Installed**은 지역 등록 된 역할을 계산합니다. Reviewer를 포함한. **Search specialists** 및 **Filter specialists by category**을 사용하여 검사 할 줄을 엽니다. **Browse Marketplace**는 다른 카탈로그를 엽니다; 목록으로 만들어진 시장 입장은 패키지/setup 흐름을 완료할 때까지 설치되지 않습니다.
 
-![RNA-seq QC 검토자는 국부적으로 설치했습니다](/img/open-science/capabilities-walkthrough/06-specialist-list.jpg)
+![RNA-seq QC 검토자는 국부적으로 설치했습니다](/img/open-science/capabilities-walkthrough/06-specialist-list.webp)
 
 ## 시장의 역할 관찰 {/* #marketplace-roles-observed */}
 

@@ -1,7 +1,7 @@
 ---
 title: "Python und R Laufzeiten"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -45,7 +45,7 @@ Unterscheiden Sie nach einem Ausführungsfehler einen nicht verfügbaren Interpr
 
 Überprüfen Sie beide Sprachkarten in **Settings → Runtimes**. Jeder hat seinen eigenen **Ready**-Status, Version, **Enable**-Schalter und **Packages**-Taste. Die folgenden Karten zeigen Python und R aktiviert; die oben genannte Warnung betrifft den Notebook-Netzwerkschutz, der separat konfiguriert ist. Persönliche Wege sind in diesen Screenshots verborgen; Überprüfen Sie die vollständigen Pfade auf Ihrem eigenen Computer.
 
-<Screenshot src="/img/open-science/windows/runtimes-ready.png" alt="Windows-Laufzeitkarten mit verwaltetem Python und R Ready und aktiviert" width={1919} height={991} windowBounds={[480, 152, 960, 688]} href="/docs/img/open-science/windows/runtimes-ready.png" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
+<Screenshot src="/img/open-science/windows/runtimes-ready.webp" alt="Windows-Laufzeitkarten mit verwaltetem Python und R Ready und aktiviert" width={1919} height={991} windowBounds={[480, 152, 960, 688]} href="/docs/img/open-science/windows/runtimes-ready.webp" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
 
 </PlatformContent>
 
@@ -53,7 +53,7 @@ Unterscheiden Sie nach einem Ausführungsfehler einen nicht verfügbaren Interpr
 
 <PlatformContent platform="macos">
 
-![Laufzeiteinstellungen vor dem Python Setup](/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.png)
+![Laufzeiteinstellungen vor dem Python Setup](/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.webp)
 
 </PlatformContent>
 1. Finde **Python → App-managed environment**.
@@ -64,12 +64,12 @@ Unterscheiden Sie nach einem Ausführungsfehler einen nicht verfügbaren Interpr
 
 <PlatformContent platform="macos">
 
-![Erstellen der App-verwalteten Python-Umgebung](/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.png)
+![Erstellen der App-verwalteten Python-Umgebung](/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.webp)
 
 </PlatformContent>
 <PlatformContent platform="macos">
 
-![Python Setup abgeschlossen](/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.png)
+![Python Setup abgeschlossen](/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.webp)
 
 </PlatformContent>
 Bestätigen Sie **Ready**, den ausgewählten Interpreterpfad und den aktivierten Zustand. Paketanzahl und -versionen können je nach Installationsquelle variieren; Verwenden Sie den temporären Pfad des Screenshots nicht als permanenten Umgebungsstandort.
@@ -84,25 +84,25 @@ Bestätigen Sie **Ready**, den ausgewählten Interpreterpfad und den aktivierten
 
 <PlatformContent platform="linux">
 
-![App-verwalteter R ist bereit und auf Linux aktiviert](/img/open-science/linux/r-managed-ready.png)
+![App-verwalteter R ist bereit und auf Linux aktiviert](/img/open-science/linux/r-managed-ready.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="macos">
 
-![Download der App-verwalteten R-Umgebung](/img/open-science/guides-walkthrough/70-r-managed-download.jpg)
+![Download der App-verwalteten R-Umgebung](/img/open-science/guides-walkthrough/70-r-managed-download.webp)
 
 </PlatformContent>
 <PlatformContent platform="macos">
 
-![App-Managed R installiert und aktiviert](/img/open-science/guides-walkthrough/71-r-managed-ready.jpg)
+![App-Managed R installiert und aktiviert](/img/open-science/guides-walkthrough/71-r-managed-ready.webp)
 
 </PlatformContent>
 Bestätigen Sie, dass das Filtern von `r-base` das installierte R-Paket mit seiner Version und seinem Kanal zurückgibt. Die Gesamtsumme des Pakets spiegelt Ihre Umgebung wider und kann vom Screenshot abweichen.
 
 <PlatformContent platform="macos">
 
-![Überprüfung der r-base im R-Paketinventar](/img/open-science/guides-walkthrough/72-r-package-filter.jpg)
+![Überprüfung der r-base im R-Paketinventar](/img/open-science/guides-walkthrough/72-r-package-filter.webp)
 
 </PlatformContent>
 ## Verbinden Sie einen vorhandenen Interpreter {/* #connect-an-existing-interpreter */}
@@ -131,7 +131,7 @@ Ein erkannter Pfad wie `/opt/homebrew/bin/R` identifiziert eine Systeminstallati
 
 Ein Systeminterpreter wie `/usr/bin/python3` kann bereits als **Ready** erscheinen. Aktivieren Sie die Umgebung, die Sie verwenden möchten, bevor Sie den Agenten auffordern, sie auszuwählen. Die unten aufgeführten erkannten Python-Interpreter sind deaktiviert und die von der App verwaltete Python-Umgebung wurde nicht eingerichtet. Um eine verwaltete Umgebung vorzubereiten, verwenden Sie **Download and set up**.
 
-![Linux erkennt vorhandene Python-Interpreter als Ready, wobei ihre Enable-Schalter ausgeschaltet sind](/img/open-science/linux/python-detected-disabled.png)
+![Linux erkennt vorhandene Python-Interpreter als Ready, wobei ihre Enable-Schalter ausgeschaltet sind](/img/open-science/linux/python-detected-disabled.webp)
 
 </PlatformContent>
 
@@ -187,7 +187,7 @@ Geben Sie einen Paketnamen wie `numpy` in **Filter packages** ein, überprüfen 
 
 <PlatformContent platform="macos">
 
-![Filtern der installierten Python-Pakete](/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.png)
+![Filtern der installierten Python-Pakete](/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.webp)
 
 </PlatformContent>
 Die Tabellenspalten sind **Name**, **Version**, **Build** und **Channel**. Ein Dash in Build bedeutet, dass kein Build-Wert angezeigt wird. Dieser Dialog ist ein Inventar: Es gibt keine Schaltflächen zum Installieren oder Deinstallieren von Paketen. Suchen Sie nicht nach einem „Paket installieren-Feld in diesem Dialog.
@@ -196,9 +196,9 @@ Die Tabellenspalten sind **Name**, **Version**, **Build** und **Channel**. Ein D
 
 Wählen Sie auf der Python-Karte **Packages** aus und filtern Sie nach `pip`. Filtern Sie auf der R-Karte nach `r-base`. Überprüfen Sie die im Dialogtitel benannte Umgebung, bevor Sie Versionen vergleichen. Diese Screenshots zeigen installierte Pakete; Sie zeigen keine neue Paketinstallation an.
 
-<Screenshot src="/img/open-science/windows/python-packages.png" alt="Windows Python Paketbestand gefiltert auf Pip" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/python-packages.png" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
+<Screenshot src="/img/open-science/windows/python-packages.webp" alt="Windows Python Paketbestand gefiltert auf Pip" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/python-packages.webp" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
 
-<Screenshot src="/img/open-science/windows/r-packages.png" alt="Windows R Paketinventar gefiltert auf r-base" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/r-packages.png" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
+<Screenshot src="/img/open-science/windows/r-packages.webp" alt="Windows R Paketinventar gefiltert auf r-base" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/r-packages.webp" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
 
 </PlatformContent>
 
@@ -210,7 +210,7 @@ Der [Workflow in Datenqualität](../workflows/data-quality.md) bietet eine Pytho
 
 <PlatformContent platform="macos">
 
-![Erfolgreiche reale Notebook-Berechnung](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![Erfolgreiche reale Notebook-Berechnung](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 Wenn ein Import fehlschlägt, überprüfen Sie die ausgewählte Laufzeit und die installierten Pakete. Für einen Download, der abgelehnt wurde, weil ein Hostname zu einer reservierten Adresse aufgelöst wird, folgen Sie [Netzwerk](network.md). Durch das Ausführen von Code mit vorhandenen Paketen wird nicht festgelegt, dass zusätzliche Pakete installiert werden können.
@@ -248,7 +248,9 @@ Für eine schnelle Überprüfung, bevor Sie Forschungsdaten verwenden, bitten Si
 
 Öffnen Sie die Ausgabe des Notebook und vergleichen Sie sie mit dem gespeicherten Bericht. Dieses Windows 10 Beispiel in Open-Science v0.28.0 berichtet Python **3.12.13** und `pip` **26.1.2**. Das Lesen von Paket-Metadaten installiert oder importiert dieses Paket nicht.
 
-<Screenshot src="/img/open-science/windows/python-runtime-output.png" alt="Windows Python Notebook mit ausgeführtem Code und seiner tatsächlichen Versionsausgabe" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.png" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
+<Screenshot src="/img/open-science/windows/python-runtime-output.webp" alt="Windows Python Notebook mit ausgeführtem Code und seiner tatsächlichen Versionsausgabe" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.webp" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
+
+Für Windows Conda R Start- oder Kernel-Wiederherstellungsfehler verwenden Sie v0.30.2 oder höher, bevor Sie erneut versuchen. Das Release behebt die ausführbare Suche nach der Umgebungsvorbereitung und der R-Kernelwiederherstellung. Nach dem Aktualisieren überprüfen Sie die Umgebung erneut und führen Sie eine kleine R-Berechnung in Notebook aus; **Ready** allein ist kein Ausführungsergebnis. Die folgenden Screenshots behalten die Versionen und Ergebnisse ihrer ursprünglichen Läufe bei.
 
 Für einen Windows R-Lauf, der **Aktivieren Sie den geschützten Modus, bevor Sie den R-Zugriff autorisieren.** meldet, überprüfen Sie **Network settings** und die **Authorize and verify**-Anweisungen der R-Karte. Beheben Sie die gemeldete Genehmigungsvoraussetzung vor dem erneuten Ausführen; Eine **Ready**-Karte allein bestätigt die Ausführung nicht. Behalten Sie den vollständigen Fehler bei, wenn die Anforderung blockiert bleibt, und folgen Sie [Fehlerbehebung](troubleshooting.md).
 
@@ -267,18 +269,18 @@ Laden Sie das <a href="/docs/examples/gse60450/rnaseq-sample-qc.csv" download>Pr
 Das Detail unten zeigt **Inputs** und den erfassten Code. Klicken Sie auf das Bild, um den vollständigen Screenshot mit dem gespeicherten Bericht zu öffnen.
 
 <Screenshot
-  src="/img/open-science/windows/runtime-python-producer.png"
+  src="/img/open-science/windows/runtime-python-producer.webp"
   alt="Detail der Provenance-Code-Ansicht des Python-Ergebnisses mit Eingaben und dem erfassten Erzeugercode"
   width={2302}
   height={1158}
   windowBounds={[1385, 65, 917, 1030]}
-  href="/docs/img/open-science/windows/runtime-python-producer.png"
+  href="/docs/img/open-science/windows/runtime-python-producer.webp"
   linkLabel="Öffnen Sie den kompletten Windows Python Screenshot mit dem gespeicherten Bericht und dem erfassten Code"
 />
 
 **Lesen Sie die gleiche Tabelle mit R.** Bitten Sie den Agenten, die ausgewählte R-Umgebung in der Sitzung Notebook zu verwenden, nur mit der Basis R. Fordern Sie `R.version.string`, `R.home()` an, die gleichen vier Prüfungen und einen separaten gespeicherten Bericht. Erweitern Sie die **Notebook run**-Karte, um den Code zu überprüfen, öffnen Sie dann den Bericht und vergleichen Sie die Ergebnisse. In diesem Beispiel meldet R die Version **4.4.3** und ein Heimverzeichnis, das in `runtime/envs/.r/Lib/R` endet.
 
-![Windows R Notebook Aufruf und gespeicherter Bericht, der die aktive R-Installation und die Sample-QC-Ergebnisse zeigt](/img/open-science/windows/runtime-r-execution.jpg)
+![Windows R Notebook Aufruf und gespeicherter Bericht, der die aktive R-Installation und die Sample-QC-Ergebnisse zeigt](/img/open-science/windows/runtime-r-execution.webp)
 
 Die Installationspfade in diesen Screenshots gehören zum Beispielcomputer. Verschiedene Laufwerksbuchstaben, Ordner und Interpreterversionen auf dem eigenen Computer sind normal.
 
@@ -303,7 +305,7 @@ Während **Download and set up**, wählen **Cancel** und warten auf **Runtime Se
 
 <PlatformContent platform="macos">
 
-![Abgesagtes Setup und verfügbarer Retry](/img/open-science/local-todo-batch/29-setup-cancelled.png)
+![Abgesagtes Setup und verfügbarer Retry](/img/open-science/local-todo-batch/29-setup-cancelled.webp)
 
 </PlatformContent>
 <span id="review-a-reinstall-before-committing-it" />
@@ -318,14 +320,14 @@ Während **Download and set up**, wählen **Cancel** und warten auf **Runtime Se
 
 <PlatformContent platform="macos">
 
-![Bestätigung während einer Notebook-Sitzung neu installieren](/img/open-science/local-todo-batch/31-runtime-reinstall.png)
+![Bestätigung während einer Notebook-Sitzung neu installieren](/img/open-science/local-todo-batch/31-runtime-reinstall.webp)
 
 </PlatformContent>
 Die Neuinstallation löscht und erstellt die Umgebung neu. Bei der ausgeübten Wiederherstellung wurde eine aktive Zelle mit **Run canceld: Die Laufzeit wurde gestoppt, während diese Zelle ausgeführt wurde.** abgebrochen Die alte Notebook-Historie blieb sichtbar, aber ihr Namespace existierte nicht mehr. Eine neue Zelle bestätigte, dass eine frühere Variable fehlte; Der unveränderte CSV gab immer noch 12-Zeilen zurück und 269,027,617 zählt, und der gespeicherte Bericht wurde wieder geöffnet.
 
 <PlatformContent platform="macos">
 
-![Notebook-Historie beibehalten, nachdem der Kernel gestoppt wurde](/img/open-science/local-todo-batch/33-reinstalled-kernel-history.png)
+![Notebook-Historie beibehalten, nachdem der Kernel gestoppt wurde](/img/open-science/local-todo-batch/33-reinstalled-kernel-history.webp)
 
 </PlatformContent>
 Behaltene Dateien und beibehaltener Kernelspeicher sind unterschiedlich. Erstellen Sie Variablen, indem Sie den erforderlichen Code erneut ausführen. Zusätzliche Pakete müssen möglicherweise neu installiert werden; Eine erfolgreiche Wiederherstellung der Basisumgebung stellt nicht die Wiederherstellung jeder zusätzlichen Abhängigkeit dar.
@@ -336,7 +338,7 @@ Der erste Versuch im Quell-Build scheiterte vor der Bereitstellung, weil der Ent
 
 <PlatformContent platform="macos">
 
-![Tatsächlicher fehlender Micromamba-Fehler in einem Source Build](/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.png)
+![Tatsächlicher fehlender Micromamba-Fehler in einem Source Build](/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.webp)
 
 </PlatformContent>
 Die verpackte Anwendung enthält diese Binärdatei. Punkt `OPEN_SCIENCE_MICROMAMBA_BIN` für einen Quellaufbau auf eine gültige Mikromamba-Ausführbarkeit in der Startumgebung dieses Prozesses und Neustart der Entwicklungsinstanz. Verwenden Sie den binären Pfad von einer kompatiblen Installation und bestätigen Sie, dass er vor dem Neustart ausführbar ist.

@@ -47,13 +47,13 @@ Use esto después de que un procedimiento repetible haya funcionado —por ejemp
 
 Después de completar GSE60450 QC en una nueva sesión, seleccione **+ → Save as skill** y solicite un paquete **rnaseq-descriptive-qc** separado, preservando los paquetes existentes. El flujo de trabajo nativo creó un borrador que contenía un **SKILL.md**. La validación no devolvió errores ni advertencias.
 
-![Native Skill resultado de borrador y validación](/img/open-science/v0.27.0/16-native-skill-draft-validated.png)
+![Native Skill resultado de borrador y validación](/img/open-science/v0.27.0/16-native-skill-draft-validated.webp)
 
 Verifique el nombre, descifrando la descripción, las entradas, las definiciones métricas y las condiciones de parada antes de confirmar la publicación a Personal Skills. Luego utilice **Settings → Skills → Search skills**, abra las instrucciones guardadas, e inspeccione **Availability** y **Files**. Descargar el <ExampleDownload path="/examples/capabilities/rnaseq-descriptive-qc/SKILL.md">SKILL.md</ExampleDownload> publicado.
 
-![Publicación nativa encontrada en Personal](/img/open-science/v0.27.0/17-native-skill-published.png)
+![Publicación nativa encontrada en Personal](/img/open-science/v0.27.0/17-native-skill-published.webp)
 
-![Instrucciones y disponibilidad reabiertos](/img/open-science/v0.27.0/18-native-skill-instructions.png)
+![Instrucciones y disponibilidad reabiertos](/img/open-science/v0.27.0/18-native-skill-instructions.webp)
 
 ### ¿Por qué el botón no está disponible {/* #why-the-button-is-unavailable */}
 
@@ -105,7 +105,7 @@ La referencia define las métricas de la muestra y su interpretación. Mantener 
 5. Verifique el recuento de referencia y el tamaño del paquete, luego seleccione **Publish**.
 6. Busca la nueva fila Personal y reabrígela. Confirme las instrucciones, disponibilidad y archivos; exportar el paquete para inspeccionar ambas entradas.
 
-![RNA-seq Skill cuerpo y archivo de soporte](/img/open-science/capabilities-walkthrough/01-skill-create.jpg)
+![RNA-seq Skill cuerpo y archivo de soporte](/img/open-science/capabilities-walkthrough/01-skill-create.webp)
 
 | Campo o botón | Qué introducir o comprobar |
 | --- | --- |
@@ -145,7 +145,7 @@ Para un borrador asistido por un agente, utilice **Add skill → Chat with agent
 
 Reabrir el nuevo CSV e informar y compararlos con el identificador de muestra completo con el [Base de referencia compartida](../reference/example-data.md). Comprueba el hash de entrada. Al aplicar el Skill a otro estudio, repita estos cheques contra el propio diseño de entrada y experimental de ese estudio.
 
-![Una invocación separada y el nuevo QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.png)
+![Una invocación separada y el nuevo QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.webp)
 
 Referencia de implementación: [SkillEditor.tsx](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/SkillEditor.tsx), [host-skills-service.ts](https://github.com/aipoch/open-science/blob/v0.26.0/src/main/skills/host-skills-service.ts).
 

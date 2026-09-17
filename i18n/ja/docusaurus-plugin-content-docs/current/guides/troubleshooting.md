@@ -111,7 +111,7 @@ HTTPステータスは、モデルプロバイダ、Connectorサービス、ロ�
 
 起動画面が**Quit**のみを提供し、アプリを終了すると、報告された原因を解決し、再度起動します。 このページが提供したときにのみ、**Retry** を使用します。 回復後、予想されるプロジェクトとファイルを再び開きます。
 
-![データベースが開くことができないときのスタートアップガイド](/img/open-science/local-acceptance/startup-database-error.png)
+![データベースが開くことができないときのスタートアップガイド](/img/open-science/local-acceptance/startup-database-error.webp)
 
 ### 回復メッセージ {/* #recovery-messages */}
 
@@ -197,7 +197,7 @@ Relevant log excerpt or screenshot:
 4. **Open GitHub issue**を有効にするには、公開共有のアクセシビリティを確認してください。 エラーテキストの編集は、更新されたコンテンツを再度確認し、確認する必要があります。
 5. GitHub フォームを開き、プレフィルドフィールドを調べ、有用な再生手順を追加し、準備完了時に送信してください。 報告書のプレビューだけを開くと、問題は提出されません。
 
-![編集可能なエラーの詳細と公開共有の確認](/img/open-science/sept11-completion/report-preview.png)
+![編集可能なエラーの詳細と公開共有の確認](/img/open-science/sept11-completion/report-preview.webp)
 
 ## よくある質問 {/* #common-questions */}
 

@@ -12,7 +12,7 @@ last_update:
 
 **Settings → General → Appearance**을 사용하여 앱 언어 또는 테마를 변경하십시오. [설정 센터](../settings/overview.md) 그룹 패널은 목적에 따라 자신의 검색을 제공합니다.
 
-![Home with the gene-expression and 문학 프로젝트](/img/open-science/v0.27.0/01-home.png)
+![Home with the gene-expression and 문학 프로젝트](/img/open-science/v0.27.0/01-home.webp)
 
 | 이름 &#42; | (주) | 자주 묻는 질문 |
 | --- | --- | --- |

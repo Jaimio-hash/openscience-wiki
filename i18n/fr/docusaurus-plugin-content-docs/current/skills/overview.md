@@ -28,7 +28,7 @@ Commencez par [Répertoire Skill](./directory.md) pour trouver une méthode, ou 
 4. Ouvrez le résultat. Lire la description, les instructions, **Files**, licence et **Availability**. Un nom d'affichage peut différer de l'ID du paquet.
 5. Retour à la liste et inspecter **Used by**. Il identifie les agents qui peuvent utiliser le paquet; il ne liste pas les tirages effectués.
 
-![Recherche dans le RNA-seq Skill enregistré](/img/open-science/capabilities-walkthrough/02-skill-search.jpg)
+![Recherche dans le RNA-seq Skill enregistré](/img/open-science/capabilities-walkthrough/02-skill-search.webp)
 
 | Contrôle | Ce qui change |
 | --- | --- |
@@ -51,7 +51,7 @@ Le répertoire contient toujours 23 public groupé Skills. La prise en charge in
 
 La capture d'écran affiche l'explication de **Customize**. Ces Skills requis restent activés même lorsque vous désactivez d'autres méthodes optionnelles.
 
-![Personnaliser les séjours activés et explique pourquoi](/img/open-science/v0.27.0/08-always-enabled-skill.png)
+![Personnaliser les séjours activés et explique pourquoi](/img/open-science/v0.27.0/08-always-enabled-skill.webp)
 
 ## Utilisez-le dans une conversation {/* #use-it-in-a-conversation */}
 

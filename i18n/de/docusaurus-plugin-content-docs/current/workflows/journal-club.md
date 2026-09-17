@@ -32,7 +32,7 @@ Stage verified candidates in Literature Inbox for my review; do not accept
 them automatically. Stop before downloading PDFs. Keep everything in English.
 ```
 
-![Das eigentliche Suchprotokoll mit Kandidatenidentitäten und Abrufstatus](/img/open-science/research-workflows/literature-topic-results.png)
+![Das eigentliche Suchprotokoll mit Kandidatenidentitäten und Abrufstatus](/img/open-science/research-workflows/literature-topic-results.webp)
 
 Der <a href="/docs/examples/research-workflows/single-atom-search-log.md" download>Erstes Suchprotokoll</a> zeichnet acht Kandidaten auf, die durch Websuche und Crossref-Metadaten gefunden wurden. Diese waren noch keine heruntergeladenen Papiere. Wenn eine Quelle Anmeldeinformationen benötigt, konfigurieren Sie [Konnektoren](../guides/connectors.md) oder bitten Sie den Agenten, eine verfügbare Quelle zu verwenden, und benennen Sie die Lücke.
 
@@ -54,7 +54,7 @@ Keep the old collection unchanged. Keep everything in English.
 
 Überprüfen Sie die <a href="/docs/examples/research-workflows/single-atom-open-access-selection.md" download>Ersatzauswahlprotokoll</a>, wählen Sie dann die vier beabsichtigten Posteingangszeilen aus und wählen Sie **Accept**. Ein Open-Access-Source-Link muss noch getestet werden, indem sein PDF gespeichert und geöffnet wird.
 
-![Vier Ersatzkandidaten für manuelle Akzeptanz ausgewählt](/img/open-science/research-workflows/journal-open-access-inbox.png)
+![Vier Ersatzkandidaten für manuelle Akzeptanz ausgewählt](/img/open-science/research-workflows/journal-open-access-inbox.webp)
 
 Erstellen Sie **Single-Atom Catalysis - Full-Text Journal Club** mit **New collection**. Wählen Sie in **All references** diese vier akzeptierten Datensätze plus Lang und dann **Add to collection** aus. Verwenden Sie **Add to project**, um das Set mit dem Projekt zu verknüpfen, das Ihre Konversation enthält.
 
@@ -73,15 +73,15 @@ Erstellen Sie **Single-Atom Catalysis - Full-Text Journal Club** mit **New colle
 3. Öffne diesen Anhang. Vergleichen Sie den Titel und DOI mit dem Datensatz und überprüfen Sie die Seitenzahl.
 4. Wiederholen Sie für alle fünf Referenzen und öffnen Sie dann die Sammlung erneut. Jede Zeile sollte nun ein Attachment-Icon zeigen.
 
-![Volltextquellen für das Lang Paper angeboten](/img/open-science/research-workflows/literature-topic-fulltext.png)
+![Volltextquellen für das Lang Paper angeboten](/img/open-science/research-workflows/literature-topic-fulltext.webp)
 
 In diesem Lauf wurde Langs PDF über Europe PMC hinzugefügt. Die anderen vier wurden aus Publisher-Quellen gerettet, die durch Unpaywall entdeckt wurden. Eine alternative Quelle kann erfolgreich sein, wenn eine andere Quelle nicht hinzugefügt werden kann. Wenn nötig, verwenden Sie **Open source**, um eine Kopie zu erhalten, auf die Sie zugreifen können, und fügen Sie sie **Add PDF** bei. Wenn keine lesbare Kopie verfügbar ist, ersetzen Sie die Auswahl oder markieren Sie sie, bevor Sie Volltextbefunde anfordern.
 
-![Ein tatsächlich heruntergeladenes Papier öffnet sich in der englischen PDF-Vorschau](/img/open-science/research-workflows/journal-qi-pdf.png)
+![Ein tatsächlich heruntergeladenes Papier öffnet sich in der englischen PDF-Vorschau](/img/open-science/research-workflows/journal-qi-pdf.webp)
 
 Die endgültige Sammlung enthält fünf gespeicherte PDFs, wobei die Seite **10, 9, 11, 10 und 11** in der Reihenfolge der Tabelle zählt. Ein Attachment-Icon bestätigt eine gespeicherte Datei; Das Öffnen bestätigt, dass es lesbar ist und mit dem Datensatz übereinstimmt.
 
-![Die letzte Fünf-Papier-Sammlung mit einem Anhang auf jeder Aufzeichnung](/img/open-science/research-workflows/journal-five-fulltexts.png)
+![Die letzte Fünf-Papier-Sammlung mit einem Anhang auf jeder Aufzeichnung](/img/open-science/research-workflows/journal-five-fulltexts.webp)
 
 <span id="draft-the-reading-plan-then-deepen-it-with-full-text" />
 
@@ -108,17 +108,17 @@ Erweitern Sie während der Antwort die **Literaturbibliothek**-Leseaktivität, u
 
 Nach Abschluss öffnen Sie **single-atom-fulltext-reading-pack.md** von **Generated**. Überprüfen Sie die Fünf-Papier-Verifizierungstabelle, jeden Befund und seinen Locator, Einschränkungen, Fragen und Tagesordnung. Die Tagesordnung sollte insgesamt 60 Minuten.
 
-![Das gespeicherte Volltextpaket mit den gleichen fünf Papieren und Quellprüfungen](/img/open-science/research-workflows/journal-fulltext-pack.png)
+![Das gespeicherte Volltextpaket mit den gleichen fünf Papieren und Quellprüfungen](/img/open-science/research-workflows/journal-fulltext-pack.webp)
 
 ## Überprüfen Sie die Papierkarte mit den ursprünglichen PDFs {/* #check-the-paper-map-against-the-original-pdfs */}
 
 Öffnen Sie **single-atom-fulltext-paper-map.csv** und verwenden Sie den Expand-Button für eine Vollbildansicht. Dieser Lauf enthält **Zeilen 5 · Spalten 12**. Vergleichen Sie das DOI-Set mit der Sammlung; Ein Pack aus einem anderen Set ist nicht das Ergebnis dieses Workflows. Scrollen Sie horizontal oder laden Sie das CSV herunter, um lange Zellen vollständig zu lesen.
 
-![Die tatsächliche fünfreihige, zwölfspaltige Papierkarte](/img/open-science/research-workflows/journal-fulltext-paper-map.png)
+![Die tatsächliche fünfreihige, zwölfspaltige Papierkarte](/img/open-science/research-workflows/journal-fulltext-paper-map.webp)
 
 Kehren Sie zu **Library** zurück, öffnen Sie ein zitiertes PDF, klicken Sie auf den Seitenzähler, geben Sie die angeforderte Seite ein und drücken Sie **Enter**. Überprüfen Sie die Abbildung oder Tabelle zusammen mit der Beschriftung und dem umgebenden Text. Zum Beispiel ist He et al.'s Figure 5 auf **PDF Seite 7**; Die Beschreibung der Produktionslinie befindet sich auf Seite 3. Sie unterstützen verschiedene Teile der Zusammenfassung.
 
-![Er et al.'s Figure 5 öffnete sich auf PDF Seite 7 zum Vergleich](/img/open-science/research-workflows/journal-he-figure5.png)
+![Er et al.'s Figure 5 öffnete sich auf PDF Seite 7 zum Vergleich](/img/open-science/research-workflows/journal-he-figure5.webp)
 
 Fordern Sie eine gespeicherte Revision an, wenn ein Locator oder eine Bedingung falsch ist, und öffnen Sie dann die überarbeitete Datei erneut. Die geprüfte Packung behält auch einen Konflikt bei Sun et al.: Seite 2 und die Abbildung 5 ergeben unterschiedliche Futterzusammensetzungen. Es zeichnet beide Beschreibungen auf, anstatt eine still zu wählen. Dies ist eine nützliche Besprechungsfrage, kein gelöstes experimentelles Detail.
 

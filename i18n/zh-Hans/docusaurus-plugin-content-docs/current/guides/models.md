@@ -17,7 +17,7 @@ Main、Subagent、Reviewer、Vision 和 Session details 需要不同模型时，
 3. 选择 **Reasoning effort**，以当前模型显示的选项为准。例如部分模型提供 Default、Low、Medium、High、XHigh、Ultra，其他模型可能不同。
 4. 关闭并重新打开设置，确认保存状态；先执行一个小请求，再开始长分析。
 
-![主模型与已连接的 Provider](/img/open-science/guides-walkthrough/10-model-main.png)
+![主模型与已连接的 Provider](/img/open-science/guides-walkthrough/10-model-main.webp)
 
 更改影响后续请求，不会改变历史回答使用的模型。切换模型时，应用尝试保持相近推理强度；后端可能近似映射不支持的档位。更高强度可能增加耗时和用量，不代表结果一定正确。
 
@@ -32,7 +32,7 @@ Main、Subagent、Reviewer、Vision 和 Session details 需要不同模型时，
 | Vision | 支持图像输入的已配置模型 | Not configured 表示未指定专用 Vision 模型；是否需要转交图像取决于当前后端能力 |
 | Session details | 跟随主模型或指定兼容模型；检查强度与启用状态 | 用受限调用生成会话标题和说明，与科研任务和产物分开 |
 
-![Subagent 继承与禁用的独立强度控件](/img/open-science/guides-walkthrough/11-model-scenarios.png)
+![Subagent 继承与禁用的独立强度控件](/img/open-science/guides-walkthrough/11-model-scenarios.webp)
 
 固定场景模型时先选 Provider/模型，再选支持的强度。希望未来主模型变更自动传递时，改回继承选项。**Unavailable** 可能保留已移除或不再兼容的旧模型名，需要重新选择有效项。
 
@@ -52,9 +52,9 @@ Session details 选择器不接受 Codex 订阅模型；Main 或 Vision 中能�
 5. 对照原图核对回答。精确数值比较应查看源表格：本例中两个标签都四舍五入为 **24.7M**，不代表原始计数相等。
 6. 不再需要独立图像模型时，将 Vision 改回 **Not configured**；这不会删除模型提供方。
 
-![文本 Main 模型与独立 Vision 配置](/img/open-science/sept11-completion/vision-configuration.png)
+![文本 Main 模型与独立 Vision 配置](/img/open-science/sept11-completion/vision-configuration.webp)
 
-![核对图表标签及四舍五入数值的限制](/img/open-science/sept11-completion/vision-result.png)
+![核对图表标签及四舍五入数值的限制](/img/open-science/sept11-completion/vision-result.webp)
 
 当前图片转交逻辑排除了 Codex 订阅提供方，但它们仍可能出现在 Vision 选择器中。如果选择后，文本 Main 仍拒绝接收图片，请改用其他兼容的 Vision 提供方，或选择本身支持图片的 Main 模型。选择已保存不代表图片请求已成功。
 

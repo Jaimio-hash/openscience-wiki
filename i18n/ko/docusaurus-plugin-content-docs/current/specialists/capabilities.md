@@ -18,7 +18,7 @@ Specialist의 기능 목록은 Skills 및 커넥터가 도달 할 수 있음을 
 4. **Connectors**에서 **연결관 추가**을 선택하고 **Omics 아카이브**를 선택하십시오. **연결관 1**을 확인합니다.
 5. 해당 리소스를 선택한 것으로 확인하는 기능의 세부 사항을 엽니다. Persistence를 확인하기 위해 역할을 저장하고 다시 시작합니다.
 
-![Specialist는 명시된 기능 선택으로](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.jpg)
+![Specialist는 명시된 기능 선택으로](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.webp)
 
 | (주) | 제품 정보 |
 | --- | --- |

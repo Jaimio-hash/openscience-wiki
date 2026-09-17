@@ -20,11 +20,11 @@ Use a category for durable conventions such as preserving raw counts and separat
 4. Select **Create**, then **Add**. Enter the note and select **Save**.
 5. Leave and reopen the category to verify its content and count.
 
-![Category name, guidance and Auto-recall](/img/open-science/guides-walkthrough/17-memory-category.png)
+![Category name, guidance and Auto-recall](/img/open-science/guides-walkthrough/17-memory-category.webp)
 
 The saved note reads: “Keep the original GEO count matrix unchanged. Preserve Entrez Gene IDs as text, keep gene length separate from sample counts, and record the input SHA-256 with every derived table.” This is a working convention, not a claim about analysis results.
 
-![Manually saved note while Memory is off](/img/open-science/guides-walkthrough/18-memory-note.png)
+![Manually saved note while Memory is off](/img/open-science/guides-walkthrough/18-memory-note.webp)
 
 | Control | Effect and boundary |
 | --- | --- |
@@ -47,7 +47,7 @@ The saved note reads: “Keep the original GEO count matrix unchanged. Preserve 
 3. Inspect the **Save memory** request when approval is required. Check the proposed content, category and project scope before selecting **Allow once**. Choose **Deny** if it does not represent an agreed convention.
 4. Reopen the category. Check that the note exists, has the intended text and appears under the intended project. The **auto** label identifies an agent-created note; it does not mean a computation verified the convention.
 
-![An agent-created reporting convention alongside the manual source-preservation note](/img/open-science/non-workflow-completion/05-memory-note-category.png)
+![An agent-created reporting convention alongside the manual source-preservation note](/img/open-science/non-workflow-completion/05-memory-note-category.webp)
 
 ## Check recall in a new conversation
 
@@ -65,7 +65,7 @@ Select a history point to inspect its run, model, occupancy and terminal state. 
 
 When OpenCode provides **Compact** in the context popover, select it and wait for **Context compacted**. Original messages can remain visible while the backend continues from a summary. Before continuing, ask the agent to list the retained constraints and compare them with your requirements. Re-state any missing or incorrect constraints before starting the next operation. Compaction does not guarantee lossless retention; provider measurements can differ from local estimates.
 
-![Completed compaction and the provider-reported context measurement](/img/open-science/non-workflow-completion/11-context-compacted.png)
+![Completed compaction and the provider-reported context measurement](/img/open-science/non-workflow-completion/11-context-compacted.webp)
 
 For a continuation, state the current goal, accepted decisions, exact input/output files, validation already done and unresolved questions. Link the saved evidence rather than relying on Memory to reconstruct it. Use [Sessions and branches](./sessions.md) for branching/export and [Usage](./usage.md) for cumulative token volume.
 

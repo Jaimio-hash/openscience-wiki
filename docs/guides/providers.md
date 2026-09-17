@@ -10,7 +10,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## Choose an access method
 
-![Codex subscription connection in the English first-time setup](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![Codex subscription connection in the English first-time setup](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 `Provider type` selects subscription access, an official API, or `Custom Gateway`. Available subscription choices depend on the active agent framework. The captured Codex setup shows `Codex subscription`, xAI OAuth, official APIs, and Custom Gateway; do not assume another framework presents the same choices.
 
@@ -38,7 +38,7 @@ For gateways such as **OpenRouter** or **OpenCode Zen**, select a free model onl
 6. In **Main model**, select an available subscription model. For example, select an available **gpt-5.6-sol** entry if your account offers it. Check the model name and provider together, especially when multiple providers offer similarly named models.
 7. Open a project and send a bounded request. A connection test verifies authentication, while an actual response verifies the request path. Confirm the response and any tool-permission request appear in that session.
 
-![Codex subscription verified and main model selected](/img/open-science/walkthrough-2026-09-08/70-codex-subscription-connected.png)
+![Codex subscription verified and main model selected](/img/open-science/walkthrough-2026-09-08/70-codex-subscription-connected.webp)
 
 | Provider-row control | Use it when | Success check |
 | --- | --- | --- |
@@ -62,7 +62,7 @@ After **Connection verified**, complete a small request with that provider. Remo
 
 ## Custom Gateway: every visible field
 
-![Required-field errors in the custom gateway form](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![Required-field errors in the custom gateway form](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 Start by selecting `Custom Gateway`. Changing the provider type can preserve the display name from the previous selection, so review the name instead of assuming it was reset.
 
@@ -159,7 +159,7 @@ Open **Settings → Model → Add provider** and enter:
 | Advanced settings → Maximum output tokens | `4096` |
 | Image input / Thinking mode | Off for this connection check |
 
-![Local model address, API format and exact model ID](/img/open-science/non-workflow-completion/08-local-provider-form.png)
+![Local model address, API format and exact model ID](/img/open-science/non-workflow-completion/08-local-provider-form.webp)
 
 The form appends `/v1` to the gateway root. Open-Science accepts a blank API key for loopback addresses such as `localhost`, `127.0.0.1` and `[::1]`; the older screenshot may show a placeholder. A remote or LAN gateway still requires HTTPS and an API key. Use the API format your local server supports.
 
@@ -171,7 +171,7 @@ In **Settings → Agent**, install **OpenCode → App-managed download** if it i
 
 The connection check completed with **Local model connected.** using the configured local endpoint and OpenCode. It verifies a text request, not a biomedical analysis.
 
-![Completed local model connection check](/img/open-science/non-workflow-completion/09-local-model-reply.png)
+![Completed local model connection check](/img/open-science/non-workflow-completion/09-local-model-reply.webp)
 
 Keep the server running while using the model. For an Agent on another host, `localhost` refers to that host. A browser reaching an endpoint does not prove the Agent can reach it.
 
@@ -188,7 +188,7 @@ print((8664 + 18515) == 27179)
 
 These are the first GSE60450 sample's zero-count and detected-gene counts. Inspect the proposed code in the permission panel, approve it, then open **Notebook** and verify **27179 / True**.
 
-![Notebook code and actual output from a local-model tool call](/img/open-science/priority-completion/21-local-model-python-result.png)
+![Notebook code and actual output from a local-model tool call](/img/open-science/priority-completion/21-local-model-python-result.webp)
 
 Local `qwen2.5:7b` completed this call through the Codex framework and a local Chat Completions endpoint. Its initial proposal referenced an unavailable helper module; the check succeeded after declining that proposal and specifying the dependency-free code above. This verifies a bounded tool operation, not reliable planning of a complete RNA-seq analysis or equivalent behavior under another Agent framework.
 

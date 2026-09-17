@@ -39,7 +39,7 @@ Write in English and reopen the saved files.
 
 **Generated** で **electrolyte-merged.csv** を開く 2つのRISのエクスポートと候補者の監査に対する保持されたタイトル、DOIsおよびソースメンバーシップを確認してください。 実際のユニオンは15行を持っています。 DOI **10.1007/s41918-024-00212-1**は、両方のバッチで発生し、**A&#124;B**をラベル付けされています。
 
-![検索バッチの保存された組合, ソースメンバーシップを保持](/img/open-science/workflow-extensions/batches-merged.png)
+![検索バッチの保存された組合, ソースメンバーシップを保持](/img/open-science/workflow-extensions/batches-merged.webp)
 
 比較のために、DOI空白をトリムし、オプションのDOI URLプレフィックスを削除し、ケースを無感覚に比較します。 元の識別子をソースレコードに保存します。 同様のタイトルは、二つのレコードが同一であることが不十分な証拠です。 未解決の識別子の競合は、レビューが必要です。
 
@@ -52,7 +52,7 @@ Write in English and reopen the saved files.
 3. `electrolyte-batch-a.ris` を選択します。 **Import to** が意図したコレクションの名前を付けることを確認してください。
 4. **When identifiers match → Reuse existing reference** を選択します。 **View details** を調べて、**Import references** を選択します。
 
-![ファーストバッチインポートプレビュー:選択したコレクションの8つの新しい参照](/img/open-science/workflow-extensions/batches-import-a.png)
+![ファーストバッチインポートプレビュー:選択したコレクションの8つの新しい参照](/img/open-science/workflow-extensions/batches-import-a.webp)
 
 記録されたライブラリでは、**8は、0の再利用、0のスキップ、0の失敗を作成しました** で最初にインポートが完了しました。 **Done**をクリックし、コレクションをチェックします。 既に一致するレコードが含まれている場合、その作成/再利用された分裂は異なる可能性があります。
 
@@ -60,16 +60,16 @@ Write in English and reopen the saved files.
 
 同じコレクションを選択することで、`electrolyte-batch-b.ris` をインポートします。 プレビューは、インポートをコミットする前に、既存のレコードを識別する必要があります。 この実行では、**7 新しい参照、1 既存、0 スキップ** が示されました。
 
-![第二バッチプレビューは、共有された紙を既存のものとして識別します](/img/open-science/workflow-extensions/batches-import-b.png)
+![第二バッチプレビューは、共有された紙を既存のものとして識別します](/img/open-science/workflow-extensions/batches-import-b.webp)
 
 **Reuse existing reference**を保ち、共有タイトルを調べ、インポートします。 実際の完了要約を読んで下さい: **7は、1の再利用、0のスキップ、0の失敗を作成しました**. Reuse は既存のメタデータを保持し、一致する参照を宛先に追加します。 2番目のコピーを作成したり、PDFをダウンロードしたりしません。
 
-![7 個の作成と 1 つの再使用で 2 番目のインポートを完了](/img/open-science/workflow-extensions/batches-import-result.png)
+![7 個の作成と 1 つの再使用で 2 番目のインポートを完了](/img/open-science/workflow-extensions/batches-import-result.webp)
 
 ## 5. 結果のコレクションをチェックする {/* #5-check-the-resulting-collection */}
 
 **Done** をクリックします。 DOIユニオンのコレクションには**15 リファレンス**が含まれています。 2つの元の輸出と実績のあるCSVを保ち、各候補がどこから来たのかを同僚が再構築することができます。
 
-![最終コレクションには15件の参考文献が掲載されています。](/img/open-science/workflow-extensions/batches-collection.png)
+![最終コレクションには15件の参考文献が掲載されています。](/img/open-science/workflow-extensions/batches-collection.webp)
 
 カウントマッチは、DOIと代表的なタイトルをオーバーラップするための交換ではなく、有用なチェックです。 ベースラインを維持しながら後ほどの公開ウィンドウを追加するには、[既存の文献コレクションを更新する](update-literature.md) を続けてください。

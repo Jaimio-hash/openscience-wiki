@@ -22,7 +22,7 @@ The outcome `re78` and baseline variables `re74` and `re75` are real earnings in
 
 Click the attached CSV to preview it before sending the calculation request. Check `train`, `re78`, `re74` and `re75`, including rows with zero earnings. The preview may show only 100 rows; the Notebook must count the entire file.
 
-![The attached input CSV and its original columns](/img/open-science/research-workflows/job-training-input.png)
+![The attached input CSV and its original columns](/img/open-science/research-workflows/job-training-input.webp)
 
 ## Run the prespecified comparison
 
@@ -42,7 +42,7 @@ Review the requested code when approval appears. It should read the attached CSV
 
 In the conversation, choose **Notebook**, open the executed Python cell and inspect its output. Look for the row and group counts before the regression summary. If the attached version cannot be resolved, ask the Agent to read the file mounted from this conversation’s attachment and retry; a failed cell is not a result. Keep the successful cell and its output with the saved files.
 
-![The recorded Notebook output contains actual sample checks and regression estimates](/img/open-science/research-workflows/job-training-notebook.png)
+![The recorded Notebook output contains actual sample checks and regression estimates](/img/open-science/research-workflows/job-training-notebook.webp)
 
 ## Inspect the saved result
 
@@ -55,13 +55,13 @@ The example completed with **445 rows**, **185 assigned to training**, **260 con
 
 Coefficients and intervals are in **thousands of dollars**. These are results of this example's calculation, not quoted estimates from the original paper.
 
-![The saved English regression report with sample checks and estimates](/img/open-science/research-workflows/job-training-report.png)
+![The saved English regression report with sample checks and estimates](/img/open-science/research-workflows/job-training-report.webp)
 
 Open both generated files after the response completes. Compare the `train` rows in the CSV with the report and Notebook. You can download this run's <a href="/docs/examples/research-workflows/job-training-regression.csv" download>coefficient table</a> and <a href="/docs/examples/research-workflows/job-training-report.md" download>report</a>.
 
 In **Generated**, open the CSV and expand its preview. The saved coefficient table has **12 rows · 9 columns**: two rows for the unadjusted model and ten for the adjusted model. Locate each model’s `train` row and compare its estimate, robust standard error, interval, `n` and unit. Do not add an inflation base year that the source dictionary does not state. Use the preview’s **Download** button to keep the checked version.
 
-![The reopened coefficient CSV with both models and consistent units](/img/open-science/research-workflows/job-training-coefficients.png)
+![The reopened coefficient CSV with both models and consistent units](/img/open-science/research-workflows/job-training-coefficients.webp)
 
 ## Decide what the comparison supports
 

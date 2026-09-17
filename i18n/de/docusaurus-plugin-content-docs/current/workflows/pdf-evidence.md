@@ -22,7 +22,7 @@ Verwenden Sie Yang et al.'s [*Ein universelles Liganden-vermitteltes Verfahren z
 
 Prüfen Sie, ob **beide Dateinamen** über der gesendeten Anforderung erscheint. Ein Klick auf einen Dateinamen öffnet seine Vorschau; Mit dem Wechsel zwischen den beiden können Sie überprüfen, zu welchem Dokument eine zitierte Seite gehört.
 
-![Sowohl der Artikel als auch die Ergänzung sind der tatsächlichen Evidenz-Check-Anfrage beigefügt](/img/open-science/research-workflows/catalyst-two-inputs.png)
+![Sowohl der Artikel als auch die Ergänzung sind der tatsächlichen Evidenz-Check-Anfrage beigefügt](/img/open-science/research-workflows/catalyst-two-inputs.webp)
 
 ## Stellen Sie eine spezifische Beweisfrage {/* #ask-a-specific-evidence-question */}
 
@@ -44,7 +44,7 @@ Genehmigen Sie die beabsichtigten Leseanfragen, wenn Sie dazu aufgefordert werde
 
 Verwenden Sie in der PDF-Vorschau das Seitensteuerelement, um **Seite 6** zu öffnen, das **Abbildung 6** und die relevanten Ergebnisse enthält. Vergleichen Sie die Bildunterschrift mit dem Text. Öffnen Sie die Ergänzungsseiten **47–49** für die Abbildungen **51–53**.
 
-![Abbildung 6 des Originalartikels und experimentelle Bedingungen in Open-Science](/img/open-science/research-workflows/catalyst-figure6-source.png)
+![Abbildung 6 des Originalartikels und experimentelle Bedingungen in Open-Science](/img/open-science/research-workflows/catalyst-figure6-source.webp)
 
 Die Quelle berichtet **98.9% Faradaic-Effizienz zu CO bei -1.2 V gegenüber RHE** für Ni-SAC-2.5. Das Langlebigkeitsexperiment verwendet **0.8 V für 20 Stunden**. Diese Bedingungen sollten getrennt bleiben: Letzteres stellt keine 20-Stunden-Dauerhaltbarkeit bei Spitzenselektivitätspotenzial fest. Faradaic-Effizienz beschreibt die einem Produkt zugewiesene Ladung; Es ist nicht dasselbe wie Energieeffizienz oder der Anteil des umgewandelten ankommenden CO2.
 
@@ -52,12 +52,12 @@ Die Ergänzung liefert die Wasserstoff-Produkt, NMR und Scale-up-Zahlen. Eine le
 
 Um zu einer Seite zu springen, erweitern Sie die PDF-Vorschau, klicken Sie auf den Seitenzähler, geben Sie die vollständige Nummer ein und drücken Sie **Enter**. Überprüfen Sie den resultierenden Zähler vor dem Lesen. Ergänzungsseite 47 enthält **Zusätzliche Abbildung 51**, dessen Achse **H2 Farada-Effizienz** ist; Es darf nicht mit dem Hauptergebnis von CO verwechselt werden.
 
-![Ergänzende Abbildung 51 auf der tatsächlichen PDF-Seite 47 von 52](/img/open-science/research-workflows/catalyst-supplement-47.png)
+![Ergänzende Abbildung 51 auf der tatsächlichen PDF-Seite 47 von 52](/img/open-science/research-workflows/catalyst-supplement-47.webp)
 
 ## Überprüfen und speichern Sie den Bericht {/* #check-and-save-the-report */}
 
 Nachdem die Antwort abgeschlossen ist, öffnen Sie **catalyst-claim-check.md**. Überprüfen Sie die Quellidentität, Seitenzahlen, Zahlenbeschriftungen und den Wortlaut der Schlussfolgerung. Insbesondere sollte der Bericht **gemeldetes Ergebnis** beibehalten und vermeiden, eine Literaturprüfung in einen Anspruch auf experimentelle Reproduktion zu verwandeln.
 
-![Der gespeicherte Anspruch, Beweise, Bedingungen und Grenzen Bericht](/img/open-science/research-workflows/catalyst-claim-report.png)
+![Der gespeicherte Anspruch, Beweise, Bedingungen und Grenzen Bericht](/img/open-science/research-workflows/catalyst-claim-report.webp)
 
 Laden Sie das <a href="/docs/examples/research-workflows/catalyst-claim-check.md" download>Beispielbericht</a> für seine Struktur herunter. Bevor Sie eine wissenschaftliche Schlussfolgerung in Ihrer eigenen Arbeit verwenden, prüfen Sie die zitierten Originalbeweise und alle Korrekturen des Herausgebers. Zum Extrahieren von Abbildungs- oder Tabellenbeweisen in eine separate Datei siehe [PDF-Extraktion](../guides/previews.md#pdf-extraction).

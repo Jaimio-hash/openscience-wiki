@@ -1,7 +1,7 @@
 ---
 title: "文献库与引用"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
@@ -27,7 +27,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 | Project | 与项目关联的文献 | 保持研究问题相关范围 |
 | Collection | 主题分组，可嵌套 | 跨项目复用阅读集合 |
 
-![真实 PRISMA 集合中的三篇论文](/img/open-science/guides-walkthrough/51-library-collection.png)
+![真实 PRISMA 集合中的三篇论文](/img/open-science/guides-walkthrough/51-library-collection.webp)
 
 ## 添加或导入条目
 
@@ -60,11 +60,11 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 批量状态包括 **Pending、Reading…、Ready、Importing…、Completed、Failed、Skipped**。选中文件、元数据准备就绪和导入完成是不同阶段。若显示 **PDF upload cancelled. The reference was kept.**，检查保留条目的附件；取消上传没有删除书目条目。
 
-![选择两份真实 PRISMA PDF 并核对匹配策略](/img/open-science/v0.27.0/02-pdf-batch-ready.png)
+![选择两份真实 PRISMA PDF 并核对匹配策略](/img/open-science/v0.27.0/02-pdf-batch-ready.webp)
 
 选择 **Reuse existing reference** 时，如果 PDF 提取的标题或 DOI 未匹配，仍可能创建独立条目。导入后逐篇打开，核对标题和 DOI；修正身份后再[合并重复条目](#去重与恢复条目)。**Completed** 表示导入完成，不代表识别准确。
 
-![两份 PDF 的实际导入结果](/img/open-science/v0.27.0/03-pdf-batch-completed.png)
+![两份 PDF 的实际导入结果](/img/open-science/v0.27.0/03-pdf-batch-completed.webp)
 
 
 </ToolOperationGroup>
@@ -76,7 +76,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 **Stop** 允许当前条目先完成。逐行检查状态：**Completed** 条目保留且不能再次勾选；选择剩余 **Ready** 行，再用 **Import selected** 继续。失败后若出现 **Retry unfinished**，先处理所报原因，再重试并检查已完成记录没有重复导入。
 
-![停止 PDF 导入后保留已完成行](/img/open-science/local-todo-batch/09-pdf-import-stopped.png)
+![停止 PDF 导入后保留已完成行](/img/open-science/local-todo-batch/09-pdf-import-stopped.webp)
 
 出现 **The reference was kept. Retry to finish adding its PDF.** 时，文献条目已保存，附件尚未完成。确认原 PDF 仍在选取的位置、可以打开，再点击 **Retry unfinished**。重试会继续处理未完成行；完成后回到原集合，打开 PDF 检查内容。若提示结果无法确认，先检查文献库，再决定是否重新导入。
 
@@ -100,9 +100,9 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 点击 **Import references**，等待 **Import complete**，核对 Created／Reused／Skipped／Failed 后选择 **Done**。重新打开条目检查字段，导入数量不能证明元数据准确。补空字段可以增加标识符和期刊缩写，同时保留完整期刊名。
 
-![明确选择重复策略的 BibTeX 导入](/img/open-science/local-todo-batch/02-bibtex-import.png)
+![明确选择重复策略的 BibTeX 导入](/img/open-science/local-todo-batch/02-bibtex-import.webp)
 
-![通过 NBIB 补充缺少的书目字段](/img/open-science/local-todo-batch/05-nbib-fill-fields.png)
+![通过 NBIB 补充缺少的书目字段](/img/open-science/local-todo-batch/05-nbib-fill-fields.webp)
 
 
 </ToolOperationGroup>
@@ -113,7 +113,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 打开候选标题或 **View details**，检查 Provider、源链接、DOI 等标识符，与出版社核对年份、作者顺序、期刊。**Accept** 加入文献库，**Dismiss** 移出待审队列。批量操作前确认勾选范围。
 
-![等待审核的三篇真实 PRISMA 候选](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![等待审核的三篇真实 PRISMA 候选](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 本例的三篇候选已逐条接受，Inbox 清空。Provider 匹配只是初始记录，不代表书目完整无误。标题中的 2020 对应声明论文的发表年份是 **2021**；两篇 2009 论文的 DOI 和作者列表不同。
 
@@ -121,7 +121,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 条目 **More actions → Edit metadata** 打开当前字段。**Complete metadata** 会查询来源，与纯本地编辑不同。
 
-![已保存并重新打开的机构作者字段](/img/open-science/v0.27.0/04-organization-author.png)
+![已保存并重新打开的机构作者字段](/img/open-science/v0.27.0/04-organization-author.webp)
 
 | 字段/控件 | 输入与作用 |
 | --- | --- |
@@ -144,7 +144,9 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 补充 **The PRISMA Group** 时，选择 **Add creator → Creator role: Author → Name type: Organization**，填写完整名称并 **Save**。重新打开条目，确认机构位于四位个人作者之后，再将生成引用与[出版方作者列表](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097)比较。
 
-![APA 引文保留机构作者](/img/open-science/v0.27.0/05-organization-citation.png)
+![APA 引文保留机构作者](/img/open-science/v0.27.0/05-organization-citation.webp)
+
+v0.30.2 更正了 PubMed 作者姓名的解析，包括姓氏、名字缩写和后缀。导入或补全文献元数据后，对照来源检查作者字段及生成的引用。不要假定安装更新会自动重写文献库中已有的元数据。
 
 ## 整理已接受记录
 
@@ -174,7 +176,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 找到来源后，如果 **Add attachment** 失败，从出版社下载公开 PDF，再通过同一条目的 **Add PDF** 上传。打开附件，对照出版记录检查标题及 DOI。本例的 **Preview prisma-2020-statement.pdf** 显示了对应的 PRISMA 2020 论文：**806.1 KB、15 页**。
 
-![成功关联的出版社 PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![成功关联的出版社 PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 找到来源不等于附件已保存，附件存在不等于 Agent 已阅读全文。**Read with agent** 为后续请求提供上下文。Composer 的 `@` 可选精确条目、项目 Library 或 Collection；集合提供检索范围，不会自动装入全部全文。PDF 控件见[预览](previews.md)。
 
@@ -192,11 +194,11 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 5. 下载阶段也可暂停，之后用 **Continue download** 继续。检查最终 **Added / Failed / Skipped** 状态，并重新打开成功附件。
 6. 不再需要待审核任务时，在 **Background tasks** 使用 **Remove task**。移除后检查该任务已消失，并确认文献与附件仍可打开；移除任务不等于删除文献或附件。
 
-![检索在当前条目完成后暂停，保留剩余项目](/img/open-science/priority-completion/14-literature-batch-paused.png)
+![检索在当前条目完成后暂停，保留剩余项目](/img/open-science/priority-completion/14-literature-batch-paused.webp)
 
 暂停的检索会保留已检查与待处理条目。继续或重新打开任务后，检查最终数量和每条结果。找到候选来源与成功附加 PDF 是两个不同结果。
 
-![从后台任务重新打开已完成的五条检索](/img/open-science/priority-completion/15-literature-batch-resumed.png)
+![从后台任务重新打开已完成的五条检索](/img/open-science/priority-completion/15-literature-batch-resumed.webp)
 
 
 </ToolOperationGroup>
@@ -228,7 +230,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 在 **Library → Settings → Import CSL** 选择从 [CSL 样式仓库](https://github.com/citation-style-language/styles/blob/master/plos.csl)下载的独立 `plos.csl`。本例中，**Imported styles** 由 0 变为 1，并显示 **Public Library of Science**。返回真实 PRISMA 条目的 **Citation**，在 **Citation style** 中选择该样式，核对生成的编号引文与 `[1]` 文内引用。样式预览中的示例文章不属于你的文献库，正式引用应以实际条目为准。
 
-![导入的 PLOS 样式用于真实 PRISMA 条目](/img/open-science/v0.27.0/06-imported-csl-citation.png)
+![导入的 PLOS 样式用于真实 PRISMA 条目](/img/open-science/v0.27.0/06-imported-csl-citation.webp)
 
 
 </ToolOperationGroup>
@@ -249,7 +251,7 @@ Citation 的四个复制按钮写入不同格式。粘贴到目标编辑器，�
 | Copy BibTeX | `@article` 记录，机构作者使用额外花括号包围 |
 | Copy RIS | `TY  - JOUR` 记录，含作者、题名、年份和 DOI 字段 |
 
-![真实 PRISMA 条目的引文复制控件](/img/open-science/local-todo-batch/01-citation-copy.png)
+![真实 PRISMA 条目的引文复制控件](/img/open-science/local-todo-batch/01-citation-copy.webp)
 
 需要文件时，关闭 Citation，勾选表格行，选择 **Export → BibTeX** 或 **RIS**。在系统保存窗口选择位置，等待 **Saved**。导出的是书目记录，不包含 PDF 附件包。将保存的文件重新导入测试集合，选择 **Reuse existing reference** 并核对匹配数量。两份 PRISMA 导出文件均复用了已有 DOI，没有新增记录。
 
@@ -273,11 +275,11 @@ Citation 的四个复制按钮写入不同格式。粘贴到目标编辑器，�
 4. 核对 **After merging** 的附件、集合和项目数量，再点击 **Merge references**；**Cancel** 保持记录分开。
 5. 重新打开保留条目，检查元数据、关联和 PDF 正文。被合并的条目在 Trash 中标为 **Merged duplicate**。
 
-![比较保留条目和冲突日期](/img/open-science/local-todo-batch/03-merge-bibtex.png)
+![比较保留条目和冲突日期](/img/open-science/local-todo-batch/03-merge-bibtex.webp)
 
 标题被提取为 `pmed.1000097 1..6` 的 PDF 最初没有进入重复组。核对论文后，修正标题并补入 DOI `10.1371/journal.pmed.1000097`，才出现匹配组。本例合并到已核对的书目条目后，保留了 **1 份 PDF、2 个集合关联和 1 个项目关联**；六页 PDF 可重新打开。先确认论文身份，不能只凭文件名相似就合并。
 
-![合并后保留 PDF 和组织关联](/img/open-science/local-todo-batch/06-merged-attachment-links.png)
+![合并后保留 PDF 和组织关联](/img/open-science/local-todo-batch/06-merged-attachment-links.webp)
 
 
 </ToolOperationGroup>
@@ -289,7 +291,7 @@ Citation 的四个复制按钮写入不同格式。粘贴到目标编辑器，�
 
 行菜单 **More actions → Move to Trash** 会从活跃文献、项目和集合视图移除该条目。在 **Trash** 搜索标题或标识符，打开行菜单并选择 **Restore**。应先恢复再编辑、预览或导出：这些控件在 Trash 中被禁用。返回原项目与集合检查关联。本例的 PRISMA 条目恢复后，PDF 和三个关联均保留。
 
-![通过回收站行菜单恢复文献](/img/open-science/local-todo-batch/07-trash-restore.png)
+![通过回收站行菜单恢复文献](/img/open-science/local-todo-batch/07-trash-restore.webp)
 
 
 </ToolOperationGroup>
@@ -303,7 +305,7 @@ Citation 的四个复制按钮写入不同格式。粘贴到目标编辑器，�
 
 删除后检查所选记录已从 Trash 消失，保留的文献及附件仍可打开。解除集合关联、移入回收站和永久删除分别作用于不同范围。
 
-![核对永久删除的具体范围](/img/open-science/local-todo-batch/08-reference-delete-scope.png)
+![核对永久删除的具体范围](/img/open-science/local-todo-batch/08-reference-delete-scope.webp)
 
 
 </ToolOperationGroup>

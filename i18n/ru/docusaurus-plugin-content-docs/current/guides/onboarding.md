@@ -35,19 +35,19 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Проверки окружающей среды, выполненные во время первой установки macOS](/img/open-science/macos/setup-environment.png)
+![Проверки окружающей среды, выполненные во время первой установки macOS](/img/open-science/macos/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-![Проверка окружающей среды во время первой установки Windows](/img/open-science/windows/setup-environment.png)
+![Проверка окружающей среды во время первой установки Windows](/img/open-science/windows/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="linux">
 
-![Все четыре проверки среды прошли во время первой установки Linux](/img/open-science/linux/setup-environment.png)
+![Все четыре проверки среды прошли во время первой установки Linux](/img/open-science/linux/setup-environment.webp)
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Местоположение данных перед выбором папки](/img/open-science/walkthrough-2026-09-08/02-data-location.png)
+![Местоположение данных перед выбором папки](/img/open-science/walkthrough-2026-09-08/02-data-location.webp)
 
 </PlatformContent>
 Выберите местоположение для больших файлов перед установкой среды выполнения. Артефакты, блокноты и среды используют местоположение данных; Настройки и история остаются в местоположении конфигурации. Отображаемый путь представляет собой только резюме, а не текстовое поле.
@@ -73,14 +73,14 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Пользовательский родительский выбранный и конечный путь, управляемый приложением](/img/open-science/local-acceptance/data-location-selected.png)
+![Пользовательский родительский выбранный и конечный путь, управляемый приложением](/img/open-science/local-acceptance/data-location-selected.webp)
 
 </PlatformContent>
 Выберите **Browse…**, выберите пустую родительскую папку на диске с достаточным пространством и проверьте полный управляемый путь, показанный мастером. Выберите **Continue** и прочитайте подтверждение перезапуска. Используйте стабильное местоположение исследовательских данных, а не временную папку.
 
 <PlatformContent platform="macos">
 
-![Подтверждение перезапуска для выбранного местоположения данных](/img/open-science/local-acceptance/data-location-confirm.png)
+![Подтверждение перезапуска для выбранного местоположения данных](/img/open-science/local-acceptance/data-location-confirm.webp)
 
 </PlatformContent>
 | Контроль подтверждения | Результат |
@@ -105,7 +105,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Фактический контроль сбоев и восстановления конфигураций](/img/open-science/local-todo-batch/56-onboarding-config-write-error.png)
+![Фактический контроль сбоев и восстановления конфигураций](/img/open-science/local-todo-batch/56-onboarding-config-write-error.webp)
 
 </PlatformContent>
 Если перезагрузка не удалась до изменения местоположения, восстановите конфигурацию, запишите доступ и снова откройте мастера. Проверьте активный путь и существующие файлы перед повторным перемещением. См. [Хранилище](storage.md).
@@ -116,7 +116,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Codex источник установки меню](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.png)
+![Codex источник установки меню](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.webp)
 
 </PlatformContent>
 1. Открыть **Установить Codex**.
@@ -127,7 +127,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Codex установлен и выбран в качестве активного времени выполнения](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.png)
+![Codex установлен и выбран в качестве активного времени выполнения](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.webp)
 
 </PlatformContent>
 Этикетки версий определяют установленный агент или адаптер, а не выбранную модель. Проверяйте установленные значения, а не ожидайте точные версии скриншота.
@@ -136,7 +136,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 Если совместимый агент уже установлен, выберите его карту и подтвердите **Active**, прежде чем продолжить. На экране Windows ниже используется существующая установка Codex; Переустановка необязательно должна проходить через волшебника.
 
-![Существующий агент Codex, выбранный в качестве Active в мастере настройки Windows](/img/open-science/windows/setup-agent-active.jpg)
+![Существующий агент Codex, выбранный в качестве Active в мастере настройки Windows](/img/open-science/windows/setup-agent-active.webp)
 
 </PlatformContent>
 
@@ -158,14 +158,14 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Английская форма подписки Codex перед аутентификацией](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![Английская форма подписки Codex перед аутентификацией](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 </PlatformContent>
 Для поставщика API выберите его тип, введите конечную точку и детали модели, требуемые этим поставщиком, и используйте **Test & continue**. Мастер проверяет требуемые поля перед отправкой теста. Успешный тест продвигает волшебника. Ошибка проверки или соединения остается видимой для исправления.
 
 <PlatformContent platform="macos">
 
-![Пользовательский шлюз, показывающий ошибки требуемого поля](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![Пользовательский шлюз, показывающий ошибки требуемого поля](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 </PlatformContent>
 [Настройка поставщика](providers.md) для выбора аутентификации, расширенных полей и восстановления после ошибок подключения.
@@ -189,7 +189,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 Страница Windows **Notebook runtime** также может отображать **Local Shell · WSL2 Bash Preview**. Читать **Optional — nothing here is required to finish setup.** Вы можете выбрать **Finish** пока Python/R Установка откладывается и WSL2 недоступна. Подготовьте необходимое время выполнения перед запросом выполнения кода; Завершение мастера не устанавливает эти дополнительные среды.
 
-![Опциональные настройки Windows Notebook и WSL2 с Finish](/img/open-science/windows/setup-optional-runtimes.jpg)
+![Опциональные настройки Windows Notebook и WSL2 с Finish](/img/open-science/windows/setup-optional-runtimes.webp)
 
 </PlatformContent>
 

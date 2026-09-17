@@ -42,6 +42,17 @@
         "title": "Build your research collection",
         "chapters": [
           {
+            "id": "review-inbox",
+            "title": "Prepare a focused reading pack for a journal club",
+            "scope": "For an upcoming journal club, select papers around one question, review agent suggestions, collect available full text and prepare a reading order with discussion questions.",
+            "currentDoc": "workflows/journal-club",
+            "proposedUrl": "/docs/workflows/journal-club/",
+            "relatedDocs": [
+              "guides/library"
+            ],
+            "contentStatus": "written"
+          },
+          {
             "id": "build-library",
             "title": "Build a core reading list for a new research topic",
             "scope": "When starting an unfamiliar topic, collect seed papers, map key themes and save a curated reading list linked to the project. Import and tagging are steps within this scenario.",
@@ -97,17 +108,6 @@
             "scope": "Combine records from several searches or databases into a deduplicated candidate set, retaining search provenance and a documented screening handoff.",
             "currentDoc": "workflows/merge-literature-searches",
             "proposedUrl": "/docs/workflows/merge-literature-searches/",
-            "relatedDocs": [
-              "guides/library"
-            ],
-            "contentStatus": "written"
-          },
-          {
-            "id": "review-inbox",
-            "title": "Prepare a focused reading pack for a journal club",
-            "scope": "For an upcoming journal club, select papers around one question, review agent suggestions, collect available full text and prepare a reading order with discussion questions.",
-            "currentDoc": "workflows/journal-club",
-            "proposedUrl": "/docs/workflows/journal-club/",
             "relatedDocs": [
               "guides/library"
             ],
@@ -1342,6 +1342,17 @@
         "id": "changelog",
         "title": "Changelog",
         "chapters": [
+          {
+            "id": "v0302",
+            "title": "v0.30.2",
+            "scope": "Specialist Skill loading, independent Side Chat, data queries and Notebook recovery.",
+            "currentDoc": "changelog/v0-30-2",
+            "proposedUrl": "/docs/changelog/v0-30-2/",
+            "kind": "existing",
+            "relatedDocs": [
+              "changelog/v0-30-2"
+            ]
+          },
           {
             "id": "v0301",
             "title": "v0.30.1",

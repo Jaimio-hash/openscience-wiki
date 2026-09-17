@@ -37,7 +37,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 > Об этом сообщает RNA-seq QC Reviewer. Используйте только полный встроенный CSV ниже. Выполните арифметику в Python, проверьте двенадцать различных полных идентификаторов выборки и проверьте zero_count_genes + detected_genes_count_gt_0 = 27179 для каждой строки. Верните каждый результат и укажите, что эти проверки предоставили сводные данные, а не независимый доступ к исходной графовой матрице.
 
-![Завершенная подзадача Specialist с проверками на выборку](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.jpg)
+![Завершенная подзадача Specialist с проверками на выборку](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.webp)
 
 В этом примере ребенок запустил Python Notebook и вернул **12 строки, 12 различные не упущенные идентификаторы, и 12/12 суммы, равные 27,179**. Для первого полного идентификатора выборки `8,664 + 18,515 = 27,179`. Численные поля были полными и неотрицательными.
 

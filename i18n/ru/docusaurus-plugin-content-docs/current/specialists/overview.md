@@ -23,7 +23,7 @@ Specialist - это сохраненная исследовательская р
 
 Открыть **Settings → Specialists**. **Installed** подсчитывает локально зарегистрированные роли, включая Рецензента. Используйте **Search specialists** и **Filter specialists by category**, затем откройте строку, чтобы проверить его. **Browse Marketplace** открывает новый каталог Вход на рынок не устанавливается до тех пор, пока вы не завершите его поток пакетов / установок.
 
-![RNA-seq QC Reviewer установлен локально](/img/open-science/capabilities-walkthrough/06-specialist-list.jpg)
+![RNA-seq QC Reviewer установлен локально](/img/open-science/capabilities-walkthrough/06-specialist-list.webp)
 
 ## Наблюдаемые роли рынка {/* #marketplace-roles-observed */}
 

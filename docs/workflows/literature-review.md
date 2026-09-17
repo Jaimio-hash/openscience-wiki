@@ -1,7 +1,7 @@
 ---
 title: Extract a literature evidence table
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Extract a literature evidence table
@@ -26,7 +26,9 @@ In an Open-Science project, select a working model and attach the resulting Mark
 
 Click the attachment to open its preview. Each study starts with a title, DOI and original source link, followed by section text and tables. Match those ten identities with the source list; do not count repeated section headings as additional studies.
 
-![The actual attached full-text pack retains source identity and article sections](/img/open-science/research-workflows/mask-trials-input.png)
+![The actual attached full-text pack retains source identity and article sections](/img/open-science/research-workflows/mask-trials-input.webp)
+
+Before using a paper as evidence, check for corrections or retractions at its source. From v0.30.2, the `literature-review` Skill's `verify_dois` helper checks Crossref update relationships in both directions. `retracted: true` can identify a retracted paper or a retraction notice; inspect the linked relationship. `false` means no checked marker was found, not proof that the paper has never been retracted. This additional check was not part of the recorded ten-paper run below.
 
 ## Ask for one row per trial
 
@@ -51,7 +53,7 @@ Allow the intended source-reading requests. Check that the agent reaches all ten
 
 Open the CSV after the response completes. Compare its ten DOI values with the source list, then check the reported estimate and analysis population against each paper's results section or table.
 
-![The ten-trial evidence table in Open-Science](/img/open-science/research-workflows/mask-trials-evidence.png)
+![The ten-trial evidence table in Open-Science](/img/open-science/research-workflows/mask-trials-evidence.webp)
 
 Pay particular attention to these distinctions:
 
@@ -64,7 +66,7 @@ Use the <a href="/docs/examples/research-workflows/mask-trials-evidence.csv" dow
 
 Open **mask-trials-reading-notes.md** as well as the CSV. This run’s final table has **10 rows · 12 columns**. Expand a preview or download the file to read long cells; truncated cells are not missing source text. The notes retain the ten study identities and explain why their outcomes and populations should not be pooled automatically.
 
-![The saved reading notes and the completed ten-row output](/img/open-science/research-workflows/mask-trials-notes.png)
+![The saved reading notes and the completed ten-row output](/img/open-science/research-workflows/mask-trials-notes.webp)
 
 When a row is wrong or incomplete, name the study and exact source section/table, request a revision to **both** files, then reopen them. For example, keep Cowling 2008’s randomized household flow separate from its analyzed subset. Updating a prose answer does not by itself update the saved table.
 

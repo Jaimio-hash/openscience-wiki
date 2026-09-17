@@ -38,7 +38,7 @@ Una beca de sólo lectura protege el directorio externo mientras que permite sal
 
 Para una carpeta existente, abra **Files**, seleccione el desplegable **Artifacts** y luego **This computer → Add folder…**. En el cuadro de diálogo **Grant folder access** de la aplicación, elija un subcarpeta específico y **Read-only**, luego **Grant this folder**. La raíz del perfil del usuario puede estar indisponible; seleccione el subcarpeta de investigación en su lugar. Lea cualquier confirmación de impacto de Notebook-kernel. Al regresar a los archivos, verifique la carpeta seleccionada y sus archivos.
 
-<Screenshot src="/img/open-science/windows/granted-folder-files.png" alt="Una carpeta Windows otorgada que muestra el script público y CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.png" linkLabel="Abra la pantalla Windows completa" />
+<Screenshot src="/img/open-science/windows/granted-folder-files.webp" alt="Una carpeta Windows otorgada que muestra el script público y CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.webp" linkLabel="Abra la pantalla Windows completa" />
 
 En el cuadro de diálogo Windows **Attach files**, seleccione un archivo de una ruta que contenga caracteres o espacios chinos, o introduzca su ruta completa en el campo **File name** y ábrelo. En la aplicación, compruebe el nombre de acceso y previsualice las dimensiones y contenidos de la tabla. Para abandonar una selección, elija **Cancel** y compruebe que no se agregó ningún nuevo adjunto al proyecto.
 
@@ -55,7 +55,7 @@ En el cuadro de diálogo Windows **Attach files**, seleccione un archivo de una 
 
 <PlatformContent platform="macos">
 
-![Resultados RNA-seq reales filtrados en la biblioteca de archivos](/img/open-science/guides-walkthrough/56-files-search.png)
+![Resultados RNA-seq reales filtrados en la biblioteca de archivos](/img/open-science/guides-walkthrough/56-files-search.webp)
 
 </PlatformContent>
 El conteo describe el filtro actual. Una búsqueda sin fósforos no elimina archivos. **No more** significa que el grupo ha terminado de cargar. Collapse a group by its heading. Utilice la acción de vista previa de un cuerpo de archivo para un modal, o **Abierto ... en visión dividida al lado de la sesión** para retener la conversación al lado de él. Descargar actos en el archivo/versión seleccionado por esa superficie.
@@ -85,7 +85,7 @@ Abra un texto gestionado o archivo Markdown compatible. El ejemplo que figura a 
 
 <PlatformContent platform="macos">
 
-![Informe v2 comparado con su versión original](/img/open-science/guides-walkthrough/55-report-version-diff.png)
+![Informe v2 comparado con su versión original](/img/open-science/guides-walkthrough/55-report-version-diff.webp)
 
 </PlatformContent>
 | Control de edición/estado | Qué hacer |
@@ -111,7 +111,7 @@ Si otro escritor guarda el informe mientras su editor permanece abierto, **Save 
 
 <PlatformContent platform="macos">
 
-![Guardar bloqueado porque existe otra versión](/img/open-science/local-todo-batch/37-file-save-conflict.png)
+![Guardar bloqueado porque existe otra versión](/img/open-science/local-todo-batch/37-file-save-conflict.webp)
 
 </PlatformContent>
 Después de guardar, confirme que la última revisión contiene tanto el cambio del otro escritor como su borrador retenido. Las revisiones de archivos anteriores siguen disponibles a través de los controles de la versión; estas son separadas de las revisiones de mensajes de conversación.

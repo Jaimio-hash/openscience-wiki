@@ -11,7 +11,7 @@ Use **Settings → Skills → Browse Marketplace** to find and install research 
 
 To bring in a ZIP, local Skill or a specific GitHub repository, use [Skill import and management](manage.md). For an overview of research methods and their inputs, see the [Skill directory](directory.md).
 
-![The Skill marketplace with search, category filters and Install buttons](/img/open-science/feature-guides-2026-09/marketplace-browse.png)
+![The Skill marketplace with search, category filters and Install buttons](/img/open-science/feature-guides-2026-09/marketplace-browse.webp)
 
 ## Find a suitable method
 
@@ -21,7 +21,7 @@ To bring in a ZIP, local Skill or a specific GitHub repository, use [Skill impor
 
 A catalog signature confirms distribution identity. It does not establish that a method suits your research question or that your computer has its dependencies.
 
-![Marketplace Skill details showing author, version, license and the Install action](/img/open-science/feature-guides-2026-09/marketplace-detail.png)
+![Marketplace Skill details showing author, version, license and the Install action](/img/open-science/feature-guides-2026-09/marketplace-detail.webp)
 
 ## Install and use a Skill
 

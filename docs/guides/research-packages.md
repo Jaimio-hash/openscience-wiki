@@ -40,7 +40,7 @@ Literature metadata is always included. If a literature PDF is required evidence
 
 The following screens use a session that summarizes the [GSE60450 sample QC table](../reference/example-data.md). In the export preview, compare **Essential export** and **Full export**, inspect the estimated size, then choose **Export**. The contents and size depend on your session.
 
-![Research package export preview with Essential export, Full export and Customize contents](/img/open-science/feature-guides-2026-09/research-package-export.png)
+![Research package export preview with Essential export, Full export and Customize contents](/img/open-science/feature-guides-2026-09/research-package-export.webp)
 
 ## Import into a project {/* #import-and-inspect-a-package */}
 

@@ -25,11 +25,11 @@ last_update:
 5. 가까운 미리보기, 후보자를 선택하고 **선택된 수입 (1)**을 선택합니다.
 6. 수입한 줄을 검색하고 최종 이름과 소스를 검사합니다.
 
-![수입하기 전에 전체 패키지를 검사](/img/open-science/capabilities-walkthrough/11-skill-package-preview.jpg)
+![수입하기 전에 전체 패키지를 검사](/img/open-science/capabilities-walkthrough/11-skill-package-preview.webp)
 
 이 예에서 원래 개인 Skill이 이미 존재했습니다. 미리보기는 **Name exists**을 표시하고, 별도의 **가져옴 `rnaseq-count-qc-2`**을 생성했습니다. 원래 Specialist 바인딩이 남아 있습니다. 기존 패키지를 업데이트하는 모든 수입을 가정하지 마십시오; 후보자의 근원 및 갱신/replace 진단을 검열하십시오.
 
-![수입된 사본 및 본래 개인적인 Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.jpg)
+![수입된 사본 및 본래 개인적인 Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.webp)
 
 | 수입 통제 | 제품정보 |
 | --- | --- |
@@ -53,9 +53,9 @@ Markdown 업로드는 YAML `name` 및 `description`가 필요합니다. ZIP/`.sk
 4. Skills로 돌아와 `peer-review`을 검색하고 수입 된 행을 검사합니다. 소스 폴더는 장소에 머물; Open-Science는 수입한 사본을 이용합니다.
 5. 설치 폴더를 변경한 후 **Rescan**을 사용하십시오. 다시 수입하기 전에 원산지, 선택 및 상태를 확인합니다.
 
-![로컬에 설치된 피어 리뷰 패키지 미리보기](/img/open-science/local-todo-batch/12-installed-skill-preview.png)
+![로컬에 설치된 피어 리뷰 패키지 미리보기](/img/open-science/local-todo-batch/12-installed-skill-preview.webp)
 
-![Skills 목록에서 가져온된 패키지 찾기](/img/open-science/local-todo-batch/13-installed-skill-imported.png)
+![Skills 목록에서 가져온된 패키지 찾기](/img/open-science/local-todo-batch/13-installed-skill-imported.webp)
 
 가져 오기 후, Skill 세부 사항에 템플릿 및 참조 파일을 검사합니다. 다른 조수에서 방법을 사용하기 전에 필요한 도구와 실행 기능이 세션에서 사용할 수 있는지 확인하십시오.
 
@@ -69,7 +69,7 @@ Markdown 업로드는 YAML `name` 및 `description`가 필요합니다. ZIP/`.sk
 4. Close 미리보기를 선택하고, 의도한 후보자를 선택하고 **선택된 수입 (1)**을 선택합니다. 결과를 기대하고 **Imported skills**의 이름을 확인합니다.
 5. Skills로 돌아가 그 이름을 검색합니다. 그것을 사용하기 전에 소스와 가용성을 검사합니다.
 
-![GitHub Skill 및 수입하기 전에 핀 소스를 검토](/img/open-science/local-todo-batch/15-github-skill-preview.png)
+![GitHub Skill 및 수입하기 전에 핀 소스를 검토](/img/open-science/local-todo-batch/15-github-skill-preview.webp)
 
 제품 저장소에서 `fair-esm2` 가져 오기가 이미 존재했기 때문에 **`fair-esm2-2`**을 만들었습니다. 내장 패키지가 남아 있습니다. 수입 지시는 모형 무게를 설치하지 않거나 그 inference 일을 설치하지 않습니다.
 
@@ -77,7 +77,7 @@ Markdown 업로드는 YAML `name` 및 `description`가 필요합니다. ZIP/`.sk
 
 새로운 정제를 가진 동일한 저장소를 검사하십시오. 기존 후보자는 **Update available**을 보여줄 수 있습니다. 그 후보자 만 선택하고 가져 오기; 기존의 수입 행과 미리보기를 검사합니다. ESM-2 체크에서, 동일한 `fair-esm2-2` 사본은 개정되고, 다시 **Imported**를 보여주는 스캐닝. 업데이트 된 지시 몸은 저장소 소스 일치. importer는 frontmatter와 충돌 안전 이름을 씁니다. 그래서 전체 파일 바이트는 원래 SKILL.md와 일치하지 않습니다.
 
-![상류 개정은 수입한 사본을 위해 유효합니다](/img/open-science/local-todo-batch/16-github-update-available.png)
+![상류 개정은 수입한 사본을 위해 유효합니다](/img/open-science/local-todo-batch/16-github-update-available.webp)
 
 ### GitHub 속도 제한에서 복구 {/* #recover-from-github-rate-limiting */}
 
@@ -87,7 +87,7 @@ Markdown 업로드는 YAML `name` 및 `description`가 필요합니다. ZIP/`.sk
 
 **Manage**, 소스/status 필터를 열고 특정 방법을 검색합니다. 행동을 적용하기 전에 결과를 선택합니다. **선정 (n)**는 선택을 보여줍니다; **Clear selection**는 그것을 empties. 필터 변경시 전체 선택된 세트를 검토합니다.
 
-![대량 관리에서 수입된 복사본 사용](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.jpg)
+![대량 관리에서 수입된 복사본 사용](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.webp)
 
 가용성을 변경한 후, Skill 세부 사항을 다시 열 수 있습니다. 그것을 삭제하기 전에 필요한 방법의 수출을 유지하십시오.
 

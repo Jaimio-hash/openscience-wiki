@@ -42,7 +42,7 @@ export default function Home() {
       id: 'workflows',
       title: translate({id: 'homepage.sections.workflows.title', message: 'Research workflows'}),
       description: translate({id: 'homepage.sections.workflows.description', message: 'Follow worked examples with real research data.'}),
-      to: 'workflows/core-reading-list/',
+      to: 'workflows/journal-club/',
     },
     {
       id: 'tools',

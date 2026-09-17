@@ -11,7 +11,7 @@ Verwenden Sie **Settings → Skills → Browse Marketplace**, um Forschungsmetho
 
 Um ein ZIP, ein lokales Skill oder ein bestimmtes GitHub-Repository einzugeben, verwenden Sie [Skill Import und Management](manage.md). Für einen Überblick über Forschungsmethoden und ihre Inputs, siehe [Skill Verzeichnis](directory.md).
 
-![Der Skill-Marktplatz mit Such-, Kategoriefiltern und Install-Buttons](/img/open-science/feature-guides-2026-09/marketplace-browse.png)
+![Der Skill-Marktplatz mit Such-, Kategoriefiltern und Install-Buttons](/img/open-science/feature-guides-2026-09/marketplace-browse.webp)
 
 ## Finden Sie eine geeignete Methode {/* #find-a-suitable-method */}
 
@@ -21,7 +21,7 @@ Um ein ZIP, ein lokales Skill oder ein bestimmtes GitHub-Repository einzugeben, 
 
 Eine Katalogsignatur bestätigt die Verteilungsidentität. Es stellt nicht fest, dass eine Methode zu Ihrer Forschungsfrage passt oder dass Ihr Computer seine Abhängigkeiten hat.
 
-![Marketplace Skill Details, die Autor, Version, Lizenz und die Installationsaktion anzeigen](/img/open-science/feature-guides-2026-09/marketplace-detail.png)
+![Marketplace Skill Details, die Autor, Version, Lizenz und die Installationsaktion anzeigen](/img/open-science/feature-guides-2026-09/marketplace-detail.webp)
 
 ## Installieren und Verwenden eines Skill {/* #install-and-use-a-skill */}
 

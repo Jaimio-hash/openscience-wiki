@@ -10,7 +10,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## 액세스 방법 선택 {/* #choose-an-access-method */}
 
-![영어로 Codex 구독 연결 처음으로 설정](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![영어로 Codex 구독 연결 처음으로 설정](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 `Provider type`은 구독 액세스, 공식 API 또는 `Custom Gateway`를 선택합니다. 사용 가능한 구독 선택은 활성 에이전트 프레임 워크에 달려 있습니다. 캡처 된 Codex 설정은 `Codex subscription`, XAI OAuth, 공식 API 및 사용자 정의 게이트웨이를 보여줍니다. 다른 프레임 워크가 동일한 선택을 제시하지 마십시오.
 
@@ -38,7 +38,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 6. **Main model**에서 사용 가능한 구독 모델을 선택하십시오. 예를 들어, 계정이 제공하는 경우 **gpt-5.6 솔** 항목을 선택하십시오. 모형 이름과 공급자를 함께 검사하십시오, 특히 다수 공급자가 유사한 지명한 모형을 제안할 때.
 7. 프로젝트를 열고 경계 요청을 보냅니다. 연결 테스트는 인증이 검증된 반면, 실제 응답은 요청 경로를 지정합니다. 응답을 확인하고 모든 도구 권한 요청은 해당 세션에 나타납니다.
 
-![Codex 구독 확인 및 메인 모델 선택](/img/open-science/walkthrough-2026-09-08/70-codex-subscription-connected.png)
+![Codex 구독 확인 및 메인 모델 선택](/img/open-science/walkthrough-2026-09-08/70-codex-subscription-connected.webp)
 
 | 공급자 줄 통제 | 그것을 때 사용 | 성공 사례 |
 | --- | --- | --- |
@@ -62,7 +62,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## 사용자 정의 게이트웨이: 모든 눈에 보이는 필드 {/* #custom-gateway-every-visible-field */}
 
-![사용자 정의 게이트웨이 양식의 필수 필드 오류](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![사용자 정의 게이트웨이 양식의 필수 필드 오류](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 `Custom Gateway`을 선택하여 시작하십시오. 공급자 유형을 바꾸는 것은 이전 선택에서 표시 이름을 보존할 수 있으므로 assuming 대신 이름을 검토하십시오.
 
@@ -159,7 +159,7 @@ OLLAMA_HOST=127.0.0.1:11435 ollama pull qwen3:0.6b
 | 고급 설정 → 최대 출력 토큰 | `4096` |
 | 이미지 입력/씽크 모드 | 이 연결 체크를 위해 떨어져 |
 
-![로컬 모델 주소, API 형식 및 정확한 모델 ID](/img/open-science/non-workflow-completion/08-local-provider-form.png)
+![로컬 모델 주소, API 형식 및 정확한 모델 ID](/img/open-science/non-workflow-completion/08-local-provider-form.webp)
 
 양식은 게이트웨이 루트에 `/v1`을 추가합니다. Open-Science는 `localhost`, `127.0.0.1` 및 `[::1]`와 같은 루프백 주소를 위한 공백 API 열쇠를 받아들입니다; 이전 스크린 샷은 placeholder를 보여줄 수 있습니다. 원격 또는 LAN 게이트웨이는 여전히 HTTPS과 API 키가 필요합니다. API 형식의 로컬 서버 지원.
 
@@ -171,7 +171,7 @@ OLLAMA_HOST=127.0.0.1:11435 ollama pull qwen3:0.6b
 
 구성 로컬 엔드포인트와 OpenCode을 사용하여 **연결된 현지 모델.**과 함께 완료된 연결 체크. 그것은 텍스트 요청, 바이오 의학 분석이 아닙니다.
 
-![로컬 모델 연결 체크 완료](/img/open-science/non-workflow-completion/09-local-model-reply.png)
+![로컬 모델 연결 체크 완료](/img/open-science/non-workflow-completion/09-local-model-reply.webp)
 
 모델을 사용하면서 서버 실행을 유지하십시오. 다른 호스트에 에이전트를 들어, `localhost`은 그 호스트를 나타냅니다. endpoint에 도달하는 브라우저는 에이전트가 도달 할 수 없다는 것을 증명하지 않습니다.
 
@@ -188,7 +188,7 @@ print((8664 + 18515) == 27179)
 
 이것은 첫번째 GSE60450 표본의 제로 표이고 검출된 유전자 조사입니다. 허가 패널에서 제안 된 코드를 검사, 그것을 승인, 다음 **Notebook**을 열고 **27179 / 진정한**을 확인합니다.
 
-![Notebook 코드 및 로컬 모델 도구 호출에서 실제 출력](/img/open-science/priority-completion/21-local-model-python-result.png)
+![Notebook 코드 및 로컬 모델 도구 호출에서 실제 출력](/img/open-science/priority-completion/21-local-model-python-result.webp)
 
 로컬 `qwen2.5:7b`은 Codex 프레임 워크와 로컬 채팅 컴플릿 엔드포인트를 통해이 호출을 완료했습니다. 초기 제안은 사용할 수없는 돕기 모듈을 참조; 확인은 제안을 결정한 후 성공하고 위의 의존성없는 코드를 지정합니다. 이것은 다른 에이전트 프레임 워크에서 완전한 RNA-seq 분석 또는 동등한 행동의 신뢰할 수있는 계획이 아닌 경계 도구 작동을 검증합니다.
 

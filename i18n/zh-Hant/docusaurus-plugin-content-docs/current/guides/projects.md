@@ -23,7 +23,7 @@ last_update:
 3. 點選 **Create project**。確認左側顯示專案名稱，主區域開啟 **New conversation**。
 4. 開啟專案名稱選單 → **Project settings**，檢查欄位是否儲存。專案儲存成功與模型連線成功是兩件事。
 
-![英文介面中的 PRISMA 專案目標與 Agent Context](/img/open-science/local-acceptance/prisma-project-form.png)
+![英文介面中的 PRISMA 專案目標與 Agent Context](/img/open-science/local-acceptance/prisma-project-form.webp)
 
 | 欄位或按鈕 | 示例或操作 | 行為 |
 | --- | --- | --- |

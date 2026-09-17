@@ -31,11 +31,11 @@ air-report-v1.md. The script must accept one or more CSV paths plus
 input/script hashes. Stop after this baseline. Use English.
 ```
 
-![Antrag auf Erstwochenbeilage und Baseline-Berechnung](/img/open-science/workflow-extensions/air-input-v1.png)
+![Antrag auf Erstwochenbeilage und Baseline-Berechnung](/img/open-science/workflow-extensions/air-input-v1.webp)
 
 Überprüfen Sie die Datei liest und Berechnung vor der Genehmigung. Überprüfen Sie in **Notebook**, ob die Ausführung abgeschlossen ist, und öffnen Sie dann **air-daily-v1.csv**. Die Baseline enthält **168 stündliche Zeilen und 7 tägliche Zeilen**, wobei keine PM2.5-Werte fehlen.
 
-![Die gespeicherte Sieben-Tage-Baseline und Valid-Stunde zählt](/img/open-science/workflow-extensions/air-baseline-table.png)
+![Die gespeicherte Sieben-Tage-Baseline und Valid-Stunde zählt](/img/open-science/workflow-extensions/air-baseline-table.webp)
 
 ## 2. Hinzufügen neuer Beobachtungen, ohne die Methode zu ändern {/* #2-add-new-observations-without-changing-the-method */}
 
@@ -53,7 +53,7 @@ Reopen the saved results. This is a historical replay, not live data.
 Use English and do not make health or causal claims.
 ```
 
-![Die zweite Woche Datei hinzugefügt, um die bestehende Analyse Konversation](/img/open-science/workflow-extensions/air-update-input.png)
+![Die zweite Woche Datei hinzugefügt, um die bestehende Analyse Konversation](/img/open-science/workflow-extensions/air-update-input.webp)
 
 Stellen Sie sicher, dass der Agent das vorhandene Skript ausführt und die gleichen Regeln für den fehlenden Wert und die Vollständigkeit einhält. Das Ändern sowohl der Daten als auch der Methode würde es schwieriger machen zu erklären, warum sich das Ergebnis geändert hat.
 
@@ -61,7 +61,7 @@ Stellen Sie sicher, dass der Agent das vorhandene Skript ausführt und die gleic
 
 Öffnen Sie **air-daily-v2.png** und **air-daily-v2.csv**. Der kombinierte Eingang enthält **336 stündliche Zeilen**, mit **keine doppelten oder fehlenden Zeitstempel**. Es gibt **eine fehlende PM2.5 Beobachtung**, am Januar 11. Die Tabelle hat **14 Tage**, die alle der 18-gültigen Stundenregel des Beispiels entsprechen.
 
-![Das erweiterte 14-Tage-Ergebnis wird in Open-Science angezeigt](/img/open-science/workflow-extensions/air-update-plot.png)
+![Das erweiterte 14-Tage-Ergebnis wird in Open-Science angezeigt](/img/open-science/workflow-extensions/air-update-plot.webp)
 
 Der Januar 11 Mittelwert ist **11.652 μg/m3**, berechnet aus **23 gültige Stunden**. Teilen Sie eine fehlende Beobachtung nicht so ein, als wäre sie Null. Eine vollständige Zeitstempelsequenz garantiert nicht, dass alle Messwerte vorliegen.
 
@@ -69,17 +69,17 @@ Der Januar 11 Mittelwert ist **11.652 μg/m3**, berechnet aus **23 gültige Stun
 
 Öffnen Sie **air-update-check.csv**. Alle **7 geteilte tägliche Reihen** sind in jedem Ausgabefeld identisch; Die einzigen neuen Daten sind Januar 8-14. Der SHA-256 des Originalskripts ist vor und nach dem Update unverändert.
 
-![Der gespeicherte zeilenweise Vergleich mit unveränderten Baseline-Daten](/img/open-science/workflow-extensions/air-update-check.png)
+![Der gespeicherte zeilenweise Vergleich mit unveränderten Baseline-Daten](/img/open-science/workflow-extensions/air-update-check.webp)
 
 Öffnen Sie **air-update-notes.md**, um Eingabeidentitäten, fehlende Beobachtungen und die beibehaltenen v1-Dateien zu überprüfen. Eine unabhängige Berechnung aller 14 Tagesmittelwerte und der Gültigkeitsdauer hat die gespeicherte Ausgabe auf ihre angezeigte Genauigkeit abgestimmt.
 
-![Die Update-Notizen zeichnen unveränderten Code, beibehaltene Baseline-Dateien und Datenprüfungen auf](/img/open-science/workflow-extensions/air-update-notes.png)
+![Die Update-Notizen zeichnen unveränderten Code, beibehaltene Baseline-Dateien und Datenprüfungen auf](/img/open-science/workflow-extensions/air-update-notes.webp)
 
 ## 5. Überprüfen Sie die Berichtsdaten, bevor Sie sie abgeben {/* #5-check-the-report-dates-before-handing-it-off */}
 
 Prüfen Sie, ob die Berichtsüberschrift dem tatsächlichen Eingabeintervall folgt. Das ursprüngliche Skript behielt einen Titel der ersten Woche in seinem zweiwöchigen Bericht bei; Dieser Darstellungsfehler wurde in **air-analysis-reviewed.py** korrigiert. Lediglich das Heading Template hat sich geändert. Das überprüfte Skript wurde dann unverändert in der Woche 1 und in beiden Wochen ausgeführt, wobei alle vorherigen Dateien erhalten blieben.
 
-![Der korrigierte Bericht benennt nun das volle zweiwöchige Intervall](/img/open-science/workflow-extensions/air-reviewed-report.png)
+![Der korrigierte Bericht benennt nun das volle zweiwöchige Intervall](/img/open-science/workflow-extensions/air-reviewed-report.webp)
 
 Die gespeicherten **air-daily-baseline.csv** und **air-daily-updated.csv** entsprechen den ursprünglichen v1/v2 CSVs in jedem Feld. **air-update-verification.md** zeichnet den gleichen überprüften Skript-Hash vor und nach beiden Durchläufen auf und überprüft die beiden Berichtsüberschriften. Dies trennt ein korrigiertes Etikett von einer Änderung der numerischen Methode.
 

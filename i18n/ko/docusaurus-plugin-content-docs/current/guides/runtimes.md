@@ -1,7 +1,7 @@
 ---
 title: "Python 및 R 실행 시간"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -45,7 +45,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 **Settings → Runtimes**의 언어 카드 모두 확인. 각각 자체 **Ready** 상태, 버전, **Enable** 스위치 및 **Packages** 버튼이 있습니다. 아래의 카드는 Python 및 R 활성화; Notebook 네트워크 보호에 대한 경고는 별도로 구성됩니다. 개인 경로는이 스크린 샷에 숨겨져 있습니다; 자신의 컴퓨터에서 완전한 경로를 검사.
 
-<Screenshot src="/img/open-science/windows/runtimes-ready.png" alt="Windows 런타임 카드 관리 Python 및 R 준비 및 활성화" width={1919} height={991} windowBounds={[480, 152, 960, 688]} href="/docs/img/open-science/windows/runtimes-ready.png" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
+<Screenshot src="/img/open-science/windows/runtimes-ready.webp" alt="Windows 런타임 카드 관리 Python 및 R 준비 및 활성화" width={1919} height={991} windowBounds={[480, 152, 960, 688]} href="/docs/img/open-science/windows/runtimes-ready.webp" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
 
 </PlatformContent>
 
@@ -53,7 +53,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Python 설정의 실행 시간 설정](/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.png)
+![Python 설정의 실행 시간 설정](/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.webp)
 
 </PlatformContent>
 1. **Python → App-managed environment** 찾기.
@@ -64,12 +64,12 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![앱 관리 Python 환경 만들기](/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.png)
+![앱 관리 Python 환경 만들기](/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.webp)
 
 </PlatformContent>
 <PlatformContent platform="macos">
 
-![Python 설정 완료](/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.png)
+![Python 설정 완료](/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.webp)
 
 </PlatformContent>
 **Ready**, 선택된 해석기 경로 및 활성화된 상태를 확인합니다. 포장 조사와 버전은 임명 근원과 다를 수 있습니다; 스크린 샷의 임시 경로를 영구적으로 사용하지 마십시오.
@@ -84,25 +84,25 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="linux">
 
-![앱 관리 R는 Linux에서 준비하고 활성화됩니다.](/img/open-science/linux/r-managed-ready.png)
+![앱 관리 R는 Linux에서 준비하고 활성화됩니다.](/img/open-science/linux/r-managed-ready.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="macos">
 
-![앱 관리 R 환경 다운로드](/img/open-science/guides-walkthrough/70-r-managed-download.jpg)
+![앱 관리 R 환경 다운로드](/img/open-science/guides-walkthrough/70-r-managed-download.webp)
 
 </PlatformContent>
 <PlatformContent platform="macos">
 
-![앱 관리 R 설치 및 활성화](/img/open-science/guides-walkthrough/71-r-managed-ready.jpg)
+![앱 관리 R 설치 및 활성화](/img/open-science/guides-walkthrough/71-r-managed-ready.webp)
 
 </PlatformContent>
 `r-base` 필터링을 확인하면 설치된 R 패키지를 버전과 채널로 반환합니다. 패키지 총은 환경을 반영하고 스크린 샷과는 다를 수 있습니다.
 
 <PlatformContent platform="macos">
 
-![R 패키지 재고에서 r-base 확인](/img/open-science/guides-walkthrough/72-r-package-filter.jpg)
+![R 패키지 재고에서 r-base 확인](/img/open-science/guides-walkthrough/72-r-package-filter.webp)
 
 </PlatformContent>
 ## 기존의 해석기 연결 {/* #connect-an-existing-interpreter */}
@@ -131,7 +131,7 @@ R Notebook에서 `R.home()`를 확인하여 사용환경을 확인합니다. 의
 
 `/usr/bin/python3`과 같은 시스템 해석기는 이미 **Ready**로 나타날 수 있습니다. 에이전트를 선택하기 전에 사용하려는 환경을 사용할 수 있습니다. 아래 검출된 Python 해석기는 비활성화되어 있으며, 앱 관리 Python 환경이 설정되지 않았습니다. 관리 환경을 준비하려면 **Download and set up**을 사용하십시오.
 
-![Linux은 기존 Python 해석기를 준비하여 Enable 스위치를 꺼냅니다.](/img/open-science/linux/python-detected-disabled.png)
+![Linux은 기존 Python 해석기를 준비하여 Enable 스위치를 꺼냅니다.](/img/open-science/linux/python-detected-disabled.webp)
 
 </PlatformContent>
 
@@ -187,7 +187,7 @@ Python 카드에 **Packages**을 선택합니다. 대화 상자는 환경의 경
 
 <PlatformContent platform="macos">
 
-![설치된 Python 패키지 필터링](/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.png)
+![설치된 Python 패키지 필터링](/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.webp)
 
 </PlatformContent>
 테이블 열은 **Name**, **Version**, **Build** 및 **Channel**입니다. 빌드에서 dash는 빌드 값이 표시되지 않습니다. 이 대화 상자는 재고가 없습니다. 패키지 설치 또는 제거 버튼이 없습니다. 이 대화 상자 안에 "Install Package" 필드를 찾을 수 없습니다.
@@ -196,9 +196,9 @@ Python 카드에 **Packages**을 선택합니다. 대화 상자는 환경의 경
 
 Python 카드에서 **Packages** 및 `pip` 필터를 선택하십시오. R 카드에서 `r-base` 용 필터. 버전 비교하기 전에 대화 상자 제목에 이름을 붙여 넣으십시오. 이 스크린 샷은 패키지를 설치; 그들은 새로운 패키지 설치를 표시하지 않습니다.
 
-<Screenshot src="/img/open-science/windows/python-packages.png" alt="Windows Python 패키지 재고 필터 pip" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/python-packages.png" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
+<Screenshot src="/img/open-science/windows/python-packages.webp" alt="Windows Python 패키지 재고 필터 pip" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/python-packages.webp" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
 
-<Screenshot src="/img/open-science/windows/r-packages.png" alt="Windows R 패키지 재고 필터링 r-base" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/r-packages.png" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
+<Screenshot src="/img/open-science/windows/r-packages.webp" alt="Windows R 패키지 재고 필터링 r-base" width={1920} height={1017} windowBounds={[580, 342, 760, 336]} href="/docs/img/open-science/windows/r-packages.webp" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
 
 </PlatformContent>
 
@@ -210,7 +210,7 @@ Python 카드에서 **Packages** 및 `pip` 필터를 선택하십시오. R 카�
 
 <PlatformContent platform="macos">
 
-![성공적인 진짜 Notebook 계산](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![성공적인 진짜 Notebook 계산](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 수입이 실패하면 선택한 런타임과 설치 패키지를 검사합니다. hostname이 예약된 주소로 해결하기 때문에, [네트워크](network.md)을 따르십시오. 기존 패키지와 함께 실행된 코드는 추가 패키지가 설치될 수 없다는 것을 설정하지 않습니다.
@@ -248,7 +248,9 @@ R.home()
 
 Notebook의 출력을 열고 저장된 보고서와 비교하십시오. Windows 10 예 Open-Science v0.28.0 보고서 Python **3.12.13** 및 `pip` **26.1.2**. 읽기 패키지 메타데이터는 설치 또는 그 패키지를 가져올 수 없습니다.
 
-<Screenshot src="/img/open-science/windows/python-runtime-output.png" alt="Windows Python Notebook는 실행 코드와 실제 버전 출력을 보여주는" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.png" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
+<Screenshot src="/img/open-science/windows/python-runtime-output.webp" alt="Windows Python Notebook는 실행 코드와 실제 버전 출력을 보여주는" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.webp" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
+
+Windows conda R 시작 또는 커널 회복 실패를 위해, 재시동하기 전에 v0.30.2 또는 나중에 사용하십시오. 이 릴리스는 환경 준비 및 R 커널 복구 후 실행 가능한 조회를 수정합니다. 업데이트 후, 환경을 다시 확인하고 Notebook에서 작은 R 계산을 실행; **Ready** 혼자는 실행 결과가 아닙니다. 아래 스크린 샷은 원래 실행의 버전과 결과를 유지합니다.
 
 Windows R는 **R 액세스 권한을 부여하기 전에 보호 모드를 활성화하십시오.**를 보고, **Network settings**와 R 카드의 **Authorize and verify** 지시를 검사하는 것을 실행합니다. rerunning 전에 보고된 허가 prerequisite를 해결하십시오; 혼자 **Ready** 카드는 실행을 확인하지 않습니다. 요청이 차단되고 [문제 해결](troubleshooting.md)을 따르는 경우 전체 오류를 유지하십시오.
 
@@ -267,18 +269,18 @@ Windows R는 **R 액세스 권한을 부여하기 전에 보호 모드를 활성
 아래 세부 사항은 **Inputs**과 캡처 된 코드를 보여줍니다. 저장 된 보고서와 함께 전체 스크린 샷을 열려면 이미지를 클릭하십시오.
 
 <Screenshot
-  src="/img/open-science/windows/runtime-python-producer.png"
+  src="/img/open-science/windows/runtime-python-producer.webp"
   alt="Python 결과의 Provenance 코드 보기의 세부 사항, 입력 및 캡처 프로듀서 코드를 보여주는"
   width={2302}
   height={1158}
   windowBounds={[1385, 65, 917, 1030]}
-  href="/docs/img/open-science/windows/runtime-python-producer.png"
+  href="/docs/img/open-science/windows/runtime-python-producer.webp"
   linkLabel="저장 된 보고서와 캡처 된 코드와 완전한 Windows Python 스크린 샷을 엽니 다"
 />
 
 **R과 같은 테이블을 읽으십시오.** 선택된 에이전트에게 물어보기 R 세션의 환경 Notebook기초와 더불어, R 만.. `R.version.string`, `R.home()`, 동일한 4개의 체크 및 분리되는 저장된 보고를 요구하십시오. **Notebook run** 카드를 확장하여 코드를 검사하고 보고서를 열고 결과를 비교합니다. 이 예에서 R은 **4.4.3** 버전과 `runtime/envs/.r/Lib/R` 버전의 홈 디렉토리를 보여줍니다.
 
-![Windows R Notebook 통화 및 저장 된 보고서 활성 R 설치 및 샘플 - QC 결과](/img/open-science/windows/runtime-r-execution.jpg)
+![Windows R Notebook 통화 및 저장 된 보고서 활성 R 설치 및 샘플 - QC 결과](/img/open-science/windows/runtime-r-execution.webp)
 
 이 스크린 샷의 설치 경로는 예 컴퓨터에 속합니다. 당신의 자신의 기계에 다른 드라이브 편지, 폴더 및 해석기 버전은 정상적입니다.
 
@@ -303,7 +305,7 @@ Windows R는 **R 액세스 권한을 부여하기 전에 보호 모드를 활성
 
 <PlatformContent platform="macos">
 
-![취소된 설정 및 사용 가능한 retry](/img/open-science/local-todo-batch/29-setup-cancelled.png)
+![취소된 설정 및 사용 가능한 retry](/img/open-science/local-todo-batch/29-setup-cancelled.webp)
 
 </PlatformContent>
 <span id="review-a-reinstall-before-committing-it" />
@@ -318,14 +320,14 @@ Windows R는 **R 액세스 권한을 부여하기 전에 보호 모드를 활성
 
 <PlatformContent platform="macos">
 
-![Notebook 세션 중 확인 제거](/img/open-science/local-todo-batch/31-runtime-reinstall.png)
+![Notebook 세션 중 확인 제거](/img/open-science/local-todo-batch/31-runtime-reinstall.webp)
 
 </PlatformContent>
 재설치 삭제 및 재생 환경. 운동 회복에서 활성 셀은 **실행 취소 : 이 세포가 실행 된 동안 실행 시간이 중지되었습니다.**과 취소되었습니다. 오래된 Notebook 역사는 눈에 띄지 만 네임스페이스는 더 이상 존재하지 않습니다. 이전 변수가 복부되었는지 확인 된 신선한 세포; 변경되지 않은 CSV은 여전히 12 행과 269,027,617 카운트를 반환하고 저장된 보고서가 다시 열렸다.
 
 <PlatformContent platform="macos">
 
-![커널이 중단된 후 Notebook 역사](/img/open-science/local-todo-batch/33-reinstalled-kernel-history.png)
+![커널이 중단된 후 Notebook 역사](/img/open-science/local-todo-batch/33-reinstalled-kernel-history.webp)
 
 </PlatformContent>
 삭제된 파일 및 유지된 커널 메모리는 다릅니다. 필요한 코드를 다시 실행하여 변수를 재구성합니다. 추가 패키지는 재설치가 필요할 수 있습니다. 기초 환경의 성공적인 회복은 각 추가한 의존성의 회복을 설치하지 않습니다.
@@ -336,7 +338,7 @@ Windows R는 **R 액세스 권한을 부여하기 전에 보호 모드를 활성
 
 <PlatformContent platform="macos">
 
-![소스 빌드에서 실제 누락 된 micromamba 오류](/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.png)
+![소스 빌드에서 실제 누락 된 micromamba 오류](/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.webp)
 
 </PlatformContent>
 패키지 응용 프로그램은이 바이너리를 포함한다. 소스 빌드의 경우, 해당 프로세스의 시작 환경에서 실행 가능한 유효한 micromamba에서 `OPEN_SCIENCE_MICROMAMBA_BIN`을 포인트로 설정하고 개발 인스턴스를 다시 시작합니다. 호환 설치에서 바이너리 경로를 사용하여 relaunching 전에 실행할 수 있습니다.

@@ -37,7 +37,7 @@ Main Agent が会話を調整する一方で、Delegation は別々の子タス�
 
 > RNA-seq QC レビュアーに委任して下さい。 下記の完全なインラインCSVだけを使用して下さい。 Pythonで算数を実行し、12個の異なるフルサンプル識別子を検証し、zero_count_genes + detected_genes_count_gt_0 = 27179を各行ごとにチェックします。 各結果とこのチェックが供給されたサマリーデータが、元のカウントマトリクスへの独立したアクセスではない状態に戻ります。
 
-![完成したSpecialistサブタスクと1サンプルチェック](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.jpg)
+![完成したSpecialistサブタスクと1サンプルチェック](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.webp)
 
 この例では、子供はPython Notebookを実行し、**12 行、12 は非従順な識別子を区別し、12/12 は 27,179 に等しい合計します**を返す。 最初のフルサンプルIDの場合、`8,664 + 18,515 = 27,179`。 数値フィールドが完成し、非ネガティブであった。
 

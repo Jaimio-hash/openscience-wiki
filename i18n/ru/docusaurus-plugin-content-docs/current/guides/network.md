@@ -33,7 +33,7 @@ last_update:
 5. Рассмотрение нового чернового ряда. Используйте **Удалить (hostname)**, чтобы удалить его.
 6. Выберите **Save changes**, чтобы сохранить список.
 
-![Точное имя хоста отклоняет wildcard](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.png)
+![Точное имя хоста отклоняет wildcard](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.webp)
 
 Введите имя хоста, такое как `data.example.org`, без схемы, пути, порта, wildcard или IP-адреса. Для **Enter a hostname only, without a scheme, path, port, or wildcard.** удалите эти части и сохраните имя хоста.
 
@@ -89,7 +89,7 @@ deny network-outbound pypi.org:443
 | **Save** | Храните конфигурацию для последующих операций с пакетами |
 | **Cancel** | Откажитесь от проекта |
 
-![Зеркало пакета и входные данные CA-bundle](/img/open-science/walkthrough-2026-09-08/56-package-mirror.png)
+![Зеркало пакета и входные данные CA-bundle](/img/open-science/walkthrough-2026-09-08/56-package-mirror.webp)
 
 Зеркало пакета изменяет источник пакета. Подтвердите требуемый формат root/index зеркала, сохраните и повторите небольшую операцию пакета в выбранном времени выполнения. Параметры прокси-сервера Model-Provider являются отдельными.
 

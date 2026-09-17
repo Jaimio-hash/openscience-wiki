@@ -38,7 +38,7 @@ Ein Read-Only Grant schützt das externe Verzeichnis und erlaubt gleichzeitig Au
 
 Für einen vorhandenen Ordner öffnen Sie **Files**, wählen Sie die **Artifacts**-Dropdown-Liste und dann **This computer → Add folder…**. Wählen Sie im **Grant folder access**-Dialog der App einen bestimmten Unterordner und **Read-only**, dann **Grant this folder**. Die Benutzerprofilwurzel ist möglicherweise nicht verfügbar; Wählen Sie stattdessen den Forschungs-Unterordner aus. Lesen Sie eine beliebige Notebook-Kernel-Aufprallbestätigung. Wenn Sie zu Dateien zurückkehren, überprüfen Sie den ausgewählten Ordner und seine Dateien.
 
-<Screenshot src="/img/open-science/windows/granted-folder-files.png" alt="Ein gewährter Windows-Ordner, der das öffentliche Skript und CSV zeigt" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.png" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
+<Screenshot src="/img/open-science/windows/granted-folder-files.webp" alt="Ein gewährter Windows-Ordner, der das öffentliche Skript und CSV zeigt" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.webp" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
 
 Wählen Sie im Windows **Attach files**-Dialog eine Datei aus einem Pfad aus, der chinesische Zeichen oder Leerzeichen enthält, oder geben Sie den vollständigen Pfad in das **File name**-Feld ein und öffnen Sie ihn. Überprüfen Sie zurück in der App den Anhangnamen und sehen Sie sich die Tabellenabmessungen und -inhalte an. Um eine Auswahl aufzugeben, wählen Sie **Cancel** und überprüfen Sie, ob dem Entwurf kein neuer Anhang hinzugefügt wurde.
 
@@ -55,7 +55,7 @@ Wählen Sie im Windows **Attach files**-Dialog eine Datei aus einem Pfad aus, de
 
 <PlatformContent platform="macos">
 
-![Gefilterte echte RNA-seq Ergebnisse in der Dateibibliothek](/img/open-science/guides-walkthrough/56-files-search.png)
+![Gefilterte echte RNA-seq Ergebnisse in der Dateibibliothek](/img/open-science/guides-walkthrough/56-files-search.webp)
 
 </PlatformContent>
 Die Zählung beschreibt den aktuellen Filter. Eine Suche ohne Übereinstimmungen löscht keine Dateien. **No more** bedeutet, dass die Gruppe das Laden beendet hat. Zerfall einer Gruppe durch ihre Überschrift. Verwenden sie die vorschauaktion eines dateikörpers für ein modal oder **Offen ... in geteilter Ansicht neben der Sitzung**, um die konversation neben ihm zu behalten. Der Download wirkt auf die von dieser Oberfläche ausgewählte Datei / Version.
@@ -85,7 +85,7 @@ Die Zählung beschreibt den aktuellen Filter. Eine Suche ohne Übereinstimmungen
 
 <PlatformContent platform="macos">
 
-![Report v2 im Vergleich zu seiner Originalversion](/img/open-science/guides-walkthrough/55-report-version-diff.png)
+![Report v2 im Vergleich zu seiner Originalversion](/img/open-science/guides-walkthrough/55-report-version-diff.webp)
 
 </PlatformContent>
 | Editing Control/State | Was zu tun ist |
@@ -111,7 +111,7 @@ Wenn ein anderer Autor den Bericht speichert, während Ihr Editor geöffnet blei
 
 <PlatformContent platform="macos">
 
-![Speichern blockiert, weil eine andere Version existiert](/img/open-science/local-todo-batch/37-file-save-conflict.png)
+![Speichern blockiert, weil eine andere Version existiert](/img/open-science/local-todo-batch/37-file-save-conflict.webp)
 
 </PlatformContent>
 Bestätigen Sie nach dem Speichern, dass die letzte Überarbeitung sowohl die Änderung des anderen Autors als auch Ihren beibehaltenen Entwurf enthält. Frühere Dateirevisionen bleiben über die Versionskontrollen verfügbar; Diese sind getrennt von Conversation-Message-Revisionen.

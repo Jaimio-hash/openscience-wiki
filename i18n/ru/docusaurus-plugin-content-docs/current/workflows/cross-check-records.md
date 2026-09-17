@@ -25,7 +25,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 Откройте проект и прикрепите оба CSV к **+ → Attach files**. В **Settings → Runtimes** убедитесь, что Python является **Ready** и включен. В этом забеге использовались Python 3.12.14, NumPy 2.5.3, панды 2.3.3, Matplotlib 3.11.1 и Pillow 12.3.0.
 
-![Два источника CSV, прилагаемые к запросу на сравнение](/img/open-science/workflow-extensions/temperature-input.png)
+![Два источника CSV, прилагаемые к запросу на сравнение](/img/open-science/workflow-extensions/temperature-input.webp)
 
 ## 2. Попросите выравнивание перед интерпретацией {/* #2-ask-for-alignment-before-interpretation */}
 
@@ -52,7 +52,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 Открыть **temperature-aligned.csv**. Записанное сравнение содержит **45 поделился опытом**. Каждый источник имеет все ежегодные оценки **30**, необходимые для его эталонного среднего значения 1991-2020; Недостающее годовое значение не было заполнено нулем.
 
-![Сохраненные годичные ценности и различия](/img/open-science/workflow-extensions/temperature-table.png)
+![Сохраненные годичные ценности и различия](/img/open-science/workflow-extensions/temperature-table.webp)
 
 Вычитаемые средства — **0.61266667 °C** для NASA и **0.53799554 °C** для HadCRUT. Вычтите собственное значение каждого набора данных, а не одно смещение из обоих. Проверьте единицу, год и направление вычитания, прежде чем сравнивать численные различия.
 
@@ -60,7 +60,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 Открыть **temperature-comparison.png**. Первая панель сохраняет различные исходные исходные линии; Второй сравнивает две серии после обычного периода восстановления.
 
-![Первоначальные и общие базисные температурные кривые в Open-Science](/img/open-science/workflow-extensions/temperature-plot.png)
+![Первоначальные и общие базисные температурные кривые в Open-Science](/img/open-science/workflow-extensions/temperature-plot.webp)
 
 | Записанный результат NASA минус HadCRUT | Значение |
 | --- | --- |
@@ -74,7 +74,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 Откройте **temperature-crosscheck.md** и сравните его определения источника и метрики с CSV и кодом. Таблица сохраняет первоначальные пределы достоверности HadCRUT и их механически смещенные значения, но сравнение **не** распространяет неопределенность в предполагаемом базовом уровне или зависимости между источниками.
 
-![Сохраненный отчет документирует фактические показатели и ограничения.](/img/open-science/workflow-extensions/temperature-report.png)
+![Сохраненный отчет документирует фактические показатели и ограничения.](/img/open-science/workflow-extensions/temperature-report.webp)
 
 Скачать <ExampleDownload path="/examples/workflow-extensions/temperature-aligned.csv">Выровненный CSV</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/temperature-comparison.png">фигура</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.py">Скрипт Python</ExampleDownload> и <ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.md">доклад</ExampleDownload>. С двумя доступными входными файлами, перезапуск в среде Python, содержащей перечисленные библиотеки:
 

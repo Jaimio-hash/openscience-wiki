@@ -12,7 +12,7 @@ last_update:
 
 Открыть **Settings → Agent**. Страница отделяет **Installed** от **Available**. Прочитайте версию, путь и маркер **Active** на установленной карте, прежде чем что-либо менять.
 
-![Обнаружен управляемый приложением Codex](/img/open-science/local-acceptance/agent-codex-active.png)
+![Обнаружен управляемый приложением Codex](/img/open-science/local-acceptance/agent-codex-active.webp)
 
 | Контроль/статус | Значение и действие |
 | --- | --- |
@@ -63,11 +63,11 @@ last_update:
 4. Выберите **Install OpenCode → App-managed download (recommended)**. Подождите **Installed**, затем выберите его и подтвердите **Switch**.
 5. Проверьте **Active**, путь выполнения и выбор совместимой модели. Переустановка бэкэнда не настраивает для него поставщика моделей.
 
-![Область применения OpenCode Uninstall](/img/open-science/priority-completion/01-opencode-uninstall.png)
+![Область применения OpenCode Uninstall](/img/open-science/priority-completion/01-opencode-uninstall.webp)
 
 Перед удалением бэкэнда переключитесь на другой доступный бэкэнд; Активный бэкэнд не может быть удален с помощью этого контроля. После переустановки, повторного обнаружения и активации, откройте существующий проект и запустите небольшой запрос для проверки соединения.
 
-![OpenCode снова установлен и выбран](/img/open-science/priority-completion/03-opencode-reinstalled.png)
+![OpenCode снова установлен и выбран](/img/open-science/priority-completion/03-opencode-reinstalled.webp)
 
 Если действия установки отключены, проверьте наличие другой установки / переключателя в процессе и указанную ошибку предварительного условия. Если обнаружение увенчалось успехом, но запросы не увенчались успехом, проверьте аутентификацию модели и совместимость с фреймворком / API отдельно.
 

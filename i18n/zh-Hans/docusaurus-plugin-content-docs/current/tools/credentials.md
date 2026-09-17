@@ -26,7 +26,7 @@ last_update:
 3. **Save key** 成功保存后继续等待中的调用；**Not now** 保持未配置。
 4. 检查最终状态。选择 **Not now** 可返回 **credential_required**；配置密钥后再重试。
 
-![英文应用中的 OpenAlex 凭据请求](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.jpg)
+![英文应用中的 OpenAlex 凭据请求](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.webp)
 
 界面说明密钥在本机加密并只发送到 `api.openalex.org`。Settings 表单另有 **Validate、Save、Remove key**（已有密钥时）和 **Cancel**。替换字段不显示旧密钥；安全存储不可用时需先解决系统钥匙串状态。
 
@@ -49,7 +49,7 @@ last_update:
 | Discovery | 适用时发现服务器元数据；发现成功本身不是登录成功 |
 | Cancel / Save | 放弃草稿或保存有效配置 |
 
-![OAuth 高级注册字段](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.png)
+![OAuth 高级注册字段](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.webp)
 
 在自定义 Connector 中，将命名凭据绑定到请求头、环境变量或 OAuth 选择器。名称用于引用，不应把密钥放进描述或项目指令。导出的可移植配置以占位符替换密钥；保存凭据后仍需实际服务测试才能确认可用。
 

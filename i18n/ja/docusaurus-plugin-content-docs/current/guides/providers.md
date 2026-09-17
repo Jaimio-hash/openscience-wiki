@@ -10,7 +10,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## アクセス方法の選択 {/* #choose-an-access-method */}
 
-![Codex サブスクリプション接続は、英語の初回設定で行います。](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![Codex サブスクリプション接続は、英語の初回設定で行います。](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 `Provider type` は、サブスクリプションアクセス、API、または `Custom Gateway` を選択します。 利用可能なサブスクリプションの選択肢は、アクティブなエージェントフレームワークに依存します。 キャプチャされたCodexセットアップは、`Codex subscription`、xAI OAuth、公式API、カスタムゲートウェイを示しています。 別のフレームワークが同じ選択肢を提示しないと仮定しないでください。
 
@@ -38,7 +38,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 6. **Main model**では、利用可能なサブスクリプションモデルを選択します。 たとえば、アカウントが提供している場合は、利用可能な**gpt-5.6-solの特長**エントリを選択します。 モデル名とプロバイダーを一緒に確認します。特に複数のプロバイダーが同じ名前のモデルを提供しているときです。
 7. プロジェクトを開き、バインドされたリクエストを送信します。 接続テストは認証を検証しますが、実際の応答はリクエストパスを検証します。 応答を確認し、そのセッションでツール権限リクエストが現れます。
 
-![Codex サブスクリプション検証とメインモデル選択](/img/open-science/walkthrough-2026-09-08/70-codex-subscription-connected.png)
+![Codex サブスクリプション検証とメインモデル選択](/img/open-science/walkthrough-2026-09-08/70-codex-subscription-connected.webp)
 
 | プロバイダー・ロー・コントロール | いつ使うか | 成功チェック |
 | --- | --- | --- |
@@ -62,7 +62,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 ## カスタムゲートウェイ:すべての可視フィールド {/* #custom-gateway-every-visible-field */}
 
-![カスタムゲートウェイフォームの必須フィールドエラー](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![カスタムゲートウェイフォームの必須フィールドエラー](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 `Custom Gateway` を選択することでスタート。 プロバイダータイプを変更すると、以前の選択から表示名を保存できます。そのため、名前をリセットするのではなく、名前を見直します。
 
@@ -159,7 +159,7 @@ OLLAMA_HOST=127.0.0.1:11435 ollama pull qwen3:0.6b
 | 高度な設定 → 最大出力トークン | `4096` |
 | 画像入力/思考モード | この接続チェックをオフ |
 
-![ローカルモデルアドレス、API形式、および正確なモデルID](/img/open-science/non-workflow-completion/08-local-provider-form.png)
+![ローカルモデルアドレス、API形式、および正確なモデルID](/img/open-science/non-workflow-completion/08-local-provider-form.webp)
 
 フォームは、ゲートウェイルートに`/v1`を付加します。 Open-Scienceは`localhost`、`127.0.0.1`および`[::1]`のようなループバックの住所のための空白のAPIのキーを受け入れます; 古いスクリーンショットは、プレースホルダーを表示することができます。 リモートまたはLANゲートウェイは、HTTPSとAPIキーが必要です。 ローカルサーバーがサポートするAPIフォーマットを使用してください。
 
@@ -171,7 +171,7 @@ OLLAMA_HOST=127.0.0.1:11435 ollama pull qwen3:0.6b
 
 接続チェックは、設定されたローカルエンドポイントとOpenCodeを使用して**ローカルモデルが接続されています。**で完了します。 バイオメディカル分析ではなく、テキストリクエストを検証します。
 
-![ローカルモデル接続チェックを完了](/img/open-science/non-workflow-completion/09-local-model-reply.png)
+![ローカルモデル接続チェックを完了](/img/open-science/non-workflow-completion/09-local-model-reply.webp)
 
 モデルを使用しながらサーバーの動作を保ちましょう。 別のホストの Agent の場合、`localhost` はそのホストを参照します。 エンドポイントに到達するブラウザは、エージェントが到達できないことを証明しません。
 
@@ -188,7 +188,7 @@ print((8664 + 18515) == 27179)
 
 これらは、最初のGSE60450サンプルのゼロカウントと検出遺伝子カウントです。 提案したコードをパーミッションパネルに点検し、承認し、**Notebook** を開き、**27179/真** を検証します。
 
-![Notebookコードとローカルモデルのツールコールからの実際の出力](/img/open-science/priority-completion/21-local-model-python-result.png)
+![Notebookコードとローカルモデルのツールコールからの実際の出力](/img/open-science/priority-completion/21-local-model-python-result.webp)
 
 ローカル`qwen2.5:7b`は、Codexフレームワークとローカルチャット完了エンドポイントを介してこの呼び出しを完了しました。 その初期提案は、使用できないヘルパーモジュールを参照しました。 上記の依存関係フリーコードを指定し、その提案を辞退した後に成功したチェック。 これは、別の Agent フレームワークに基づく完全な RNA-seq 解析または同等の動作の信頼できる計画ではなく、境界ツールの動作を検証します。
 

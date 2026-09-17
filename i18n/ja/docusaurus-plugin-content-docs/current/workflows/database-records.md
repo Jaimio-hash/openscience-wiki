@@ -32,7 +32,7 @@ CnH2nO2, neutral charge and linear structures. Reopen the files.
 Keep all outputs in English and do not delegate.
 ```
 
-![実際の会話でコンパウンドスコープと要求されたファイル](/img/open-science/workflow-extensions/pubchem-input.png)
+![実際の会話でコンパウンドスコープと要求されたファイル](/img/open-science/workflow-extensions/pubchem-input.webp)
 
 ## 2. 実際のデータベース呼び出しをチェックする {/* #2-check-the-actual-database-calls */}
 
@@ -40,7 +40,7 @@ Keep all outputs in English and do not delegate.
 
 この例では、正確な酸名と最初の返されたCIDを使用し、その後、バッチプロパティを確認します。 これは、これらの非曖昧な名前に適しています。 最初のヒットを取ることは、一般的な識別ルールではありません。
 
-![Notebookの実際のクエリアクティビティと保存ファイル読み込みバック](/img/open-science/workflow-extensions/pubchem-lookup.png)
+![Notebookの実際のクエリアクティビティと保存ファイル読み込みバック](/img/open-science/workflow-extensions/pubchem-lookup.webp)
 
 ## 3. 保存テーブルを開く {/* #3-open-the-saved-table */}
 
@@ -56,7 +56,7 @@ Keep all outputs in English and do not delegate.
 | ヘプタノ酸 | 8094 | C7H14O2の特長 | 130.18 |
 | オクタノック酸 | 379 | C8H16O2の特長 | 144.21 |
 
-![再オープンされた7複合CSV](/img/open-science/workflow-extensions/pubchem-table.png)
+![再オープンされた7複合CSV](/img/open-science/workflow-extensions/pubchem-table.webp)
 
 **サインイン**でマッチする行は、表示順ではありません。 フォーミュラとリニアスマイルを一緒にチェックします。 例は、返されたフィールド名、`SMILES`、`ConnectivitySMILES` の両方を保持します。 これらの化合物に一致するように、その文字列が起こります。 別の識別子またはそれからの実験的なステレオ化学として名前を変更しないでください。
 
@@ -64,7 +64,7 @@ Keep all outputs in English and do not delegate.
 
 **pubchem-homologs-source.json** を開き、すべての 8 つの操作、正確なルックアップ入力と生の応答を検査します。 手順とチェックのために**pubchem-homologs-notes.md**を開きます。 保存したCSVは、生の記録と比較していました。 7つのアイデンティティ、式および線形構造は合意しました。
 
-![保存された手順、検証結果および解釈の制限](/img/open-science/workflow-extensions/pubchem-notes.png)
+![保存された手順、検証結果および解釈の制限](/img/open-science/workflow-extensions/pubchem-notes.webp)
 
 プレビューの**Download**ボタンを使用してローカルコピーを保持します。 この完了した実行のために、<ExampleDownload path="/examples/workflow-extensions/pubchem-homologs.csv">CSV</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-source.json">ソースレコード</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-notes.md">ノートブック</ExampleDownload>をダウンロードしてください。 PubChemレコードは変更できます。 ソースのスナップショットを解析で保持します。
 

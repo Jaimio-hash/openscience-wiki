@@ -17,9 +17,9 @@ last_update:
 3. 如出现 Plan control 权限卡，检查后批准适当范围或拒绝。这是计划创建/决定记录权限，不是所有执行权限。
 4. 等待 Plan ready for review；普通回复中的计划段落不等于结构化审批卡。
 
-![Plan first 入口](/img/open-science/guides-walkthrough/21-plan-first-entry.png)
+![Plan first 入口](/img/open-science/guides-walkthrough/21-plan-first-entry.webp)
 
-![单独的计划记录权限](/img/open-science/guides-walkthrough/22-plan-permission.png)
+![单独的计划记录权限](/img/open-science/guides-walkthrough/22-plan-permission.webp)
 
 本任务限定保留原始计数、区分 ID/长度、计算样本质控、交付三个受管产物、不声称差异表达。初始要求明确，计划才容易核验。
 
@@ -27,7 +27,7 @@ last_update:
 
 Open 在对话旁打开阶段、步骤、执行者、预期输出和可行性说明。长计划可 Enter full screen，Download Plan 保存。置信度是计划评估，不代表代码已运行。
 
-![分阶段计划和输出](/img/open-science/guides-walkthrough/23-plan-review.png)
+![分阶段计划和输出](/img/open-science/guides-walkthrough/23-plan-review.webp)
 
 | 控件或状态 | 操作 |
 | --- | --- |
@@ -42,7 +42,7 @@ Open 在对话旁打开阶段、步骤、执行者、预期输出和可行性说
 
 在 **Respond to Plan** 中明确需要修改的内容。例如要求检查输入完整性、重新打开全部输出，并保留图表短标签到原始标识的映射。点击 **Send Plan feedback**，等待修订版，再逐项核对要求是否已纳入。
 
-![提交前的计划反馈](/img/open-science/guides-walkthrough/24-plan-feedback.png)
+![提交前的计划反馈](/img/open-science/guides-walkthrough/24-plan-feedback.webp)
 
 审查修订版后点击其 Approve。旧预览可能仍显示，并提示已被替换；旧步骤不是当前计划最新进度。应重新打开当前计划。
 

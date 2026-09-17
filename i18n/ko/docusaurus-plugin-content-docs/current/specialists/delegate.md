@@ -37,7 +37,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 > RNA-seq QC 검토자에 Delegate. 아래의 전체 인라인 CSV만 사용하십시오. Python에서 arithmetic을 실행하고, 12개의 명백한 가득 차있는 표본 식별자를 확인하고, zero_count_genes + detected_genes_count_gt_0 = 27179를 각 행마다 확인합니다. 각 결과를 반환하고이 검사는 요약 데이터를 공급, 고유의 카운트 매트릭스에 독립적 인 액세스하지 않는 상태.
 
-![완료된 Specialist 서브스크는 per-sample 체크로](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.jpg)
+![완료된 Specialist 서브스크는 per-sample 체크로](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.webp)
 
 이 예에서, 아이는 Python Notebook을 ran하고 **12 행, 12는 비 계산 식별자, 그리고 12/12는 27,179와 동등한 합계합니다**를 반환합니다. 첫번째 가득 차있는 표본 ID를 위해, `8,664 + 18,515 = 27,179`. 숫자 필드는 완료 및 비 부정적이었다.
 

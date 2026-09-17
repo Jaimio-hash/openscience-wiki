@@ -33,7 +33,7 @@ Si Network informa **Ready** pero una herramienta falla, expanda el error de esa
 5. Revise el nuevo borrador de fila. Usa **Retire &#91;nombre del anfitrión&#93;** para deshacerlo.
 6. Seleccione **Save changes** para persistir la lista prevista.
 
-![La validación del nombre exacto rechaza un comodín](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.png)
+![La validación del nombre exacto rechaza un comodín](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.webp)
 
 Introduzca un nombre de host como `data.example.org`, sin esquema, ruta, puerto, comodín o dirección IP. Para **Enter a hostname only, without a scheme, path, port, or wildcard.**, retire esas partes y guarde el nombre de host.
 
@@ -89,7 +89,7 @@ Seleccione **Configure** o **Edit** bajo el espejo del paquete.
 | **Save** | Almacene la configuración para operaciones de paquetes posteriores |
 | **Cancel** | Rechazar el proyecto |
 
-![Espejo del paquete y entradas de CA-bundle](/img/open-science/walkthrough-2026-09-08/56-package-mirror.png)
+![Espejo del paquete y entradas de CA-bundle](/img/open-science/walkthrough-2026-09-08/56-package-mirror.webp)
 
 Un espejo de paquete cambia la fuente del paquete. Confirme el formato de root/index requerido del espejo, ahorre y vuelva a introducir una pequeña operación de paquete en el tiempo de ejecución seleccionado. Los ajustes de proxy del modelo son separados.
 
