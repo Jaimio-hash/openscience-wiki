@@ -1,7 +1,7 @@
 ---
 title: "Delegation und Side Chat"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Delegation und Side Chat {/* #delegation-and-side-chat */}
@@ -34,7 +34,7 @@ Private **For me**-Lesezeichen sind ein anderes Lesewerkzeug; siehe [Lesebuchzei
 - **Modelleinstellungen:** Ein neues Side Chat erbt das aktuelle Hauptgesprächsmodell und den Argumentationsaufwand. Sie können sie in Side Chat ändern; die Auswahl gilt für den nächsten Versand. Codex Abonnements werden unterstützt. Überprüfen Sie den Selektor vor dem Senden.
 - **Übermittlung und Aktionen:** Gewöhnliche Antworten werden nicht automatisch an Main gesendet. Side Chat kann die Berechtigungen von Main nicht erteilen; Bestätigen Sie die Lieferung, bevor Sie Main auffordern, Maßnahmen zu ergreifen.
 - **Schließen eines Tabs:** Lesen Sie **Close Side chat?** vor der Bestätigung. Das Schließen beendet diesen Side Chat und löscht die gespeicherte Unterhaltung dauerhaft. Wählen Sie **Cancel**, um es beizubehalten, und übertragen Sie nützliche Ratschläge an Main oder einen gespeicherten Bericht, bevor Sie schließen. Wenn die Bereinigung fehlschlägt, kehrt der Tab zurück; Überprüfen Sie den Fehler, bevor Sie erneut versuchen.
-- **Nicht verfügbarer Einstieg:** Lesen Sie die Erklärung des Buttons und lösen Sie ausstehende Genehmigungen, Anhangübertragungen oder Sitzungswiederherstellungen. Für Verbindungsprobleme siehe [Fehlerbehebung](troubleshooting.md).
+- **Verfügbarkeit:** Seit v0.30.2 wird Side Chat nicht allein dadurch blockiert, dass Main arbeitet oder auf eine Genehmigung wartet. Senden Sie zuerst mindestens eine Nachricht in Main. Schreibgeschützt importierte oder nicht verfügbare übergeordnete Sitzungen verhindern das Öffnen. Zum Senden muss außerdem der Verlauf gespeichert und wiederhergestellt sein. Side Chat unterstützt keine Dateianhänge. Beachten Sie den Hinweis an der Schaltfläche; Verbindungsprobleme behandelt die [Fehlerbehebung](troubleshooting.md).
 
 ## Aufgaben delegieren {/* #task-delegation */}
 

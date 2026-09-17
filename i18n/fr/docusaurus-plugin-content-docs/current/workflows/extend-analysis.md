@@ -1,7 +1,7 @@
 ---
 title: "Étendre une analyse avec un Specialist installé"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -21,7 +21,7 @@ L'entrée est l'observation publique de R [Ensemble de données Théoph](https:/
 3. Ouvrez une nouvelle conversation dans votre projet de recherche. Choisissez un modèle disponible, puis **Agent controls → Specialist → pharmacometrics-pkpd-designer**. L'exécution enregistrée a utilisé **Abonnement Codex / gpt-5.6-sol**.
 4. Au début de **chaque message d'analyse**, tapez `/pkpd`, puis sélectionnez **Modélisation de pkpd** dans les suggestions. Confirmez qu'il devient une puce Skill avant de coller l'invite.
 
-Sélection du rôle seul renvoyé `Unknown skill` dans cette version. La sélection explicite du Skill a permis la chargeuse réelle. Cette étape est requise pour la configuration enregistrée; cet exemple n'établit pas le chargement automatique de tous les Specialist liés Skills.
+**Version de l’exemple :** Les captures et résultats ci-dessous ont été enregistrés avec v0.30.1. Dans cette configuration, sélectionner uniquement le rôle renvoyait `Unknown skill` ; il fallait sélectionner le Skill dans chaque message. v0.30.2 corrige la préparation des Skills liés aux Specialists, y compris pour les tâches déléguées. Dans la nouvelle version, sélectionnez d’abord le Specialist et vérifiez le chargement réel, puis sélectionnez explicitement le Skill si nécessaire. Cet exemple n’a pas encore été réexécuté avec v0.30.2. L’ancien contournement n’est donc pas une exigence générale, et le correctif ne constitue pas une validation de cet exemple.
 
 ![Pharmacométrie installée Specialist et ses capacités](/img/open-science/theoph-specialist/installed.jpg)
 

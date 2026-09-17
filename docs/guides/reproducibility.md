@@ -2,7 +2,7 @@
 title: Reproducibility
 description: Rerun captured research steps, compare a saved result and retain the verification record.
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # Reproducibility
@@ -82,6 +82,8 @@ To hand over conversation branches, files and evidence together, use a [.science
 ## When a check cannot finish
 
 Inspect **Areas needing attention** and the first relevant log message. Missing inputs, incomplete evidence or unsupported operations can prevent verification. Large RDS/H5AD files are not loaded for content comparison; the absence of a comparison does not establish a match.
+
+v0.30.2 fixes replay of inputs created earlier in the same turn and supported Python standard-library imports, plus Windows verification-environment pip entry points. If an older version stopped at one of these steps, update and retry the same captured result, then inspect the new log and comparison. These fixes do not supply a missing environment lock or make every historical run replayable.
 
 If preparation depends on an earlier Notebook state, inspect the [execution evidence](notebook.md) and rerun the necessary preparation before generating a new result. Keep stopped or incomplete checks distinct from completed comparisons.
 

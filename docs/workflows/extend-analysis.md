@@ -1,7 +1,7 @@
 ---
 title: "Extend an analysis with an installed Specialist"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -21,7 +21,7 @@ The input is R's public [Theoph dataset](https://www.stat.ethz.ch/R-manual/R-dev
 3. Open a new conversation in your research project. Choose an available model, then **Agent controls → Specialist → pharmacometrics-pkpd-designer**. The recorded run used **Codex subscription / gpt-5.6-sol**.
 4. At the start of **each analysis message**, type `/pkpd`, then select **pkpd-modeling** from the suggestions. Confirm that it becomes a Skill chip before pasting the prompt.
 
-Selecting the role alone returned `Unknown skill` in this version. Explicitly selecting the Skill enabled the genuine loader. This step is required for the recorded configuration; this example does not establish automatic loading of all Specialist-bound Skills.
+**Version note:** The screenshots and outputs below were recorded in v0.30.1. In that configuration, selecting the role alone returned `Unknown skill`, and the per-message Skill selection above enabled the loader. v0.30.2 fixes preparation of Specialist-bound Skills, including delegated tasks. On the newer version, first select the Specialist and inspect the actual Skill-loading result; use explicit selection if needed. This example has not yet been rerun on v0.30.2, so its historical workaround is not a universal requirement and the new fix is not a verified pass for this case.
 
 ![Installed Pharmacometrics Specialist and package version](/img/open-science/theoph-specialist/installed.jpg)
 

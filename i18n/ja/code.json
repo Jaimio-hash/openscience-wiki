@@ -1601,5 +1601,11 @@
   },
   "docs.outline.workflows.cross-check-records.scope": {
     "message": "NASA および HadCRUT の年間温度記録を比較する前に定義、単位、年および参照の期間を一直線に並べて下さい。"
+  },
+  "docs.outline.reference.v0302.title": {
+    "message": "v0.30.2"
+  },
+  "docs.outline.reference.v0302.scope": {
+    "message": "Specialist の Skill 読み込み、独立した Side Chat、データ照会と Notebook の復旧。"
   }
 }

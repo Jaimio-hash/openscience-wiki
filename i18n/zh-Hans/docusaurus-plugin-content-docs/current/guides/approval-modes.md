@@ -1,7 +1,7 @@
 ---
 title: "权限与审批"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # 权限与审批
@@ -53,6 +53,10 @@ last_update:
 ### 记住网页读取授权
 
 遇到支持该范围的 **Read web pages** 请求时，可选择 **Allow for this conversation**，让同一会话后续的网页读取复用授权。这项授权可覆盖其他网站，并非只允许第一个 URL；**Allow once** 仅批准当前调用。可在 **Remembered permissions** 中查看或撤销，它不会向 Notebook 网络白名单添加域名，也不代表允许上传。
+
+### 记住网页搜索授权 {/* #remember-web-search */}
+
+从 v0.30.2 起，受支持的 Claude Agent 原生 **Search the web** 请求也可选择 **Allow for this conversation**。同一会话后续符合条件的搜索可以复用授权；**Allow once** 只批准当前请求。在 **Remembered permissions** 中查看或撤销 **Search the web**。搜索与 **Read web pages** 是两项独立权限；此原生搜索选项并非所有框架或 Connector 都支持，应以实际提供的范围为准。
 
 ## 管理记住的权限
 

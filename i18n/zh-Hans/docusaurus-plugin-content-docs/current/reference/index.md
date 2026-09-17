@@ -27,4 +27,4 @@ last_update:
 
 ## Changelog
 
-[查看最新版本更新](../changelog/v0.30.1.md)。
+[查看最新版本更新](../changelog/v0.30.2.md)。

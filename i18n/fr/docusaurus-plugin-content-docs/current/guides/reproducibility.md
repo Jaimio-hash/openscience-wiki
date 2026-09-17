@@ -2,7 +2,7 @@
 title: "Reproductibilité"
 description: "Relancer les étapes de recherche capturées, comparer un résultat enregistré et conserver le dossier de vérification."
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # Reproductibilité {/* #reproducibility */}
@@ -82,6 +82,8 @@ Pour transmettre ensemble les branches, les fichiers et les preuves de conversat
 ## Lorsqu'un chèque ne peut pas être terminé {/* #when-a-check-cannot-finish */}
 
 Inspectez **Areas needing attention** et le premier message de journal pertinent. Des données manquantes, des preuves incomplètes ou des opérations non étayées peuvent empêcher la vérification. Les grands fichiers RDS/H5AD ne sont pas chargés pour la comparaison du contenu; l'absence de comparaison n'établit pas de correspondance.
+
+v0.30.2 corrige le replay des entrées créées plus tôt dans le même tour et supporte les importations standard-bibliothèque Python, plus les points d'entrée de pip de vérification-environnement Windows. Si une ancienne version s'est arrêtée à l'une de ces étapes, mettre à jour et réessayer le même résultat capturé, puis inspecter le nouveau journal et la comparaison. Ces corrections ne fournissent pas de verrouillage d'environnement manquant ou rendent chaque parcours historique rejouable.
 
 Si la préparation dépend d'un état Notebook antérieur, inspecter le [preuve de l'exécution](notebook.md) et réexécuter la préparation nécessaire avant de générer un nouveau résultat. Garder les contrôles arrêtés ou incomplets distincts des comparaisons terminées.
 

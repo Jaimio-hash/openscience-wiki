@@ -1,7 +1,7 @@
 ---
 title: "Python 與 R 執行環境"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -251,6 +251,8 @@ R.home()
 開啟 Notebook 輸出，與儲存報告核對。本例使用 Windows 10、Open-Science v0.28.0，實際輸出 Python **3.12.13**、`pip` **26.1.2**。讀取包後設資料不會安裝或匯入該包。
 
 <Screenshot src="/img/open-science/windows/python-runtime-output.png" alt="Windows Python Notebook 中的實際執行程式碼與版本輸出" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.png" linkLabel="開啟完整 Windows 截圖" />
+
+遇到 Windows conda R 啟動或核心恢復失敗時，可先更新至 v0.30.2 或後續版本再重試。該版本修復環境準備後的可執行檔案查詢及 R 核心恢復。更新後重新檢查環境，並在 Notebook 中執行一段簡單的 R 計算；**Ready** 本身不是執行結果。下方截圖仍保留原實操的版本與結果。
 
 Windows R 執行若提示 **Enable protected mode before authorizing R access.**，檢查 **Network settings** 與 R 卡片的 **Authorize and verify** 說明。處理提示中的授權前置條件後再執行；僅有 **Ready** 卡片不能證明執行成功。仍受阻時保留完整錯誤，按[故障排查](troubleshooting.md)處理。
 

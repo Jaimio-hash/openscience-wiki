@@ -1,7 +1,7 @@
 ---
 title: "Literature library and citations"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
@@ -145,6 +145,8 @@ Open a reference, then **More actions → Edit metadata**. Review the current va
 To add **The PRISMA Group**, select **Add creator → Creator role: Author → Name type: Organization**, enter the full name and **Save**. Reopen the record and check that the organization follows its four personal authors. Compare the generated citation with the [publisher's author list](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097).
 
 ![APA reference preserves the organization author](/img/open-science/v0.27.0/05-organization-citation.png)
+
+v0.30.2 corrects PubMed author-name parsing, including surnames, initials and suffixes. When importing or completing metadata, inspect the creator fields and generated citation against the linked source. Do not assume that installing the update rewrites metadata already stored in your Library.
 
 ## Organize the accepted records
 

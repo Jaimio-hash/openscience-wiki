@@ -2,7 +2,7 @@
 title: "Reproduzierbarkeit"
 description: "Führen Sie die erfassten Forschungsschritte erneut aus, vergleichen Sie ein gespeichertes Ergebnis und behalten Sie den Verifizierungsprotokoll."
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # Reproduzierbarkeit {/* #reproducibility */}
@@ -82,6 +82,8 @@ Um konversationszweige, dateien und beweise zusammen zu übergeben, verwenden si
 ## Wenn ein Check nicht abgeschlossen werden kann {/* #when-a-check-cannot-finish */}
 
 Überprüfen Sie **Areas needing attention** und die erste relevante Protokollnachricht. Fehlende Eingaben, unvollständige Beweise oder nicht unterstützte Operationen können eine Überprüfung verhindern. Große RDS/H5AD-Dateien werden nicht für den Inhaltsvergleich geladen; Das Fehlen eines Vergleichs führt nicht zu einer Übereinstimmung.
+
+v0.30.2 behebt die Wiedergabe von Eingaben, die zuvor in derselben Runde erstellt wurden, und unterstützt Python-Standardbibliotheksimporte sowie Windows-Verifizierungs-Umgebungs-Pip-Einstiegspunkte. Wenn eine ältere Version bei einem dieser Schritte gestoppt wurde, aktualisieren und wiederholen Sie das gleiche erfasste Ergebnis, und prüfen Sie das neue Protokoll und den Vergleich. Diese Fixes liefern keine fehlende Umgebungssperre oder machen jeden historischen Lauf wiederspielbar.
 
 Wenn die Vorbereitung von einem früheren Notebook-Zustand abhängt, inspizieren Sie den [Ausführungsnachweis](notebook.md) und führen Sie die erforderliche Vorbereitung erneut aus, bevor Sie ein neues Ergebnis generieren. Halten Sie angehaltene oder unvollständige Prüfungen getrennt von abgeschlossenen Vergleichen.
 

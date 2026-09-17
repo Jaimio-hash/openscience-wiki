@@ -1,7 +1,7 @@
 ---
 title: "Literaturbibliothek und Zitate"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
@@ -145,6 +145,8 @@ In diesem Beispiel wurden die drei Kandidaten einzeln akzeptiert und Inbox wurde
 Um **Die PRISMA Gruppe** hinzuzufügen, wählen Sie **Add creator → Creator role: Author → Name type: Organization**, geben Sie den vollständigen Namen und **Save** ein. Öffnen Sie die Aufzeichnung erneut und überprüfen Sie, ob die Organisation ihren vier persönlichen Autoren folgt. Vergleichen Sie das generierte Zitat mit dem [Autorenliste des Herausgebers](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097).
 
 ![APA-Referenz bewahrt den Autor der Organisation](/img/open-science/v0.27.0/05-organization-citation.png)
+
+v0.30.2 korrigiert PubMed Autor-Name-Parsing, einschließlich Nachnamen, Initialen und Suffixe. Überprüfen Sie beim Importieren oder Vervollständigen von Metadaten die Erstellerfelder und generierten Zitate mit der verknüpften Quelle. Gehen Sie nicht davon aus, dass durch die Installation des Updates bereits in Ihrer Bibliothek gespeicherte Metadaten neu geschrieben werden.
 
 ## Organisieren Sie die akzeptierten Aufzeichnungen {/* #organize-the-accepted-records */}
 

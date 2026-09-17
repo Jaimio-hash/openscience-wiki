@@ -2,7 +2,7 @@
 title: "Connectorの操作の参照"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -34,9 +34,11 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 返却フィールド名は動作により異なります。 以下に説明とダウンロード可能なスキーマは、各契約を指定します。 テーブルは普遍的な JSON 応答ではないです。 右手ファミリーリストを使用してジャンプし、その家族のパラメータを拡大します。 運用名を検索すると、グループを含むグループが開きます。
 
+**空の結果から別々に失敗を読んで下さい。** でんぷん v0.30.2、CellGuideのマーカー/ソース/ティッシュは空の証拠としてそれらを扱うのではなく、表面のフェッチの失敗を要求します; absentオプションのデータファイルがまだ空にすることができます。 OLS関連クエリは、不完全なペジネーションと無効な応答を拒否します。 サービスエラーは、セルタイプがマーカーや腫瘍学用語が関係する用語がないという証拠ではありません。
+
 ## 操作の入力 {/* #operation-inputs */}
 
-Connectorを一度に拡大します。 必須フィールドは、**必須条件** マークされています。 この参照とダウンロードは、Open-Science **v0.30.1**スキーマを使用します。 ネストされた`input.required`リストは権威ある; `required` のレガシートップレベルのリストは、不在である可能性があります。 コンサルティング <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">完全なダウンロード可能なレジストリ</ExampleDownload> ネスト JSON スキーマ、フルリターンの説明、エージェント・サイドのコール例。 ツールが`accessions`、`cids`、`rs_id`、または別の名前空間固有のフィールドを期待したときに、一般的な`id`を渡すしないでください。
+Connectorを一度に拡大します。 必須フィールドは、**必須** マークされています。 この参照とダウンロードは、Open-Science **v0.30.2**スキーマを使用します。 ネストされた`input.required`リストは権威ある; `required` のレガシートップレベルのリストは、不在である可能性があります。 コンサルティング <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.2.json">完全なダウンロード可能なレジストリ</ExampleDownload> ネスト JSON スキーマ、フルリターンの説明、エージェント・サイドのコール例。 ツールが`accessions`、`cids`、`rs_id`、または別の名前空間固有のフィールドを期待したときに、一般的な`id`を渡すしないでください。
 
 
 ## 化学化学品 {/* #family-1 */}
@@ -599,7 +601,7 @@ const result = await host.mcp("genes", "get_uniprot_entries", {"accessions": ["P
 
 ### `map_reactome_pathways` {/* #map_reactome_pathways */}
 
-遺伝子のシンボルまたはUniProtアクセスをReactomeパスウェイ(AnalysisServiceトークンワークフロー)にマップします。 引数:識別子(id_type="symbol"、"uniprot"の場合のUniProtアクセス)。 重複なし。 id_type ("symbol"/"uniprot"); 種 (デフォルト "Homo sapiens"); リソース(分析サービス分子リソースビュー "TOTAL" デフォルト; "UNIPROT"の特長 タンパク質レベルのマッピングを制限します。 include_disease (サービスのデフォルトは本当); コンパクト(True → 識別子 低レベル パスウェイのみ &#123;stId,name,species&#125; + reactomeリリースバージョン; 偽 → 完全な決定的な結果: 実体/反応統計(p-値、FDR、見つかり/合計)とバッチサマリー(含む)のパー識別子の完全なパスウェイセット identifiers_not_found). 戻り値:&#123;tool、reactome_version、id_type、種、n_input、遺伝子:&#123;identifier:&#123;found、n_lowlevel_pathways、pathways&#125;&#125;&#125;; パスウェイの統計とbatch_summaryをフル追加します。
+遺伝子のシンボルまたはUniProtアクセスをReactomeパスウェイ(AnalysisServiceトークンワークフロー)にマップします。 引数:識別子(id_type="symbol"、"uniprot"の場合のUniProtアクセス)。 重複なし。 id_type ("symbol"/"uniprot"); 種 (デフォルト "Homo sapiens"); リソース(分析サービス分子リソースビュー "TOTAL" デフォルト; "UNIPROT"の特長 タンパク質レベルのマッピングを制限します。 include_disease (サービスのデフォルトは本当); コンパクト(True → 識別子 低レベル パスウェイのみ &#123;stId,name,species&#125; + reactomeリリースバージョン; 偽 → 完全な決定的な結果: 実体/反応統計(p-値、FDR、見つかり/合計)とバッチサマリー(含む)のパー識別子の完全なパスウェイセット identifiers_not_found). 戻り値:&#123;tool、reactome_version、id_type、種、n_input、遺伝子:&#123;identifier:&#123;found、n_lowlevel_pathways、pathways&#125;&#125;&#125;; パスウェイの統計とbatch_summaryをフル追加します。 要求された種に渡る識別子をマッピングし、それらを人間に写し出さない。 `Homo sapiens` や `Mus musculus` など、サポートされている科学名を使用してください。 ダウンロード可能なスキーマは、サポートされているすべての名前をリストします。 空、未サポート、または不一致の種は誤りです。 `found` と `n_found` は、識別子の認識を示し、パスウェイのメンバーシップではありません。認識された識別子はゼロパスウェイを持つことができます。 コンパクトモードは、低レベルな経路のみが格納されます。
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
@@ -623,7 +625,7 @@ const result = await host.mcp("genes", "map_reactome_pathways", {"identifiers": 
 
 ### `ensembl_lookup` {/* #ensembl_lookup */}
 
-シンボルで安定したIDや遺伝子によって、遺伝子/トランスクリプト/タンパク質を組み立てます。 コアアノテーションレコード(位置、バイオタイプ、正式な成績、説明)を返します。 アーグ: クエリ (安定した ID ENSG を組み立てる.../ENST.../ENSP..., 受け入れられるバージョン; または、BRAFのような遺伝子のシンボル/エイリアス — 真の安定したID &#91;ENS +オプションの種コード + 機能レター + > = 6-digitブロック、または LRG_N&#93; のルートを ID エンドポイントに渡します。 その他すべて、以下 "ENS"から始まるシンボル ENSAのように、シンボルのエンドポイントに。 種(シンボルルックアップ、デフォルトhomo_sapiensの種名を組み立てます。) 安定した ID を無視します。 拡張(子機能ツリーを含む) — gene's トランスクリプト/エクスソン/トランスレーション; デフォルトオフ)。 &#123;found、クエリ、種、レコード&#125;を返します。 レコードは何もマッチしないとき、他の上流のルックアップのdict - 遺伝子&#123;id、display_name、説明、バイオタイプ、object_type、seq_region_name、開始、終わり、ストランド、assembly_name、canonical_transcript、バージョン、...&#125; 1 ベースの包括的な座標を使って。
+シンボルで安定したIDや遺伝子によって、遺伝子/トランスクリプト/タンパク質を組み立てます。 コアアノテーションレコード(位置、バイオタイプ、正式な成績、説明)を返します。 アーグ: クエリ (安定した ID ENSG を組み立てる.../ENST.../ENSP..., 受け入れられるバージョン; または、BRAFのような遺伝子のシンボル/エイリアス — 真の安定したID &#91;ENS +オプションの種コード + 機能レター + > = 6-digitブロック、または LRG_N&#93; のルートを ID エンドポイントに渡します。 その他すべて、以下 "ENS"から始まるシンボル ENSAのように、シンボルのエンドポイントに。 種(シンボルルックアップ、デフォルトhomo_sapiensの種名を組み立てます。) 安定した ID を無視します。 拡張(子機能ツリーを含む) — gene's トランスクリプト/エクスソン/トランスレーション; デフォルトオフ)。 &#123;found、クエリ、種、レコード&#125;を返します。 レコードは何もマッチしないとき、他の上流のルックアップのdict - 遺伝子&#123;id、display_name、説明、バイオタイプ、object_type、seq_region_name、開始、終わり、ストランド、assembly_name、canonical_transcript、バージョン、...&#125; 1 ベースの包括的な座標を使って。 成功したルックアップのために、返された`species`は、上流記録から来ています。 安定した ID は独自の種を選択しているため、要求/デフォルト種はそのルートに対して無視されます。 未設立の結果は、要求された/既定の種を選択し、`record: null` を持っています。
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
@@ -650,13 +652,14 @@ const result = await host.mcp("genomes", "ensembl_xrefs", {"stable_id": "ENSG000
 
 ### `ensembl_vep_variant` {/* #ensembl_vep_variant */}
 
-Ensembl VEP による多様な結果の予測 — (多くの場合、巨大) per-transcript 結果リストの最も厳しい最初の要約。 EITHER variant_id またはリージョン+allele を渡して下さい。 アーグ: variant_id (dbSNP の rsID rs7412、COSMIC の COSV...、または HGMD ID); 地域(GRCh38 1 ベースの包括的クロム:start-end、例えば。 7:140753336-140753336; SNV start==end; インサート start=end+1; 明示的なストランドサフィックス:1/:-1 受け入れられる); allele (variant allele 上の 転送 ストランド のための 地域 ルート, 例えば. 削除のためのTか-; 種 (デフォルト homo_sapiens); max_consequences (返された per-transcript 行、デフォルト 25 に要して下さい; n_transcript_consequence のフルカウント、保持される行は最も厳しい High>MODERATE>LOW>MODIFIER です; transcript_consequences_truncated はキャップをフラグします。 返品について &#123;n_results, 結果:&#91;&#123;入力, assembly_name, , seq_region_name、開始、端、繊維、 allele_string, , most_severe_consequence, 遺伝子:&#91;&#123;gene_id, , gene_symbol, , worst_impact, n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts , n_transcripts&#125;&#93;, n_transcript_consequences, transcript_consequences_truncated, , transcript_consequences:&#91;...&#93;、n_regulatory_feature_consequences、n_motif_feature_consequences、 colocated_variants:&#91;...&#93;&#125;. . .&#125;. . . . 未知の rsID は、上流メッセージで上げます。
+`variant_id` が指定されると ID 検索が優先され、`region`、`allele`、`allele_orientation` は無視されます。`allele` で ID 検索結果を絞り込むことはできません。領域検索は対象種の現在の参照ゲノム（ヒトでは GRCh38）を使います。座標は 1 始まりで両端を含み、挿入では `start = end + 1` とします。`allele_orientation` の既定値は `forward` で、領域に `:-1` が付いていてもアレルを参照ゲノムの正鎖として解釈します。`region` を指定した負鎖領域の配列アレルは、送信前に逆相補配列へ変換されます。負鎖領域の記号アレルには `forward` が必要です。領域検索は常に正鎖で送信され、`normalization` に変換前後の入力が残ります。座標のゲノム間変換や反転は行いません。遺伝子が負鎖にあっても、入力を負鎖にする必要はありません。
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
 | `variant_id` | 文字列 | オプション |
 | `region` | 文字列 | オプション |
 | `allele` | 文字列 | オプション |
+| `allele_orientation` | 文字列 | 任意; デフォルト: `forward`; エヌム: `forward`, `region` |
 | `species` | 文字列 | 任意; デフォルト: "homo_sapiens" |
 | `max_consequences` | 整数 | 任意; デフォルト: 25 |
 
@@ -729,14 +732,14 @@ const result = await host.mcp("genomes", "ucsc_list_tracks", {"genome": "hg38", 
 
 ### `ucsc_track_data` {/* #ucsc_track_data */}
 
-ucsc_conservation / ucsc_tfbs_clusters(遺伝子追跡、ClinVar、GWASカタログ、CpG島、繰り返し、...)の背後にある一般的なエスケープハッチ - 地域内のUCSCゲノムブラウザトラックの生行をフェッチします。 引数: 追跡 (ucsc_list_tracks から名前を、例えば。 既知のGene、cpgIslandExt、cinvarMain; chrom (chr-prefixed、chr7/chrX — UCSC はプレフィックスが必要です)。 スタート(0ベースハーフオープン) 1ベースの起動は、ここで1を起動します。 終了(排他的)。 ゲノム (デフォルト hg38); max_rows (API maxItemsOutput、デフォルト1000; truncated は、API's 独自の maxItemsLimit フラグを反映しています。 &#123;genome、トラック、クロム、開始、終わり、track_type、items_returned、truncated、行&#125; —上流の形の列(BED-like &#123;chrom、chromStart、ChromeEnd、名前、スコア、...&#125;; wiggle &#123;start, end, value&#125;. 未知のトラックが上がります。 Quirk: いくつかの巨大なトラックでは、API キャップ自体とポイントを出力します。 dataDownloadUrl — 現時点で echoed。
+ucsc_conservation / ucsc_tfbs_clusters(遺伝子追跡、ClinVar、GWASカタログ、CpG島、繰り返し、...)の背後にある一般的なエスケープハッチ - 地域内のUCSCゲノムブラウザトラックの生行をフェッチします。 引数: 追跡 (ucsc_list_tracks から名前を、例えば。 既知のGene、cpgIslandExt、cinvarMain; chrom (chr-prefixed、chr7/chrX — UCSC はプレフィックスが必要です)。 スタート(0ベースハーフオープン) 1ベースの起動は、ここで1を起動します。 終了(排他的)。 ゲノム (デフォルト hg38); max_rows (API maxItemsOutput、デフォルト1000; truncated は、API's 独自の maxItemsLimit フラグを反映しています。 &#123;genome、トラック、クロム、開始、終わり、track_type、items_returned、truncated、行&#125; —上流の形の列(BED-like &#123;chrom、chromStart、ChromeEnd、名前、スコア、...&#125;; wiggle &#123;start, end, value&#125;. 未知のトラックが上がります。 Quirk: いくつかの巨大なトラックでは、API キャップ自体とポイントを出力します。 dataDownloadUrl — 現時点で echoed。 座標は、`end > start`で非負の安全な整数でなければなりません。 無効な値は、他のローカスに丸めまたはクランプされない、拒否されます。
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
 | `track` | 文字列 | **必須** |
 | `chrom` | 文字列 | **必須** |
-| `start` | 整数 | **必須** |
-| `end` | 整数 | **必須** |
+| `start` | 整数 | **必須**; 最小値: 0; 最高: 9007199254740991 |
+| `end` | 整数 | **必須**; 最小値: 0; 最高: 9007199254740991 |
 | `genome` | 文字列 | 任意; デフォルト: "hg38" |
 | `max_rows` | 整数 | 任意; デフォルト: 1000 |
 
@@ -746,13 +749,13 @@ const result = await host.mcp("genomes", "ucsc_track_data", {"track": "cpgIsland
 
 ### `ucsc_conservation` {/* #ucsc_conservation */}
 
-UCSC phyloP / phastConsトラック(マルチスペクシーアライメント上のベース・ワイズ・アライメント)から地域のための進化的保存要約。 アーグ: クロム(chr-prefixed)。 開始(0ベースのハーフオープン)。 終了 (排他的; スパンは100000 bpでおおわれた — より大きい割れ目); ゲノム (デフォルト hg38); トラック(デフォルトphyloP100way; 肯定的な = 保存, ネガティブ = 速い進化; 代替hg38 phastCons100way、phyloP30way、phastCons30way、phyloP447way、phyloP470way; hg19 phyloP100wayAll/phastCons100way; include_values(また、ベース&#123;start、end、value&#125;ごとのリターン) max_values、values_truncated でおおわれた行は帽子を旗付けます; デフォルト false = 要約のみ。 max_values (ベースキャップのデフォルト2000)。 &#123;genome、トラック、クロム、開始、端、span_bp、n_bases_covered、coverage_fraction、平均、分、max&#125; (+values, values_truncated をリクエストすると) 各 row's ベーススパンで重ねられた状態、ウィンドウにクリップされた状態。 coverage_fractionを下げる未発見ベースは、ゼロスコアリングではありません。 非スコアは上昇を追跡します; アップストリームを回転させる行リストも上げます。
+UCSC phyloP / phastConsトラック(マルチスペクシーアライメント上のベース・ワイズ・アライメント)から地域のための進化的保存要約。 アーグ: クロム(chr-prefixed)。 開始(0ベースのハーフオープン)。 終了 (排他的; スパンは100000 bpでおおわれた — より大きい割れ目); ゲノム (デフォルト hg38); トラック(デフォルトphyloP100way; 肯定的な = 保存, ネガティブ = 速い進化; 代替hg38 phastCons100way、phyloP30way、phastCons30way、phyloP447way、phyloP470way; hg19 phyloP100wayAll/phastCons100way; include_values(また、ベース&#123;start、end、value&#125;ごとのリターン) max_values、values_truncated でおおわれた行は帽子を旗付けます; デフォルト false = 要約のみ。 max_values (ベースキャップのデフォルト2000)。 &#123;genome、トラック、クロム、開始、端、span_bp、n_bases_covered、coverage_fraction、平均、分、max&#125; (+values, values_truncated をリクエストすると) 各 row's ベーススパンで重ねられた状態、ウィンドウにクリップされた状態。 coverage_fractionを下げる未発見ベースは、ゼロスコアリングではありません。 非スコアは上昇を追跡します; アップストリームを回転させる行リストも上げます。 座標は、`end > start`で非負の安全な整数でなければなりません。 無効な値は、他のローカスに丸めまたはクランプされない、拒否されます。
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
 | `chrom` | 文字列 | **必須** |
-| `start` | 整数 | **必須** |
-| `end` | 整数 | **必須** |
+| `start` | 整数 | **必須**; 最小値: 0; 最高: 9007199254740991 |
+| `end` | 整数 | **必須**; 最小値: 0; 最高: 9007199254740991 |
 | `genome` | 文字列 | 任意; デフォルト: "hg38" |
 | `track` | 文字列 | 任意; デフォルト: "phyloP100way" |
 | `include_values` | 真偽値 | 任意; デフォルト: false |
@@ -764,13 +767,13 @@ const result = await host.mcp("genomes", "ucsc_conservation", {"chrom": "chr7", 
 
 ### `ucsc_tfbs_clusters` {/* #ucsc_tfbs_clusters */}
 
-ENCODEのトランスクリプション・ファクター・バインディング・サイト・クラスターは、地域(ChIP-seqピーク・クラスターは数百種類のセルタイプを越える)をオーバーラッピングします。 アーグ: クロム(chr-prefixed)。 開始(0ベースのハーフオープン)。 終了(排他的)。 genome (hg38 デフォルトのトラック encRegTfbsClustered ENCODE 3、または hg19 wgEncodeRegTfbsClusteredV3; 他のアセンブリは上がります; max_rows (APIのmaxItemsOutputのデフォルト1000; truncated は maxItemsLimit を反映しています。 &#123;genome、トラック、クロム、開始、端、items_returned、truncated、n_factors、要因、クラスター&#125;を戻して下さい — クラスターは (chromStart,name) &#123;name (TF 記号 e.g.) でソートします。 CTCF), クロム, クロムスタート, クロームエンド, スコア (0-1000), ソースカウント (実験をサポートする)&#125;; 要因は、明確なTFリストです。 スコア>=~600および高いsourceCount~の堅牢な結合。
+ENCODEのトランスクリプション・ファクター・バインディング・サイト・クラスターは、地域(ChIP-seqピーク・クラスターは数百種類のセルタイプを越える)をオーバーラッピングします。 アーグ: クロム(chr-prefixed)。 開始(0ベースのハーフオープン)。 終了(排他的)。 genome (hg38 デフォルトのトラック encRegTfbsClustered ENCODE 3、または hg19 wgEncodeRegTfbsClusteredV3; 他のアセンブリは上がります; max_rows (APIのmaxItemsOutputのデフォルト1000; truncated は maxItemsLimit を反映しています。 &#123;genome、トラック、クロム、開始、端、items_returned、truncated、n_factors、要因、クラスター&#125;を戻して下さい — クラスターは (chromStart,name) &#123;name (TF 記号 e.g.) でソートします。 CTCF), クロム, クロムスタート, クロームエンド, スコア (0-1000), ソースカウント (実験をサポートする)&#125;; 要因は、明確なTFリストです。 スコア>=~600および高いsourceCount~の堅牢な結合。 座標は、`end > start`で非負の安全な整数でなければなりません。 無効な値は、他のローカスに丸めまたはクランプされない、拒否されます。
 
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
 | `chrom` | 文字列 | **必須** |
-| `start` | 整数 | **必須** |
-| `end` | 整数 | **必須** |
+| `start` | 整数 | **必須**; 最小値: 0; 最高: 9007199254740991 |
+| `end` | 整数 | **必須**; 最小値: 0; 最高: 9007199254740991 |
 | `genome` | 文字列 | 任意; デフォルト: "hg38" |
 | `max_rows` | 整数 | 任意; デフォルト: 1000 |
 
@@ -799,7 +802,7 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>操作とパラメータを表示</summary>
 
-**gnomAD 座標ルール:**は参照アセンブリが付いているデータセット ピンを記録します。 r2.1/ExAC および r3/r3 の GRCh38 のための短variant の遺伝子/region の照会の使用 GRCh37; 構造的variant 遺伝子のクエリは、`gnomad_sv_r2_1` (GRCh37) または `gnomad_sv_r4` (GRCh38) を使用します。 ピンの変更は入力座標を変換しません。 `gene_constraint`とgnomAD ClinVarミラーは、固定GRCh38遺伝子のルックアップを使用し、データセットの引数を受け入れません。 Mitochondrial のクエリは、固定の GRCh38 の親のルックアップも使用します。 遺伝子または両方の注文された領域の境界線のいずれかを供給します。, 決して両方のモード. 1 から 2,147,483,647 までの領域の境界は整数でなければなりません。 ワンミリオンベースの差分は、`region_variants`に適用されます。 別のミトコンドリアリミットではありません。 リリース固有の構造変数 ID を独自の SV データセットで保持します。
+**gnomAD 座標ルール:**は参照アセンブリが付いているデータセット ピンを記録します。 r2.1/ExAC および r3/r3 の GRCh38 のための短variant の遺伝子/region の照会の使用 GRCh37; 構造的variant 遺伝子のクエリは、`gnomad_sv_r2_1` (GRCh37) または `gnomad_sv_r4` (GRCh38) を使用します。 ピンの変更は入力座標を変換しません。 `gene_constraint`とgnomAD ClinVarミラーは、固定GRCh38遺伝子のルックアップを使用し、データセットの引数を受け入れません。 Mitochondrial のクエリは、固定の GRCh38 の親のルックアップも使用します。 遺伝子または両方の注文された領域の境界線のいずれかを供給します。, 決して両方のモード. 1 から 999,999,999 までの領域の境界は整数でなければなりません。 ワンミリオンベースの差分は、`region_variants`に適用されます。 別のミトコンドリアリミットではありません。 リリース固有の構造変数 ID を独自の SV データセットで保持します。
 
 ### `get_variant` {/* #get_variant */}
 
@@ -861,8 +864,8 @@ const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP
 | フィールド | 型 | 要件と制約 |
 | --- | --- | --- |
 | `chrom` | 文字列 | **必須** |
-| `start` | 整数 | **必須**; 最小値: 1; 最高: 2147483647 |
-| `stop` | 整数 | **必須**; 最小値: 1; 最高: 2147483647 |
+| `start` | 整数 | **必須**; 最小値: 1; 最高: 999999999 |
+| `stop` | 整数 | **必須**; 最小値: 1; 最高: 999999999 |
 | `dataset` | 文字列 | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
 
 ```javascript
@@ -930,8 +933,8 @@ const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "D
 | --- | --- | --- |
 | `gene_symbol` | 文字列 | オプション |
 | `gene_id` | 文字列 | オプション |
-| `region_start` | 整数 | 任意; 最小値: 1; 最高: 2147483647 |
-| `region_stop` | 整数 | 任意; 最小値: 1; 最高: 2147483647 |
+| `region_start` | 整数 | 任意; 最小値: 1; 最高: 999999999 |
+| `region_stop` | 整数 | 任意; 最小値: 1; 最高: 999999999 |
 | `dataset` | 文字列 | 任意; デフォルト: "gnomad_r4"; enum: &#91; &#93;"gnomad_r4", , "gnomad_r4_non_ukb", , "gnomad_r3", , "gnomad_r3_controls_and_biobanks", , "gnomad_r3_non_cancer", , "gnomad_r3_non_neuro", , "gnomad_r3_non_topmed", , "gnomad_r3_non_v2", , "gnomad_r2_1", , "gnomad_r2_1_controls", , "gnomad_r2_1_non_cancer", , "gnomad_r2_1_non_neuro", , "gnomad_r2_1_non_topmed", , "エクセアック". . . |
 
 ```javascript

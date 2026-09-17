@@ -1,7 +1,7 @@
 ---
 title: "文学ライブラリと引用"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
@@ -145,6 +145,8 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 **PRISMAグループ**を追加するには、**Add creator → Creator role: Author → Name type: Organization**を選択し、フルネームと**Save**を入力します。 記録を再開し、組織が4人の個人的な作者に従うことを確認して下さい。 生成された引用を [出版社の著者リスト](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097) と比較します。
 
 ![APA 参照は組織の作者を維持します](/img/open-science/v0.27.0/05-organization-citation.png)
+
+v0.30.2 は、PubMed の作者の名前の解析を修正しました。例えば、姓、イニシャル、サフィックスなどです。 メタデータをインポートまたはコンパイルする際に、クリエイターのフィールドを調べ、リンクされたソースに対する生成された引用を調べます。 既に保存したメタデータをライブラリに書き換える更新をインストールすることを想定しないでください。
 
 ## 採択された記録を整理する {/* #organize-the-accepted-records */}
 

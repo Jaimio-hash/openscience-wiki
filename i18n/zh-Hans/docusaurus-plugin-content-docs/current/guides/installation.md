@@ -1,7 +1,7 @@
 ---
 title: "安装与更新"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -70,7 +70,7 @@ Homebrew 自动选择 Apple Silicon 或 Intel。安装后在 **Settings → Gene
 
 要求：Git、Node.js 22、npm，以及 Electron 在当前平台的构建前提。代理框架可在应用中安装或选择。仓库会在安装阶段生成 Prisma Client、应用补丁并准备 Electron 原生依赖。
 
-需要复现源码安装时，先从 [Changelog](../changelog/v0.30.1.md) 确定目标发布标签，再安装依赖。默认克隆跟随分支，不会固定到某个发布版本。记录所选标签、源码提交及运行时版本，便于他人复现环境。
+需要复现源码安装时，先从 [Changelog](../changelog/v0.30.2.md) 确定目标发布标签，再安装依赖。默认克隆跟随分支，不会固定到某个发布版本。记录所选标签、源码提交及运行时版本，便于他人复现环境。
 
 将下方 `RELEASE_TAG` 替换为所选发行页的完整标签（包括开头的 `v`）。如果需要跟随开发分支，省略 `--branch RELEASE_TAG --depth 1`；这条路线会使用默认分支。
 

@@ -1,7 +1,7 @@
 ---
 title: "Genehmigungen und Genehmigungen"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Genehmigungen und Genehmigungen {/* #permissions-and-approvals */}
@@ -53,6 +53,10 @@ Die primäre Schaltfläche Erlauben verwendet normalerweise den Konversationsumf
 ### Denken Sie daran, Web-Reading Genehmigung {/* #remember-web-reading-approval */}
 
 Wählen Sie für eine unterstützte **Webseiten lesen**-Anfrage **Allow for this conversation**, um sich diese Funktion für spätere Weblesungen in derselben Konversation zu merken. Es kann andere Websites abdecken, nicht nur die erste URL. **Allow once** gilt nur für diesen Aufruf. Überprüfung oder Widerruf der Finanzhilfe unter **Gespeicherte Berechtigungen**; Es fügt keine Hosts zur Notebook-Netzwerk-Erlaubnisliste hinzu oder autorisiert Uploads.
+
+### Denken Sie daran, Web-Such-Genehmigung {/* #remember-web-search */}
+
+Ab v0.30.2 bieten unterstützte native **Search the web**-Anfragen von Claude Agent auch **Allow for this conversation** an. Passende spätere Suchanfragen derselben Unterhaltung können diese Berechtigung wiederverwenden. **Allow once** gilt nur für die aktuelle Anfrage. Unter **Remembered permissions** können Sie **Search the web** prüfen oder widerrufen. Suche und **Read web pages** sind getrennte Berechtigungen. Diese Option wird nicht von jedem Framework oder Connector unterstützt; prüfen Sie den angezeigten Geltungsbereich.
 
 ## Verwalten Sie erinnerten Zugriff {/* #manage-remembered-access */}
 

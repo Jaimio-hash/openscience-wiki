@@ -18,7 +18,7 @@ const operations = (text) => [...text.matchAll(/^### `([^`]+)`\n\n([^\n]+)/gm)].
 
 test('translated operation explanations preserve all callable names and example arguments', () => {
   const original = operations(en), translated = operations(zh);
-  const registry = JSON.parse(readFileSync('static/examples/capabilities/connector-catalog-v0.30.1.json', 'utf8'));
+  const registry = JSON.parse(readFileSync('static/examples/capabilities/connector-catalog-v0.30.2.json', 'utf8'));
   const dataTools = registry.filter((c) => c.id !== 'molecule').flatMap((c) => c.tools);
   assert.equal(original.length, 237);
   assert.deepEqual(original.map((t) => t.name).sort(), dataTools.map((t) => t.id).sort());
@@ -46,7 +46,15 @@ for (const prefix of locales.map((locale) => locale === 'en' ? '' : `${locale}/`
   });
 }
 
-const currentRegistry = JSON.parse(readFileSync('static/examples/capabilities/connector-catalog-v0.30.1.json', 'utf8'));
+const currentRegistry = JSON.parse(readFileSync('static/examples/capabilities/connector-catalog-v0.30.2.json', 'utf8'));
+for (const prefix of ['', 'zh-Hans/']) {
+  test(`${prefix || 'en/'} latest release belongs to the documentation sidebar`, () => {
+    const html = readFileSync(`${buildDir}/${prefix}changelog/v0-30-2/index.html`, 'utf8');
+    const aside = html.match(/<aside\b[\s\S]*?<\/aside>/)?.[0];
+    assert.ok(aside, 'the new release must not become a standalone page without chapter navigation');
+    assert.ok(aside.includes(`/docs/${prefix}changelog/v0-30-2/`));
+  });
+}
 const currentTools = currentRegistry.filter((c) => c.id !== 'molecule').flatMap((c) => c.tools);
 for (const [locale, prose, marker] of [['en', en, '**required**'], ['zh-Hans', zh, '**\u5fc5\u586b**']]) {
   test(`${locale}: parameter tables preserve schema-required inputs and gnomAD coordinate bounds`, () => {
@@ -62,7 +70,7 @@ for (const [locale, prose, marker] of [['en', en, '**required**'], ['zh-Hans', z
         const fields = tool.id === 'region_variants' ? ['start', 'stop'] : ['region_start', 'region_stop'];
         for (const field of fields) {
           const row = body.split('\n').find((line) => line.startsWith(`| \`${field}\` |`));
-          assert.ok(row?.includes('2147483647'), `${tool.id}/${field}: missing coordinate upper bound`);
+          assert.ok(row?.includes('999999999'), `${tool.id}/${field}: missing coordinate upper bound`);
         }
       }
     }

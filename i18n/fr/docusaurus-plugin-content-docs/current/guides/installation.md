@@ -1,7 +1,7 @@
 ---
 title: "Installation et mises à jour"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -70,7 +70,7 @@ Le dossier d’installation contient l’application ; **Data location**, dans l
 
 Vous avez besoin de Git, Node.js 22, npm, et la plate-forme construit les conditions préalables pour Electron. Installer ou sélectionner un cadre d'agent dans l'application. Pendant l'installation, le dépôt génère le client Prisma, applique les correctifs app et prépare les dépendances natives d'Electron.
 
-Pour une installation source reproductible, choisissez la balise de libération prévue à partir de [Changer de journal](../changelog/v0.30.1.md) avant d'installer les dépendances. Un clone par défaut suit la branche plutôt qu'une libération fixe. Enregistrez la balise sélectionnée, le commit source et les versions d'exécution afin qu'une autre personne puisse reproduire l'environnement.
+Pour une installation source reproductible, choisissez la balise de libération prévue à partir de [Changer de journal](../changelog/v0.30.2.md) avant d'installer les dépendances. Un clone par défaut suit la branche plutôt qu'une libération fixe. Enregistrez la balise sélectionnée, le commit source et les versions d'exécution afin qu'une autre personne puisse reproduire l'environnement.
 
 Remplacer `RELEASE_TAG` ci-dessous par la balise exacte affichée sur la version sélectionnée (y compris sa `v` de tête). Pour suivre le développement en cours, omettre `--branch RELEASE_TAG --depth 1`; que la commande suivra la branche par défaut.
 

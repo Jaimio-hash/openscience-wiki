@@ -1,7 +1,7 @@
 ---
 title: "Библиотека литературы и цитаты"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
@@ -145,6 +145,8 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 Чтобы добавить **Группа PRISMA**, выберите **Add creator → Creator role: Author → Name type: Organization**, введите полное имя и **Save**. Откройте запись и проверьте, что организация следует за своими четырьмя личными авторами. Сравните сгенерированную цитату с [Список авторов издателя](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097).
 
 ![Справка APA сохраняет автора организации](/img/open-science/v0.27.0/05-organization-citation.png)
+
+v0.30.2 исправляет парсинг имени автора PubMed, включая фамилии, инициалы и суффиксы. При импорте или заполнении метаданных проверьте поля создателя и сгенерируйте цитату против связанного источника. Не думайте, что установка обновления переписывает метаданные, уже хранящиеся в вашей Библиотеке.
 
 ## Организуйте принятые записи {/* #organize-the-accepted-records */}
 

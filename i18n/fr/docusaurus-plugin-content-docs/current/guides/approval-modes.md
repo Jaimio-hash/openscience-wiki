@@ -1,7 +1,7 @@
 ---
 title: "Autorisations et agréments"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Autorisations et agréments {/* #permissions-and-approvals */}
@@ -53,6 +53,10 @@ Le bouton principal Autoriser utilise normalement la portée de la conversation 
 ### Souvenez-vous de l'approbation de la lecture sur le Web {/* #remember-web-reading-approval */}
 
 Pour une requête **Lire des pages web** prise en charge, choisissez **Allow for this conversation** pour vous souvenir de cette capacité pour les lectures web ultérieures dans la même conversation. Il peut couvrir d'autres sites Web, pas seulement la première URL. **Allow once** s'applique uniquement à cet appel. Examiner ou révoquer la subvention en vertu de **Autorisations mémorisées**; il n'ajoute pas d'hôtes à la liste d'autorisation du réseau Notebook ni n'autorise les téléchargements.
+
+### Souvenez-vous de l'approbation de la recherche en ligne {/* #remember-web-search */}
+
+Depuis v0.30.2, les requêtes natives **Search the web** prises en charge par Claude Agent proposent aussi **Allow for this conversation**. Les recherches suivantes admissibles dans cette conversation peuvent réutiliser cette autorisation. **Allow once** ne couvre que la requête actuelle. Consultez ou révoquez **Search the web** dans **Remembered permissions**. La recherche et **Read web pages** sont deux permissions distinctes. Cette option ne s’applique pas à tous les frameworks ou Connectors : vérifiez la portée affichée.
 
 ## Gérer l'accès mémorisé {/* #manage-remembered-access */}
 

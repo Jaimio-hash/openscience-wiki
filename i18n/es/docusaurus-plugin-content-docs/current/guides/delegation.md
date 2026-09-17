@@ -1,7 +1,7 @@
 ---
 title: "Delegación y Side Chat"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Delegación y Side Chat {/* #delegation-and-side-chat */}
@@ -34,7 +34,7 @@ Los marcadores privados **For me** son una herramienta de lectura diferente; ver
 - **Configuración del modelo:** Un nuevo Side Chat hereda el modelo y el esfuerzo de razonamiento de la conversación principal actual. Puedes cambiarlos en Side Chat; la selección se aplica a su próximo envío. Se admiten suscripciones Codex. Compruebe el selector antes de enviar.
 - **Envío y acciones:** Las respuestas ordinarias no se envían automáticamente a Main. Side Chat no puede conceder permisos de Main; confirmar la entrega antes de pedir a Main que tome acción.
 - **Cerrar una pestaña:** Lee **Close Side chat?** antes de confirmar. Al cerrar la pestaña, se detiene ese Side Chat y se elimina permanentemente la conversación guardada. Seleccione **Cancel** para retenerlo, y transferir consejos útiles a Main o un informe guardado antes de cerrar. Si la limpieza falla, la pestaña vuelve; inspeccionar el error antes de reintentar.
-- **Opción no disponible:** Lee la explicación del botón y resuelve las aprobaciones pendientes, transferencias de adjuntos o restauración de sesión. Para problemas de conexión, consulte [Solución de problemas](troubleshooting.md).
+- **Disponibilidad:** Desde v0.30.2, que Main esté trabajando o esperando autorización no bloquea por sí solo Side Chat. Envía primero al menos un mensaje en Main. No se puede abrir en sesiones importadas de solo lectura ni cuando la sesión principal no está disponible. Para enviar también debe haberse guardado y restaurado el historial. Side Chat no admite archivos adjuntos. Sigue el aviso del botón; para problemas de conexión, consulta [Solución de problemas](troubleshooting.md).
 
 ## Delegación de tareas {/* #task-delegation */}
 

@@ -1,7 +1,7 @@
 ---
 title: "Durées d'exécution Python et R"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -249,6 +249,8 @@ Pour une vérification rapide avant d'utiliser les données de recherche, demand
 Ouvrez la sortie de Notebook et comparez-la avec le rapport enregistré. Cet exemple Windows 10 dans Open-Science v0.28.0 rapporte Python **3.12.13** et `pip` **26.1.2**. La lecture des métadonnées du paquet n'installe pas ou n'importe pas ce paquet.
 
 <Screenshot src="/img/open-science/windows/python-runtime-output.png" alt="Windows Python Notebook montrant le code exécuté et sa sortie de version réelle" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.png" linkLabel="Ouvrez la capture d&#39;écran complète de Windows" />
+
+Pour les pannes de démarrage ou de récupération du noyau de Windows conda R, utilisez v0.30.2 ou plus tard avant de réessayer. La version corrige la recherche exécutable après la préparation de l'environnement et la récupération du noyau R. Après mise à jour, revérifiez l'environnement et exécutez un petit calcul R dans Notebook; **Ready** seul n'est pas un résultat d'exécution. Les captures d'écran ci-dessous conservent les versions et les résultats de leurs sorties originales.
 
 Pour une exécution Windows R qui signale **Activer le mode protégé avant d'autoriser l'accès à R.**, inspectez **Network settings** et les instructions **Authorize and verify** de la carte R. Résoudre la condition préalable à l'autorisation signalée avant de procéder à une nouvelle mise en service; une carte **Ready** seule ne confirme pas l'exécution. Conservez l'erreur complète si la requête reste bloquée et suivez [Dépannage](troubleshooting.md).
 

@@ -1,7 +1,7 @@
 ---
 title: "Bibliothèque de littérature et citations"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
@@ -145,6 +145,8 @@ Ouvrez une référence, puis **More actions → Edit metadata**. Passez en revue
 Pour ajouter **Le groupe PRISMA**, sélectionnez **Add creator → Creator role: Author → Name type: Organization**, entrez le nom complet et **Save**. Rouvrir le dossier et vérifier que l'organisation suit ses quatre auteurs personnels. Comparer la citation générée avec la [Liste des auteurs de l'éditeur](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097).
 
 ![La référence APA préserve l'auteur de l'organisation](/img/open-science/v0.27.0/05-organization-citation.png)
+
+v0.30.2 corrige l'analyse du nom d'auteur PubMed, y compris les noms de famille, les initiales et les suffixes. Lorsque vous importez ou remplissez des métadonnées, inspectez les champs du créateur et produisez des citations en fonction de la source liée. Ne présumez pas que l'installation de la mise à jour réécrit les métadonnées déjà stockées dans votre bibliothèque.
 
 ## Organiser les dossiers acceptés {/* #organize-the-accepted-records */}
 

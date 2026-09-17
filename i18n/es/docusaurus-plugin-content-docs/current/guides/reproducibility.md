@@ -2,7 +2,7 @@
 title: "Reproducibilidad"
 description: "Realizar los pasos de investigación capturados, comparar un resultado ahorrado y conservar el registro de verificación."
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # Reproducibilidad {/* #reproducibility */}
@@ -82,6 +82,8 @@ Para entregar las ramas de conversación, archivos y pruebas juntos, utilice un 
 ## Cuando un cheque no puede terminar {/* #when-a-check-cannot-finish */}
 
 Inspeccione **Areas needing attention** y el primer mensaje de registro relevante. La pérdida de insumos, pruebas incompletas o operaciones no apoyadas pueden impedir la verificación. Los archivos RDS/H5AD grandes no se cargan para la comparación de contenidos; la ausencia de una comparación no establece una coincidencia.
+
+v0.30.2 fija la reproducción de los insumos creados anteriormente en el mismo turno y soporta las importaciones estándar de la biblioteca Python, además de los puntos de entrada de la tubería de verificación Windows. Si una versión anterior se detuvo en uno de estos pasos, actualizar y reiniciar el mismo resultado capturado, entonces inspeccione el nuevo registro y comparación. Estas correcciones no suministran una cerradura de entorno perdido o hacen que cada carrera histórica sea rejugable.
 
 Si la preparación depende de un estado Notebook anterior, inspeccione el [prueba de ejecución](notebook.md) y vuelva a ejecutar la preparación necesaria antes de generar un nuevo resultado. Mantenga controles parados o incompletos distintos de las comparaciones completadas.
 

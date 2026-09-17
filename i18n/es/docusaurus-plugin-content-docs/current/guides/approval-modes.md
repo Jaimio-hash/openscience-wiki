@@ -1,7 +1,7 @@
 ---
 title: "Permisos y aprobaciones"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Permisos y aprobaciones {/* #permissions-and-approvals */}
@@ -53,6 +53,10 @@ El botón principal Permitir normalmente utiliza el alcance de la conversación 
 ### Recuerde la aprobación de la lectura web {/* #remember-web-reading-approval */}
 
 Para una solicitud de **Leer páginas web** compatible, elija **Allow for this conversation** para recordar que la capacidad para más tarde lee la web en la misma conversación. Puede cubrir otros sitios web, no sólo la primera URL. **Allow once** sólo se aplica a esa llamada. Revisar o revocar la subvención en virtud de **Permisos recordados**; no añade hosts a la red Notebook permitlist o autoriza cargas.
+
+### Recuerde la aprobación de la búsqueda web {/* #remember-web-search */}
+
+Desde v0.30.2, las solicitudes nativas **Search the web** compatibles de Claude Agent también ofrecen **Allow for this conversation**. Las búsquedas posteriores que correspondan dentro de esa conversación pueden reutilizar el permiso. **Allow once** solo autoriza la solicitud actual. Consulta o revoca **Search the web** en **Remembered permissions**. La búsqueda y **Read web pages** son permisos distintos. No todos los frameworks ni Connectors admiten esta opción; comprueba el alcance indicado.
 
 ## Administrar acceso recordado {/* #manage-remembered-access */}
 

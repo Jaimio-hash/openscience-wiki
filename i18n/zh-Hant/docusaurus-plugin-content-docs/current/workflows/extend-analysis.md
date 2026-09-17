@@ -1,7 +1,7 @@
 ---
 title: "使用已安裝的 Specialist 擴充套件分析"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -21,7 +21,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 3. 在研究專案中新建會話，選擇可用模型，再選擇 **Agent controls → Specialist → pharmacometrics-pkpd-designer**。本次使用 **Codex subscription / gpt-5.6-sol**。
 4. 在**每條分析訊息的開頭**輸入 `/pkpd`，從候選項中選擇 **pkpd-modeling**。確認它變為 Skill 標籤後，再貼上提示詞。
 
-本版本僅選擇專家角色會返回 `Unknown skill`；顯式選擇 Skill 後，真實載入器才能成功載入。上述步驟是本次配置下的必要操作，不代表專家繫結的全部 Skill 已能自動載入。
+&#42;&#42;版本說明：&#42;&#42;下方截圖與結果記錄於 v0.30.1。當時僅選擇專家角色會返回 `Unknown skill`，按上面的步驟逐條選擇 Skill 後才能載入。v0.30.2 已修復專家繫結 Skill 的準備過程，也覆蓋委派任務。在新版中可先選擇 Specialist，檢查實際 Skill 載入結果；需要時再顯式選擇。本案例尚未在 v0.30.2 重跑，因此舊版繞行步驟不是通用要求，新版修復也不代表本案例已複測透過。
 
 ![已安裝的 Pharmacometrics Specialist 及其能力](/img/open-science/theoph-specialist/installed.jpg)
 

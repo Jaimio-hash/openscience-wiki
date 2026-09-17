@@ -27,4 +27,4 @@ last_update:
 
 ## Changelog {/* #changelog */}
 
-[檢視最新版本更新](../changelog/v0.30.1.md)。
+[檢視最新版本更新](../changelog/v0.30.2.md)。

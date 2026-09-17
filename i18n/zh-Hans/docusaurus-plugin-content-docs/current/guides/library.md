@@ -1,7 +1,7 @@
 ---
 title: "文献库与引用"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
@@ -145,6 +145,8 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 补充 **The PRISMA Group** 时，选择 **Add creator → Creator role: Author → Name type: Organization**，填写完整名称并 **Save**。重新打开条目，确认机构位于四位个人作者之后，再将生成引用与[出版方作者列表](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097)比较。
 
 ![APA 引文保留机构作者](/img/open-science/v0.27.0/05-organization-citation.png)
+
+v0.30.2 更正了 PubMed 作者姓名的解析，包括姓氏、名字缩写和后缀。导入或补全文献元数据后，对照来源检查作者字段及生成的引用。不要假定安装更新会自动重写文献库中已有的元数据。
 
 ## 整理已接受记录
 

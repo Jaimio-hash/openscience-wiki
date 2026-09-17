@@ -27,4 +27,4 @@ last_update:
 
 ## 관련 링크 {/* #changelog */}
 
-[최신 릴리스 노트를 찾아](../changelog/v0.30.1.md).
+[최신 릴리스 노트를 찾아](../changelog/v0.30.2.md).

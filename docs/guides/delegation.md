@@ -1,7 +1,7 @@
 ---
 title: "Delegation and Side Chat"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Delegation and Side Chat
@@ -34,7 +34,7 @@ Private **For me** bookmarks are a different reading tool; see [Reading bookmark
 - **Model settings:** A new Side Chat inherits the current main conversation's model and reasoning effort. You can change them in Side Chat; the selection applies to its next send. Codex subscriptions are supported. Check the selector before sending.
 - **Delivery and actions:** Ordinary replies are not automatically sent to Main. Side Chat cannot grant Main's permissions; confirm delivery before asking Main to take action.
 - **Closing a tab:** Read **Close Side chat?** before confirming. Closing stops that Side Chat and permanently deletes its saved conversation. Select **Cancel** to retain it, and transfer useful advice to Main or a saved report before closing. If cleanup fails, the tab returns; inspect the error before retrying.
-- **Unavailable entry:** Read the button's explanation and resolve pending approvals, attachment transfers or session restoration. For connection problems, see [Troubleshooting](troubleshooting.md).
+- **Availability:** In v0.30.2, Main running or waiting for approval does not by itself block Side Chat. Send at least one message in Main first. Read-only imported sessions and unavailable parent sessions cannot open Side Chat; sending also waits for its history to be saved and restored. Side Chat does not accept file attachments. Follow the actual button explanation; connection problems are covered in [Troubleshooting](troubleshooting.md).
 
 ## Task delegation
 

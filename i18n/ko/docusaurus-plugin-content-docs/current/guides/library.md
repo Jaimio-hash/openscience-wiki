@@ -1,7 +1,7 @@
 ---
 title: "문학 도서관 및 인용"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
@@ -145,6 +145,8 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 **PRISMA 그룹**을 추가하려면 **Add creator → Creator role: Author → Name type: Organization**을 선택하고 전체 이름과 **Save**를 입력하십시오. 기록을 다시 열고 조직이 4 명의 개인 저자를 따르는 것을 확인합니다. [출판사의 저자 목록](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097)과 생성된 인용 비교.
 
 ![APA 참고는 조직 저자를 보존합니다.](/img/open-science/v0.27.0/05-organization-citation.png)
+
+v0.30.2는 PubMed 저자 이름 파싱을 수정하여 성, 초기 및 suffixes를 포함한 수정합니다. metadata를 가져 오거나 완료하면 제작자 필드를 검사하고 연결된 소스에 대한 생성 된 인용을 검사합니다. 업데이트가 라이브러리에 저장 된 메타데이터를 다시 작성하는 것을 가정하지 마십시오.
 
 ## 허용된 레코드를 구성 {/* #organize-the-accepted-records */}
 

@@ -2,7 +2,7 @@
 title: "Connector 操作引數參考"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -34,9 +34,11 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 各操作返回欄位不同，下方描述與可下載 schema 定義對應契約；此表不是統一 JSON 格式。可從右側資料來源目錄跳轉，再展開該類引數。搜尋具體操作名也會展開其所在分組。
 
+&#42;&#42;區分查詢失敗與空結果。&#42;&#42;v0.30.2 中，CellGuide 的標記、來源和組織查詢會報告獲取失敗，不再把它當作空證據；可選資料檔案確實不存在時仍可能為空。OLS 關係查詢會拒絕分頁不完整或無效響應。服務錯誤不能證明某細胞型別沒有標記，或某本體術語沒有關聯項。
+
 ## 操作輸入 {/* #操作输入 */}
 
-每次展開一個 Connector。必填項標為 **必填**，本頁與下載目錄依據 Open-Science **v0.30.1** 的結構定義。以巢狀的 `input.required` 為準；舊式頂層 `required` 可能不存在。<ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">完整登錄檔下載</ExampleDownload>提供巢狀 JSON、完整返回說明和準確 Agent 側呼叫示例。工具要求 `accessions`、`cids`、`rs_id` 等專用欄位時，不要統一改為 `id`。
+每次展開一個 Connector。必填項標為 **必填**，本頁與下載目錄依據 Open-Science **v0.30.2** 的結構定義。以巢狀的 `input.required` 為準；舊式頂層 `required` 可能不存在。<ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.2.json">完整登錄檔下載</ExampleDownload>提供巢狀 JSON、完整返回說明和準確 Agent 側呼叫示例。工具要求 `accessions`、`cids`、`rs_id` 等專用欄位時，不要統一改為 `id`。
 
 
 ## 化學 {/* #family-1 */}
@@ -599,7 +601,7 @@ const result = await host.mcp("genes", "get_uniprot_entries", {"accessions": ["P
 
 ### `map_reactome_pathways` {/* #map_reactome_pathways */}
 
-將基因符號或 UniProt 登入號對映到 Reactome 通路。id_type 與輸入型別匹配，標識不得重複。compact 返回每項低層通路及 Reactome 釋出資訊；完整模式增加實體、反應統計和 identifiers_not_found。物種及分子資源檢視應與研究輸入一致。
+將基因符號或 UniProt 登入號對映到 Reactome 通路。id_type 與輸入型別匹配，標識不得重複。compact 返回每項低層通路及 Reactome 釋出資訊；完整模式增加實體、反應統計和 identifiers_not_found。物種及分子資源檢視應與研究輸入一致。 按請求的物種對映通路，不會把標識投影到人類。使用受支援的學名，例如 `Homo sapiens` 或 `Mus musculus`；完整名單見下載的結構定義。空值、不支援的物種或返回物種不匹配均會報錯。`found` 和 `n_found` 表示標識被識別，不保證該物種中存在通路；識別成功也可能返回零條通路。compact 模式只返回低層通路。
 
 | 欄位 | 型別 | 要求與約束 |
 | --- | --- | --- |
@@ -623,7 +625,7 @@ const result = await host.mcp("genes", "map_reactome_pathways", {"identifiers": 
 
 ### `ensembl_lookup` {/* #ensembl_lookup */}
 
-按 Ensembl 穩定 ID 或基因符號獲取位置、生物型別、典型轉錄本等註釋。符號查詢使用 species，穩定 ID 查詢忽略它；expand 可加入轉錄本、外顯子和翻譯樹。未找到時 found 為 false、record 為 null。座標為從 1 開始的閉區間。
+按 Ensembl 穩定 ID 或基因符號獲取位置、生物型別、典型轉錄本等註釋。符號查詢使用 species，穩定 ID 查詢忽略它；expand 可加入轉錄本、外顯子和翻譯樹。未找到時 found 為 false、record 為 null。座標為從 1 開始的閉區間。 查詢成功時，返回的 `species` 來自上游記錄。穩定 ID 自帶物種身份，不使用請求或預設的物種；未找到時才回顯請求或預設物種，並返回 `record: null`。
 
 | 欄位 | 型別 | 要求與約束 |
 | --- | --- | --- |
@@ -650,13 +652,14 @@ const result = await host.mcp("genomes", "ensembl_xrefs", {"stable_id": "ENSG000
 
 ### `ensembl_vep_variant` {/* #ensembl_vep_variant */}
 
-用 Ensembl VEP 預測變異後果，variant_id 與 region 加 allele 兩條輸入路線二選一。區域使用對應組裝、從 1 開始的閉區間；插入時 start 等於 end 加 1。按 HIGH、MODERATE、LOW、MODIFIER 排序後限制轉錄本結果，完整數量和截斷標誌單獨返回。未知 rsID 返回上游錯誤。
+提供 `variant_id` 時優先按 ID 查詢，忽略 `region`、`allele` 和 `allele_orientation`，也不會用 `allele` 篩選 ID 結果。區域查詢使用該物種當前組裝，人類為 GRCh38；座標從 1 開始且兩端包含，插入時 `start = end + 1`。`allele_orientation` 預設為 `forward`，即使區域字尾為 `:-1`，等位基因也按參考正鏈解釋；設為 `region` 時，負鏈區域中的序列等位基因會先反向互補。負鏈區域的符號等位基因必須使用 `forward`。區域請求統一按正鏈傳送，`normalization` 保留原輸入與規範化結果；不轉換參考組裝，也不反轉座標。基因位於負鏈不意味著必須提供負鏈輸入。
 
 | 欄位 | 型別 | 要求與約束 |
 | --- | --- | --- |
 | `variant_id` | 字串 | 可選 |
 | `region` | 字串 | 可選 |
 | `allele` | 字串 | 可選 |
+| `allele_orientation` | 字串 | 可選; 預設值：`forward`; 列舉：`forward`、`region` |
 | `species` | 字串 | 可選; 預設值： &quot;homo_sapiens&quot; |
 | `max_consequences` | 整數 | 可選; 預設值： 25 |
 
@@ -729,14 +732,14 @@ const result = await host.mcp("genomes", "ucsc_list_tracks", {"genome": "hg38", 
 
 ### `ucsc_track_data` {/* #ucsc_track_data */}
 
-獲取 UCSC 指定軌道在區域中的原始記錄。chrom 須含 chr 字首，start/end 使用從 0 開始的半開區間；Ensembl 起點需減 1。返回行結構取決於軌道，truncated 反映上游限制；若提供 dataDownloadUrl，可用它獲取大規模資料。
+獲取 UCSC 指定軌道在區域中的原始記錄。chrom 須含 chr 字首，start/end 使用從 0 開始的半開區間；Ensembl 起點需減 1。返回行結構取決於軌道，truncated 反映上游限制；若提供 dataDownloadUrl，可用它獲取大規模資料。座標須為非負安全整數，並滿足 `end > start`；無效值會報錯，不會被取整或截到另一個位置。
 
 | 欄位 | 型別 | 要求與約束 |
 | --- | --- | --- |
 | `track` | 字串 | **必填** |
 | `chrom` | 字串 | **必填** |
-| `start` | 整數 | **必填** |
-| `end` | 整數 | **必填** |
+| `start` | 整數 | **必填**; 最小值： 0; 最大值： 9007199254740991 |
+| `end` | 整數 | **必填**; 最小值： 0; 最大值： 9007199254740991 |
 | `genome` | 字串 | 可選; 預設值： &quot;hg38&quot; |
 | `max_rows` | 整數 | 可選; 預設值： 1000 |
 
@@ -746,13 +749,13 @@ const result = await host.mcp("genomes", "ucsc_track_data", {"track": "cpgIsland
 
 ### `ucsc_conservation` {/* #ucsc_conservation */}
 
-彙總 UCSC phyloP 或 phastCons 區域保守性。座標從 0 開始、右端不含，視窗最長 100000 bp；統計按覆蓋鹼基加權，未覆蓋鹼基不會當作零分。可附帶受 max_values 限制的逐鹼基值；上游截斷會報錯。
+彙總 UCSC phyloP 或 phastCons 區域保守性。座標從 0 開始、右端不含，視窗最長 100000 bp；統計按覆蓋鹼基加權，未覆蓋鹼基不會當作零分。可附帶受 max_values 限制的逐鹼基值；上游截斷會報錯。座標須為非負安全整數，並滿足 `end > start`；無效值會報錯，不會被取整或截到另一個位置。
 
 | 欄位 | 型別 | 要求與約束 |
 | --- | --- | --- |
 | `chrom` | 字串 | **必填** |
-| `start` | 整數 | **必填** |
-| `end` | 整數 | **必填** |
+| `start` | 整數 | **必填**; 最小值： 0; 最大值： 9007199254740991 |
+| `end` | 整數 | **必填**; 最小值： 0; 最大值： 9007199254740991 |
 | `genome` | 字串 | 可選; 預設值： &quot;hg38&quot; |
 | `track` | 字串 | 可選; 預設值： &quot;phyloP100way&quot; |
 | `include_values` | 布林值 | 可選; 預設值： false |
@@ -764,13 +767,13 @@ const result = await host.mcp("genomes", "ucsc_conservation", {"chrom": "chr7", 
 
 ### `ucsc_tfbs_clusters` {/* #ucsc_tfbs_clusters */}
 
-獲取指定區域重疊的 ENCODE 轉錄因子結合位點聚類。支援 hg38 或 hg19 對應軌道；座標從 0 開始、右端不含。返回因子集合、聚類位置、分數、支援實驗數和截斷狀態，便於進一步檢查支援證據。
+獲取指定區域重疊的 ENCODE 轉錄因子結合位點聚類。支援 hg38 或 hg19 對應軌道；座標從 0 開始、右端不含。返回因子集合、聚類位置、分數、支援實驗數和截斷狀態，便於進一步檢查支援證據。座標須為非負安全整數，並滿足 `end > start`；無效值會報錯，不會被取整或截到另一個位置。
 
 | 欄位 | 型別 | 要求與約束 |
 | --- | --- | --- |
 | `chrom` | 字串 | **必填** |
-| `start` | 整數 | **必填** |
-| `end` | 整數 | **必填** |
+| `start` | 整數 | **必填**; 最小值： 0; 最大值： 9007199254740991 |
+| `end` | 整數 | **必填**; 最小值： 0; 最大值： 9007199254740991 |
 | `genome` | 字串 | 可選; 預設值： &quot;hg38&quot; |
 | `max_rows` | 整數 | 可選; 預設值： 1000 |
 
@@ -799,7 +802,7 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>展開操作與引數</summary>
 
-**gnomAD 座標規則**：同時記錄資料集固定標識與參考組裝。短變異的基因/區域查詢中，r2.1/ExAC 使用 GRCh37，r3/r4 使用 GRCh38；結構變異的基因查詢使用 `gnomad_sv_r2_1`（GRCh37）或 `gnomad_sv_r4`（GRCh38）；修改資料集不會轉換輸入座標。`gene_constraint` 和 gnomAD 的 ClinVar 映象固定使用 GRCh38 查詢基因，不接收 dataset 引數。線粒體查詢的父級定位也固定為 GRCh38；必須選擇基因或成對且有序的區域邊界，不能混用。區域邊界須為 1—2,147,483,647 的整數。百萬鹼基差值上限屬於 `region_variants`，不是另一個線粒體限制。結構變異 ID 必須與其所屬的 SV 資料集配套。
+**gnomAD 座標規則**：同時記錄資料集固定標識與參考組裝。短變異的基因/區域查詢中，r2.1/ExAC 使用 GRCh37，r3/r4 使用 GRCh38；結構變異的基因查詢使用 `gnomad_sv_r2_1`（GRCh37）或 `gnomad_sv_r4`（GRCh38）；修改資料集不會轉換輸入座標。`gene_constraint` 和 gnomAD 的 ClinVar 映象固定使用 GRCh38 查詢基因，不接收 dataset 引數。線粒體查詢的父級定位也固定為 GRCh38；必須選擇基因或成對且有序的區域邊界，不能混用。區域邊界須為 1—999,999,999 的整數。百萬鹼基差值上限屬於 `region_variants`，不是另一個線粒體限制。結構變異 ID 必須與其所屬的 SV 資料集配套。
 
 ### `get_variant` {/* #get_variant */}
 
@@ -856,13 +859,13 @@ const result = await host.mcp("variants", "gene_constraint", {"gene_symbol": "TP
 
 ### `region_variants` {/* #region_variants */}
 
-列出指定區域內的全部 gnomAD 短變異。`chrom` 接受 1—22、X、Y，也接受可選的 chr 字首和小寫 x/y。`start`/`stop` 為從 1 開始的閉區間整數，範圍 1—2,147,483,647；必須滿足 start ≤ stop 且 stop − start ≤ 1,000,000。r2.1/ExAC 使用 GRCh37，r3/r4 使用 GRCh38。輸入座標必須已採用相應組裝；選擇資料集不會自動進行 liftover。
+列出指定區域內的全部 gnomAD 短變異。`chrom` 接受 1—22、X、Y，也接受可選的 chr 字首和小寫 x/y。`start`/`stop` 為從 1 開始的閉區間整數，範圍 1—999,999,999；必須滿足 start ≤ stop 且 stop − start ≤ 1,000,000。r2.1/ExAC 使用 GRCh37，r3/r4 使用 GRCh38。輸入座標必須已採用相應組裝；選擇資料集不會自動進行 liftover。
 
 | 欄位 | 型別 | 要求與約束 |
 | --- | --- | --- |
 | `chrom` | 字串 | **必填** |
-| `start` | 整數 | **必填**; 最小值： 1; 最大值： 2147483647 |
-| `stop` | 整數 | **必填**; 最小值： 1; 最大值： 2147483647 |
+| `start` | 整數 | **必填**; 最小值： 1; 最大值： 999999999 |
+| `stop` | 整數 | **必填**; 最小值： 1; 最大值： 999999999 |
 | `dataset` | 字串 | 可選; 預設值： &quot;gnomad_r4&quot;; 列舉： &#91;&quot;gnomad_r4&quot;, &quot;gnomad_r4_non_ukb&quot;, &quot;gnomad_r3&quot;, &quot;gnomad_r3_controls_and_biobanks&quot;, &quot;gnomad_r3_non_cancer&quot;, &quot;gnomad_r3_non_neuro&quot;, &quot;gnomad_r3_non_topmed&quot;, &quot;gnomad_r3_non_v2&quot;, &quot;gnomad_r2_1&quot;, &quot;gnomad_r2_1_controls&quot;, &quot;gnomad_r2_1_non_cancer&quot;, &quot;gnomad_r2_1_non_neuro&quot;, &quot;gnomad_r2_1_non_topmed&quot;, &quot;exac&quot;&#93; |
 
 ```javascript
@@ -930,8 +933,8 @@ const result = await host.mcp("variants", "get_structural_variant", {"sv_id": "D
 | --- | --- | --- |
 | `gene_symbol` | 字串 | 可選 |
 | `gene_id` | 字串 | 可選 |
-| `region_start` | 整數 | 可選; 最小值： 1; 最大值： 2147483647 |
-| `region_stop` | 整數 | 可選; 最小值： 1; 最大值： 2147483647 |
+| `region_start` | 整數 | 可選; 最小值： 1; 最大值： 999999999 |
+| `region_stop` | 整數 | 可選; 最小值： 1; 最大值： 999999999 |
 | `dataset` | 字串 | 可選; 預設值： &quot;gnomad_r4&quot;; 列舉： &#91;&quot;gnomad_r4&quot;, &quot;gnomad_r4_non_ukb&quot;, &quot;gnomad_r3&quot;, &quot;gnomad_r3_controls_and_biobanks&quot;, &quot;gnomad_r3_non_cancer&quot;, &quot;gnomad_r3_non_neuro&quot;, &quot;gnomad_r3_non_topmed&quot;, &quot;gnomad_r3_non_v2&quot;, &quot;gnomad_r2_1&quot;, &quot;gnomad_r2_1_controls&quot;, &quot;gnomad_r2_1_non_cancer&quot;, &quot;gnomad_r2_1_non_neuro&quot;, &quot;gnomad_r2_1_non_topmed&quot;, &quot;exac&quot;&#93; |
 
 ```javascript

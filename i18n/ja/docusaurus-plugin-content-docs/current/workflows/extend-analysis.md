@@ -1,7 +1,7 @@
 ---
 title: "インストールしたSpecialistで解析を拡張する"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -21,7 +21,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 3. 研究プロジェクトで新しい会話を開く。 利用可能なモデルを選択し、**Agent controls → Specialist → pharmacometrics-pkpd-designer** を選択します。 記録された実行は**Codexサブスクリプション/gpt-5.6-sol**を使用しました。
 4. **各解析メッセージ** の開始時、`/pkpd` をタイプして下さい、そして提案から **pkpd モデリング** を選んで下さい。 プロンプトを貼り付ける前に Skill チップになることを確認してください。
 
-このバージョンでは、単独で`Unknown skill`を返す役割を選択します。 Skill を明示的に選択すると、本物のローダーが有効になります。 記録された構成のためにこのステップは要求されます; この例では、すべてのSpecialist-bound Skillsの自動ローディングを確立しません。
+**バージョンについて：** 以下のスクリーンショットと結果は v0.30.1 で記録しました。この構成では、役割を選ぶだけでは `Unknown skill` となり、メッセージごとに Skill を明示的に選ぶ必要がありました。v0.30.2 は、委派タスクを含め、Specialist に紐づく Skill の準備を修正しています。新版ではまず Specialist を選び、実際の読み込み結果を確認し、必要なら Skill を明示的に選択してください。この例は v0.30.2 では未再実行です。旧版の回避手順が常に必要とは限らず、この修正を本例の再検証成功とみなすこともできません。
 
 ![ファーマコメトリクスSpecialistおよびその機能をインストール](/img/open-science/theoph-specialist/installed.jpg)
 

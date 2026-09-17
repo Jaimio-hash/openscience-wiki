@@ -1,7 +1,7 @@
 ---
 title: "Horas de ejecución Python y R"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -249,6 +249,8 @@ Para un cheque rápido antes de utilizar datos de investigación, pídale al Age
 Abra la salida del Notebook y compare con el informe guardado. Este ejemplo Windows 10 en Open-Science v0.28.0 informa Python **3.12.13** y `pip` **26.1.2**. Los metadatos del paquete de lectura no instalan ni importan ese paquete.
 
 <Screenshot src="/img/open-science/windows/python-runtime-output.png" alt="Windows Python Notebook mostrando el código ejecutado y su salida de la versión real" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.png" linkLabel="Abra la pantalla Windows completa" />
+
+Para Windows conda R startup o fallos de recuperación del kernel, use v0.30.2 o más tarde antes de reintentar. La versión fija la vigilancia ejecutable después de la preparación del medio ambiente y la recuperación del kernel R. Después de actualizar, vuelva a revisar el medio ambiente y ejecute un pequeño cálculo R en Notebook; **Ready** solo no es un resultado de ejecución. Las capturas de pantalla a continuación conservan las versiones y los resultados de sus carreras originales.
 
 Para una ejecución Windows R que reporta **Activar el modo protegido antes de autorizar el acceso R.**, inspeccionar **Network settings** y las instrucciones R de la tarjeta **Authorize and verify**. Resolver el requisito de autorización notificado antes de la repetición; una tarjeta **Ready** sola no confirma la ejecución. Mantenga el error completo si la solicitud permanece bloqueada y siga [Solución de problemas](troubleshooting.md).
 

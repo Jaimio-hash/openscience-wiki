@@ -1,7 +1,7 @@
 ---
 title: "Python und R Laufzeiten"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -249,6 +249,8 @@ Für eine schnelle Überprüfung, bevor Sie Forschungsdaten verwenden, bitten Si
 Öffnen Sie die Ausgabe des Notebook und vergleichen Sie sie mit dem gespeicherten Bericht. Dieses Windows 10 Beispiel in Open-Science v0.28.0 berichtet Python **3.12.13** und `pip` **26.1.2**. Das Lesen von Paket-Metadaten installiert oder importiert dieses Paket nicht.
 
 <Screenshot src="/img/open-science/windows/python-runtime-output.png" alt="Windows Python Notebook mit ausgeführtem Code und seiner tatsächlichen Versionsausgabe" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.png" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
+
+Für Windows Conda R Start- oder Kernel-Wiederherstellungsfehler verwenden Sie v0.30.2 oder höher, bevor Sie erneut versuchen. Das Release behebt die ausführbare Suche nach der Umgebungsvorbereitung und der R-Kernelwiederherstellung. Nach dem Aktualisieren überprüfen Sie die Umgebung erneut und führen Sie eine kleine R-Berechnung in Notebook aus; **Ready** allein ist kein Ausführungsergebnis. Die folgenden Screenshots behalten die Versionen und Ergebnisse ihrer ursprünglichen Läufe bei.
 
 Für einen Windows R-Lauf, der **Aktivieren Sie den geschützten Modus, bevor Sie den R-Zugriff autorisieren.** meldet, überprüfen Sie **Network settings** und die **Authorize and verify**-Anweisungen der R-Karte. Beheben Sie die gemeldete Genehmigungsvoraussetzung vor dem erneuten Ausführen; Eine **Ready**-Karte allein bestätigt die Ausführung nicht. Behalten Sie den vollständigen Fehler bei, wenn die Anforderung blockiert bleibt, und folgen Sie [Fehlerbehebung](troubleshooting.md).
 

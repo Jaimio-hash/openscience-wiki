@@ -1,7 +1,7 @@
 ---
 title: "Revisor y revisión automática"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # Revisor y revisión automática {/* #reviewer-and-auto-review */}
@@ -74,6 +74,8 @@ Abrir **Agent controls → Auto-review** para configurar la revisión después d
 2. Abra **Agent controls → Auto-review** en la conversación de destino, confirme **On**, luego envíe la siguiente solicitud.
 3. Después de la respuesta, expanda la tarjeta **Reviewer** creada automáticamente. Revise su modelo, criterio, evidencia y resultado.
 4. Cuando aparezca **Corrections requested**, inspeccione la corrección de Main y la posterior revisión antes de decidir si se resuelve el hallazgo.
+
+Desde v0.30.2, Auto-review conserva su configuración cuando comienza una conversación, y las curvas de corrección conectadas conservan la retroalimentación necesaria para el ciclo de corrección. Encienda antes de enviar, luego compruebe la tarjeta de revisión real y la salida revisada de Main. La preservación del contexto no significa que se haya corregido un hallazgo; leer el examen posterior y las conclusiones restantes.
 
 ### Lo que “resolvió” establece {/* #what-resolved-establishes */}
 

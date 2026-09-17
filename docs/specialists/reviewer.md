@@ -1,7 +1,7 @@
 ---
 title: "Reviewer and Auto-review"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 # Reviewer and Auto-review
@@ -74,6 +74,8 @@ Open **Agent controls → Auto-review** to configure review after future respons
 2. Open **Agent controls → Auto-review** in the target conversation, confirm **On**, then send the next request.
 3. After the response, expand the automatically created **Reviewer** card. Check its model, criterion, evidence and result.
 4. When **Corrections requested** appears, inspect Main's correction and the subsequent review before deciding whether the finding is resolved.
+
+From v0.30.2, Auto-review preserves its setting when a conversation starts, and linked correction turns retain the review feedback needed for the correction cycle. Turn it on before sending, then check the actual Reviewer card and Main's revised output. Context preservation does not mean a finding has been corrected; read the subsequent review and remaining findings.
 
 ### What “resolved” establishes
 

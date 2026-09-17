@@ -1,7 +1,7 @@
 ---
 title: Extract a literature evidence table
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Extract a literature evidence table
@@ -27,6 +27,8 @@ In an Open-Science project, select a working model and attach the resulting Mark
 Click the attachment to open its preview. Each study starts with a title, DOI and original source link, followed by section text and tables. Match those ten identities with the source list; do not count repeated section headings as additional studies.
 
 ![The actual attached full-text pack retains source identity and article sections](/img/open-science/research-workflows/mask-trials-input.png)
+
+Before using a paper as evidence, check for corrections or retractions at its source. From v0.30.2, the `literature-review` Skill's `verify_dois` helper checks Crossref update relationships in both directions. `retracted: true` can identify a retracted paper or a retraction notice; inspect the linked relationship. `false` means no checked marker was found, not proof that the paper has never been retracted. This additional check was not part of the recorded ten-paper run below.
 
 ## Ask for one row per trial
 

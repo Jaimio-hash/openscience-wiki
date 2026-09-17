@@ -1,7 +1,7 @@
 ---
 title: "권한 및 승인"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # 권한 및 승인 {/* #permissions-and-approvals */}
@@ -53,6 +53,10 @@ last_update:
 ### 웹 읽기 승인 {/* #remember-web-reading-approval */}
 
 지원된 **웹페이지 읽기** 요청을 위해 **Allow for this conversation**을 선택하여 나중에 웹이 동일한 대화에서 읽는 기능을 기억하십시오. 그것은 다른 웹 사이트를 커버 할 수, 뿐만 아니라 첫 번째 URL. **Allow once**은 해당 통화에만 적용됩니다. **기억된 권한**의 보조금을 검토하거나 수정; Notebook 네트워크 수당에 호스트를 추가하거나 업로드를 승인하지 않습니다.
+
+### 웹 연구 승인 {/* #remember-web-search */}
+
+v0.30.2부터 지원되는 Claude Agent의 기본 **Search the web** 요청에서도 **Allow for this conversation**을 선택할 수 있습니다. 같은 대화의 후속 검색에서 이 권한을 재사용할 수 있습니다. **Allow once**는 현재 요청만 허용합니다. **Remembered permissions**에서 **Search the web** 권한을 확인하거나 철회하세요. 검색과 **Read web pages**는 별도의 권한입니다. 모든 프레임워크나 Connector가 이 기능을 지원하는 것은 아니므로 실제로 표시된 범위를 확인하세요.
 
 ## 자주 묻는 질문 {/* #manage-remembered-access */}
 

@@ -1,7 +1,7 @@
 ---
 title: "Extrait d'un tableau des preuves documentaires"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Extrait d'un tableau des preuves documentaires {/* #extract-a-literature-evidence-table */}
@@ -27,6 +27,8 @@ Dans un projet Open-Science, sélectionnez un modèle de travail et joignez le f
 Cliquez sur la pièce jointe pour ouvrir son aperçu. Chaque étude commence par un titre, DOI et un lien source original, suivi par un texte et des tableaux de section. Correspondez à ces dix identités à la liste des sources; ne comptent pas les titres répétés comme des études supplémentaires.
 
 ![Le paquet texte intégral joint conserve l'identité de la source et les sections d'article](/img/open-science/research-workflows/mask-trials-input.png)
+
+Avant d'utiliser un papier comme preuve, vérifiez les corrections ou les rétractations à sa source. À partir v0.30.2, les `literature-review` Skill's `verify_dois` helper vérifie les relations de mise à jour de Crossref dans les deux sens. `retracted: true` peut identifier un papier rétracté ou un avis de rétractation; Inspectez la relation liée. `false` signifie qu'aucun marqueur vérifié n'a été trouvé, et non une preuve que le papier n'a jamais été rétracté. Cette vérification supplémentaire ne faisait pas partie de l'exécution de dix documents enregistrée ci-dessous.
 
 ## Demander une rangée par essai {/* #ask-for-one-row-per-trial */}
 

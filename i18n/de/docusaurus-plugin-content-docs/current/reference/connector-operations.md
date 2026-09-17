@@ -2,7 +2,7 @@
 title: "Connector Betriebsnummer"
 toc_max_heading_level: 2
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -34,9 +34,11 @@ Fragen Sie beispielsweise: **Verwenden Sie PubMed, um nach PRISMA-Berichtsrichtl
 
 Die Namen der Rückgabefelder unterscheiden sich je nach Operation. Die folgenden Beschreibungen und herunterladbaren Schemata geben jeden Vertrag an; Die Tabelle ist keine universelle JSON-Antwort. Verwenden Sie die rechte Familienliste, um zu springen, und erweitern Sie dann die Parameter dieser Familie. Die Suche nach einem Operationsnamen öffnet auch die enthaltende Gruppe.
 
+**Lesen Sie Fehler getrennt von leeren Ergebnissen.** In v0.30.2 fordert CellGuide-Marker/Quelle/Gewebe Oberflächenabruffehler an, anstatt sie als leere Beweise zu behandeln; eine fehlende optionale Datendatei kann noch leer sein. OLS-Beziehungsabfragen lehnen unvollständige Paginierung und ungültige Antworten ab. Ein Dienstfehler ist kein Beweis dafür, dass ein Zellentyp keine Marker oder ein Ontologie-Begriff keine verwandten Begriffe hat.
+
 ## Betriebsinputs {/* #operation-inputs */}
 
-Erweitern Sie einen Connector auf einmal. Erforderliche Felder sind mit **erforderlich** gekennzeichnet; Diese Referenz und Download verwenden Sie das Open-Science **v0.30.1** Schema. Eine verschachtelte `input.required`-Liste ist maßgebend; eine ältere `required`-Liste der obersten Ebene möglicherweise fehlt. Konsultieren Sie den <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.1.json">vollständiges herunterladbares Register</ExampleDownload> für verschachtelte JSON-Schemata, vollständige Rückgabebeschreibungen und agentenseitige Anrufbeispiele. Übergeben Sie kein generisches `id`, wenn ein Tool `accessions`, `cids`, `rs_id` oder ein anderes Namespace-spezifisches Feld erwartet.
+Erweitern Sie einen Connector auf einmal. Erforderliche Felder sind mit **erforderlich** gekennzeichnet; Diese Referenz und Download verwenden Sie das Open-Science **v0.30.2** Schema. Eine verschachtelte `input.required`-Liste ist maßgebend; eine ältere `required`-Liste der obersten Ebene möglicherweise fehlt. Konsultieren Sie den <ExampleDownload path="/examples/capabilities/connector-catalog-v0.30.2.json">vollständiges herunterladbares Register</ExampleDownload> für verschachtelte JSON-Schemata, vollständige Rückgabebeschreibungen und agentenseitige Anrufbeispiele. Übergeben Sie kein generisches `id`, wenn ein Tool `accessions`, `cids`, `rs_id` oder ein anderes Namespace-spezifisches Feld erwartet.
 
 
 ## Chemie {/* #family-1 */}
@@ -599,7 +601,7 @@ const result = await host.mcp("genes", "get_uniprot_entries", {"accessions": ["P
 
 ### `map_reactome_pathways` {/* #map_reactome_pathways */}
 
-Kartengensymbole oder UniProt-Zugänge zu Reactome-Signalwegen (AnalysisService-Token-Workflow). Args: Identifikatoren (Gensymbole, wenn id_type = "symbol", UniProt-Zugänge, wenn "uniprot"; keine Duplikate; id_type ("symbol"/"uniprot"); Art (Standard "Homo sapiens"); Ressource (AnalysisService-Molekülressourcenansicht "TOTAL") Ausfall; "UNIPROT" beschränkt sich auf Protein-Level-Mappings; include_disease (Service Default True); Kompakt (True → per-Identifier low-level pathways only &#123;stId,name,species&#125;) + Reaktome Release Version; Falsch → vollständiges deterministisches Ergebnis: Per-Identifier vollständige Pfadsätze mit Entitäts-/Reaktionsstatistik (p-Werte, FDR, gefunden/insgesamt) und Batch-Summe inkl. identifiers_not_found). Returns: Compact &#123;tool, reactome_version, id_type, species, n_input, genes:&#123;identifier:&#123;found, n_lowlevel_pathways, pathways&#125;&#125;&#125;; Voll fügt pro-Weg-Statistik und batch_summary hinzu.
+Kartengensymbole oder UniProt-Zugänge zu Reactome-Signalwegen (AnalysisService-Token-Workflow). Args: Identifikatoren (Gensymbole, wenn id_type = "symbol", UniProt-Zugänge, wenn "uniprot"; keine Duplikate; id_type ("symbol"/"uniprot"); Art (Standard "Homo sapiens"); Ressource (AnalysisService-Molekülressourcenansicht "TOTAL") Ausfall; "UNIPROT" beschränkt sich auf Protein-Level-Mappings; include_disease (Service Default True); Kompakt (True → per-Identifier low-level pathways only &#123;stId,name,species&#125;) + Reaktome Release Version; Falsch → vollständiges deterministisches Ergebnis: Per-Identifier vollständige Pfadsätze mit Entitäts-/Reaktionsstatistik (p-Werte, FDR, gefunden/insgesamt) und Batch-Summe inkl. identifiers_not_found). Returns: Compact &#123;tool, reactome_version, id_type, species, n_input, genes:&#123;identifier:&#123;found, n_lowlevel_pathways, pathways&#125;&#125;&#125;; Voll fügt pro-Weg-Statistik und batch_summary hinzu. Karten Identifikatoren zu Signalwegen in den angeforderten Arten, ohne sie auf den Menschen zu projizieren. Verwenden Sie einen unterstützten wissenschaftlichen Namen wie `Homo sapiens` oder `Mus musculus`; Das herunterladbare Schema listet alle unterstützten Namen auf. Leere, nicht unterstützte oder nicht übereinstimmende Arten sind Fehler. `found` und `n_found` zeigen Identifikatorerkennung an, nicht Pathway-Mitgliedschaft: Ein erkannter Identifikator kann null Pathways haben. Der Compact-Modus enthält nur Pfade auf niedriger Ebene.
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
@@ -623,7 +625,7 @@ const result = await host.mcp("genes", "map_reactome_pathways", {"identifiers": 
 
 ### `ensembl_lookup` {/* #ensembl_lookup */}
 
-Suchen Sie ein Ensembl-Gen / Transkript / Protein nach stabiler ID oder ein Gen nach Symbol; gibt den Kern-Annotations-Record zurück (Ort, Biotyp, kanonisches Transkript, Beschreibung). Args: Abfrage (Ensembl stable ID ENSG.../ENST.../ENSP..., versioniert akzeptiert); oder ein Gensymbol/Alias wie BRAF — true stable IDs &#91;ENS + optional species code + feature letter + >=6-digit block, oder LRG_N&#93; route to the ID endpoint; Alles andere, inkl. Symbole beginnend mit "ENS" wie ENSA, zum Symbol-Endpunkt; species (Ensembl species name for symbol lookups, standard homo_sapiens); ignoriert für stabile IDs; erweitern (einschließen des Child-Feature-Baums — a gene's Transkripte/Exons/Übersetzung); standardmäßig ausgeschaltet. Gibt &#123;found, Abfrage, species, record&#125; zurück; Datensatz ist null, wenn nichts übereinstimmt, andernfalls das Upstream-Lookup-Dict — für ein Gen &#123;id, display_name, Beschreibung, Biotyp, object_type, seq_region_name, Anfang, Ende, Strang, assembly_name, canonical_transcript, Version, ...&#125; mit 1-basierten inklusiven Koordinaten.
+Suchen Sie ein Ensembl-Gen / Transkript / Protein nach stabiler ID oder ein Gen nach Symbol; gibt den Kern-Annotations-Record zurück (Ort, Biotyp, kanonisches Transkript, Beschreibung). Args: Abfrage (Ensembl stable ID ENSG.../ENST.../ENSP..., versioniert akzeptiert); oder ein Gensymbol/Alias wie BRAF — true stable IDs &#91;ENS + optional species code + feature letter + >=6-digit block, oder LRG_N&#93; route to the ID endpoint; Alles andere, inkl. Symbole beginnend mit "ENS" wie ENSA, zum Symbol-Endpunkt; species (Ensembl species name for symbol lookups, standard homo_sapiens); ignoriert für stabile IDs; erweitern (einschließen des Child-Feature-Baums — a gene's Transkripte/Exons/Übersetzung); standardmäßig ausgeschaltet. Gibt &#123;found, Abfrage, species, record&#125; zurück; Datensatz ist null, wenn nichts übereinstimmt, andernfalls das Upstream-Lookup-Dict — für ein Gen &#123;id, display_name, Beschreibung, Biotyp, object_type, seq_region_name, Anfang, Ende, Strang, assembly_name, canonical_transcript, Version, ...&#125; mit 1-basierten inklusiven Koordinaten. Für einen erfolgreichen Lookup kommt das zurückgegebene `species` aus dem Upstream-Record. Eine stabile ID wählt ihre eigenen Arten aus, so dass die angeforderte / Standard-Art für diese Route ignoriert wird. Ein nicht gefundenes Ergebnis spiegelt die angeforderte / Standard-Spezies wider und hat `record: null`.
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
@@ -650,13 +652,14 @@ const result = await host.mcp("genomes", "ensembl_xrefs", {"stable_id": "ENSG000
 
 ### `ensembl_vep_variant` {/* #ensembl_vep_variant */}
 
-Prognostizieren Sie die Folgen von Varianten mit Ensembl VEP - die schwerste Zusammenfassung der (oft riesigen) Folgeliste pro Transkript. Geben Sie EITHER variant_id ODER region+allele. Args: variant_id (dbSNP rsID rs7412, COSMIC COSV ... oder HGMD ID); Region (GRCh38 1-basiert inklusive chrom:start-end, z.B. 7:140753336-140753336; SNV start==end; Einfügen Start = Ende + 1; explizites Strangsuffix :1/:-1 akzeptiert; Allel (Variantenallel auf Vorwärtsstrang für die Regionsroute, z.B. T oder - zur Löschung; Art (Standard homo_sapiens); max_consequences (Obergrenze für zurückgegebene Transkriptzeilen, Standard 25); vollständige Zählung in n_transcript_consequences, Zeilen werden als schwerste HIGH>MODERATE>LOW>MODIFIER geführt; transcript_consequences_truncated markiert die Kappe. Gibt &#123;query, n_results, results zurück:&#91;&#123;input, assembly_name, seq_region_name, start, end, strand, allele_string, most_severe_consequence, genes:&#91;&#123;gene_id, gene_symbol, worst_impact, n_transcripts&#125;&#93;, n_transcript_consequences, transcript_consequences_truncated, transcript_consequences:&#91;...&#93;, n_regulatory_feature_consequences, n_motif_feature_consequences, colocated_variants:&#91;...&#93;&#125;&#93;&#125;. Unbekannte rsIDs erhöhen mit der Upstream-Nachricht.
+Wenn `variant_id` angegeben ist, hat die ID-Abfrage Vorrang und ignoriert `region`, `allele` und `allele_orientation`. `allele` filtert die ID-Ergebnisse nicht. Regionsabfragen verwenden das aktuelle Referenz-Assembly der Spezies (GRCh38 beim Menschen). Die Koordinaten beginnen bei 1 und schließen beide Grenzen ein; für eine Insertion gilt `start = end + 1`. Standardmäßig ist `allele_orientation` auf `forward` gesetzt: Das Allel bezieht sich auch bei einem Suffix `:-1` auf den Vorwärtsstrang der Referenz. Mit `region` wird ein Sequenzallel einer Negativstrang-Region vor der Abfrage revers komplementiert. Symbolische Allele in einer solchen Region erfordern `forward`. Regionsabfragen werden immer auf dem Vorwärtsstrang gesendet; `normalization` enthält ursprüngliche und normalisierte Eingaben. Koordinaten werden weder auf ein anderes Assembly übertragen noch umgekehrt. Ein Gen auf dem Negativstrang erfordert keine Eingabe auf dem Negativstrang.
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
 | `variant_id` | Zeichenfolge | fakultativ |
 | `region` | Zeichenfolge | fakultativ |
 | `allele` | Zeichenfolge | fakultativ |
+| `allele_orientation` | Zeichenfolge | fakultativ; Standard: `forward`; enum: `forward`, `region` |
 | `species` | Zeichenfolge | fakultativ; Standard: "homo_sapiens" |
 | `max_consequences` | Ganzzahl | fakultativ; Standard: 25 |
 
@@ -729,14 +732,14 @@ const result = await host.mcp("genomes", "ucsc_list_tracks", {"genome": "hg38", 
 
 ### `ucsc_track_data` {/* #ucsc_track_data */}
 
-Holen Sie rohe Zeilen eines UCSC Genome Browser-Tracks in einer Region ab - die generische Escape-Schlüpfe hinter ucsc_conservation / ucsc_tfbs_clusters (Genspuren, ClinVar, GWAS-Katalog, CpG-Inseln, Wiederholungen, ...). Args: Track (Name aus ucsc_list_tracks, z.B. bekanntGene, cpgIslandExt, clinvarMain; Chrom (Chr-präfixiert, chr7/chrX — UCSC erfordert das Präfix); Start (0-basiert halboffen); ein Ensembl 1-basierter Start ist hier Start-1; Ende (ausschließlich); Genom (Standard hg38); max_rows (API maxItemsOutput, Standard 1000); abgeschnitten spiegelt das API's eigenen maxItemsLimit Flag. Gibt &#123;genom, Track, Chrom, Start, Ende, track_type, items_returned, abgeschnitten, Zeilen&#125; zurück — Zeilen in vorgelagerter Form (BED-ähnliche &#123;chrom, chromStart, chromEnd, Name, Score, ...&#125;); wiggle &#123;start, end, value&#125;). Unbekannte Tracks steigen. Quirk: Für einige riesige Tracks geben die API-Caps sich selbst aus und zeigen auf dataDownloadUrl - wenn vorhanden.
+Holen Sie rohe Zeilen eines UCSC Genome Browser-Tracks in einer Region ab - die generische Escape-Schlüpfe hinter ucsc_conservation / ucsc_tfbs_clusters (Genspuren, ClinVar, GWAS-Katalog, CpG-Inseln, Wiederholungen, ...). Args: Track (Name aus ucsc_list_tracks, z.B. bekanntGene, cpgIslandExt, clinvarMain; Chrom (Chr-präfixiert, chr7/chrX — UCSC erfordert das Präfix); Start (0-basiert halboffen); ein Ensembl 1-basierter Start ist hier Start-1; Ende (ausschließlich); Genom (Standard hg38); max_rows (API maxItemsOutput, Standard 1000); abgeschnitten spiegelt das API's eigenen maxItemsLimit Flag. Gibt &#123;genom, Track, Chrom, Start, Ende, track_type, items_returned, abgeschnitten, Zeilen&#125; zurück — Zeilen in vorgelagerter Form (BED-ähnliche &#123;chrom, chromStart, chromEnd, Name, Score, ...&#125;); wiggle &#123;start, end, value&#125;). Unbekannte Tracks steigen. Quirk: Für einige riesige Tracks geben die API-Caps sich selbst aus und zeigen auf dataDownloadUrl - wenn vorhanden. Koordinaten müssen nicht negative sichere ganze Zahlen sein, mit `end > start`. Ungültige Werte werden abgelehnt, nicht gerundet oder auf einen anderen Ort geklemmt.
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
 | `track` | Zeichenfolge | **erforderlich** |
 | `chrom` | Zeichenfolge | **erforderlich** |
-| `start` | Ganzzahl | **erforderlich** |
-| `end` | Ganzzahl | **erforderlich** |
+| `start` | Ganzzahl | **erforderlich**; mindestens: 0; höchstens: 9007199254740991 |
+| `end` | Ganzzahl | **erforderlich**; mindestens: 0; höchstens: 9007199254740991 |
 | `genome` | Zeichenfolge | fakultativ; Standard: "hg38" |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 1000 |
 
@@ -746,13 +749,13 @@ const result = await host.mcp("genomes", "ucsc_track_data", {"track": "cpgIsland
 
 ### `ucsc_conservation` {/* #ucsc_conservation */}
 
-Evolutionäre Konservierungszusammenfassung für eine Region aus UCSC phyloP / phastCons Tracks (basenweise Bewertungen über Multi-Spezies-Alignments). Args: Chrom (Chr-präfixiert); Start (0-basiert halboffen); Ende (ausschließlich); mit 100000 bp begrenzte Spannweite — Split größer; Genom (Standard hg38); Spur (standardmäßig phyloP100way); positiv = konserviert, negativ = sich schnell entwickelnd; Alternativen hg38 phastCons100way, phyloP30way, phastCons30way, phyloP447way, phyloP470way; hg19 phyloP100wayAll/phastCons100way; include_values (auch Rückkehr pro Basis &#123;start, end, value&#125;) Zeilen, die mit max_values gedeckelt sind, values_truncated kennzeichnet die Obergrenze; standard false = nur Zusammenfassung; max_values (pro Base Cap Default 2000). Gibt &#123;genom, Track, Chrom, Start, Ende, span_bp, n_bases_covered, coverage_fraction, Mittelwert, min, max&#125; zurück (+Werte, values_truncated, wenn angefordert). Stats, gewichtet mit jeder row's Basisspanne, beschnitten mit Fenster; unbedeckte Basen niedriger coverage_fraction, nicht Null-scored. Nicht-Score-Tracks anheben; eine vorgelagerte Zeilenliste ebenfalls anhebt.
+Evolutionäre Konservierungszusammenfassung für eine Region aus UCSC phyloP / phastCons Tracks (basenweise Bewertungen über Multi-Spezies-Alignments). Args: Chrom (Chr-präfixiert); Start (0-basiert halboffen); Ende (ausschließlich); mit 100000 bp begrenzte Spannweite — Split größer; Genom (Standard hg38); Spur (standardmäßig phyloP100way); positiv = konserviert, negativ = sich schnell entwickelnd; Alternativen hg38 phastCons100way, phyloP30way, phastCons30way, phyloP447way, phyloP470way; hg19 phyloP100wayAll/phastCons100way; include_values (auch Rückkehr pro Basis &#123;start, end, value&#125;) Zeilen, die mit max_values gedeckelt sind, values_truncated kennzeichnet die Obergrenze; standard false = nur Zusammenfassung; max_values (pro Base Cap Default 2000). Gibt &#123;genom, Track, Chrom, Start, Ende, span_bp, n_bases_covered, coverage_fraction, Mittelwert, min, max&#125; zurück (+Werte, values_truncated, wenn angefordert). Stats, gewichtet mit jeder row's Basisspanne, beschnitten mit Fenster; unbedeckte Basen niedriger coverage_fraction, nicht Null-scored. Nicht-Score-Tracks anheben; eine vorgelagerte Zeilenliste ebenfalls anhebt. Koordinaten müssen nicht negative sichere ganze Zahlen sein, mit `end > start`. Ungültige Werte werden abgelehnt, nicht gerundet oder auf einen anderen Ort geklemmt.
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
 | `chrom` | Zeichenfolge | **erforderlich** |
-| `start` | Ganzzahl | **erforderlich** |
-| `end` | Ganzzahl | **erforderlich** |
+| `start` | Ganzzahl | **erforderlich**; mindestens: 0; höchstens: 9007199254740991 |
+| `end` | Ganzzahl | **erforderlich**; mindestens: 0; höchstens: 9007199254740991 |
 | `genome` | Zeichenfolge | fakultativ; Standard: "hg38" |
 | `track` | Zeichenfolge | fakultativ; Standard: "phyloP100way" |
 | `include_values` | boolescher Wert | fakultativ; Standard: falsch |
@@ -764,13 +767,13 @@ const result = await host.mcp("genomes", "ucsc_conservation", {"chrom": "chr7", 
 
 ### `ucsc_tfbs_clusters` {/* #ucsc_tfbs_clusters */}
 
-ENCODE-Transkriptionsfaktor-Bindungsstellencluster überlappen eine Region (ChIP-Seq-Peak-Cluster über Hunderte von Zelltypen) - an die TFs binden. Args: Chrom (Chr-präfixiert); Start (0-basiert halboffen); Ende (ausschließlich); Genom (hg38 standard track encRegTfbsClustered ENCODE 3 oder hg19 wgEncodeRegTfbsClusteredV3); andere Baugruppen erhöhen; max_rows (API maxItemsOutput default 1000); abgeschnitten spiegelt maxItemsLimit. Gibt &#123;genome, track, chrom, start, ende, items_returned, abgeschnitten, n_factors, factors, cluster&#125; zurück Cluster sortiert nach (chromStart,name) &#123;name (TF-Symbol z.B.) CTCF), Chrom, ChromStart, ChromEnd, Score (0-1000), sourceCount (unterstützende Experimente)&#125;; Faktoren ist die eindeutige TF-Liste. Score>=~600 und high sourceCount ~ robuste Bindung.
+ENCODE-Transkriptionsfaktor-Bindungsstellencluster überlappen eine Region (ChIP-Seq-Peak-Cluster über Hunderte von Zelltypen) - an die TFs binden. Args: Chrom (Chr-präfixiert); Start (0-basiert halboffen); Ende (ausschließlich); Genom (hg38 standard track encRegTfbsClustered ENCODE 3 oder hg19 wgEncodeRegTfbsClusteredV3); andere Baugruppen erhöhen; max_rows (API maxItemsOutput default 1000); abgeschnitten spiegelt maxItemsLimit. Gibt &#123;genome, track, chrom, start, ende, items_returned, abgeschnitten, n_factors, factors, cluster&#125; zurück Cluster sortiert nach (chromStart,name) &#123;name (TF-Symbol z.B.) CTCF), Chrom, ChromStart, ChromEnd, Score (0-1000), sourceCount (unterstützende Experimente)&#125;; Faktoren ist die eindeutige TF-Liste. Score>=~600 und high sourceCount ~ robuste Bindung. Koordinaten müssen nicht negative sichere ganze Zahlen sein, mit `end > start`. Ungültige Werte werden abgelehnt, nicht gerundet oder auf einen anderen Ort geklemmt.
 
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
 | `chrom` | Zeichenfolge | **erforderlich** |
-| `start` | Ganzzahl | **erforderlich** |
-| `end` | Ganzzahl | **erforderlich** |
+| `start` | Ganzzahl | **erforderlich**; mindestens: 0; höchstens: 9007199254740991 |
+| `end` | Ganzzahl | **erforderlich**; mindestens: 0; höchstens: 9007199254740991 |
 | `genome` | Zeichenfolge | fakultativ; Standard: "hg38" |
 | `max_rows` | Ganzzahl | fakultativ; Standard: 1000 |
 
@@ -799,7 +802,7 @@ const result = await host.mcp("genomes", "ucsc_chrom_sizes", {"genome": "hg38", 
 <ToolOperationGroup>
 <summary>Operationen und Parameter anzeigen</summary>
 
-**Koordinatenregeln von gnomAD:** zeichnet den Datensatz-Pin mit der Referenzbaugruppe auf. Kurzvariante Gen/Region Abfragen verwenden GRCh37 für r2.1/ExAC und GRCh38 für r3/r4; strukturvariante Genabfragen verwenden `gnomad_sv_r2_1` (GRCh37) oder `gnomad_sv_r4` (GRCh38); Das Ändern des Pins konvertiert keine Eingangskoordinaten. `gene_constraint` und der gnomAD ClinVar-Spiegel verwenden einen festen GRCh38-Gen-Lookup und akzeptieren kein Dataset-Argument. Mitochondriale Abfragen verwenden auch einen festen GRCh38-Eltern-Lookup; Liefern Sie entweder ein Gen oder beide geordnete Regionsgrenzen, niemals beide Modi. Regionsgrenzen müssen ganze Zahlen von 1 bis 2,147,483,647 sein. Die 1-Millionen-Basis-Differenzgrenze gilt für `region_variants`; Es handelt sich nicht um eine separate mitochondriale Grenze. Bewahren Sie Release-spezifische Strukturvarianten-IDs mit ihrem ursprünglichen SV-Datensatz auf.
+**Koordinatenregeln von gnomAD:** zeichnet den Datensatz-Pin mit der Referenzbaugruppe auf. Kurzvariante Gen/Region Abfragen verwenden GRCh37 für r2.1/ExAC und GRCh38 für r3/r4; strukturvariante Genabfragen verwenden `gnomad_sv_r2_1` (GRCh37) oder `gnomad_sv_r4` (GRCh38); Das Ändern des Pins konvertiert keine Eingangskoordinaten. `gene_constraint` und der gnomAD ClinVar-Spiegel verwenden einen festen GRCh38-Gen-Lookup und akzeptieren kein Dataset-Argument. Mitochondriale Abfragen verwenden auch einen festen GRCh38-Eltern-Lookup; Liefern Sie entweder ein Gen oder beide geordnete Regionsgrenzen, niemals beide Modi. Regionsgrenzen müssen ganze Zahlen von 1 bis 999,999,999 sein. Die 1-Millionen-Basis-Differenzgrenze gilt für `region_variants`; Es handelt sich nicht um eine separate mitochondriale Grenze. Bewahren Sie Release-spezifische Strukturvarianten-IDs mit ihrem ursprünglichen SV-Datensatz auf.
 
 ### `get_variant` {/* #get_variant */}
 
@@ -861,8 +864,8 @@ Liste ALLE kurzen gnomAD-Varianten in einer genomischen Region (max. 1 Mb — gr
 | Feld | Typ | Anforderungen und Beschränkungen |
 | --- | --- | --- |
 | `chrom` | Zeichenfolge | **erforderlich** |
-| `start` | Ganzzahl | **erforderlich**; mindestens: 1; höchstens: 2147483647 |
-| `stop` | Ganzzahl | **erforderlich**; mindestens: 1; höchstens: 2147483647 |
+| `start` | Ganzzahl | **erforderlich**; mindestens: 1; höchstens: 999999999 |
+| `stop` | Ganzzahl | **erforderlich**; mindestens: 1; höchstens: 999999999 |
 | `dataset` | Zeichenfolge | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
 
 ```javascript
@@ -930,8 +933,8 @@ Liste gnomAD mitochondriale Varianten mit heteroplasmy-aware counts (`ac_het`, `
 | --- | --- | --- |
 | `gene_symbol` | Zeichenfolge | fakultativ |
 | `gene_id` | Zeichenfolge | fakultativ |
-| `region_start` | Ganzzahl | fakultativ; mindestens: 1; höchstens: 2147483647 |
-| `region_stop` | Ganzzahl | fakultativ; mindestens: 1; höchstens: 2147483647 |
+| `region_start` | Ganzzahl | fakultativ; mindestens: 1; höchstens: 999999999 |
+| `region_stop` | Ganzzahl | fakultativ; mindestens: 1; höchstens: 999999999 |
 | `dataset` | Zeichenfolge | fakultativ; Standard: "gnomad_r4"; enum: &#91;"gnomad_r4", "gnomad_r4_non_ukb", "gnomad_r3", "gnomad_r3_controls_and_biobanks", "gnomad_r3_non_cancer", "gnomad_r3_non_neuro", "gnomad_r3_non_topmed", "gnomad_r3_non_v2", "gnomad_r2_1", "gnomad_r2_1_controls", "gnomad_r2_1_non_cancer", "gnomad_r2_1_non_neuro", "gnomad_r2_1_non_topmed", "Exac"&#93; |
 
 ```javascript

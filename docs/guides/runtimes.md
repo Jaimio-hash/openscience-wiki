@@ -1,7 +1,7 @@
 ---
 title: "Python and R runtimes"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -249,6 +249,8 @@ For a quick check before using research data, ask the Agent to run the Python ve
 Open the Notebook's output and compare it with the saved report. This Windows 10 example in Open-Science v0.28.0 reports Python **3.12.13** and `pip` **26.1.2**. Reading package metadata does not install or import that package.
 
 <Screenshot src="/img/open-science/windows/python-runtime-output.png" alt="Windows Python Notebook showing executed code and its actual version output" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.png" linkLabel="Open the complete Windows screenshot" />
+
+For Windows conda R startup or kernel-recovery failures, use v0.30.2 or later before retrying. The release fixes executable lookup after environment preparation and R kernel recovery. After updating, recheck the environment and run a small R calculation in Notebook; **Ready** alone is not an execution result. The screenshots below retain the versions and results of their original runs.
 
 For a Windows R run that reports **Enable protected mode before authorizing R access.**, inspect **Network settings** and the R card's **Authorize and verify** instructions. Resolve the reported authorization prerequisite before rerunning; a **Ready** card alone does not confirm execution. Keep the full error if the request remains blocked and follow [Troubleshooting](troubleshooting.md).
 

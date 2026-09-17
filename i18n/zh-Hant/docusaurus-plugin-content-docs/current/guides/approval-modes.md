@@ -1,7 +1,7 @@
 ---
 title: "權限與審批"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # 權限與審批 {/* #权限与审批 */}
@@ -53,6 +53,10 @@ last_update:
 ### 記住網頁讀取授權 {/* #记住网页读取授权 */}
 
 遇到支援該範圍的 **Read web pages** 請求時，可選擇 **Allow for this conversation**，讓同一會話後續的網頁讀取複用授權。這項授權可覆蓋其他網站，並非只允許第一個 URL；**Allow once** 僅批准當前呼叫。可在 **Remembered permissions** 中檢視或撤銷，它不會向 Notebook 網路白名單新增域名，也不代表允許上傳。
+
+### 記住網頁搜尋授權 {/* #remember-web-search */}
+
+從 v0.30.2 起，受支援的 Claude Agent 原生 **Search the web** 請求也可選擇 **Allow for this conversation**。同一會話後續符合條件的搜尋可以複用授權；**Allow once** 只批准當前請求。在 **Remembered permissions** 中檢視或撤銷 **Search the web**。搜尋與 **Read web pages** 是兩項獨立權限；此原生搜尋選項並非所有框架或 Connector 都支援，應以實際提供的範圍為準。
 
 ## 管理記住的權限 {/* #管理记住的权限 */}
 

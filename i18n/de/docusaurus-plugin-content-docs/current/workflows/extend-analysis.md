@@ -1,7 +1,7 @@
 ---
 title: "Erweitern einer Analyse mit einem installierten Specialist"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -21,7 +21,7 @@ Die Eingabe ist R öffentlichen [Theoph-Datensatz](https://www.stat.ethz.ch/R-ma
 3. Öffnen Sie ein neues Gespräch in Ihrem Forschungsprojekt. Wählen Sie ein verfügbares Modell, dann **Agent controls → Specialist → pharmacometrics-pkpd-designer**. Der aufgezeichnete Durchlauf verwendete **Codex Abonnement / gpt-5.6-sol**.
 4. Zu Beginn von **jede Analysemeldung**, Typ `/pkpd`, wählen Sie dann **pkpd-Modellierung** aus den Vorschlägen aus. Bestätigen Sie, dass es ein Skill-Chip wird, bevor Sie die Eingabeaufforderung einfügen.
 
-Die Auswahl der Rolle allein gab `Unknown skill` in dieser Version zurück. Ausdrückliche Auswahl des Skill ermöglichte den echten Loader. Dieser Schritt ist für die aufgezeichnete Konfiguration erforderlich; In diesem Beispiel wird nicht das automatische Laden aller Specialist-gebundenen Skills festgelegt.
+**Version des Beispiels:** Die folgenden Screenshots und Ergebnisse stammen aus v0.30.1. Dort führte die Auswahl der Rolle allein zu `Unknown skill`; der Skill musste für jede Nachricht ausdrücklich ausgewählt werden. v0.30.2 korrigiert die Vorbereitung der an Specialists gebundenen Skills, auch für delegierte Aufgaben. Wählen Sie in der neuen Version zunächst den Specialist und prüfen Sie das tatsächliche Laden. Wählen Sie den Skill bei Bedarf ausdrücklich aus. Dieses Beispiel wurde noch nicht mit v0.30.2 wiederholt. Der alte Umweg ist keine allgemeine Voraussetzung; die Korrektur belegt auch keinen erfolgreichen erneuten Test dieses Beispiels.
 
 ![Installierte Pharmakometik Specialist und seine Fähigkeiten](/img/open-science/theoph-specialist/installed.jpg)
 

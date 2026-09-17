@@ -1,7 +1,7 @@
 ---
 title: "Extrahieren Sie eine Literaturnachweistabelle"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Extrahieren Sie eine Literaturnachweistabelle {/* #extract-a-literature-evidence-table */}
@@ -27,6 +27,8 @@ Wählen Sie in einem Open-Science-Projekt ein Arbeitsmodell aus und fügen Sie d
 Klicken Sie auf den Anhang, um seine Vorschau zu öffnen. Jede Studie beginnt mit einem Titel, DOI und dem ursprünglichen Quelllink, gefolgt von Abschnittstext und Tabellen. Passen Sie diese zehn Identitäten mit der Quellliste ab; Zählen Sie nicht wiederholte Abschnittsüberschriften als zusätzliche Studien.
 
 ![Das tatsächlich angehängte Volltextpaket behält die Quellidentität und Artikelabschnitte bei](/img/open-science/research-workflows/mask-trials-input.png)
+
+Bevor Sie ein Papier als Beweismittel verwenden, überprüfen Sie an der Quelle nach Korrekturen oder Rückzügen. Von v0.30.2 aus überprüft der `verify_dois`-Helfer des `literature-review` Skill die Crossref-Aktualisierungsbeziehungen in beide Richtungen. `retracted: true` kann ein zurückgezogenes Papier oder einen Widerrufsbescheid identifizieren; die verknüpfte Beziehung zu prüfen. `false` bedeutet, dass kein geprüfter Marker gefunden wurde, kein Beweis dafür, dass das Papier nie zurückgezogen wurde. Diese zusätzliche Überprüfung war nicht Teil des aufgezeichneten Zehn-Papier-Laufs unten.
 
 ## Bitten Sie um eine Zeile pro Versuch {/* #ask-for-one-row-per-trial */}
 

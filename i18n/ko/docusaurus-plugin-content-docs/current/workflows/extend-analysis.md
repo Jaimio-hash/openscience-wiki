@@ -1,7 +1,7 @@
 ---
 title: "설치 된 Specialist 분석 확장"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 import ExampleDownload from '@site/src/components/ExampleDownload';
@@ -21,7 +21,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 3. 연구 프로젝트에 새로운 대화를 엽니다. 유효한 모형을, 그 후에 **Agent controls → Specialist → pharmacometrics-pkpd-designer** 선택하십시오. 기록된 실행은 **Codex 구독 / gpt-5.6-sol**을 사용했습니다.
 4. **각 분석 메시지**의 시작에서 `/pkpd`을 입력한 다음 제안에서 **pkpd 모델**를 선택하십시오. 프롬프트를 지나기 전에 Skill 칩이 됩니다.
 
-혼자 의지를 선택하면 `Unknown skill`이 버전에 반환됩니다. Skill을 선택하여 정품 로더를 활성화합니다. 이 단계는 기록된 윤곽을 위해 요구됩니다; 이 예제는 모든 Specialist-bound Skills의 자동 로딩을 설정하지 않습니다.
+**버전 안내:** 아래 스크린샷과 결과는 v0.30.1에서 기록했습니다. 당시에는 역할만 선택하면 `Unknown skill`이 반환되어 메시지마다 Skill을 직접 선택해야 했습니다. v0.30.2는 위임된 작업을 포함하여 Specialist에 연결된 Skill의 준비 과정을 수정했습니다. 새 버전에서는 먼저 Specialist를 선택하고 실제 로딩 결과를 확인한 뒤, 필요한 경우 Skill을 직접 선택하세요. 이 예제는 v0.30.2에서 아직 다시 실행하지 않았습니다. 이전 버전의 우회 절차가 항상 필요한 것은 아니며, 이 수정만으로 예제의 재검증 성공을 의미하지도 않습니다.
 
 ![Pharmacometrics Specialist 및 그 기능 설치](/img/open-science/theoph-specialist/installed.jpg)
 

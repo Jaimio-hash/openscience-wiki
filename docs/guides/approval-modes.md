@@ -1,7 +1,7 @@
 ---
 title: "Permissions and approvals"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # Permissions and approvals
@@ -53,6 +53,10 @@ The primary Allow button normally uses conversation scope when the request suppo
 ### Remember web-reading approval
 
 For a supported **Read web pages** request, choose **Allow for this conversation** to remember that capability for later web reads in the same conversation. It can cover other websites, not only the first URL. **Allow once** applies only to that call. Review or revoke the grant under **Remembered permissions**; it does not add hosts to the Notebook network allowlist or authorize uploads.
+
+### Remember web-search approval {/* #remember-web-search */}
+
+From v0.30.2, a supported Claude Agent native **Search the web** request also offers **Allow for this conversation**. Later matching searches in that conversation can reuse the grant; **Allow once** covers only the current request. Inspect or revoke **Search the web** under **Remembered permissions**. Search and **Read web pages** are separate permissions. This native-search option does not apply to every framework or Connector; read the scope actually offered.
 
 ## Manage remembered access
 

@@ -1,7 +1,7 @@
 ---
 title: "許可と承認"
 last_update:
-  date: '2026-09-16'
+  date: '2026-09-17'
 ---
 
 # 許可と承認 {/* #permissions-and-approvals */}
@@ -53,6 +53,10 @@ last_update:
 ### Web 読書の承認を忘れて下さい {/* #remember-web-reading-approval */}
 
 サポートされている **ウェブページの読み取り** リクエストについては、**Allow for this conversation** を選択して、後で Web が同じ会話で読み込まれる機能を覚えています。 他のウェブサイトは、最初のURLだけでなく、他のウェブサイトをカバーすることができます。 **Allow once**は、その呼び出しにのみ適用されます。 **保存済みの権限**の下で助成金を見直し、または取り消し; Notebookネットワークの許可リストにホストを追加したり、アップロードを承認したりしません。
+
+### Web検索の承認を記憶する {/* #remember-web-search */}
+
+v0.30.2 から、対応する Claude Agent のネイティブ **Search the web** リクエストでも **Allow for this conversation** を選択できます。同じ会話の後続検索で、この許可を再利用できます。**Allow once** は現在のリクエストだけを許可します。**Remembered permissions** で **Search the web** の許可を確認・取り消せます。検索と **Read web pages** は別の権限です。すべてのフレームワークや Connector がこの機能に対応するわけではありません。実際に表示される範囲を確認してください。
 
 ## 記憶されたアクセスを管理する {/* #manage-remembered-access */}
 

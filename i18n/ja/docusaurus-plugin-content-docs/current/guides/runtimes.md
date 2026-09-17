@@ -1,7 +1,7 @@
 ---
 title: "PythonとRのランタイム"
 last_update:
-  date: '2026-09-14'
+  date: '2026-09-17'
 ---
 
 import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide';
@@ -249,6 +249,8 @@ R.home()
 Notebookの出力を開き、保存されたレポートと比較します。 詳しくはこちら Windows 10 例: Open-Science v0.28.0 レポート Python **3.12.13** そして、 `pip` **26.1.2**. . . . パッケージメタデータを読み込むと、パッケージのインストールやインポートは行いません。
 
 <Screenshot src="/img/open-science/windows/python-runtime-output.png" alt="Windows Python Notebook 実行されたコードおよび実際のバージョンの出力を示す" width={1920} height={1017} windowBounds={[1157, 0, 763, 472]} href="/docs/img/open-science/windows/python-runtime-output.png" linkLabel="完全なWindowsスクリーンショットを開く" />
+
+WindowsコンダRの起動やカーネル回復の失敗のために、再試行する前にv0.30.2以上を使用してください。 リリースは、環境の準備とRカーネルの回復後の実行可能なルックアップを修正しました。 更新後、環境を再確認し、Notebookで小さなR計算を実行します。 **Ready**単独では実行結果ではありません。 以下のスクリーンショットは、元の実行のバージョンと結果を保持します。
 
 Windows Rは**Rアクセスを許可する前に保護モードを有効にします。**を報告し、**Network settings**およびRカードの**Authorize and verify**の指示を点検することを実行します。 再実行前に報告された承認前提条件を解決して下さい; **Ready**カードだけでは実行が確認できません。 リクエストがブロックされ、[トラブルシューティング](troubleshooting.md)に従うと、完全なエラーを保ちましょう。
 

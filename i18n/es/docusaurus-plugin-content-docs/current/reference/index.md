@@ -27,4 +27,4 @@ Utilice **XXXK / Ctrl+K** para buscar títulos, títulos y texto corporal en el 
 
 ## Cambio {/* #changelog */}
 
-[Examine las últimas notas de lanzamiento](../changelog/v0.30.1.md).
+[Examine las últimas notas de lanzamiento](../changelog/v0.30.2.md).
