@@ -12,7 +12,7 @@ last_update:
 
 打开 **Settings → Agent**，先区分 Installed 和 Available，再检查已安装卡片的版本、路径和 Active 标识。
 
-![重新检测后的 Codex](/img/open-science/local-acceptance/agent-codex-active.png)
+![重新检测后的 Codex](/img/open-science/local-acceptance/agent-codex-active.webp)
 
 | 控件或状态 | 含义与操作 |
 | --- | --- |
@@ -63,11 +63,11 @@ OpenCode 的 **Install → App-managed download (recommended)** 会下载自包�
 4. 选择 **Install OpenCode → App-managed download (recommended)**。等待 **Installed** 卡片出现，再点击卡片并确认 **Switch**。
 5. 检查 **Active**、运行时路径及兼容模型。重装后端不会替你配置模型提供方。
 
-![应用管理的 OpenCode 卸载范围](/img/open-science/priority-completion/01-opencode-uninstall.png)
+![应用管理的 OpenCode 卸载范围](/img/open-science/priority-completion/01-opencode-uninstall.webp)
 
 移除后端前先切换到其他可用后端；当前活动后端不能通过该控件卸载。重装后重新检测并激活，再打开已有项目执行一个小请求，检查连接。
 
-![重新安装并选中的 OpenCode](/img/open-science/priority-completion/03-opencode-reinstalled.png)
+![重新安装并选中的 OpenCode](/img/open-science/priority-completion/03-opencode-reinstalled.webp)
 
 安装按钮禁用时检查是否已有安装或切换进行中，以及页面的前置条件错误。检测成功但请求失败时，分别检查模型认证和后端/API 兼容性。
 

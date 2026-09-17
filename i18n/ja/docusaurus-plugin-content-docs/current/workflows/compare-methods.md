@@ -18,7 +18,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 **Settings → Runtimes** では、R が **Ready** であり、有効になっていることを確認します。 記録された操業は基盤/推薦されたR機能および余分パッケージの取付けと、**R 4.4.3**を使用しました。 CSV を **+ → Attach files** を通じてプロジェクト会話に添付します。
 
-![同じデータメソッドの比較に添付されたパブリックbfiデータセット](/img/open-science/workflow-extensions/bfi-input.png)
+![同じデータメソッドの比較に添付されたパブリックbfiデータセット](/img/open-science/workflow-extensions/bfi-input.webp)
 
 ## 2. どちらの方法かを合わせる前に前処理を修理して下さい {/* #2-fix-the-preprocessing-before-fitting-either-method */}
 
@@ -48,7 +48,7 @@ Use English and do not install packages or delegate.
 
 **Generated** または **Files** から **bfi-method-metrics.csv** を開きます。 記録されたファイルは、サンプルカウント、欠落、PCAの分散、FAの独自性、適合、収斂、種子および入力アイデンティティを含む**77メトリック行**が含まれています。
 
-![共有されたプリプロセッシングと両立したメソッドから数値メトリックを保存](/img/open-science/workflow-extensions/bfi-metrics.png)
+![共有されたプリプロセッシングと両立したメソッドから数値メトリックを保存](/img/open-science/workflow-extensions/bfi-metrics.webp)
 
 | PCAコンポーネントを非回転させる | 全規格の分散について説明 |
 | --- | --- |
@@ -65,7 +65,7 @@ FAオプティマイザはコンバージドだが、**p ≈ 1.218 × 10⁻²⁰
 
 **bfi-method-comparison.png** を開きます。 その3つのパネルは、無回転PCAの分散、varimax-rotated PCAのローディングおよびvarimax FAのローディングを示しています。 **250行**:25項目×5次元×2方法の正確な積載値が**bfi-loadings.csv**にあります。
 
-![未回転PCAの分散と2つの回転ローディングのマトリックス](/img/open-science/workflow-extensions/bfi-comparison-plot.png)
+![未回転PCAの分散と2つの回転ローディングのマトリックス](/img/open-science/workflow-extensions/bfi-comparison-plot.webp)
 
 方法を渡る機械的に「コラム1」に一致しません。 工場/成分の注文と兆候は、溶液を変更することなく変更できます。 熱地図は肯定的なローディングのための否定的および赤のための青を使用します; 項目パターンと数値値を比較します。
 
@@ -75,7 +75,7 @@ PCA パーティションの総観察分散; FAモデルでは、独立した独
 
 **bfi-method-report.md** を開きます。 同じサンプルとプリプロセッシング、固定種子とコンバージェンスとフィットの違いを報告することを確認してください。 これらの1-6の経口応答は、約連続して処理されます。 完全ケース削除は、欠損が応答や参加者特性に関連しているときに結果に偏ります。
 
-![最終報告書は、事前処理、シード、分散、および適合制限を記録します。](/img/open-science/workflow-extensions/bfi-report.png)
+![最終報告書は、事前処理、シード、分散、および適合制限を記録します。](/img/open-science/workflow-extensions/bfi-report.webp)
 
 <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.R">Rスクリプト</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/bfi-loadings.csv">ローディング</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/bfi-method-metrics.csv">メトリック</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.png">プロフィール</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/bfi-method-report.md">レポート</ExampleDownload>をダウンロードしてください。 スクリプトを置き、新しいフォルダに入力をダウンロードし、そこにターミナルを開き、実行します。
 

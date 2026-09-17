@@ -18,7 +18,7 @@ Connector 让服务工具可供 Agent 使用，Credential 在服务要求时提�
 
 打开 **Settings → Connectors**，搜索 **Omics Archives** 并进入详情。该内置分类包含 GEO、ArrayExpress、MetaboLights、MGnify 和 PRIDE，使用前展开工具说明。
 
-![GEO 元数据工具及明确的下载边界](/img/open-science/guides-walkthrough/36-omics-tools.png)
+![GEO 元数据工具及明确的下载边界](/img/open-science/guides-walkthrough/36-omics-tools.webp)
 
 `geo_get_series` 返回 GEO 系列元数据、样本、平台及补充文件 URL。需要计算时，从返回的来源下载数据表，再将其附加到项目。
 
@@ -49,7 +49,7 @@ Connector 让服务工具可供 Agent 使用，Credential 在服务要求时提�
 3. 根据所需访问范围选择 **Require approval**、**Block** 或 **Always allow**。Require approval 显示 **Ask when no Session, Project, or Global permission applies.**，即没有适用的已记忆权限时才询问。
 4. 启用 PubMed 并检查 **Used by**。供 Main 使用时会显示 **Main only**；关闭后为 **Not in use**。
 
-![PubMed 工具说明与审批控件](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.png)
+![PubMed 工具说明与审批控件](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.webp)
 
 详情列出 `search_articles`、`get_article_metadata`、`find_related_articles`、`lookup_article_by_citation`、`convert_article_ids`、`get_full_text_article` 和 `get_copyright_status`。每个工具可设为 **Always allow / Require approval / Block**。Connector 整体的 **Skip approvals** 是另一项设置，启用前先确认范围；打开描述只会查看工具说明。
 
@@ -68,7 +68,7 @@ Connector 让服务工具可供 Agent 使用，Credential 在服务要求时提�
 4. 检查实际结果：本例返回 **GSE60450**、**Mus musculus**、**12 个样本**，系列标题为 “Transcriptome analysis of luminal and basal cell subpopulations in the lactating versus pregnant mammary gland”。
 5. 保留 GSM 编号及其特征，不凭名称相似就推断与矩阵 MCL1 列名的对应。
 
-![Connector 实际返回的 GEO 样本特征](/img/open-science/guides-walkthrough/59-geo-sample-metadata.png)
+![Connector 实际返回的 GEO 样本特征](/img/open-science/guides-walkthrough/59-geo-sample-metadata.webp)
 
 返回编号范围 **GSM1480291–GSM1480302**，包含 luminal/basal 细胞群及 virgin、18.5-day pregnancy、2-day lactation 阶段。这些来自元数据，不是从总计数推断。十二行回答表格实际下载为 <a href="/docs/examples/gse60450/geo-sample-metadata.csv" download>geo-sample-metadata.csv</a>；它是对话表格导出，与托管质控产物分开。
 
@@ -104,7 +104,7 @@ Connector 让服务工具可供 Agent 使用，Credential 在服务要求时提�
 | Fields / Text | 按行编辑，或每行输入一个 `KEY=`；密钥值保存在 Credentials |
 | 命令预览 | 检查绑定区域之后显示的启动器 |
 
-![本地命令与环境变量凭据绑定](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.png)
+![本地命令与环境变量凭据绑定](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.webp)
 
 选择启动器前确认对应可执行文件、包、容器或服务已安装。下方示例说明如何导入并验证本地 MCP 连接。
 
@@ -124,13 +124,13 @@ Connector 让服务工具可供 Agent 使用，Credential 在服务要求时提�
 4. **Add header** 增加一行，**Remove header** 移除一行。
 5. **Fields / Text** 切换名称录入方式；Text 每行以 `Name:` 填写一个请求头名称，值由 Credentials 单独管理。
 
-![请求头名称与凭据选择器](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.png)
+![请求头名称与凭据选择器](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.webp)
 
 #### OAuth 绑定
 
 选择与资源 URL、传输方式和注册配置匹配的 **OAuth credential**。**New credential** 打开[凭据编辑器](../tools/credentials.md)。当前空配置实际提示 **No OAuth credential matches this Connector's resource URL, transport, and registration.**，底部操作变为 **Add and sign in**。
 
-![OAuth 凭据匹配](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.png)
+![OAuth 凭据匹配](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.webp)
 
 ## 导入、导出与连接验证
 
@@ -141,7 +141,7 @@ Connector 让服务工具可供 Agent 使用，Credential 在服务要求时提�
 3. 点击 **Use configuration** 进入预填表单。导入尚未完成：仍需核对字段、选择本机凭据并勾选 **I trust this connector**。
 4. 点击 **Add connector**，返回列表检查连接状态，再实际调用一个只读工具。
 
-![多服务配置的条目选择与凭据提示](/img/open-science/local-todo-batch/23-mcp-multi-server.png)
+![多服务配置的条目选择与凭据提示](/img/open-science/local-todo-batch/23-mcp-multi-server.webp)
 
 导入的服务引用 `QC_EXAMPLE_TOKEN` 等环境变量时，将该名称绑定到本机保存的凭据。必需绑定完成后才能 **Add**。添加后检查 **Connected** 并调用所需工具；保存绑定本身不能验证远程认证。
 
@@ -151,13 +151,13 @@ Connector 让服务工具可供 Agent 使用，Credential 在服务要求时提�
 
 在 Connector 行的 **Actions → Export** 中选择 **Open Science Connector** 或 **MCP client config**，检查预览后点击 **Save configuration**。
 
-![导出只保留凭据名称，并提示本机路径](/img/open-science/local-todo-batch/24-mcp-export-binding.png)
+![导出只保留凭据名称，并提示本机路径](/img/open-science/local-todo-batch/24-mcp-export-binding.webp)
 
 实际导出的配置包含 `required_secrets.environment` 中的变量名，没有演示凭据值，也不包含本地信任与权限。重新导入仍需选择凭据并确认信任。
 
 如果相同 ID 已存在，预览显示 **A custom Connector with ID … is already installed**，**Use configuration** 不可用。要修改现有连接，返回 **Edit**；不要把导入当作覆盖更新。
 
-![重复 ID 阻止重新添加](/img/open-science/local-todo-batch/26-mcp-reimport-collision.png)
+![重复 ID 阻止重新添加](/img/open-science/local-todo-batch/26-mcp-reimport-collision.webp)
 
 恢复导出的连接时，检查预填字段并重新绑定所需命名凭据。完成信任确认，再用小型调用核对。导入不会覆盖相同 ID 的现有 Connector。
 

@@ -23,7 +23,7 @@ Specialist 是儲存下來的研究角色，包含身份、指令和可用 Skill
 
 開啟 **Settings → Specialists**。**Installed** 表示本地註冊數量，包含 Reviewer。使用 **Search specialists**、**Filter specialists by category**，再開啟條目檢查。**Browse Marketplace** 是另一份目錄；市場列出角色不代表已安裝，必須完成包和本地設定流程。
 
-![本地已安裝的 RNA-seq QC Reviewer](/img/open-science/capabilities-walkthrough/06-specialist-list.jpg)
+![本地已安裝的 RNA-seq QC Reviewer](/img/open-science/capabilities-walkthrough/06-specialist-list.webp)
 
 <span id="本次市场实际展示的角色" />
 

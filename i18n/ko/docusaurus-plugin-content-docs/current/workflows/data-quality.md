@@ -43,7 +43,7 @@ Do not perform differential-expression testing or delegate.
 
 전송하기 전에 헤더를 확인하기 위해 첨부 파일을 클릭하십시오 : 두 개의 메타 데이터 열은 12 개의 샘플 열에 의해 따랐습니다. 텍스트 미리보기는 큰 파일의 일부만로드합니다. Notebook은 전체 매트릭스를 읽을 수 있어야 합니다. 이 실행은 직접 계산을 보냈습니다. 먼저 플랜에 동의하고 싶다면 별도의 [회사연혁](../guides/planning.md) 흐름을 사용하십시오.
 
-![실제 부착 된 매트릭스 및 열 정의](/img/open-science/research-workflows/rnaseq-qc-input.png)
+![실제 부착 된 매트릭스 및 열 정의](/img/open-science/research-workflows/rnaseq-qc-input.webp)
 
 ## 2. 샘플 계산에서 metadata를 유지 {/* #2-keep-metadata-out-of-sample-calculations */}
 
@@ -59,7 +59,7 @@ Do not perform differential-expression testing or delegate.
 
 입력 버전 ID가 해결되지 않으면 에이전트가이 대화의 첨부 파일과 재스트에서 장착 된 입력을 사용하도록 요청하십시오. 이 실행은 그 복구를 사용. 완료된 계산 또는 침묵으로 다른 파일을 대체하지 마십시오.
 
-![차원을 가진 성공적인 Notebook 산출, hashes 및 계산된 표본 미터](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.png)
+![차원을 가진 성공적인 Notebook 산출, hashes 및 계산된 표본 미터](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.webp)
 
 완료 된 재런 유효 **27,179 유전자 행 및 12 샘플 열**은 변형되지 않은 행, 중복 ID, 누락 된 항목 또는 잘못된 카운트가 없습니다. 모든 3 개의 요청된 파일은 **Generated**에서 나타났습니다. 각 파일을 엽니다; artifact로 저장되지 않은 작업 파일은 아직 전달되지 않았습니다.
 
@@ -69,7 +69,7 @@ Do not perform differential-expression testing or delegate.
 
 [Baseline 테이블](../reference/example-data.md#sample-qc-baseline)과 모든 샘플 메트릭스를 비교하여 전체 샘플 식별자가 일치합니다.
 
-![완료된 재런에서 12row 테이블을 다시 열었습니다.](/img/open-science/research-workflows/rnaseq-qc-rerun-table.png)
+![완료된 재런에서 12row 테이블을 다시 열었습니다.](/img/open-science/research-workflows/rnaseq-qc-rerun-table.webp)
 
 이 입력을 위해, 0-count 플러스 각 행에 있는 검출된 유전자는 **27,179**와 동등해야 합니다. **48** 샘플 메트릭을 독립적 인 기본으로 비교하십시오. 계약은 공급된 입력에 대한 이러한 계산을 확인합니다; downstream assumptions는 여전히 자신의 평가를 필요로합니다.
 
@@ -77,7 +77,7 @@ Do not perform differential-expression testing or delegate.
 
 `rnaseq-library-sizes.png`을 열고 확대합니다. 모든 12 개의 샘플 라벨, 원시 카운트 축 및 값이 정상화되지 않는 메모를 확인하십시오. 총 수는 **20,015,386**에서 **24,723,827**에 배열합니다.
 
-![동일한 rerun에서 저장된 원본 라이브러리 크기 도형](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.png)
+![동일한 rerun에서 저장된 원본 라이브러리 크기 도형](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.webp)
 
 더 큰 라이브러리 합계는 자체가 유전자가 다르게 표현된다는 것을 의미하지 않습니다. 별도의 다운스트림 분석 전에 GEO 메타데이터에 샘플 특성과 디자인, 대조, 정상화 및 필터링 규칙을 지정합니다. 별도의 Connector 후속 12 샘플의 GEO 특성에 기여; GSM-to-matrix-column 매핑, 분석 디자인 및 통계 단계는 여기에서 유효하지 않았습니다. [커넥터](../guides/connectors.md) 참조.
 

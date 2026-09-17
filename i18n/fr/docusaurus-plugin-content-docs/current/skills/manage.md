@@ -25,11 +25,11 @@ Pour la navigation, l'installation et les mises à jour du catalogue, suivez le 
 5. Fermer l'aperçu, sélectionner le candidat et choisir **Importer sélectionné (1)**.
 6. Recherchez la ligne importée et inspectez son nom final et sa source.
 
-![Inspection de l'emballage complet avant l'importation](/img/open-science/capabilities-walkthrough/11-skill-package-preview.jpg)
+![Inspection de l'emballage complet avant l'importation](/img/open-science/capabilities-walkthrough/11-skill-package-preview.webp)
 
 Dans cet exemple, le Skill personnel d'origine existait déjà. L'aperçu affiché **Name exists**, et l'importation a créé un **Importé `rnaseq-count-qc-2`** séparé. L'original et sa fixation Specialist sont restés. Ne présumez pas que chaque importation met à jour le paquet existant; inspecter la source du candidat et mettre à jour/remplacer les diagnostics.
 
-![La copie importée et le Skill personnel original](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.jpg)
+![La copie importée et le Skill personnel original](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.webp)
 
 | Contrôle des importations | Objet |
 | --- | --- |
@@ -53,9 +53,9 @@ Un téléchargement Markdown nécessite YAML `name` et `description`; Un paquet 
 4. Retourner à Skills, rechercher `peer-review` et inspecter la ligne Importée. Le dossier source reste en place; Open-Science utilise une copie importée.
 5. Utilisez **Rescan** après avoir modifié les dossiers installés. Revérifier l'origine, la sélection et le statut avant d'importer à nouveau.
 
-![Prévisualiser le paquet d'examen par les pairs installé localement](/img/open-science/local-todo-batch/12-installed-skill-preview.png)
+![Prévisualiser le paquet d'examen par les pairs installé localement](/img/open-science/local-todo-batch/12-installed-skill-preview.webp)
 
-![Trouver le paquet importé dans la liste Skills](/img/open-science/local-todo-batch/13-installed-skill-imported.png)
+![Trouver le paquet importé dans la liste Skills](/img/open-science/local-todo-batch/13-installed-skill-imported.webp)
 
 Après l'importation, inspectez le modèle et les fichiers de référence dans le détail Skill. Avant d'utiliser une méthode d'un autre assistant, vérifiez que les outils requis et les fonctionnalités d'exécution sont disponibles dans cette session.
 
@@ -69,7 +69,7 @@ Après l'importation, inspectez le modèle et les fichiers de référence dans l
 4. Fermer l'aperçu, sélectionner le candidat prévu et choisir **Importer sélectionné (1)**. Attendez le résultat et vérifiez son nom sous **Imported skills**.
 5. Retournez à Skills et recherchez ce nom. Inspecter sa source et sa disponibilité avant de l'utiliser.
 
-![Examiner un GitHub Skill et sa source épinglée avant d'importer](/img/open-science/local-todo-batch/15-github-skill-preview.png)
+![Examiner un GitHub Skill et sa source épinglée avant d'importer](/img/open-science/local-todo-batch/15-github-skill-preview.webp)
 
 L'importation de `fair-esm2` à partir du dépôt produit a créé **`fair-esm2-2`** parce que le nom intégré existait déjà. Le paquet intégré est resté. Les instructions d'importation n'installent pas de poids de modèle ou n'établissent pas que l'inférence fonctionne.
 
@@ -77,7 +77,7 @@ L'importation de `fair-esm2` à partir du dépôt produit a créé **`fair-esm2-
 
 Scanner le même dépôt avec le nouveau ref. Le candidat existant peut montrer **Update available**. Sélectionnez seulement ce candidat et importez-le; inspecter la ligne existante importée et prévisualiser après. Dans la vérification ESM-2, la même copie `fair-esm2-2` a été mise à jour, et la numérisation que ref a de nouveau montré **Imported**. L'organisme d'instructions mis à jour correspond à la source du dépôt. L'importateur réécrit la matière première et le nom sans risque de collision, de sorte que les octets du fichier entier n'ont pas besoin de correspondre à l'original SKILL.md.
 
-![Une révision en amont est disponible pour la copie importée](/img/open-science/local-todo-batch/16-github-update-available.png)
+![Une révision en amont est disponible pour la copie importée](/img/open-science/local-todo-batch/16-github-update-available.webp)
 
 ### Récupérer de GitHub le taux limite {/* #recover-from-github-rate-limiting */}
 
@@ -87,7 +87,7 @@ Pour **La demande de GitHub était limitée au taux**, ouvrez **Manage GitHub cr
 
 Ouvrez **Manage**, filtrez par source/status et recherchez une méthode spécifique. Sélectionnez le résultat avant d'appliquer une action. **Sélectionné (n)** montre la sélection; **Clear selection** le vide. Examinez l'ensemble complet sélectionné lorsque les filtres changent.
 
-![La copie importée désactivée dans la gestion en vrac](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.jpg)
+![La copie importée désactivée dans la gestion en vrac](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.webp)
 
 Après avoir modifié la disponibilité, rouvrez le détail Skill pour confirmer son état. Gardez une exportation d'une méthode dont vous avez besoin avant de la supprimer.
 

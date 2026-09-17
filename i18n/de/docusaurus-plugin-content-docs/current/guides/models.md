@@ -17,7 +17,7 @@ Verwenden Sie die folgenden Aufgabenrichtlinien, wenn Main, Subagent, Reviewer, 
 3. Wählen Sie **Reasoning effort**. Verwenden Sie die Auswahlmöglichkeiten, die tatsächlich für dieses Modell angezeigt werden. Dieses inspizierte Modell bot Default, Low, Medium, High, XHigh und Ultra; Andere Modelle haben unterschiedliche Leitern.
 4. Schließen und erneutes Öffnen des Modells, um die gespeicherte Auswahl zu überprüfen. Starten Sie eine kleine Anfrage und prüfen Sie ihr Ergebnis vor einer langen Analyse.
 
-![Main Modell und Connected Provider](/img/open-science/guides-walkthrough/10-model-main.png)
+![Main Modell und Connected Provider](/img/open-science/guides-walkthrough/10-model-main.webp)
 
 Änderungen gelten für nachfolgende Anfragen. Sie ändern nicht rückwirkend das Modell hinter einer bestehenden Antwort. Wenn sich die Modelle ändern, versucht die App, die relative Argumentationsstärke zu erhalten; Ein Backend kann sich einem nicht unterstützten Aufwand annähern. Ein höherer Aufwand kann die Zeit- und Token-Nutzung erhöhen und ist keine Korrektheitsgarantie.
 
@@ -32,7 +32,7 @@ Wählen Sie eine Szenariozeile, um sie zu erweitern. Das Öffnen einer anderen R
 | **Vision** | Ein konfiguriertes bildfähiges Modell | Nicht konfiguriert bedeutet, dass es keine dedizierte Vision-Auswahl gibt. Ob ein Relais benötigt wird, hängt von der Bildunterstützung des aktiven Backends ab. |
 | **Session details** | Folgen Sie Main oder wählen Sie ein kompatibles Modell; ihre Bemühungen und ihre Befähigung zu prüfen | Dies generiert den Sitzungstitel / die Beschreibung mit einem eingeschränkten Aufruf. Es ist getrennt von der wissenschaftlichen Aufgabe und ihren Artefakten. |
 
-![Subagentenvererbung und Kontrolle des Aufwands für Behinderte](/img/open-science/guides-walkthrough/11-model-scenarios.png)
+![Subagentenvererbung und Kontrolle des Aufwands für Behinderte](/img/open-science/guides-walkthrough/11-model-scenarios.webp)
 
 Die Session-Details-Selektor filtert Codex Abonnementmodelle heraus. Ein in Main oder Vision sichtbares Modell kann daher hier fehlen. Mit einem kompatiblen lokalen Anbieter und OpenCode wurde das lokale Modell als feste Wahl verfügbar. **Not supported** bedeutet neben seinem Argumentationsaufwand, dass die Aufwandskontrolle nicht verfügbar ist; Es ist getrennt davon, ob das Modell eine Textanforderung erhalten kann.
 
@@ -51,9 +51,9 @@ Verwenden Sie Vision, wenn das Main-Modell der Konversation keine Bilder akzepti
 5. Vergleichen Sie die Antwort mit dem Originalbild. Verwenden Sie die Quelltabelle für genaue numerische Vergleiche: In diesem Beispiel beweisen zwei auf **24.7M** gerundete Labels nicht, dass ihre zugrunde liegenden Zählungen gleich sind.
 6. Bringen Sie Vision zu **Not configured** zurück, wenn Sie kein separates Bildmodell mehr wünschen. Dadurch wird der Modellanbieter nicht entfernt.
 
-![Separate Vision Auswahl neben dem Text Main Modell](/img/open-science/sept11-completion/vision-configuration.png)
+![Separate Vision Auswahl neben dem Text Main Modell](/img/open-science/sept11-completion/vision-configuration.webp)
 
-![Überprüfen von Chart-Etiketten und die Grenzen der gerundeten Werte](/img/open-science/sept11-completion/vision-result.png)
+![Überprüfen von Chart-Etiketten und die Grenzen der gerundeten Werte](/img/open-science/sept11-completion/vision-result.webp)
 
 Das aktuelle Image-Relay schließt Codex-Abonnementanbieter aus, obwohl sie im Vision-Selektor erscheinen können. Wenn ein Main-Modell, das nur Text enthält, ein Bild nach dieser Auswahl immer noch ablehnt, wählen Sie einen anderen geeigneten Vision-Anbieter oder ein bildfähiges Main-Modell. Behandeln Sie einen gespeicherten Selektorwert nicht als erfolgreiche Bildanforderung.
 

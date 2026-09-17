@@ -95,7 +95,7 @@ Para ejecutar a través de Open-Science, conceda la carpeta preparada usando **Y
 
 ### Compruebe las secuencias diseñadas {/* #check-the-designed-sequences */}
 
-![Completo informe de comparación de CPU local y reabierto](/img/open-science/local-todo-batch/42-cpu-model-comparison.png)
+![Completo informe de comparación de CPU local y reabierto](/img/open-science/local-todo-batch/42-cpu-model-comparison.webp)
 
 Los productos guardados en este ejemplo contenían los siguientes resultados:
 

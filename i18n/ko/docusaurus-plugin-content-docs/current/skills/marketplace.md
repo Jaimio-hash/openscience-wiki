@@ -11,7 +11,7 @@ last_update:
 
 ZIP, 로컬 Skill 또는 특정 GitHub 저장소에 가져 오기 위해 [Skill 수입 및 관리](manage.md)을 사용하십시오. 연구 방법 및 입력의 개요에 대해서는 [Skill 디렉토리](directory.md)을 참조하십시오.
 
-![검색이있는 Skill 마켓 플레이스, 범주 필터 및 설치 버튼](/img/open-science/feature-guides-2026-09/marketplace-browse.png)
+![검색이있는 Skill 마켓 플레이스, 범주 필터 및 설치 버튼](/img/open-science/feature-guides-2026-09/marketplace-browse.webp)
 
 ## 적당한 방법을 찾아내십시오 {/* #find-a-suitable-method */}
 
@@ -21,7 +21,7 @@ ZIP, 로컬 Skill 또는 특정 GitHub 저장소에 가져 오기 위해 [Skill 
 
 카탈로그 서명은 배포 정체성을 확인합니다. 그것은 방법을 설정하지 않습니다 당신의 연구 질문 또는 컴퓨터는 그것의 의존성.
 
-![작성자, 버전, 라이센스 및 설치 작업을 보여주는 Marketplace Skill 세부 사항](/img/open-science/feature-guides-2026-09/marketplace-detail.png)
+![작성자, 버전, 라이센스 및 설치 작업을 보여주는 Marketplace Skill 세부 사항](/img/open-science/feature-guides-2026-09/marketplace-detail.webp)
 
 ## Skill 설치 및 사용 {/* #install-and-use-a-skill */}
 

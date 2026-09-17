@@ -23,9 +23,9 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 &#42;&#42;版本說明：&#42;&#42;下方截圖與結果記錄於 v0.30.1。當時僅選擇專家角色會返回 `Unknown skill`，按上面的步驟逐條選擇 Skill 後才能載入。v0.30.2 已修復專家繫結 Skill 的準備過程，也覆蓋委派任務。在新版中可先選擇 Specialist，檢查實際 Skill 載入結果；需要時再顯式選擇。本案例尚未在 v0.30.2 重跑，因此舊版繞行步驟不是通用要求，新版修復也不代表本案例已複測透過。
 
-![已安裝的 Pharmacometrics Specialist 及其能力](/img/open-science/theoph-specialist/installed.jpg)
+![已安裝的 Pharmacometrics Specialist 及其能力](/img/open-science/theoph-specialist/installed.webp)
 
-![為當前訊息選擇真正的 pkpd-modeling Skill](/img/open-science/theoph-specialist/skill-selection.jpg)
+![為當前訊息選擇真正的 pkpd-modeling Skill](/img/open-science/theoph-specialist/skill-selection.webp)
 
 ## 2. 檢查資料並繪製濃度曲線 {/* #2-检查数据并绘制浓度曲线 */}
 
@@ -49,9 +49,9 @@ Do not install packages or delegate. Keep everything in English.
 
 CSV 預覽只顯示前 100 列；儲存的輸入檔案包含全部 132 筆觀測。
 
-![在 Open-Science 中開啟儲存的輸入表格](/img/open-science/theoph-specialist/input.jpg)
+![在 Open-Science 中開啟儲存的輸入表格](/img/open-science/theoph-specialist/input.webp)
 
-![實際執行的基線檢查與十二位受試者的濃度曲線](/img/open-science/theoph-specialist/baseline.jpg)
+![實際執行的基線檢查與十二位受試者的濃度曲線](/img/open-science/theoph-specialist/baseline.webp)
 
 對照檔案：<ExampleDownload path="/examples/theoph/theoph-input.csv">輸入 CSV</ExampleDownload>、<ExampleDownload path="/examples/theoph/theoph-concentration-time.png">濃度曲線</ExampleDownload>、<ExampleDownload path="/examples/theoph/theoph-data-check.md">資料檢查報告</ExampleDownload>。
 
@@ -83,7 +83,7 @@ Do not install packages, change permissions or delegate. Use English.
 
 從生成檔案中開啟 **theoph-nca-summary.csv**，確認十二位受試者各佔一行。除了指標數值，還要檢視單位及每人的最後觀測時間。
 
-![儲存的受試者暴露指標表](/img/open-science/theoph-specialist/results.jpg)
+![儲存的受試者暴露指標表](/img/open-science/theoph-specialist/results.webp)
 
 | 受試者 | Cmax（mg/L） | Tmax（h） | AUC₀–last（mg·h/L） | 最後觀測時間（h） |
 | --- | --- | --- | --- | --- |

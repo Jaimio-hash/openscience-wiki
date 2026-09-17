@@ -23,13 +23,13 @@ Elige un tema cómodo, establece tu lenguaje de interfaz y recibe alertas de tar
 
 <PlatformContent platform="macos">
 
-![Ajustes de apariencia general](/img/open-science/v0.27.0/07-general-appearance.png)
+![Ajustes de apariencia general](/img/open-science/v0.27.0/07-general-appearance.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-<Screenshot src="/img/open-science/windows/general-settings.png" alt="Controles de tema y lenguaje en Windows Ajustes generales" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.png" linkLabel="Abra la pantalla completa de configuración Windows General" />
+<Screenshot src="/img/open-science/windows/general-settings.webp" alt="Controles de tema y lenguaje en Windows Ajustes generales" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.webp" linkLabel="Abra la pantalla completa de configuración Windows General" />
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ Para solicitar un informe en un idioma diferente, especifique que en su conversa
 
 El mismo informe sigue siendo legible a gran escala. Utilice la barra de desplazamiento horizontal para ver columnas fuera del puerto de visualización de la tabla actual; la escala de visualización cambia la vista, no los datos guardados.
 
-![Open-Science en 125 por ciento escalar con una barra de desplazamiento horizontal en la tabla vista previa](/img/open-science/windows/app-scale-125.png)
+![Open-Science en 125 por ciento escalar con una barra de desplazamiento horizontal en la tabla vista previa](/img/open-science/windows/app-scale-125.webp)
 
 </PlatformContent>
 
@@ -104,7 +104,7 @@ Si te perdiste el banner, encuentra la alerta en el Centro de Notificación Wind
 
 <PlatformContent platform="macos">
 
-![Alerta de terminación del sistema inglés con detalles de tarea ocultos](/img/open-science/priority-completion/07-system-completion-notification.png)
+![Alerta de terminación del sistema inglés con detalles de tarea ocultos](/img/open-science/priority-completion/07-system-completion-notification.webp)
 
 </PlatformContent>
 Apaga **Show task content in system notifications** para usar alertas genéricas. Seleccione una alerta de terminación o aprobación para reabrir su conversación; responder a las aprobaciones dentro de la aplicación.

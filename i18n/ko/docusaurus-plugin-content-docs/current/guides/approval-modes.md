@@ -24,7 +24,7 @@ last_update:
 
 작곡가 옆에 **Agent controls**을 열고 선택한 모드를 읽습니다. 프레임 워크가 어떻게 구현하는지 보여주는 호환성 메시지 확인. 완전한 접근 제한에는 그것의 자신의 확인이 있습니다. **Auto-review**은 결과를 검토하고 자동 승인 편집을 의미하지 않는 다른 제어입니다.
 
-![실제 영어 권한 모드 선택기](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![실제 영어 권한 모드 선택기](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 당신의 대리인을 위해 보이는 효과적인 형태를 검사하십시오; 지원된 승인 행위는 기구에 의해 다를 수 있습니다. 모든 모드가 모든 4개의 프레임워크를 통해 연습되지 않았습니다.
 
@@ -34,7 +34,7 @@ last_update:
 
 작업, 선택한 환경 및 제안 된 코드를 승인하기 전에 읽어보십시오. 데이터 검사를 위해, 의도한 입력을 읽고 요청한 출력만 쓸 수 있다는 것을 확인합니다. 누락된 의존성 설치는 다른 목적과 효력을 가진 분리되는 가동입니다.
 
-![Python 공개 GSE60450 케이스에서 실행 승인](/img/open-science/guides-walkthrough/25-python-permission.png)
+![Python 공개 GSE60450 케이스에서 실행 승인](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | 통제 또는 정보 | 검사 또는 할 수있는 것 |
 | --- | --- |
@@ -87,7 +87,7 @@ Connector/tool, **글로벌 / 프로젝트 / 세션** 범위 및 **모든 통화
 
 Revocation는 미래 승인에 영향을 미칩니다. 그것은 완료된 편집 또는 네트워크 요청을 반전하지 않으며, 더 넓은 보조금은 여전히 작동을 승인 할 수 있습니다.
 
-![세션 그룹 재직 후 새로운 실행 요청](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![세션 그룹 재직 후 새로운 실행 요청](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 재고가 불완전한 경우, 그룹 재직을 사용하기 전에 실패한 요청을 로드하거나 다시 시도하십시오. 개정 후 선택된 범위를 재확인합니다.
 

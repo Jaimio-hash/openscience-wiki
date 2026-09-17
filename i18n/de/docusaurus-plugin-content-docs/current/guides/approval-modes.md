@@ -24,7 +24,7 @@ Verwenden Sie **Agent controls**, um auszuwählen, wie die aktuelle Konversation
 
 Öffnen Sie **Agent controls** neben dem Komponisten und lesen Sie den ausgewählten Modus. Überprüfen Sie eine Kompatibilitätsnachricht, die zeigt, wie das Framework sie implementiert. Die Vollzugriffskontrolle hat eine eigene Bestätigung. **Auto-review** ist ein anderes Steuerelement für die Überprüfung von Ergebnissen und bedeutet nicht die automatische Genehmigung von Bearbeitungen.
 
-![Der eigentliche englische permission-mode selector](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![Der eigentliche englische permission-mode selector](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 Überprüfen Sie den effektiven Modus, der für Ihren Agenten angezeigt wird; Das unterstützte Genehmigungsverhalten kann je nach Framework unterschiedlich sein. Nicht jeder Modus wurde in allen vier Frameworks ausgeübt.
 
@@ -34,7 +34,7 @@ Verwenden Sie **Agent controls**, um auszuwählen, wie die aktuelle Konversation
 
 Lesen Sie den Vorgang, die ausgewählte Umgebung und den vorgeschlagenen Code vor der Genehmigung. Bestätigen Sie für eine Datenprüfung, dass sie die beabsichtigte Eingabe liest und nur die angeforderten Ausgaben schreibt. Die Installation einer fehlenden Abhängigkeit ist eine separate Operation mit einem anderen Zweck und einer anderen Wirkung.
 
-![Python Ausführungsgenehmigung aus dem öffentlichen GSE60450-Fall](/img/open-science/guides-walkthrough/25-python-permission.png)
+![Python Ausführungsgenehmigung aus dem öffentlichen GSE60450-Fall](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | Kontrolle oder Information | Was zu prüfen oder zu tun ist |
 | --- | --- |
@@ -87,7 +87,7 @@ Wählen Sie **Widerruf**, um den beabsichtigten Zuschuss zu entfernen. Verwenden
 
 Der Widerruf wirkt sich auf die zukünftige Genehmigung aus. Es werden keine abgeschlossenen Bearbeitungen oder Netzwerkanforderungen rückgängig gemacht, und ein breiterer Zuschuss kann den Vorgang dennoch autorisieren.
 
-![Eine neue Ausführungsanfrage nach dem Widerruf der Sitzungsgruppe](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![Eine neue Ausführungsanfrage nach dem Widerruf der Sitzungsgruppe](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 Wenn das Inventar unvollständig ist, warten Sie, bis es die fehlgeschlagene Anforderung geladen oder erneut versucht hat, bevor Sie den Gruppenentzug verwenden. Überprüfen Sie den ausgewählten Umfang nach dem Widerruf erneut.
 

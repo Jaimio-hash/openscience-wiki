@@ -17,7 +17,7 @@ Utilisez la période affichée et la métrique pour interpréter chaque graphiqu
 3. Comparez les quatre champs de jeton et les compteurs d'activité New/Total.
 4. Vérifiez l'étiquette de la période du graphique avant de le comparer avec le résumé.
 
-![Résumé aujourd'hui avec les graphiques quotidiens séparés](/img/open-science/guides-walkthrough/13-usage-today.png)
+![Résumé aujourd'hui avec les graphiques quotidiens séparés](/img/open-science/guides-walkthrough/13-usage-today.webp)
 
 | Champ | Interprétation |
 | --- | --- |

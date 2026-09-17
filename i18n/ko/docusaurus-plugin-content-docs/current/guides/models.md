@@ -17,7 +17,7 @@ Main, Subagent, Reviewer, Vision 또는 Session 세부 사항이 다른 모델�
 3. **Reasoning effort**을 선택합니다. 그 모델에 대해 실제로 표시된 선택을 사용합니다. 이 검사된 모형은 과태, 낮은, 중간, 높은, XHigh 및 매우 제안했습니다; 다른 모형에는 다른 사다리가 있습니다.
 4. 저장된 선택을 검사하기 위하여 닫히고 reopen 모형. 작은 요청을 시작하고 긴 분석 전에 결과를 검사합니다.
 
-![Main 모델 및 연결 공급자](/img/open-science/guides-walkthrough/10-model-main.png)
+![Main 모델 및 연결 공급자](/img/open-science/guides-walkthrough/10-model-main.webp)
 
 변경은 후속 요청에 적용됩니다. 그들은 기존의 대답 뒤에 모델을 개조하지 않습니다. 모델을 변경할 때, 앱은 상대적인 이유를 보존하려고 시도; 백엔드는 지원되지 않는 노력에 대해 대략적인 영향을 줄 수 있습니다. 더 높은 노력은 시간과 토큰 사용을 증가시킬 수 있으며 정확한 보증이 아닙니다.
 
@@ -32,7 +32,7 @@ Main, Subagent, Reviewer, Vision 또는 Session 세부 사항이 다른 모델�
 | **Vision** | 구성 된 이미지 캡블 모델 | 구성되지 않는 의미는 전용 Vision 선택이 없습니다. 릴레이가 필요한지 여부는 활성 백엔드의 이미지 지원에 달려 있습니다. |
 | **Session details** | Main을 따르거나 호환 모델 선택; 그 노력과 활성화를 검사 | 제한된 통화를 사용하여 세션 제목 / 구독을 생성합니다. 그것은 과학적인 작업과 그것의 artifacts에서 분리됩니다. |
 
-![Subagent 상속 및 장애인 노력 관리](/img/open-science/guides-walkthrough/11-model-scenarios.png)
+![Subagent 상속 및 장애인 노력 관리](/img/open-science/guides-walkthrough/11-model-scenarios.webp)
 
 세션 세부 정보 selector 필터 아웃 Codex 구독 모델. Main 또는 Vision에서 볼 수 있는 모델은 따라서 여기에 부패 될 수 있습니다. 호환 로컬 공급자와 OpenCode 선택, 로컬 모델은 고정 선택으로 사용할 수 있습니다. **Not supported** 그 이유에 따라 노력은 그 노력의 통제가 사용할 수 없다는 것을 의미합니다; 그것은 모델이 텍스트 요청을받을 수 있는지에서 분리됩니다.
 
@@ -51,9 +51,9 @@ pinned 시나리오의 경우, 공급자 / 모델을 선택하고 지원 된 노
 5. 원본 이미지에 대한 답변을 비교합니다. 정확한 수치 비교에 대한 소스 테이블을 사용하십시오. 이 예에서 **모형: 24.7M**에 라운드 된 두 개의 레이블이 동일하다고 증명하지 않습니다.
 6. 더 이상 별도의 이미지 모델을 원할 때 **Not configured**에 대한 Vision을 반환합니다. 이 모델 공급자를 제거하지 않습니다.
 
-![텍스트 Main 모델과 함께 비전 선택 분리](/img/open-science/sept11-completion/vision-configuration.png)
+![텍스트 Main 모델과 함께 비전 선택 분리](/img/open-science/sept11-completion/vision-configuration.webp)
 
-![차트 라벨 및 라운드 값의 한계 확인](/img/open-science/sept11-completion/vision-result.png)
+![차트 라벨 및 라운드 값의 한계 확인](/img/open-science/sept11-completion/vision-result.webp)
 
 현재 이미지 릴레이는 Codex 구독 제공 업체를 제외하고는 Vision selector에 나타날 수 있습니다. 텍스트 전용 Main 모델이 여전히 선택한 후 이미지를 거부하면 다른 자격을 갖춘 Vision 제공 업체 또는 이미지 캡처 가능한 Main 모델을 선택하십시오. 저장된 selector 값을 성공적인 이미지 요청으로 취급하지 마십시오.
 

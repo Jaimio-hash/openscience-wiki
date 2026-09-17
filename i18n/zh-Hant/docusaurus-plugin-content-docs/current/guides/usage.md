@@ -17,7 +17,7 @@ last_update:
 3. 對照四類 Token 和 New/Total 活動計數。
 4. 比較圖表前先看圖表自身的時間範圍。
 
-![Today 彙總與獨立的每日圖表](/img/open-science/guides-walkthrough/13-usage-today.png)
+![Today 彙總與獨立的每日圖表](/img/open-science/guides-walkthrough/13-usage-today.webp)
 
 | 欄位 | 解釋 |
 | --- | --- |

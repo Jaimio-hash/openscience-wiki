@@ -16,7 +16,7 @@ last_update:
 2. **Create** を選択します。 新しい行とゼロリソースの状態を確認します。
 3. **Edit Tag** を選択して、現在の値を再訪します。 **Save** は編集をコミットします。 **Cancel** はドラフトを破棄します。
 
-![Transcriptomicsタグフォーム](/img/open-science/guides-walkthrough/30-tag-create.png)
+![Transcriptomicsタグフォーム](/img/open-science/guides-walkthrough/30-tag-create.webp)
 
 | フィールド/コントロール | オプションと動作 |
 | --- | --- |
@@ -40,19 +40,19 @@ last_update:
 
 **トランスクリプトオミクス** を **Omics アーカイブ** に割り当て、タグの詳細を開きます。 この例では、**1リソース** が表示されます。 `Omics` を検索すると、Connector が表示され、その詳細が開きます。 これらのステップを繰り返すときに独自のタグとリソース名を使用します。 代入を取り戻すと、リソースをそのまま残します。
 
-![タグから発見されたOmicsのアーカイブリソースを割り当てる](/img/open-science/guides-walkthrough/35-tagged-connector.png)
+![タグから発見されたOmicsのアーカイブリソースを割り当てる](/img/open-science/guides-walkthrough/35-tagged-connector.webp)
 
 ## タグリストを注文する {/* #order-the-tag-list */}
 
 **Favorites** は、最初に滞在します。 **注文する &#91;名前&#93;**をドラッグするか、ハンドルを集中して矢印キーを使用して、カスタムタグを移動します。 リスト内の新しい位置を確認してください。
 
-![タグの注文と空のリソースビュー](/img/open-science/guides-walkthrough/31-tag-reorder.png)
+![タグの注文と空のリソースビュー](/img/open-science/guides-walkthrough/31-tag-reorder.webp)
 
 ## タグを削除 {/* #remove-a-tag */}
 
 **Delete Tag** を選択し、**削除する課題** を検査します。 タグの削除は、それらの割り当てを削除しますが、リソースを保持します。 **Cancel** はタグとその代入の両方を保持します。
 
-![削除スコープ、このウォークスルーでキャンセル](/img/open-science/guides-walkthrough/32-tag-delete-boundary.png)
+![削除スコープ、このウォークスルーでキャンセル](/img/open-science/guides-walkthrough/32-tag-delete-boundary.webp)
 
 目的が1つの割り当てを削除するだけであれば、タグをどこにでも削除するのではなく、リソースでそれを行います。 [文献ライブラリ](./library.md) を使用して、紙をコレクションに整理します。 タグとコレクションは、異なる目的のために役立ちます。
 

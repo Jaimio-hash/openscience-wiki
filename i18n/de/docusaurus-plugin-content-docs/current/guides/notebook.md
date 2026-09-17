@@ -30,7 +30,7 @@ Vor dem Ausführen von Python oder R, [eine kompatible Laufzeit ermöglichen](ru
 
 <PlatformContent platform="macos">
 
-![Python Ausführung und Ausgabe in Notebook](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![Python Ausführung und Ausgabe in Notebook](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 
@@ -83,7 +83,7 @@ Um den Interpreter und die gespeicherten Ergebnisse zu überprüfen, öffnen Sie
 
 <PlatformContent platform="macos">
 
-![Filtern der Variablenliste nach Name](/img/open-science/guides-walkthrough/47-notebook-variable-filter.png)
+![Filtern der Variablenliste nach Name](/img/open-science/guides-walkthrough/47-notebook-variable-filter.webp)
 
 </PlatformContent>
 
@@ -107,7 +107,7 @@ Verwenden Sie [Laufzeiten](runtimes.md#maintain-and-repair-environments) für di
 
 <PlatformContent platform="macos">
 
-![R Sample-QC-Ausgang in der Anwendung geöffnet](/img/open-science/guides-walkthrough/76-r-qc-table.jpg)
+![R Sample-QC-Ausgang in der Anwendung geöffnet](/img/open-science/guides-walkthrough/76-r-qc-table.webp)
 
 </PlatformContent>
 
@@ -119,7 +119,7 @@ Vergleichen Sie Metriken mit dem vollständigen Sample-Identifier mit dem [Gemei
 
 <PlatformContent platform="macos">
 
-![Erfasste Umgebung für ein R Ergebnis](/img/open-science/guides-walkthrough/77-r-environment-evidence.jpg)
+![Erfasste Umgebung für ein R Ergebnis](/img/open-science/guides-walkthrough/77-r-environment-evidence.webp)
 
 </PlatformContent>
 
@@ -138,7 +138,7 @@ Bitten Sie um Hintergrundausführung, wenn eine unterstützte Python-, R-, persi
 
 <PlatformContent platform="macos">
 
-![Hintergrund-Aufgabenzustand und seine offene Steuerung](/img/open-science/v0.27.0/13-background-task-completed.png)
+![Hintergrund-Aufgabenzustand und seine offene Steuerung](/img/open-science/v0.27.0/13-background-task-completed.webp)
 
 </PlatformContent>
 
@@ -164,7 +164,7 @@ Das Schließen der Aufgabenliste lässt die Aufgabe laufen. Der Abschluss einer 
 
 <PlatformContent platform="macos">
 
-![Erfasster Herstellercode für ein gespeichertes Ergebnis](/img/open-science/provenance-code.png)
+![Erfasster Herstellercode für ein gespeichertes Ergebnis](/img/open-science/provenance-code.webp)
 
 </PlatformContent>
 
@@ -213,7 +213,7 @@ Wählen Sie den Export, der Ihrem Ziel entspricht:
 3. Öffnen Sie die gespeicherte Datei und vergleichen Sie sie mit dem angezeigten Code. Führen Sie es in PowerShell mit dem gleichen Python-Interpreter aus; Verwenden Sie den `&`-Aufrufoperator vor einem zitierten ausführbaren Pfad.
 4. Vergleichen Sie die Ausgabe mit dem Notebook und dem gespeicherten Bericht. Bewahren Sie alle erforderlichen Eingabedateien neben dem Code auf.
 
-<Screenshot src="/img/open-science/windows/captured-code-download.png" alt="Windows erfasste den Produzentencode und seine Download-Steuerung" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.png" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
+<Screenshot src="/img/open-science/windows/captured-code-download.webp" alt="Windows erfasste den Produzentencode und seine Download-Steuerung" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.webp" linkLabel="Öffnen Sie den kompletten Windows Screenshot" />
 
 Dadurch wird der aufgezeichnete Code heruntergeladen. **Generate script** ist eine separate Rekonstruktionsoperation. Wenn die Generation fehlschlägt, behalten Sie ihren vollständigen Fehler; Das Herunterladen von erfasstem Code bedeutet nicht, dass die Rekonstruktion erfolgreich war.
 
@@ -230,7 +230,7 @@ Dadurch wird der aufgezeichnete Code heruntergeladen. **Generate script** ist ei
 
 <PlatformContent platform="macos">
 
-![Generierte Skriptvorschau und Download-Steuerung](/img/open-science/priority-completion/19-generated-script.png)
+![Generierte Skriptvorschau und Download-Steuerung](/img/open-science/priority-completion/19-generated-script.webp)
 
 </PlatformContent>
 

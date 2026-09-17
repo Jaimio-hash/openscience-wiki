@@ -48,7 +48,7 @@ Wenn die neue Version weiterhin **Unavailable** anzeigt, behalten Sie **View det
 
 Der Screenshot zeigt eine Zusammenfassung, die in Notebook aus dem [GSE60450 Proben-QC-Tabelle](../reference/example-data.md) generiert wurde. Öffnen Sie die Registerkarte **Provenance → Reproducibility** der Datei, um die erfassten Eingaben zu überprüfen und auszuführen. Hier zeigen **Not verified yet** und **Unavailable** an, dass eine genaue Umgebungssperre fehlt. Verwenden Sie **View details** und folgen Sie dann dem [Maßnahmen zur Vorbereitung der Umwelt](#prepare-environment), um eine neue Version zu erstellen. Dieser Bildschirm zeigt keine erfolgreiche Reproduktion der Ergebnisse.
 
-![Die gespeicherte QC-Zusammenfassung und ihr Reproduzierbarkeits-Panel zeigen erfasste Beweise und eine nicht verfügbare Überprüfung](/img/open-science/feature-guides-2026-09/reproducibility-evidence.png)
+![Die gespeicherte QC-Zusammenfassung und ihr Reproduzierbarkeits-Panel zeigen erfasste Beweise und eine nicht verfügbare Überprüfung](/img/open-science/feature-guides-2026-09/reproducibility-evidence.webp)
 
 ## Führen Sie eine Überprüfung durch {/* #run-a-check */}
 

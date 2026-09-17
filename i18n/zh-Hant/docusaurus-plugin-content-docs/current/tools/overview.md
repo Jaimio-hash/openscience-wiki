@@ -28,7 +28,7 @@ last_update:
 
 本地示例採用真實 GSE60450 RNA-seq 計數、只讀 QC 服務、阿司匹林結構及公開序列/結構檔案，中英文均使用英文應用截圖。沒有在本機完成的遠端 GPU/SSH 和憑據相關操作會明確標出。
 
-![應用中已連線的 QC Connector](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![應用中已連線的 QC Connector](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 ## 提出範圍明確的請求 {/* #提出范围明确的请求 */}
 

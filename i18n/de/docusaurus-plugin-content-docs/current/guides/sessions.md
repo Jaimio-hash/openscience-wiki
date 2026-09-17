@@ -23,7 +23,7 @@ Für den abgeschlossenen GSE60450-Lauf haben wir **Edit…** verwendet, um diese
 | Speichern | Beharren Sie auf den Veränderungen | Überprüfen Sie den Sidebar-Titel nach dem Schließen |
 | Stornieren / Schließen | Verlassen Sie den Entwurf ohne Anwendung | Dies storniert den Forschungslauf nicht |
 
-![Sitzungstitel und Beschreibungseditor](/img/open-science/guides-walkthrough/40-session-edit.png)
+![Sitzungstitel und Beschreibungseditor](/img/open-science/guides-walkthrough/40-session-edit.webp)
 
 Wählen Sie **Pin** aus dem Zeilenmenü, um die Sitzung in der Angehefteten Gruppe beizubehalten. **Unpin** gibt es in die normale Liste zurück. Pinning organisiert den Zugriff; Es hält einen Kernel nicht am Leben oder schützt eine Sitzung vor dem Löschen.
 
@@ -35,7 +35,7 @@ Verwenden Sie [Privatlesebuchzeichen](bookmarks.md), um eine Passage oder PDF-Re
 
 ## Lesen Sie das Sitzungsmenü richtig {/* #read-the-session-menu-correctly */}
 
-![Aktionen, die zur RNA-seq-Sitzung gehören](/img/open-science/guides-walkthrough/41-session-actions.png)
+![Aktionen, die zur RNA-seq-Sitzung gehören](/img/open-science/guides-walkthrough/41-session-actions.webp)
 
 | Aktion | Ergebnis | Überprüfung |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ Angenommen, Sie möchten die nachgelagerte Beispielannotation besprechen, währe
 4. Benennen Sie es in `GSE60450 - follow-up interpretation` mit **Edit…** um.
 5. Überprüfen Sie das geerbte Transkript, bevor Sie die nächste Anfrage einreichen. Verweisen Sie auf die ursprünglichen Projektartefakte explizit, wo nötig.
 
-![Ein unabhängig benannter Zweig neben dem gepinnten Original](/img/open-science/guides-walkthrough/57-session-branch.png)
+![Ein unabhängig benannter Zweig neben dem gepinnten Original](/img/open-science/guides-walkthrough/57-session-branch.webp)
 
 Ein Branch behält den ausgewählten Konversationsverlauf bei, erstellt jedoch nicht den ursprünglichen Live-Kernel. Für eine kopierte Aktivität mit der Bezeichnung **code shown** oder einen blockierten historischen Link öffnen Sie das Original-Artefakt aus dem Dateien-Panel des Projekts und überprüfen Sie die Produktionssitzung.
 
@@ -76,7 +76,7 @@ Wählen Sie für dieses QC-Beispiel **Edit message** für die abgeschlossene Fra
 
 Der gleiche Revisionspfad wurde auch mit OpenCode und einem lokalen Modell ausgeübt: Die überarbeitete Anforderung erzeugte den neuen Satz, Früher stellte die ursprüngliche Antwort wieder her und Nächste stellte die überarbeitete Antwort wieder her. Dieses reine Verbindungsbeispiel stellt nicht fest, dass der Werkzeugzustand oder externe Nebenwirkungen umgekehrt sind.
 
-![Steuerelemente für den Wechsel von Revisionen historischer Nachrichten](/img/open-science/local-todo-batch/18-message-revision.png)
+![Steuerelemente für den Wechsel von Revisionen historischer Nachrichten](/img/open-science/local-todo-batch/18-message-revision.webp)
 
 **Cancel** verlässt, ohne die Bearbeitung einzureichen. **Send** fordert eine neue Antwort an; Überprüfen Sie es, bevor Sie fortfahren. Verwenden Sie ein Follow-up, um die nächste Aktion oder einen Branch für eine separat benannte Untersuchung zu korrigieren.
 
@@ -99,7 +99,7 @@ Wählen Sie **Export → Export conversation…** aus dem Menü der Sitzungszeil
 
 <p className="example-label"><strong>Praxisbeispiel</strong> Exportieren Sie nur die endgültige GSE60450 QC-Definitionsdrehung</p>
 
-![Auswahl der endgültigen QC-Definitionen für den PDF-Export](/img/open-science/local-todo-batch/20-selected-conversation-export.png)
+![Auswahl der endgültigen QC-Definitionen für den PDF-Export](/img/open-science/local-todo-batch/20-selected-conversation-export.webp)
 
 In **GSE60450 — Methods and claim audit** erzeugte das Auswählen des letzten Zuges ein einseitiges PDF, das nur diese Anforderung und ihre vier metrischen Definitionen enthielt. Frühere Diskussionen fehlten. Das gesamte Gespräch PDF wurde ebenfalls wieder geöffnet und überprüft. Der frühere Markdown-Export mit ausgewähltem Turn begann mit dem ausgewählten Follow-up. Eine Runde kann mehrere Hilfsnachrichten enthalten, so dass die Auswahl einer Runde nicht genau zwei Nachrichten exportieren muss.
 
@@ -109,13 +109,13 @@ Conversation Export ersetzt nicht den Download von Forschungsdateien. Ergebnisli
 
 Wählen Sie **Download all artifacts**, wählen Sie die Dateien aus, wählen Sie **Download N Artefakte** und wählen Sie einen Zielordner aus. Dieser Eintrag speichert separate Dateien. Die beiden heruntergeladenen Methoden und Claim-Audit-Markdown-Dateien wurden wieder geöffnet und ihre gespeicherten Artefakte Byte für Byte abgeglichen.
 
-![Auswählen der beiden gespeicherten Berichte in der Sitzung](/img/open-science/local-todo-batch/21-session-artifact-selection.png)
+![Auswählen der beiden gespeicherten Berichte in der Sitzung](/img/open-science/local-todo-batch/21-session-artifact-selection.webp)
 
 ### Download eines Projektdatei-Bundles {/* #download-a-project-file-bundle */}
 
 Öffnen Sie oben links das Menü Projektname → **Download artifacts…**. Dateien werden unter **Generated** und **Uploads** gruppiert. Alle sind zunächst ausgewählt; Verwenden Sie **Uncheck all**, wählen Sie die zu übergebenden Dateien aus und speichern Sie den ZIP.
 
-![Auswählen von Berichten, der QC-Tabelle und der ursprünglichen Anzahleingabe aus dem Projekt](/img/open-science/local-todo-batch/22-project-artifact-selection.png)
+![Auswählen von Berichten, der QC-Tabelle und der ursprünglichen Anzahleingabe aus dem Projekt](/img/open-science/local-todo-batch/22-project-artifact-selection.webp)
 
 Wählen Sie **Cancel** im Systemspeicherdialog, um dieses Speichern aufzugeben; Ihre Dateiauswahl bleibt verfügbar. Sobald das schreiben beginnt, deaktiviert die app die stornierung und das schließen. Warten Sie auf das Ergebnis; Das Abbrechen des Zieldialogs unterscheidet sich vom Stoppen eines laufenden Schreibens.
 

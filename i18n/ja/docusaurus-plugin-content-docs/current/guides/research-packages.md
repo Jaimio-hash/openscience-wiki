@@ -40,7 +40,7 @@ Side Chatの会話、プライベート[読書ブックマーク](bookmarks.md)�
 
 以下の画面では、[GSE60450サンプルQCテーブル](../reference/example-data.md) を要約するセッションを使用します。 輸出プレビューでは、**Essential export**と**Full export**を比較し、推定サイズを調べて、**Export**を選択します。 コンテンツとサイズはセッションによって異なります。
 
-![エッセンシャルエクスポート、フルエクスポート、コンテンツをカスタマイズするリサーチパッケージエクスポートプレビュー](/img/open-science/feature-guides-2026-09/research-package-export.png)
+![エッセンシャルエクスポート、フルエクスポート、コンテンツをカスタマイズするリサーチパッケージエクスポートプレビュー](/img/open-science/feature-guides-2026-09/research-package-export.webp)
 
 ## プロジェクトへのインポート {/* #import-and-inspect-a-package */}
 

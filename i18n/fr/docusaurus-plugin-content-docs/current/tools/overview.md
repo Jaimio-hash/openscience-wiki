@@ -28,7 +28,7 @@ Choisissez un outil par le résultat dont vous avez besoin : récupérer un enre
 
 Les exemples locaux comprennent le nombre réel de GSE60450 RNA-seq, un serveur QC en lecture seule personnalisé, un artefact de molécule d'aspirine et des entrées publiques de séquence/structure. Ils utilisent des captures d'écran en anglais dans les deux langues. L'exécution à distance de GPU/SSH et les identifiants non disponibles sur ce périphérique restent explicitement distingués des opérations locales terminées.
 
-![QC personnalisé Connector connecté dans l'application](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![QC personnalisé Connector connecté dans l'application](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 ## Donnez à l'agent une demande limitée {/* #give-the-agent-a-bounded-request */}
 

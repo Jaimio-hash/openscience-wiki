@@ -23,7 +23,7 @@ last_update:
 3. **Create project**을 선택합니다. 왼쪽 사이드바가 프로젝트 이름을 표시하고 메인 패널은 **New conversation**을 엽니다.
 4. 프로젝트 이름 메뉴와 **Project settings**을 열고 저장된 값을 확인합니다. 성공적인 프로젝트 득점방해는 모형 readiness에서 분리됩니다.
 
-![명시된 연구 목적과 Agent Context를 가진 PRISMA 프로젝트](/img/open-science/local-acceptance/prisma-project-form.png)
+![명시된 연구 목적과 Agent Context를 가진 PRISMA 프로젝트](/img/open-science/local-acceptance/prisma-project-form.webp)
 
 | 필드 또는 버튼 | 예 또는 작업 | 어떤 변화 |
 | --- | --- | --- |

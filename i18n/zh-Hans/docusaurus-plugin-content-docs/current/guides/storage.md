@@ -10,7 +10,7 @@ last_update:
 
 ## 查看与刷新磁盘用量
 
-![研究示例运行后的实际托管存储](/img/open-science/local-acceptance/storage-installed-location.png)
+![研究示例运行后的实际托管存储](/img/open-science/local-acceptance/storage-installed-location.webp)
 
 备份或排查文件丢失前先确认 **Data location**。它是应用托管根目录，与项目授权访问的外部源目录不同。**Refresh** 重新扫描，比较数值前检查最近扫描时间。
 
@@ -43,7 +43,7 @@ last_update:
 4. 核对源、目标、可用空间和环境重建提示。
 5. **Change location** 提交有效迁移，**Cancel** 保留原位置。
 
-![迁移表单与运行环境重建提示](/img/open-science/local-acceptance/storage-destination-form.png)
+![迁移表单与运行环境重建提示](/img/open-science/local-acceptance/storage-destination-form.webp)
 
 应用移动已有科研数据，但 Python/R 环境在**重启后重建，而非复制**。共享包缓存会复制以支持离线重建，仅通过 pip/CRAN 安装的包不保证恢复。额外重建空间无法可靠预估。实际迁移前记录环境依赖，之后测试所需运行环境。
 
@@ -65,7 +65,7 @@ last_update:
 
 移回后，打开一个已有项目，检查原始输入和已保存报告能否读取。确认托管运行环境已就绪，再运行一个小任务并保存新结果；重新打开该结果，确认应用使用的是默认数据位置。
 
-![返回默认位置后重新打开的 R 结果](/img/open-science/local-acceptance/r-default-chart.png)
+![返回默认位置后重新打开的 R 结果](/img/open-science/local-acceptance/r-default-chart.webp)
 
 如果显示 **A different folder named OpenScience already exists here. Choose another location.**，应用会阻止覆盖。取消并保留冲突目录；确认它的归属、内容及备份后再处理，不要直接删除同名目录。只有目标通过校验后才重新提交迁移。
 
@@ -78,7 +78,7 @@ last_update:
 3. **Finish move** 尝试完成已有复制的切换；**Discard copy** 放弃未完成迁移的副本，保留原位置。先阅读确认范围。
 4. 若出现 **Conversation storage needs attention**，处理未完成迁移后选择 **Retry**，然后重开原项目和报告。
 
-![未完成迁移的恢复选项](/img/open-science/local-todo-batch/46-storage-recovery-choice.png)
+![未完成迁移的恢复选项](/img/open-science/local-todo-batch/46-storage-recovery-choice.webp)
 
 如果最终切换反复失败，先结束活动任务，退出并重新打开应用，再重试迁移。仍报错时，保留原位置和错误详情，先排查原因，再决定是否重新迁移。
 
@@ -104,7 +104,7 @@ last_update:
 4. 选择 **Restore project**。
 5. 重开项目、对话和已保存报告。
 
-![管理已归档的 GSE60450 项目](/img/open-science/local-todo-batch/34-archived-project-manage.png)
+![管理已归档的 GSE60450 项目](/img/open-science/local-todo-batch/34-archived-project-manage.webp)
 
 恢复后重新打开保存报告及其修订。归档用于整理项目，不会重新运行分析或删除报告的版本历史。
 
@@ -114,7 +114,7 @@ last_update:
 
 **Delete project** 会打开永久删除确认。确认前阅读影响范围：托管产物与上传文件不同于外部工作目录文件，后者不会被删除。检查哪些任务和内核将停止，以及 Storage 中保留哪些托管 Session 工作区。归档与删除的结果不同。
 
-![单独创建的空项目的删除范围](/img/open-science/local-todo-batch/35-disposable-project-delete.png)
+![单独创建的空项目的删除范围](/img/open-science/local-todo-batch/35-disposable-project-delete.webp)
 
 学习删除流程时，使用单独的空项目。删除包含研究工作的项目之前，核对确认框列出的受影响记录。
 

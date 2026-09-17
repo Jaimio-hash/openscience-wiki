@@ -20,11 +20,11 @@ Utilice una categoría para convenciones duraderas, como preservar las cuentas c
 4. Seleccione **Create**, luego **Add**. Introduzca la nota y seleccione **Save**.
 5. Dejar y reabrir la categoría para verificar su contenido y contar.
 
-![Nombre de la categoría, guía y auto-recall](/img/open-science/guides-walkthrough/17-memory-category.png)
+![Nombre de la categoría, guía y auto-recall](/img/open-science/guides-walkthrough/17-memory-category.webp)
 
 La nota guardada dice: “Mantenga la matriz original de cuenta GEO sin cambios. Preserve Entrez Gene IDs como texto, mantenga la longitud del gen separada de los recuentos de muestras, y registre la entrada SHA-256 con cada tabla derivada.” Esta es una convención de trabajo, no una reclamación sobre los resultados de análisis.
 
-![Nota guardada manualmente mientras la memoria está apagada](/img/open-science/guides-walkthrough/18-memory-note.png)
+![Nota guardada manualmente mientras la memoria está apagada](/img/open-science/guides-walkthrough/18-memory-note.webp)
 
 | Control | Efectos y límites |
 | --- | --- |
@@ -47,7 +47,7 @@ La nota guardada dice: “Mantenga la matriz original de cuenta GEO sin cambios.
 3. Inspeccione la solicitud **Save memory** cuando se requiera la aprobación. Compruebe el contenido propuesto, categoría y alcance del proyecto antes de seleccionar **Allow once**. Elija **Deny** si no representa una convención acordada.
 4. Abre la categoría. Comprueba que la nota existe, tiene el texto previsto y aparece en el proyecto previsto. La etiqueta **auto** identifica una nota creada por un agente; no significa que un cálculo verifique la convención.
 
-![Un convenio de presentación de informes creado por agentes junto con la nota manual de conservación de fuentes](/img/open-science/non-workflow-completion/05-memory-note-category.png)
+![Un convenio de presentación de informes creado por agentes junto con la nota manual de conservación de fuentes](/img/open-science/non-workflow-completion/05-memory-note-category.webp)
 
 ## Revisar el recuerdo en una nueva conversación {/* #check-recall-in-a-new-conversation */}
 
@@ -65,7 +65,7 @@ Seleccione un punto de historia para inspeccionar su estado de funcionamiento, m
 
 Cuando OpenCode proporciona **Compact** en el contexto popover, seleccione y espere a **Context compacted**. Los mensajes originales pueden permanecer visibles mientras el backend continúa desde un resumen. Antes de continuar, pida al agente que lista las restricciones retenidas y las compare con sus requisitos. Reestablezca cualquier limitación faltante o incorrecta antes de comenzar la próxima operación. La compactación no garantiza la retención sin pérdidas; Las mediciones de proveedores pueden diferir de las estimaciones locales.
 
-![compactación completa y medición del contexto reportada por el proveedor](/img/open-science/non-workflow-completion/11-context-compacted.png)
+![compactación completa y medición del contexto reportada por el proveedor](/img/open-science/non-workflow-completion/11-context-compacted.webp)
 
 Para una continuación, indicar el objetivo actual, las decisiones aceptadas, los archivos exactos de entrada/salida, la validación ya hecha y preguntas sin resolver. Vincular la evidencia guardada en lugar de confiar en la memoria para reconstruirla. Utilice [Períodos de sesiones y ramas](./sessions.md) para ramificación/exportación y [Uso](./usage.md) para el volumen de token acumulativo.
 

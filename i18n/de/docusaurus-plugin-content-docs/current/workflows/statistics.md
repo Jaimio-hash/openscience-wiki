@@ -22,7 +22,7 @@ Das Ergebnis `re78` und die Basisvariablen `re74` und `re75` sind reale Einnahme
 
 Klicken Sie auf das angehängte CSV, um eine Vorschau zu erhalten, bevor Sie die Berechnungsanforderung senden. Überprüfen Sie `train`, `re78`, `re74` und `re75`, einschließlich Zeilen mit null Einnahmen. Die Vorschau darf nur 100-Zeilen anzeigen; Notebook muss die gesamte Datei zählen.
 
-![Der angehängte Eingang CSV und seine ursprünglichen Spalten](/img/open-science/research-workflows/job-training-input.png)
+![Der angehängte Eingang CSV und seine ursprünglichen Spalten](/img/open-science/research-workflows/job-training-input.webp)
 
 ## Führen Sie den vorgegebenen Vergleich aus {/* #run-the-prespecified-comparison */}
 
@@ -42,7 +42,7 @@ Run the calculations; do not invent results or delegate.
 
 Wählen Sie in der Konversation **Notebook**, öffnen Sie die ausgeführte Python-Zelle und überprüfen Sie deren Ausgabe. Suchen Sie nach der Zeile und Gruppenzählung vor der Regressionszusammenfassung. Wenn die angehängte Version nicht gelöst werden kann, bitten Sie den Agenten, die Datei aus dem Anhang dieser Konversation zu lesen und erneut zu versuchen; Eine ausgefallene Zelle ist kein Ergebnis. Behalten Sie die erfolgreiche Zelle und ihre Ausgabe mit den gespeicherten Dateien.
 
-![Der aufgezeichnete Notebook-Ausgang enthält tatsächliche Stichprobenprüfungen und Regressionsschätzungen](/img/open-science/research-workflows/job-training-notebook.png)
+![Der aufgezeichnete Notebook-Ausgang enthält tatsächliche Stichprobenprüfungen und Regressionsschätzungen](/img/open-science/research-workflows/job-training-notebook.webp)
 
 ## Überprüfen Sie das gespeicherte Ergebnis {/* #inspect-the-saved-result */}
 
@@ -55,13 +55,13 @@ Das Beispiel mit **445-Zeilen**, **185 wird dem Training zugewiesen**, **260-Kon
 
 Koeffizienten und Intervalle sind in **Tausende von Dollar**. Dies sind Ergebnisse der Berechnung dieses Beispiels, nicht zitierte Schätzungen aus dem Originalpapier.
 
-![Der gespeicherte englische Regressionsbericht mit Stichprobenprüfungen und Schätzungen](/img/open-science/research-workflows/job-training-report.png)
+![Der gespeicherte englische Regressionsbericht mit Stichprobenprüfungen und Schätzungen](/img/open-science/research-workflows/job-training-report.webp)
 
 Öffnen Sie beide generierten Dateien, nachdem die Antwort abgeschlossen ist. Vergleichen Sie die `train`-Zeilen im CSV mit dem Bericht und Notebook. Sie können die <a href="/docs/examples/research-workflows/job-training-regression.csv" download>Koeffiziententabelle</a> und <a href="/docs/examples/research-workflows/job-training-report.md" download>Bericht</a> dieses Laufs herunterladen.
 
 Öffnen Sie in **Generated** den CSV und erweitern Sie seine Vorschau. Die gespeicherte Koeffiziententabelle hat **Zeilen 12 · Spalten 9**: zwei Zeilen für das nicht angepasste Modell und zehn für das angepasste Modell. Suchen Sie die `train`-Zeile jedes Modells und vergleichen Sie seine Schätzung, den robusten Standardfehler, das Intervall, `n` und die Einheit. Fügen Sie kein Inflationsbasisjahr hinzu, das im Quellwörterbuch nicht angegeben ist. Verwenden Sie die **Download**-Taste der Vorschau, um die geprüfte Version beizubehalten.
 
-![Der wieder geöffnete Koeffizient CSV mit beiden Modellen und konsistenten Einheiten](/img/open-science/research-workflows/job-training-coefficients.png)
+![Der wieder geöffnete Koeffizient CSV mit beiden Modellen und konsistenten Einheiten](/img/open-science/research-workflows/job-training-coefficients.webp)
 
 ## Entscheiden Sie, was der Vergleich unterstützt {/* #decide-what-the-comparison-supports */}
 

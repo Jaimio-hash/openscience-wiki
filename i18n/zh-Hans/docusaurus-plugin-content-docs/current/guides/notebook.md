@@ -28,7 +28,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![Notebook 中的 Python 执行与输出](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![Notebook 中的 Python 执行与输出](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 
@@ -79,7 +79,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![按名称筛选实时变量](/img/open-science/guides-walkthrough/47-notebook-variable-filter.png)
+![按名称筛选实时变量](/img/open-science/guides-walkthrough/47-notebook-variable-filter.webp)
 
 </PlatformContent>
 
@@ -103,7 +103,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![应用内打开的 R 样本质控结果](/img/open-science/guides-walkthrough/76-r-qc-table.jpg)
+![应用内打开的 R 样本质控结果](/img/open-science/guides-walkthrough/76-r-qc-table.webp)
 
 </PlatformContent>
 
@@ -115,7 +115,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![R 结果捕获的运行环境](/img/open-science/guides-walkthrough/77-r-environment-evidence.jpg)
+![R 结果捕获的运行环境](/img/open-science/guides-walkthrough/77-r-environment-evidence.webp)
 
 </PlatformContent>
 
@@ -134,7 +134,7 @@ Runtimes 的包清单描述已安装环境，Provenance 描述某个文件所捕
 
 <PlatformContent platform="macos">
 
-![后台任务状态与 Open 入口](/img/open-science/v0.27.0/13-background-task-completed.png)
+![后台任务状态与 Open 入口](/img/open-science/v0.27.0/13-background-task-completed.webp)
 
 </PlatformContent>
 
@@ -154,7 +154,7 @@ Runtimes 的包清单描述已安装环境，Provenance 描述某个文件所捕
 
 <PlatformContent platform="macos">
 
-![保存结果捕获的产出代码](/img/open-science/provenance-code.png)
+![保存结果捕获的产出代码](/img/open-science/provenance-code.webp)
 
 </PlatformContent>
 
@@ -203,7 +203,7 @@ Runtimes 的包清单描述已安装环境，Provenance 描述某个文件所捕
 3. 打开落盘文件，与显示的代码核对。在 PowerShell 中使用同一 Python 解释器运行；带引号的程序路径前使用 `&` 调用运算符。
 4. 将输出与 Notebook、保存报告比较，并随代码保留需要的输入文件。
 
-<Screenshot src="/img/open-science/windows/captured-code-download.png" alt="Windows 捕获产出代码及其 Download 控件" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.png" linkLabel="打开完整 Windows 截图" />
+<Screenshot src="/img/open-science/windows/captured-code-download.webp" alt="Windows 捕获产出代码及其 Download 控件" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.webp" linkLabel="打开完整 Windows 截图" />
 
 此操作下载已经记录的代码。**Generate script** 是另一项代码重建操作；生成失败时保留完整错误，不能将捕获代码下载成功视为重建成功。
 
@@ -220,7 +220,7 @@ Runtimes 的包清单描述已安装环境，Provenance 描述某个文件所捕
 
 <PlatformContent platform="macos">
 
-![生成脚本预览与下载控件](/img/open-science/priority-completion/19-generated-script.png)
+![生成脚本预览与下载控件](/img/open-science/priority-completion/19-generated-script.webp)
 
 </PlatformContent>
 

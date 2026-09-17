@@ -43,7 +43,7 @@ Do not perform differential-expression testing or delegate.
 
 Avant d'envoyer, cliquez sur la pièce jointe pour vérifier son en-tête : deux colonnes de métadonnées suivies de douze colonnes d'exemple. L'aperçu du texte ne charge qu'une partie d'un grand fichier; le Notebook doit lire la matrice entière. Cette exécution a envoyé le calcul directement. Si vous voulez d'abord vous mettre d'accord sur un plan, utilisez le flux [Planification](../guides/planning.md) séparé.
 
-![La matrice jointe et ses définitions de colonnes](/img/open-science/research-workflows/rnaseq-qc-input.png)
+![La matrice jointe et ses définitions de colonnes](/img/open-science/research-workflows/rnaseq-qc-input.webp)
 
 ## 2. Tenir les métadonnées hors des calculs de l'échantillon {/* #2-keep-metadata-out-of-sample-calculations */}
 
@@ -59,7 +59,7 @@ Lire la requête d'autorisation Python, y compris les noms de fichier d'entrée 
 
 Si l'ID de version d'entrée ne peut pas être résolu, demandez à l'Agent d'utiliser l'entrée montée à partir de la pièce jointe et de la réessayer. Cette course a utilisé cette récupération. Ne traitez pas la tentative échouée comme un calcul terminé ou remplacez silencieusement un autre fichier.
 
-![Sortie Notebook réussie avec dimensions, hachages et mesures d'échantillon calculées](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.png)
+![Sortie Notebook réussie avec dimensions, hachages et mesures d'échantillon calculées](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.webp)
 
 Le rediffusion complété a validé **Lignes du gène 27,179 et colonnes d'échantillonnage 12** sans lignes malformées, doublons ID, entrées manquantes ou nombres invalides. Les trois fichiers demandés sont apparus sous **Generated**. Ouvrez chaque fichier là-bas; un fichier de travail qui n'a jamais été sauvegardé comme un artefact n'est pas encore un livrable.
 
@@ -69,7 +69,7 @@ Ouvrez `rnaseq-sample-qc.csv` et vérifiez **Lignes 12 · Colonnes 6**. Il conse
 
 Comparer toutes les mesures de l'échantillon avec le [Tableau de référence](../reference/example-data.md#sample-qc-baseline), en fonction des lignes par l'identificateur de l'échantillon complet.
 
-![La table rouverte à douze rangées de la rediffusion terminée](/img/open-science/research-workflows/rnaseq-qc-rerun-table.png)
+![La table rouverte à douze rangées de la rediffusion terminée](/img/open-science/research-workflows/rnaseq-qc-rerun-table.webp)
 
 Pour cette entrée, le nombre zéro plus les gènes détectés dans chaque rangée devrait être égal à **27,179**. Comparer les mesures de l'échantillon **48** avec la base de référence indépendante. L'accord vérifie ces calculs pour l'intrant fourni; Les hypothèses en aval nécessitent toujours leur propre évaluation.
 
@@ -77,7 +77,7 @@ Pour cette entrée, le nombre zéro plus les gènes détectés dans chaque rang�
 
 Ouvrez `rnaseq-library-sizes.png` et agrandissez-le. Vérifiez les douze étiquettes de l'échantillon, l'axe du compte brut et la note que les valeurs ne sont pas normalisées. Les totaux varient de **20,015,386** à **24,723,827** dans cette matrice.
 
-![L'intrigue de taille de bibliothèque brute sauvegardée à partir du même rediffusion](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.png)
+![L'intrigue de taille de bibliothèque brute sauvegardée à partir du même rediffusion](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.webp)
 
 Un total plus grand de bibliothèques ne signifie pas en soi qu'un gène est exprimé différemment. Avant de procéder à une analyse séparée en aval, faire correspondre les caractéristiques de l'échantillon aux métadonnées GEO et préciser la conception, les contrastes, la normalisation et les règles de filtrage. Un suivi séparé de Connector a permis de récupérer les douze échantillons de caractéristiques GEO; La cartographie, la conception de l'analyse et les étapes statistiques du GSM à la matrice n'ont pas été validées ici. Voir [Connecteurs](../guides/connectors.md).
 

@@ -48,7 +48,7 @@ last_update:
 
 下图使用 Notebook 根据 [GSE60450 样本质控表](../reference/example-data.md)生成汇总结果。打开文件的 **Provenance → Reproducibility**，查看捕获的输入和执行记录。图中的 **Not verified yet** 和 **Unavailable** 表示缺少精确环境锁。打开 **View details** 后，按[环境准备步骤](#prepare-environment)生成新版本。该状态不代表复现成功。
 
-![已保存的质控汇总表及 Reproducibility 面板，显示捕获证据和暂不可用的检查](/img/open-science/feature-guides-2026-09/reproducibility-evidence.png)
+![已保存的质控汇总表及 Reproducibility 面板，显示捕获证据和暂不可用的检查](/img/open-science/feature-guides-2026-09/reproducibility-evidence.webp)
 
 ## 运行复现检查
 

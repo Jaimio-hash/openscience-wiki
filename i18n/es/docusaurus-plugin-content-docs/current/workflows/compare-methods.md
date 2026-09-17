@@ -18,7 +18,7 @@ Descargue el [psych::bfi CSV](https://vincentarelbundock.github.io/Rdatasets/csv
 
 En **Settings → Runtimes**, confirme R es **Ready** y está habilitado. El funcionamiento registrado utilizó **R 4.4.3**, con funciones de base/recomendada R y sin instalación de paquete adicional. Adjuntar el CSV a una conversación de proyecto a través de **+ → Attach files**.
 
-![El conjunto de datos de bfi público adjunta a una comparación de método de datos iguales](/img/open-science/workflow-extensions/bfi-input.png)
+![El conjunto de datos de bfi público adjunta a una comparación de método de datos iguales](/img/open-science/workflow-extensions/bfi-input.webp)
 
 ## 2. Arregla el preprocesamiento antes de ajustar el método {/* #2-fix-the-preprocessing-before-fitting-either-method */}
 
@@ -48,7 +48,7 @@ Si un método usa silenciosamente un conjunto diferente de encuestados, detenga 
 
 Open **bfi-method-metrics.csv** de **Generated** o **Files**. El archivo grabado contiene **Renglones métricos 77**, incluyendo los recuentos de muestra, falta, varianza PCA, singularidades FA, ajuste, convergencia, semilla e identidad de entrada.
 
-![Metrices numéricas guardadas del preprocesamiento compartido y ambos métodos ajustados](/img/open-science/workflow-extensions/bfi-metrics.png)
+![Metrices numéricas guardadas del preprocesamiento compartido y ambos métodos ajustados](/img/open-science/workflow-extensions/bfi-metrics.webp)
 
 | Componente de PCA no rotado | Variación normalizada total explicada |
 | --- | --- |
@@ -65,7 +65,7 @@ El optimizador de FA converge, pero la estadística de probabilidad-ratio era **
 
 Abre **bfi-method-comparison.png**. Sus tres paneles muestran varianza PCA no rotada, cargas PCA varimax rotadas y cargas de varimax FA. Los valores de carga exactos están en **bfi-loadings.csv**, con **Renglones 250**: 25 items × 5 dimensions × Métodos 2.
 
-![Variación PCA no rotada y las dos matrices de carga rotadas](/img/open-science/workflow-extensions/bfi-comparison-plot.png)
+![Variación PCA no rotada y las dos matrices de carga rotadas](/img/open-science/workflow-extensions/bfi-comparison-plot.webp)
 
 No coincida mecánicamente con “column 1” a través de los métodos. El orden y los signos de factor/componente pueden cambiar sin cambiar la solución. Los mapas de calor usan azul para cargas negativas y rojas; comparar patrones de elementos y valores numéricos.
 
@@ -75,7 +75,7 @@ Dispositivos PCA total de la varianza observada; Modelos FA compartieron covaria
 
 Abre **bfi-method-report.md**. Comprueba que reporta la misma muestra y preprocesamiento, la semilla fija y la diferencia entre convergencia y ajuste. Estas respuestas ordinal 1-6 se tratan como aproximadamente continuas; la eliminación completa de casos puede sesgar los resultados cuando la falta se relaciona con las respuestas o características de los participantes.
 
-![El informe final registra preprocesamiento, semilla, variabilidad y limitaciones de ajuste](/img/open-science/workflow-extensions/bfi-report.png)
+![El informe final registra preprocesamiento, semilla, variabilidad y limitaciones de ajuste](/img/open-science/workflow-extensions/bfi-report.webp)
 
 Descargue el <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.R">R script</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-loadings.csv">cargas</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-method-metrics.csv">métricas</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.png">gráfico</ExampleDownload> y <ExampleDownload path="/examples/workflow-extensions/bfi-method-report.md">informe</ExampleDownload>. Ponga el script y descarga la entrada en una carpeta fresca, abra un terminal allí y ejecute:
 

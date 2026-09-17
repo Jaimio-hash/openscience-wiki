@@ -26,7 +26,7 @@ last_update:
 3. **Save key**는 입력된 열쇠를 저장하고 성공적인 때 대기 통화를 재개합니다. **Not now**는 credential unconfigured를 떠납니다.
 4. 마지막 도구 상태를 읽으십시오. **Not now**를 선택하면 **credential_required**을 반환할 수 있습니다. retrying의 앞에 열쇠를 구성하십시오.
 
-![OpenAlex 영어 앱의 자격 요청](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.jpg)
+![OpenAlex 영어 앱의 자격 요청](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.webp)
 
 이 컴퓨터에서 키가 암호화되고 `api.openalex.org`에서만 전송되는 신속한 상태. 설정에서 OpenAlex 양식도 제공 **Validate**· **Save**· **Remove key** 1개가 존재할 때, **Cancel**... 교체 분야는 저장된 열쇠를 계시하지 않습니다. Secure-storage 오류는 비밀을 저장하기 전에 시스템 키 체인 상태를 해결해야합니다.
 
@@ -49,7 +49,7 @@ last_update:
 | 팟캐스트 | 적용 가능한 경우, 서버 메타데이터를 발견; 이것은 성공적인 로그인이 아닙니다. |
 | 취소 / 저장 | 초안을 훼손하거나 유효한 자격 증명 구성을 저장합니다. |
 
-![OAuth 고급 등록 필드](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.png)
+![OAuth 고급 등록 필드](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.webp)
 
 사용자 정의 Connector에서, 헤더, 환경 변수, 또는 OAuth selector에 credential을 바인딩합니다. 이름은 참고입니다; 설명 또는 프로젝트 지침에 비밀 값을 배치하지 마십시오. 수출된 휴대용 윤곽은 placeholders로 비밀을 대체합니다. 저장된 자격 증명은 여전히 실제 서비스 / Connector 테스트가 작동하도록해야합니다.
 

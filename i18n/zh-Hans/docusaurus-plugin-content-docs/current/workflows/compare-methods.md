@@ -18,7 +18,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 在 **Settings → Runtimes** 中确认 R 为 **Ready** 且已启用。本次使用 **R 4.4.3** 的基础及推荐函数，没有额外安装包。通过 **+ → Attach files** 将 CSV 附加到项目会话。
 
-![同一数据方法比较任务中附加的公开 bfi 数据](/img/open-science/workflow-extensions/bfi-input.png)
+![同一数据方法比较任务中附加的公开 bfi 数据](/img/open-science/workflow-extensions/bfi-input.webp)
 
 ## 2. 拟合前固定预处理规则
 
@@ -48,7 +48,7 @@ Use English and do not install packages or delegate.
 
 从 **Generated** 或 **Files** 打开 **bfi-method-metrics.csv**。本次文件包含 **77 行指标**，记录样本数、缺失数、PCA 方差、FA 独特性、拟合、收敛、随机种子与输入身份。
 
-![共同预处理与两种拟合方法保存后的数值指标](/img/open-science/workflow-extensions/bfi-metrics.png)
+![共同预处理与两种拟合方法保存后的数值指标](/img/open-science/workflow-extensions/bfi-metrics.webp)
 
 | 未旋转的 PCA 主成分 | 解释的标准化总方差 |
 | --- | --- |
@@ -65,7 +65,7 @@ FA 优化器收敛，但似然比统计量为 **1490.587，自由度 185**，**p
 
 打开 **bfi-method-comparison.png**。三个面板分别是未旋转 PCA 方差、varimax 旋转后的 PCA 载荷、varimax FA 载荷。准确载荷保存在 **bfi-loadings.csv**，共 **250 行**：25 项 × 5 个维度 × 2 种方法。
 
-![未旋转 PCA 方差与两组旋转载荷矩阵](/img/open-science/workflow-extensions/bfi-comparison-plot.png)
+![未旋转 PCA 方差与两组旋转载荷矩阵](/img/open-science/workflow-extensions/bfi-comparison-plot.webp)
 
 不要机械地对齐两种方法的“第一列”。维度顺序和整列符号改变，不一定改变解的含义。热图用蓝色表示负载荷、红色表示正载荷，应结合条目模式与具体数值阅读。
 
@@ -75,7 +75,7 @@ PCA 分解观测总方差；FA 建模共同协方差，并单独估计独特性�
 
 打开 **bfi-method-report.md**，核对样本和预处理是否一致，是否记录固定随机种子，以及收敛和拟合的区别。这里将 1—6 分的有序回答近似当作连续值；如果缺失与回答或受访者特征相关，只保留完整答卷可能带来偏差。
 
-![最终报告记录预处理、随机种子、解释方差与拟合边界](/img/open-science/workflow-extensions/bfi-report.png)
+![最终报告记录预处理、随机种子、解释方差与拟合边界](/img/open-science/workflow-extensions/bfi-report.webp)
 
 下载 <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.R">R 脚本</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/bfi-loadings.csv">载荷表</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/bfi-method-metrics.csv">指标表</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.png">图形</ExampleDownload>与<ExampleDownload path="/examples/workflow-extensions/bfi-method-report.md">报告</ExampleDownload>。将脚本和下载的输入放入新文件夹，在该文件夹打开终端运行：
 

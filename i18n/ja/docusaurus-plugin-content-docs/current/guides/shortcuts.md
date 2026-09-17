@@ -45,12 +45,12 @@ import Screenshot from '@site/src/components/Screenshot';
 Windowsデスクトップアプリでは、**Ctrl+Zの** を undo または **Ctrl + シフト + Z** を redo に使用する前に、Composer のドラフトの内部をクリックします。 続行または送信する前に、結果のテキストを確認してください。 **タブ / Shift+Tab**を使うときは、下にある添付ボタンなど、集中制御の輪郭を探します。 パネルを開けるか、または制御の状態を変えた後再度焦点を合わせて下さい; キープレスの固定数に依存しません。
 
 <Screenshot
-  src="/img/open-science/windows/keyboard-attachment-focus.png"
+  src="/img/open-science/windows/keyboard-attachment-focus.webp"
   alt="添付ボタンは、Windows Composer で表示されたキーボード焦点の輪郭を持っています"
   width={1916}
   height={1014}
   windowBounds={[215, 850, 920, 150]}
-  href="/docs/img/open-science/windows/keyboard-attachment-focus.png"
+  href="/docs/img/open-science/windows/keyboard-attachment-focus.webp"
   linkLabel="添付ファイルボタンフォーカスを示す完全なWindowsスクリーンショットを開く"
 />
 

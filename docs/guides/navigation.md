@@ -12,7 +12,7 @@ Use Home to choose the investigation, the session list to choose its conversatio
 
 Use **Settings → General → Appearance** to change the app language or theme. The [settings center](../settings/overview.md) groups panels by purpose and provides its own search.
 
-![Home with the gene-expression and literature projects](/img/open-science/v0.27.0/01-home.png)
+![Home with the gene-expression and literature projects](/img/open-science/v0.27.0/01-home.webp)
 
 | Entry | Action | Check after opening |
 | --- | --- | --- |

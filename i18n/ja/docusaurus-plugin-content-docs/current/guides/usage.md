@@ -17,7 +17,7 @@ last_update:
 3. 4つのトークンフィールドと新規/合計アクティビティカウンターを比較します。
 4. チャートの期間ラベルをまとめて比較する前にチェックしてください。
 
-![今日は、別々の毎日チャートで集計](/img/open-science/guides-walkthrough/13-usage-today.png)
+![今日は、別々の毎日チャートで集計](/img/open-science/guides-walkthrough/13-usage-today.webp)
 
 | フィールド | 通訳・通訳 |
 | --- | --- |

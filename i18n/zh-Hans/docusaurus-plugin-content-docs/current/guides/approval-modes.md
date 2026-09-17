@@ -26,7 +26,7 @@ last_update:
 
 打开输入框旁的 **Agent controls**，阅读当前模式和框架兼容性说明。Full access 控件有自己的确认流程。**Auto-review** 是另一个结果审核选项，不表示自动批准编辑。
 
-![实际英文权限模式选择器](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![实际英文权限模式选择器](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 检查当前 Agent 显示的实际模式，不同框架支持的审批行为可能不同。选择前阅读当前模式的说明。
 
@@ -34,7 +34,7 @@ last_update:
 
 批准前核对操作、选定环境与代码。数据检查应读取指定输入并写入所需结果；安装缺失依赖属于另一项操作，需要单独检查其目的和影响。
 
-![公开 GSE60450 案例中的 Python 执行授权](/img/open-science/guides-walkthrough/25-python-permission.png)
+![公开 GSE60450 案例中的 Python 执行授权](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | 控件或信息 | 检查内容或操作 |
 | --- | --- |
@@ -87,7 +87,7 @@ last_update:
 
 撤销影响后续审批，不会逆转已完成的编辑或网络请求；更宽范围的授权仍可能允许该操作。
 
-![撤销会话分组后重新出现执行授权](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![撤销会话分组后重新出现执行授权](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 权限清单不完整时，先等待加载或重试失败请求，再执行分组撤销；完成后重新检查所选范围。
 

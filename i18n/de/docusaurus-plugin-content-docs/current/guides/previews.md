@@ -36,7 +36,7 @@ Um einen Leseort für sich zu speichern, wählen Sie Text oder eine PDF-Region u
 
 Öffnen Sie `rnaseq-sample-qc.csv`. In diesem Beispiel zeigt es **Zeilen 12 · Spalten 6** und verwendet die erste Zeile als Header. Horizontales Scrollen zeigt lange Quellspaltennamen und die Metriken rechts. Die Zeilennummern der Tabelle sind Anzeigepositionen, keine Gen- oder Beispiel-IDs.
 
-![Die Zwölf-Stichproben-QC-Tabelle](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![Die Zwölf-Stichproben-QC-Tabelle](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 Überprüfen Sie, ob Spaltenbeschriftungen und vollständige Bezeichner lesbar sind. Felddefinitionen und Überprüfungen gegen die freigegebene Baseline sind in [Tabellen und Datensätze](../tools/tables.md).
 
@@ -46,7 +46,7 @@ Die Quelle `.txt` ist eine tab-getrennte Matrix; Ein Text-Viewer kann es als Tex
 
 Öffnen Sie `rnaseq-library-sizes.png`. Verwenden Sie **Zoom in**, **Zoom out** und **Reset zoom**; Öffnen Sie den Vollbildbildschirm, wenn Achsenetiketten zu klein sind. Zoom ändert nur die Ansicht. Es wird die Quellmatrix nicht neu sortiert oder ein statistisches Ergebnis aktualisiert.
 
-![Die tatsächliche Rohzählsumme in der Vollbildvorschau](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+![Die tatsächliche Rohzählsumme in der Vollbildvorschau](/img/open-science/guides-walkthrough/54-rnaseq-figure.webp)
 
 Lesen Sie die Rohzählachse, alle zwölf Sample Labels und deren Zuordnung im CSV/Report. Unterschiedliche Balkenhöhen allein schaffen keinen differentiellen Ausdruck. Das Beispiel ist eine deskriptive Voranalyseprüfung ohne Normalisierungs- oder Hypothesenprüfung.
 
@@ -71,9 +71,9 @@ Die <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-reading.docx">W
 | JSON | Öffnen <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.json">Zusammenfassung</ExampleDownload> um Quelltext, Identifikatoren und Werte zu überprüfen. Es wird als Code und nicht als erweiterbarer Objektbaum angezeigt. |
 | HTML | Öffnen <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.html">der Lesetisch</ExampleDownload>. **Source** zeigt die HTML; **Render** stellt das formatierte Dokument wieder her. Kein Modus wiederholt den QC. |
 
-![Auswählen von Samples in der Vorschau der eigentlichen Arbeitsmappe](/img/open-science/local-todo-batch/47-workbook-samples.png)
+![Auswählen von Samples in der Vorschau der eigentlichen Arbeitsmappe](/img/open-science/local-todo-batch/47-workbook-samples.webp)
 
-![Die zweite Seite des eigentlichen TIFF](/img/open-science/local-todo-batch/50-tiff-second-page.png)
+![Die zweite Seite des eigentlichen TIFF](/img/open-science/local-todo-batch/50-tiff-second-page.webp)
 
 Wenn **Preview unavailable → Open this Office file in your default app to view it.** angezeigt wird, verwenden Sie **Open** für eine lokale Datei oder **Download** für einen verwalteten Upload und öffnen Sie sie dann in einer kompatiblen Anwendung. Dieses Fallback hält die Originaldatei verfügbar, wenn die eingebaute Vorschau sie nicht anzeigen kann.
 

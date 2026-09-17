@@ -32,7 +32,7 @@ CnH2nO2, neutral charge and linear structures. Reopen the files.
 Keep all outputs in English and do not delegate.
 ```
 
-![El alcance compuesto y los archivos solicitados en la conversación real](/img/open-science/workflow-extensions/pubchem-input.png)
+![El alcance compuesto y los archivos solicitados en la conversación real](/img/open-science/workflow-extensions/pubchem-input.webp)
 
 ## 2. Compruebe las llamadas de base de datos reales {/* #2-check-the-actual-database-calls */}
 
@@ -40,7 +40,7 @@ Después de enviar, ampliar la actividad de la herramienta o abrir **Notebook**.
 
 El ejemplo usó nombres exactos de ácido y el primer CID devuelto, luego comprobó las propiedades del lote. Esto es adecuado para estos nombres inequívocos; tomar el primer golpe no es una regla general de identificación.
 
-![La actividad de consulta real y lectura de archivo guardado en Notebook](/img/open-science/workflow-extensions/pubchem-lookup.png)
+![La actividad de consulta real y lectura de archivo guardado en Notebook](/img/open-science/workflow-extensions/pubchem-lookup.webp)
 
 ## 3. Abra la mesa salvada {/* #3-open-the-saved-table */}
 
@@ -56,7 +56,7 @@ Espere hasta que la respuesta termine y los archivos aparecen bajo **Generated**
 | Ácido heptanoico | 8094 | C7H14O2 | 130.18 |
 | Ácido octonoico | 379 | C8H16O2 | 144.21 |
 
-![El nuevo CSV de siete componentes](/img/open-science/workflow-extensions/pubchem-table.png)
+![El nuevo CSV de siete componentes](/img/open-science/workflow-extensions/pubchem-table.webp)
 
 Coinciden filas por **CID**, no su orden de visualización. Revise la fórmula y las SMILES lineales juntos. El ejemplo conserva los nombres de campo devueltos, `SMILES` y `ConnectivitySMILES`; sus cuerdas coinciden con estos compuestos. No renombrar uno como un identificador diferente o inferir estereoquímica experimental de él.
 
@@ -64,7 +64,7 @@ Coinciden filas por **CID**, no su orden de visualización. Revise la fórmula y
 
 Abrir **pubchem-homologs-source.json** para inspeccionar las ocho operaciones, los insumos de búsqueda exacta y las respuestas crudas. Abra **pubchem-homologs-notes.md** para el procedimiento y los cheques. El CSV salvado se comparó con los registros brutos; las siete identidades, fórmulas y estructuras lineales acordadas.
 
-![El procedimiento ahorrado, los resultados de validación y los límites de interpretación](/img/open-science/workflow-extensions/pubchem-notes.png)
+![El procedimiento ahorrado, los resultados de validación y los límites de interpretación](/img/open-science/workflow-extensions/pubchem-notes.webp)
 
 Utilice el botón **Download** de la vista previa para mantener una copia local. Para esta ejecución completa, descargue el <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs.csv">CSV</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-source.json">Registros de fuentes</ExampleDownload> y <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-notes.md">Notas</ExampleDownload>. Los registros PubChem pueden cambiar; retener la instantánea de la fuente con su análisis.
 

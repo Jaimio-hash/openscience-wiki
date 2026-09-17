@@ -18,7 +18,7 @@ Specialistの機能リストは、Skillsとコネクタが到達できるかを�
 4. **Connectors** では、**コネクターを追加** を選択し、**Omics アーカイブ** を選択します。 **コネクター 1** を確認します。
 5. 機能の詳細を開き、意図したリソースを選択したことを確認します。 永続性を確認する役割を保存し、再開します。
 
-![明示的な機能選択とSpecialist](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.jpg)
+![明示的な機能選択とSpecialist](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.webp)
 
 | コントロール | エフェクト |
 | --- | --- |

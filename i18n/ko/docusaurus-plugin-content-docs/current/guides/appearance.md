@@ -23,13 +23,13 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![일반 외관 설정](/img/open-science/v0.27.0/07-general-appearance.png)
+![일반 외관 설정](/img/open-science/v0.27.0/07-general-appearance.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-<Screenshot src="/img/open-science/windows/general-settings.png" alt="Windows 일반 설정에서 테마 및 언어 제어" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.png" linkLabel="완전한 Windows 일반 설정 스크린 샷을 엽니 다" />
+<Screenshot src="/img/open-science/windows/general-settings.webp" alt="Windows 일반 설정에서 테마 및 언어 제어" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.webp" linkLabel="완전한 Windows 일반 설정 스크린 샷을 엽니 다" />
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 동일한 보고서는 더 큰 규모에서 읽기 가능. 현재 테이블 뷰 포트 밖에 열을 볼 수있는 수평 스크롤 바를 사용합니다. 디스플레이 스케일은 저장된 데이터가 아닌 보기를 변경합니다.
 
-![Open-Science at 125 %는 테이블 미리보기의 수평 스크롤 바와 스케일링](/img/open-science/windows/app-scale-125.png)
+![Open-Science at 125 %는 테이블 미리보기의 수평 스크롤 바와 스케일링](/img/open-science/windows/app-scale-125.webp)
 
 </PlatformContent>
 
@@ -104,7 +104,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![English 시스템 완료 alert with task details hidden](/img/open-science/priority-completion/07-system-completion-notification.png)
+![English 시스템 완료 alert with task details hidden](/img/open-science/priority-completion/07-system-completion-notification.webp)
 
 </PlatformContent>
 일반 경고를 사용하려면 **Show task content in system notifications**을 끄십시오. 완료 또는 승인 경고를 선택하여 대화를 다시 열 수 있습니다. 앱 내의 승인에 응답합니다.

@@ -40,7 +40,7 @@ Side Chat 대화, 개인 [독서 bookmarks](bookmarks.md) 및 메모는 패키�
 
 다음 화면은 [GSE60450 샘플 QC 테이블](../reference/example-data.md)을 요약하는 세션을 사용합니다. 수출 미리보기에서 **Essential export** 및 **Full export**을 비교하면 예상 크기를 검사하고 **Export**를 선택하십시오. 내용과 크기는 세션에 따라 다릅니다.
 
-![Essential Export, Full Export, 사용자 정의 콘텐츠로 리서치 패키지 수출 미리보기](/img/open-science/feature-guides-2026-09/research-package-export.png)
+![Essential Export, Full Export, 사용자 정의 콘텐츠로 리서치 패키지 수출 미리보기](/img/open-science/feature-guides-2026-09/research-package-export.webp)
 
 ## 프로젝트로 가져 오기 {/* #import-and-inspect-a-package */}
 

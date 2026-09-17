@@ -18,7 +18,7 @@ Download the public [psych::bfi CSV](https://vincentarelbundock.github.io/Rdatas
 
 In **Settings → Runtimes**, confirm R is **Ready** and enabled. The recorded run used **R 4.4.3**, with base/recommended R functions and no extra package installation. Attach the CSV to a project conversation through **+ → Attach files**.
 
-![The public bfi dataset attached to a same-data method comparison](/img/open-science/workflow-extensions/bfi-input.png)
+![The public bfi dataset attached to a same-data method comparison](/img/open-science/workflow-extensions/bfi-input.webp)
 
 ## 2. Fix the preprocessing before fitting either method
 
@@ -48,7 +48,7 @@ If one method silently uses a different set of respondents, stop and reconcile t
 
 Open **bfi-method-metrics.csv** from **Generated** or **Files**. The recorded file contains **77 metric rows**, including sample counts, missingness, PCA variance, FA uniquenesses, fit, convergence, seed and input identity.
 
-![Saved numerical metrics from the shared preprocessing and both fitted methods](/img/open-science/workflow-extensions/bfi-metrics.png)
+![Saved numerical metrics from the shared preprocessing and both fitted methods](/img/open-science/workflow-extensions/bfi-metrics.webp)
 
 | Unrotated PCA component | Total standardized variance explained |
 | --- | --- |
@@ -65,7 +65,7 @@ The FA optimizer converged, but the likelihood-ratio statistic was **1490.587 on
 
 Open **bfi-method-comparison.png**. Its three panels show unrotated PCA variance, varimax-rotated PCA loadings and varimax FA loadings. The exact loading values are in **bfi-loadings.csv**, with **250 rows**: 25 items × 5 dimensions × 2 methods.
 
-![Unrotated PCA variance and the two rotated loading matrices](/img/open-science/workflow-extensions/bfi-comparison-plot.png)
+![Unrotated PCA variance and the two rotated loading matrices](/img/open-science/workflow-extensions/bfi-comparison-plot.webp)
 
 Do not match “column 1” mechanically across the methods. Factor/component order and signs can change without changing the solution. The heatmaps use blue for negative and red for positive loadings; compare item patterns and numerical values.
 
@@ -75,7 +75,7 @@ PCA partitions total observed variance; FA models shared covariance with separat
 
 Open **bfi-method-report.md**. Check that it reports the same sample and preprocessing, the fixed seed and the difference between convergence and fit. These 1–6 ordinal responses are treated as approximately continuous; complete-case deletion can bias results when missingness relates to responses or participant characteristics.
 
-![The final report records preprocessing, seed, variance and fit limitations](/img/open-science/workflow-extensions/bfi-report.png)
+![The final report records preprocessing, seed, variance and fit limitations](/img/open-science/workflow-extensions/bfi-report.webp)
 
 Download the <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.R">R script</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-loadings.csv">loadings</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-method-metrics.csv">metrics</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/bfi-method-comparison.png">figure</ExampleDownload> and <ExampleDownload path="/examples/workflow-extensions/bfi-method-report.md">report</ExampleDownload>. Put the script and downloaded input in a fresh folder, open a terminal there and run:
 

@@ -16,7 +16,7 @@ Tags 用於 Skills、Connectors、Specialists 和 References，不是所有會�
 2. Create 後檢查新增行及零資源狀態。
 3. Edit Tag 重新開啟已有欄位，Save 儲存，Cancel 放棄草稿。
 
-![Transcriptomics 表單](/img/open-science/guides-walkthrough/30-tag-create.png)
+![Transcriptomics 表單](/img/open-science/guides-walkthrough/30-tag-create.webp)
 
 | 欄位 | 選項與行為 |
 | --- | --- |
@@ -40,19 +40,19 @@ Tags 用於 Skills、Connectors、Specialists 和 References，不是所有會�
 
 將 **Transcriptomics** 分配給 **Omics Archives** 後，開啟標籤詳情。本例顯示 **1 resource**；搜尋 `Omics` 保留該 Connector，點選後進入詳情。實際使用時替換為自己的標籤和資源名，移除關聯會保留資源本身。
 
-![透過標籤找到 Omics Archives](/img/open-science/guides-walkthrough/35-tagged-connector.png)
+![透過標籤找到 Omics Archives](/img/open-science/guides-walkthrough/35-tagged-connector.webp)
 
 ## 排序 {/* #排序 */}
 
 **Favorites** 始終位於最前。拖動 **Reorder &#91;name&#93;**，或聚焦手柄後使用方向鍵移動自定義標籤，再檢查列表中的位置。
 
-![排序後標籤與資源檢視](/img/open-science/guides-walkthrough/31-tag-reorder.png)
+![排序後標籤與資源檢視](/img/open-science/guides-walkthrough/31-tag-reorder.webp)
 
 ## 刪除 {/* #删除 */}
 
 選擇 **Delete Tag**，檢查 **Assignments to remove**。刪除標籤會移除這些關聯，資源仍保留；**Cancel** 同時保留標籤與關聯。
 
-![刪除範圍確認](/img/open-science/guides-walkthrough/32-tag-delete-boundary.png)
+![刪除範圍確認](/img/open-science/guides-walkthrough/32-tag-delete-boundary.webp)
 
 只想移除某個資源的標籤時，在該資源上取消分配，不要刪除全域標籤。文獻集合的操作見[文獻庫](./library.md)，集合與標籤用途不同。
 

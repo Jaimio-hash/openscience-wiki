@@ -39,7 +39,7 @@ Write in English and reopen the saved files.
 
 Öffnen Sie **electrolyte-merged.csv** unter **Generated**. Überprüfen Sie die behaltenen Titel, DOIs und Source-Mitgliedschaft mit den beiden RIS-Exporten und dem Kandidaten-Audit. Die eigentliche Vereinigung hat 15 Zeilen; DOI **10.1007/s41918-024-00212-1** kommt in beiden Chargen vor und ist mit **A&#124;B** gekennzeichnet.
 
-![Die gespeicherte Vereinigung beider Suchbatches, Beibehaltung der Quellmitgliedschaft](/img/open-science/workflow-extensions/batches-merged.png)
+![Die gespeicherte Vereinigung beider Suchbatches, Beibehaltung der Quellmitgliedschaft](/img/open-science/workflow-extensions/batches-merged.webp)
 
 Zum Vergleich trimmen Sie den DOI-Whitespace, entfernen Sie ein optionales DOI-URL-Präfix und vergleichen Sie den Fall unempfindlich. Bewahren Sie die ursprünglichen Bezeichner im Quelldatensatz auf. Ähnliche Titel allein sind unzureichende Beweise dafür, dass zwei Aufzeichnungen identisch sind; ungelöste Identifier-Konflikte müssen überprüft werden.
 
@@ -52,7 +52,7 @@ Laden Sie <ExampleDownload path="/examples/workflow-extensions/electrolyte-batch
 3. Wählen Sie `electrolyte-batch-a.ris`. Prüfen Sie, ob **Import to** die beabsichtigte Sammlung benennt.
 4. Lassen Sie **When identifiers match → Reuse existing reference** ausgewählt. Überprüfen Sie **View details** und wählen Sie dann **Import references**.
 
-![First-Batch-Importvorschau: acht neue Referenzen in der ausgewählten Kollektion](/img/open-science/workflow-extensions/batches-import-a.png)
+![First-Batch-Importvorschau: acht neue Referenzen in der ausgewählten Kollektion](/img/open-science/workflow-extensions/batches-import-a.webp)
 
 In der aufgezeichneten Bibliothek wurde der erste Import mit **8 Erstellt, 0 Wiederverwendet, 0 Übersprungen, 0 Gescheitert** abgeschlossen. Klicken Sie auf **Done** und überprüfen Sie die Sammlung. Wenn Ihre Bibliothek bereits übereinstimmende Datensätze enthält, kann die erstellte/wiedergegebene Aufteilung abweichen.
 
@@ -60,16 +60,16 @@ In der aufgezeichneten Bibliothek wurde der erste Import mit **8 Erstellt, 0 Wie
 
 Wenn die gleiche Sammlung ausgewählt ist, importieren Sie `electrolyte-batch-b.ris`. Die Vorschau sollte vorhandene Datensätze identifizieren, bevor der Import begangen wird. In diesem Lauf zeigte es **7 Neue Referenzen, 1 Existing, 0 Skipped**.
 
-![Second-Batch Preview identifiziert das freigegebene Papier als Existing](/img/open-science/workflow-extensions/batches-import-b.png)
+![Second-Batch Preview identifiziert das freigegebene Papier als Existing](/img/open-science/workflow-extensions/batches-import-b.webp)
 
 Halten Sie **Reuse existing reference**, prüfen Sie den freigegebenen Titel und importieren Sie dann. Lesen Sie die aktuelle Abschlusszusammenfassung: **7 Erstellt, 1 Wiederverwendet, 0 Übersprungen, 0 Gescheitert**. Reuse behält vorhandene Metadaten und fügt den übereinstimmenden Verweis auf das Ziel hinzu; Es erstellt keine zweite Kopie oder lädt ein PDF herunter.
 
-![Abgeschlossener zweiter Import mit sieben erstellten und einem wiederverwendeten](/img/open-science/workflow-extensions/batches-import-result.png)
+![Abgeschlossener zweiter Import mit sieben erstellten und einem wiederverwendeten](/img/open-science/workflow-extensions/batches-import-result.webp)
 
 ## 5. Überprüfen Sie die resultierende Sammlung {/* #5-check-the-resulting-collection */}
 
 Klicken Sie auf **Done**. Die Sammlung enthält **15 Referenzen** und stimmt mit der DOI-Union überein. Behalten Sie die beiden Originalexporte und die Provenienz CSV, damit ein Kollege rekonstruieren kann, woher jeder Kandidat kommt.
 
-![Die finale Kollektion mit fünfzehn Referenzen](/img/open-science/workflow-extensions/batches-collection.png)
+![Die finale Kollektion mit fünfzehn Referenzen](/img/open-science/workflow-extensions/batches-collection.webp)
 
 Eine Zählübereinstimmung ist eine nützliche Überprüfung, kein Ersatz für die Überprüfung der überlappenden DOI und repräsentativen Titel. Um ein Fenster für eine spätere Veröffentlichung hinzuzufügen und gleichzeitig die Baseline beizubehalten, fahren Sie mit [Aktualisierung einer vorhandenen Literatursammlung](update-literature.md) fort.

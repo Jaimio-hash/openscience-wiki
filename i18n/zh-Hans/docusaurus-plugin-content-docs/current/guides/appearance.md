@@ -23,13 +23,13 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![General 中的外观与语言设置](/img/open-science/v0.27.0/07-general-appearance.png)
+![General 中的外观与语言设置](/img/open-science/v0.27.0/07-general-appearance.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-<Screenshot src="/img/open-science/windows/general-settings.png" alt="Windows 的 General 设置中的 Theme 与 Language 控件" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.png" linkLabel="打开完整的 Windows General 设置截图" />
+<Screenshot src="/img/open-science/windows/general-settings.webp" alt="Windows 的 General 设置中的 Theme 与 Language 控件" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.webp" linkLabel="打开完整的 Windows General 设置截图" />
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 放大后仍可阅读同一份报告。使用横向滚动条查看当前视口外的列；显示缩放改变的是视图，不会修改已保存的数据。
 
-![125% 缩放下的 Open-Science，表格预览显示横向滚动条](/img/open-science/windows/app-scale-125.png)
+![125% 缩放下的 Open-Science，表格预览显示横向滚动条](/img/open-science/windows/app-scale-125.webp)
 
 </PlatformContent>
 
@@ -104,7 +104,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![隐藏任务细节的英文系统完成通知](/img/open-science/priority-completion/07-system-completion-notification.png)
+![隐藏任务细节的英文系统完成通知](/img/open-science/priority-completion/07-system-completion-notification.webp)
 
 </PlatformContent>
 关闭 **Show task content in system notifications** 后，系统使用不含任务内容的通用提醒。点击完成或批准提醒可返回对应会话，再在应用内处理批准请求。

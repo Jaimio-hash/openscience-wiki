@@ -28,7 +28,7 @@ last_update:
 
 ローカル例には、実際の GSE60450 RNA-seq カウント、カスタム読み取り専用 QC サーバー、アスピリン分子アーティファクト、パブリックシーケンス/構造入力が含まれます。 両方の言語版で英語アプリケーションスクリーンショットを使用します。 リモート GPU/SSH の実行と、このデバイスで利用できなくなった認証情報は、完全なローカル操作から明示的に区別されます。
 
-![適用で接続される注文のQC Connector](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![適用で接続される注文のQC Connector](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 ## エージェントにバインドされたリクエストを与える {/* #give-the-agent-a-bounded-request */}
 

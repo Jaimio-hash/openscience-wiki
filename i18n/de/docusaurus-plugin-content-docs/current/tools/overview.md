@@ -28,7 +28,7 @@ Wählen Sie ein Tool nach dem Ergebnis, das Sie benötigen: einen Datensatz abru
 
 Die lokalen Beispiele umfassen echte GSE60450 RNA-seq Zählungen, einen benutzerdefinierten schreibgeschützten QC-Server, ein Aspirin-Molekül-Artefakt und öffentliche Sequenz / Struktur-Eingänge. Sie verwenden englische Anwendungs-Screenshots in beiden Sprachausgaben. Die Remote-GPU/SSH-Ausführung und die auf diesem Gerät nicht verfügbaren Anmeldeinformationen bleiben explizit von den abgeschlossenen lokalen Operationen unterschieden.
 
-![Custom QC Connector in der Anwendung verbunden](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![Custom QC Connector in der Anwendung verbunden](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 ## Geben Sie dem Agenten eine begrenzte Anfrage {/* #give-the-agent-a-bounded-request */}
 

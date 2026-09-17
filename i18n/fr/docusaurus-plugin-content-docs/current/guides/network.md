@@ -33,7 +33,7 @@ Si Network signale **Ready** mais qu'un outil échoue, élargissez l'erreur de c
 5. Revoir la nouvelle ligne d'ébauche. Utilisez **Supprimer &#91;nom d'hôte&#93;** pour le défaire.
 6. Sélectionnez **Save changes** pour maintenir la liste prévue.
 
-![La validation du nom d'hôte exact rejette une carte joker](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.png)
+![La validation du nom d'hôte exact rejette une carte joker](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.webp)
 
 Saisissez un nom d'hôte tel que `data.example.org`, sans schéma, chemin, port, wildcard ou adresse IP. Pour **Enter a hostname only, without a scheme, path, port, or wildcard.**, supprimez ces pièces et enregistrez le nom d'hôte.
 
@@ -89,7 +89,7 @@ Sélectionnez **Configure** ou **Edit** sous Rétroviseur du paquet.
 | **Save** | Conservez la configuration pour les opérations de paquets suivantes |
 | **Cancel** | Éliminer le projet |
 
-![Entrées miroir et groupe CA](/img/open-science/walkthrough-2026-09-08/56-package-mirror.png)
+![Entrées miroir et groupe CA](/img/open-science/walkthrough-2026-09-08/56-package-mirror.webp)
 
 Un miroir de paquet change la source du paquet. Confirmez le format root/index requis du miroir, enregistrez et réessayez une opération de petit paquet dans l'exécution sélectionnée. Les paramètres proxy de Model-Provider sont séparés.
 

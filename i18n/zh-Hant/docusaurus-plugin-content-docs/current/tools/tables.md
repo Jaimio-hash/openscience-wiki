@@ -30,7 +30,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 4. 判斷資料量前先讀顯示範圍；預覽有截斷時，透過完整檔案計算確認維度。
 5. 將樣本數值與[公共 QC 基準](../reference/example-data.md#样本-qc-基准)比較。
 
-![包含完整標識與數值列的樣本 QC 表](/img/open-science/capabilities-walkthrough/32-csv-preview.jpg)
+![包含完整標識與數值列的樣本 QC 表](/img/open-science/capabilities-walkthrough/32-csv-preview.webp)
 
 <ToolOperationGroup>
 <summary>QC 表格：各列含義</summary>

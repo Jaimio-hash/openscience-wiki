@@ -32,7 +32,7 @@ Stage verified candidates in Literature Inbox for my review; do not accept
 them automatically. Stop before downloading PDFs. Keep everything in English.
 ```
 
-![Le journal de recherche réel avec l'identité des candidats et l'état de recherche](/img/open-science/research-workflows/literature-topic-results.png)
+![Le journal de recherche réel avec l'identité des candidats et l'état de recherche](/img/open-science/research-workflows/literature-topic-results.webp)
 
 Le <a href="/docs/examples/research-workflows/single-atom-search-log.md" download>journal de recherche initial</a> enregistre huit candidats trouvés au moyen de la recherche sur le Web et des métadonnées Crossref. Ces documents n'étaient pas encore téléchargés. Si une source nécessite des identifiants, configurez [Connecteurs](../guides/connectors.md) ou demandez à l'Agent d'utiliser une source disponible et de nommer l'écart.
 
@@ -54,7 +54,7 @@ Keep the old collection unchanged. Keep everything in English.
 
 Passez en revue le <a href="/docs/examples/research-workflows/single-atom-open-access-selection.md" download>journal de sélection de remplacement</a>, puis sélectionnez les quatre lignes de boîte de réception prévues et choisissez **Accept**. Un lien source ouvert doit encore être testé en enregistrant et en ouvrant son PDF.
 
-![Quatre candidats de remplacement sélectionnés pour une acceptation manuelle](/img/open-science/research-workflows/journal-open-access-inbox.png)
+![Quatre candidats de remplacement sélectionnés pour une acceptation manuelle](/img/open-science/research-workflows/journal-open-access-inbox.webp)
 
 Créer **Catalyse mono-atome - Club de Journal plein texte** en utilisant **New collection**. Dans **All references**, sélectionnez ces quatre enregistrements acceptés plus Lang, puis choisissez **Add to collection**. Utilisez **Add to project** pour lier l'ensemble au projet contenant votre conversation.
 
@@ -73,15 +73,15 @@ Créer **Catalyse mono-atome - Club de Journal plein texte** en utilisant **New 
 3. Ouvrez cette pièce jointe. Comparez son titre et DOI avec l'enregistrement, et vérifiez le nombre de pages.
 4. Répéter pour les cinq références, puis rouvrir la collection. Chaque ligne devrait maintenant afficher une icône de pièce jointe.
 
-![Sources en texte intégral offertes pour le papier Lang](/img/open-science/research-workflows/literature-topic-fulltext.png)
+![Sources en texte intégral offertes pour le papier Lang](/img/open-science/research-workflows/literature-topic-fulltext.webp)
 
 Dans cette course, le PDF de Lang a été ajouté par l'intermédiaire d'Europe PMC. Les quatre autres ont été sauvés de sources d'éditeurs découvertes par l'intermédiaire de Unpaywall. Une autre source peut réussir lorsqu'une autre source ne peut pas être ajoutée. Si nécessaire, utilisez **Open source** pour obtenir une copie que vous avez le droit d'accéder et de la joindre à **Add PDF**. Si aucune copie lisible n'est disponible, remplacez la sélection ou marquez-la manquante avant de demander des résultats en texte intégral.
 
-![Un papier effectivement téléchargé s'ouvre dans l'aperçu anglais PDF](/img/open-science/research-workflows/journal-qi-pdf.png)
+![Un papier effectivement téléchargé s'ouvre dans l'aperçu anglais PDF](/img/open-science/research-workflows/journal-qi-pdf.webp)
 
 La collection finale contient cinq PDF enregistrés, avec le nombre de pages **10, 9, 11, 10 et 11** dans l'ordre du tableau. Une icône de pièce jointe confirme un fichier enregistré; l'ouverture confirme qu'elle est lisible et correspond au record.
 
-![La dernière collection de cinq documents avec une pièce jointe sur chaque dossier](/img/open-science/research-workflows/journal-five-fulltexts.png)
+![La dernière collection de cinq documents avec une pièce jointe sur chaque dossier](/img/open-science/research-workflows/journal-five-fulltexts.webp)
 
 <span id="draft-the-reading-plan-then-deepen-it-with-full-text" />
 
@@ -108,17 +108,17 @@ Au cours de la réponse, étendre l'activité de lecture **Bibliothèque de réf
 
 Après l'achèvement, ouvrez **single-atom-fulltext-reading-pack.md** à partir de **Generated**. Vérifier le tableau de vérification des cinq documents, chaque constatation et son emplacement, ses limites, ses questions et son ordre du jour. L'ordre du jour devrait s'étendre à 60 minutes.
 
-![Le pack plein texte sauvegardé, avec les mêmes cinq papiers et les mêmes vérifications de source](/img/open-science/research-workflows/journal-fulltext-pack.png)
+![Le pack plein texte sauvegardé, avec les mêmes cinq papiers et les mêmes vérifications de source](/img/open-science/research-workflows/journal-fulltext-pack.webp)
 
 ## Consultez la carte papier en fonction des PDF originaux {/* #check-the-paper-map-against-the-original-pdfs */}
 
 Ouvrez **single-atom-fulltext-paper-map.csv** et utilisez son bouton d'extension pour une vue en plein écran. Cette exécution contient **Lignes 5 · Colonnes 12**. Comparer l'ensemble DOI avec la collection; un pack d'un ensemble différent n'est pas le résultat de ce workflow. Faites défiler horizontalement ou téléchargez le CSV pour lire les cellules longues en entier.
 
-![La véritable carte papier de cinq rangées, douze colonnes](/img/open-science/research-workflows/journal-fulltext-paper-map.png)
+![La véritable carte papier de cinq rangées, douze colonnes](/img/open-science/research-workflows/journal-fulltext-paper-map.webp)
 
 Retourner à **Library**, ouvrir un PDF cité, cliquer sur son compteur de page, taper la page demandée et appuyer sur **Entrez**. Vérifiez la figure ou la table avec sa légende et le texte qui l'entoure. Par exemple, la figure 5 de He et al. est sur **PDF page 7**; la description de la ligne de production se trouve à la page 3. Ils appuient différentes parties du résumé.
 
-![Figure 5 ouverte sur PDF page 7 pour comparaison](/img/open-science/research-workflows/journal-he-figure5.png)
+![Figure 5 ouverte sur PDF page 7 pour comparaison](/img/open-science/research-workflows/journal-he-figure5.webp)
 
 Demandez une révision sauvegardée quand un localisateur ou une condition est incorrecte, puis rouvrez le fichier révisé. Le pack coché conserve également un conflit dans Sun et al. : page 2 et la légende de la figure 5 donne différentes compositions de flux. Il enregistre les deux descriptions au lieu de choisir silencieusement. C'est une question de réunion utile, et non un détail expérimental résolu.
 

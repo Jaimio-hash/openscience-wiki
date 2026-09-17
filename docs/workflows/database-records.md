@@ -32,7 +32,7 @@ CnH2nO2, neutral charge and linear structures. Reopen the files.
 Keep all outputs in English and do not delegate.
 ```
 
-![The compound scope and requested files in the actual conversation](/img/open-science/workflow-extensions/pubchem-input.png)
+![The compound scope and requested files in the actual conversation](/img/open-science/workflow-extensions/pubchem-input.webp)
 
 ## 2. Check the actual database calls
 
@@ -40,7 +40,7 @@ After sending, expand the tool activity or open **Notebook**. The run resolved s
 
 The example used exact acid names and the first returned CID, then checked the batch properties. This is suitable for these unambiguous names; taking the first hit is not a general identification rule.
 
-![The actual query activity and saved-file readback in Notebook](/img/open-science/workflow-extensions/pubchem-lookup.png)
+![The actual query activity and saved-file readback in Notebook](/img/open-science/workflow-extensions/pubchem-lookup.webp)
 
 ## 3. Open the saved table
 
@@ -56,7 +56,7 @@ Wait until the response completes and the files appear under **Generated**. Open
 | Heptanoic acid | 8094 | C7H14O2 | 130.18 |
 | Octanoic acid | 379 | C8H16O2 | 144.21 |
 
-![The reopened seven-compound CSV](/img/open-science/workflow-extensions/pubchem-table.png)
+![The reopened seven-compound CSV](/img/open-science/workflow-extensions/pubchem-table.webp)
 
 Match rows by **CID**, not their display order. Check the formula and linear SMILES together. The example retains both returned field names, `SMILES` and `ConnectivitySMILES`; their strings happen to match for these compounds. Do not rename one as a different identifier or infer experimental stereochemistry from it.
 
@@ -64,7 +64,7 @@ Match rows by **CID**, not their display order. Check the formula and linear SMI
 
 Open **pubchem-homologs-source.json** to inspect all eight operations, exact lookup inputs and raw responses. Open **pubchem-homologs-notes.md** for the procedure and checks. The saved CSV was compared with the raw records; the seven identities, formulas and linear structures agreed.
 
-![The saved procedure, validation results and interpretation limits](/img/open-science/workflow-extensions/pubchem-notes.png)
+![The saved procedure, validation results and interpretation limits](/img/open-science/workflow-extensions/pubchem-notes.webp)
 
 Use the preview's **Download** button to keep a local copy. For this completed run, download the <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs.csv">CSV</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-source.json">source records</ExampleDownload> and <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-notes.md">notes</ExampleDownload>. PubChem records can change; retain the source snapshot with your analysis.
 

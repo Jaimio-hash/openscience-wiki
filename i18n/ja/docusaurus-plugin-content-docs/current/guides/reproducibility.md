@@ -48,7 +48,7 @@ last_update:
 
 [GSE60450サンプルQCテーブル](../reference/example-data.md) から Notebook で生成されたサマリーが表示されます。 ファイルの **Provenance → Reproducibility** タブを開き、キャプチャされた入力と実行を検査します。 ここでは、**Not verified yet**と**Unavailable**は、正確な環境ロックが欠落していることを示しています。 **View details** を使用して、[環境準備のステップ](#prepare-environment) に従って新しいバージョンを作成します。 この画面は、結果の再現に成功したことを示すものではありません。
 
-![保存されたQCの要約およびその再現性パネル、捕獲された証拠および利用できなくなった点検を示す](/img/open-science/feature-guides-2026-09/reproducibility-evidence.png)
+![保存されたQCの要約およびその再現性パネル、捕獲された証拠および利用できなくなった点検を示す](/img/open-science/feature-guides-2026-09/reproducibility-evidence.webp)
 
 ## チェックを実行する {/* #run-a-check */}
 

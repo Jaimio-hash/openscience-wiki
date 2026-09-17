@@ -37,7 +37,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 > Delegate to RNA-seq QC Reviewer. Use only the complete inline CSV below. Execute the arithmetic in Python, verify twelve distinct full sample identifiers, and check zero_count_genes + detected_genes_count_gt_0 = 27179 for every row. Return each result and state that this checks supplied summary data, not independent access to the original count matrix.
 
-![完成的 Specialist 子任务及逐样本检查](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.jpg)
+![完成的 Specialist 子任务及逐样本检查](/img/open-science/capabilities-walkthrough/15-specialist-delegated-result.webp)
 
 本例结果：子任务实际运行 Python Notebook，得到 **12 行、12 个唯一且非空的完整 ID，12/12 个求和均为 27,179**。首个样本为 `8,664 + 18,515 = 27,179`，数值字段完整且非负。
 

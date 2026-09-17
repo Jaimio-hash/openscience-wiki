@@ -22,7 +22,7 @@ last_update:
 
 添付したCSVをクリックして、計算リクエストを送信する前にプレビューします。 `train`、`re78`、`re74`、`re75`、ゼロ収益を含む行をチェックします。 プレビューは 100 行のみを表示できます。 Notebook はファイル全体をカウントしなければなりません。
 
-![付属の入力 CSV とその元の列](/img/open-science/research-workflows/job-training-input.png)
+![付属の入力 CSV とその元の列](/img/open-science/research-workflows/job-training-input.webp)
 
 ## 事前に指定された比較を実行します {/* #run-the-prespecified-comparison */}
 
@@ -42,7 +42,7 @@ Run the calculations; do not invent results or delegate.
 
 会話では、**Notebook**を選択し、実行されたPythonセルを開き、出力を検査します。 回帰の要約の前に行とグループカウントを探します。 添付されたバージョンが解決できない場合は、Agent にこの会話の添付ファイルと再試行からマウントされたファイルを読み込みます。 失敗したセルは結果ではありません。 保存されたファイルで成功したセルとその出力を保持します。
 
-![録画したNotebook出力には、実際のサンプルチェックと回帰推定が含まれています。](/img/open-science/research-workflows/job-training-notebook.png)
+![録画したNotebook出力には、実際のサンプルチェックと回帰推定が含まれています。](/img/open-science/research-workflows/job-training-notebook.webp)
 
 ## 保存した結果の特定 {/* #inspect-the-saved-result */}
 
@@ -55,13 +55,13 @@ Run the calculations; do not invent results or delegate.
 
 係数と間隔は**千ドル**になります。 これらは、元の紙から引用された見積もりではなく、この例の計算の結果です。
 
-![保存された英語回帰報告書のサンプルチェックと見積もり](/img/open-science/research-workflows/job-training-report.png)
+![保存された英語回帰報告書のサンプルチェックと見積もり](/img/open-science/research-workflows/job-training-report.webp)
 
 応答が完了した後に生成されたファイルの両方を開きます。 CSVの`train`行をレポートとNotebookで比較します。 <a href="/docs/examples/research-workflows/job-training-regression.csv" download>係数テーブル</a> と <a href="/docs/examples/research-workflows/job-training-report.md" download>レポート</a> をダウンロードできます。
 
 **Generated**では、CSVを開き、プレビューを拡大します。 保存された係数テーブルは、**12行・9列**:調整されていないモデルと調整されたモデルの10行の2列を持っています。 各モデルの`train`行を探し、その推定値、堅牢な標準エラー、間隔、`n`とユニットを比較します。 ソース辞書が状態ではないインフレーションベース年を追加しないでください。 プレビューの**Download**ボタンを使用して、チェックされたバージョンを維持します。
 
-![両モデルと一貫したユニットで再オープンした係数CSV](/img/open-science/research-workflows/job-training-coefficients.png)
+![両モデルと一貫したユニットで再オープンした係数CSV](/img/open-science/research-workflows/job-training-coefficients.webp)
 
 ## 比較が何をサポートするかを決める {/* #decide-what-the-comparison-supports */}
 

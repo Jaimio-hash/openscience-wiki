@@ -17,9 +17,9 @@ last_update:
 3. 如出現 Plan control 權限卡，檢查後批准適當範圍或拒絕。這是計劃建立/決定記錄權限，不是所有執行權限。
 4. 等待 Plan ready for review；普通回覆中的計劃段落不等於結構化審批卡。
 
-![Plan first 入口](/img/open-science/guides-walkthrough/21-plan-first-entry.png)
+![Plan first 入口](/img/open-science/guides-walkthrough/21-plan-first-entry.webp)
 
-![單獨的計劃記錄權限](/img/open-science/guides-walkthrough/22-plan-permission.png)
+![單獨的計劃記錄權限](/img/open-science/guides-walkthrough/22-plan-permission.webp)
 
 本任務限定保留原始計數、區分 ID/長度、計算樣本質控、交付三個受管產物、不聲稱差異表達。初始要求明確，計劃才容易核驗。
 
@@ -27,7 +27,7 @@ last_update:
 
 Open 在對話旁開啟階段、步驟、執行者、預期輸出和可行性說明。長計劃可 Enter full screen，Download Plan 儲存。置信度是計劃評估，不代表程式碼已執行。
 
-![分階段計劃和輸出](/img/open-science/guides-walkthrough/23-plan-review.png)
+![分階段計劃和輸出](/img/open-science/guides-walkthrough/23-plan-review.webp)
 
 | 控制元件或狀態 | 操作 |
 | --- | --- |
@@ -42,7 +42,7 @@ Open 在對話旁開啟階段、步驟、執行者、預期輸出和可行性說
 
 在 **Respond to Plan** 中明確需要修改的內容。例如要求檢查輸入完整性、重新開啟全部輸出，並保留圖表短標籤到原始標識的對映。點選 **Send Plan feedback**，等待修訂版，再逐項核對要求是否已納入。
 
-![提交前的計劃反饋](/img/open-science/guides-walkthrough/24-plan-feedback.png)
+![提交前的計劃反饋](/img/open-science/guides-walkthrough/24-plan-feedback.webp)
 
 審查修訂版後點選其 Approve。舊預覽可能仍顯示，並提示已被替換；舊步驟不是當前計劃最新進度。應重新開啟當前計劃。
 

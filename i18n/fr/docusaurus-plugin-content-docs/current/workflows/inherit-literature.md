@@ -24,13 +24,13 @@ Téléchargez le <a href="/docs/examples/research-workflows/perovskite-stability
 4. Inspecter le résultat de l'importation. Cet exemple a créé des enregistrements **20**, avec **0** réutilisés, ignorés ou échoués.
 5. Ouvrez la collection, sélectionnez ses enregistrements et utilisez **Add to project** pour les lier à votre projet.
 
-![Les rapports d'importation complétés 20 ont créé des références](/img/open-science/research-workflows/perovskite-import-complete.png)
+![Les rapports d'importation complétés 20 ont créé des références](/img/open-science/research-workflows/perovskite-import-complete.webp)
 
 Si votre exportation a des duplicata ou des identifiants incomplets, résolvez ces dossiers avant d'accepter un inventaire final. L'importation de références ne joint pas leur texte intégral. Utilisez le contrôle **Add PDF** de la référence pour les PDF que vous avez déjà, puis comparez le titre PDF et DOI avec son enregistrement. Voir [Bibliothèque et citations](../guides/library.md).
 
 Réouvrez la collection et vérifiez le compte **Références 20** du pied de page. Inspectez la colonne **Pièce jointe** avant de demander une synthèse. Dans cet exemple, il est vide tout au long de l'ouvrage, de sorte que l'étape suivante demande un inventaire bibliographique plutôt que des résultats tirés du texte intégral.
 
-![La collection de vingt références importée avec son état d'attachement réel](/img/open-science/research-workflows/perovskite-collection.png)
+![La collection de vingt références importée avec son état d'attachement réel](/img/open-science/research-workflows/perovskite-collection.webp)
 
 ## Demandez une remise utilisable {/* #ask-for-a-usable-handover */}
 
@@ -53,11 +53,11 @@ Pour une plus grande collection, demandez un inventaire avant de demander une sy
 
 Une fois la réponse terminée, ouvrez **perovskite-handover.csv** à partir des fichiers générés. Dans cet exemple, la table sauvegardée a **Lignes 20 et colonnes 6**. Tous les DOI 20 correspondent à l'ensemble importé; aucun DOI ou année de publication n'est manquant. Chaque entrée texte complet indique correctement qu'aucun PDF n'est joint.
 
-![L'inventaire de transfert Perovskite de 20-row sauvegardé en Open-Science](/img/open-science/research-workflows/perovskite-handover-table.png)
+![L'inventaire de transfert Perovskite de 20-row sauvegardé en Open-Science](/img/open-science/research-workflows/perovskite-handover-table.webp)
 
 Ouvrez **perovskite-handover.md** et vérifiez que la séquence de lecture est utile au chercheur suivant. Il suggère d'abord des documents de stabilité généraux, suivis de mécanismes, d'interventions matérielles et d'approches analytiques. Ce sont des suggestions de lecture basées sur la collection, et non des conclusions vérifiées sur les expériences.
 
-![Le plan de lecture sauvegardé maintient la disponibilité de la source et les actions suivantes visibles](/img/open-science/research-workflows/perovskite-reading-plan.png)
+![Le plan de lecture sauvegardé maintient la disponibilité de la source et les actions suivantes visibles](/img/open-science/research-workflows/perovskite-reading-plan.webp)
 
 Utilisez le bouton prévisualiser le fichier pour lire le plan, puis **Download** pour le conserver à côté du CSV. Vérifier que chaque action suivante proposée est réalisable à partir du matériel fourni. Une séquence de lecture suggérée ne prouve pas que les documents ont été lus.
 

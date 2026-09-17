@@ -32,7 +32,7 @@ Stage verified candidates in Literature Inbox for my review; do not accept
 them automatically. Stop before downloading PDFs. Keep everything in English.
 ```
 
-![候補者のアイデンティティと検索ステータスの実際の検索ログ](/img/open-science/research-workflows/literature-topic-results.png)
+![候補者のアイデンティティと検索ステータスの実際の検索ログ](/img/open-science/research-workflows/literature-topic-results.webp)
 
 <a href="/docs/examples/research-workflows/single-atom-search-log.md" download>初期検索ログ</a>は、Web検索とクロスリーフメタデータで見つかった8つの候補を記録します。 これらは、まだダウンロードされた紙ではありませんでした。 ソースが資格情報を必要とする場合は、[コネクタ](../guides/connectors.md) を構成するか、エージェントに利用可能なソースを使用し、ギャップを名前付けるように依頼してください。
 
@@ -54,7 +54,7 @@ Keep the old collection unchanged. Keep everything in English.
 
 <a href="/docs/examples/research-workflows/single-atom-open-access-selection.md" download>取り替えの選択 ログ</a> を見直し、4 つの意図した Inbox 行を選択し、**Accept** を選択します。 PDFの保存と開口部によって、オープンアクセスソースリンクはテスト済みです。
 
-![手動受入のために選ばれる4つの取り替えの候補者](/img/open-science/research-workflows/journal-open-access-inbox.png)
+![手動受入のために選ばれる4つの取り替えの候補者](/img/open-science/research-workflows/journal-open-access-inbox.webp)
 
 **New collection**で**単原子分析 - フルテキストジャーナルクラブ**を作成します。 **All references** では、これらの 4 つの承認されたレコードと Lang を選択し、**Add to collection** を選択します。 **Add to project** を使用して、会話を含むプロジェクトにセットをリンクします。
 
@@ -73,15 +73,15 @@ Keep the old collection unchanged. Keep everything in English.
 3. 添付ファイルを開きます。 タイトルとDOIをレコードと比較し、ページ数を確認します。
 4. 5つのすべての参照を繰り返し、コレクションを再オープンします。 各行は、添付アイコンが表示されます。
 
-![Lang のペーパーのために提供される完全なテキストの源](/img/open-science/research-workflows/literature-topic-fulltext.png)
+![Lang のペーパーのために提供される完全なテキストの源](/img/open-science/research-workflows/literature-topic-fulltext.webp)
 
 この実行では、Lang の PDF がヨーロッパ PMC で追加されました。 ほかの4つは、Unpaywallを通じて発見された出版社のソースから保存されました。 別のソースを追加できない場合、代替ソースが成功することができます。 必要な場合は、**Open source** を使用して、**Add PDF** でアクセスし、添付する権利のコピーを入手してください。 読みやすいコピーが利用できない場合は、選択を置き換えたり、フルテキスト検索を要求する前に不足しているマークを付けてください。
 
-![英語PDFプレビューで実際にダウンロードした紙が開きます](/img/open-science/research-workflows/journal-qi-pdf.png)
+![英語PDFプレビューで実際にダウンロードした紙が開きます](/img/open-science/research-workflows/journal-qi-pdf.webp)
 
 最終コレクションには、テーブルの注文で**10、9、11、10および11**をカウントする5つの保存されたPDFが含まれています。 添付アイコンは保存されたファイルを確認します。 読みやすく、レコードにマッチすることを確認します。
 
-![すべてのレコードに添付ファイルを備えた最終5枚の紙コレクション](/img/open-science/research-workflows/journal-five-fulltexts.png)
+![すべてのレコードに添付ファイルを備えた最終5枚の紙コレクション](/img/open-science/research-workflows/journal-five-fulltexts.webp)
 
 <span id="draft-the-reading-plan-then-deepen-it-with-full-text" />
 
@@ -108,17 +108,17 @@ do not delegate. I will open the results and check the original pages.
 
 完了後、**Generated**から**single-atom-fulltext-reading-pack.md**を開きます。 5枚の紙検証表、各所見およびそのロケータ、制限、質問、アジェンダを確認してください。 議題は、60分を合計する必要があります。
 
-![保存された全文パックは、同じ5枚の紙とソースチェックで、](/img/open-science/research-workflows/journal-fulltext-pack.png)
+![保存された全文パックは、同じ5枚の紙とソースチェックで、](/img/open-science/research-workflows/journal-fulltext-pack.webp)
 
 ## 紙の地図を元のPDFから確認 {/* #check-the-paper-map-against-the-original-pdfs */}
 
 **single-atom-fulltext-paper-map.csv**を開き、画面全体で拡大ボタンを使用します。 この実行には**5行・12列**が含まれています。 コレクションで設定したDOIを比較します。 別のセットからのパックは、このワークフローの結果ではありません。 水平方向にスクロールするか、CSVをダウンロードして、長いセルをフルで読みます。
 
-![実際の5列、12列の紙のマップ](/img/open-science/research-workflows/journal-fulltext-paper-map.png)
+![実際の5列、12列の紙のマップ](/img/open-science/research-workflows/journal-fulltext-paper-map.webp)
 
 **Library**に戻り、引用されたPDFを開き、そのページカウンターをクリックし、要求されたページを入力して、**エントリー**を押します。 図や表を、そのキャプションと周囲のテキストとともにチェックします。 たとえば、彼は al. の図 5 は **PDFページ 7** にあります。 生産ラインの説明は、3のページです。 要約の異なる部分を支えます。
 
-![PDFページ7に5がオープンしました。](/img/open-science/research-workflows/journal-he-figure5.png)
+![PDFページ7に5がオープンしました。](/img/open-science/research-workflows/journal-he-figure5.webp)
 
 ロケータや条件が間違っていたら保存されたリビジョンを要求し、修正されたファイルを再び開きます。 チェックパックは、Sun et al の競合を保持します。: ページ 2 と 図 5 のキャプションは、異なるフィード構成を与えます。 どちらの記述もサイレントなものを選ぶのではなく記録します。 これは、解決された実験的な詳細ではなく、有用な会議の質問です。
 

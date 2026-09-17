@@ -35,19 +35,19 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![macOS 初回設定時環境チェック完了](/img/open-science/macos/setup-environment.png)
+![macOS 初回設定時環境チェック完了](/img/open-science/macos/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-![Windows 初回設定時の環境チェック](/img/open-science/windows/setup-environment.png)
+![Windows 初回設定時の環境チェック](/img/open-science/windows/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="linux">
 
-![Linuxの初回設定時に渡る4つの環境チェック](/img/open-science/linux/setup-environment.png)
+![Linuxの初回設定時に渡る4つの環境チェック](/img/open-science/linux/setup-environment.webp)
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![フォルダを選択する前にデータの場所](/img/open-science/walkthrough-2026-09-08/02-data-location.png)
+![フォルダを選択する前にデータの場所](/img/open-science/walkthrough-2026-09-08/02-data-location.webp)
 
 </PlatformContent>
 実行時間をインストールする前に、大きなファイルの場所を選択します。 成果物、ノートブック、環境はデータの場所を使用します。 設定と履歴は、設定場所にあるままです。 表示されたパスは、テキストフィールドではなく、読み取り専用の要約です。
@@ -73,14 +73,14 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![選択されたカスタム親と最終アプリ管理パスが表示されます。](/img/open-science/local-acceptance/data-location-selected.png)
+![選択されたカスタム親と最終アプリ管理パスが表示されます。](/img/open-science/local-acceptance/data-location-selected.webp)
 
 </PlatformContent>
 **Browse…** を選択し、十分なスペースでディスクに空の親フォルダを選択し、ウィザードによって示されている完全な管理されたパスを調べます。 **Continue** を選択し、再起動確認をお読みください。 一時的なフォルダーではなく、安定した研究データ位置を使用してください。
 
 <PlatformContent platform="macos">
 
-![選択したデータの場所の確認を再起動する](/img/open-science/local-acceptance/data-location-confirm.png)
+![選択したデータの場所の確認を再起動する](/img/open-science/local-acceptance/data-location-confirm.webp)
 
 </PlatformContent>
 | 確認制御 | 結果 |
@@ -105,7 +105,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![実際の構成ライトの失敗および回復制御](/img/open-science/local-todo-batch/56-onboarding-config-write-error.png)
+![実際の構成ライトの失敗および回復制御](/img/open-science/local-todo-batch/56-onboarding-config-write-error.webp)
 
 </PlatformContent>
 位置が変更される前に再起動が失敗した場合、設定の書き込みアクセスを復元し、ウィザードを再オープンします。 移動を再試行する前に、アクティブなパスと既存のファイルを確認してください。 [ストレージ](storage.md) を参照してください。
@@ -116,7 +116,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Codexインストールソースメニュー](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.png)
+![Codexインストールソースメニュー](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.webp)
 
 </PlatformContent>
 1. **Codexのインストール** を開きます。
@@ -127,7 +127,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Codexがインストールされ、アクティブなランタイムとして選択](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.png)
+![Codexがインストールされ、アクティブなランタイムとして選択](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.webp)
 
 </PlatformContent>
 バージョンラベルは、選択したモデルではなく、インストールされたエージェントまたはアダプターを識別します。 スクリーンショットの正確なバージョンを期待するのではなく、インストールされた値を調べます。
@@ -136,7 +136,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 互換性のあるエージェントが既にインストールされている場合は、そのカードを選択し、継続する前に**Active**を確認してください。 下のWindowsスクリーンは既存のCodexの取付けを使用します; 再インストールは、ウィザードを通過するだけでは不要です。
 
-![Windows セットアップウィザードでアクティブに選択した既存の Codex エージェント](/img/open-science/windows/setup-agent-active.jpg)
+![Windows セットアップウィザードでアクティブに選択した既存の Codex エージェント](/img/open-science/windows/setup-agent-active.webp)
 
 </PlatformContent>
 
@@ -158,14 +158,14 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![認証前の英語Codexサブスクリプションフォーム](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![認証前の英語Codexサブスクリプションフォーム](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 </PlatformContent>
 API プロバイダーでは、そのタイプを選択し、そのプロバイダーが必要とするエンドポイントとモデルの詳細を入力し、**Test & continue** を使用します。 ウィザードは、テストを送信する前に必要なフィールドを検証します。 成功したテストはウィザードを進行させます。 検証または接続エラーは、修正のために表示されません。
 
 <PlatformContent platform="macos">
 
-![必要なフィールドエラーを示すカスタムゲートウェイ](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![必要なフィールドエラーを示すカスタムゲートウェイ](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 </PlatformContent>
 認証選択、高度なフィールド、接続エラーから回復するための[プロバイダーのセットアップ](providers.md)を参照してください。
@@ -189,7 +189,7 @@ API プロバイダーでは、そのタイプを選択し、そのプロバイ�
 
 Windows **Notebook runtime**のページでは、**Local Shell · WSL2 Bash Preview** を表示することもできます。 フィードバック **Optional — nothing here is required to finish setup.** 選ぶことができます **Finish** しばらくお待ちください Python///////////////////////R セットアップは延期され、 WSL2 利用できません。 コード実行を要求する前に、必要なランタイムを用意します。 wizard のコンパイルは、これらのオプションの環境をインストールしません。
 
-![Windowsは利用できる終わりを用いるNotebookおよびWSL2設定を任意にしました](/img/open-science/windows/setup-optional-runtimes.jpg)
+![Windowsは利用できる終わりを用いるNotebookおよびWSL2設定を任意にしました](/img/open-science/windows/setup-optional-runtimes.webp)
 
 </PlatformContent>
 

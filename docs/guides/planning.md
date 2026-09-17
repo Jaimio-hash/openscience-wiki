@@ -17,9 +17,9 @@ Use **Plan first** to review inputs, method, outputs and acceptance criteria bef
 3. Wait for planning. If a **Plan control** permission card appears, inspect it and allow the intended scope or deny it. This authorizes plan creation/decision recording, not all future execution.
 4. Wait for **Plan ready for review**. Do not treat a normal paragraph saying “here is my plan” as proof that a structured approval card exists.
 
-![Plan first in the send menu](/img/open-science/guides-walkthrough/21-plan-first-entry.png)
+![Plan first in the send menu](/img/open-science/guides-walkthrough/21-plan-first-entry.webp)
 
-![Separate permission to create and record a plan](/img/open-science/guides-walkthrough/22-plan-permission.png)
+![Separate permission to create and record a plan](/img/open-science/guides-walkthrough/22-plan-permission.webp)
 
 The task specified unchanged raw counts, separate ID/length metadata, per-sample QC, three managed outputs and no differential-expression claims. A precise initial request makes the plan easier to judge.
 
@@ -27,7 +27,7 @@ The task specified unchanged raw counts, separate ID/length metadata, per-sample
 
 Select **Open** to view the structured plan beside the conversation. Inspect phases, step order, execution owner, desired outputs and feasibility notes. Use **Enter full screen** to read a long plan and **Download Plan** to retain it. The confidence label is the plan's assessment, not evidence that the code has already run.
 
-![Structured plan with phases and desired outputs](/img/open-science/guides-walkthrough/23-plan-review.png)
+![Structured plan with phases and desired outputs](/img/open-science/guides-walkthrough/23-plan-review.webp)
 
 | Control/state | What to do |
 | --- | --- |
@@ -42,7 +42,7 @@ Select **Open** to view the structured plan beside the conversation. Inspect pha
 
 In **Respond to Plan**, state exactly what must change. For example, request an input-integrity check, reopening every output, and a mapping between shortened plot labels and original identifiers. Select **Send Plan feedback**, wait for the replacement, then check that each requested change is present.
 
-![Feedback entered before submission](/img/open-science/guides-walkthrough/24-plan-feedback.png)
+![Feedback entered before submission](/img/open-science/guides-walkthrough/24-plan-feedback.webp)
 
 Read the replacement and use its **Approve** button. The already open old preview can remain visible with a warning that it was replaced; its displayed steps are not the active plan's latest progress. Reopen the active plan rather than approving an old screenshot.
 

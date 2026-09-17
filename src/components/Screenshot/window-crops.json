@@ -1,5 +1,5 @@
 {
-  "/img/open-science/walkthrough-2026-09-08/02-data-location.png": {
+  "/img/open-science/walkthrough-2026-09-08/02-data-location.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -7,7 +7,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.png": {
+  "/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -15,7 +15,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.png": {
+  "/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -23,7 +23,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png": {
+  "/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -31,7 +31,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png": {
+  "/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -39,7 +39,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.png": {
+  "/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -47,7 +47,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.png": {
+  "/img/open-science/walkthrough-2026-09-08/34-runtimes-before-setup.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -55,7 +55,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.png": {
+  "/img/open-science/walkthrough-2026-09-08/35-runtime-micromamba-error.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -63,7 +63,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.png": {
+  "/img/open-science/walkthrough-2026-09-08/36-runtime-setup-progress.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -71,7 +71,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.png": {
+  "/img/open-science/walkthrough-2026-09-08/37-python-runtime-ready.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -79,7 +79,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.png": {
+  "/img/open-science/walkthrough-2026-09-08/38-python-packages-filter.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -87,7 +87,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.png": {
+  "/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -95,7 +95,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.png": {
+  "/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -103,7 +103,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.png": {
+  "/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -111,7 +111,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/56-package-mirror.png": {
+  "/img/open-science/walkthrough-2026-09-08/56-package-mirror.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -119,7 +119,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/57-permission-modes.png": {
+  "/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -127,7 +127,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/63-remote-off.png": {
+  "/img/open-science/walkthrough-2026-09-08/63-remote-off.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -135,7 +135,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.png": {
+  "/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -143,7 +143,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.png": {
+  "/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -151,7 +151,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.png": {
+  "/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -159,7 +159,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/walkthrough-2026-09-08/67-connector-local-command.png": {
+  "/img/open-science/walkthrough-2026-09-08/67-connector-local-command.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -167,7 +167,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/feature-guides-2026-09/marketplace-browse.png": {
+  "/img/open-science/feature-guides-2026-09/marketplace-browse.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -175,7 +175,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/feature-guides-2026-09/marketplace-detail.png": {
+  "/img/open-science/feature-guides-2026-09/marketplace-detail.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -183,7 +183,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/feature-guides-2026-09/reproducibility-evidence.png": {
+  "/img/open-science/feature-guides-2026-09/reproducibility-evidence.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,
@@ -191,7 +191,7 @@
     "width": 1280,
     "height": 960
   },
-  "/img/open-science/feature-guides-2026-09/research-package-export.png": {
+  "/img/open-science/feature-guides-2026-09/research-package-export.webp": {
     "originalWidth": 1392,
     "originalHeight": 1072,
     "x": 56,

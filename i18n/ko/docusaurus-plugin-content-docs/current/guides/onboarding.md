@@ -35,19 +35,19 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![macOS 첫 번째 설정에서 완료된 환경 체크](/img/open-science/macos/setup-environment.png)
+![macOS 첫 번째 설정에서 완료된 환경 체크](/img/open-science/macos/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-![Windows 처음으로 설정 중 환경 체크](/img/open-science/windows/setup-environment.png)
+![Windows 처음으로 설정 중 환경 체크](/img/open-science/windows/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="linux">
 
-![Linux 처음 설정 중에 통과 한 모든 4 개의 환경 체크](/img/open-science/linux/setup-environment.png)
+![Linux 처음 설정 중에 통과 한 모든 4 개의 환경 체크](/img/open-science/linux/setup-environment.webp)
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![폴더 선택하기 전에 데이터 위치](/img/open-science/walkthrough-2026-09-08/02-data-location.png)
+![폴더 선택하기 전에 데이터 위치](/img/open-science/walkthrough-2026-09-08/02-data-location.webp)
 
 </PlatformContent>
 runtimes를 설치하기 전에 큰 파일에 대한 위치를 선택하십시오. Artifacts, 노트북 및 환경은 자료 위치를 사용합니다; 설정 및 역사는 구성 위치에 남아. 표시된 경로는 텍스트 필드가 아닌 읽기 전용 요약입니다.
@@ -73,14 +73,14 @@ runtimes를 설치하기 전에 큰 파일에 대한 위치를 선택하십시�
 
 <PlatformContent platform="macos">
 
-![사용자 정의 부모 선택 및 최종 앱 관리 경로 표시](/img/open-science/local-acceptance/data-location-selected.png)
+![사용자 정의 부모 선택 및 최종 앱 관리 경로 표시](/img/open-science/local-acceptance/data-location-selected.webp)
 
 </PlatformContent>
 **Browse…** 선택, 충분한 공간과 디스크에 빈 부모 폴더를 선택하고 마법사에 의해 표시된 완전한 관리 방법을 검사합니다. **Continue**을 선택하고 재시작 확인을 읽으십시오. 임시 폴더가 아닌 안정적인 연구 데이터 위치를 사용합니다.
 
 <PlatformContent platform="macos">
 
-![선택한 데이터 위치에 대한 Restart 확인](/img/open-science/local-acceptance/data-location-confirm.png)
+![선택한 데이터 위치에 대한 Restart 확인](/img/open-science/local-acceptance/data-location-confirm.webp)
 
 </PlatformContent>
 | 자주 묻는 질문 | 결과 |
@@ -105,7 +105,7 @@ runtimes를 설치하기 전에 큰 파일에 대한 위치를 선택하십시�
 
 <PlatformContent platform="macos">
 
-![실제 구성 쓰기 실패 및 복구 제어](/img/open-science/local-todo-batch/56-onboarding-config-write-error.png)
+![실제 구성 쓰기 실패 및 복구 제어](/img/open-science/local-todo-batch/56-onboarding-config-write-error.webp)
 
 </PlatformContent>
 다시 시작하면 위치 변경 전에 실패, 설정 쓰기 액세스를 복원하고 마법사를 다시 엽니다. 이동을 재발하기 전에 활성 경로 및 기존 파일을 확인합니다. [저장소](storage.md) 참조.
@@ -116,7 +116,7 @@ runtimes를 설치하기 전에 큰 파일에 대한 위치를 선택하십시�
 
 <PlatformContent platform="macos">
 
-![Codex 설치 소스 메뉴](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.png)
+![Codex 설치 소스 메뉴](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.webp)
 
 </PlatformContent>
 1. **Codex 설치**을 엽니다.
@@ -127,7 +127,7 @@ runtimes를 설치하기 전에 큰 파일에 대한 위치를 선택하십시�
 
 <PlatformContent platform="macos">
 
-![Codex 설치 및 활성 런타임으로 선택](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.png)
+![Codex 설치 및 활성 런타임으로 선택](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.webp)
 
 </PlatformContent>
 버전 상표는 설치된 대리인 또는 접합기, 선정한 모형을 확인합니다. 스크린 샷의 정확한 버전을 기대하는 대신 설치된 값을 검사합니다.
@@ -136,7 +136,7 @@ runtimes를 설치하기 전에 큰 파일에 대한 위치를 선택하십시�
 
 호환 에이전트가 이미 설치되면 카드를 선택하고 **Active**을 계속 확인하십시오. 아래 Windows 화면은 기존 Codex 설치를 사용합니다. 재설치는 마법사를 통해 진행할 필요는 없습니다.
 
-![Windows 설정 마법사에서 Active로 선택한 기존 Codex 에이전트](/img/open-science/windows/setup-agent-active.jpg)
+![Windows 설정 마법사에서 Active로 선택한 기존 Codex 에이전트](/img/open-science/windows/setup-agent-active.webp)
 
 </PlatformContent>
 
@@ -158,14 +158,14 @@ runtimes를 설치하기 전에 큰 파일에 대한 위치를 선택하십시�
 
 <PlatformContent platform="macos">
 
-![인증하기 전에 영어 Codex 구독 양식](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![인증하기 전에 영어 Codex 구독 양식](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 </PlatformContent>
 API 공급자를 위해, 그것의 유형을 선정하고, 그 공급자에 의해 요구된 endpoint와 모형 세부사항을 입력하고, **Test & continue**를 이용합니다. 테스트 보내기 전에 wizard validates 필수 필드. 성공적인 시험은 마법사를 전진합니다; 유효성 또는 연결 오류가 보정을 위해 볼 수 있습니다.
 
 <PlatformContent platform="macos">
 
-![필요한 현장 오류를 보여주는 Custom Gateway](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![필요한 현장 오류를 보여주는 Custom Gateway](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 </PlatformContent>
 [공급자 설정](providers.md) 인증 선택, 고급 필드 및 연결 오류에서 복구를 참조하십시오.
@@ -189,7 +189,7 @@ API 공급자를 위해, 그것의 유형을 선정하고, 그 공급자에 의�
 
 Windows **Notebook runtime** 페이지는 **Local Shell · WSL2 Bash Preview**를 보여줄 수 있습니다. 읽음 **Optional — nothing here is required to finish setup.** 선택할 수 있습니다. **Finish** 의 특징 Python/ / /R 설정은 deferred 및 WSL2 사용할 수 없습니다. 코드 실행을 요청하기 전에 필요한 실행 시간을 준비; 마법사를 완료하면 해당 옵션 환경을 설치하지 않습니다.
 
-![Windows 옵션 Notebook 및 WSL2 설정 완료 가능](/img/open-science/windows/setup-optional-runtimes.jpg)
+![Windows 옵션 Notebook 및 WSL2 설정 완료 가능](/img/open-science/windows/setup-optional-runtimes.webp)
 
 </PlatformContent>
 

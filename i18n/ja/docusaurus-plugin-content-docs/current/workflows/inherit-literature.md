@@ -24,13 +24,13 @@ last_update:
 4. インポート結果の特定 この例では、**0** 再使用、スキップ、または失敗したレコードで **20** レコードを作成しました。
 5. コレクションを開き、レコードを選択し、**Add to project**を使用してプロジェクトにリンクします。
 
-![完了したインポートレポート 20 が参照を作成しました](/img/open-science/research-workflows/perovskite-import-complete.png)
+![完了したインポートレポート 20 が参照を作成しました](/img/open-science/research-workflows/perovskite-import-complete.webp)
 
 エクスポートが重複または不完全な識別子を持っている場合は、最終在庫を受け入れる前にレコードを解決します。 参照をインポートすると、テキストが完全に添付されません。 既に持っているPDF用の参照の**Add PDF**制御を使用して、そのレコードでPDFタイトルとDOIを比較します。 [図書館と引用](../guides/library.md) を参照してください。
 
 コレクションを再オープンし、フッターの**20 リファレンス**カウントをチェックします。 合成を求める前に **アタッチメント** カラムを調べます。 この例では、全文から検索するのではなく、次のステップでは、バイブリンガルの在庫を要求します。
 
-![実際の添付ファイルの状態でインポートされた20-referenceコレクション](/img/open-science/research-workflows/perovskite-collection.png)
+![実際の添付ファイルの状態でインポートされた20-referenceコレクション](/img/open-science/research-workflows/perovskite-collection.webp)
 
 ## 使用可能なハンドオーバーを依頼 {/* #ask-for-a-usable-handover */}
 
@@ -53,11 +53,11 @@ Finish after saving the files; I will open them to check the results.
 
 応答が完了したら、生成ファイルから **perovskite-handover.csv** を開きます。本例の保存済みテーブルは **20行と6列** です。20 件の DOI はすべて取り込んだデータと一致し、DOI と出版年の欠落はありません。全文欄には、PDF が未添付であることが正しく記録されています。
 
-![Open-Scienceで保存された20-row perovskiteハンドオーバー在庫](/img/open-science/research-workflows/perovskite-handover-table.png)
+![Open-Scienceで保存された20-row perovskiteハンドオーバー在庫](/img/open-science/research-workflows/perovskite-handover-table.webp)
 
 **perovskite-handover.md** を開き、次の研究者に読み上げシーケンスが有用であることを確認してください。 それはメカニズム、材料の介入および分析的なアプローチによって最初に、続く広い安定性のペーパーを、提案します。 これらは、実験に関する結論を検証していないコレクションに基づいて提案を読んでいます。
 
-![保存された読書プランは、ソースの可用性と次の操作が見える状態を維持します](/img/open-science/research-workflows/perovskite-reading-plan.png)
+![保存された読書プランは、ソースの可用性と次の操作が見える状態を維持します](/img/open-science/research-workflows/perovskite-reading-plan.webp)
 
 ファイルのプレビューの拡張ボタンを使用して、計画を読み込み、**Download** を CSV と一緒に保持します。 提案された次のアクションが供給された素材から実現可能であることを確認します。 論文が読み込まれている証拠ではないと示唆された読書シーケンス。
 

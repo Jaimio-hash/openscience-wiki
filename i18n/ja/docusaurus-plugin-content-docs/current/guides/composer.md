@@ -78,7 +78,7 @@ original column-name mapping in the CSV/report.
 4. **Remove queued message**は、リマインダーや指示の横に使用し、必要なくありません。
 5. 配達後、保存されたトランスクリプトを最終テキストと順序で確認します。 削除されたリクエストは、配信された指示として表示されません。
 
-![編集と再注文後の残りの2つのリクエスト](/img/open-science/local-todo-batch/14-queue-reordered.png)
+![編集と再注文後の残りの2つのリクエスト](/img/open-science/local-todo-batch/14-queue-reordered.webp)
 
 配信された返信が編集されたコンテンツと注文に従うことを確認してください。 **保存しない** にラベルを付けられた項目は保存されたトランスクリプトに入っていません; 閉じるか、または再起動する前に重要な不要なテキストをコピーします。
 
@@ -88,7 +88,7 @@ original column-name mapping in the CSV/report.
 
 キューされたリクエストがファイルを含む場合、添付チップがエディタを再オープンするたびに存在していることを確認します。 指示を変更し、**Add message to queue**を選択します。 配信後、保存したユーザメッセージに示したファイルを意図した入力と比較します。 正確なファイル ID が重要である場合は、ファイルチェックサムを要求します。
 
-![編集された添付ファイル要求は、そのファイルとチェックサムで配信](/img/open-science/sept11-completion/queue-result.png)
+![編集された添付ファイル要求は、そのファイルとチェックサムで配信](/img/open-science/sept11-completion/queue-result.webp)
 
 ### キュードアタッチメントが利用できなくなった {/* #a-queued-attachment-becomes-unavailable */}
 
@@ -112,7 +112,7 @@ original column-name mapping in the CSV/report.
 
 **コピーテーブル**(Markdown、CSV、TSV)、**テーブルのダウンロード**(CSVまたはMarkdown)、**フルスクリーンを見る**(Markdown)を明らかにする応答テーブルをフーバーまたはフォーカスします。 必要な形式を選択し、宛先を確認し、ファイルを再オープンして行とヘッダを確認します。 これらのアクションは、既存の回答をエクスポートします。 Connector を再実行したり、管理されたアーティファクトバージョンを作成したりしません。
 
-![フルスクリーンビューで返されたメタデータテーブル](/img/open-science/guides-walkthrough/60-response-table.png)
+![フルスクリーンビューで返されたメタデータテーブル](/img/open-science/guides-walkthrough/60-response-table.webp)
 
 長時間の作業には、[バックグラウンドタスク](notebook.md#background-tasks-and-result-delivery) を使用して、特定の実行を開か中止します。 キュードフォローアップは、保留中の指示です。 背景タスクは既に作業を認めています。 タスクリストを閉じると、実行を停止しません。
 

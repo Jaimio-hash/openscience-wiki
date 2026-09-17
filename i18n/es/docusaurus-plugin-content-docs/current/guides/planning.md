@@ -17,9 +17,9 @@ Utilice **Plan first** para revisar los insumos, método, productos y criterios 
 3. Espera a planear. Si aparece una tarjeta de permiso **Plan control**, inspeccione y permita el alcance previsto o niéguela. Esto autoriza la creación de planes y la grabación de la decisión, no toda ejecución futura.
 4. Espera a **Plan ready for review**. No trate un párrafo normal diciendo “aquí está mi plan” como prueba de que existe una tarjeta de aprobación estructurada.
 
-![Planifique primero en el menú de envío](/img/open-science/guides-walkthrough/21-plan-first-entry.png)
+![Planifique primero en el menú de envío](/img/open-science/guides-walkthrough/21-plan-first-entry.webp)
 
-![Autorización separada para crear y registrar un plan](/img/open-science/guides-walkthrough/22-plan-permission.png)
+![Autorización separada para crear y registrar un plan](/img/open-science/guides-walkthrough/22-plan-permission.webp)
 
 La tarea especifica los recuentos sin cambios, los metadatos ID/length separados, el QC por muestreo, tres salidas gestionadas y ninguna reclamación de diferencial-expresión. Una solicitud inicial precisa hace que el plan sea más fácil de juzgar.
 
@@ -27,7 +27,7 @@ La tarea especifica los recuentos sin cambios, los metadatos ID/length separados
 
 Seleccione **Open** para ver el plan estructurado junto a la conversación. Inspeccione fases, orden de paso, propietario de ejecución, salidas deseadas y notas de viabilidad. Utilice **Enter full screen** para leer un plan largo y **Download Plan** para retenerlo. La etiqueta de confianza es la evaluación del plan, no evidencia de que el código ya ha funcionado.
 
-![Plan estructurado con fases y salidas deseadas](/img/open-science/guides-walkthrough/23-plan-review.png)
+![Plan estructurado con fases y salidas deseadas](/img/open-science/guides-walkthrough/23-plan-review.webp)
 
 | Control/estado | Qué hacer |
 | --- | --- |
@@ -42,7 +42,7 @@ Seleccione **Open** para ver el plan estructurado junto a la conversación. Insp
 
 En **Respond to Plan**, indica exactamente qué debe cambiar. Por ejemplo, solicite un control de la integridad de entrada, reabrir cada salida, y un mapeo entre etiquetas de trama acortadas y identificadores originales. Seleccione **Send Plan feedback**, espere el reemplazo, luego compruebe que cada cambio solicitado está presente.
 
-![Feedback entered before submission](/img/open-science/guides-walkthrough/24-plan-feedback.png)
+![Feedback entered before submission](/img/open-science/guides-walkthrough/24-plan-feedback.webp)
 
 Lea el reemplazo y use su botón **Approve**. El anticipo ya abierto puede permanecer visible con una advertencia de que fue reemplazado; sus pasos mostrados no son el último progreso del plan activo. Reabrir el plan activo en lugar de aprobar una vieja captura de pantalla.
 

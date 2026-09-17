@@ -78,7 +78,7 @@ original column-name mapping in the CSV/report.
 4. 对不再需要的提醒或指令，点击旁边的 **Remove queued message**。
 5. 送达后核对已保存对话中的最终文字和顺序。被移除的请求不应作为已发送指令出现。
 
-![编辑和排序后保留的两条请求](/img/open-science/local-todo-batch/14-queue-reordered.png)
+![编辑和排序后保留的两条请求](/img/open-science/local-todo-batch/14-queue-reordered.webp)
 
 检查已送达请求的内容和顺序。标为 **Not saved** 的条目尚未进入已保存对话，关闭或重启前请复制重要的未发送文字。
 
@@ -88,7 +88,7 @@ original column-name mapping in the CSV/report.
 
 排队请求包含文件时，每次重新打开编辑器，都要确认附件标签仍在。修改指令后点击 **Add message to queue**。送达后，核对已保存用户消息中的文件是否为目标输入；需要确认准确文件身份时，可以要求计算文件校验值。
 
-![编辑后的附件请求已送达，并返回文件校验值](/img/open-science/sept11-completion/queue-result.png)
+![编辑后的附件请求已送达，并返回文件校验值](/img/open-science/sept11-completion/queue-result.webp)
 
 ### 队列附件提示不可用
 
@@ -112,7 +112,7 @@ original column-name mapping in the CSV/report.
 
 悬停或聚焦回答表格，显示 **Copy table**（Markdown、CSV、TSV）、**Download table**（CSV、Markdown）与 **View fullscreen**。选择所需格式，确认保存位置并重开文件，检查行与表头。这些操作导出现有回答，不会重新调用 Connector 或创建托管产物版本。
 
-![回答元数据表的全屏视图](/img/open-science/guides-walkthrough/60-response-table.png)
+![回答元数据表的全屏视图](/img/open-science/guides-walkthrough/60-response-table.webp)
 
 长时间运行的工作可通过[后台任务](notebook.md)打开或取消指定运行。队列中的追问是待送达指令，后台任务则是已接收执行的工作。收起任务列表不会停止执行。
 

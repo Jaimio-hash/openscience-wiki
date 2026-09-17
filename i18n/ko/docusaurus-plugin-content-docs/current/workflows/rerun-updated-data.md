@@ -31,11 +31,11 @@ air-report-v1.md. The script must accept one or more CSV paths plus
 input/script hashes. Stop after this baseline. Use English.
 ```
 
-![첫째 주 첨부 파일 및 기본 계산 요청](/img/open-science/workflow-extensions/air-input-v1.png)
+![첫째 주 첨부 파일 및 기본 계산 요청](/img/open-science/workflow-extensions/air-input-v1.webp)
 
 approving 전에 파일 읽기 및 계산을 검토합니다. **Notebook**에서 실행 완료를 확인한 다음 **air-daily-v1.csv**을 엽니다. 기본 값은 **168 시간당 행 및 7 일일 행**, 누락된 PM2.5 값이 포함되어 있습니다.
 
-![저장된 7 일 기준 및 유효한 시간 조사](/img/open-science/workflow-extensions/air-baseline-table.png)
+![저장된 7 일 기준 및 유효한 시간 조사](/img/open-science/workflow-extensions/air-baseline-table.webp)
 
 ## 2. 방법을 변경하지 않고 새로운 관찰을 추가 {/* #2-add-new-observations-without-changing-the-method */}
 
@@ -53,7 +53,7 @@ Reopen the saved results. This is a historical replay, not live data.
 Use English and do not make health or causal claims.
 ```
 
-![기존 분석 대화에 추가된 두 번째 주 파일](/img/open-science/workflow-extensions/air-update-input.png)
+![기존 분석 대화에 추가된 두 번째 주 파일](/img/open-science/workflow-extensions/air-update-input.webp)
 
 에이전트가 기존 스크립트를 실행하고 동일한 누락값과 완전성 규칙을 유지하도록 검증합니다. 데이터와 방법을 모두 변경하면 결과가 바뀌는 이유를 설명하는 것이 어렵습니다.
 
@@ -61,7 +61,7 @@ Use English and do not make health or causal claims.
 
 **air-daily-v2.png** 및 **air-daily-v2.csv**을 엽니다. 결합된 입력은 **중복 또는 누락된 타임스탬프 없음**와 더불어 **336 시간 연속**를, 포함합니다. 1월 11에는 **1개의 누락된 PM2.5 관측**이 있습니다. 테이블에는 **14 일**, 모든 회의가 있습니다. 예의 18-valid-hour 규칙.
 
-![Open-Science에 표시된 확장된 14일 결과](/img/open-science/workflow-extensions/air-update-plot.png)
+![Open-Science에 표시된 확장된 14일 결과](/img/open-science/workflow-extensions/air-update-plot.webp)
 
 1 월 11은 **11.652 μg/m3의**이며 **23 유효한 시간**에서 계산됩니다. 0이면 누락된 관측을 분할하지 마십시오. 완전한 타임스탬프 순서는 모든 측정 값이 현재 있다는 것을 보증하지 않습니다.
 
@@ -69,17 +69,17 @@ Use English and do not make health or causal claims.
 
 **air-update-check.csv**을 엽니다. 모든 **7 공유 매일 행**는 각 산출 분야의 맞은편에 동일합니다; 새로운 날짜는 1 월 8–14입니다. 원래 스크립트의 SHA-256은 이전 변경되지 않고 업데이트 후입니다.
 
-![지정된 기본 날짜와 비교할 수 있는 행별 비교](/img/open-science/workflow-extensions/air-update-check.png)
+![지정된 기본 날짜와 비교할 수 있는 행별 비교](/img/open-science/workflow-extensions/air-update-check.webp)
 
 입력 식별, 누락된 관측 및 유지 v1 파일을 확인하려면 **air-update-notes.md**을 엽니 다. 모든 14의 독립적 인 계산은 매일 의미와 검증 된 계산은 표시된 정밀도로 저장 된 출력을 일치합니다.
 
-![업데이트 노트는 변경되지 않은 코드를 기록, 유지 기본 파일 및 데이터 체크](/img/open-science/workflow-extensions/air-update-notes.png)
+![업데이트 노트는 변경되지 않은 코드를 기록, 유지 기본 파일 및 데이터 체크](/img/open-science/workflow-extensions/air-update-notes.webp)
 
 ## 5. 보고서 날짜를 확인하기 전에 {/* #5-check-the-report-dates-before-handing-it-off */}
 
 이 보고서는 실제 입력 간격을 따릅니다. 첫 번째 스크립트는 2 주 보고서에 첫 번째 주 타이틀을 유지; **air-analysis-reviewed.py**에서 발표 오류가 수정되었습니다. heading 템플릿만 변경됩니다. 검토 된 스크립트는 주 1 및 주에 변경되지 않았으므로 이전 파일을 보존합니다.
 
-![올바른 보고서는 이제 전체 2 주 간격을 명명합니다.](/img/open-science/workflow-extensions/air-reviewed-report.png)
+![올바른 보고서는 이제 전체 2 주 간격을 명명합니다.](/img/open-science/workflow-extensions/air-reviewed-report.webp)
 
 저장된 **air-daily-baseline.csv** 및 **air-daily-updated.csv**는 각 분야에 있는 본래 v1/v2 CSVs 일치합니다. **air-update-verification.md**은 이전의 동일한 검토 된 스크립트 해시를 기록하고 모두 실행 후, 두 개의 보고서 제목을 확인합니다. 이 분리된 라벨은 숫자의 방법으로 변화합니다.
 

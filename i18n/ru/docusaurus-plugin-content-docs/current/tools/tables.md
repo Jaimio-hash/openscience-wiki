@@ -28,7 +28,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 4. Прочитайте отображаемый диапазон перед оценкой размера набора данных. Используйте вычисление полного файла, когда предварительный просмотр ограничен.
 5. Сравните значения выборки с [Общий базовый QC](../reference/example-data.md#sample-qc-baseline).
 
-![Таблица выборки-QC с полными идентификаторами и числовыми столбцами](/img/open-science/capabilities-walkthrough/32-csv-preview.jpg)
+![Таблица выборки-QC с полными идентификаторами и числовыми столбцами](/img/open-science/capabilities-walkthrough/32-csv-preview.webp)
 
 <ToolOperationGroup>
 <summary>Таблица QC: значения столбцов</summary>

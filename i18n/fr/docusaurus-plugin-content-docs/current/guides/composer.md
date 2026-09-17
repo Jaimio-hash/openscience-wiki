@@ -78,7 +78,7 @@ Pour réviser plusieurs messages en file d'attente, modifier la requête prévue
 4. Utilisez **Remove queued message** à côté d'un rappel ou d'une instruction dont vous n'avez plus besoin.
 5. Après la livraison, vérifiez la transcription enregistrée pour le texte final et la commande. Les demandes retirées ne doivent pas apparaître comme instructions livrées.
 
-![Les deux autres demandes après édition et réorganisation](/img/open-science/local-todo-batch/14-queue-reordered.png)
+![Les deux autres demandes après édition et réorganisation](/img/open-science/local-todo-batch/14-queue-reordered.webp)
 
 Vérifiez que les réponses livrées suivent le contenu et l'ordre édités. Les éléments marqués **Non enregistré** n'ont pas entré la transcription enregistrée; copier le texte non envoyé important avant de fermer ou de redémarrer.
 
@@ -88,7 +88,7 @@ Vérifiez que les réponses livrées suivent le contenu et l'ordre édités. Les
 
 Lorsqu'une requête en file d'attente comprend un fichier, confirmez que sa puce est toujours présente à chaque fois que vous rouvrez l'éditeur. Changez les instructions, puis sélectionnez **Add message to queue**. Après la livraison, comparez le fichier affiché dans le message utilisateur sauvegardé avec l'entrée prévue. Demandez une somme de contrôle lorsque l'identité exacte du fichier est importante.
 
-![La demande de pièce jointe éditée livrée avec son dossier et son somme de contrôle](/img/open-science/sept11-completion/queue-result.png)
+![La demande de pièce jointe éditée livrée avec son dossier et son somme de contrôle](/img/open-science/sept11-completion/queue-result.webp)
 
 ### Une pièce jointe en attente devient indisponible {/* #a-queued-attachment-becomes-unavailable */}
 
@@ -112,7 +112,7 @@ Si un message en file d'attente édité s'arrête avec **Le fichier géré ou sa
 
 Déplacez ou concentrez la table de réponse pour révéler **Copier le tableau** (Markdown, CSV ou TSV), **Télécharger le tableau** (CSV ou Markdown) et **Affichage en plein écran**. Choisissez le format requis, confirmez la destination et rouvrez le fichier pour vérifier les lignes et les en-têtes. Ces actions exportent une réponse existante; ils ne réexécutent pas un Connector ou ne créent pas une version d'artefact gérée.
 
-![La table de métadonnées retournée dans sa vue en plein écran](/img/open-science/guides-walkthrough/60-response-table.png)
+![La table de métadonnées retournée dans sa vue en plein écran](/img/open-science/guides-walkthrough/60-response-table.webp)
 
 Pour les travaux à long terme, utilisez [Tâches en arrière-plan](notebook.md#background-tasks-and-result-delivery) pour ouvrir ou annuler la course spécifique. Un suivi en attente est une instruction en attente; un travail de base est déjà admis. La fermeture de la liste des tâches n'arrête pas l'exécution.
 

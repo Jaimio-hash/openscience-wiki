@@ -30,7 +30,7 @@ Before running Python or R, [enable a compatible runtime](runtimes.md). For a co
 
 <PlatformContent platform="macos">
 
-![Python execution and output in Notebook](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![Python execution and output in Notebook](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 
@@ -83,7 +83,7 @@ For a worked check of the interpreter and saved results, open [Python and R runt
 
 <PlatformContent platform="macos">
 
-![Filtering the variable list by name](/img/open-science/guides-walkthrough/47-notebook-variable-filter.png)
+![Filtering the variable list by name](/img/open-science/guides-walkthrough/47-notebook-variable-filter.webp)
 
 </PlatformContent>
 
@@ -107,7 +107,7 @@ Use [Runtimes](runtimes.md#maintain-and-repair-environments) for setup cancellat
 
 <PlatformContent platform="macos">
 
-![R sample-QC output opened in the application](/img/open-science/guides-walkthrough/76-r-qc-table.jpg)
+![R sample-QC output opened in the application](/img/open-science/guides-walkthrough/76-r-qc-table.webp)
 
 </PlatformContent>
 
@@ -119,7 +119,7 @@ Open the saved CSV's **Provenance → Execution Log → Download notebook**. Kee
 
 <PlatformContent platform="macos">
 
-![Captured environment for an R result](/img/open-science/guides-walkthrough/77-r-environment-evidence.jpg)
+![Captured environment for an R result](/img/open-science/guides-walkthrough/77-r-environment-evidence.webp)
 
 </PlatformContent>
 
@@ -138,7 +138,7 @@ Ask for background execution when a supported Python, R, persistent REPL or shel
 
 <PlatformContent platform="macos">
 
-![Background task state and its Open control](/img/open-science/v0.27.0/13-background-task-completed.png)
+![Background task state and its Open control](/img/open-science/v0.27.0/13-background-task-completed.webp)
 
 </PlatformContent>
 
@@ -164,7 +164,7 @@ Open a saved file and select **File actions → Provenance**, or **Open Provenan
 
 <PlatformContent platform="macos">
 
-![Producer code captured for a saved result](/img/open-science/provenance-code.png)
+![Producer code captured for a saved result](/img/open-science/provenance-code.webp)
 
 </PlatformContent>
 
@@ -213,7 +213,7 @@ Choose the export that matches your goal:
 3. Open the saved file and compare it with the displayed code. In PowerShell, run it with the same Python interpreter; use the `&` call operator before a quoted executable path.
 4. Compare the output with the Notebook and saved report. Keep any required input files alongside the code.
 
-<Screenshot src="/img/open-science/windows/captured-code-download.png" alt="Windows captured producer code and its Download control" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.png" linkLabel="Open the complete Windows screenshot" />
+<Screenshot src="/img/open-science/windows/captured-code-download.webp" alt="Windows captured producer code and its Download control" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.webp" linkLabel="Open the complete Windows screenshot" />
 
 This downloads the recorded code. **Generate script** is a separate reconstruction operation. If generation fails, keep its full error; downloading captured code does not mean reconstruction succeeded.
 
@@ -230,7 +230,7 @@ This downloads the recorded code. **Generate script** is a separate reconstructi
 
 <PlatformContent platform="macos">
 
-![Generated script preview and download control](/img/open-science/priority-completion/19-generated-script.png)
+![Generated script preview and download control](/img/open-science/priority-completion/19-generated-script.webp)
 
 </PlatformContent>
 

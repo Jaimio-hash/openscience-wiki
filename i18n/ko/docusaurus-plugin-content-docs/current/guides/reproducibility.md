@@ -48,7 +48,7 @@ last_update:
 
 스크린 샷은 [GSE60450 샘플 QC 테이블](../reference/example-data.md)에서 Notebook에서 생성 된 요약을 보여줍니다. 파일의 **Provenance → Reproducibility** 탭을 열고 캡처 입력 및 실행을 검사합니다. 여기에서 **Not verified yet** 및 **Unavailable**는 정확한 환경 자물쇠가 누락된다는 것을 나타냅니다. **View details**을 사용하여 [환경 준비 단계](#prepare-environment)을 따라 새로운 버전을 만듭니다. 이 화면은 결과 재현에 성공했음을 보여 주는 화면이 아닙니다.
 
-![저장된 QC 요약과 그 Reproducibility 패널은, 붙잡힌 증거 및 unavailable 체크를 보여주었습니다](/img/open-science/feature-guides-2026-09/reproducibility-evidence.png)
+![저장된 QC 요약과 그 Reproducibility 패널은, 붙잡힌 증거 및 unavailable 체크를 보여주었습니다](/img/open-science/feature-guides-2026-09/reproducibility-evidence.webp)
 
 ## 자주 묻는 질문 {/* #run-a-check */}
 

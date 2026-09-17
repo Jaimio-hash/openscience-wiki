@@ -18,7 +18,7 @@ Connector 讓服務工具可供 Agent 使用，Credential 在服務要求時提�
 
 開啟 **Settings → Connectors**，搜尋 **Omics Archives** 並進入詳情。該內建分類包含 GEO、ArrayExpress、MetaboLights、MGnify 和 PRIDE，使用前展開工具說明。
 
-![GEO 後設資料工具及明確的下載邊界](/img/open-science/guides-walkthrough/36-omics-tools.png)
+![GEO 後設資料工具及明確的下載邊界](/img/open-science/guides-walkthrough/36-omics-tools.webp)
 
 `geo_get_series` 返回 GEO 系列後設資料、樣本、平臺及補充檔案 URL。需要計算時，從返回的來源下載資料表，再將其附加到專案。
 
@@ -49,7 +49,7 @@ Connector 讓服務工具可供 Agent 使用，Credential 在服務要求時提�
 3. 根據所需訪問範圍選擇 **Require approval**、**Block** 或 **Always allow**。Require approval 顯示 **Ask when no Session, Project, or Global permission applies.**，即沒有適用的已記憶權限時才詢問。
 4. 啟用 PubMed 並檢查 **Used by**。供 Main 使用時會顯示 **Main only**；關閉後為 **Not in use**。
 
-![PubMed 工具說明與審批控制元件](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.png)
+![PubMed 工具說明與審批控制元件](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.webp)
 
 詳情列出 `search_articles`、`get_article_metadata`、`find_related_articles`、`lookup_article_by_citation`、`convert_article_ids`、`get_full_text_article` 和 `get_copyright_status`。每個工具可設為 **Always allow / Require approval / Block**。Connector 整體的 **Skip approvals** 是另一項設定，啟用前先確認範圍；開啟描述只會檢視工具說明。
 
@@ -68,7 +68,7 @@ Connector 讓服務工具可供 Agent 使用，Credential 在服務要求時提�
 4. 檢查實際結果：本例返回 **GSE60450**、**Mus musculus**、**12 個樣本**，系列標題為 “Transcriptome analysis of luminal and basal cell subpopulations in the lactating versus pregnant mammary gland”。
 5. 保留 GSM 編號及其特徵，不憑名稱相似就推斷與矩陣 MCL1 列名的對應。
 
-![Connector 實際返回的 GEO 樣本特徵](/img/open-science/guides-walkthrough/59-geo-sample-metadata.png)
+![Connector 實際返回的 GEO 樣本特徵](/img/open-science/guides-walkthrough/59-geo-sample-metadata.webp)
 
 返回編號範圍 **GSM1480291–GSM1480302**，包含 luminal/basal 細胞群及 virgin、18.5-day pregnancy、2-day lactation 階段。這些來自後設資料，不是從總計數推斷。十二行回答表格實際下載為 <a href="/docs/examples/gse60450/geo-sample-metadata.csv" download>geo-sample-metadata.csv</a>；它是對話表格匯出，與託管質控產物分開。
 
@@ -104,7 +104,7 @@ Connector 讓服務工具可供 Agent 使用，Credential 在服務要求時提�
 | Fields / Text | 按行編輯，或每行輸入一個 `KEY=`；金鑰值儲存在 Credentials |
 | 命令預覽 | 檢查繫結區域之後顯示的啟動器 |
 
-![本地命令與環境變數憑據繫結](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.png)
+![本地命令與環境變數憑據繫結](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.webp)
 
 選擇啟動器前確認對應可執行檔案、包、容器或服務已安裝。下方示例說明如何匯入並驗證本地 MCP 連線。
 
@@ -124,13 +124,13 @@ Connector 讓服務工具可供 Agent 使用，Credential 在服務要求時提�
 4. **Add header** 增加一行，**Remove header** 移除一行。
 5. **Fields / Text** 切換名稱錄入方式；Text 每行以 `Name:` 填寫一個請求頭名稱，值由 Credentials 單獨管理。
 
-![請求頭名稱與憑據選擇器](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.png)
+![請求頭名稱與憑據選擇器](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.webp)
 
 #### OAuth 繫結 {/* #oauth-绑定 */}
 
 選擇與資源 URL、傳輸方式和註冊配置匹配的 **OAuth credential**。**New credential** 開啟[憑據編輯器](../tools/credentials.md)。當前空配置實際提示 **No OAuth credential matches this Connector's resource URL, transport, and registration.**，底部操作變為 **Add and sign in**。
 
-![OAuth 憑據匹配](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.png)
+![OAuth 憑據匹配](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.webp)
 
 ## 匯入、匯出與連線驗證 {/* #导入导出与连接验证 */}
 
@@ -141,7 +141,7 @@ Connector 讓服務工具可供 Agent 使用，Credential 在服務要求時提�
 3. 點選 **Use configuration** 進入預填表單。匯入尚未完成：仍需核對欄位、選擇本機憑據並勾選 **I trust this connector**。
 4. 點選 **Add connector**，返回列表檢查連線狀態，再實際呼叫一個只讀工具。
 
-![多服務配置的條目選擇與憑據提示](/img/open-science/local-todo-batch/23-mcp-multi-server.png)
+![多服務配置的條目選擇與憑據提示](/img/open-science/local-todo-batch/23-mcp-multi-server.webp)
 
 匯入的服務引用 `QC_EXAMPLE_TOKEN` 等環境變數時，將該名稱繫結到本機儲存的憑據。必需繫結完成後才能 **Add**。新增後檢查 **Connected** 並呼叫所需工具；儲存繫結本身不能驗證遠端認證。
 
@@ -151,13 +151,13 @@ Connector 讓服務工具可供 Agent 使用，Credential 在服務要求時提�
 
 在 Connector 行的 **Actions → Export** 中選擇 **Open Science Connector** 或 **MCP client config**，檢查預覽後點選 **Save configuration**。
 
-![匯出只保留憑據名稱，並提示本機路徑](/img/open-science/local-todo-batch/24-mcp-export-binding.png)
+![匯出只保留憑據名稱，並提示本機路徑](/img/open-science/local-todo-batch/24-mcp-export-binding.webp)
 
 實際匯出的配置包含 `required_secrets.environment` 中的變數名，沒有演示憑據值，也不包含本地信任與權限。重新匯入仍需選擇憑據並確認信任。
 
 如果相同 ID 已存在，預覽顯示 **A custom Connector with ID … is already installed**，**Use configuration** 不可用。要修改現有連線，返回 **Edit**；不要把匯入當作覆蓋更新。
 
-![重複 ID 阻止重新新增](/img/open-science/local-todo-batch/26-mcp-reimport-collision.png)
+![重複 ID 阻止重新新增](/img/open-science/local-todo-batch/26-mcp-reimport-collision.webp)
 
 恢復匯出的連線時，檢查預填欄位並重新繫結所需命名憑據。完成信任確認，再用小型呼叫核對。匯入不會覆蓋相同 ID 的現有 Connector。
 

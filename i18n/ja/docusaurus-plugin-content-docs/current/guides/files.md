@@ -38,7 +38,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 既存のフォルダーについては、**Files** を開き、**Artifacts** ドロップダウンを選択し、**This computer → Add folder…** を選択します。 アプリの**Grant folder access**ダイアログで、特定のサブフォルダと**Read-only**を選択し、**Grant this folder**を選択します。 ユーザプロファイルのルートは利用できません。 代わりに研究サブフォルダを選択します。 Notebook-kernelの影響の確認を読んで下さい。 ファイルに戻り、選択したフォルダとそのファイルを確認します。
 
-<Screenshot src="/img/open-science/windows/granted-folder-files.png" alt="公開スクリプトとCSVを提示するWindowsフォルダを付与" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.png" linkLabel="完全なWindowsスクリーンショットを開く" />
+<Screenshot src="/img/open-science/windows/granted-folder-files.webp" alt="公開スクリプトとCSVを提示するWindowsフォルダを付与" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.webp" linkLabel="完全なWindowsスクリーンショットを開く" />
 
 Windows **Attach files** ダイアログでは、中国語の文字やスペースを含むパスからファイルを選択し、**File name** フィールドにフルパスを入力し、開きます。 アプリに戻り、添付ファイル名を確認し、テーブルの寸法と内容をプレビューします。 選択を放棄するには、**Cancel**を選択し、新しい添付ファイルが下書きに追加されていないことを確認してください。
 
@@ -55,7 +55,7 @@ Windows **Attach files** ダイアログでは、中国語の文字やスペー�
 
 <PlatformContent platform="macos">
 
-![実際の RNA-seq 結果をファイルライブラリでフィルタリング](/img/open-science/guides-walkthrough/56-files-search.png)
+![実際の RNA-seq 結果をファイルライブラリでフィルタリング](/img/open-science/guides-walkthrough/56-files-search.webp)
 
 </PlatformContent>
 カウントは現在のフィルターを記述します。 マッチなしの検索はファイルを削除します。 **No more**は、グループがロードを終わらせていることを意味します。 見出しでグループを崩壊させます。 ファイルボディのプレビューアクションをモーダル、**セッションの横にある分割ビューで...** で使用して、横に会話を保持します。 その表面で選択したファイル/バージョン上の機能をダウンロードします。
@@ -85,7 +85,7 @@ Windows **Attach files** ダイアログでは、中国語の文字やスペー�
 
 <PlatformContent platform="macos">
 
-![オリジナルのバージョンと比較してv2をレポートする](/img/open-science/guides-walkthrough/55-report-version-diff.png)
+![オリジナルのバージョンと比較してv2をレポートする](/img/open-science/guides-walkthrough/55-report-version-diff.webp)
 
 </PlatformContent>
 | 制御/状態の編集 | 何をすべきか |
@@ -111,7 +111,7 @@ Windows **Attach files** ダイアログでは、中国語の文字やスペー�
 
 <PlatformContent platform="macos">
 
-![別のバージョンが存在するためブロックされた保存](/img/open-science/local-todo-batch/37-file-save-conflict.png)
+![別のバージョンが存在するためブロックされた保存](/img/open-science/local-todo-batch/37-file-save-conflict.webp)
 
 </PlatformContent>
 保存後、最新のリビジョンには、他のライターの変更と保持ドラフトの両方が含まれていることを確認してください。 以前のファイルリビジョンは、バージョンコントロールを介して使用可能に残ります。 これらは、会話メッセージのリビジョンとは別です。

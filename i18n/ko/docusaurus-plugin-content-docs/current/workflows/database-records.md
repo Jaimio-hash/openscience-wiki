@@ -32,7 +32,7 @@ CnH2nO2, neutral charge and linear structures. Reopen the files.
 Keep all outputs in English and do not delegate.
 ```
 
-![합성 범위 및 실제 대화에서 요청된 파일](/img/open-science/workflow-extensions/pubchem-input.png)
+![합성 범위 및 실제 대화에서 요청된 파일](/img/open-science/workflow-extensions/pubchem-input.webp)
 
 ## 2. 실제 데이터베이스 호출 확인 {/* #2-check-the-actual-database-calls */}
 
@@ -40,7 +40,7 @@ Keep all outputs in English and do not delegate.
 
 예를 들어 정확한 산 이름과 첫 번째 반환 CID를 사용, 다음 배치 속성을 확인. 이것은 이 unambiguous 이름을 위해 적당합니다; 첫 번째 히트를 복용하는 것은 일반적인 식별 규칙이 아닙니다.
 
-![실제 쿼리 활동 및 Notebook에서 저장 파일 readback](/img/open-science/workflow-extensions/pubchem-lookup.png)
+![실제 쿼리 활동 및 Notebook에서 저장 파일 readback](/img/open-science/workflow-extensions/pubchem-lookup.webp)
 
 ## 3. 저장된 테이블을 엽니다 {/* #3-open-the-saved-table */}
 
@@ -56,7 +56,7 @@ Keep all outputs in English and do not delegate.
 | Heptanoic 산 | 8094 | 모델 번호: C7H14O2 | 130.18 |
 | Octanoic 산 | 379 | 모델 번호: C8H16O2 | 144.21 |
 
-![재개된 7 압축 CSV](/img/open-science/workflow-extensions/pubchem-table.png)
+![재개된 7 압축 CSV](/img/open-science/workflow-extensions/pubchem-table.webp)
 
 **₢ 킹**의 일치 행은, 그들의 전시 순서 아닙니다. 공식 및 선형 SMILES를 함께 확인하십시오. 예를 들어 반환 필드 이름, `SMILES` 및 `ConnectivitySMILES` 모두 유지; 그들의 문자열은 이러한 화합물에 대 한 일치 하는 것. 다른 식별자 또는 infer 실험적인 입체 음향으로 이름을 바꾸지 마십시오.
 
@@ -64,7 +64,7 @@ Keep all outputs in English and do not delegate.
 
 **pubchem-homologs-source.json**을 열고 8개의 가동, 정확한 조회 입력 및 익지않는 응답을 검열하십시오. 절차 및 검사에 대한 **pubchem-homologs-notes.md**을 엽니 다. 저장 된 CSV은 원본 레코드와 비교되었습니다. 7개의 identities, 공식 및 선형 구조는 동의했습니다.
 
-![저장된 절차, 검증 결과 및 해석 제한](/img/open-science/workflow-extensions/pubchem-notes.png)
+![저장된 절차, 검증 결과 및 해석 제한](/img/open-science/workflow-extensions/pubchem-notes.webp)
 
 미리보기의 **Download** 버튼을 사용하여 로컬 복사를 유지하십시오. 이 완료된 실행을 위해, <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs.csv">CSV</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-source.json">소스 기록</ExampleDownload> 및 <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-notes.md">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</ExampleDownload>를 다운로드하십시오. PubChem 레코드는 변경할 수 있습니다; 소스 스냅샷을 분석합니다.
 

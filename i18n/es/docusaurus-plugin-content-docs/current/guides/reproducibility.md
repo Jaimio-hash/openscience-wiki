@@ -48,7 +48,7 @@ Si la nueva versión todavía muestra **Unavailable**, retén **View details**, 
 
 La captura de pantalla muestra un resumen generado en Notebook desde el [GSE60450 muestra tabla QC](../reference/example-data.md). Abra la pestaña **Provenance → Reproducibility** del archivo para inspeccionar sus entradas capturadas y ejecutar. Aquí, **Not verified yet** y **Unavailable** indican que falta una cerradura de entorno exacta. Utilice **View details**, luego siga el [adopción de medidas para la preparación del medio ambiente](#prepare-environment) para crear una nueva versión. Esta pantalla no muestra una reproducción satisfactoria de los resultados.
 
-![El resumen QC guardado y su panel de Reproducibilidad, mostrando evidencia capturada y un cheque no disponible](/img/open-science/feature-guides-2026-09/reproducibility-evidence.png)
+![El resumen QC guardado y su panel de Reproducibilidad, mostrando evidencia capturada y un cheque no disponible](/img/open-science/feature-guides-2026-09/reproducibility-evidence.webp)
 
 ## Ejecute un cheque {/* #run-a-check */}
 

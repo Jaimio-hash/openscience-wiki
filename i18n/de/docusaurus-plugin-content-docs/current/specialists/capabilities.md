@@ -18,7 +18,7 @@ Die Fähigkeitsliste eines Specialist bestimmt, welche Skills und Konnektoren es
 4. Wählen Sie in **Connectors** **Fügen Sie einen Connector hinzu** und **Omics-Archive** aus. **Steckverbinder 1** bestätigen.
 5. Öffnen Sie die Details einer Fähigkeit, um zu überprüfen, ob Sie die beabsichtigte Ressource ausgewählt haben. Speichern und öffnen Sie die Rolle, um die Beharrlichkeit zu bestätigen.
 
-![Der Specialist mit einer expliziten Fähigkeitsauswahl](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.jpg)
+![Der Specialist mit einer expliziten Fähigkeitsauswahl](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.webp)
 
 | Kontrolle | Wirkung |
 | --- | --- |

@@ -24,7 +24,7 @@ last_update:
 
 첨부된 CSV을 클릭하여 미리보기를 엽니다. 그것은 물자, 온도, 전도도, SD 및 근원 장/광도를 포함하여 **26 행 · 6 열**를, 보여줄 것입니다. 소스 노트를 열기; 캡처 된 실행은 `conductivity-source.md`로 제공되는 노트에 대한 파일 이름 `README.md`을 사용했습니다.
 
-![값, 단위 및 소스 행이있는 부착 된 전도성 테이블](/img/open-science/research-workflows/conductivity-input.png)
+![값, 단위 및 소스 행이있는 부착 된 전도성 테이블](/img/open-science/research-workflows/conductivity-input.webp)
 
 ## 그림과 뒤에 자료에 대한 질문 {/* #ask-for-the-figure-and-the-data-behind-it */}
 
@@ -45,19 +45,19 @@ Keep all labels and notes in English. Execute the code and save files.
 
 대화에서 **Notebook**을 선택하십시오. 완료된 Python 세포를 열고 그것의 산출을 검열하십시오: 26 총 줄, 각 물자를 위한 13 줄, 275–390 K 범위 및 도형된 숫자. 입력 해상도가 실패하면 에이전트가 사용해야합니다. CSV 이 대화에 첨부된 다음 계속하기 전에 성공적인 실행을 확인합니다.
 
-![실제 Notebook 실행은 입력 체크를보고 플로우를 렌더링](/img/open-science/research-workflows/conductivity-notebook.png)
+![실제 Notebook 실행은 입력 체크를보고 플로우를 렌더링](/img/open-science/research-workflows/conductivity-notebook.webp)
 
 ## 그림과 수출을 확인 {/* #check-the-figure-and-export */}
 
 생성 된 PNG를 엽니 다. 두 재료가 구별 될 수 있음을 확인, 엔드 포인트가 눈에 보이는, 축 상태 단위 및 불확실주의는 **SD를 보고하십시오** 말한다. 라인은 측정만 연결한다; 300 K가 눈에 띄는 후에 AZO 전도도에 있는 복각.
 
-![전도성 도형의 실제 Open-Science 미리보기 및 SD 오류 표시](/img/open-science/research-workflows/conductivity-figure.png)
+![전도성 도형의 실제 Open-Science 미리보기 및 SD 오류 표시](/img/open-science/research-workflows/conductivity-figure.webp)
 
 **plotted-conductivity.csv**을 열고 입력으로 비교하십시오. 이 모든 **26 행**은 온도, 전도성 값, SD 및 소스 시트 / 로우 식별을 보존했습니다. 소스 DOI 및 uncertainty 정의를 확인하려면 **conductivity-methods.md**을 엽니 다.
 
 **Generated** 영역은 4개의 파일을 포함해야 합니다. 메소드 파일을 열고 각 미리보기의 다운로드 아이콘을 사용하여 확인된 버전을 저장할 수 있습니다. 1개의 산출이 누락되면, 특정한 파일 및 그것을 다시 열거하십시오; 성공적인 PNG는 SVG 또는 데이터 테이블이 저장되지 않습니다.
 
-![4개의 저장된 산출 및 재개된 방법 주](/img/open-science/research-workflows/conductivity-methods.png)
+![4개의 저장된 산출 및 재개된 방법 주](/img/open-science/research-workflows/conductivity-methods.webp)
 
 빠른 공유 및 SVG에 대한 PNG를 사용하여 벡터 아트웍이 유용하다. 이 실행의 <a href="/docs/examples/research-workflows/conductivity-temperature.png" download>PNG 이미지</a>, <a href="/docs/examples/research-workflows/conductivity-temperature.svg" download>SVG 소개</a>, <a href="/docs/examples/research-workflows/plotted-conductivity.csv" download>관련 자료</a> 및 <a href="/docs/examples/research-workflows/conductivity-methods.md" download>이란?</a>는 비교를 위해 유효합니다.
 

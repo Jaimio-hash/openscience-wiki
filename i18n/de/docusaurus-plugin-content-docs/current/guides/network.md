@@ -33,7 +33,7 @@ Wenn Network **Ready** meldet, aber ein Tool ausfällt, erweitern Sie den Fehler
 5. Überprüfen Sie den neuen Entwurf der Zeile. Verwenden Sie **&#91;Hostname&#93; entfernen**, um es rückgängig zu machen.
 6. Wählen Sie **Save changes**, um die beabsichtigte Liste fortzusetzen.
 
-![Exact-Hostname-Validierung lehnt eine Wildcard ab](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.png)
+![Exact-Hostname-Validierung lehnt eine Wildcard ab](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.webp)
 
 Geben Sie einen Hostnamen wie `data.example.org` ein, ohne Schema, Pfad, Port, Platzhalter oder IP-Adresse. Entfernen Sie für **Enter a hostname only, without a scheme, path, port, or wildcard.** diese Teile und speichern Sie den Hostnamen.
 
@@ -89,7 +89,7 @@ Wählen Sie **Configure** oder **Edit** unter Paketspiegel.
 | **Save** | Speichern der Konfiguration für nachfolgende Paketoperationen |
 | **Cancel** | Verwerfen Sie den Entwurf |
 
-![Eingänge für Paketspiegel und CA-Bundle](/img/open-science/walkthrough-2026-09-08/56-package-mirror.png)
+![Eingänge für Paketspiegel und CA-Bundle](/img/open-science/walkthrough-2026-09-08/56-package-mirror.webp)
 
 Ein Paketspiegel ändert die Paketquelle. Bestätigen Sie das erforderliche Root/Index-Format des Spiegels, speichern und wiederholen Sie eine kleine Paketoperation in der ausgewählten Laufzeit. Die Proxy-Einstellungen von Model-Provider sind getrennt.
 

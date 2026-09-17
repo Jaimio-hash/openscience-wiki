@@ -24,7 +24,7 @@ Utilice **Agent controls** para elegir cómo la conversación actual solicita ap
 
 Abra **Agent controls** junto al compositor y lea el modo seleccionado. Revise cualquier mensaje de compatibilidad que muestre cómo el marco lo implementa. El control de acceso completo tiene su propia confirmación. **Auto-review** es un control diferente para revisar los resultados y no significa ediciones de auto-aprobación.
 
-![El selector de permisos en inglés real](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![El selector de permisos en inglés real](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 Revise el modo efectivo mostrado para su agente; El comportamiento de aprobación soportado puede diferir por marco. No todos los modos se han ejercido en los cuatro marcos.
 
@@ -34,7 +34,7 @@ Revise el modo efectivo mostrado para su agente; El comportamiento de aprobació
 
 Lea la operación, el entorno seleccionado y el código propuesto antes de aprobar. Para una comprobación de datos, confirme que lee la entrada prevista y escribe sólo los productos solicitados. La instalación de una dependencia desaparecida es una operación separada con un propósito y efecto diferentes.
 
-![Python aprobación de la ejecución del caso GSE60450 público](/img/open-science/guides-walkthrough/25-python-permission.png)
+![Python aprobación de la ejecución del caso GSE60450 público](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | Control o información | Qué inspeccionar o hacer |
 | --- | --- |
@@ -87,7 +87,7 @@ Inspeccione el Connector/tool, **Global / Project / Session** y el calificador *
 
 La revocación afecta a la futura autorización. No revierte las ediciones completadas ni las solicitudes de red, y una subvención más amplia todavía puede autorizar la operación.
 
-![Una nueva solicitud de ejecución después de la revocación del grupo de sesión](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![Una nueva solicitud de ejecución después de la revocación del grupo de sesión](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 Si el inventario es incompleto, espere a que cargue o vuelva a enviar la solicitud fallida antes de utilizar la revocación del grupo. Revise el alcance seleccionado después de revocar.
 

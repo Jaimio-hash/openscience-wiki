@@ -20,7 +20,7 @@ Der Remote-Browserzugriff ermöglicht es einem anderen Gerät, den laufenden Arb
 | App-Zugriff | Verbinden Sie sich über die angemeldete mobile App und führen Sie eine zweistufige Verifizierung durch. |
 | Browserzugriff | Verwenden Sie einen persistenten HTTPS-Browserlink und führen Sie eine zweistufige Verifizierung durch. |
 
-![Fernzugriff im Aus-Zustand überprüft](/img/open-science/walkthrough-2026-09-08/63-remote-off.png)
+![Fernzugriff im Aus-Zustand überprüft](/img/open-science/walkthrough-2026-09-08/63-remote-off.webp)
 
 Access-Mode-Einstellungen können vom Desktop-Fenster auf dem Heimcomputer geändert werden. Ein angeschlossener Browser kann die Paarung / das Vertrauen verwalten, wenn er autorisiert ist, aber er ist kein Ersatz für diese reine Desktop-Modussteuerung.
 

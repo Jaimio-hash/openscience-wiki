@@ -45,7 +45,7 @@ Do not perform differential-expression testing or delegate.
 
 傳送前點選附件檢查表頭：兩個後設資料列，後接十二個樣本列。大檔案預覽只載入部分內容，完整矩陣必須由 Notebook 讀取。本次直接傳送計算請求；如果需要先確定計劃，可另用[規劃任務](../guides/planning.md)流程。
 
-![實際附加的矩陣及其列定義](/img/open-science/research-workflows/rnaseq-qc-input.png)
+![實際附加的矩陣及其列定義](/img/open-science/research-workflows/rnaseq-qc-input.webp)
 
 ## 2. 後設資料不參與樣本計算 {/* #2-元数据不参与样本计算 */}
 
@@ -61,7 +61,7 @@ Do not perform differential-expression testing or delegate.
 
 如果輸入 Version ID 無法解析，要求 Agent 使用本會話附件掛載的輸入重試。本次透過這一方式繼續計算。失敗的嘗試不能記為完成，也不能悄悄替換成另一個檔案。
 
-![成功的 Notebook 輸出包含維度、校驗值和實際計算的樣本指標](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.png)
+![成功的 Notebook 輸出包含維度、校驗值和實際計算的樣本指標](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.webp)
 
 本次重跑檢查了 **27,179 個基因行、12 個樣本列**，沒有行寬異常、重複 ID、缺失值或無效計數。三個結果均出現在 **Generated** 中，應逐一開啟；只存在於工作目錄、尚未儲存為產物的檔案還不算交付結果。
 
@@ -71,7 +71,7 @@ Do not perform differential-expression testing or delegate.
 
 按完整樣本標識與[基準表](../reference/example-data.md#样本-qc-基准)逐行比較全部指標。
 
-![重新開啟本次重跑的十二行樣本表](/img/open-science/research-workflows/rnaseq-qc-rerun-table.png)
+![重新開啟本次重跑的十二行樣本表](/img/open-science/research-workflows/rnaseq-qc-rerun-table.webp)
 
 對於本例輸入，每行零計數基因數加檢出基因數應等於 **27,179**。將 **48** 項樣本指標與獨立基準對照。一致性檢查針對該輸入的這些計算；下游分析假設仍需另行評估。
 
@@ -79,7 +79,7 @@ Do not perform differential-expression testing or delegate.
 
 開啟並放大 `rnaseq-library-sizes.png`，核對十二標籤、原始計數軸與未歸一化說明。矩陣總計數範圍為 **20,015,386–24,723,827**。
 
-![同一次重跑儲存的原始計數總量圖](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.png)
+![同一次重跑儲存的原始計數總量圖](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.webp)
 
 總計數較大不能證明某基因差異表達。繼續下游分析前，從 GEO 核對樣本特徵，明確 GSM 與矩陣列名對映、研究設計、對比、歸一化及過濾規則。後設資料獲取見[聯結器](../guides/connectors.md)。
 

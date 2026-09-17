@@ -18,7 +18,7 @@ En la gestión de lotes, revise el recuento seleccionado en el área de acción 
 
 Abrir **Settings → Connectors**, buscar **Archivos de Omics**, y abrir su detalle. Esta familia incorporada incluye herramientas GEO, ArrayExpress, MetaboLights, MGnify y PRIDE. Ampliar una fila de herramientas antes de elegirla.
 
-![Herramienta de metadatos GEO y su límite de descarga explícita](/img/open-science/guides-walkthrough/36-omics-tools.png)
+![Herramienta de metadatos GEO y su límite de descarga explícita](/img/open-science/guides-walkthrough/36-omics-tools.webp)
 
 `geo_get_series` devuelve metadatos de la serie GEO, muestras, plataformas y URLs de archivo complementario. Descargue la tabla de datos requerida de la fuente devuelta y adjuntela a su proyecto antes de solicitar un cálculo.
 
@@ -50,7 +50,7 @@ Abrir **Settings → Connectors → Manage**, filtrar la lista y seleccionar los
 3. Elija **Require approval**, **Block** o **Always allow** para el acceso que desee permitir. Exhibición de la aprobación **Ask when no Session, Project, or Global permission applies.**
 4. Activar PubMed e inspeccionar **Used by**. Disponibilidad para Main se muestra como **Main only**; disponibilidad de discapacitados muestra **Not in use**.
 
-![Controles de descripción y aprobación de herramientas PubMed](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.png)
+![Controles de descripción y aprobación de herramientas PubMed](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.webp)
 
 Los detalles enumeran `search_articles`, `get_article_metadata`, `find_related_articles`, `lookup_article_by_citation`, `convert_article_ids`, `get_full_text_article` y `get_copyright_status`. Elija **Always allow**, **Require approval** o **Block** por herramienta. Revise el interruptor Connector de toda **Skip approvals** separado antes de habilitarlo. Abrir una descripción solo muestra las instrucciones de la herramienta.
 
@@ -69,7 +69,7 @@ El directorio colocó PubMed bajo **Directory**, mientras que su detalle muestra
 4. Revise el resultado real. Para esta adhesión, compruebe el **GSE60450** devuelto, **Mus musculus**, **Muestras 12**, y el título “Análisis de transcriptomo de las subpoblaciones de células luminales y basales en la glándula mamaria lactante versus embarazada”.
 5. Mantenga los identificadores GSM devueltos con sus características. No inferir un mapeo a los nombres de columnas MCL1 de la matriz sólo de parecido.
 
-![Características reales de la muestra GEO retornadas a través de Connector](/img/open-science/guides-walkthrough/59-geo-sample-metadata.png)
+![Características reales de la muestra GEO retornadas a través de Connector](/img/open-science/guides-walkthrough/59-geo-sample-metadata.webp)
 
 El rango de muestra devuelto fue **GSM1480291–GSM1480302**, cubriendo las poblaciones luminal/basal y virgen, el embarazo 18.5-día y las etapas de lactancia 2. Estos son metadatos devueltos, no etiquetas inferidas de los totales del recuento. La tabla completa de respuesta de doce brazos fue descargada como <a href="/docs/examples/gse60450/geo-sample-metadata.csv" download>geo-sample-metadata.csv</a>. Esta es una exportación de mesa de conversación, separada de los artefactos QC gestionados.
 
@@ -105,7 +105,7 @@ Si el archivo de instrucción Connector no se puede leer, mantenga su error EPER
 | Campos / Texto | Introduzca nombres como filas estructuradas o uno `KEY=` por línea; los valores secretos viven en Credenciales. |
 | Previsualización del comando | Inspeccione el lanzador mostrado después de los enlaces. |
 
-![Editor local de comandos y variables de entorno con límites credencial](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.png)
+![Editor local de comandos y variables de entorno con límites credencial](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.webp)
 
 Una entrada de lanzadores por sí sola no prueba que su ejecutable o servicio está operativo. Utilice la invocación a continuación para comprobar el comando local importado.
 
@@ -125,13 +125,13 @@ El editor actual se une a las credenciales nombradas; no es un área de texto de
 4. Utilice **Add header** para otra fila o **Remove header** para descartar una fila.
 5. **Campos / Texto** cambia cómo se introducen los nombres. El modo de texto espera un nombre de encabezado por línea como `Name:`; Los valores credenciales se gestionan por separado.
 
-![Nombre del encabezado estático y selector credencial](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.png)
+![Nombre del encabezado estático y selector credencial](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.webp)
 
 #### OAuth binding {/* #oauth-binding */}
 
 Elija un **OAuth credential** que coincida con la URL del recurso, el transporte y el registro. **New credential** abre el [credencial editor](../tools/credentials.md#new-credential). En este perfil vacío, el formulario reportó **No OAuth credential matches this Connector's resource URL, transport, and registration.** La acción final cambia a **Add and sign in**.
 
-![OAuth credential matching](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.png)
+![OAuth credential matching](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.webp)
 
 ## Pruebas de importación, exportación y conexión {/* #import-export-and-connection-tests */}
 
@@ -142,7 +142,7 @@ Elija **Add connector → Import configuration** y seleccione un archivo JSON ha
 3. Elija **Use configuration** para abrir el editor prellenado. Revise todos los campos, ata las credenciales locales requeridas y seleccione **I trust this connector**.
 4. Elija **Add connector**, inspeccionar el estado de conexión en la lista, y luego invocar una pequeña herramienta de sólo lectura.
 
-![Seleccionar un servidor y revisar las credenciales requeridas](/img/open-science/local-todo-batch/23-mcp-multi-server.png)
+![Seleccionar un servidor y revisar las credenciales requeridas](/img/open-science/local-todo-batch/23-mcp-multi-server.webp)
 
 Cuando un servidor importado hace referencia a una variable de entorno como `QC_EXAMPLE_TOKEN`, une ese nombre a una credencial almacenada en este dispositivo. **Add** permanece indisponible hasta que se completen los enlaces necesarios. Después de añadir, compruebe **Connected** y ejecute la herramienta prevista; una unión guardada por sí sola no valida la autenticación remota.
 
@@ -152,13 +152,13 @@ Llame a `get_dataset_summary`, luego pasar una devolvió el ID de muestra comple
 
 Elija el **Actions → Export** de la fila, seleccione **Open Science Connector** o **MCP client config**, inspeccione la vista previa, y elija **Save configuration**.
 
-![Exportar nombres credenciales y reportar caminos locales](/img/open-science/local-todo-batch/24-mcp-export-binding.png)
+![Exportar nombres credenciales y reportar caminos locales](/img/open-science/local-todo-batch/24-mcp-export-binding.webp)
 
 El archivo exportado real retuvo el nombre variable en `required_secrets.environment`. No contenía ningún valor credencial de demostración, confianza local o permisos. Reimport requiere una selección y confianza de nuevo.
 
 Cuando la misma identificación ya existe, la vista previa informa **Un Connector personalizado con ID ... ya está instalado**, y **Use configuration** no está disponible. Utilice **Edit** para cambiar una conexión existente; la importación no es una operación de sobreescritura.
 
-![Un ID existente bloquea la importación duplicada](/img/open-science/local-todo-batch/26-mcp-reimport-collision.png)
+![Un ID existente bloquea la importación duplicada](/img/open-science/local-todo-batch/26-mcp-reimport-collision.webp)
 
 Al restaurar una conexión exportada, inspeccione los campos prellenados y adhiera las credenciales requeridas. Completa confianza y prueba una llamada atada antes de utilizarla en investigación. La importación no sobreescribirá un Connector existente con el mismo ID.
 

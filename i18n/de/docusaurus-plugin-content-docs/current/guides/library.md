@@ -27,7 +27,7 @@ Um eine Abbildung oder Tabelle aus einem angehängten PDF wiederzuverwenden, fol
 | Projekt | Referenzen im Zusammenhang mit diesem Projekt | Halten Sie die Bibliographie für eine Forschungsfrage relevant |
 | Sammlung | Eine thematische Gruppe, einschließlich verschachtelter Sammlungen | Wiederverwenden eines Lesesatzes über Projekte hinweg |
 
-![Drei akzeptierte Papiere in der echten PRISMA-Sammlung](/img/open-science/guides-walkthrough/51-library-collection.png)
+![Drei akzeptierte Papiere in der echten PRISMA-Sammlung](/img/open-science/guides-walkthrough/51-library-collection.webp)
 
 ## Hinzufügen oder Importieren eines Datensatzes {/* #add-or-import-a-record */}
 
@@ -60,11 +60,11 @@ Wählen Sie **Add** und wählen Sie die Quelle. Auswählen eines PDF öffnet sei
 
 Der Ansatz kann **Pending**, **Reading…**, **Ready**, **Importing…**, **Completed**, **Failed** oder **Skipped** zeigen. Auswahl, Metadatenbereitschaft und Importabschluss sind getrennte Zustände. Wenn die App **PDF upload cancelled. The reference was kept.** meldet, überprüfen Sie, ob die Anhänge des Datensatzes beibehalten wurden; Durch das Abbrechen des Uploads wurde der Bibliographie-Eintrag nicht entfernt.
 
-![Zwei echte PRISMA PDFs bereit zum Import](/img/open-science/v0.27.0/02-pdf-batch-ready.png)
+![Zwei echte PRISMA PDFs bereit zum Import](/img/open-science/v0.27.0/02-pdf-batch-ready.webp)
 
 Mit **Reuse existing reference** kann ein PDF, dessen extrahierter Titel oder DOI nicht übereinstimmt, immer noch einen separaten Datensatz erstellen. Öffnen Sie nach dem Import jedes Papier und bestätigen Sie seinen Titel und DOI. Korrektur von Fehlanpassungen vor [Zusammenführung von Duplikaten](#resolve-duplicates-and-recover-references). **Completed** bestätigt Import, nicht genaue Identifizierung.
 
-![Abgeschlossene Chargen- und Datenergebnisse](/img/open-science/v0.27.0/03-pdf-batch-completed.png)
+![Abgeschlossene Chargen- und Datenergebnisse](/img/open-science/v0.27.0/03-pdf-batch-completed.webp)
 
 
 </ToolOperationGroup>
@@ -76,7 +76,7 @@ Mit **Reuse existing reference** kann ein PDF, dessen extrahierter Titel oder DO
 
 Eine **Stop**-Anforderung ermöglicht das Ausführen des aktuellen Elements. Überprüfen Sie jede Zeile: **Completed**-Elemente werden beibehalten und können nicht erneut ausgewählt werden; Wählen Sie die verbleibenden **Ready**-Zeilen aus und verwenden Sie **Import selected**, um fortzufahren. Wenn Fehler **Retry unfinished** aussetzen, korrigieren Sie die gemeldete Ursache, bevor Sie erneut versuchen, und überprüfen Sie, ob die abgeschlossenen Datensätze nicht dupliziert wurden.
 
-![Gestoppter PDF-Import behält seine abgeschlossene Reihe](/img/open-science/local-todo-batch/09-pdf-import-stopped.png)
+![Gestoppter PDF-Import behält seine abgeschlossene Reihe](/img/open-science/local-todo-batch/09-pdf-import-stopped.webp)
 
 **The reference was kept. Retry to finish adding its PDF.** bedeutet, dass der Bibliographieeintrag gespeichert wurde, aber seine Anlage unvollendet ist. Prüfen Sie, ob das ursprüngliche PDF noch am ausgewählten Standort verfügbar ist und sich normal öffnet, und wählen Sie dann **Retry unfinished** aus. Kehren Sie nach dem erneuten Versuch zur Zielsammlung zurück und öffnen Sie den PDF, um den Inhalt zu überprüfen. Wenn das Ergebnis nicht bestätigt werden konnte, inspizieren Sie Ihre Bibliothek, bevor Sie einen weiteren Import starten.
 
@@ -100,9 +100,9 @@ Eine **Stop**-Anforderung ermöglicht das Ausführen des aktuellen Elements. Üb
 
 Klicken Sie auf **Import references**, warten Sie auf **Import complete**, prüfen Sie Created/Reused/Skipped/Failed und wählen Sie dann **Done** aus. Öffnen Sie den Datensatz erneut: Eine Importzählung allein stellt keine korrekten Metadaten her. Durch das Ausfüllen leerer Felder können Bezeichner und ein abgekürzter Zeitschriftenname hinzugefügt werden, ohne den vollständigen Zeitschriftentitel zu ersetzen.
 
-![BibTeX-Import mit expliziter Doppelrichtlinie](/img/open-science/local-todo-batch/02-bibtex-import.png)
+![BibTeX-Import mit expliziter Doppelrichtlinie](/img/open-science/local-todo-batch/02-bibtex-import.webp)
 
-![NBIB-Import füllt fehlende bibliographische Felder aus](/img/open-science/local-todo-batch/05-nbib-fill-fields.png)
+![NBIB-Import füllt fehlende bibliographische Felder aus](/img/open-science/local-todo-batch/05-nbib-fill-fields.webp)
 
 
 </ToolOperationGroup>
@@ -113,7 +113,7 @@ Klicken Sie auf **Import references**, warten Sie auf **Import complete**, prüf
 
 Öffnen Sie den Kandidatentitel oder **View details**. Überprüfen Sie den Anbieter, den Quelllink und die DOI/anderen Identifikatoren und vergleichen Sie dann Jahr, Autorauftrag und Veröffentlichung mit dem Herausgeber. **Accept** fördert es in die Bibliothek; **Dismiss** entfernt es aus der Überprüfungswarteschlange. Überprüfen Sie die Zeilenauswahl vor Batchaktionen.
 
-![Drei echte PRISMA-Kandidaten warten auf eine Überprüfung](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![Drei echte PRISMA-Kandidaten warten auf eine Überprüfung](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 In diesem Beispiel wurden die drei Kandidaten einzeln akzeptiert und Inbox wurde klar. Ein Provider-Match ist ein Startrekord, keine vollständige bibliographische Validierung. Das Veröffentlichungsjahr der 2020-Erklärung ist **2021**. Die beiden 2009-Papiere haben unterschiedliche DOIs und Autorenlisten.
 
@@ -121,7 +121,7 @@ In diesem Beispiel wurden die drei Kandidaten einzeln akzeptiert und Inbox wurde
 
 Öffnen Sie eine Referenz, dann **More actions → Edit metadata**. Überprüfen Sie die aktuellen Werte, bevor Sie **Complete metadata** verwenden, das einen Lookup anstelle einer rein lokalen Bearbeitung durchführt.
 
-![Gespeichertes Organisations-Autor-Feld wieder geöffnet](/img/open-science/v0.27.0/04-organization-author.png)
+![Gespeichertes Organisations-Autor-Feld wieder geöffnet](/img/open-science/v0.27.0/04-organization-author.webp)
 
 | Feld/Steuerung | Input und Wirkung |
 | --- | --- |
@@ -144,7 +144,7 @@ In diesem Beispiel wurden die drei Kandidaten einzeln akzeptiert und Inbox wurde
 
 Um **Die PRISMA Gruppe** hinzuzufügen, wählen Sie **Add creator → Creator role: Author → Name type: Organization**, geben Sie den vollständigen Namen und **Save** ein. Öffnen Sie die Aufzeichnung erneut und überprüfen Sie, ob die Organisation ihren vier persönlichen Autoren folgt. Vergleichen Sie das generierte Zitat mit dem [Autorenliste des Herausgebers](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097).
 
-![APA-Referenz bewahrt den Autor der Organisation](/img/open-science/v0.27.0/05-organization-citation.png)
+![APA-Referenz bewahrt den Autor der Organisation](/img/open-science/v0.27.0/05-organization-citation.webp)
 
 v0.30.2 korrigiert PubMed Autor-Name-Parsing, einschließlich Nachnamen, Initialen und Suffixe. Überprüfen Sie beim Importieren oder Vervollständigen von Metadaten die Erstellerfelder und generierten Zitate mit der verknüpften Quelle. Gehen Sie nicht davon aus, dass durch die Installation des Updates bereits in Ihrer Bibliothek gespeicherte Metadaten neu geschrieben werden.
 
@@ -176,7 +176,7 @@ Klare Suche und Filter, bevor ein Datensatz abgeschlossen wird, ist verschwunden
 
 Wenn **Add attachment** fehlschlägt, nachdem eine Quelle gefunden wurde, laden Sie das öffentlich verfügbare PDF vom Publisher herunter und verwenden Sie **Add PDF** auf demselben Datensatz. Öffnen Sie das angehängte PDF und vergleichen Sie dessen Titel und DOI mit dem Publisher-Record. In diesem Beispiel zeigt **Preview prisma-2020-statement.pdf** das passende PRISMA 2020-Papier: **806.1 KB und 15 Seiten**.
 
-![Erfolgreich angeschlossener Publisher PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![Erfolgreich angeschlossener Publisher PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 Ein Quellergebnis ist kein gespeicherter Anhang. Ein angehängtes PDF ist kein Beweis für das Lesen des Agenten. **Read with agent** liefert Kontext für eine nachfolgende Anfrage. Eine Composer `@`-Referenz kann einen genauen Datensatz, eine Projektbibliothek oder eine Sammlung auswählen: Eine Sammlung gewährt Abrufumfang, nicht die automatische Einbeziehung des Volltexts jedes Papiers. PDF Lesesteuerungen sind in [Vorschau](previews.md).
 
@@ -194,11 +194,11 @@ Wenn keine öffentliche Kopie gefunden wird, behalten Sie die geprüften Metadat
 5. Das Herunterladen unterstützt auch Pause und **Continue download**. Überprüfen Sie die endgültigen **Added / Failed / Skipped**-Zustände und öffnen Sie alle erfolgreich hinzugefügten Anhänge erneut.
 6. Um eine unerwünschte, überprüfungsbereite Aufgabe zu verwerfen, verwenden Sie **Remove task** in **Background tasks**. Bestätigen Sie nach dem Entfernen, dass die Aufgabe verschwunden ist und dass ihre Referenzen und Anhänge noch geöffnet sind. Das Entfernen der Aufgabe löscht sie nicht.
 
-![Suche nach dem aktuellen Element angehalten, Beibehaltung der ausstehenden Datensätze](/img/open-science/priority-completion/14-literature-batch-paused.png)
+![Suche nach dem aktuellen Element angehalten, Beibehaltung der ausstehenden Datensätze](/img/open-science/priority-completion/14-literature-batch-paused.webp)
 
 Eine pausierte Suche behält ihre überprüften und ausstehenden Datensätze. Nachdem Sie die Aufgabe fortgesetzt oder erneut geöffnet haben, überprüfen Sie die endgültigen Zählungen und das Ergebnis jedes Elements. Kandidatenentdeckung und erfolgreiche PDF-Anhängung sind separate Ergebnisse.
 
-![Wiedereröffnen der abgeschlossenen Fünf-Datensätze-Suche aus Hintergrundaufgaben](/img/open-science/priority-completion/15-literature-batch-resumed.png)
+![Wiedereröffnen der abgeschlossenen Fünf-Datensätze-Suche aus Hintergrundaufgaben](/img/open-science/priority-completion/15-literature-batch-resumed.webp)
 
 
 </ToolOperationGroup>
@@ -230,7 +230,7 @@ Wenn eine PDF-Quelle zu einer reservierten Adresse wie `198.18.x.x` aufgelöst w
 
 Wählen Sie in **Library → Settings → Import CSL** die unabhängige `plos.csl`-Datei aus dem [CSL-Styles-Repository](https://github.com/citation-style-language/styles/blob/master/plos.csl) aus. In diesem Beispiel stieg **Imported styles** von Null auf Eins und zeigte **Öffentliche Bibliothek der Wissenschaft**. Kehren Sie zum **Citation**-Panel des echten PRISMA-Datensatzes zurück und wählen Sie diesen Stil unter **Citation style** aus. Überprüfen Sie die nummerierte Referenz und `[1]` in-Text-Zitat. Die Style-Management-Vorschau verwendet einen Beispielartikel; Überprüfen Sie Ihre aktuelle Aufzeichnung, bevor Sie ein Zitat kopieren.
 
-![Importierter PLOS-Stil, der auf den echten PRISMA-Datensatz angewendet wird](/img/open-science/v0.27.0/06-imported-csl-citation.png)
+![Importierter PLOS-Stil, der auf den echten PRISMA-Datensatz angewendet wird](/img/open-science/v0.27.0/06-imported-csl-citation.webp)
 
 
 </ToolOperationGroup>
@@ -251,7 +251,7 @@ Die vier Citation Copy Buttons schreiben unterschiedliche Darstellungen in die Z
 | BibTeX kopieren | An `@article` Eintrag mit dem Autor der Organisation in Klammern eingeschlossen |
 | RIS kopieren | A `TY  - JOUR` Datensatz mit Autor, Titel, Jahr und DOI-Feldern |
 
-![Citation Copy Controls für den echten PRISMA-Record](/img/open-science/local-todo-batch/01-citation-copy.png)
+![Citation Copy Controls für den echten PRISMA-Record](/img/open-science/local-todo-batch/01-citation-copy.webp)
 
 Schließen Sie für eine Datei Citation, wählen Sie die erforderlichen Tabellenzeilen aus und wählen Sie **Export → BibTeX** oder **RIS**. Wählen Sie den Speicherort im Systemspeicherdialog und warten Sie auf **Saved**. Diese Dateien enthalten bibliographische Datensätze, kein PDF-Anhangbündel. Reimportieren Sie die gespeicherte Datei in eine Testsammlung mit **Reuse existing reference** und überprüfen Sie die Übereinstimmungszahl. Beide exportierten PRISMA-Dateien wurden reimportiert und das bestehende DOI wiederverwendet, ohne einen weiteren Datensatz zu erstellen.
 
@@ -275,11 +275,11 @@ BibTeX speichert Jahr und Monat hier, so dass seine Rundreise `2009-7` zurückge
 4. Lesen Sie **After merging** und seine Anlage, Sammlung und Projekt zählt. Nur dann wählen Sie **Merge references**; **Cancel** lässt die Datensätze getrennt.
 5. Öffnen Sie den Überlebenden erneut und überprüfen Sie Metadaten, Links und PDF-Inhalte. Der fusionierte Datensatz erscheint in Trash als **Merged duplicate**.
 
-![Vergleichen Sie die Überlebenden und widersprüchliche Veröffentlichungsdaten](/img/open-science/local-todo-batch/03-merge-bibtex.png)
+![Vergleichen Sie die Überlebenden und widersprüchliche Veröffentlichungsdaten](/img/open-science/local-todo-batch/03-merge-bibtex.webp)
 
 Ein PDF mit einem extrahierten Dateinamen anstelle seines Titels darf keine doppelte Gruppe eingeben. Korrigieren Sie den Titel und DOI mit dem Publisher-Record und überprüfen Sie dann die passende Gruppe. Bestätigen Sie nach dem Zusammenführen, dass die beibehaltenen PDF-Öffnungen geöffnet werden und Sammlungs- / Projektassoziationen weiterhin vorhanden sind.
 
-![Der fusionierte Datensatz behält seine PDF und organisatorischen Verbindungen bei](/img/open-science/local-todo-batch/06-merged-attachment-links.png)
+![Der fusionierte Datensatz behält seine PDF und organisatorischen Verbindungen bei](/img/open-science/local-todo-batch/06-merged-attachment-links.webp)
 
 
 </ToolOperationGroup>
@@ -291,7 +291,7 @@ Ein PDF mit einem extrahierten Dateinamen anstelle seines Titels darf keine dopp
 
 Verwenden Sie die **More actions → Move to Trash** der Zeile. Es verschwindet aus aktiven Bibliotheks-, Projekt- und Sammlungsansichten. Suchen Sie in **Trash** nach Titel oder Bezeichner, öffnen Sie das Zeilenmenü und wählen Sie **Restore**. Wiederherstellen vor dem Bearbeiten, Vorschauen oder Exportieren: Diese Steuerelemente sind in Trash deaktiviert. Öffnen Sie das ursprüngliche Projekt und die ursprünglichen Sammlungen, um die wiederhergestellten Links zu überprüfen. In diesem Beispiel behielt das Wiederherstellen des PRISMA-Datensatzes seinen PDF und alle drei Links bei.
 
-![Wiederherstellen einer Referenz aus dem Trash-Zeilenmenü](/img/open-science/local-todo-batch/07-trash-restore.png)
+![Wiederherstellen einer Referenz aus dem Trash-Zeilenmenü](/img/open-science/local-todo-batch/07-trash-restore.webp)
 
 
 </ToolOperationGroup>
@@ -305,7 +305,7 @@ Wählen Sie in Papierkorb **More actions → Delete permanently** und lesen Sie 
 
 Überprüfen Sie nach dem Löschen, ob der ausgewählte Datensatz den Papierkorb verlassen hat und ob die beibehaltene Referenz mit ihren Anhängen weiterhin geöffnet wird. Das Entfernen eines Sammellinks, das Verschieben eines Datensatzes in den Papierkorb und das dauerhafte Löschen haben unterschiedliche Bereiche.
 
-![Lesen Sie den genauen Permanent-Löschungsumfang](/img/open-science/local-todo-batch/08-reference-delete-scope.png)
+![Lesen Sie den genauen Permanent-Löschungsumfang](/img/open-science/local-todo-batch/08-reference-delete-scope.webp)
 
 
 </ToolOperationGroup>

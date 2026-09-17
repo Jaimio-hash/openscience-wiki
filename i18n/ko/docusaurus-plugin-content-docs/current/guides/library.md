@@ -27,7 +27,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 | 프로젝트 | 해당 프로젝트와 연계된 참조 | 연구 문제와 관련된 생물학적 유지 |
 | 컬렉션 | 배열된 컬렉션을 포함한 주제 그룹 | 프로젝트 전반에 걸쳐 읽기 설정 사용 |
 
-![실제 PRISMA 컬렉션에서 3 개의 허용 용지](/img/open-science/guides-walkthrough/51-library-collection.png)
+![실제 PRISMA 컬렉션에서 3 개의 허용 용지](/img/open-science/guides-walkthrough/51-library-collection.webp)
 
 ## 기록 추가 또는 가져 오기 {/* #add-or-import-a-record */}
 
@@ -60,11 +60,11 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 배치는 **Pending**, **Reading…**, **Ready**, **Importing…**, **Completed**, **Failed** 또는 **Skipped**를 보여줄 수 있습니다. 선택, 메타데이터 읽기 및 수입 완료는 별도의 상태입니다. 앱이 **PDF upload cancelled. The reference was kept.**을 보고 있다면, 레코드의 첨부 파일을 유지 확인; 업로드 취소는 bibliography 입력을 제거하지 않았다.
 
-![2개의 진짜 PRISMA PDFs는 수입품을 준비했습니다](/img/open-science/v0.27.0/02-pdf-batch-ready.png)
+![2개의 진짜 PRISMA PDFs는 수입품을 준비했습니다](/img/open-science/v0.27.0/02-pdf-batch-ready.webp)
 
 **Reuse existing reference**과 함께, 제목이나 DOI를 추출한 PDF은 별도의 기록을 만들 수 없습니다. 수입 후, 각 종이를 열고 제목과 DOI을 확인합니다. [merging 중복](#resolve-duplicates-and-recover-references)의 앞에 정확한 mismatches. **Completed**은 수입을 확인하며 정확한 식별이 아닙니다.
 
-![완료된 배치 및 per-file 결과](/img/open-science/v0.27.0/03-pdf-batch-completed.png)
+![완료된 배치 및 per-file 결과](/img/open-science/v0.27.0/03-pdf-batch-completed.webp)
 
 
 </ToolOperationGroup>
@@ -76,7 +76,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 **Stop** 요청은 현재 항목을 완료 할 수 있습니다. 각 행 검사: **Completed** 항목은 유지되고 다시 선택될 수 없습니다; 나머지 **Ready** 행을 선택하고 **Import selected**을 사용하십시오. 실패가 **Retry unfinished**을 노출하면 재발행하기 전에보고 된 원인을 수정하고 완료 된 레코드가 복제되지 않았습니다.
 
-![Stopped PDF 가져오기 완료된 줄을 유지](/img/open-science/local-todo-batch/09-pdf-import-stopped.png)
+![Stopped PDF 가져오기 완료된 줄을 유지](/img/open-science/local-todo-batch/09-pdf-import-stopped.webp)
 
 **The reference was kept. Retry to finish adding its PDF.**은 전기를 저장했지만 첨부 파일이 완성되지 않았습니다. 원래 PDF이 선택한 위치에 여전히 사용할 수 있으며 일반적으로 열리면 **Retry unfinished**을 선택하십시오. retrying 후, 목적지 수집에 반환하고 내용을 확인하기 위해 PDF을 엽니 다. 결과가 확인되지 않을 경우, 다른 수입을 시작하기 전에 라이브러리를 검사합니다.
 
@@ -100,9 +100,9 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 **Import references**을 클릭하고, **Import complete**을 기다리고, Created/Reused/Skipped/Failed를 검사하고, **Done**를 선택하십시오. 레코드를 엽니다: 혼자 가져 오기 카운트는 올바른 metadata를 설정하지 않습니다. 채우기 빈 필드는 식별자 및 전체 저널 제목을 대체하지 않고 약어 저널 이름을 추가 할 수 있습니다.
 
-![BibTeX는 명시된 중복 정책을 가져 오기](/img/open-science/local-todo-batch/02-bibtex-import.png)
+![BibTeX는 명시된 중복 정책을 가져 오기](/img/open-science/local-todo-batch/02-bibtex-import.webp)
 
-![NBIB 수입은 누비질 필드를 채웁니다.](/img/open-science/local-todo-batch/05-nbib-fill-fields.png)
+![NBIB 수입은 누비질 필드를 채웁니다.](/img/open-science/local-todo-batch/05-nbib-fill-fields.webp)
 
 
 </ToolOperationGroup>
@@ -113,7 +113,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 후보 제목 또는 **View details**을 엽니 다. 공급자, 소스 링크 및 DOI / 기타 식별자를 검사 한 다음 출판사와 년, 저자 주문 및 출판 비교하십시오. **Accept**는 도서관에 그것을 승진시킵니다; **Dismiss**은 리뷰 큐에서 제거합니다. 일괄 작업 전에 행 선택을 확인합니다.
 
-![3 정품 PRISMA 후보자는 검토를 기다리고](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![3 정품 PRISMA 후보자는 검토를 기다리고](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 이 예에서 세 명의 후보자는 개별적으로 허용되었으며 Inbox는 명확하게되었습니다. 공급자 경기는 시작 기록, bibliographic 검증을 완료하지 않습니다. 2020 문 간행년도는 **2021**입니다. 2개의 2009 종이에는 명백한 DOIs 및 저자 명부가 있습니다.
 
@@ -121,7 +121,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 참조를 열고, **More actions → Edit metadata**. **Complete metadata**을 사용하기 전에 현재 값을 검토하고, 순수 로컬 편집보다는 룩업을 수행한다.
 
-![저장된 조직 저자 필드 reopened](/img/open-science/v0.27.0/04-organization-author.png)
+![저장된 조직 저자 필드 reopened](/img/open-science/v0.27.0/04-organization-author.webp)
 
 | 분야/제어 | 입력 및 효과 |
 | --- | --- |
@@ -144,7 +144,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 **PRISMA 그룹**을 추가하려면 **Add creator → Creator role: Author → Name type: Organization**을 선택하고 전체 이름과 **Save**를 입력하십시오. 기록을 다시 열고 조직이 4 명의 개인 저자를 따르는 것을 확인합니다. [출판사의 저자 목록](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097)과 생성된 인용 비교.
 
-![APA 참고는 조직 저자를 보존합니다.](/img/open-science/v0.27.0/05-organization-citation.png)
+![APA 참고는 조직 저자를 보존합니다.](/img/open-science/v0.27.0/05-organization-citation.webp)
 
 v0.30.2는 PubMed 저자 이름 파싱을 수정하여 성, 초기 및 suffixes를 포함한 수정합니다. metadata를 가져 오거나 완료하면 제작자 필드를 검사하고 연결된 소스에 대한 생성 된 인용을 검사합니다. 업데이트가 라이브러리에 저장 된 메타데이터를 다시 작성하는 것을 가정하지 마십시오.
 
@@ -176,7 +176,7 @@ v0.30.2는 PubMed 저자 이름 파싱을 수정하여 성, 초기 및 suffixes�
 
 **Add attachment**이 소스가 발견 된 후 실패하면 게시자에서 공개적으로 PDF을 다운로드하고 동일한 레코드에서 **Add PDF**를 사용합니다. 첨부된 PDF을 열고 게시자 기록과 제목과 DOI을 비교합니다. 이 예에서 **프리즘 2020-statement.pdf**은 PRISMA 2020 용지와 일치합니다. **806.1 KB 및 15 페이지**.
 
-![성공적으로 부착 된 게시자 PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![성공적으로 부착 된 게시자 PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 소스 결과는 저장 된 첨부 파일이 아닙니다. 붙어 있던 PDF는 대리인 독서의 증거가 아닙니다. **Read with agent**은 후속 요청에 대한 컨텍스트를 공급합니다. Composer `@` 참조는 정확한 기록, 프로젝트 라이브러리 또는 컬렉션을 선택할 수 있습니다. 수집 보조금은 모든 종이의 전체 텍스트를 자동 포함하지 않습니다. PDF 독서 통제는 [뉴스 레터](previews.md)에서 입니다.
 
@@ -194,11 +194,11 @@ v0.30.2는 PubMed 저자 이름 파싱을 수정하여 성, 초기 및 suffixes�
 5. 또한 일시 중지 및 **Continue download**을 지원합니다. 최종 **추가 / 실패 / Skipped** 상태를 검사하고 성공적으로 첨부 파일을 다시 열 수 있습니다.
 6. 원치 않는 검토 읽기 작업을 discard하려면 **Background tasks**에서 **Remove task**을 사용하십시오. 제거 후 작업이 사라지고 그 참조 및 첨부 파일이 여전히 열려 있음을 확인합니다. 작업 제거는 삭제하지 않습니다.
 
-![현재 항목 후 일시 중지 된 검색, 보류 기록을 유지](/img/open-science/priority-completion/14-literature-batch-paused.png)
+![현재 항목 후 일시 중지 된 검색, 보류 기록을 유지](/img/open-science/priority-completion/14-literature-batch-paused.webp)
 
 사용 된 검색은 체크 및 종료 기록을 유지합니다. 작업을 계속하거나 다시 열면 최종 수와 각 항목의 결과를 검사합니다. 후보 발견 및 성공적인 PDF 첨부 파일은 별도의 결과입니다.
 
-![완료된 5-record 검색을 백그라운드 작업에서 다시 시작](/img/open-science/priority-completion/15-literature-batch-resumed.png)
+![완료된 5-record 검색을 백그라운드 작업에서 다시 시작](/img/open-science/priority-completion/15-literature-batch-resumed.webp)
 
 
 </ToolOperationGroup>
@@ -230,7 +230,7 @@ PDF 소스가 `198.18.x.x`과 같은 예약 된 주소로 해결되면 다운로
 
 **Library → Settings → Import CSL**에서 [CSL 스타일 저장소](https://github.com/citation-style-language/styles/blob/master/plos.csl)의 독립적 인 `plos.csl` 파일을 선택하십시오. 이 예에서 **Imported styles**은 0에서 1로 증가했으며 **과학의 공공 도서관**을 보여주었습니다. 실제 PRISMA 레코드의 **Citation** 패널로 돌아가 **Citation style** 아래 스타일을 선택하십시오. 번호 참조 및 `[1]` 인 텍스트 인용을 확인하십시오. 스타일 관리 미리보기는 샘플 문서를 사용합니다; 인용을 복사하기 전에 실제 기록을 검사합니다.
 
-![진짜 PRISMA 기록에 적용되는 수입된 PLOS 작풍](/img/open-science/v0.27.0/06-imported-csl-citation.png)
+![진짜 PRISMA 기록에 적용되는 수입된 PLOS 작풍](/img/open-science/v0.27.0/06-imported-csl-citation.webp)
 
 
 </ToolOperationGroup>
@@ -251,7 +251,7 @@ PDF 소스가 `198.18.x.x`과 같은 예약 된 주소로 해결되면 다운로
 | BibTeX 복사 | 이름 &#42; `@article` 기관 저자와 함께 항목은 braces에서 동봉 |
 | RIS 복사 | ₢ 킹 `TY  - JOUR` 저자, 제목, 년 및 DOI 필드와 기록 |
 
-![실제 PRISMA 레코드에 대한 인용 복사 제어](/img/open-science/local-todo-batch/01-citation-copy.png)
+![실제 PRISMA 레코드에 대한 인용 복사 제어](/img/open-science/local-todo-batch/01-citation-copy.webp)
 
 파일에 대한, 가까운 인용, 필요한 테이블 행을 선택하고 **Export → BibTeX** 또는 **RIS**을 선택합니다. 시스템의 위치를 선택하여 대화 상자를 저장하고 **Saved**을 기다립니다. 이 파일은 bibliographic 기록, PDF 부착 번들을 포함합니다. **Reuse existing reference**을 사용하여 저장된 파일에 저장하고 일치 수를 확인합니다. 둘 다 수출된 PRISMA 파일은 reimported 및 다른 기록을 창조하지 않고 기존 DOI를 재사용했습니다.
 
@@ -275,11 +275,11 @@ BibTeX 상점 년과 달 여기에서, 그래서 그것의 둥근 여행은 `200
 4. **After merging** 및 그 첨부 파일, 수집 및 프로젝트 수를 읽으십시오. 다음 **Merge references**을 선택; **Cancel**은 별도의 레코드를 나타냅니다.
 5. survivor를 열고 metadata, 링크 및 PDF 내용을 확인합니다. 합병증 기록은 **Merged duplicate**로 Trash에서 나타납니다.
 
-![survivor 및 분쟁 게시 날짜 비교](/img/open-science/local-todo-batch/03-merge-bibtex.png)
+![survivor 및 분쟁 게시 날짜 비교](/img/open-science/local-todo-batch/03-merge-bibtex.webp)
 
 A PDF는 제목의 장소에 추출 된 파일 이름을 중복 그룹에 입력 할 수 없습니다. 게시자 레코드를 사용하여 제목과 DOI을 수정한 다음 매칭 그룹을 검토합니다. 합병 후, 유지 된 PDF 열리고 컬렉션 / 프로젝트 협회가 여전히 존재합니다.
 
-![합병 기록은 PDF 및 조직 링크를 유지합니다.](/img/open-science/local-todo-batch/06-merged-attachment-links.png)
+![합병 기록은 PDF 및 조직 링크를 유지합니다.](/img/open-science/local-todo-batch/06-merged-attachment-links.webp)
 
 
 </ToolOperationGroup>
@@ -291,7 +291,7 @@ A PDF는 제목의 장소에 추출 된 파일 이름을 중복 그룹에 입력
 
 행의 **More actions → Move to Trash**을 사용하십시오. 그것은 활성 라이브러리, 프로젝트 및 컬렉션보기에서 사라집니다. **Trash**에서 제목이나 식별자가 검색하면 행 메뉴를 열고 **Restore**을 선택합니다. 편집, 미리보기 또는 내보내기 전에 복원 :이 제어는 쓰레기에서 비활성화됩니다. 복원 된 링크를 확인하기 위해 원래의 프로젝트 및 컬렉션을 엽니다. 이 예에서 PRISMA 레코드를 복원 PDF 및 모든 3 링크.
 
-![Trash 행 메뉴에서 참조를 복원](/img/open-science/local-todo-batch/07-trash-restore.png)
+![Trash 행 메뉴에서 참조를 복원](/img/open-science/local-todo-batch/07-trash-restore.webp)
 
 
 </ToolOperationGroup>
@@ -305,7 +305,7 @@ A PDF는 제목의 장소에 추출 된 파일 이름을 중복 그룹에 입력
 
 삭제 후, 선택한 기록이 Trash를 왼쪽하고 유지 된 참조는 여전히 첨부 파일로 열립니다. 수집 링크를 제거, Trash에 기록을 이동하고 영구적으로 다른 범위를 제거.
 
-![정확한 영구 삭제 범위를 읽으십시오](/img/open-science/local-todo-batch/08-reference-delete-scope.png)
+![정확한 영구 삭제 범위를 읽으십시오](/img/open-science/local-todo-batch/08-reference-delete-scope.webp)
 
 
 </ToolOperationGroup>

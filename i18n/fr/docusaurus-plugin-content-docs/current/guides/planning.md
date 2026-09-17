@@ -17,9 +17,9 @@ Utilisez **Plan first** pour examiner les entrées, la méthode, les sorties et 
 3. Attendez de planifier. Si une carte de permission **Plan control** apparaît, inspectez-la et autorisez la portée prévue ou refusez-la. Cela autorise l'enregistrement de la création ou de la décision du plan, et non l'exécution à venir.
 4. Attendez **Plan ready for review**. Ne traitez pas un paragraphe normal disant que voici mon plan comme la preuve qu'une carte d'approbation structurée existe.
 
-![Planifier d'abord dans le menu d'envoi](/img/open-science/guides-walkthrough/21-plan-first-entry.png)
+![Planifier d'abord dans le menu d'envoi](/img/open-science/guides-walkthrough/21-plan-first-entry.webp)
 
-![Autorisation séparée de créer et d'enregistrer un plan](/img/open-science/guides-walkthrough/22-plan-permission.png)
+![Autorisation séparée de créer et d'enregistrer un plan](/img/open-science/guides-walkthrough/22-plan-permission.webp)
 
 La tâche a spécifié des nombres bruts inchangés, des métadonnées distinctes ID/longueur, un QC par échantillon, trois sorties gérées et aucune revendication d'expression différentielle. Une demande initiale précise rend le plan plus facile à juger.
 
@@ -27,7 +27,7 @@ La tâche a spécifié des nombres bruts inchangés, des métadonnées distincte
 
 Sélectionnez **Open** pour afficher le plan structuré à côté de la conversation. Inspecter les phases, l'ordre des étapes, le propriétaire de l'exécution, les extrants souhaités et les notes de faisabilité. Utilisez **Enter full screen** pour lire un plan long et **Download Plan** pour le conserver. L'étiquette de confiance est l'évaluation du plan, et non la preuve que le code a déjà été exécuté.
 
-![Plan structuré avec phases et extrants souhaités](/img/open-science/guides-walkthrough/23-plan-review.png)
+![Plan structuré avec phases et extrants souhaités](/img/open-science/guides-walkthrough/23-plan-review.webp)
 
 | Contrôle/état | Que faire |
 | --- | --- |
@@ -42,7 +42,7 @@ Sélectionnez **Open** pour afficher le plan structuré à côté de la conversa
 
 Dans **Respond to Plan**, indiquez exactement ce qui doit changer. Par exemple, demandez une vérification de l'intégrité des entrées, réouvrez chaque sortie et une cartographie entre les étiquettes raccourcies et les identifiants d'origine. Sélectionnez **Send Plan feedback**, attendez le remplacement, puis vérifiez que chaque modification demandée est présente.
 
-![Commentaires reçus avant la soumission](/img/open-science/guides-walkthrough/24-plan-feedback.png)
+![Commentaires reçus avant la soumission](/img/open-science/guides-walkthrough/24-plan-feedback.webp)
 
 Lire le remplacement et utiliser son bouton **Approve**. L'ancien aperçu déjà ouvert peut rester visible avec un avertissement qu'il a été remplacé; ses étapes affichées ne sont pas les derniers progrès du plan actif. Réouvrir le plan actif plutôt que d'approuver une vieille capture d'écran.
 

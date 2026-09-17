@@ -35,19 +35,19 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![macOS 首次設定中的環境檢查已完成](/img/open-science/macos/setup-environment.png)
+![macOS 首次設定中的環境檢查已完成](/img/open-science/macos/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-![Windows 首次設定中的環境檢查](/img/open-science/windows/setup-environment.png)
+![Windows 首次設定中的環境檢查](/img/open-science/windows/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="linux">
 
-![Linux 首次設定中四項環境檢查均已透過](/img/open-science/linux/setup-environment.png)
+![Linux 首次設定中四項環境檢查均已透過](/img/open-science/linux/setup-environment.webp)
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![選擇資料夾前的資料位置頁面](/img/open-science/walkthrough-2026-09-08/02-data-location.png)
+![選擇資料夾前的資料位置頁面](/img/open-science/walkthrough-2026-09-08/02-data-location.webp)
 
 </PlatformContent>
 在安裝執行時之前確定大型檔案的存放位置。產物、Notebook 和環境使用資料目錄；配置和歷史記錄留在配置位置。頁面顯示的路徑是隻讀摘要，不能直接在其中輸入。
@@ -73,14 +73,14 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![選擇父資料夾後顯示最終應用資料路徑](/img/open-science/local-acceptance/data-location-selected.png)
+![選擇父資料夾後顯示最終應用資料路徑](/img/open-science/local-acceptance/data-location-selected.webp)
 
 </PlatformContent>
 點選 **Browse…**，在空間充足的磁碟上選擇空父資料夾，檢查嚮導顯示的完整受管理路徑。選擇 **Continue** 並閱讀重啟確認。研究資料應放在穩定位置，不要使用臨時目錄。
 
 <PlatformContent platform="macos">
 
-![資料位置重啟確認](/img/open-science/local-acceptance/data-location-confirm.png)
+![資料位置重啟確認](/img/open-science/local-acceptance/data-location-confirm.webp)
 
 </PlatformContent>
 | 確認框控制元件 | 結果 |
@@ -105,7 +105,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![實際配置寫入失敗與恢復入口](/img/open-science/local-todo-batch/56-onboarding-config-write-error.png)
+![實際配置寫入失敗與恢復入口](/img/open-science/local-todo-batch/56-onboarding-config-write-error.webp)
 
 </PlatformContent>
 如果重啟在新位置生效前失敗，恢復應用配置目錄的寫入權限後重新開啟向導。先核對當前生效路徑並開啟已有檔案，再決定是否重試切換位置。具體檢查見[儲存與歸檔內容](storage.md)。
@@ -116,7 +116,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Codex 安裝來源選單](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.png)
+![Codex 安裝來源選單](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.webp)
 
 </PlatformContent>
 1. 開啟 **Install Codex**。
@@ -127,7 +127,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![Codex 安裝完成併成為活動執行時](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.png)
+![Codex 安裝完成併成為活動執行時](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.webp)
 
 </PlatformContent>
 版本標籤指的是已安裝代理或介面卡，不是所選模型；核對實際安裝值，無需與截圖版本完全相同。
@@ -136,7 +136,7 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 已有相容代理時，選擇其卡片並確認 **Active**，再繼續。下方 Windows 介面使用已有 Codex 安裝；無需為了完成嚮導而重新安裝它。
 
-![Windows 設定嚮導中已有 Codex 代理被選為 Active](/img/open-science/windows/setup-agent-active.jpg)
+![Windows 設定嚮導中已有 Codex 代理被選為 Active](/img/open-science/windows/setup-agent-active.webp)
 
 </PlatformContent>
 
@@ -158,14 +158,14 @@ import PlatformGuide, {PlatformContent} from '@site/src/components/PlatformGuide
 
 <PlatformContent platform="macos">
 
-![尚未認證的英文 Codex 訂閱表單](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![尚未認證的英文 Codex 訂閱表單](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 </PlatformContent>
 使用 API 提供商時，選擇型別，填寫其要求的端點和模型資訊，然後選擇 **Test & continue**。嚮導先檢查必填欄位，再執行連線測試。測試成功後推進嚮導；輸入或連線錯誤會保留在表單中供修改。
 
 <PlatformContent platform="macos">
 
-![Custom Gateway 必填欄位校驗](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![Custom Gateway 必填欄位校驗](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 </PlatformContent>
 認證方式、高階欄位及連線失敗的處理見[提供方設定](providers.md)。
@@ -189,7 +189,7 @@ API Key 只填寫在專用憑據欄位中，不放入截圖、專案指令或對
 
 Windows 的 **Notebook runtime** 頁面還可能顯示 **Local Shell · WSL2 Bash Preview**。閱讀底部 **Optional — nothing here is required to finish setup.**：暫不配置 Python/R、沒有安裝 WSL2 時，也可以點選 **Finish**。請求程式碼執行前仍需準備相應執行環境；完成嚮導不會自動安裝這些可選環境。
 
-![Windows 可選 Notebook 與 WSL2 設定，Finish 按鈕可用](/img/open-science/windows/setup-optional-runtimes.jpg)
+![Windows 可選 Notebook 與 WSL2 設定，Finish 按鈕可用](/img/open-science/windows/setup-optional-runtimes.webp)
 
 </PlatformContent>
 

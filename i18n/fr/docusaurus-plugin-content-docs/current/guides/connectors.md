@@ -18,7 +18,7 @@ Dans la gestion des lots, examiner le nombre sélectionné dans la zone d'action
 
 Ouvrez **Settings → Connectors**, recherchez **Archives Omics** et ouvrez ses détails. Cette famille intégrée comprend des outils GEO, ArrayExpress, MetaboLights, MGnify et PRIDE. Élargir une rangée d'outils avant de la choisir.
 
-![Outil de métadonnées GEO et sa limite de téléchargement explicite](/img/open-science/guides-walkthrough/36-omics-tools.png)
+![Outil de métadonnées GEO et sa limite de téléchargement explicite](/img/open-science/guides-walkthrough/36-omics-tools.webp)
 
 `geo_get_series` retourne les métadonnées de la série GEO, les échantillons, les plates-formes et les URL de fichiers supplémentaires. Téléchargez le tableau de données requis à partir de la source retournée et joignez-le à votre projet avant de demander un calcul.
 
@@ -50,7 +50,7 @@ Ouvrez **Settings → Connectors → Manage**, filtrez la liste et sélectionnez
 3. Choisissez **Require approval**, **Block** ou **Always allow** pour l'accès que vous comptez autoriser. Exiger des écrans d'approbation **Ask when no Session, Project, or Global permission applies.**
 4. Activer PubMed et inspecter **Used by**. La disponibilité pour Main est indiquée comme **Main only**; disponibilité désactivée montre **Not in use**.
 
-![Description de l'outil PubMed et contrôles d'approbation](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.png)
+![Description de l'outil PubMed et contrôles d'approbation](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.webp)
 
 Les détails énumèrent `search_articles`, `get_article_metadata`, `find_related_articles`, `lookup_article_by_citation`, `convert_article_ids`, `get_full_text_article` et `get_copyright_status`. Choisissez **Always allow**, **Require approval** ou **Block** par outil. Examinez le commutateur **Skip approvals** séparé pour l'ensemble de Connector avant de l'activer. Ouvrir une description n'affiche que les instructions de l'outil.
 
@@ -69,7 +69,7 @@ Le répertoire place PubMed sous **Directory**, tandis que son détail affiche u
 4. Examiner le résultat réel. Pour cette adhésion, vérifiez les sous-populations de cellules luminales et basales retournées **GSE60450**, **Musculus**, **Échantillons 12**, et le titre -analyse -transcriptome des sous-populations de cellules luminales et basales dans la glande mammaire gravide par rapport à la glande mammaire gravide.
 5. Gardez les identifiants GSM retournés avec leurs caractéristiques. Ne pas déduire un mapping aux noms de colonnes MCL1 de la matrice à partir de la ressemblance seule.
 
-![Caractéristiques réelles de l'échantillon GEO retournées par l'intermédiaire du Connector](/img/open-science/guides-walkthrough/59-geo-sample-metadata.png)
+![Caractéristiques réelles de l'échantillon GEO retournées par l'intermédiaire du Connector](/img/open-science/guides-walkthrough/59-geo-sample-metadata.webp)
 
 L'intervalle d'échantillonnage retourné était de **GSM1480291–GSM1480302**, couvrant les populations luminales/basales et vierges, la grossesse de 18.5 jour et les stades de lactation de 2 jour. Ces métadonnées sont retournées, et non les étiquettes déduites des totaux de comptage. La table de réponse complète de douze rangées a été téléchargée sous la forme de <a href="/docs/examples/gse60450/geo-sample-metadata.csv" download>geo-sample-metadata.csv</a>. Il s'agit d'une exportation de table de conversation, séparée des artefacts de QC gérés.
 
@@ -105,7 +105,7 @@ Si le fichier d'instructions Connector ne peut pas être lu, conservez son erreu
 | Champs / Texte | Saisissez les noms comme lignes structurées ou une `KEY=` par ligne; Les valeurs secrètes vivent dans les lettres de créances. |
 | Aperçu des commandes | Inspectez le lanceur montré après les fixations. |
 
-![Éditeur de commandes locales et variables d'environnement liées aux justificatifs](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.png)
+![Éditeur de commandes locales et variables d'environnement liées aux justificatifs](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.webp)
 
 Une entrée de lanceur ne prouve pas à elle seule que son exécutable ou son service est opérationnel. Utilisez l'invocation ci-dessous pour vérifier la commande locale importée.
 
@@ -125,13 +125,13 @@ L'éditeur actuel lie les lettres de créances nommées; Ce n'est pas une zone d
 4. Utilisez **Add header** pour une autre ligne ou **Remove header** pour jeter une ligne.
 5. **Champs / Texte** modifie la façon dont les noms sont entrés. Le mode texte prévoit un nom d'en-tête par ligne sous `Name:`; Les valeurs de qualification sont gérées séparément.
 
-![Nom d'en-tête statique et sélecteur de justificatifs](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.png)
+![Nom d'en-tête statique et sélecteur de justificatifs](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.webp)
 
 #### Reliure OAuth {/* #oauth-binding */}
 
 Choisissez un **OAuth credential** correspondant à l'URL de la ressource, au transport et à l'enregistrement. **New credential** ouvre le [éditeur de justificatifs d'identité](../tools/credentials.md#new-credential). Dans ce profil vide, le formulaire a signalé **No OAuth credential matches this Connector's resource URL, transport, and registration.** L'action finale change à **Add and sign in**.
 
-![Correspondance des titres de créance OAuth](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.png)
+![Correspondance des titres de créance OAuth](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.webp)
 
 ## Essais d'importation, d'exportation et de raccordement {/* #import-export-and-connection-tests */}
 
@@ -142,7 +142,7 @@ Choisissez **Add connector → Import configuration** et sélectionnez un fichie
 3. Choisissez **Use configuration** pour ouvrir l'éditeur prérempli. Vérifiez chaque champ, liez les identifiants locaux requis et sélectionnez **I trust this connector**.
 4. Choisissez **Add connector**, inspectez l'état de connexion dans la liste, puis invoquez un petit outil en lecture seule.
 
-![Sélection d'un serveur et examen des références requises](/img/open-science/local-todo-batch/23-mcp-multi-server.png)
+![Sélection d'un serveur et examen des références requises](/img/open-science/local-todo-batch/23-mcp-multi-server.webp)
 
 Lorsqu'un serveur importé fait référence à une variable d'environnement comme `QC_EXAMPLE_TOKEN`, lier ce nom à un titre de créance stocké sur ce périphérique. **Add** reste indisponible jusqu'à ce que les fixations requises soient terminées. Après l'ajout, vérifiez **Connected** et exécutez l'outil prévu; une seule liaison sauvegardée ne valide pas l'authentification à distance.
 
@@ -152,13 +152,13 @@ Appelez `get_dataset_summary`, puis passez un identifiant complet retourné à `
 
 Choisissez **Actions → Export** de la ligne, sélectionnez **Open Science Connector** ou **MCP client config**, inspectez l'aperçu et choisissez **Save configuration**.
 
-![Exportation conservant les noms des titres de compétence et déclarant les voies locales](/img/open-science/local-todo-batch/24-mcp-export-binding.png)
+![Exportation conservant les noms des titres de compétence et déclarant les voies locales](/img/open-science/local-todo-batch/24-mcp-export-binding.webp)
 
 Le fichier exporté réel a conservé le nom de la variable dans `required_secrets.environment`. Il ne contenait aucune valeur probante, aucune confiance ou permission locale. La réimportation nécessite la sélection des titres de compétence locaux et la confiance à nouveau.
 
 Lorsque le même ID existe déjà, l'aperçu des rapports **Un Connector personnalisé avec ID ... est déjà installé** et **Use configuration** est indisponible. Utilisez **Edit** pour modifier une connexion existante; import n'est pas une opération d'écrasement.
 
-![Une ID existante bloque l'importation dupliquée](/img/open-science/local-todo-batch/26-mcp-reimport-collision.png)
+![Une ID existante bloque l'importation dupliquée](/img/open-science/local-todo-batch/26-mcp-reimport-collision.webp)
 
 Lors de la restauration d'une connexion exportée, inspectez les champs préremplis et liez à nouveau les identifiants nommés requis. Compléter la confiance et tester un appel limité avant de l'utiliser dans la recherche. L'importation n'écrase pas un Connector existant avec le même ID.
 

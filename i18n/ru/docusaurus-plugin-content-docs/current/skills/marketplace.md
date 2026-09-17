@@ -11,7 +11,7 @@ last_update:
 
 Чтобы ввести ZIP, локальный Skill или конкретный репозиторий GitHub, используйте [Импорт и управление Skill](manage.md). Обзор методов исследования и их входных данных см. в [Директория Skill](directory.md).
 
-![Рынок Skill с поиском, фильтрами категорий и кнопками «Установить»](/img/open-science/feature-guides-2026-09/marketplace-browse.png)
+![Рынок Skill с поиском, фильтрами категорий и кнопками «Установить»](/img/open-science/feature-guides-2026-09/marketplace-browse.webp)
 
 ## Найдите подходящий метод {/* #find-a-suitable-method */}
 
@@ -21,7 +21,7 @@ last_update:
 
 Каталоговая подпись подтверждает идентичность дистрибуции. Он не устанавливает, что метод подходит для вашего исследовательского вопроса или что ваш компьютер имеет свои зависимости.
 
-![Маркетплейс Skill детали, показывающие автора, версию, лицензию и действие Установка](/img/open-science/feature-guides-2026-09/marketplace-detail.png)
+![Маркетплейс Skill детали, показывающие автора, версию, лицензию и действие Установка](/img/open-science/feature-guides-2026-09/marketplace-detail.webp)
 
 ## Установите и используйте Skill {/* #install-and-use-a-skill */}
 

@@ -32,7 +32,7 @@ CnH2nO2, neutral charge and linear structures. Reopen the files.
 Keep all outputs in English and do not delegate.
 ```
 
-![Соединение объема и запрошенные файлы в фактическом разговоре](/img/open-science/workflow-extensions/pubchem-input.png)
+![Соединение объема и запрошенные файлы в фактическом разговоре](/img/open-science/workflow-extensions/pubchem-input.webp)
 
 ## 2. Проверьте реальные звонки в базу данных {/* #2-check-the-actual-database-calls */}
 
@@ -40,7 +40,7 @@ Keep all outputs in English and do not delegate.
 
 В примере использовались точные названия кислот и первый возвращенный CID, затем проверялись свойства партии. Это подходит для этих однозначных имен; Принятие первого удара не является общим правилом идентификации.
 
-![Фактическая активность запроса и восстановление сохраненного файла в Notebook](/img/open-science/workflow-extensions/pubchem-lookup.png)
+![Фактическая активность запроса и восстановление сохраненного файла в Notebook](/img/open-science/workflow-extensions/pubchem-lookup.webp)
 
 ## 3. Откройте сохраненный стол {/* #3-open-the-saved-table */}
 
@@ -56,7 +56,7 @@ Keep all outputs in English and do not delegate.
 | Гептановая кислота | 8094 | C7H14O2 | 130.18 |
 | Октановая кислота | 379 | C8H16O2 | 144.21 |
 
-![Семикомпонентный CSV](/img/open-science/workflow-extensions/pubchem-table.png)
+![Семикомпонентный CSV](/img/open-science/workflow-extensions/pubchem-table.webp)
 
 Совместите строки **МУС**, а не их порядок отображения. Проверьте формулу и линейные улыбки вместе. В примере сохранены как возвращенные имена полей, `SMILES`, так и `ConnectivitySMILES`; Их струны совпадают с этими соединениями. Не переименовывайте один в другой идентификатор или не выводите из него экспериментальную стереохимию.
 
@@ -64,7 +64,7 @@ Keep all outputs in English and do not delegate.
 
 Откройте **pubchem-homologs-source.json**, чтобы проверить все восемь операций, точные данные поиска и необработанные ответы. Откройте **pubchem-homologs-notes.md** для процедуры и проверки. Сохраненный CSV сравнивали с необработанными записями; Семь тождеств, формул и линейных структур согласованы.
 
-![Сохраненная процедура, результаты валидации и пределы интерпретации](/img/open-science/workflow-extensions/pubchem-notes.png)
+![Сохраненная процедура, результаты валидации и пределы интерпретации](/img/open-science/workflow-extensions/pubchem-notes.webp)
 
 Используйте кнопку предварительного просмотра **Download**, чтобы сохранить локальную копию. Для этого загрузите <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs.csv">CSV</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-source.json">источник записи</ExampleDownload> и <ExampleDownload path="/examples/workflow-extensions/pubchem-homologs-notes.md">примечания</ExampleDownload>. Записи PubChem могут меняться; Сохраните исходный снимок с помощью вашего анализа.
 

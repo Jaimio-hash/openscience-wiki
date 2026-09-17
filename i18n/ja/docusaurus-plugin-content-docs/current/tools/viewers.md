@@ -21,7 +21,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 3. キャンバスの下に示すように、回転、ズーム、または**シフト + ドラッグ**をパンにスクロールするドラッグします。
 4. 必要なときに元のファイルをダウンロードします。 画面を閉じて会話に戻ります。
 
-![実際の1UBQ漫画ビュー](/img/open-science/capabilities-walkthrough/26-pdb-cartoon.jpg)
+![実際の1UBQ漫画ビュー](/img/open-science/capabilities-walkthrough/26-pdb-cartoon.webp)
 
 | スタイル | それが強調するもの |
 | --- | --- |
@@ -39,7 +39,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 [UniProtのFASTAエンドポイント](https://rest.uniprot.org/uniprotkb/P04637.fasta)からダウンロードした<ExampleDownload path="/examples/capabilities/P04637.fa">P04637 ファスタ</ExampleDownload>を開きます。 `>` ヘッダーのアクセシオン/オーナリズム/遺伝子と下にあるシーケンスを調べます。 ネイティブレンダラーは、ソーステキストを保存します。 シーケンスアライメントや編集アプリケーションではありません。
 
-![ソースプレビューの実際のUniProt FASTA](/img/open-science/capabilities-walkthrough/31-fasta-preview.jpg)
+![ソースプレビューの実際のUniProt FASTA](/img/open-science/capabilities-walkthrough/31-fasta-preview.webp)
 
 会話でシーケンスを使用するには、現在のファイルを**+ → Attach files**に添付し、エージェントに名前を反するのではなく、ファイルを読み込むように依頼してください。 このP04637入力については、`P53_HUMAN`ヘッダー、**393アミノ酸**、初期シーケンス**MEEPQSDPSVの特長**を確認してください。 報告したチェックサムを、本人が確認したファイルと比較します。
 
@@ -51,7 +51,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 `smiles: "CC(=O)Oc1ccccc1C(=O)O"`と`filename: "aspirin"`で`preview_molecule`を実行するためにMolecule Connectorを要求します。 生成された**アスピリン.mol**カードとフルスクリーンプレビューを開きます。
 
-![内蔵のOpenChemLibビューアでレンダリングされたアスピリン](/img/open-science/capabilities-walkthrough/16-aspirin-viewer.jpg)
+![内蔵のOpenChemLibビューアでレンダリングされたアスピリン](/img/open-science/capabilities-walkthrough/16-aspirin-viewer.webp)
 
 この例では、コールは有効な構造、式**C9H8O4の特長**、分子量**180.15852**、および**13重原子**を返し、<ExampleDownload path="/examples/capabilities/aspirin.mol">アスピリン.mol</ExampleDownload>を保存しました。 ビューアーは手動で開き、点検されました。 これはオフライン構造レンダリングです。 結合の類縁、ドッキングのポーズか治療上の活動は予測しません。
 

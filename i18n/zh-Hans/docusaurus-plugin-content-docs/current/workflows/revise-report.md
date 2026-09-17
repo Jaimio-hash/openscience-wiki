@@ -29,11 +29,11 @@ read and flag unavailable figure inspection. Do not invent measurements.
 Save and reopen the draft. Do not overwrite it in later revisions.
 ```
 
-![Open-Science 中附加的来源 PDF 与初稿任务](/img/open-science/workflow-extensions/report-input.png)
+![Open-Science 中附加的来源 PDF 与初稿任务](/img/open-science/workflow-extensions/report-input.webp)
 
 出现授权时检查并允许相关文件读取。在 **Generated** 或 **Files** 中打开 **catalyst-brief-v1.md**，阅读实际保存的初稿。会话中的回答不能代替对文件内容的检查。
 
-![编辑修订前已保存的第一版简报](/img/open-science/workflow-extensions/report-draft.png)
+![编辑修订前已保存的第一版简报](/img/open-science/workflow-extensions/report-draft.webp)
 
 ## 2. 把反馈写成可落实的修改要求
 
@@ -64,7 +64,7 @@ Reopen both saved files and check them against the comments. Use English.
 
 打开 **catalyst-brief-v2.md**。本例得到 **117 词摘要**、区分两个工作点的两行表格，以及三项明确标为建议的后续验证。
 
-![修订后的摘要与区分选择性和稳定性测试的表格](/img/open-science/workflow-extensions/report-revised.png)
+![修订后的摘要与区分选择性和稳定性测试的表格](/img/open-science/workflow-extensions/report-revised.webp)
 
 关键区别是：**−1.2 V vs RHE 下 CO 法拉第效率为 98.9%**；另一项测试是在 **−0.8 V vs RHE 下观察 20 小时电流保持情况**。不能合并成“98.9% 持续 20 小时”。正文 PDF 第 6 页 Fig. 6b–d、第 7 页 Fig. 6e 对应这些证据，第 8 页介绍 H 型电解池测量；补充 PDF 第 47—48 页 Figs. 51–52 对应氢气选择性和 NMR 产物检查。
 
@@ -74,7 +74,7 @@ Reopen both saved files and check them against the comments. Use English.
 
 打开 **catalyst-brief-v2-response.md**，逐条找到 C1—C6，返回它指向的修订段落，确认承诺的修改确实存在。仅有“Resolved”标签不能作为完成依据。
 
-![实际保存的回复表将六条意见对应到修订位置](/img/open-science/workflow-extensions/report-response.png)
+![实际保存的回复表将六条意见对应到修订位置](/img/open-science/workflow-extensions/report-response.webp)
 
 检查建议仍标为建议，DOI 仍为 **10.1038/s41467-019-12510-0**，且 **catalyst-brief-v1.md** 保留未改。无法取得的证据应继续写在回复中。
 

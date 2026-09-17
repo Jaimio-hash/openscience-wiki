@@ -49,13 +49,13 @@ claim to have read full text unless you actually retrieved it.
 
 **Save to Literature Inbox?**이 나타나면, 가동을 검토하고 의도한 저장을 허가합니다. 저축 후보자는 도서관에 받아 들일 수 있습니다.
 
-![단계 문학 후보에 대한 권한](/img/open-science/prisma-walkthrough/03-inbox-save-approval.png)
+![단계 문학 후보에 대한 권한](/img/open-science/prisma-walkthrough/03-inbox-save-approval.webp)
 
 ## 2. 접수하기 전에 각 후보자 검토 {/* #2-review-each-candidate-before-accepting */}
 
 **Library → Inbox**을 엽니다. 이 실행 배지를 보여 **3**, 각 행은 제목을 표시, 첫 번째 저자, 출판 년과 **Crossref를 통해 발견**.
 
-![3 개의 실제 PRISMA 종이를 기다리고 검토](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![3 개의 실제 PRISMA 종이를 기다리고 검토](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 1. 후보 제목을 선택하여 세부 사항을 열 수 있습니다.
 2. **Provider**, 그 소스 링크 및 **Identifiers → DOI**을 통해 의도한 종이에 체크하십시오.
@@ -63,7 +63,7 @@ claim to have read full text unless you actually retrieved it.
 4. 정체성 일치시 **Accept**을 선택하십시오. 후보자는 Inbox에서 사라지고 라이브러리 레코드가됩니다.
 5. 다른 두 가지 반복. 배지는 3에서 2로 1로 변경됩니다. 최종 상태는 **Inbox is clear**이었다.
 
-![후보자의 Crossref 소스 및 정확한 DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.png)
+![후보자의 Crossref 소스 및 정확한 DOI](/img/open-science/prisma-walkthrough/05-inbox-doi-source.webp)
 
 | Inbox 통제 | 뚱 베어 | 사용 상황 |
 | --- | --- | --- |
@@ -81,25 +81,25 @@ sidebar **New collection** 컨트롤과 함께 컬렉션 만들기:
 - **묘사:** 상태 업데이트 및 과거 보고 지도를 포함. 설명은 조직 텍스트, 에이전트 지침이 아닙니다.
 - **Create collection** 선택; 이름은 요구됩니다, 그러나 묘사는 선택적입니다. **Cancel** 및 **Close**는 초안을 버려.
 
-![목적별 독서 컬렉션](/img/open-science/prisma-walkthrough/06-create-collection.png)
+![목적별 독서 컬렉션](/img/open-science/prisma-walkthrough/06-create-collection.webp)
 
 **All references**에서 `PRISMA`을 검색합니다. 정확히 세 개의 임의의 레코드가 표시되어 체크 박스를 선택하고 **Add to collection → PRISMA reporting - Core reading**을 사용하십시오. 작업은 선택을 취소합니다. 다시 세 개의 레코드를 선택, 다음 **Add to project → PRISMA - Systematic review reading pack**을 사용합니다.
 
 컬렉션을 열고 세 개의 레코드를 확인합니다. 프로젝트와 수집 체크박스 모두 확인하기 위한 참조 세부 사항을 엽니다. 이들은 공유 기록에 대한 링크, bibliography의 3 개의 추가 사본.
 
-![완성 된 3 종이 수집](/img/open-science/prisma-walkthrough/07-core-reading-collection.png)
+![완성 된 3 종이 수집](/img/open-science/prisma-walkthrough/07-core-reading-collection.webp)
 
 ## 4. 첨부파일 {/* #4-attach-usable-full-text */}
 
 2021 용지를 열고 **Find full-text PDF**을 선택합니다. 이 실행에서 유럽 PMC를 반환합니다. **Add attachment**을 선택하기 전에 **Open source** 검사.
 
-![전체 텍스트 소스를 발견](/img/open-science/prisma-walkthrough/08-full-text-source.png)
+![전체 텍스트 소스를 발견](/img/open-science/prisma-walkthrough/08-full-text-source.webp)
 
 소스가 발견되었지만 **Add attachment**은 **PDF could not be added**을 반환했습니다. 로그인 요구 사항, 만료된 링크 및 50 MB 제한을 포함하여 가능한 메시지 목록; 원인을 식별하지 않습니다.
 
 복구하려면, [게시자 기사 페이지](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003583)에서 오픈 가능한 PDF을 다운로드하십시오. 동일한 참고로 돌아와 **Add PDF**을 사용합니다. 다운로드된 파일을 선택한 다음 첨부 파일에서 **프리즘 2020-statement.pdf**을 엽니다. 성공적으로 첨부된 파일은 **모델 번호: 806.1**과 **15 페이지** 미리보기를 보여준다. 기록에 대한 페이지에 제목과 DOI을 확인합니다.
 
-![게시자 PDF 성공적으로 첨부 및 오픈](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![게시자 PDF 성공적으로 첨부 및 오픈](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 눈에 띄는 소스 결과는 첨부 된 PDF이 아닙니다. 붙어있는 PDF는 대리인이 그것을 읽는 것을 증명하지 않습니다. **Read with agent**은 이후의 요청을 위한 읽기 컨텍스트를 공급하는 별도의 동작입니다.
 

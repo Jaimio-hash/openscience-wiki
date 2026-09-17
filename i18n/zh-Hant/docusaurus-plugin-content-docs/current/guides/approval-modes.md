@@ -26,7 +26,7 @@ last_update:
 
 開啟輸入框旁的 **Agent controls**，閱讀當前模式和框架相容性說明。Full access 控制元件有自己的確認流程。**Auto-review** 是另一個結果稽核選項，不表示自動批准編輯。
 
-![實際英文權限模式選擇器](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![實際英文權限模式選擇器](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 檢查當前 Agent 顯示的實際模式，不同框架支援的審批行為可能不同。選擇前閱讀當前模式的說明。
 
@@ -34,7 +34,7 @@ last_update:
 
 批准前核對操作、選定環境與程式碼。資料檢查應讀取指定輸入並寫入所需結果；安裝缺失依賴屬於另一項操作，需要單獨檢查其目的和影響。
 
-![公開 GSE60450 案例中的 Python 執行授權](/img/open-science/guides-walkthrough/25-python-permission.png)
+![公開 GSE60450 案例中的 Python 執行授權](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | 控制元件或資訊 | 檢查內容或操作 |
 | --- | --- |
@@ -87,7 +87,7 @@ last_update:
 
 撤銷影響後續審批，不會逆轉已完成的編輯或網路請求；更寬範圍的授權仍可能允許該操作。
 
-![撤銷會話分組後重新出現執行授權](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![撤銷會話分組後重新出現執行授權](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 權限清單不完整時，先等待載入或重試失敗請求，再執行分組撤銷；完成後重新檢查所選範圍。
 

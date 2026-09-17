@@ -12,7 +12,7 @@ last_update:
 
 **Settings → Agent** を開きます。 このページは **Available** から **Installed** を分離します。 何も変更する前に、インストールされたカードにバージョン、パス、**Active**マーカーを読みます。
 
-![検出されたアプリ管理Codex](/img/open-science/local-acceptance/agent-codex-active.png)
+![検出されたアプリ管理Codex](/img/open-science/local-acceptance/agent-codex-active.webp)
 
 | 制御/ステータス | 意味と行動 |
 | --- | --- |
@@ -63,11 +63,11 @@ app-managed update は、アプリ所有のランタイムを置き換えます�
 4. **Install OpenCode → App-managed download (recommended)** を選択します。 **Installed**カードを待ってから、それを選択し、**Switch**を確認します。
 5. **Active**、ランタイムパス、互換性のあるモデル選択をチェックします。 バックエンドを再インストールすると、モデルプロバイダは設定されません。
 
-![アプリ管理OpenCodeアンインストールのスコープ](/img/open-science/priority-completion/01-opencode-uninstall.png)
+![アプリ管理OpenCodeアンインストールのスコープ](/img/open-science/priority-completion/01-opencode-uninstall.webp)
 
 バックエンドを削除する前に、別の利用可能なバックエンドに切り替えます。 アクティブバックエンドは、この制御を介して削除することはできません。 再インストール後、再検出して有効化し、既存のプロジェクトを開き、接続をチェックするための小さなリクエストを実行します。
 
-![OpenCodeが再びインストールされ、選択された](/img/open-science/priority-completion/03-opencode-reinstalled.png)
+![OpenCodeが再びインストールされ、選択された](/img/open-science/priority-completion/03-opencode-reinstalled.webp)
 
 インストールアクションが無効になっている場合は、進行中の別のインストール/スイッチと所定の前提条件エラーを確認してください。 検出が成功したが、リクエストが失敗した場合は、モデル認証とフレームワーク/APIの互換性を別々に検査します。
 

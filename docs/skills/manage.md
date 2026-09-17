@@ -25,11 +25,11 @@ For catalog browsing, installation and updates, follow the [Skill marketplace gu
 5. Close preview, select the candidate and choose **Import selected (1)**.
 6. Search the imported row and inspect its final name and source.
 
-![Inspecting the full package before importing](/img/open-science/capabilities-walkthrough/11-skill-package-preview.jpg)
+![Inspecting the full package before importing](/img/open-science/capabilities-walkthrough/11-skill-package-preview.webp)
 
 In this example, the original Personal Skill already existed. The preview displayed **Name exists**, and import created a separate **Imported `rnaseq-count-qc-2`**. The original and its Specialist binding remained. Do not assume every import updates the existing package; inspect the candidate's source and update/replace diagnostics.
 
-![The imported copy and original Personal Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.jpg)
+![The imported copy and original Personal Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.webp)
 
 | Import control | Purpose |
 | --- | --- |
@@ -53,9 +53,9 @@ A Markdown upload needs YAML `name` and `description`; a ZIP/`.skill` bundle nee
 4. Return to Skills, search `peer-review` and inspect the Imported row. The source folder stays in place; Open-Science uses an imported copy.
 5. Use **Rescan** after changing installed folders. Recheck origin, selection and status before importing again.
 
-![Preview the locally installed peer-review package](/img/open-science/local-todo-batch/12-installed-skill-preview.png)
+![Preview the locally installed peer-review package](/img/open-science/local-todo-batch/12-installed-skill-preview.webp)
 
-![Find the imported package in the Skills list](/img/open-science/local-todo-batch/13-installed-skill-imported.png)
+![Find the imported package in the Skills list](/img/open-science/local-todo-batch/13-installed-skill-imported.webp)
 
 After import, inspect the template and reference files in the Skill detail. Before using a method from another assistant, check that its required tools and runtime features are available in this session.
 
@@ -69,7 +69,7 @@ After import, inspect the template and reference files in the Skill detail. Befo
 4. Close preview, select the intended candidate and choose **Import selected (1)**. Wait for the result and check its name under **Imported skills**.
 5. Return to Skills and search that name. Inspect its source and availability before using it.
 
-![Review a GitHub Skill and its pinned source before import](/img/open-science/local-todo-batch/15-github-skill-preview.png)
+![Review a GitHub Skill and its pinned source before import](/img/open-science/local-todo-batch/15-github-skill-preview.webp)
 
 Importing `fair-esm2` from the product repository created **`fair-esm2-2`** because the built-in name already existed. The built-in package remained. Importing instructions does not install model weights or establish that inference works.
 
@@ -77,7 +77,7 @@ Importing `fair-esm2` from the product repository created **`fair-esm2-2`** beca
 
 Scan the same repository with the intended newer ref. The existing candidate can show **Update available**. Select only that candidate and import it; inspect the existing imported row and preview afterward. In the ESM-2 check, the same `fair-esm2-2` copy was updated, and scanning that ref again showed **Imported**. The updated instruction body matched the repository source. The importer rewrites frontmatter and the collision-safe name, so whole-file bytes need not match the original SKILL.md.
 
-![An upstream revision is available for the imported copy](/img/open-science/local-todo-batch/16-github-update-available.png)
+![An upstream revision is available for the imported copy](/img/open-science/local-todo-batch/16-github-update-available.webp)
 
 ### Recover from GitHub rate limiting
 
@@ -87,7 +87,7 @@ For **GitHub request was rate-limited**, open **Manage GitHub credential**, ente
 
 Open **Manage**, filter by source/status, and search a specific method. Select the result before applying an action. **Selected (n)** shows the selection; **Clear selection** empties it. Review the full selected set when filters change.
 
-![The imported copy disabled in bulk management](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.jpg)
+![The imported copy disabled in bulk management](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.webp)
 
 After changing availability, reopen the Skill detail to confirm its state. Keep an export of a method you need before deleting it.
 

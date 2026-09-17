@@ -17,9 +17,9 @@ last_update:
 3. 계획의 기대. **Plan control** 허가 카드가 나타나면, 검사하고 의도한 범위를 허용하거나 그것을 deny. 이 계획 작성 / 결정 기록, 모든 미래 실행되지 않습니다.
 4. **Plan ready for review**에 대한 대기. 정상적인 단락을 대우하지 마십시오 “그것이 나의 계획입니다” 구조화된 승인 카드가 존재한다는 증거로.
 
-![메뉴에서 첫번째 계획](/img/open-science/guides-walkthrough/21-plan-first-entry.png)
+![메뉴에서 첫번째 계획](/img/open-science/guides-walkthrough/21-plan-first-entry.webp)
 
-![별도의 권한을 생성하고 계획을 기록](/img/open-science/guides-walkthrough/22-plan-permission.png)
+![별도의 권한을 생성하고 계획을 기록](/img/open-science/guides-walkthrough/22-plan-permission.webp)
 
 지정된 비 교환 된 원시 카운트, 별도의 ID / 길이 메타 데이터, per-sample QC, 세 개의 관리 된 출력 및 비 차압 주장. 정확한 초기 요청은 판결을 쉽게 할 수 있습니다.
 
@@ -27,7 +27,7 @@ last_update:
 
 **Open**을 선택하여 대화 옆에 구조된 계획을 볼 수 있습니다. Inspect 단계, 단계 순서, 실행 소유자, 원하는 출력 및 feasibility 노트. **Enter full screen**을 사용하여 긴 계획을 읽고 **Download Plan**을 유지하십시오. 신뢰 라벨은 계획의 평가이며, 코드가 이미 실행되었는지 증거가 아닙니다.
 
-![단계와 원하는 출력을 가진 구조화된 계획](/img/open-science/guides-walkthrough/23-plan-review.png)
+![단계와 원하는 출력을 가진 구조화된 계획](/img/open-science/guides-walkthrough/23-plan-review.webp)
 
 | 통제/전류 | 무엇을 할 것인가? |
 | --- | --- |
@@ -42,7 +42,7 @@ last_update:
 
 **Respond to Plan**에서, 정확히 무슨 변화가 있는지. 예를 들어, 입력-integrity 체크를 요청하고, 각 출력을 다시 열고, 단축된 플로우 라벨과 고유 식별자 간의 매핑을 합니다. **Send Plan feedback**을 선택하면 교체를 기다립니다.
 
-![제출하기 전에 입력된 피드백](/img/open-science/guides-walkthrough/24-plan-feedback.png)
+![제출하기 전에 입력된 피드백](/img/open-science/guides-walkthrough/24-plan-feedback.webp)
 
 교체를 읽고 **Approve** 버튼을 사용하십시오. 이미 오래된 미리보기가 교체 된 경고로 볼 수 있습니다. 표시된 단계는 활성 계획의 최신 진행이 아닙니다. 이전 스크린 샷을 승인하는 것보다 적극적인 계획을 재개합니다.
 

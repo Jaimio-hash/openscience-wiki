@@ -10,7 +10,7 @@ Verwenden Sie **Settings → Storage**, um den Speicherort und die Festplattennu
 
 ## Nutzung von Lese- und Refresh-Disks {/* #read-and-refresh-disk-usage */}
 
-![Tatsächlicher verwalteter Speicher nach den Forschungsbeispielen](/img/open-science/local-acceptance/storage-installed-location.png)
+![Tatsächlicher verwalteter Speicher nach den Forschungsbeispielen](/img/open-science/local-acceptance/storage-installed-location.webp)
 
 Lesen Sie **Data location**, bevor Sie eine fehlende Datei sichern oder diagnostizieren. Dies ist die verwaltete Wurzel der App, getrennt von einem externen Quellordner, der einem Projekt gewährt wird. **Refresh**-Rescans; vor dem Vergleich der Messungen die zuletzt abgetastete Zeit überprüfen.
 
@@ -43,7 +43,7 @@ Beenden Sie aktive Aufgaben und führen Sie Exporte wichtiger Inputs, Outputs un
 4. Überprüfen Sie die Quelle, das Ziel, den verfügbaren Speicherplatz und die Wiederherstellungsmitteilung.
 5. **Change location** sendet einen gültigen Zug; **Cancel** lässt den aktuellen Standort unverändert.
 
-![Relocation-Formular mit Runtime-Wiederaufbauanforderungen](/img/open-science/local-acceptance/storage-destination-form.png)
+![Relocation-Formular mit Runtime-Wiederaufbauanforderungen](/img/open-science/local-acceptance/storage-destination-form.webp)
 
 Die App verschiebt bestehende Forschungsdaten. Python/R Umgebungen sind **nach Neustart neu aufgebaut, nicht kopiert**. Der freigegebene Laufzeitpaket-Cache wird kopiert, um Offline-Wiederaufbauten zu unterstützen, aber nur Pip- oder CRAN-Pakete werden nicht garantiert wiederhergestellt. Zusätzlicher Umbauraum kann nicht zuverlässig vorhergesagt werden. Erfassen Sie die Anforderungen an die Umgebung / das Paket vor einem echten Umzug und testen Sie die benötigte Laufzeit danach.
 
@@ -65,7 +65,7 @@ Bestätigen Sie bei einem externen R-Interpreter, dass die ausgewählte ausführ
 
 Öffnen Sie nach der Rückkehr ein bestehendes Projekt erneut, geben Sie ein und speichern Sie den Bericht. Bestätigen Sie, dass die verwaltete Laufzeit bereit ist, führen Sie dann eine kleine Berechnung aus und speichern Sie ein neues Ergebnis. Öffnen Sie es erneut, um zu überprüfen, ob der Standarddatenspeicherort verwendet wird.
 
-![Gespeichertes R-Ergebnis nach Rückkehr zum Standardspeicherort wieder geöffnet](/img/open-science/local-acceptance/r-default-chart.png)
+![Gespeichertes R-Ergebnis nach Rückkehr zum Standardspeicherort wieder geöffnet](/img/open-science/local-acceptance/r-default-chart.webp)
 
 Wenn **Ein anderer Ordner namens OpenScience existiert bereits hier. Wählen Sie einen anderen Standort.** erscheint, blockiert die App das Überschreiben. Stornieren und bewahren Sie dieses Verzeichnis. Aufbau von Eigentum, Inhalt und Backup vor der Lösung des Konflikts; Löschen Sie nicht einfach einen gleichnamigen Ordner. Migration nur nach Zielvalidierungsdurchläufen wiederholen.
 
@@ -78,7 +78,7 @@ Wenn **Ein anderer Ordner namens OpenScience existiert bereits hier. Wählen Sie
 3. **Finish move** versucht, die vorhandene Kopie zu vervollständigen. **Discard copy** verlässt diese unfertige Kopie, während der ursprüngliche Speicherort beibehalten wird. Lesen Sie zuerst den Bestätigungsumfang.
 4. Wenn **Conversation storage needs attention** angezeigt wird, lösen Sie den unvollendeten Zug, wählen Sie **Retry** und öffnen Sie das ursprüngliche Projekt und den Bericht erneut.
 
-![Wiederherstellungsoptionen für die unfertige Speicherbewegung](/img/open-science/local-todo-batch/46-storage-recovery-choice.png)
+![Wiederherstellungsoptionen für die unfertige Speicherbewegung](/img/open-science/local-todo-batch/46-storage-recovery-choice.webp)
 
 Wenn der letzte Schalter wiederholt fehlschlägt, beenden Sie die aktive Arbeit, beenden Sie die App und öffnen Sie sie erneut, und versuchen Sie dann den Umzug. Wenn der Fehler weiterhin besteht, behalten Sie den ursprünglichen Speicherort bei und sammeln Sie die Fehlerdetails, bevor Sie eine weitere Änderung vornehmen.
 
@@ -104,7 +104,7 @@ Wählen Sie den **row's Restore**, um eine archivierte Sitzung wiederherzustelle
 4. Wählen Sie **Restore project**.
 5. Öffnen Sie das Projekt, seine Konversation und einen gespeicherten Bericht.
 
-![Verwaltung des archivierten GSE60450-Projekts](/img/open-science/local-todo-batch/34-archived-project-manage.png)
+![Verwaltung des archivierten GSE60450-Projekts](/img/open-science/local-todo-batch/34-archived-project-manage.webp)
 
 Öffnen Sie einen gespeicherten Bericht und seine Überarbeitungen nach der Wiederherstellung. Archivierung organisiert das Projekt; Es führt die Analyse nicht erneut aus oder entfernt den Versionsverlauf des Berichts.
 
@@ -114,7 +114,7 @@ Wählen Sie den **row's Restore**, um eine archivierte Sitzung wiederherzustelle
 
 **Delete project** öffnet eine permanente Löschungsbestätigung. Lesen Sie den Umfang, bevor Sie bestätigen: Verwaltete Artefakte und Uploads sind von externen Arbeitsordnerdateien getrennt, die nicht gelöscht werden. Überprüfen Sie, welche Aufgaben und Kernel gestoppt werden und welche verwalteten Sitzungsarbeitsbereiche im Speicher verbleiben. Archivierung und Löschung haben unterschiedliche Ergebnisse.
 
-![Löschumfang für ein separat erstelltes leeres Projekt](/img/open-science/local-todo-batch/35-disposable-project-delete.png)
+![Löschumfang für ein separat erstelltes leeres Projekt](/img/open-science/local-todo-batch/35-disposable-project-delete.webp)
 
 Verwenden Sie ein leeres Einwegprojekt, wenn Sie den Löschfluss lernen. Überprüfen Sie die betroffenen Aufzeichnungen der Bestätigung, bevor Sie ein Projekt mit Forschungsarbeiten löschen.
 

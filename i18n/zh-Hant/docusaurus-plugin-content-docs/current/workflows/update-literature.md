@@ -32,7 +32,7 @@ Do not retrieve full text or run the later update yet. Use English.
 
 本次從 **3,643 條命中中取回 12 條**，保留 **7 條**、排除 **5 條**。先開啟 **freshwater-search-plan.md**，核對篩選條件和日期，再繼續。此時儲存的計劃記錄的是更新前的狀態。
 
-![已儲存的基線檢索條件和保留記錄](/img/open-science/workflow-extensions/freshwater-search-plan.png)
+![已儲存的基線檢索條件和保留記錄](/img/open-science/workflow-extensions/freshwater-search-plan.webp)
 
 注意證據層級：部分候選只返回標題和後設資料，部分提供許可允許返回的摘要。本例將相關遷移路徑的綜述作為背景材料納入，不代表它們都提供淡水環境中的實驗結論。
 
@@ -40,11 +40,11 @@ Do not retrieve full text or run the later update yet. Use English.
 
 下載<ExampleDownload path="/examples/workflow-extensions/freshwater-baseline.ris">基線 RIS</ExampleDownload>。開啟 **Library → New collection**，建立並選中 **Freshwater Microplastic Transport**，再點選 **Import references**。選取 RIS，核對目標集合和匹配方式後匯入。
 
-![基線文獻匯入目標集合的預覽](/img/open-science/workflow-extensions/freshwater-import-baseline.png)
+![基線文獻匯入目標集合的預覽](/img/open-science/workflow-extensions/freshwater-import-baseline.webp)
 
 本次實際完成 **7 Created、0 Reused、0 Skipped、0 Failed**。點選 **Done**，確認集合包含 7 篇。若你的文獻庫已經存在匹配記錄，新增與複用的數量可能不同。
 
-![包含七篇文獻的基線集合](/img/open-science/workflow-extensions/freshwater-collection-baseline.png)
+![包含七篇文獻的基線集合](/img/open-science/workflow-extensions/freshwater-collection-baseline.webp)
 
 ## 3. 在同一會話中檢索後續時間段 {/* #3-在同一会话中检索后续时间段 */}
 
@@ -67,7 +67,7 @@ Write in English and reopen the outputs.
 
 後續檢索從 **7,600 條命中中取回 12 條**，其中 **7 條新增、0 條與基線重疊、5 條排除**。兩次都只取前 12 條候選。排名和收錄會變化，這些數字對應 2026 年 9 月 16 日的實際結果。
 
-![儲存後的更新稽核表，區分新增與排除記錄](/img/open-science/workflow-extensions/freshwater-update-audit.png)
+![儲存後的更新稽核表，區分新增與排除記錄](/img/open-science/workflow-extensions/freshwater-update-audit.webp)
 
 應比較實際 DOI 集合，不能只拿總數相減。將註明日期的<ExampleDownload path="/examples/workflow-extensions/freshwater-update-review.csv">更新稽核表</ExampleDownload>和<ExampleDownload path="/examples/workflow-extensions/freshwater-update-notes.md">更新說明</ExampleDownload>與基線一起儲存。
 
@@ -75,11 +75,11 @@ Write in English and reopen the outputs.
 
 下載<ExampleDownload path="/examples/workflow-extensions/freshwater-update.ris">新增文獻 RIS</ExampleDownload>。在 Library 中選中 **Freshwater Microplastic Transport**，點選 **Import references**，保持 **Reuse existing reference**，便於複用已存在的匹配項。
 
-![更新匯入預覽顯示七條新增文獻](/img/open-science/workflow-extensions/freshwater-import-update.png)
+![更新匯入預覽顯示七條新增文獻](/img/open-science/workflow-extensions/freshwater-import-update.webp)
 
 本次更新實際完成 **7 Created、0 Reused、0 Skipped、0 Failed**，集合最終為 **14 篇**，與兩組保留記錄按 DOI 合併後的數量一致。
 
-![更新後的集合包含十四篇文獻](/img/open-science/workflow-extensions/freshwater-collection-updated.png)
+![更新後的集合包含十四篇文獻](/img/open-science/workflow-extensions/freshwater-collection-updated.webp)
 
 基線檔案沒有被重寫。保留它的日期範圍與檢索記錄，後續讀者才能區分原有材料和新增材料。用於開題或支撐科研論斷前，還需要取得並閱讀相關全文；後設資料入庫不等於完成證據評價。重疊檢索詞的合併方式見[合併多批檢索結果](merge-literature-searches.md)。
 

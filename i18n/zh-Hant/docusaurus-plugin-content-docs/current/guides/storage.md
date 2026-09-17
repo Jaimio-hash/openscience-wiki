@@ -10,7 +10,7 @@ last_update:
 
 ## 檢視與重新整理磁碟用量 {/* #查看与刷新磁盘用量 */}
 
-![研究示例執行後的實際託管儲存](/img/open-science/local-acceptance/storage-installed-location.png)
+![研究示例執行後的實際託管儲存](/img/open-science/local-acceptance/storage-installed-location.webp)
 
 備份或排查檔案丟失前先確認 **Data location**。它是應用託管根目錄，與專案授權訪問的外部源目錄不同。**Refresh** 重新掃描，比較數值前檢查最近掃描時間。
 
@@ -43,7 +43,7 @@ last_update:
 4. 核對源、目標、可用空間和環境重建提示。
 5. **Change location** 提交有效遷移，**Cancel** 保留原位置。
 
-![遷移表單與執行環境重建提示](/img/open-science/local-acceptance/storage-destination-form.png)
+![遷移表單與執行環境重建提示](/img/open-science/local-acceptance/storage-destination-form.webp)
 
 應用移動已有科研資料，但 Python/R 環境在**重啟後重建，而非複製**。共享包快取會複製以支援離線重建，僅透過 pip/CRAN 安裝的包不保證恢復。額外重建空間無法可靠預估。實際遷移前記錄環境依賴，之後測試所需執行環境。
 
@@ -65,7 +65,7 @@ last_update:
 
 移回後，開啟一個已有專案，檢查原始輸入和已儲存報告能否讀取。確認託管執行環境已就緒，再執行一個小任務並儲存新結果；重新開啟該結果，確認應用使用的是預設資料位置。
 
-![返回預設位置後重新開啟的 R 結果](/img/open-science/local-acceptance/r-default-chart.png)
+![返回預設位置後重新開啟的 R 結果](/img/open-science/local-acceptance/r-default-chart.webp)
 
 如果顯示 **A different folder named OpenScience already exists here. Choose another location.**，應用會阻止覆蓋。取消並保留衝突目錄；確認它的歸屬、內容及備份後再處理，不要直接刪除同名目錄。只有目標透過校驗後才重新提交遷移。
 
@@ -78,7 +78,7 @@ last_update:
 3. **Finish move** 嘗試完成已有複製的切換；**Discard copy** 放棄未完成遷移的副本，保留原位置。先閱讀確認範圍。
 4. 若出現 **Conversation storage needs attention**，處理未完成遷移後選擇 **Retry**，然後重開原專案和報告。
 
-![未完成遷移的恢復選項](/img/open-science/local-todo-batch/46-storage-recovery-choice.png)
+![未完成遷移的恢復選項](/img/open-science/local-todo-batch/46-storage-recovery-choice.webp)
 
 如果最終切換反覆失敗，先結束活動任務，退出並重新開啟應用，再重試遷移。仍報錯時，保留原位置和錯誤詳情，先排查原因，再決定是否重新遷移。
 
@@ -104,7 +104,7 @@ last_update:
 4. 選擇 **Restore project**。
 5. 重開專案、對話和已儲存報告。
 
-![管理已歸檔的 GSE60450 專案](/img/open-science/local-todo-batch/34-archived-project-manage.png)
+![管理已歸檔的 GSE60450 專案](/img/open-science/local-todo-batch/34-archived-project-manage.webp)
 
 恢復後重新開啟儲存報告及其修訂。歸檔用於整理專案，不會重新執行分析或刪除報告的版本歷史。
 
@@ -114,7 +114,7 @@ last_update:
 
 **Delete project** 會開啟永久刪除確認。確認前閱讀影響範圍：託管產物與上傳檔案不同於外部工作目錄檔案，後者不會被刪除。檢查哪些任務和核心將停止，以及 Storage 中保留哪些託管 Session 工作區。歸檔與刪除的結果不同。
 
-![單獨建立的空專案的刪除範圍](/img/open-science/local-todo-batch/35-disposable-project-delete.png)
+![單獨建立的空專案的刪除範圍](/img/open-science/local-todo-batch/35-disposable-project-delete.webp)
 
 學習刪除流程時，使用單獨的空專案。刪除包含研究工作的專案之前，核對確認框列出的受影響記錄。
 

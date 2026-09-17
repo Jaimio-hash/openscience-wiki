@@ -27,7 +27,7 @@ En la gestión de lotes, revise el recuento seleccionado en el área de acción 
 
 Antes de eliminar un papel, inspeccione la opción de eliminar su Skills. Mantenga el Skills compartido si otros roles todavía los utilizan. Eliminar un duplicado no requiere eliminar el papel original.
 
-![Eliminar el papel desechable manteniendo el Skills compartido](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.jpg)
+![Eliminar el papel desechable manteniendo el Skills compartido](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.webp)
 
 ## Compartir e importar un paquete {/* #share-and-import-a-package */}
 
@@ -39,7 +39,7 @@ Antes de eliminar un papel, inspeccione la opción de eliminar su Skills. Manten
 2. En **Choose Skills to include**, seleccione explícitamente `rnaseq-count-qc` si el destinatario necesita sus archivos. Un Skill personal/importado instalado no está necesariamente incluido por defecto.
 3. Exportar e inspeccionar el archivo antes de compartir.
 
-![Selección de un Skill para incluir en el paquete Specialist](/img/open-science/capabilities-walkthrough/07-specialist-export.jpg)
+![Selección de un Skill para incluir en el paquete Specialist](/img/open-science/capabilities-walkthrough/07-specialist-export.webp)
 
 El <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.zip">paquete con Skill</ExampleDownload> real contiene `manifest.json`, `specialist.json`, `skills/rnaseq-count-qc/SKILL.md` y su esquema de referencia. Una exportación mínima puede contener sólo los dos archivos JSON. Los ID de Connector son referencias; Las credenciales, la confianza local y el acceso completo no se transfieren como autorización para uso.
 
@@ -52,7 +52,7 @@ El <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.
 5. El papel importado se guarda **discapacitados / SETUP INCOMPLETE**. Inspeccione las instrucciones y los enlaces de capacidades en el editor, elija el alcance de acceso previsto, luego **Save changes** para completar la configuración y habilitarlo.
 6. Reabrir el papel instalado y ejecutar una tarea pequeña y de alcance.
 
-![Resolver el conflicto RNA-seq Skill real durante la importación](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.jpg)
+![Resolver el conflicto RNA-seq Skill real durante la importación](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.webp)
 
 **Versión sin cambios** todavía puede acompañar un conflicto Skill. Elija la fuente Skill prevista explícitamente, y luego vuelva a abrir el papel importado para confirmar sus vinculantes y alcance de acceso.
 
@@ -71,11 +71,11 @@ El <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.
 
 Abrir **Browse Marketplace**, buscar un papel y elegir **View details**. Comprobar editor, fuente, versión, licencia, tamaño de descarga e incluido Skills/Connectors. **Refresh Marketplace** actualiza el catálogo; **Manage Marketplace sources** controla las fuentes configuradas. Todos/Oficial/Comunidad filtros se refieren al origen del catálogo, no disponibilidad de tiempo de ejecución.
 
-![El detalle del paquete de Auto Research Specialist real](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.jpg)
+![El detalle del paquete de Auto Research Specialist real](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.webp)
 
 Seleccione **Install Specialist**, luego confirme que el papel aparece en **Marketplace** e inspeccione su estado habilitante y sus vinculantes. Los recuentos de paquetes de catálogo describen ese paquete, no todas las capacidades de aplicación. La instalación no ejecuta una tarea de investigación o prepara cada dependencia externa; terminar cualquier configuración necesaria antes de usar.
 
-![Auto Research instalado y habilitado](/img/open-science/capabilities-walkthrough/23-marketplace-installed.jpg)
+![Auto Research instalado y habilitado](/img/open-science/capabilities-walkthrough/23-marketplace-installed.webp)
 
 ## Verificar antes de compartir {/* #verify-before-sharing */}
 

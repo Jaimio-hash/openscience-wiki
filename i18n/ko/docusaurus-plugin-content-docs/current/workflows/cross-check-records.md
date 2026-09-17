@@ -25,7 +25,7 @@ NASA 파일은 헤더 전에 설명 선으로 시작하고 사용할 수없는 �
 
 프로젝트를 열고 **+ → Attach files**과 CSV를 모두 첨부합니다. **Settings → Runtimes**에서 Python은 **Ready**이며 활성화됩니다. 이 사용 Python 3.12.14, NumPy 2.5.3, 팬다 2.3.3, Matplotlib 3.11.1 및 베개 12.3.0.
 
-![비교 요청에 첨부된 두 소스 CSV](/img/open-science/workflow-extensions/temperature-input.png)
+![비교 요청에 첨부된 두 소스 CSV](/img/open-science/workflow-extensions/temperature-input.webp)
 
 ## 2. 해석하기 전에 정렬을 묻는 질문 {/* #2-ask-for-alignment-before-interpretation */}
 
@@ -52,7 +52,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 **temperature-aligned.csv**을 엽니다. 기록된 비교는 **45 공유 년**를 포함합니다. 각 근원은 모두 있습니다 **30** 연간 점 견적은 그에 대해 요구 1991- - -2020 참고 의미; 누락 된 연간 값은 0으로 채워졌습니다.
 
-![저장된 연도 정렬 값 및 차이](/img/open-science/workflow-extensions/temperature-table.png)
+![저장된 연도 정렬 값 및 차이](/img/open-science/workflow-extensions/temperature-table.webp)
 
 겨냥된 방법은 NASA와 **크기: 0.53799554**에 대한 **크기: 0.61266667**입니다. 각 dataset의 자신의 의미를 뺍니다, 둘 다에서 단 하나 상쇄 아닙니다. 숫자 차이를 비교하기 전에 단위, 년 및 subtraction 방향을 확인하십시오.
 
@@ -60,7 +60,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 **temperature-comparison.png**을 엽니다. 첫번째 위원회는 다른 본래 지평을 유지합니다; 두 번째는 일반적인 기간 재분배 후 두 가지 시리즈를 비교합니다.
 
-![Open-Science의 Original-baseline 및 일반베이스 라인 온도 곡선](/img/open-science/workflow-extensions/temperature-plot.png)
+![Open-Science의 Original-baseline 및 일반베이스 라인 온도 곡선](/img/open-science/workflow-extensions/temperature-plot.webp)
 
 | 기록 된 결과, NASA 광부 HadCRUT | 값 |
 | --- | --- |
@@ -74,7 +74,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 **temperature-crosscheck.md**을 열고 CSV 및 코드로 소스 정의와 메트릭스를 비교합니다. 테이블은 원래 HadCRUT 신뢰 한계와 기계화 된 가치를 유지하지만, 비교는 추정된 기본 또는 소스 의존에 **뚱 베어** propagate 불확실성을 사용합니다.
 
-![저장된 보고서 문서는 실제 미터 및 제한](/img/open-science/workflow-extensions/temperature-report.png)
+![저장된 보고서 문서는 실제 미터 및 제한](/img/open-science/workflow-extensions/temperature-report.webp)
 
 <ExampleDownload path="/examples/workflow-extensions/temperature-aligned.csv">정렬 CSV</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/temperature-comparison.png">....</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.py">Python 스크립트</ExampleDownload> 및 <ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.md">- 연혁</ExampleDownload> 다운로드 사용할 수있는 두 개의 입력 파일로 나열된 라이브러리를 포함하는 Python 환경에서 재 실행하십시오.
 

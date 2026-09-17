@@ -20,11 +20,11 @@ Utilisez une catégorie pour les conventions durables comme la conservation des 
 4. Sélectionnez **Create**, puis **Add**. Entrez la note et sélectionnez **Save**.
 5. Laissez et rouvrez la catégorie pour vérifier son contenu et compter.
 
-![Nom de la catégorie, guide et rappel automatique](/img/open-science/guides-walkthrough/17-memory-category.png)
+![Nom de la catégorie, guide et rappel automatique](/img/open-science/guides-walkthrough/17-memory-category.webp)
 
 La note sauvegardée se lit comme suit : « Gardez la matrice de calcul GEO originale inchangée. Préserver les ID Gene d'Entrez comme texte, séparer la longueur des gènes des nombres d'échantillons, et enregistrer l'entrée SHA-256 avec chaque table dérivée.
 
-![Note enregistrée manuellement pendant que la mémoire est désactivée](/img/open-science/guides-walkthrough/18-memory-note.png)
+![Note enregistrée manuellement pendant que la mémoire est désactivée](/img/open-science/guides-walkthrough/18-memory-note.webp)
 
 | Contrôle | Effet et limite |
 | --- | --- |
@@ -47,7 +47,7 @@ La note sauvegardée se lit comme suit : « Gardez la matrice de calcul GEO orig
 3. Inspecter la demande **Save memory** lorsque l'approbation est requise. Vérifiez le contenu, la catégorie et la portée du projet proposés avant de sélectionner **Allow once**. Choisissez **Deny** s'il ne représente pas une convention convenue.
 4. Rouvrir la catégorie. Vérifiez que la note existe, a le texte prévu et apparaît dans le projet prévu. L'étiquette **auto** identifie une note créée par un agent; il ne s'agit pas d'un calcul vérifié par la convention.
 
-![Une convention de déclaration créée par l'agent à côté de la note de conservation de source manuelle](/img/open-science/non-workflow-completion/05-memory-note-category.png)
+![Une convention de déclaration créée par l'agent à côté de la note de conservation de source manuelle](/img/open-science/non-workflow-completion/05-memory-note-category.webp)
 
 ## Vérifiez le rappel dans une nouvelle conversation {/* #check-recall-in-a-new-conversation */}
 
@@ -65,7 +65,7 @@ Sélectionnez un point d'historique pour inspecter son fonctionnement, son modè
 
 Lorsque OpenCode fournit **Compact** dans le popover contextuel, sélectionnez-le et attendez **Context compacted**. Les messages originaux peuvent rester visibles pendant que le moteur continue à partir d'un résumé. Avant de continuer, demandez à l'agent d'énumérer les contraintes retenues et de les comparer avec vos exigences. Rétablir les contraintes manquantes ou incorrectes avant de commencer la prochaine opération. Le compactage ne garantit pas une rétention sans perte; Les mesures effectuées par les fournisseurs peuvent différer des estimations locales.
 
-![Compactage terminé et mesure du contexte déclaré par le fournisseur](/img/open-science/non-workflow-completion/11-context-compacted.png)
+![Compactage terminé et mesure du contexte déclaré par le fournisseur](/img/open-science/non-workflow-completion/11-context-compacted.webp)
 
 Pour une suite, indiquez l'objectif actuel, les décisions acceptées, les fichiers d'entrée/sortie exacts, la validation déjà faite et les questions non résolues. Liez les preuves enregistrées plutôt que de compter sur Mémoire pour les reconstruire. Utilisez [Sessions et sections](./sessions.md) pour les ramifications/exportations et [Utilisation](./usage.md) pour le volume cumulatif des jetons.
 

@@ -23,7 +23,7 @@ GSE60450 の実行が完了すると、**Edit…** を使用してこの情報�
 | 保存 | 変更を主張する | 閉じた後、サイドバーのタイトルを確認してください |
 | キャンセル/閉じる | ドラフトを申請せずに残しておく | これは、研究の実行をキャンセルしません |
 
-![セッションタイトルと説明エディタ](/img/open-science/guides-walkthrough/40-session-edit.png)
+![セッションタイトルと説明エディタ](/img/open-science/guides-walkthrough/40-session-edit.webp)
 
 行メニューから **Pin** を選択し、ピン留めされたグループでセッションを保持します。 **Unpin** は普通のリストに返します。 ピニングはアクセスを整理します; カーネルを生きたままにしたり、削除からセッションを保護したりしません。
 
@@ -35,7 +35,7 @@ GSE60450 の実行が完了すると、**Edit…** を使用してこの情報�
 
 ## セッションメニューを正しく読む {/* #read-the-session-menu-correctly */}
 
-![RNA-seqセッションに属するアクション](/img/open-science/guides-walkthrough/41-session-actions.png)
+![RNA-seqセッションに属するアクション](/img/open-science/guides-walkthrough/41-session-actions.webp)
 
 | アクション | 結果 | チェックイン |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ GSE60450 の実行が完了すると、**Edit…** を使用してこの情報�
 4. **Edit…**で`GSE60450 - follow-up interpretation`に名前を変更します。
 5. 次のリクエストを提出する前に、継承されたトランスクリプトを調べます。 必要に応じて、元のプロジェクトアーティファクトを明示的に参照してください。
 
-![ピン留めされた元の横に独立した名前の枝](/img/open-science/guides-walkthrough/57-session-branch.png)
+![ピン留めされた元の横に独立した名前の枝](/img/open-science/guides-walkthrough/57-session-branch.webp)
 
 ブランチは選択した会話履歴を保持しますが、元のライブカーネルを再作成しません。 **code shown** またはブロックされた歴史的リンクをラベル付けされたコピーされた活動のために、プロジェクトのファイルパネルから元のアーティファクトを開き、その生成セッションを検査します。
 
@@ -76,7 +76,7 @@ GSE60450 の実行が完了すると、**Edit…** を使用してこの情報�
 
 同じリビジョンパスもOpenCodeとローカルモデルで練習しました。修正されたリクエストは新しいフレーズを生成し、以前のオリジナルの返信を復元し、次に修正された返信を復元しました。 この接続のみの例では、ツールの状態や外部の副作用が逆転しているわけではありません。
 
-![履歴メッセージのリビジョンを切り替えるための制御](/img/open-science/local-todo-batch/18-message-revision.png)
+![履歴メッセージのリビジョンを切り替えるための制御](/img/open-science/local-todo-batch/18-message-revision.webp)
 
 **Cancel**は編集を提出せずに葉を取り除きます。 **Send**は新しい答えを要求します; 続行する前にチェックしてください。 フォローアップを使用して、次のアクションまたは別々の名前付き調査のためのブランチを修正します。
 
@@ -99,7 +99,7 @@ GSE60450 の実行が完了すると、**Edit…** を使用してこの情報�
 
 <p className="example-label"><strong>実践例</strong> 最終的なGSE60450 QCの定義だけを輸出して下さい</p>
 
-![最終的なQCの定義の選択はPDFの輸出のために回します](/img/open-science/local-todo-batch/20-selected-conversation-export.png)
+![最終的なQCの定義の選択はPDFの輸出のために回します](/img/open-science/local-todo-batch/20-selected-conversation-export.webp)
 
 **GSE60450 — Methods and claim audit**では、最終ターンを選択すると、そのリクエストとその4つのメトリック定義のみを含む1ページPDFが生成されます。 以前の議論は不在でした。 また、PDF全体の会話も再開し、チェックしました。 以前の選択したマークダウンエクスポートは、選択したフォローアップで始まりました。 ターンには複数のアシスタントメッセージが含まれているので、ワンターンを選択すると、正確に2つのメッセージをエクスポートする必要はありません。
 
@@ -109,13 +109,13 @@ GSE60450 の実行が完了すると、**Edit…** を使用してこの情報�
 
 **Download all artifacts**を選択し、ファイルを選択し、**Nのアーティファクトをダウンロード**を選択し、宛先フォルダを選択します。 このエントリは、別のファイルを保存します。 ダウンロードした2つのメソッドとクレーム・オーディオ・マークダウンファイルが再オープンし、保存されたアーティファクトバイトをバイト単位で一致させました。
 
-![セッションで保存した2つのレポートを選択](/img/open-science/local-todo-batch/21-session-artifact-selection.png)
+![セッションで保存した2つのレポートを選択](/img/open-science/local-todo-batch/21-session-artifact-selection.webp)
 
 ### プロジェクトファイルバンドルをダウンロード {/* #download-a-project-file-bundle */}
 
 左上→**Download artifacts…**でプロジェクト名メニューを開きます。 **Generated** と **Uploads** でファイルをグループ化します。 最初に選択されます。 **Uncheck all** を使用して、ファイルを渡すようにし、ZIP を保存します。
 
-![プロジェクトからレポート、QCテーブル、オリジナルのカウント入力を選択](/img/open-science/local-todo-batch/22-project-artifact-selection.png)
+![プロジェクトからレポート、QCテーブル、オリジナルのカウント入力を選択](/img/open-science/local-todo-batch/22-project-artifact-selection.webp)
 
 システムで**Cancel**を選択すると、保存する放棄にダイアログを保存します。 ファイルの選択は可能です。 書き込みが開始されると、アプリはキャンセルと終了を無効化します。 結果の待ち合わせ; コピー先のダイアログをキャンセルすると、書き込みの進行を中止することと異なります。
 

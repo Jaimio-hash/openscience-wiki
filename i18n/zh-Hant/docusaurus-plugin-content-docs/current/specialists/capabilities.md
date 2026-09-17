@@ -18,7 +18,7 @@ Specialist 的能力列表決定它能訪問哪些 Skills 和 Connectors。某�
 4. 在 **Connectors → Add a connector** 新增 **Omics Archives**，確認 **Connectors 1**。
 5. 開啟能力詳情核對資源，儲存後重新開啟角色確認繫結保留。
 
-![明確分配能力的 Specialist](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.jpg)
+![明確分配能力的 Specialist](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.webp)
 
 | 控制元件 | 作用 |
 | --- | --- |

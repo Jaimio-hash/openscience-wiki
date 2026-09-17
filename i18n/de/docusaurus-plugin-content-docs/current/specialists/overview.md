@@ -23,7 +23,7 @@ Ein Specialist ist eine gespeicherte Forschungsrolle: Identität, Anweisungen un
 
 Öffnen Sie **Settings → Specialists**. **Installed** zählt die lokal registrierten Rollen, einschließlich Reviewer. Verwenden Sie **Search specialists** und **Filter specialists by category**, dann öffnen Sie eine Zeile, um es zu inspizieren. **Browse Marketplace** öffnet einen anderen Katalog; ein gelisteter Markteintrag wird erst dann installiert, wenn Sie den Paket-/Setup-Flow abgeschlossen haben.
 
-![Der RNA-seq QC Reviewer wurde lokal installiert](/img/open-science/capabilities-walkthrough/06-specialist-list.jpg)
+![Der RNA-seq QC Reviewer wurde lokal installiert](/img/open-science/capabilities-walkthrough/06-specialist-list.webp)
 
 ## Marktplatzrollen beobachtet {/* #marketplace-roles-observed */}
 

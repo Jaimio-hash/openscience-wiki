@@ -27,7 +27,7 @@ Verwenden Sie ein Paket, um eine konfigurierte Rolle zu verschieben, und vervoll
 
 Bevor Sie eine Rolle löschen, prüfen Sie die Option, um ihre Skills zu löschen. Behalten Sie geteilte Skills, wenn andere Rollen sie noch verwenden. Das Löschen eines Duplikats erfordert nicht das Löschen der ursprünglichen Rolle.
 
-![Löschen der Einweg-Rolle bei gleichzeitiger Beibehaltung des freigegebenen Skills](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.jpg)
+![Löschen der Einweg-Rolle bei gleichzeitiger Beibehaltung des freigegebenen Skills](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.webp)
 
 ## Teilen und Importieren eines Pakets {/* #share-and-import-a-package */}
 
@@ -39,7 +39,7 @@ Bevor Sie eine Rolle löschen, prüfen Sie die Option, um ihre Skills zu lösche
 2. Wählen Sie in **Choose Skills to include** explizit `rnaseq-count-qc`, wenn der Empfänger seine Dateien benötigt. Ein installiertes persönliches / importiertes Skill ist standardmäßig nicht unbedingt enthalten.
 3. Exportieren und inspizieren Sie das Archiv vor dem Teilen.
 
-![Auswählen eines Skill zum Einschließen in das Specialist-Paket](/img/open-science/capabilities-walkthrough/07-specialist-export.jpg)
+![Auswählen eines Skill zum Einschließen in das Specialist-Paket](/img/open-science/capabilities-walkthrough/07-specialist-export.webp)
 
 Der aktuelle <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.zip">Paket mit Skill</ExampleDownload> enthält `manifest.json`, `specialist.json`, `skills/rnaseq-count-qc/SKILL.md` und sein Referenzschema. Ein minimaler Export kann nur die beiden JSON-Dateien enthalten. Connector IDs sind Referenzen; Anmeldeinformationen, lokales Vertrauen und Vollzugriff werden nicht als gebrauchsfertige Autorisierung übertragen.
 
@@ -52,7 +52,7 @@ Der aktuelle <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-w
 5. Die importierte Rolle wird **Behinderte / SETUP INCOMPLETE** gespeichert. Überprüfen Sie Anweisungen und Fähigkeitsbindungen im Editor, wählen Sie den beabsichtigten Zugriffsbereich, dann **Save changes**, um die Einrichtung abzuschließen und zu aktivieren.
 6. Öffnen Sie die installierte Rolle erneut und führen Sie eine kleine, umfangreiche Aufgabe aus.
 
-![Lösung des echten RNA-seq Skill-Konflikts während des Imports](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.jpg)
+![Lösung des echten RNA-seq Skill-Konflikts während des Imports](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.webp)
 
 **Version unverändert** kann immer noch einen Skill-Konflikt begleiten. Wählen Sie die beabsichtigte Skill-Quelle explizit aus und öffnen Sie dann die importierte Rolle erneut, um die Bindungen und den Zugriffsumfang zu bestätigen.
 
@@ -71,11 +71,11 @@ Der aktuelle <ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-w
 
 Öffnen Sie **Browse Marketplace**, suchen Sie eine Rolle und wählen Sie **View details**. Überprüfen Sie Publisher, Quelle, Version, Lizenz, Download-Größe und enthalten Skills/Connectors. **Refresh Marketplace** aktualisiert den Katalog; **Manage Marketplace sources** steuert die konfigurierten Quellen. Alle/Offiziellen/Community-Filter betreffen die Katalogherkunft, nicht die Laufzeitbereitschaft.
 
-![Das eigentliche Auto Research Specialist Paket Detail](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.jpg)
+![Das eigentliche Auto Research Specialist Paket Detail](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.webp)
 
 Wählen Sie **Install Specialist** aus, bestätigen Sie dann, dass die Rolle in **Marketplace** erscheint, und überprüfen Sie den Freigabezustand und die Bindungen. Die Anzahl der Katalogpakete beschreibt dieses Paket, nicht alle Anwendungsmöglichkeiten. Die Installation führt keine Forschungsaufgabe aus oder bereitet jede externe Abhängigkeit vor; Beenden Sie die erforderliche Einrichtung vor der Verwendung.
 
-![Auto Research installiert und aktiviert](/img/open-science/capabilities-walkthrough/23-marketplace-installed.jpg)
+![Auto Research installiert und aktiviert](/img/open-science/capabilities-walkthrough/23-marketplace-installed.webp)
 
 ## Überprüfen Sie vor dem Teilen {/* #verify-before-sharing */}
 

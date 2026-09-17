@@ -34,7 +34,7 @@ Do not retrieve full text or infer clinical recommendations.
 Write in English, do not delegate, and reopen the saved files.
 ```
 
-![La solicitud de búsqueda enfocada en Open-Science](/img/open-science/workflow-extensions/focused-search-input.png)
+![La solicitud de búsqueda enfocada en Open-Science](/img/open-science/workflow-extensions/focused-search-input.webp)
 
 La captura de pantalla muestra la solicitud inicial. La norma de selección operacional anterior incorpora el examen posterior de esa carrera.
 
@@ -55,11 +55,11 @@ La amplia consulta de concepto mantiene deliberadamente a los no juicios. La ele
 
 Cuando la respuesta se complete, abra **mindfulness-search-audit.csv** bajo **Generated**. Debe retener cada PMID recuperado, incluyendo registros excluidos e inciertos. Compruebe el título, revista, DOI y fecha contra el registro vinculado PubMed, a continuación, compare la decisión con el resumen.
 
-![La tabla de candidatos salvada, incluidos los registros inciertos y excluidos](/img/open-science/workflow-extensions/focused-search-table.png)
+![La tabla de candidatos salvada, incluidos los registros inciertos y excluidos](/img/open-science/workflow-extensions/focused-search-table.webp)
 
 Revisión encontró razones inexactas en el proyecto inicial: por ejemplo, PMID **38837133** es un ensayo aleatorizado primario de una psicoterapia más amplia, no un análisis secundario. La tabla revisada marca su elegibilidad mental **incierto**. PMID **34009273** es un metaanálisis y permanece excluido con la razón corregida. La notificación y el error específico le da al agente una solicitud de revisión concreta; entonces reabrir el CSV salvado para confirmar el cambio.
 
-![La revisión real de detección y cheques de archivo guardado en Notebook](/img/open-science/workflow-extensions/focused-search-notebook.png)
+![La revisión real de detección y cheques de archivo guardado en Notebook](/img/open-science/workflow-extensions/focused-search-notebook.webp)
 
 El cuadro de ejemplo revisado contiene **20 incluye, excluidos 37 y registros inciertos 5**, contando todos los golpes **62**. Se trata de decisiones de examen a nivel abstracto, no de una declaración de que los juicios distintos de 20 han sido plenamente evaluados. Múltiples publicaciones pueden referirse al mismo juicio subyacente.
 
@@ -69,7 +69,7 @@ PMID **41418645** fue devuelto por el filtro 2019-2025 PubMed fecha de publicaci
 
 Abrir **mindfulness-search-notes.md** y verificar que sus cuentas, regla de elegibilidad y limitaciones coinciden con el CSV. Esta ejecución revisó ambos archivos y retuvo la instantánea de metadatos crudos sin cambios.
 
-![La nota de búsqueda revisada con los recuentos de detección 20/37/5](/img/open-science/workflow-extensions/focused-search-notes.png)
+![La nota de búsqueda revisada con los recuentos de detección 20/37/5](/img/open-science/workflow-extensions/focused-search-notes.webp)
 
 Descargue el <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-audit.csv">Cuadro de candidatos examinados</ExampleDownload> y <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-notes.md">nota de búsqueda</ExampleDownload>. Los resúmenes completos no se redistribuyen aquí; seguir los enlaces fuente para inspeccionarlos.
 

@@ -20,11 +20,11 @@ Verwenden Sie eine Kategorie für dauerhafte Konventionen wie die Erhaltung der 
 4. Wählen Sie **Create**, dann **Add**. Geben Sie die Notiz ein und wählen Sie **Save**.
 5. Lassen Sie die Kategorie und öffnen Sie sie erneut, um ihren Inhalt und ihre Zählung zu überprüfen.
 
-![Kategoriename, Anleitung und Auto-Recall](/img/open-science/guides-walkthrough/17-memory-category.png)
+![Kategoriename, Anleitung und Auto-Recall](/img/open-science/guides-walkthrough/17-memory-category.webp)
 
 Die gespeicherte Notiz lautet: „Behalten Sie die ursprüngliche GEO-Zählmatrix unverändert. Bewahren Sie Entrez-Gen-IDs als Text auf, halten Sie die Genlänge von der Probenzahl getrennt und notieren Sie die Eingabe SHA-256 mit jeder abgeleiteten Tabelle. „Dies ist eine Arbeitskonvention, keine Behauptung über Analyseergebnisse.
 
-![Manuell gespeicherte Notiz, während der Speicher ausgeschaltet ist](/img/open-science/guides-walkthrough/18-memory-note.png)
+![Manuell gespeicherte Notiz, während der Speicher ausgeschaltet ist](/img/open-science/guides-walkthrough/18-memory-note.webp)
 
 | Kontrolle | Wirkung und Grenze |
 | --- | --- |
@@ -47,7 +47,7 @@ Die gespeicherte Notiz lautet: „Behalten Sie die ursprüngliche GEO-Zählmatri
 3. Überprüfen Sie die **Save memory**-Anforderung, wenn eine Genehmigung erforderlich ist. Überprüfen Sie den vorgeschlagenen Inhalt, die Kategorie und den Projektumfang, bevor Sie **Allow once** auswählen. Wählen Sie **Deny**, wenn es keine vereinbarte Konvention darstellt.
 4. Öffnen Sie die Kategorie wieder. Überprüfen Sie, ob die Notiz vorhanden ist, den beabsichtigten Text hat und unter dem beabsichtigten Projekt erscheint. Das **auto**-Label identifiziert eine vom Agenten erstellte Notiz; Es bedeutet nicht, dass eine Berechnung die Konvention verifiziert.
 
-![Eine von Agenten erstellte Berichtskonvention neben dem manuellen Quellschutzhinweis](/img/open-science/non-workflow-completion/05-memory-note-category.png)
+![Eine von Agenten erstellte Berichtskonvention neben dem manuellen Quellschutzhinweis](/img/open-science/non-workflow-completion/05-memory-note-category.webp)
 
 ## Rückruf in einem neuen Gespräch überprüfen {/* #check-recall-in-a-new-conversation */}
 
@@ -65,7 +65,7 @@ Wählen Sie einen Historienpunkt aus, um den Lauf, das Modell, die Belegung und 
 
 Wenn OpenCode **Compact** im Kontext-Popover bereitstellt, wählen Sie es aus und warten Sie auf **Context compacted**. Originalnachrichten können sichtbar bleiben, während das Backend von einer Zusammenfassung aus fortgesetzt wird. Bevor Sie fortfahren, bitten Sie den Agenten, die beibehaltenen Einschränkungen aufzulisten und sie mit Ihren Anforderungen zu vergleichen. Geben Sie alle fehlenden oder falschen Einschränkungen erneut an, bevor Sie die nächste Operation starten. Die Verdichtung garantiert keine verlustfreie Aufbewahrung; Anbietermessungen können von lokalen Schätzungen abweichen.
 
-![Abgeschlossene Verdichtung und die vom Anbieter gemeldete Kontextmessung](/img/open-science/non-workflow-completion/11-context-compacted.png)
+![Abgeschlossene Verdichtung und die vom Anbieter gemeldete Kontextmessung](/img/open-science/non-workflow-completion/11-context-compacted.webp)
 
 Geben Sie für eine Fortsetzung das aktuelle Ziel, akzeptierte Entscheidungen, genaue Eingabe- / Ausgabedateien, bereits durchgeführte Validierung und ungelöste Fragen an. Verknüpfen Sie die gespeicherten Beweise, anstatt sich auf Memory zu verlassen, um sie zu rekonstruieren. Verwenden Sie [Sitzungen und Verzweigungen](./sessions.md) für Verzweigung / Export und [Verwendung](./usage.md) für kumulatives Token-Volumen.
 

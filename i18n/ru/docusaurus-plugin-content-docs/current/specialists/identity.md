@@ -26,7 +26,7 @@ last_update:
 6. Выключите **Full access**, назначьте RNA-seq Skill и Omics Archives, как показано в [Возможности](./capabilities.md), затем выберите **Create specialist**.
 7. Найдите сохраненный ряд и откройте его заново. Подтвердите точный идентификатор, инструкции и два обязательных элемента.
 
-![Поля идентификации в английском редакторе Specialist](/img/open-science/capabilities-walkthrough/04-specialist-identity.jpg)
+![Поля идентификации в английском редакторе Specialist](/img/open-science/capabilities-walkthrough/04-specialist-identity.webp)
 
 ```text
 You review bulk RNA-seq raw-count quality. Use the rnaseq-count-qc Skill when validating a count matrix. For a precomputed QC table, inspect the full sample identifiers, numeric completeness, nonnegative values, and whether zero-count plus detected genes equals the stated gene count. Use available Notebook tools for arithmetic; do not install new packages for this bounded review. Cite source filenames and actual outputs. Separate verified findings from unresolved checks. Never infer differential expression, clinical significance, or quality cutoffs from library totals alone. For metadata queries, use only the assigned Omics Archives connector. Return a concise PASS/FAIL table and the limitations of the available input.

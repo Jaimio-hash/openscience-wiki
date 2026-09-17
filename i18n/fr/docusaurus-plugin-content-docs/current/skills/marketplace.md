@@ -11,7 +11,7 @@ Utilisez **Settings → Skills → Browse Marketplace** pour trouver et installe
 
 Pour introduire un ZIP, Skill local ou un dépôt GitHub spécifique, utilisez [Importation et gestion de Skill](manage.md). Pour une vue d'ensemble des méthodes de recherche et de leurs apports, voir le [Répertoire Skill](directory.md).
 
-![Le marché Skill avec recherche, filtres de catégorie et boutons d'installation](/img/open-science/feature-guides-2026-09/marketplace-browse.png)
+![Le marché Skill avec recherche, filtres de catégorie et boutons d'installation](/img/open-science/feature-guides-2026-09/marketplace-browse.webp)
 
 ## Trouver une méthode appropriée {/* #find-a-suitable-method */}
 
@@ -21,7 +21,7 @@ Pour introduire un ZIP, Skill local ou un dépôt GitHub spécifique, utilisez [
 
 Une signature de catalogue confirme l'identité de distribution. Il n'établit pas qu'une méthode convient à votre question de recherche ou que votre ordinateur a ses dépendances.
 
-![Marketplace Skill détails montrant l'auteur, la version, la licence et l'action Installer](/img/open-science/feature-guides-2026-09/marketplace-detail.png)
+![Marketplace Skill détails montrant l'auteur, la version, la licence et l'action Installer](/img/open-science/feature-guides-2026-09/marketplace-detail.webp)
 
 ## Installer et utiliser un Skill {/* #install-and-use-a-skill */}
 

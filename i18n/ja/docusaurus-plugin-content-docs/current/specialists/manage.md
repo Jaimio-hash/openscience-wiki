@@ -27,7 +27,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 役割を削除する前に、そのSkillsを削除するためのオプションを調べます。 他のロールがまだ使用している場合は、共有Skillsを保持してください。 重複を削除するには、元のロールを削除する必要はありません。
 
-![共有されたSkillsを保ちながら、使い捨てのロールを削除](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.jpg)
+![共有されたSkillsを保ちながら、使い捨てのロールを削除](/img/open-science/capabilities-walkthrough/18-specialist-delete-confirmation.webp)
 
 ## パッケージの共有とインポート {/* #share-and-import-a-package */}
 
@@ -39,7 +39,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 2. **Choose Skills to include**では、受信者がファイルを必要とする場合は、明示的に`rnaseq-count-qc`を選択します。 インストールされた個人/インポートされたSkillは、デフォルトでは必ずしも含まれていません。
 3. 共有する前にアーカイブをエクスポートし、検査します。
 
-![Specialistパッケージに含まれているSkillを選択](/img/open-science/capabilities-walkthrough/07-specialist-export.jpg)
+![Specialistパッケージに含まれているSkillを選択](/img/open-science/capabilities-walkthrough/07-specialist-export.webp)
 
 実際の<ExampleDownload path="/examples/capabilities/rna-seq-qc-reviewer-with-skill.zip">Skill のパッケージ</ExampleDownload>は`manifest.json`、`specialist.json`、`skills/rnaseq-count-qc/SKILL.md`および参照のスキーマを含んでいます。 最小限のエクスポートは、2つのJSONファイルだけを含むことができます。 Connector ID は参照です。 認証情報、ローカルの信頼、フルアクセスは既定の許可として転送されません。
 
@@ -52,7 +52,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 5. インポートされたロールは**無効 / セットアップ完了**を保存します。 エディタの指示と機能の結合を点検し、意図したアクセススコープを選択し、**Save changes**はセットアップを完了し、有効にします。
 6. インストールしたロールを再オープンし、小さなスコープ付きタスクを実行します。
 
-![インポート中に実際のRNA-seq Skillの競合を解決](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.jpg)
+![インポート中に実際のRNA-seq Skillの競合を解決](/img/open-science/capabilities-walkthrough/19-specialist-import-conflict.webp)
 
 **バージョン変更なし** は Skill の競合を伴っても構いません。 意図したSkillソースを明示的に選択し、そのバインディングとアクセススコープを確認するためにインポートされたロールを再オープンします。
 
@@ -71,11 +71,11 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 **Browse Marketplace** を開き、役割を検索し、**View details** を選択します。 出版社、ソース、バージョン、ライセンス、ダウンロードサイズをチェックし、Skills/コレクターが含まれています。 **Refresh Marketplace**はカタログを更新します; **Manage Marketplace sources** は構成されたソースを制御します。 すべての/公式/コミュニティフィルタは、ランタイムの信頼性ではなく、カタログの起源に関心を寄せます。
 
-![実際のオートリサーチSpecialistパッケージの詳細](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.jpg)
+![実際のオートリサーチSpecialistパッケージの詳細](/img/open-science/capabilities-walkthrough/22-marketplace-package-detail.webp)
 
 **Install Specialist** を選択し、**Marketplace** にロールが表示され、有効状態とバインディングを調べます。 カタログパッケージは、すべてのアプリケーション機能ではなく、そのパッケージを記述します。 インストールは、研究タスクを実行したり、外部の依存性を準備したりしません。 使用する前に必要なセットアップを完了して下さい。
 
-![オートリサーチのインストールと有効化](/img/open-science/capabilities-walkthrough/23-marketplace-installed.jpg)
+![オートリサーチのインストールと有効化](/img/open-science/capabilities-walkthrough/23-marketplace-installed.webp)
 
 ## 共有する前に検証する {/* #verify-before-sharing */}
 

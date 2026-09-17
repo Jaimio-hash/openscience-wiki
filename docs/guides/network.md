@@ -33,7 +33,7 @@ If Network reports **Ready** but a tool fails, expand that tool's error. The sta
 5. Review the new draft row. Use **Remove [hostname]** to undo it.
 6. Select **Save changes** to persist the intended list.
 
-![Exact-hostname validation rejects a wildcard](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.png)
+![Exact-hostname validation rejects a wildcard](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.webp)
 
 Enter a hostname such as `data.example.org`, with no scheme, path, port, wildcard or IP address. For **Enter a hostname only, without a scheme, path, port, or wildcard.**, remove those parts and save the hostname.
 
@@ -89,7 +89,7 @@ Select **Configure** or **Edit** under Package mirror.
 | **Save** | Store the configuration for subsequent package operations |
 | **Cancel** | Discard the draft |
 
-![Package mirror and CA-bundle inputs](/img/open-science/walkthrough-2026-09-08/56-package-mirror.png)
+![Package mirror and CA-bundle inputs](/img/open-science/walkthrough-2026-09-08/56-package-mirror.webp)
 
 A package mirror changes the package source. Confirm the mirror's required root/index format, save, and retry a small package operation in the selected runtime. Model-provider proxy settings are separate.
 

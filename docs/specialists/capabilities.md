@@ -18,7 +18,7 @@ A Specialist's capability list determines which Skills and Connectors it can rea
 4. In **Connectors**, select **Add a connector** and choose **Omics Archives**. Confirm **Connectors 1**.
 5. Open a capability's detail to verify that you selected the intended resource. Save and reopen the role to confirm persistence.
 
-![The Specialist with an explicit capability selection](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.jpg)
+![The Specialist with an explicit capability selection](/img/open-science/capabilities-walkthrough/05-specialist-capabilities.webp)
 
 | Control | Effect |
 | --- | --- |

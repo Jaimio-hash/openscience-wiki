@@ -11,7 +11,7 @@ last_update:
 
 需要匯入 ZIP、本機 Skill 或指定 GitHub 倉庫時，使用[Skill 匯入與管理](manage.md)。檢視科研方法及輸入概覽，見 [Skill 目錄](directory.md)。
 
-![Skill 市場的搜尋、分類篩選和 Install 入口](/img/open-science/feature-guides-2026-09/marketplace-browse.png)
+![Skill 市場的搜尋、分類篩選和 Install 入口](/img/open-science/feature-guides-2026-09/marketplace-browse.webp)
 
 ## 查詢適合的方法 {/* #查找适合的方法 */}
 
@@ -21,7 +21,7 @@ last_update:
 
 目錄簽名確認的是分發身份，不代表方法一定適合本次研究，也不能證明電腦已具備所需依賴。
 
-![Skill 詳情中的作者、版本、許可資訊和 Install 操作](/img/open-science/feature-guides-2026-09/marketplace-detail.png)
+![Skill 詳情中的作者、版本、許可資訊和 Install 操作](/img/open-science/feature-guides-2026-09/marketplace-detail.webp)
 
 ## 安裝並使用 Skill {/* #安装并使用-skill */}
 

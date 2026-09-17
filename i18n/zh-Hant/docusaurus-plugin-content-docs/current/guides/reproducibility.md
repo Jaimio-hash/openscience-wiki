@@ -48,7 +48,7 @@ last_update:
 
 下圖使用 Notebook 根據 [GSE60450 樣本質控表](../reference/example-data.md)生成彙總結果。開啟檔案的 **Provenance → Reproducibility**，檢視捕獲的輸入和執行記錄。圖中的 **Not verified yet** 和 **Unavailable** 表示缺少精確環境鎖。開啟 **View details** 後，按[環境準備步驟](#prepare-environment)生成新版本。該狀態不代表復現成功。
 
-![已儲存的質控彙總表及 Reproducibility 面板，顯示捕獲證據和暫不可用的檢查](/img/open-science/feature-guides-2026-09/reproducibility-evidence.png)
+![已儲存的質控彙總表及 Reproducibility 面板，顯示捕獲證據和暫不可用的檢查](/img/open-science/feature-guides-2026-09/reproducibility-evidence.webp)
 
 ## 執行復現檢查 {/* #运行复现检查 */}
 

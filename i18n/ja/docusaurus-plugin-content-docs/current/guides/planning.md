@@ -17,9 +17,9 @@ last_update:
 3. 計画を待ちます。 **Plan control** のパーミッションカードが表示された場合は、それを調べて、意図したスコープを許可するか、拒否します。 これは、計画の作成/決定記録を承認します。, すべての将来の実行ではありません.
 4. **Plan ready for review**を待ちます。 構造化された承認カードが存在するという証拠として「自分の計画である」という通常の段落を扱いません。
 
-![送信メニューで最初に計画する](/img/open-science/guides-walkthrough/21-plan-first-entry.png)
+![送信メニューで最初に計画する](/img/open-science/guides-walkthrough/21-plan-first-entry.webp)
 
-![計画を作成および記録する別の許可](/img/open-science/guides-walkthrough/22-plan-permission.png)
+![計画を作成および記録する別の許可](/img/open-science/guides-walkthrough/22-plan-permission.webp)
 
 変更されていない生数、別々のID/lengthメタデータ、各サンプルQC、3つの管理された出力および差分圧縮の要求指定なしのタスク。 正確な初期要求により、計画を判断しやすくなります。
 
@@ -27,7 +27,7 @@ last_update:
 
 **Open** を選択して、会話の横にある構造化された計画を表示します。 段階、ステップ オーダー、執行の所有者、所望の出力および実現可能性のノートを点検して下さい。 **Enter full screen** を使用して、長い計画と **Download Plan** を読み込み、保持します。 自信ラベルは、コードが既に実行されているという証拠ではなく、計画の評価です。
 
-![段階および所望の出力が付いている構造化された計画](/img/open-science/guides-walkthrough/23-plan-review.png)
+![段階および所望の出力が付いている構造化された計画](/img/open-science/guides-walkthrough/23-plan-review.webp)
 
 | 制御/状態 | 何をすべきか |
 | --- | --- |
@@ -42,7 +42,7 @@ last_update:
 
 **Respond to Plan**では、正確に変更しなければならないものを状態にします。 たとえば、入力インテグレーションチェックをリクエストし、すべての出力を再開し、短縮されたプロットラベルと元の識別子間のマッピングをリクエストします。 **Send Plan feedback** を選択し、交換を待ち、それぞれに要求された変更が提示されていることを確認します。
 
-![投稿前に入力されたフィードバック](/img/open-science/guides-walkthrough/24-plan-feedback.png)
+![投稿前に入力されたフィードバック](/img/open-science/guides-walkthrough/24-plan-feedback.webp)
 
 交換を読んで、**Approve**ボタンを使用します。 古いプレビューを開くと、それが置換された警告で表示することができます。 現行のステップは、現行のプランの進捗状況ではありません。 古いスクリーンショットを承認するのではなく、アクティブな計画を再開します。
 

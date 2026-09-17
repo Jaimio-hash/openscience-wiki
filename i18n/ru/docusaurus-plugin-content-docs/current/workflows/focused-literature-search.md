@@ -34,7 +34,7 @@ Do not retrieve full text or infer clinical recommendations.
 Write in English, do not delegate, and reopen the saved files.
 ```
 
-![Запрос на целенаправленный поиск в Open-Science](/img/open-science/workflow-extensions/focused-search-input.png)
+![Запрос на целенаправленный поиск в Open-Science](/img/open-science/workflow-extensions/focused-search-input.webp)
 
 Скриншот показывает первоначальный запрос. Приведенное выше правило оперативного скрининга включает последующий обзор этого прогона.
 
@@ -55,11 +55,11 @@ AND ("JAMA Psychiatry"[Journal] OR "Behaviour Research and Therapy"[Journal])
 
 После завершения ответа откройте **mindfulness-search-audit.csv** под **Generated**. Он должен сохранять все извлеченные PMID, включая исключенные и неопределенные записи. Проверьте название, журнал, DOI и дату по сравнению со связанной записью PubMed, а затем сравните решение с рефератом.
 
-![Сохраненная таблица кандидатов, включая неопределенные и исключенные записи](/img/open-science/workflow-extensions/focused-search-table.png)
+![Сохраненная таблица кандидатов, включая неопределенные и исключенные записи](/img/open-science/workflow-extensions/focused-search-table.webp)
 
 Обзор обнаружил неточные причины в первоначальном проекте: например, PMID **38837133** является первичным рандомизированным исследованием более широкой психотерапии, а не вторичным анализом. Пересмотренная таблица отмечает его право на осознанность **неопределенный**. PMID **34009273** является мета-анализом и остается исключенным с исправленной причиной. Наименование записи и конкретная ошибка дает Агенту конкретный запрос на пересмотр; Затем снова откройте сохраненный CSV, чтобы подтвердить изменение.
 
-![Реальная проверка и проверка сохраненных файлов в Notebook](/img/open-science/workflow-extensions/focused-search-notebook.png)
+![Реальная проверка и проверка сохраненных файлов в Notebook](/img/open-science/workflow-extensions/focused-search-notebook.webp)
 
 Пересмотренная таблица примеров содержит **20 включен, 37 исключен, 5 неопределенные записи**, учитывающий все хиты **62**. Это решения по скринингу абстрактного уровня, а не заявление о том, что отдельные испытания 20 были полностью оценены. Несколько публикаций могут касаться одного и того же основного исследования.
 
@@ -69,7 +69,7 @@ PMID **41418645** был возвращен фильтром даты публи
 
 Откройте **mindfulness-search-notes.md** и убедитесь, что его количество, правила и ограничения соответствуют CSV. Этот запуск пересмотрел оба файла и сохранил неизмененный исходный снимок метаданных.
 
-![Пересмотренная поисковая заметка с подсчетами скрининга 20 / 37 / 5](/img/open-science/workflow-extensions/focused-search-notes.png)
+![Пересмотренная поисковая заметка с подсчетами скрининга 20 / 37 / 5](/img/open-science/workflow-extensions/focused-search-notes.webp)
 
 Скачать <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-audit.csv">Проверенная таблица кандидатов</ExampleDownload> и <ExampleDownload path="/examples/workflow-extensions/mindfulness-search-notes.md">Поисковая записка</ExampleDownload>. Полные аннотации здесь не перераспределяются; Следите за исходными ссылками, чтобы проверить их.
 

@@ -38,7 +38,7 @@ Une subvention en lecture seule protège le répertoire externe tout en permetta
 
 Pour un dossier existant, ouvrez **Files**, sélectionnez le menu déroulant **Artifacts**, puis **This computer → Add folder…**. Dans la boîte de dialogue de l'application **Grant folder access**, choisissez un sous-dossier spécifique et **Read-only**, puis **Grant this folder**. La racine du profil utilisateur peut ne pas être disponible; sélectionner le sous-dossier de recherche à la place. Lire n'importe quelle confirmation d'impact Notebook-kernel. En retournant aux fichiers, vérifiez le dossier sélectionné et ses fichiers.
 
-<Screenshot src="/img/open-science/windows/granted-folder-files.png" alt="Un dossier Windows accordé montrant le script public et CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.png" linkLabel="Ouvrez la capture d&#39;écran complète de Windows" />
+<Screenshot src="/img/open-science/windows/granted-folder-files.webp" alt="Un dossier Windows accordé montrant le script public et CSV" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.webp" linkLabel="Ouvrez la capture d&#39;écran complète de Windows" />
 
 Dans la boîte de dialogue Windows **Attach files**, sélectionnez un fichier à partir d'un chemin contenant des caractères ou des espaces chinois, ou entrez son chemin complet dans le champ **File name** et ouvrez-le. Retournez dans l'application, vérifiez le nom de la pièce jointe et prévisualisez les dimensions et le contenu de la table. Pour abandonner une sélection, choisissez **Cancel** et vérifiez qu'aucune nouvelle pièce jointe n'a été ajoutée à l'ébauche.
 
@@ -55,7 +55,7 @@ Dans la boîte de dialogue Windows **Attach files**, sélectionnez un fichier à
 
 <PlatformContent platform="macos">
 
-![Résultats réels filtrés de RNA-seq dans la bibliothèque de fichiers](/img/open-science/guides-walkthrough/56-files-search.png)
+![Résultats réels filtrés de RNA-seq dans la bibliothèque de fichiers](/img/open-science/guides-walkthrough/56-files-search.webp)
 
 </PlatformContent>
 Le nombre décrit le filtre actuel. Une recherche sans correspondances ne supprime pas les fichiers. **No more** signifie que le groupe a terminé le chargement. Effacer un groupe par son cap. Utilisez l'action de prévisualisation d'un corps de fichier pour un modal, ou **Ouvrir ... en vue scindée à côté de la session** pour conserver la conversation à côté. Télécharger agit sur le fichier/version sélectionné par cette surface.
@@ -85,7 +85,7 @@ Ouvrez un fichier de texte géré ou Markdown. L'exemple ci-dessous ajoute une n
 
 <PlatformContent platform="macos">
 
-![Rapport v2 par rapport à sa version originale](/img/open-science/guides-walkthrough/55-report-version-diff.png)
+![Rapport v2 par rapport à sa version originale](/img/open-science/guides-walkthrough/55-report-version-diff.webp)
 
 </PlatformContent>
 | Contrôle/état d'édition | Que faire |
@@ -111,7 +111,7 @@ Si un autre auteur enregistre le rapport pendant que votre éditeur reste ouvert
 
 <PlatformContent platform="macos">
 
-![Enregistrer bloqué parce qu'une autre version existe](/img/open-science/local-todo-batch/37-file-save-conflict.png)
+![Enregistrer bloqué parce qu'une autre version existe](/img/open-science/local-todo-batch/37-file-save-conflict.webp)
 
 </PlatformContent>
 Après l'enregistrement, confirmez que la dernière révision contient à la fois le changement de l'autre auteur et votre brouillon conservé. Les révisions antérieures des fichiers demeurent disponibles grâce aux contrôles de versions; Ces révisions sont séparées des révisions de conversation-message.

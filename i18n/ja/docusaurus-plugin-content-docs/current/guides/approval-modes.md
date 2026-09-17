@@ -24,7 +24,7 @@ last_update:
 
 作曲家の横に**Agent controls**を開き、選択したモードを読みます。 フレームワークがそれを実装する方法を示す任意の互換性メッセージを確認してください。 フルアクセス制御は、独自の確認を持っています。 **Auto-review**は、結果のレビューのための異なる制御であり、自動承認編集を意味しません。
 
-![実際の英語許可モードセレクター](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![実際の英語許可モードセレクター](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 エージェントの有効なモードを確認してください。 サポートされている承認の動作はフレームワークによって異なる場合があります。 すべてのモードが4つのフレームワーク全体で練習されているわけではありません。
 
@@ -34,7 +34,7 @@ last_update:
 
 承認する前に操作、選択された環境および提案されたコードを読んで下さい。 データチェックでは、意図した入力を読み取り、要求された出力のみを書き込みます。 欠落した依存性をインストールすることは、異なる目的と効果を持つ別の操作です。
 
-![GSE60450公開ケースからのPython実行承認](/img/open-science/guides-walkthrough/25-python-permission.png)
+![GSE60450公開ケースからのPython実行承認](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | 制御または情報 | 点検するか、または何をするか |
 | --- | --- |
@@ -87,7 +87,7 @@ Connector/tool、**グローバル/プロジェクト/セッション**スコー
 
 報復は将来の承認に影響を及ぼします。 編集やネットワークのリクエストをリバースアウトし、より広い助成金は、依然として運用を承認することができます。
 
-![セッショングループ再発後の新規実行リクエスト](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![セッショングループ再発後の新規実行リクエスト](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 在庫が不完全な場合は、グループ置換を使用する前に失敗したリクエストをロードまたは再試行するように待ちます。 選択されたスコープを再チェックします。
 

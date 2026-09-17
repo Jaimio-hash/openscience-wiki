@@ -26,7 +26,7 @@ En un proyecto Open-Science, seleccione un modelo de trabajo y adjunte el archiv
 
 Haga clic en el accesorio para abrir su vista previa. Cada estudio comienza con un título, DOI y un enlace original de origen, seguido de texto de sección y tablas. Coincide con esas diez identidades con la lista de fuentes; no cuentan los títulos repetidos de sección como estudios adicionales.
 
-![El paquete de texto completo adjunto real conserva la identidad de origen y las secciones del artículo](/img/open-science/research-workflows/mask-trials-input.png)
+![El paquete de texto completo adjunto real conserva la identidad de origen y las secciones del artículo](/img/open-science/research-workflows/mask-trials-input.webp)
 
 Antes de usar un documento como evidencia, compruebe las correcciones o retractaciones en su fuente. Desde v0.30.2, el `literature-review` Skill's `verify_dois` helper comprueba las relaciones de actualización Crossref en ambas direcciones. `retracted: true` puede identificar un papel retraído o un aviso de retracción; inspeccionar la relación vinculada. `false` significa que no se encontró ningún marcador comprobado, no prueba de que el papel nunca ha sido retractado. Este cheque adicional no formaba parte de los diez documentos registrados que se ejecutan a continuación.
 
@@ -53,7 +53,7 @@ Permitir las solicitudes de lectura de fuentes previstas. Comprueba que el agent
 
 Abra el CSV después de que la respuesta termine. Compare sus diez valores de DOI con la lista de fuentes, y luego compruebe la población de estimación y análisis reportados en la sección de resultados de cada papel o tabla.
 
-![La tabla de pruebas de diez juicios en Open-Science](/img/open-science/research-workflows/mask-trials-evidence.png)
+![La tabla de pruebas de diez juicios en Open-Science](/img/open-science/research-workflows/mask-trials-evidence.webp)
 
 Preste especial atención a estas distinciones:
 
@@ -66,7 +66,7 @@ Utilice el <a href="/docs/examples/research-workflows/mask-trials-evidence.csv" 
 
 Open **mask-trials-reading-notes.md**, así como el CSV. La mesa final de esta carrera tiene **filas 10 · columnas 12**. Ampliar una vista previa o descargar el archivo para leer células largas; Las células truncadas no faltan texto fuente. Las notas conservan las diez identidades de estudio y explican por qué sus resultados y poblaciones no deben ser agrupadas automáticamente.
 
-![Las notas de lectura guardadas y la salida completa de diez puntos](/img/open-science/research-workflows/mask-trials-notes.png)
+![Las notas de lectura guardadas y la salida completa de diez puntos](/img/open-science/research-workflows/mask-trials-notes.webp)
 
 Cuando una fila es incorrecta o incompleta, nombre el estudio y la sección/tabla exacta de la fuente, solicite una revisión a los archivos **ambos**, y luego vuelva a abrirlos. Por ejemplo, mantenga el flujo de hogar aleatorizado de Cowling 2008 separado de su subconjunto analizado. Actualizar una respuesta de prosa no actualiza por sí misma la tabla salvada.
 

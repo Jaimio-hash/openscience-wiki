@@ -36,7 +36,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 <PlatformContent platform="macos">
 
-![Реальная локальная конфигурация MCP](/img/open-science/capabilities-walkthrough/08-mcp-local-config.jpg)
+![Реальная локальная конфигурация MCP](/img/open-science/capabilities-walkthrough/08-mcp-local-config.webp)
 
 </PlatformContent>
 
@@ -90,7 +90,7 @@ C:\Research data\mcp test\rnaseq-sample-qc.csv
 
 <PlatformContent platform="macos">
 
-![Пользовательский Connector успешно подключился](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![Пользовательский Connector успешно подключился](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 </PlatformContent>
 
@@ -98,7 +98,7 @@ C:\Research data\mcp test\rnaseq-sample-qc.csv
 
 Откройте активность Notebook для обоих вызовов инструмента, затем снова откройте сохраненный JSON и сравните его идентификаторы выборки и показатели с CSV. Windows работает ниже использует разъем ID `gse60450-qc-win`; Используйте свой собственный настроенный идентификатор в запросе.
 
-![Windows локальные звонки MCP с сохраненным выходом JSON и Notebook](/img/open-science/windows/mcp-tool-results.png)
+![Windows локальные звонки MCP с сохраненным выходом JSON и Notebook](/img/open-science/windows/mcp-tool-results.webp)
 
 </PlatformContent>
 

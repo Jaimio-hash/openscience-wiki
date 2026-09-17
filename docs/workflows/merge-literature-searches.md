@@ -39,7 +39,7 @@ Inspect the actual Connector activity for the queries, dates and returned counts
 
 Open **electrolyte-merged.csv** under **Generated**. Check the retained titles, DOIs and source membership against the two RIS exports and the candidate audit. The actual union has 15 rows; DOI **10.1007/s41918-024-00212-1** occurs in both batches and is labelled **A|B**.
 
-![The saved union of both search batches, retaining source membership](/img/open-science/workflow-extensions/batches-merged.png)
+![The saved union of both search batches, retaining source membership](/img/open-science/workflow-extensions/batches-merged.webp)
 
 For comparison, trim DOI whitespace, remove an optional DOI URL prefix and compare case-insensitively. Preserve the original identifiers in the source record. Similar titles alone are insufficient evidence that two records are identical; unresolved identifier conflicts need review.
 
@@ -52,7 +52,7 @@ Download <ExampleDownload path="/examples/workflow-extensions/electrolyte-batch-
 3. Choose `electrolyte-batch-a.ris`. Check that **Import to** names the intended collection.
 4. Leave **When identifiers match → Reuse existing reference** selected. Inspect **View details**, then choose **Import references**.
 
-![First-batch import preview: eight new references in the selected collection](/img/open-science/workflow-extensions/batches-import-a.png)
+![First-batch import preview: eight new references in the selected collection](/img/open-science/workflow-extensions/batches-import-a.webp)
 
 In the recorded library, the first import completed with **8 Created, 0 Reused, 0 Skipped, 0 Failed**. Click **Done** and check the collection. If your library already contains matching records, its created/reused split can differ.
 
@@ -60,16 +60,16 @@ In the recorded library, the first import completed with **8 Created, 0 Reused, 
 
 With the same collection selected, import `electrolyte-batch-b.ris`. The preview should identify existing records before committing the import. In this run it showed **7 New references, 1 Existing, 0 Skipped**.
 
-![Second-batch preview identifies the shared paper as Existing](/img/open-science/workflow-extensions/batches-import-b.png)
+![Second-batch preview identifies the shared paper as Existing](/img/open-science/workflow-extensions/batches-import-b.webp)
 
 Keep **Reuse existing reference**, inspect the shared title, then import. Read the actual completion summary: **7 Created, 1 Reused, 0 Skipped, 0 Failed**. Reuse keeps existing metadata and adds the matching reference to the destination; it does not create a second copy or download a PDF.
 
-![Completed second import with seven created and one reused](/img/open-science/workflow-extensions/batches-import-result.png)
+![Completed second import with seven created and one reused](/img/open-science/workflow-extensions/batches-import-result.webp)
 
 ## 5. Check the resulting collection
 
 Click **Done**. The collection contains **15 references**, agreeing with the DOI union. Keep the two original exports and the provenance CSV so a colleague can reconstruct where each candidate came from.
 
-![The final collection with fifteen references](/img/open-science/workflow-extensions/batches-collection.png)
+![The final collection with fifteen references](/img/open-science/workflow-extensions/batches-collection.webp)
 
 A count match is a useful check, not a replacement for inspecting the overlapping DOI and representative titles. To add a later publication window while preserving the baseline, continue with [update an existing literature collection](update-literature.md).

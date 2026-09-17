@@ -22,7 +22,7 @@ Open **Settings → Remote** on the home computer. Install and sign in to the se
 | App access | Connect through the signed-in mobile app and complete two-step verification. |
 | Browser access | Use a persistent HTTPS browser link and complete two-step verification. |
 
-![Remote access inspected in the Off state](/img/open-science/walkthrough-2026-09-08/63-remote-off.png)
+![Remote access inspected in the Off state](/img/open-science/walkthrough-2026-09-08/63-remote-off.webp)
 
 Access-mode settings can be changed from the desktop window on the home computer. A connected browser may manage pairing/trust when authorized, but it is not a substitute for that desktop-only mode control.
 

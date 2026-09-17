@@ -39,9 +39,9 @@ Wählen Sie **Add SSH host**. Wählen Sie einen vorhandenen Alias oder geben Sie
 | **Cancel** | Ausscheiden ohne Registrierung des Formulars |
 | **Add** | Einreichen einer gültigen Verbindung; Die Passwort-Authentifizierung muss den Verbindungstest bestehen, bevor der Host hinzugefügt wird |
 
-![Englische SSH-Konfiguration überschreibt](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.png)
+![Englische SSH-Konfiguration überschreibt](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.webp)
 
-![Passwort-Authentifizierung und Slurm in realer Form ausgewählt](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.png)
+![Passwort-Authentifizierung und Slurm in realer Form ausgewählt](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.webp)
 
 Der Passwortmodus hängt von der Passwort-Authentifizierungs- und Speicherfähigkeit der Anwendung ab. Wenn es nicht verfügbar ist, überprüfen Sie den Grund, der im Formular angezeigt wird. Geben Sie Anmeldeinformationen in diesem Feld ein, nicht in Host-Notizen oder einer Agent-Anfrage.
 
@@ -57,7 +57,7 @@ Für einen SSH-Konfigurations-Host erstellt die App den Datensatz, öffnet die D
 
 Das englische Beispiel zeigt eine erfolgreiche passwort-authentifizierte Sonde: 256 CPUs, 504 GB RAM, ein NVIDIA A100 80GB PCIe und ein erkannter Slurm Scheduler. Der konfigurierte Modus bleibt **Direct SSH**, bis Sie ihn explizit ändern. Dies sind die Login-Host-Ressourcen dieses Servers, keine Mindestanforderungen oder eine geplante Zuweisung. Host- und Account-Identifikatoren werden im Screenshot verdeckt.
 
-![Erfolgreiche Passwort-Authentifizierung und Host Resource Probe](/img/open-science/remote-compute/03-host-probe.png)
+![Erfolgreiche Passwort-Authentifizierung und Host Resource Probe](/img/open-science/remote-compute/03-host-probe.webp)
 
 ## Überprüfen und pflegen Sie Host-Details {/* #inspect-and-maintain-host-details */}
 
@@ -133,9 +133,9 @@ Beispielanfrage:
 
 Nach **Erfolg** und Exit-Code **0** bestätigen Sie, dass die App beide Ausgänge sammelt und dass die gespeicherte Tabelle und der Bericht wieder geöffnet werden. Vergleichen Sie vollständige Sample-Identifier und Metriken mit dem [Gemeinsame Baseline](../reference/example-data.md) und überprüfen Sie den Eingabe-Hash vor und nach der Fernberechnung. Dieses Direct SSH-Beispiel hat diese Prüfungen bestanden.
 
-![Abgeschlossener Direct SSH-Job mit ID und Arbeitsverzeichnis](/img/open-science/remote-compute/05-direct-job-completed.png)
+![Abgeschlossener Direct SSH-Job mit ID und Arbeitsverzeichnis](/img/open-science/remote-compute/05-direct-job-completed.webp)
 
-![Wiedereröffnete Remote-RNA-seq-QC-Tabelle mit allen zwölf Samples](/img/open-science/remote-compute/06-remote-qc-table.png)
+![Wiedereröffnete Remote-RNA-seq-QC-Tabelle mit allen zwölf Samples](/img/open-science/remote-compute/06-remote-qc-table.webp)
 
 Laden Sie das Beispiel <a href="/docs/examples/gse60450/remote-rnaseq-qc.csv" download>QC-Tisch</a> und <a href="/docs/examples/gse60450/remote-rnaseq-qc-report.md" download>Methodenbericht</a> herunter. Diese Rohzählprüfungen ersetzen nicht die Normalisierung, die Überprüfung des experimentellen Designs oder die Differentialexpressionsanalyse. Der Median mit positiver Zählung schließt Nullen aus.
 
@@ -145,7 +145,7 @@ Laden Sie das Beispiel <a href="/docs/examples/gse60450/remote-rnaseq-qc.csv" do
 
 Der unten gezeigte separate Vorbereitungs-Checkpoint lief, als die lokale App neu gestartet wurde. Die App stellte die gleiche Job-ID wieder her und sammelte später ihr Abschlussprotokoll. Das Warten endete normal; Dieser Screenshot zeigt die Wiederherstellung, nicht die Stornierung oder eine wissenschaftliche Berechnung.
 
-![Derselbe Vorbereitungsjob wurde nach einem Neustart der Anwendung wiederhergestellt](/img/open-science/remote-compute/07-job-recovered-after-restart.png)
+![Derselbe Vorbereitungsjob wurde nach einem Neustart der Anwendung wiederhergestellt](/img/open-science/remote-compute/07-job-recovered-after-restart.webp)
 
 ### Abbrechen eines Remote-Jobs {/* #cancel-one-remote-job */}
 
@@ -153,7 +153,7 @@ Der unten gezeigte separate Vorbereitungs-Checkpoint lief, als die lokale App ne
 
 Durch diese Kontrolle wurde der nachfolgende Präparationskontrollpunkt abgebrochen. Der Remote-Prozess wurde danach unabhängig bestätigt. Das vorhandene Protokoll blieb lesbar. Dies bedeutet nicht, dass eine abgebrochene Analyse zu einem vollständigen Ergebnis geführt hat; Inspizieren Sie gespeicherte Dateien, bevor Sie sie verwenden.
 
-![Stornierung für den ausgewählten Vorbereitungsauftrag bestätigt](/img/open-science/remote-compute/09-job-cancelled.png)
+![Stornierung für den ausgewählten Vorbereitungsauftrag bestätigt](/img/open-science/remote-compute/09-job-cancelled.webp)
 
 
 </ToolOperationGroup>
@@ -177,7 +177,7 @@ Verwenden Sie die Partition Ihrer Website, anstatt `local` bedingungslos zu kopi
 5. Vergleichen Sie die angeforderten Ressourcen mit der tatsächlichen Zuweisung. Im Beispiel wurde eine CPU pro Task und 1 GiB angefordert; Slurm zeichnete eine Aufgabe und zwei zugewiesene logische CPUs auf. Verwenden Sie den Zuweisungsdatensatz des Schedulers, wenn Sie die Ressourcennutzung erklären.
 6. Warten Sie auf einen bestätigten Terminalzustand und sammeln Sie Dateien, bevor Sie das Ergebnis veröffentlichen. Eine serverseitige Ausgabedatei stellt nicht fest, dass die Anwendung sie geerntet hat.
 
-![Slurm explizit im Ausführungsmodus des Hosts ausgewählt](/img/open-science/remote-compute/10-slurm-execution-mode.png)
+![Slurm explizit im Ausführungsmodus des Hosts ausgewählt](/img/open-science/remote-compute/10-slurm-execution-mode.webp)
 
 ### Wenn der Server fertig ist, aber die App wartet {/* #when-the-server-completes-but-the-app-keeps-waiting */}
 
@@ -189,7 +189,7 @@ slurm_poll_failed: Slurm accounting storage is disabled
 
 Wenn der Scheduler **ABGESCHLOSSEN / ExitCode 0:0** anzeigt, die App jedoch weiterhin **Vorgelegt**, **result_final falsch** oder keine gesammelten Dateien anzeigt, behalten Sie beide Job-IDs bei und prüfen Sie den Abfragefehler. Behandeln Sie die Fertigstellung des Schedulers und die Sammlung der Anwendungsergebnisse als separate Phasen.
 
-![Die Anwendung wartet noch auf den Terminalstatus für eine abgeschlossene Slurm-Workload](/img/open-science/remote-compute/11-slurm-accounting-unavailable.png)
+![Die Anwendung wartet noch auf den Terminalstatus für eine abgeschlossene Slurm-Workload](/img/open-science/remote-compute/11-slurm-accounting-unavailable.webp)
 
 Bitten Sie den Cluster-Administrator, eine funktionierende `sacct`-Buchhaltung für das Konto und den Auftrag bereitzustellen. `squeue`, der keinen Job mehr auflistet, ist kein ausreichender Erfolgsnachweis. Bewahren Sie das vorhandene Arbeitsverzeichnis und die Job-IDs auf, während die Buchhaltung repariert wird, und überprüfen Sie den gleichen Job erneut. Senden Sie keine abgeschlossene Analyse erneut ein, um einen Überwachungsfehler zu beheben. Slurm Stornierung, Wiederherstellung und Anwendungsernte bleiben ausstehend, bis diese Umgebungsanforderung behoben ist.
 

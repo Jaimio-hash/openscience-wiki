@@ -26,7 +26,7 @@ Dans un projet Open-Science, sélectionnez un modèle de travail et joignez le f
 
 Cliquez sur la pièce jointe pour ouvrir son aperçu. Chaque étude commence par un titre, DOI et un lien source original, suivi par un texte et des tableaux de section. Correspondez à ces dix identités à la liste des sources; ne comptent pas les titres répétés comme des études supplémentaires.
 
-![Le paquet texte intégral joint conserve l'identité de la source et les sections d'article](/img/open-science/research-workflows/mask-trials-input.png)
+![Le paquet texte intégral joint conserve l'identité de la source et les sections d'article](/img/open-science/research-workflows/mask-trials-input.webp)
 
 Avant d'utiliser un papier comme preuve, vérifiez les corrections ou les rétractations à sa source. À partir v0.30.2, les `literature-review` Skill's `verify_dois` helper vérifie les relations de mise à jour de Crossref dans les deux sens. `retracted: true` peut identifier un papier rétracté ou un avis de rétractation; Inspectez la relation liée. `false` signifie qu'aucun marqueur vérifié n'a été trouvé, et non une preuve que le papier n'a jamais été rétracté. Cette vérification supplémentaire ne faisait pas partie de l'exécution de dix documents enregistrée ci-dessous.
 
@@ -53,7 +53,7 @@ Autoriser les demandes de lecture de source prévues. Vérifiez que l'agent atte
 
 Ouvrez le CSV après la réponse complète. Comparez ses dix valeurs DOI avec la liste des sources, puis vérifiez la population d'estimation et d'analyse rapportée par rapport à la section ou au tableau des résultats de chaque article.
 
-![Le tableau des preuves à dix procès dans Open-Science](/img/open-science/research-workflows/mask-trials-evidence.png)
+![Le tableau des preuves à dix procès dans Open-Science](/img/open-science/research-workflows/mask-trials-evidence.webp)
 
 Accordez une attention particulière à ces distinctions :
 
@@ -66,7 +66,7 @@ Utilisez les <a href="/docs/examples/research-workflows/mask-trials-evidence.csv
 
 Ouvrez **mask-trials-reading-notes.md** ainsi que le CSV. Cette table finale est **Lignes 10 · Colonnes 12**. Élargir un aperçu ou télécharger le fichier pour lire les cellules longues; les cellules tronquées ne manquent pas de texte source. Les notes conservent les dix identités de l'étude et expliquent pourquoi leurs résultats et leurs populations ne devraient pas être regroupés automatiquement.
 
-![Les notes de lecture enregistrées et la sortie de dix lignes terminées](/img/open-science/research-workflows/mask-trials-notes.png)
+![Les notes de lecture enregistrées et la sortie de dix lignes terminées](/img/open-science/research-workflows/mask-trials-notes.webp)
 
 Lorsqu'une ligne est incorrecte ou incomplète, nommez l'étude et la section/table source exacte, demandez une révision des fichiers **les deux**, puis rouvrez-les. Par exemple, gardez le flux randomisé de ménage de Cowling 2008.S séparé de son sous-ensemble analysé. Mettre à jour une réponse en prose ne met pas à jour la table enregistrée.
 

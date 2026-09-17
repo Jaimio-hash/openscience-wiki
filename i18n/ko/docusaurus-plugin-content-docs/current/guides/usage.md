@@ -17,7 +17,7 @@ last_update:
 3. 4개의 토큰 필드와 New/Total 활동 카운터를 비교하십시오.
 4. 도표의 자신의 기간 상표를 검사하기 전에 요약에 그것을 비교하십시오.
 
-![오늘 별도의 일일 차트 요약](/img/open-science/guides-walkthrough/13-usage-today.png)
+![오늘 별도의 일일 차트 요약](/img/open-science/guides-walkthrough/13-usage-today.webp)
 
 | (주) | 회사연혁 |
 | --- | --- |

@@ -23,7 +23,7 @@ Open **Browse Marketplace** to find published roles. The online catalog can chan
 
 Open **Settings → Specialists**. **Installed** counts the locally registered roles, including Reviewer. Use **Search specialists** and **Filter specialists by category**, then open a row to inspect it. **Browse Marketplace** opens a different catalog; a listed market entry is not installed until you complete its package/setup flow.
 
-![The RNA-seq QC Reviewer installed locally](/img/open-science/capabilities-walkthrough/06-specialist-list.jpg)
+![The RNA-seq QC Reviewer installed locally](/img/open-science/capabilities-walkthrough/06-specialist-list.webp)
 
 ## Marketplace roles observed
 

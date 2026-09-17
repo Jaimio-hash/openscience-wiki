@@ -48,7 +48,7 @@ If the new version still shows **Unavailable**, retain **View details**, the pac
 
 The screenshot shows a summary generated in Notebook from the [GSE60450 sample QC table](../reference/example-data.md). Open the file’s **Provenance → Reproducibility** tab to inspect its captured inputs and run. Here, **Not verified yet** and **Unavailable** indicate that an exact environment lock is missing. Use **View details**, then follow the [environment preparation steps](#prepare-environment) to create a new version. This screen does not show a successful reproduction.
 
-![The saved QC summary and its Reproducibility panel, showing captured evidence and an unavailable check](/img/open-science/feature-guides-2026-09/reproducibility-evidence.png)
+![The saved QC summary and its Reproducibility panel, showing captured evidence and an unavailable check](/img/open-science/feature-guides-2026-09/reproducibility-evidence.webp)
 
 ## Run a check
 

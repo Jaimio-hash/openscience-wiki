@@ -32,7 +32,7 @@ Stage verified candidates in Literature Inbox for my review; do not accept
 them automatically. Stop before downloading PDFs. Keep everything in English.
 ```
 
-![El registro de búsqueda real con identidades candidatas y estado de recuperación](/img/open-science/research-workflows/literature-topic-results.png)
+![El registro de búsqueda real con identidades candidatas y estado de recuperación](/img/open-science/research-workflows/literature-topic-results.webp)
 
 El <a href="/docs/examples/research-workflows/single-atom-search-log.md" download>registro inicial</a> registra ocho candidatos encontrados a través de la búsqueda web y metadatos Crossref. Estos documentos aún no se descargaron. Si una fuente requiere credenciales, configure [Conectores](../guides/connectors.md) o pida al agente que use una fuente disponible y nombre la brecha.
 
@@ -54,7 +54,7 @@ Keep the old collection unchanged. Keep everything in English.
 
 Revise el <a href="/docs/examples/research-workflows/single-atom-open-access-selection.md" download>selección de registro de sustitución</a>, a continuación, seleccione las cuatro filas de Inbox destinadas y seleccione **Accept**. Un enlace fuente de acceso abierto todavía necesita ser probado al guardar y abrir su PDF.
 
-![Cuatro candidatos seleccionados para la aceptación manual](/img/open-science/research-workflows/journal-open-access-inbox.png)
+![Cuatro candidatos seleccionados para la aceptación manual](/img/open-science/research-workflows/journal-open-access-inbox.webp)
 
 Crear **Single-Atom Catalysis - Full-Text Journal Club** usando **New collection**. En **All references**, seleccione estos cuatro registros aceptados más Lang, y luego elija **Add to collection**. Utilice **Add to project** para vincular el conjunto con el proyecto que contiene su conversación.
 
@@ -73,15 +73,15 @@ Crear **Single-Atom Catalysis - Full-Text Journal Club** usando **New collection
 3. Abre ese apego. Compare su título y DOI con el registro, y compruebe el conteo de la página.
 4. Repita por las cinco referencias, luego vuelva a abrir la colección. Cada fila debe ahora mostrar un icono adjunto.
 
-![Fuentes de texto completo ofrecidas para el periódico Lang](/img/open-science/research-workflows/literature-topic-fulltext.png)
+![Fuentes de texto completo ofrecidas para el periódico Lang](/img/open-science/research-workflows/literature-topic-fulltext.webp)
 
 En esta carrera, el PDF de Lang fue añadido a través de Europa PMC. Los otros cuatro fueron salvados de fuentes de editor descubierto a través de Unpaywall. Una fuente alternativa puede tener éxito cuando no se puede agregar otra fuente. Si es necesario, utilice **Open source** para obtener una copia que tiene derecho a acceder y adjuntarla con **Add PDF**. Si no hay copia legible disponible, reemplace la selección o marque que falta antes de solicitar resultados de texto completo.
 
-![Un papel descargado se abre en la vista previa de PDF en inglés](/img/open-science/research-workflows/journal-qi-pdf.png)
+![Un papel descargado se abre en la vista previa de PDF en inglés](/img/open-science/research-workflows/journal-qi-pdf.webp)
 
 La colección final contiene cinco PDFs guardados, con página cuenta **10, 9, 11, 10 y 11** en el orden de la tabla. Un icono adjunto confirma un archivo guardado; la apertura confirma que es legible y coincide con el registro.
 
-![La colección final de cinco periódicos con un apego en cada registro](/img/open-science/research-workflows/journal-five-fulltexts.png)
+![La colección final de cinco periódicos con un apego en cada registro](/img/open-science/research-workflows/journal-five-fulltexts.webp)
 
 <span id="draft-the-reading-plan-then-deepen-it-with-full-text" />
 
@@ -108,17 +108,17 @@ Durante la respuesta, expanda la actividad de lectura **Biblioteca de referencia
 
 Después de la finalización, abra **single-atom-fulltext-reading-pack.md** desde **Generated**. Compruebe la tabla de verificación de cinco documentos, cada hallazgo y su localizador, limitaciones, preguntas y agenda. La agenda debe totalizar los minutos de 60.
 
-![El paquete de texto completo guardado, con los mismos cinco papeles y cheques de fuente](/img/open-science/research-workflows/journal-fulltext-pack.png)
+![El paquete de texto completo guardado, con los mismos cinco papeles y cheques de fuente](/img/open-science/research-workflows/journal-fulltext-pack.webp)
 
 ## Revise el mapa de papel contra los PDF originales {/* #check-the-paper-map-against-the-original-pdfs */}
 
 Abra **single-atom-fulltext-paper-map.csv** y utilice su botón de ampliación para una vista de pantalla completa. Esta carrera contiene **filas 5 · columnas 12**. Compare el conjunto DOI con la colección; un paquete de un conjunto diferente no es el resultado de este flujo de trabajo. Desplazar horizontalmente o descargar el CSV para leer células largas en su totalidad.
 
-![El mapa real de papel de cinco hojas, doce columnas](/img/open-science/research-workflows/journal-fulltext-paper-map.png)
+![El mapa real de papel de cinco hojas, doce columnas](/img/open-science/research-workflows/journal-fulltext-paper-map.webp)
 
 Volver a **Library**, abrir un PDF, haga clic en su contador de página, escriba la página solicitada y pulse **Entra**. Verifique la figura o tabla junto con su capción y texto circundante. Por ejemplo, la Figura 5 de He et al está en **PDF página 7**; la descripción de la línea de producción está en la página 3. Apoyan diferentes partes del resumen.
 
-![He et al.'s Figure 5 inauguró en PDF página 7 para comparación](/img/open-science/research-workflows/journal-he-figure5.png)
+![He et al.'s Figure 5 inauguró en PDF página 7 para comparación](/img/open-science/research-workflows/journal-he-figure5.webp)
 
 Pida una revisión guardada cuando un localizador o condición está mal, y luego vuelva a abrir el archivo revisado. El paquete también retiene un conflicto en Sun et al.: página 2 y la capción de la Figura 5 dan diferentes composiciones de alimentación. Registra ambas descripciones en lugar de elegir una en silencio. Esta es una pregunta útil de la reunión, no un detalle experimental resuelto.
 

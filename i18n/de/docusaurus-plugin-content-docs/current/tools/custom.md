@@ -36,7 +36,7 @@ Speichern Sie beide Dateien lokal und notieren Sie sich ihre vollständigen Pfad
 
 <PlatformContent platform="macos">
 
-![Aktuelle lokale MCP-Konfiguration](/img/open-science/capabilities-walkthrough/08-mcp-local-config.jpg)
+![Aktuelle lokale MCP-Konfiguration](/img/open-science/capabilities-walkthrough/08-mcp-local-config.webp)
 
 </PlatformContent>
 
@@ -90,7 +90,7 @@ In diesem Beispiel hat die native Anwendung **23,227,641 Gesamtzählungen, 8,664
 
 <PlatformContent platform="macos">
 
-![Der benutzerdefinierte Connector erfolgreich verbunden](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![Der benutzerdefinierte Connector erfolgreich verbunden](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 </PlatformContent>
 
@@ -98,7 +98,7 @@ In diesem Beispiel hat die native Anwendung **23,227,641 Gesamtzählungen, 8,664
 
 Öffnen Sie die Notebook-Aktivität für beide Werkzeugaufrufe, öffnen Sie dann das gespeicherte JSON erneut und vergleichen Sie seine Beispiel-IDs und Metriken mit dem CSV. Der folgende Windows-Lauf verwendet die Connector-ID `gse60450-qc-win`; Verwenden Sie Ihre eigene konfigurierte ID in der Anforderung.
 
-![Windows lokale MCP Anrufe mit gespeichertem JSON und Notebook Ausgang](/img/open-science/windows/mcp-tool-results.png)
+![Windows lokale MCP Anrufe mit gespeichertem JSON und Notebook Ausgang](/img/open-science/windows/mcp-tool-results.webp)
 
 </PlatformContent>
 

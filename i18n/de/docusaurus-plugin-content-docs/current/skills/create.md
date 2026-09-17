@@ -47,13 +47,13 @@ Verwenden Sie dies, nachdem eine wiederholbare Prozedur tatsächlich funktionier
 
 Nachdem Sie GSE60450 QC in einer neuen Sitzung abgeschlossen haben, wählen Sie **+ → Save as skill** aus und fordern Sie ein separates **rnaseq-descriptive-qc**-Paket an, wobei vorhandene Pakete beibehalten werden. Der native Workflow erstellte einen Entwurf mit einem **SKILL.md**. Die Validierung hat keine Fehler oder Warnungen zurückgegeben.
 
-![Nativer Skill-Entwurf und Validierungsergebnis](/img/open-science/v0.27.0/16-native-skill-draft-validated.png)
+![Nativer Skill-Entwurf und Validierungsergebnis](/img/open-science/v0.27.0/16-native-skill-draft-validated.webp)
 
 Überprüfen Sie den Namen, die auslösende Beschreibung, Eingaben, metrischen Definitionen und Stoppbedingungen, bevor Sie die Veröffentlichung in Personal Skills bestätigen. Verwenden Sie dann **Settings → Skills → Search skills**, öffnen Sie die gespeicherten Anweisungen und inspizieren Sie **Availability** und **Files**. Laden Sie das aktuelle veröffentlichte <ExampleDownload path="/examples/capabilities/rnaseq-descriptive-qc/SKILL.md">SKILL.md</ExampleDownload> herunter.
 
-![Native Publikation gefunden in Personal](/img/open-science/v0.27.0/17-native-skill-published.png)
+![Native Publikation gefunden in Personal](/img/open-science/v0.27.0/17-native-skill-published.webp)
 
-![Wiedereröffnete Anweisungen und Verfügbarkeit](/img/open-science/v0.27.0/18-native-skill-instructions.png)
+![Wiedereröffnete Anweisungen und Verfügbarkeit](/img/open-science/v0.27.0/18-native-skill-instructions.webp)
 
 ### Warum der Button nicht verfügbar ist {/* #why-the-button-is-unavailable */}
 
@@ -105,7 +105,7 @@ Die Referenz definiert die Stichprobenmetriken und deren Interpretation. Bewahre
 5. Überprüfen Sie die Referenzanzahl und Paketgröße und wählen Sie dann **Publish** aus.
 6. Durchsuchen Sie die neue persönliche Zeile und öffnen Sie sie erneut. Bestätigen Sie die Anweisungen, Verfügbarkeit und Dateien; Exportieren Sie das Paket, um beide Einträge zu prüfen.
 
-![RNA-seq Skill Body und unterstützende Datei](/img/open-science/capabilities-walkthrough/01-skill-create.jpg)
+![RNA-seq Skill Body und unterstützende Datei](/img/open-science/capabilities-walkthrough/01-skill-create.webp)
 
 | Feld oder Button | Was einzugeben oder zu überprüfen |
 | --- | --- |
@@ -145,7 +145,7 @@ Verwenden Sie für einen agentengestützten Entwurf **Add skill → Chat with ag
 
 Öffnen Sie den neuen CSV erneut und melden und vergleichen Sie ihn nach vollständiger Beispielkennung mit dem [Gemeinsame Baseline](../reference/example-data.md). Überprüfen Sie den Input Hash. Wenn Sie den Skill auf eine andere Studie anwenden, wiederholen Sie diese Überprüfungen mit dem eigenen Input und dem experimentellen Design dieser Studie.
 
-![Ein separater Aufruf und der wieder geöffnete QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.png)
+![Ein separater Aufruf und der wieder geöffnete QC CSV](/img/open-science/v0.27.0/19-native-skill-reuse.webp)
 
 Bezugsnummer der Durchführung: [SkillEditor.tsx](https://github.com/aipoch/open-science/blob/v0.26.0/src/renderer/src/pages/settings/SkillEditor.tsx), [host-skills-service.ts](https://github.com/aipoch/open-science/blob/v0.26.0/src/main/skills/host-skills-service.ts).
 

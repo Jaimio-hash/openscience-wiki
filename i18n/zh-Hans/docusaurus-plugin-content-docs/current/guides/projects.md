@@ -23,7 +23,7 @@ last_update:
 3. 点击 **Create project**。确认左侧显示项目名称，主区域打开 **New conversation**。
 4. 打开项目名称菜单 → **Project settings**，检查字段是否保存。项目保存成功与模型连接成功是两件事。
 
-![英文界面中的 PRISMA 项目目标与 Agent Context](/img/open-science/local-acceptance/prisma-project-form.png)
+![英文界面中的 PRISMA 项目目标与 Agent Context](/img/open-science/local-acceptance/prisma-project-form.webp)
 
 | 字段或按钮 | 示例或操作 | 行为 |
 | --- | --- | --- |

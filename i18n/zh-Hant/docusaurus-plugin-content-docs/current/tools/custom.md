@@ -36,7 +36,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 <PlatformContent platform="macos">
 
-![實際本地 MCP 配置](/img/open-science/capabilities-walkthrough/08-mcp-local-config.jpg)
+![實際本地 MCP 配置](/img/open-science/capabilities-walkthrough/08-mcp-local-config.webp)
 
 </PlatformContent>
 
@@ -90,7 +90,7 @@ Windows 可透過 **Other…** 填寫已安裝 `python.exe` 的完整路徑；�
 
 <PlatformContent platform="macos">
 
-![成功連線的自定義 Connector](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![成功連線的自定義 Connector](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 </PlatformContent>
 
@@ -98,7 +98,7 @@ Windows 可透過 **Other…** 填寫已安裝 `python.exe` 的完整路徑；�
 
 開啟兩次工具呼叫的 Notebook 活動，再重開儲存的 JSON，對照 CSV 檢查樣本 ID 和指標。下方 Windows 執行使用聯結器 ID `gse60450-qc-win`，發出請求時應使用你自己配置的 ID。
 
-![Windows 本地 MCP 呼叫，包含儲存的 JSON 與 Notebook 輸出](/img/open-science/windows/mcp-tool-results.png)
+![Windows 本地 MCP 呼叫，包含儲存的 JSON 與 Notebook 輸出](/img/open-science/windows/mcp-tool-results.webp)
 
 </PlatformContent>
 

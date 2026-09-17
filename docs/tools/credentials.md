@@ -26,7 +26,7 @@ Configure credentials in **Settings → Credentials** for the service actually m
 3. **Save key** stores the entered key and resumes the waiting call when successful. **Not now** leaves the credential unconfigured.
 4. Read the final tool status. Choosing **Not now** can return **credential_required**; configure the key before retrying.
 
-![OpenAlex credential request in the English app](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.jpg)
+![OpenAlex credential request in the English app](/img/open-science/capabilities-walkthrough/25-openalex-credential-request.webp)
 
 The prompt states that the key is encrypted on this computer and sent only to `api.openalex.org`. In Settings, the OpenAlex form also offers **Validate**, **Save**, **Remove key** when one exists, and **Cancel**. A replacement field does not reveal the stored key. Secure-storage errors require resolving the system keychain state before saving secrets.
 
@@ -49,7 +49,7 @@ Create the credential here, then select its name in the [Connector configuration
 | Discovery | When applicable, discover server metadata; this is not a successful sign-in by itself. |
 | Cancel / Save | Discard the draft or store a valid credential configuration. |
 
-![OAuth advanced registration fields](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.png)
+![OAuth advanced registration fields](/img/open-science/walkthrough-2026-09-08/33-credential-oauth-advanced.webp)
 
 In a custom Connector, bind the credential to a header, environment variable, or OAuth selector. The name is the reference; do not place secret values in descriptions or project instructions. Exported portable configurations replace secrets with placeholders. A saved credential still needs an actual service/Connector test to establish that it works.
 

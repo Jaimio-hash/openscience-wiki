@@ -24,7 +24,7 @@ last_update:
 
 添付したCSVをクリックしてプレビューを開きます。 材料、温度、伝導性、SDおよび源シート/列を含む**26行・6列**を、示します。 ソースノートも開きます。 キャプチャされた実行は、`conductivity-source.md` としてここに供給されたノートの filename `README.md` を使用しました。
 
-![値、単位、およびソース行の結合された伝導性テーブル](/img/open-science/research-workflows/conductivity-input.png)
+![値、単位、およびソース行の結合された伝導性テーブル](/img/open-science/research-workflows/conductivity-input.webp)
 
 ## 背後にある図とデータを求める {/* #ask-for-the-figure-and-the-data-behind-it */}
 
@@ -45,19 +45,19 @@ Keep all labels and notes in English. Execute the code and save files.
 
 会話で**Notebook**を選択します。 完成したPythonセルを開き、その出力を検査します。 26の合計行、13行の各素材、275-390 Kの範囲とプロットされた図。 入力解像度が失敗した場合は、エージェントがこの会話にCSVを添付して使用し、継続する前に成功した実行を検証します。
 
-![実際の Notebook 実行は、入力チェックを報告し、プロットをレンダリングします。](/img/open-science/research-workflows/conductivity-notebook.png)
+![実際の Notebook 実行は、入力チェックを報告し、プロットをレンダリングします。](/img/open-science/research-workflows/conductivity-notebook.webp)
 
 ## 数字とエクスポートをチェックする {/* #check-the-figure-and-export */}
 
 生成された PNG を開きます。 両材料が区別できることを確認してください。エンドポイントは表示され、軸の状態ユニットと不確実性ノートは**報告されたSD**と言います。 線は測定だけを接続します; 300 Kの後のAZOの伝導性のすくいは目に見える残ります。
 
-![導電性プロットの実際のOpen-ScienceプレビューとSDエラーバーを報告](/img/open-science/research-workflows/conductivity-figure.png)
+![導電性プロットの実際のOpen-ScienceプレビューとSDエラーバーを報告](/img/open-science/research-workflows/conductivity-figure.webp)
 
 **plotted-conductivity.csv** を開き、入力と比較します。 この実行では、温度、導電性値、SD、およびソースシート/ルーの識別を保存したすべての**26行**が保持されます。 **conductivity-methods.md** を開き、ソース DOI と不確実性の定義を確認します。
 
 **Generated**エリアには4つのファイルが含まれています。 メソッドファイルを開き、各プレビューでダウンロードアイコンを使用して、チェックしたバージョンを保存します。 出力がない場合、特定のファイルとその再オープン要求。 SVG やデータテーブルが保存されていない、成功した PNG は証明しません。
 
-![4つの保存された出力と再オープンされたメソッドノート](/img/open-science/research-workflows/conductivity-methods.png)
+![4つの保存された出力と再オープンされたメソッドノート](/img/open-science/research-workflows/conductivity-methods.webp)
 
 PNG を使用して、ベクトルアートワークが便利です。 <a href="/docs/examples/research-workflows/conductivity-temperature.png" download>ツイート</a>、<a href="/docs/examples/research-workflows/conductivity-temperature.svg" download>SVGの特長</a>、<a href="/docs/examples/research-workflows/plotted-conductivity.csv" download>データのプロット</a>、<a href="/docs/examples/research-workflows/conductivity-methods.md" download>メソッド</a>の動作は比較可能です。
 

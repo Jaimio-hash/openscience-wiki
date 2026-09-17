@@ -23,7 +23,7 @@ last_update:
 | 저장 | Persist 변경 사항 | 닫은 후에 sidebar 제목을 검사하십시오 |
 | 자주 묻는 질문 | 초안을 적용하지 않고 | 이 연구 실행을 취소하지 않습니다. |
 
-![세션 제목 및 설명 편집기](/img/open-science/guides-walkthrough/40-session-edit.png)
+![세션 제목 및 설명 편집기](/img/open-science/guides-walkthrough/40-session-edit.webp)
 
 행 메뉴에서 **Pin**을 선택하여 Pinned 그룹에서 세션을 유지하십시오. **Unpin**은 정규 리스트에 반환합니다. Pinning는 접근을 편성합니다; 커널을 살아나거나 삭제에서 세션을 보호하지 않습니다.
 
@@ -35,7 +35,7 @@ last_update:
 
 ## 세션 메뉴를 올바르게 읽으십시오. {/* #read-the-session-menu-correctly */}
 
-![RNA-seq 세션에 속하는 작업](/img/open-science/guides-walkthrough/41-session-actions.png)
+![RNA-seq 세션에 속하는 작업](/img/open-science/guides-walkthrough/41-session-actions.webp)
 
 | (주) | 결과 | 【특전】 |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ last_update:
 4. **Edit…**로 `GSE60450 - follow-up interpretation`로 이름을 변경합니다.
 5. 다음 요청을 제출하기 전에 상속된 성적표를 검사합니다. 필요한 경우 원본 프로젝트 artifacts를 명시적으로 참조하십시오.
 
-![핀 원본 옆에 독립적으로 지명 된 지점](/img/open-science/guides-walkthrough/57-session-branch.png)
+![핀 원본 옆에 독립적으로 지명 된 지점](/img/open-science/guides-walkthrough/57-session-branch.webp)
 
 지점은 선택한 대화 기록을 보존하지만, 원래의 라이브 커널을 재현하지 않습니다. 복사된 활동을 위해 **code shown** 또는 차단된 역사적인 연결은 프로젝트의 파일 패널에서 본래 artifact를 열고 그것의 생성 회의를 검열합니다.
 
@@ -76,7 +76,7 @@ Branch 가용성은 메시지 및 프레임 워크 상태에 따라 다릅니다
 
 동일한 개정 경로는 OpenCode과 로컬 모델과 연습했습니다. 개정된 요청은 새로운 구문을 생산하고, 이전은 원래의 대답을 복원하고, 다음 개정 된 대답을 복원했습니다. 이 연결 전용 예는 도구 상태 또는 외부 부작용이 반전되지 않습니다.
 
-![역사적인 메시지 개정을 전환하기위한 제어](/img/open-science/local-todo-batch/18-message-revision.png)
+![역사적인 메시지 개정을 전환하기위한 제어](/img/open-science/local-todo-batch/18-message-revision.webp)
 
 **Cancel**는 편집을 제출하지 않고 나뭇잎. **Send**는 새로운 대답을 요구합니다; 계속하기 전에 체크하십시오. 다음 작업을 수정하거나 별도로 지명 된 조사에 대한 지점을 수정하는 후속 작업을 사용합니다.
 
@@ -99,7 +99,7 @@ Branch 가용성은 메시지 및 프레임 워크 상태에 따라 다릅니다
 
 <p className="example-label"><strong>실습 예제</strong> 최종 GSE60450 QC 정의만 내보내기</p>
 
-![최종 QC 정의는 PDF 수출을 위해 돌립니다](/img/open-science/local-todo-batch/20-selected-conversation-export.png)
+![최종 QC 정의는 PDF 수출을 위해 돌립니다](/img/open-science/local-todo-batch/20-selected-conversation-export.webp)
 
 **GSE60450 — Methods and claim audit**에서 최종 회전을 선택한 것은 요청과 4 미터 정의 만 포함하는 한 페이지 PDF을 생산합니다. Earlier 토론은 복종되었습니다. 전체 대화 PDF도 재개 및 체크되었습니다. 앞서 선정된 Markdown 수출은 선택한 후속으로 시작되었습니다. 턴은 몇 개의 보조 메시지를 포함 할 수 있으므로, 한 번의 턴을 선택하면 정확히 두 개의 메시지를 수출 할 필요가 없습니다.
 
@@ -109,13 +109,13 @@ Branch 가용성은 메시지 및 프레임 워크 상태에 따라 다릅니다
 
 **Download all artifacts**을 선택하고 파일을 선택하고 **다운로드 N artifacts**을 선택하고 대상 폴더를 선택하십시오. 이 항목은 별도의 파일을 저장합니다. 두 개의 다운로드 방법 및 클레오짓 Markdown 파일이 다시 열리고 바이트에 저장된 artifacts 바이트를 일치했다.
 
-![세션에서 두 개의 저장된 보고서 선택](/img/open-science/local-todo-batch/21-session-artifact-selection.png)
+![세션에서 두 개의 저장된 보고서 선택](/img/open-science/local-todo-batch/21-session-artifact-selection.webp)
 
 ### 프로젝트 파일 번들 다운로드 {/* #download-a-project-file-bundle */}
 
 왼쪽 상단의 프로젝트 이름 메뉴 열기 → **Download artifacts…**. 파일은 **Generated** 및 **Uploads** 아래에 그룹화됩니다. 모든 것이 처음 선택됩니다; **Uncheck all**을 사용하여 파일을 손으로 선택하고 ZIP을 저장하십시오.
 
-![보고서 선택, 프로젝트에서 QC 테이블 및 원래 카운트 입력](/img/open-science/local-todo-batch/22-project-artifact-selection.png)
+![보고서 선택, 프로젝트에서 QC 테이블 및 원래 카운트 입력](/img/open-science/local-todo-batch/22-project-artifact-selection.webp)
 
 시스템에서 **Cancel**을 선택하여 저장을 포기하려면 대화 상자를 저장하십시오. 파일 선택은 사용할 수 있습니다. 쓰기 시작하면 앱이 취소 및 마감을 비활성화합니다. 결과에 대 한 기대; 대상 대화 상자를 취소하는 것은 진행 상황을 멈추지 않고 다릅니다.
 

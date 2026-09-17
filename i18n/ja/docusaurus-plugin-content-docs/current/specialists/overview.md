@@ -23,7 +23,7 @@ Specialistは、アイデンティティ、指示、および許可されたSkil
 
 **Settings → Specialists** を開きます。 **Installed** は、査読者を含むローカル登録ロールをカウントします。 **Search specialists**と**Filter specialists by category**を使用して、行を開き、それを検査します。 **Browse Marketplace**は別のカタログを開けます; パッケージ/セットアップフローを完了するまで、リストされた市場エントリーはインストールされません。
 
-![RNA-seq QCの査読装置はローカルに取付けました](/img/open-science/capabilities-walkthrough/06-specialist-list.jpg)
+![RNA-seq QCの査読装置はローカルに取付けました](/img/open-science/capabilities-walkthrough/06-specialist-list.webp)
 
 ## マーケットプレースの役割が観察される {/* #marketplace-roles-observed */}
 

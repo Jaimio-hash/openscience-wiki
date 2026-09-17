@@ -36,7 +36,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 <PlatformContent platform="macos">
 
-![실제 로컬 MCP 구성](/img/open-science/capabilities-walkthrough/08-mcp-local-config.jpg)
+![실제 로컬 MCP 구성](/img/open-science/capabilities-walkthrough/08-mcp-local-config.webp)
 
 </PlatformContent>
 
@@ -90,7 +90,7 @@ Windows에서 **Other…**을 사용하여 설치 된 `python.exe`에 전체 경
 
 <PlatformContent platform="macos">
 
-![성공적으로 연결되는 관례 Connector](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![성공적으로 연결되는 관례 Connector](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 </PlatformContent>
 
@@ -98,7 +98,7 @@ Windows에서 **Other…**을 사용하여 설치 된 `python.exe`에 전체 경
 
 도구 통화 모두 Notebook 활동을 열고 저장 된 JSON을 다시 열고 CSV와 샘플 ID와 메트릭스를 비교합니다. Windows는 아래에 연결관 ID `gse60450-qc-win`를 사용하; 요청시 자신의 ID를 사용합니다.
 
-![Windows 로컬 MCP 통화 저장 JSON 및 Notebook 출력](/img/open-science/windows/mcp-tool-results.png)
+![Windows 로컬 MCP 통화 저장 JSON 및 Notebook 출력](/img/open-science/windows/mcp-tool-results.webp)
 
 </PlatformContent>
 

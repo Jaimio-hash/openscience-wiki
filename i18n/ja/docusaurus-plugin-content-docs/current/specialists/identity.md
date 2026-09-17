@@ -26,7 +26,7 @@ last_update:
 6. **Full access**をオフにし、RNA-seq SkillとOmicsのアーカイブを[機能](./capabilities.md)に表示し、**Create specialist**を選択します。
 7. 保存した行を検索し、再度開きます。 正確なID、指示、および2つの機能結合を確認します。
 
-![英語のSpecialistエディタのアイデンティティフィールド](/img/open-science/capabilities-walkthrough/04-specialist-identity.jpg)
+![英語のSpecialistエディタのアイデンティティフィールド](/img/open-science/capabilities-walkthrough/04-specialist-identity.webp)
 
 ```text
 You review bulk RNA-seq raw-count quality. Use the rnaseq-count-qc Skill when validating a count matrix. For a precomputed QC table, inspect the full sample identifiers, numeric completeness, nonnegative values, and whether zero-count plus detected genes equals the stated gene count. Use available Notebook tools for arithmetic; do not install new packages for this bounded review. Cite source filenames and actual outputs. Separate verified findings from unresolved checks. Never infer differential expression, clinical significance, or quality cutoffs from library totals alone. For metadata queries, use only the assigned Omics Archives connector. Return a concise PASS/FAIL table and the limitations of the available input.

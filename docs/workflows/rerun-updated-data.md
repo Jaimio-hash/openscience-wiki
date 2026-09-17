@@ -31,11 +31,11 @@ air-report-v1.md. The script must accept one or more CSV paths plus
 input/script hashes. Stop after this baseline. Use English.
 ```
 
-![First-week attachment and baseline calculation request](/img/open-science/workflow-extensions/air-input-v1.png)
+![First-week attachment and baseline calculation request](/img/open-science/workflow-extensions/air-input-v1.webp)
 
 Review the file reads and computation before approving. In **Notebook**, check that execution finishes, then open **air-daily-v1.csv**. The baseline contains **168 hourly rows and 7 daily rows**, with no missing PM2.5 values.
 
-![The saved seven-day baseline and valid-hour counts](/img/open-science/workflow-extensions/air-baseline-table.png)
+![The saved seven-day baseline and valid-hour counts](/img/open-science/workflow-extensions/air-baseline-table.webp)
 
 ## 2. Add new observations without changing the method
 
@@ -53,7 +53,7 @@ Reopen the saved results. This is a historical replay, not live data.
 Use English and do not make health or causal claims.
 ```
 
-![The second-week file added to the existing analysis conversation](/img/open-science/workflow-extensions/air-update-input.png)
+![The second-week file added to the existing analysis conversation](/img/open-science/workflow-extensions/air-update-input.webp)
 
 Verify that the Agent runs the existing script and keeps the same missing-value and completeness rules. Changing both data and method would make it harder to explain why the result changed.
 
@@ -61,7 +61,7 @@ Verify that the Agent runs the existing script and keeps the same missing-value 
 
 Open **air-daily-v2.png** and **air-daily-v2.csv**. The combined input contains **336 hourly rows**, with **no duplicate or missing timestamps**. There is **one missing PM2.5 observation**, on January 11. The table has **14 days**, all meeting the example's 18-valid-hour rule.
 
-![The expanded fourteen-day result displayed in Open-Science](/img/open-science/workflow-extensions/air-update-plot.png)
+![The expanded fourteen-day result displayed in Open-Science](/img/open-science/workflow-extensions/air-update-plot.webp)
 
 The January 11 mean is **11.652 µg/m³**, calculated from **23 valid hours**. Do not divide a missing observation in as if it were zero. A complete timestamp sequence does not guarantee that all measurement values are present.
 
@@ -69,17 +69,17 @@ The January 11 mean is **11.652 µg/m³**, calculated from **23 valid hours**. D
 
 Open **air-update-check.csv**. All **seven shared daily rows** are identical across every output field; the only new dates are January 8–14. The original script's SHA-256 is unchanged before and after the update.
 
-![The saved row-by-row comparison with unchanged baseline dates](/img/open-science/workflow-extensions/air-update-check.png)
+![The saved row-by-row comparison with unchanged baseline dates](/img/open-science/workflow-extensions/air-update-check.webp)
 
 Open **air-update-notes.md** to check input identities, missing observations and the retained v1 files. An independent calculation of all 14 daily means and valid-hour counts matched the saved output to its displayed precision.
 
-![The update notes record unchanged code, retained baseline files and data checks](/img/open-science/workflow-extensions/air-update-notes.png)
+![The update notes record unchanged code, retained baseline files and data checks](/img/open-science/workflow-extensions/air-update-notes.webp)
 
 ## 5. Check the report dates before handing it off
 
 Check that the report heading follows the actual input interval. The initial script retained a first-week title in its two-week report; that presentation error was corrected in **air-analysis-reviewed.py**. Only the heading template changed. The reviewed script was then run unchanged on week 1 and on both weeks, preserving all previous files.
 
-![The corrected report now names the full two-week interval](/img/open-science/workflow-extensions/air-reviewed-report.png)
+![The corrected report now names the full two-week interval](/img/open-science/workflow-extensions/air-reviewed-report.webp)
 
 The saved **air-daily-baseline.csv** and **air-daily-updated.csv** match the original v1/v2 CSVs in every field. **air-update-verification.md** records the same reviewed script hash before and after both runs, and checks the two report headings. This separates a corrected label from a change in the numerical method.
 

@@ -36,7 +36,7 @@ Pour enregistrer un emplacement de lecture par vous-même, sélectionnez texte o
 
 Ouvrez `rnaseq-sample-qc.csv`. Dans cet exemple, il affiche **Lignes 12 · Colonnes 6** et utilise la première ligne comme en-têtes. Le défilement horizontal expose les noms de longues colonnes source et les mesures à leur droite. Les numéros de ligne de la table sont des positions d'affichage, pas des identifiants de gènes ou d'échantillons.
 
-![Le tableau des douze échantillons du QC](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![Le tableau des douze échantillons du QC](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 Vérifiez que les étiquettes des colonnes et les identifiants complets sont lisibles. Les définitions de champ et les vérifications par rapport au niveau de référence partagé sont en [Tableaux et ensembles de données](../tools/tables.md).
 
@@ -46,7 +46,7 @@ La source `.txt` est une matrice séparée par un onglet; un visionneur de texte
 
 Ouvrez `rnaseq-library-sizes.png`. Utiliser **Zoom in**, **Zoom out** et **Reset zoom**; ouvrir le plein écran lorsque les étiquettes d'axe sont trop petites. Zoom ne change que la vue. Il ne rééchantillonne pas la matrice source ni ne met à jour un résultat statistique.
 
-![Le chiffre réel du nombre brut total dans l'aperçu plein écran](/img/open-science/guides-walkthrough/54-rnaseq-figure.png)
+![Le chiffre réel du nombre brut total dans l'aperçu plein écran](/img/open-science/guides-walkthrough/54-rnaseq-figure.webp)
 
 Lisez l'axe du nombre brut, les douze étiquettes de l'échantillon et leur cartographie dans le rapport CSV/. Les différentes hauteurs de barre ne permettent pas à elles seules d'établir l'expression différentielle. L'exemple est une vérification descriptive préalable à l'analyse, sans normalisation ni test d'hypothèse.
 
@@ -71,9 +71,9 @@ Les <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-reading.docx">R
 | JSON | Ouvert <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.json">Résumé</ExampleDownload> pour inspecter le texte source, les identifiants et les valeurs. Il s'affiche comme un code plutôt qu'un arbre d'objets extensible. |
 | HTML | Ouvert <ExampleDownload path="/examples/gse60450/office/GSE60450-qc-summary.html">le tableau de lecture</ExampleDownload>. **Source** indique le HTML; **Render** restaure le document formaté. Aucun des deux modes ne réexécute le QC. |
 
-![Sélection d'échantillons dans l'aperçu réel du cahier de travail](/img/open-science/local-todo-batch/47-workbook-samples.png)
+![Sélection d'échantillons dans l'aperçu réel du cahier de travail](/img/open-science/local-todo-batch/47-workbook-samples.webp)
 
-![La deuxième page du TIFF actuel](/img/open-science/local-todo-batch/50-tiff-second-page.png)
+![La deuxième page du TIFF actuel](/img/open-science/local-todo-batch/50-tiff-second-page.webp)
 
 Si **Preview unavailable → Open this Office file in your default app to view it.** apparaît, utilisez **Open** pour un fichier local, ou **Download** pour un téléchargement géré, puis ouvrez-le dans une application compatible. Ce repli maintient le fichier original disponible lorsque l'aperçu intégré ne peut pas l'afficher.
 

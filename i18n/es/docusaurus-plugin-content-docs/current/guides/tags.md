@@ -16,7 +16,7 @@ Después de asignar una etiqueta, abra su detalle y seleccione un recurso listad
 2. Seleccione **Create**. Revise la nueva fila y estado de cero recursos.
 3. Elija **Edit Tag** para revisitar los valores actuales. **Save** compromete una edición; **Cancel** descarta el borrador.
 
-![Transcripciónomics tag form](/img/open-science/guides-walkthrough/30-tag-create.png)
+![Transcripciónomics tag form](/img/open-science/guides-walkthrough/30-tag-create.webp)
 
 | Campo/control | Opciones y comportamiento |
 | --- | --- |
@@ -40,19 +40,19 @@ Un nombre de la etiqueta por sí solo no conecta un servicio, otorga permiso o a
 
 Asignar **Transcripciónomics** a **Archivos de Omics**, luego abrir el detalle de la etiqueta. En este ejemplo, muestra **Recursos 1**; La búsqueda `Omics` mantiene que Connector visible, y la selección abre su detalle. Utilice su propia etiqueta y los nombres de recursos al repetir estos pasos. La eliminación de la asignación deja intacto el recurso.
 
-![Archivo de Omics asignado recurso encontrado a través de su etiqueta](/img/open-science/guides-walkthrough/35-tagged-connector.png)
+![Archivo de Omics asignado recurso encontrado a través de su etiqueta](/img/open-science/guides-walkthrough/35-tagged-connector.webp)
 
 ## Ordene la lista de etiquetas {/* #order-the-tag-list */}
 
 **Favorites** se queda primero. Arrastre **Reorder &#91;nombre&#93;**, o concentre el mango y utilice las teclas de flecha, para mover una etiqueta personalizada. Revise su nueva posición en la lista.
 
-![Ordenación de la etiqueta y vista de los recursos vacíos](/img/open-science/guides-walkthrough/31-tag-reorder.png)
+![Ordenación de la etiqueta y vista de los recursos vacíos](/img/open-science/guides-walkthrough/31-tag-reorder.webp)
 
 ## Quitar una etiqueta {/* #remove-a-tag */}
 
 Seleccione **Delete Tag** e inspeccione **Asignaciones para eliminar**. Eliminar la etiqueta elimina esas asignaciones pero mantiene los recursos. **Cancel** conserva tanto la etiqueta como sus asignaciones.
 
-![Alcance de eliminación, cancelado en este paso](/img/open-science/guides-walkthrough/32-tag-delete-boundary.png)
+![Alcance de eliminación, cancelado en este paso](/img/open-science/guides-walkthrough/32-tag-delete-boundary.webp)
 
 Si su propósito es sólo eliminar una asignación, haga eso en el recurso en lugar de borrar la etiqueta en todas partes. Use [Biblioteca de referencias](./library.md) para organizar papeles en colecciones; etiquetas y colecciones sirven diferentes propósitos.
 

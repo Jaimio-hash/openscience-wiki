@@ -25,11 +25,11 @@ Für das Durchsuchen von Katalogen, die Installation und Updates folgen Sie dem 
 5. Schließen Sie die Vorschau, wählen Sie den Kandidaten und wählen Sie **Import selected (1)**.
 6. Durchsuchen Sie die importierte Zeile und prüfen Sie den endgültigen Namen und die Quelle.
 
-![Prüfung des vollständigen Pakets vor dem Import](/img/open-science/capabilities-walkthrough/11-skill-package-preview.jpg)
+![Prüfung des vollständigen Pakets vor dem Import](/img/open-science/capabilities-walkthrough/11-skill-package-preview.webp)
 
 In diesem Beispiel existierte das ursprüngliche Personal Skill bereits. In der Vorschau wurde **Name exists** angezeigt und ein separates **Importiert `rnaseq-count-qc-2`** importiert. Das Original und seine Specialist-Bindung blieben erhalten. Gehen Sie nicht davon aus, dass jeder Import das bestehende Paket aktualisiert; Inspizieren Sie die Quelle des Kandidaten und aktualisieren / ersetzen Sie die Diagnose.
 
-![Die importierte Kopie und das Original Personal Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.jpg)
+![Die importierte Kopie und das Original Personal Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.webp)
 
 | Einfuhrkontrolle | Zweck |
 | --- | --- |
@@ -53,9 +53,9 @@ Ein Markdown-Upload benötigt YAML `name` und `description`; Ein ZIP/`.skill`-Bu
 4. Kehren Sie zu Skills zurück, suchen Sie nach `peer-review` und prüfen Sie die importierte Zeile. Der Quellordner bleibt an Ort und Stelle; Open-Science verwendet eine importierte Kopie.
 5. Verwenden Sie **Rescan** nach dem Ändern der installierten Ordner. Überprüfen Sie den Ursprung, die Auswahl und den Status erneut, bevor Sie erneut importieren.
 
-![Vorschau des lokal installierten Peer-Review-Pakets](/img/open-science/local-todo-batch/12-installed-skill-preview.png)
+![Vorschau des lokal installierten Peer-Review-Pakets](/img/open-science/local-todo-batch/12-installed-skill-preview.webp)
 
-![Finden Sie das importierte Paket in der Skills-Liste](/img/open-science/local-todo-batch/13-installed-skill-imported.png)
+![Finden Sie das importierte Paket in der Skills-Liste](/img/open-science/local-todo-batch/13-installed-skill-imported.webp)
 
 Überprüfen Sie nach dem Import die Vorlagen- und Referenzdateien im Skill-Detail. Bevor Sie eine Methode von einem anderen Assistenten verwenden, überprüfen Sie, ob die erforderlichen Tools und Laufzeitfunktionen in dieser Sitzung verfügbar sind.
 
@@ -69,7 +69,7 @@ Ein Markdown-Upload benötigt YAML `name` und `description`; Ein ZIP/`.skill`-Bu
 4. Schließen Sie die Vorschau, wählen Sie den beabsichtigten Kandidaten aus und wählen Sie **Import selected (1)**. Warten Sie auf das Ergebnis und überprüfen Sie den Namen unter **Imported skills**.
 5. Kehren Sie zu Skills zurück und suchen Sie nach diesem Namen. Überprüfen Sie seine Quelle und Verfügbarkeit, bevor Sie es verwenden.
 
-![Überprüfen Sie einen GitHub Skill und seine angepinnte Quelle vor dem Import](/img/open-science/local-todo-batch/15-github-skill-preview.png)
+![Überprüfen Sie einen GitHub Skill und seine angepinnte Quelle vor dem Import](/img/open-science/local-todo-batch/15-github-skill-preview.webp)
 
 Importieren von `fair-esm2` aus dem Produkt-Repository erstellt **`fair-esm2-2`** weil der eingebaute Name bereits existierte. Das eingebaute Paket blieb. Das Importieren von Anweisungen installiert keine Modellgewichte oder stellt fest, dass Inferenz funktioniert.
 
@@ -77,7 +77,7 @@ Importieren von `fair-esm2` aus dem Produkt-Repository erstellt **`fair-esm2-2`*
 
 Scannen Sie das gleiche Repository mit der beabsichtigten neueren Ref. Der vorhandene Kandidat kann **Update available** anzeigen. Wählen Sie nur diesen Kandidaten aus und importieren Sie ihn; Inspizieren Sie die bereits importierte Zeile und Vorschau danach. In der ESM-2 Prüfung wurde die gleiche `fair-esm2-2` Kopie aktualisiert, und Scannen, dass ref zeigte wieder **Imported**. Die aktualisierte Instruktionsstelle stimmte mit der Repository-Quelle überein. Der Importeur schreibt Frontmatter und den kollisionssicheren Namen um, so dass Whole-file-Bytes nicht mit dem ursprünglichen SKILL.md übereinstimmen müssen.
 
-![Eine vorgelagerte Revision ist für die importierte Kopie verfügbar](/img/open-science/local-todo-batch/16-github-update-available.png)
+![Eine vorgelagerte Revision ist für die importierte Kopie verfügbar](/img/open-science/local-todo-batch/16-github-update-available.webp)
 
 ### Wiederherstellen von GitHub Rate Limiting {/* #recover-from-github-rate-limiting */}
 
@@ -87,7 +87,7 @@ Für **GitHub-Anfrage war ratenbegrenzt** öffnen Sie **Manage GitHub credential
 
 Öffnen Sie **Manage**, filtern Sie nach Quelle/Status und suchen Sie nach einer bestimmten Methode. Wählen Sie das Ergebnis aus, bevor Sie eine Aktion anwenden. **Ausgewählt (n)** zeigt die Auswahl; **Clear selection** entleert es. Überprüfen Sie den vollständig ausgewählten Satz, wenn sich die Filter ändern.
 
-![Die importierte Kopie wird im Massenmanagement deaktiviert](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.jpg)
+![Die importierte Kopie wird im Massenmanagement deaktiviert](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.webp)
 
 Nachdem Sie die Verfügbarkeit geändert haben, öffnen Sie das Skill-Detail erneut, um seinen Status zu bestätigen. Behalten Sie einen Export einer Methode, die Sie benötigen, bevor Sie sie löschen.
 

@@ -31,11 +31,11 @@ air-report-v1.md. The script must accept one or more CSV paths plus
 input/script hashes. Stop after this baseline. Use English.
 ```
 
-![第一週附件與基線計算任務](/img/open-science/workflow-extensions/air-input-v1.png)
+![第一週附件與基線計算任務](/img/open-science/workflow-extensions/air-input-v1.webp)
 
 檢查檔案讀取和計算內容後授權。在 **Notebook** 中確認執行完成，再開啟 **air-daily-v1.csv**。基線包含 **168 行小時資料、7 行日彙總**，PM2.5 沒有缺失。
 
-![儲存後的七天基線與有效小時數](/img/open-science/workflow-extensions/air-baseline-table.png)
+![儲存後的七天基線與有效小時數](/img/open-science/workflow-extensions/air-baseline-table.webp)
 
 ## 2. 增加觀測，保持方法不變 {/* #2-增加观测保持方法不变 */}
 
@@ -53,7 +53,7 @@ Reopen the saved results. This is a historical replay, not live data.
 Use English and do not make health or causal claims.
 ```
 
-![在原分析會話中附加第二週資料](/img/open-science/workflow-extensions/air-update-input.png)
+![在原分析會話中附加第二週資料](/img/open-science/workflow-extensions/air-update-input.webp)
 
 確認代理執行原指令碼，保留同一缺失值與完整性規則。若資料和方法同時改變，就難以判斷結果變化來自哪裡。
 
@@ -61,7 +61,7 @@ Use English and do not make health or causal claims.
 
 開啟 **air-daily-v2.png** 和 **air-daily-v2.csv**。合併輸入有 **336 行小時資料**，**沒有重複或缺失時間戳**，但 **1 月 11 日有一個 PM2.5 值缺失**。日彙總為 **14 天**，均達到本例設定的至少 18 個有效小時要求。
 
-![Open-Science 中擴充套件後的十四天結果](/img/open-science/workflow-extensions/air-update-plot.png)
+![Open-Science 中擴充套件後的十四天結果](/img/open-science/workflow-extensions/air-update-plot.webp)
 
 1 月 11 日均值為 **11.652 µg/m³**，由 **23 個有效小時**計算。不能把缺失值當成零參與分母。時間戳完整也不代表測量值全部存在。
 
@@ -69,17 +69,17 @@ Use English and do not make health or causal claims.
 
 開啟 **air-update-check.csv**。原來的 **7 個共同日期**在所有輸出欄位上完全一致，新增的只有 1 月 8—14 日。更新前後原指令碼的 SHA-256 一致。
 
-![逐行比較顯示基線日期的結果保持不變](/img/open-science/workflow-extensions/air-update-check.png)
+![逐行比較顯示基線日期的結果保持不變](/img/open-science/workflow-extensions/air-update-check.webp)
 
 開啟 **air-update-notes.md**，核對輸入身份、缺失觀測和保留的 v1 檔案。本次還獨立計算了全部 14 天的均值與有效小時數，與儲存輸出在其顯示精度內一致。
 
-![更新說明保留了程式碼未變、基線檔案與資料檢查資訊](/img/open-science/workflow-extensions/air-update-notes.png)
+![更新說明保留了程式碼未變、基線檔案與資料檢查資訊](/img/open-science/workflow-extensions/air-update-notes.webp)
 
 ## 5. 交付前核對報告日期 {/* #5-交付前核对报告日期 */}
 
 檢查報告標題是否跟隨實際輸入範圍變化。初始指令碼在兩週報告中仍保留第一週標題，這個展示錯誤已在 **air-analysis-reviewed.py** 中修正，只改變標題模板。隨後用這一份修訂指令碼分別執行第一週和兩週資料，保留全部舊檔案。
 
-![修正後的報告標題顯示完整兩週日期](/img/open-science/workflow-extensions/air-reviewed-report.png)
+![修正後的報告標題顯示完整兩週日期](/img/open-science/workflow-extensions/air-reviewed-report.webp)
 
 儲存的 **air-daily-baseline.csv** 與 **air-daily-updated.csv** 在每個欄位上分別與原 v1/v2 CSV 一致。**air-update-verification.md** 記錄同一修訂指令碼在兩次執行前後的相同雜湊，並核對兩個報告標題，區分了標籤修正和計算方法變化。
 

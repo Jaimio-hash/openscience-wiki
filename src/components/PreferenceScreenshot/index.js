@@ -7,7 +7,7 @@ import styles from './styles.module.css';
 export default function PreferenceScreenshot({notifications = false}) {
   const [dark, setDark] = useState(false);
   const copy = (id, message, values) => translate({id: `docs.preferenceScreenshot.${id}`, message}, values);
-  const filename = notifications ? '16-notification-test.png' : dark ? '15-general-dark.png' : '14-general-light.png';
+  const filename = notifications ? '16-notification-test.webp' : dark ? '15-general-dark.webp' : '14-general-light.webp';
   const src = useBaseUrl(`/img/open-science/guides-walkthrough/${filename}`);
   const label = notifications
     ? copy('notifications', 'Task notification controls and the reported test status')

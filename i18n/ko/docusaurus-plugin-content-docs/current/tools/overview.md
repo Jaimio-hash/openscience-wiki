@@ -28,7 +28,7 @@ last_update:
 
 로컬 예제는 실제 GSE60450 RNA-seq 카운트, 사용자 정의 읽기 전용 QC 서버, aspirin 분자 artifact 및 공공 시퀀스 / 구조 입력이 포함되어 있습니다. 그들은 언어 판에서 영어 응용 프로그램 스크린 샷을 사용합니다. 리모트 GPU/SSH 실행 및 credentials는 이 장치에 유효하지 않습니다 완료한 국부적으로 가동에서 명시적으로 구별합니다.
 
-![신청에서 연결되는 관례 QC Connector](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![신청에서 연결되는 관례 QC Connector](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 ## 에이전트에게 경계 요청을주십시오 {/* #give-the-agent-a-bounded-request */}
 

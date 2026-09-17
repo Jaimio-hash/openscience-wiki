@@ -26,7 +26,7 @@ python3 prepare-mask-sources.py
 
 点击附件打开预览。每篇研究以标题、DOI 和原始来源链接开头，后面保留正文分节和表格。将十篇身份与来源清单逐一对照；重复的章节标题不代表多了一项研究。
 
-![实际附加的全文包保留论文身份和正文分节](/img/open-science/research-workflows/mask-trials-input.png)
+![实际附加的全文包保留论文身份和正文分节](/img/open-science/research-workflows/mask-trials-input.webp)
 
 将论文用作证据前，先在来源检查更正或撤稿。自 v0.30.2 起，`literature-review` Skill 的 `verify_dois` 辅助方法会检查 Crossref 两个方向的更新关系。`retracted: true` 可能标记被撤稿论文，也可能标记撤稿通知，应打开关联记录区分；`false` 只表示未发现所检查的标记，不能证明论文从未撤稿。下方十篇论文的既有实操记录未包含这项新增检查。
 
@@ -53,7 +53,7 @@ Use only the supplied sources, write in English and do not delegate.
 
 回答完成后打开 CSV，将十个 DOI 与来源清单对照，再逐篇核对结果章节或表格中的效应估计和分析人群。
 
-![Open-Science 中的十项试验证据表](/img/open-science/research-workflows/mask-trials-evidence.png)
+![Open-Science 中的十项试验证据表](/img/open-science/research-workflows/mask-trials-evidence.webp)
 
 重点保留以下区别：
 
@@ -66,7 +66,7 @@ Use only the supplied sources, write in English and do not delegate.
 
 除 CSV 外，也打开 **mask-trials-reading-notes.md**。本次最终表为 **10 rows · 12 columns**。可展开预览或下载文件阅读长单元格；单元格被截断不等于原文缺失。说明文件保留十篇研究身份，并解释为何不能自动合并不同结局与人群。
 
-![保存后的阅读说明及已完成的十行结果](/img/open-science/research-workflows/mask-trials-notes.png)
+![保存后的阅读说明及已完成的十行结果](/img/open-science/research-workflows/mask-trials-notes.webp)
 
 某行错误或不完整时，指出论文及具体章节/表格，要求同时修订**两份文件**，然后重新打开。例如 Cowling 2008 的随机分配家庭流程与实际分析子集应分别保留。回答文字更新不代表保存的表格也已更新。
 

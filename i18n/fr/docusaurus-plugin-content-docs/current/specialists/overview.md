@@ -23,7 +23,7 @@ Ouvrez **Browse Marketplace** pour trouver les rôles publiés. Le catalogue en 
 
 Ouvrez **Settings → Specialists**. **Installed** compte les rôles enregistrés localement, y compris l'examinateur. Utilisez **Search specialists** et **Filter specialists by category**, puis ouvrez une ligne pour l'inspecter. **Browse Marketplace** ouvre un catalogue différent; une entrée de marché cotée n'est pas installée tant que vous n'avez pas terminé son flux de paquetage/configuration.
 
-![Le RNA-seq QC Reviewer installé localement](/img/open-science/capabilities-walkthrough/06-specialist-list.jpg)
+![Le RNA-seq QC Reviewer installé localement](/img/open-science/capabilities-walkthrough/06-specialist-list.webp)
 
 ## Rôles sur le marché observés {/* #marketplace-roles-observed */}
 

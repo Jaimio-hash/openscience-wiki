@@ -78,7 +78,7 @@ original column-name mapping in the CSV/report.
 4. 더 이상 필요로 하지 않는 알림 또는 지시 옆에 **Remove queued message**를 사용하십시오.
 5. 납품 후, 최종 텍스트 및 주문에 대한 저장된 성적표를 확인합니다. 제거된 요청은 전달된 지시로 나타나지 않아야 합니다.
 
-![편집 및 재주문 후 두 가지 나머지 요청](/img/open-science/local-todo-batch/14-queue-reordered.png)
+![편집 및 재주문 후 두 가지 나머지 요청](/img/open-science/local-todo-batch/14-queue-reordered.webp)
 
 전달 된 답변 확인은 편집 된 내용과 순서를 따릅니다. **저장되지 않음**은 저장된 성적표에 입력하지 않았습니다; 닫히거나 재시작하기 전에 중요한 필수 텍스트를 복사합니다.
 
@@ -88,7 +88,7 @@ original column-name mapping in the CSV/report.
 
 누적 요청이 파일을 포함 할 때, 첨부 파일 칩이 여전히 편집기를 다시 열 때마다 존재한다는 것을 확인합니다. 지침을 변경하면 **Add message to queue**을 선택합니다. 납품 후, 지정된 입력으로 저장된 사용자 메시지에 표시된 파일을 비교합니다. 정확한 파일 정체성 사정이 있을 때 파일 체크섬을 요청합니다.
 
-![파일 및 체크섬으로 전달된 편집된 첨부 요청](/img/open-science/sept11-completion/queue-result.png)
+![파일 및 체크섬으로 전달된 편집된 첨부 요청](/img/open-science/sept11-completion/queue-result.webp)
 
 ### 할당된 첨부 파일은 사용할 수 없습니다. {/* #a-queued-attachment-becomes-unavailable */}
 
@@ -112,7 +112,7 @@ original column-name mapping in the CSV/report.
 
 Hover 또는 **복사 테이블** (Markdown, CSV 또는 TSV), **다운로드 테이블** (CSV 또는 Markdown) 및 **전체 화면보기**를 계시하는 응답 테이블을 초점. 필요한 형식을 선택하고 목적지를 확인하고 줄과 헤더를 확인하기 위해 파일을 다시 엽니다. 이 작업은 기존의 대답을 수출; 그들은 Connector을 다시 실행하지 않거나 관리 된 artifact 버전을 만들 수 없습니다.
 
-![전체 화면보기에서 반환 된 메타 데이터 테이블](/img/open-science/guides-walkthrough/60-response-table.png)
+![전체 화면보기에서 반환 된 메타 데이터 테이블](/img/open-science/guides-walkthrough/60-response-table.webp)
 
 긴 실행 작업을 위해 [백그라운드 작업](notebook.md#background-tasks-and-result-delivery)을 열고 특정 실행을 취소합니다. 누적된 후속은 구속 명령입니다. 배경 작업은 이미 인정 된 작품입니다. 작업 목록은 실행을 중지하지 않습니다.
 

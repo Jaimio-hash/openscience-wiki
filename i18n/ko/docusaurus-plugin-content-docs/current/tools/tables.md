@@ -28,7 +28,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 4. dataset 크기를 평가하기 전에 표시된 범위를 읽으십시오. 미리보기가 경계될 때 전체 파일 계산을 사용합니다.
 5. [공유된 QC 기준](../reference/example-data.md#sample-qc-baseline) 샘플 값 비교.
 
-![샘플-QC 테이블 전체 식별자 및 숫자 열](/img/open-science/capabilities-walkthrough/32-csv-preview.jpg)
+![샘플-QC 테이블 전체 식별자 및 숫자 열](/img/open-science/capabilities-walkthrough/32-csv-preview.webp)
 
 <ToolOperationGroup>
 <summary>QC 테이블: 란 의미</summary>

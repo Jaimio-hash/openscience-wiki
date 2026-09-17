@@ -17,7 +17,7 @@ Main、Subagent、Viewer、Vision、Session の詳細は異なるモデルが必
 3. **Reasoning effort** を選択します。 そのモデルに実際に表示される選択肢を使用してください。 デフォルト、低、中、高、XHigh、超の検査済みモデル。 他のモデルに異なった梯子があります。
 4. 保存された選択を点検するためにモデルを閉め、再開して下さい。 小さなリクエストをスタートし、結果を長時間の分析の前に検査します。
 
-![Mainモデルと接続プロバイダ](/img/open-science/guides-walkthrough/10-model-main.png)
+![Mainモデルと接続プロバイダ](/img/open-science/guides-walkthrough/10-model-main.webp)
 
 変更は、その後のリクエストに適用されます。 既存の回答の背後にあるモデルを遡及的に変更しません。 モデルが変更されると、アプリは相対的な推論力を維持しようとします。 バックエンドはサポートされていない努力を近づける可能性があります。 より高い努力は時間およびトークンの使用を増加でき、正しい保証ではないです。
 
@@ -32,7 +32,7 @@ Main、Subagent、Viewer、Vision、Session の詳細は異なるモデルが必
 | **Vision** | 構成されたイメージ可能なモデル | 設定されていないと、専用の Vision 選択はありません。 リレーが必要かどうかは、アクティブなバックエンドの画像サポートに依存します。 |
 | **Session details** | Main に従うか、または多用性があるモデルを選んで下さい; 努力と有効性を点検 | これは、制限された呼び出しを使用してセッションのタイトル/説明を生成します。 科学的なタスクとそのアーティファクトとは別々です。 |
 
-![サブエージェントの相続と無効な労力制御](/img/open-science/guides-walkthrough/11-model-scenarios.png)
+![サブエージェントの相続と無効な労力制御](/img/open-science/guides-walkthrough/11-model-scenarios.webp)
 
 セッションの詳細セレクターは、Codexサブスクリプションモデルをフィルタアウトします。 Main や Vision で表示されるモデルは、ここには不在です。 対応するローカルプロバイダーとOpenCodeが選択され、ローカルモデルが固定された選択肢として利用可能になりました。 **Not supported**は、その推論の努力に加えて、その努力制御が利用できなくなることを意味します。 モデルがテキストリクエストを受け取ることができるかとは別です。
 
@@ -51,9 +51,9 @@ Main、Subagent、Viewer、Vision、Session の詳細は異なるモデルが必
 5. オリジナルのイメージで回答を比較します。 ソーステーブルを使用して、正確な数値比較を行います。この例では、**24.7Mの特長** に丸められた2つのラベルは、その根本的なカウントが等しいことを証明しません。
 6. 別々のイメージモデルを望まないと、**Not configured** へ戻ります。 モデルプロバイダは削除しません。
 
-![テキストMainモデルと別々のビジョン選択](/img/open-science/sept11-completion/vision-configuration.png)
+![テキストMainモデルと別々のビジョン選択](/img/open-science/sept11-completion/vision-configuration.webp)
 
-![チャートラベルのチェックと丸み値の制限](/img/open-science/sept11-completion/vision-result.png)
+![チャートラベルのチェックと丸み値の制限](/img/open-science/sept11-completion/vision-result.webp)
 
 現在のイメージリレーは、Visionセレクターに表示できるにもかかわらず、Codexサブスクリプションプロバイダを除外します。 テキストのみのMainモデルは、その選択後に画像を拒否する場合、別の対象のVisionプロバイダまたは画像処理可能なMainモデルを選択します。 保存されたセレクター値が成功したイメージリクエストとして扱うことはありません。
 

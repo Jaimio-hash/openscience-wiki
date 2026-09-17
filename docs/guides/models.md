@@ -17,7 +17,7 @@ Use the task policies below when Main, Subagent, Reviewer, Vision or Session det
 3. Select **Reasoning effort**. Use the choices actually displayed for that model. This inspected model offered Default, Low, Medium, High, XHigh and Ultra; other models have different ladders.
 4. Close and reopen Model to check the saved selection. Start a small request and inspect its result before a long analysis.
 
-![Main model and connected provider](/img/open-science/guides-walkthrough/10-model-main.png)
+![Main model and connected provider](/img/open-science/guides-walkthrough/10-model-main.webp)
 
 Changes apply to subsequent requests. They do not retroactively change the model behind an existing answer. When models change, the app attempts to preserve relative reasoning strength; a backend may approximate an unsupported effort. Higher effort can increase time and token use and is not a correctness guarantee.
 
@@ -32,7 +32,7 @@ Select a scenario row to expand it. Opening another row collapses the previous o
 | **Vision** | A configured image-capable model | Not configured means there is no dedicated Vision selection. Whether a relay is needed depends on the active backend's image support. |
 | **Session details** | Follow Main or choose a compatible model; inspect its effort and enablement | This generates session title/description using a restricted call. It is separate from the scientific task and its artifacts. |
 
-![Subagent inheritance and disabled effort control](/img/open-science/guides-walkthrough/11-model-scenarios.png)
+![Subagent inheritance and disabled effort control](/img/open-science/guides-walkthrough/11-model-scenarios.webp)
 
 The Session details selector filters out Codex subscription models. A model visible in Main or Vision may therefore be absent here. With a compatible local provider and OpenCode selected, the local model became available as a fixed choice. **Not supported** beside its reasoning effort means that effort control is unavailable; it is separate from whether the model can receive a text request.
 
@@ -51,9 +51,9 @@ Use Vision when the conversation's Main model cannot accept images. A Main model
 5. Compare the answer with the original image. Use the source table for exact numerical comparisons: in this example, two labels rounded to **24.7M** do not prove that their underlying counts are equal.
 6. Return Vision to **Not configured** when you no longer want a separate image model. This does not remove the model provider.
 
-![Separate Vision selection alongside the text Main model](/img/open-science/sept11-completion/vision-configuration.png)
+![Separate Vision selection alongside the text Main model](/img/open-science/sept11-completion/vision-configuration.webp)
 
-![Checking chart labels and the limits of rounded values](/img/open-science/sept11-completion/vision-result.png)
+![Checking chart labels and the limits of rounded values](/img/open-science/sept11-completion/vision-result.webp)
 
 The current image relay excludes Codex subscription providers even though they can appear in the Vision selector. If a text-only Main model still rejects an image after that selection, choose another eligible Vision provider or an image-capable Main model. Do not treat a saved selector value as a successful image request.
 

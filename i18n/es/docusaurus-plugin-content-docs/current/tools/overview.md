@@ -28,7 +28,7 @@ Elija una herramienta por el resultado que necesita: recuperar un registro, insp
 
 Los ejemplos locales incluyen los contados GSE60450 RNA-seq reales, un servidor QC personalizado sólo lectura, un artefacto de molécula de aspirina y entradas de secuencia/estructura públicas. Utilizan capturas de pantalla de aplicaciones en inglés en ambas ediciones de idiomas. La ejecución remota GPU/SSH y las credenciales no disponibles en este dispositivo se distinguen explícitamente de las operaciones locales terminadas.
 
-![Personalizado QC Connector conectado en la aplicación](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![Personalizado QC Connector conectado en la aplicación](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 ## Dar al agente una solicitud atada {/* #give-the-agent-a-bounded-request */}
 

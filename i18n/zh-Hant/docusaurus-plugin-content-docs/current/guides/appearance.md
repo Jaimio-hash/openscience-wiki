@@ -23,13 +23,13 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![General 中的外觀與語言設定](/img/open-science/v0.27.0/07-general-appearance.png)
+![General 中的外觀與語言設定](/img/open-science/v0.27.0/07-general-appearance.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-<Screenshot src="/img/open-science/windows/general-settings.png" alt="Windows 的 General 設定中的 Theme 與 Language 控制元件" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.png" linkLabel="開啟完整的 Windows General 設定截圖" />
+<Screenshot src="/img/open-science/windows/general-settings.webp" alt="Windows 的 General 設定中的 Theme 與 Language 控制元件" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.webp" linkLabel="開啟完整的 Windows General 設定截圖" />
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 放大後仍可閱讀同一份報告。使用橫向捲軸檢視當前視口外的列；顯示縮放改變的是檢視，不會修改已儲存的資料。
 
-![125% 縮放下的 Open-Science，表格預覽顯示橫向捲軸](/img/open-science/windows/app-scale-125.png)
+![125% 縮放下的 Open-Science，表格預覽顯示橫向捲軸](/img/open-science/windows/app-scale-125.webp)
 
 </PlatformContent>
 
@@ -104,7 +104,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![隱藏任務細節的英文系統完成通知](/img/open-science/priority-completion/07-system-completion-notification.png)
+![隱藏任務細節的英文系統完成通知](/img/open-science/priority-completion/07-system-completion-notification.webp)
 
 </PlatformContent>
 關閉 **Show task content in system notifications** 後，系統使用不含任務內容的通用提醒。點選完成或批准提醒可返回對應會話，再在應用內處理批准請求。

@@ -23,7 +23,7 @@ For the completed GSE60450 run, we used **Edit…** to save this information:
 | Save | Persist the changes | Check the sidebar title after closing |
 | Cancel / Close | Leave without applying the draft | This does not cancel the research run |
 
-![Session title and description editor](/img/open-science/guides-walkthrough/40-session-edit.png)
+![Session title and description editor](/img/open-science/guides-walkthrough/40-session-edit.webp)
 
 Choose **Pin** from the row menu to keep the session in the Pinned group. **Unpin** returns it to the ordinary list. Pinning organizes access; it does not keep a kernel alive or protect a session from deletion.
 
@@ -35,7 +35,7 @@ Use [private reading bookmarks](bookmarks.md) to save a passage or PDF region wi
 
 ## Read the session menu correctly
 
-![Actions belonging to the RNA-seq session](/img/open-science/guides-walkthrough/41-session-actions.png)
+![Actions belonging to the RNA-seq session](/img/open-science/guides-walkthrough/41-session-actions.webp)
 
 | Action | Result | Check |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ Suppose you want to discuss downstream sample annotation while keeping the finis
 4. Rename it to `GSE60450 - follow-up interpretation` with **Edit…**.
 5. Inspect the inherited transcript before submitting the next request. Reference the original project artifacts explicitly where needed.
 
-![An independently named branch beside the pinned original](/img/open-science/guides-walkthrough/57-session-branch.png)
+![An independently named branch beside the pinned original](/img/open-science/guides-walkthrough/57-session-branch.webp)
 
 A branch preserves selected conversation history, but it does not recreate the original live kernel. For a copied activity labeled **code shown** or a blocked historical link, open the original artifact from the project's Files panel and inspect its producing session.
 
@@ -76,7 +76,7 @@ For this QC example, choose **Edit message** on the completed question, replace 
 
 The same revision path was also exercised with OpenCode and a local model: the revised request produced the new phrase, Previous restored the original reply, and Next restored the revised reply. This connection-only example does not establish that tool state or external side effects are reversed.
 
-![Controls for switching historical message revisions](/img/open-science/local-todo-batch/18-message-revision.png)
+![Controls for switching historical message revisions](/img/open-science/local-todo-batch/18-message-revision.webp)
 
 **Cancel** leaves without submitting the edit. **Send** requests a new answer; check it before continuing. Use a follow-up to correct the next action or a branch for a separately named investigation.
 
@@ -99,7 +99,7 @@ Choose **Export → Export conversation…** from the session row menu to share 
 
 <p className="example-label"><strong>Worked example</strong> Export only the final GSE60450 QC definitions turn</p>
 
-![Selecting the final QC definitions turn for PDF export](/img/open-science/local-todo-batch/20-selected-conversation-export.png)
+![Selecting the final QC definitions turn for PDF export](/img/open-science/local-todo-batch/20-selected-conversation-export.webp)
 
 In **GSE60450 — Methods and claim audit**, selecting the final turn produced a one-page PDF containing only that request and its four metric definitions. Earlier discussion was absent. The entire-conversation PDF was also reopened and checked. The earlier selected-turn Markdown export began with its selected follow-up. A turn can contain several assistant messages, so selecting one turn need not export exactly two messages.
 
@@ -109,13 +109,13 @@ Conversation export does not replace research-file download. Result links may re
 
 Choose **Download all artifacts**, select the files, choose **Download N artifacts**, and pick a destination folder. This entry saves separate files. The two downloaded Methods and claim-audit Markdown files were reopened and matched their saved artifacts byte for byte.
 
-![Selecting the two saved reports in the session](/img/open-science/local-todo-batch/21-session-artifact-selection.png)
+![Selecting the two saved reports in the session](/img/open-science/local-todo-batch/21-session-artifact-selection.webp)
 
 ### Download a project file bundle
 
 Open the project-name menu at the top left → **Download artifacts…**. Files are grouped under **Generated** and **Uploads**. All are initially selected; use **Uncheck all**, choose the files to hand over, and save the ZIP.
 
-![Selecting reports, the QC table and original count input from the project](/img/open-science/local-todo-batch/22-project-artifact-selection.png)
+![Selecting reports, the QC table and original count input from the project](/img/open-science/local-todo-batch/22-project-artifact-selection.webp)
 
 Choose **Cancel** in the system save dialog to abandon that save; your file selection remains available. Once writing starts, the app disables cancellation and closing. Wait for the result; cancelling the destination dialog is different from stopping a write in progress.
 

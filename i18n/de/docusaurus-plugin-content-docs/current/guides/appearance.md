@@ -23,13 +23,13 @@ Wählen Sie ein komfortables Thema, legen Sie Ihre Benutzeroberflächensprache f
 
 <PlatformContent platform="macos">
 
-![Allgemeine Aussehenseinstellungen](/img/open-science/v0.27.0/07-general-appearance.png)
+![Allgemeine Aussehenseinstellungen](/img/open-science/v0.27.0/07-general-appearance.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-<Screenshot src="/img/open-science/windows/general-settings.png" alt="Themen- und Sprachsteuerungen in Windows Allgemeine Einstellungen" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.png" linkLabel="Öffnen Sie den kompletten Screenshot der Windows-Einstellungen" />
+<Screenshot src="/img/open-science/windows/general-settings.webp" alt="Themen- und Sprachsteuerungen in Windows Allgemeine Einstellungen" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.webp" linkLabel="Öffnen Sie den kompletten Screenshot der Windows-Einstellungen" />
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ Um einen Bericht in einer anderen Sprache anzufordern, geben Sie dies in Ihrem G
 
 Der gleiche Bericht bleibt im größeren Maßstab lesbar. Verwenden Sie die horizontale Scrollleiste, um Spalten außerhalb des aktuellen Tabellenansichtsports zu sehen; Die Anzeigeskala ändert die Ansicht, nicht die gespeicherten Daten.
 
-![Open-Science bei 125 Prozent Skalierung mit einer horizontalen Scrollleiste in der Tabellenvorschau](/img/open-science/windows/app-scale-125.png)
+![Open-Science bei 125 Prozent Skalierung mit einer horizontalen Scrollleiste in der Tabellenvorschau](/img/open-science/windows/app-scale-125.webp)
 
 </PlatformContent>
 
@@ -104,7 +104,7 @@ Wenn Sie das Banner verpasst haben, finden Sie die Warnung im Windows Notificati
 
 <PlatformContent platform="macos">
 
-![Englischer Systemabschlussalarm mit versteckten Aufgabendetails](/img/open-science/priority-completion/07-system-completion-notification.png)
+![Englischer Systemabschlussalarm mit versteckten Aufgabendetails](/img/open-science/priority-completion/07-system-completion-notification.webp)
 
 </PlatformContent>
 Schalten Sie **Show task content in system notifications** aus, um generische Alarme zu verwenden. Wählen Sie einen Abschluss- oder Genehmigungsalarm aus, um das Gespräch wieder zu öffnen; Reagieren Sie auf Genehmigungen innerhalb der App.

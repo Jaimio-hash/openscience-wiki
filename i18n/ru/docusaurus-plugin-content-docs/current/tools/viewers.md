@@ -21,7 +21,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 3. Перетащите для поворота, прокрутите до зума или **Сдвиг + перетаскивание** до панорамы, как указано ниже холста.
 4. Загрузите исходный файл, когда это необходимо. Закройте полный экран, чтобы вернуться к разговору.
 
-![Оригинальное название: 1UBQ Cartoon View](/img/open-science/capabilities-walkthrough/26-pdb-cartoon.jpg)
+![Оригинальное название: 1UBQ Cartoon View](/img/open-science/capabilities-walkthrough/26-pdb-cartoon.webp)
 
 | Стиль | Что он подчеркивает |
 | --- | --- |
@@ -39,7 +39,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 Открыть <ExampleDownload path="/examples/capabilities/P04637.fa">P04637 FASTA</ExampleDownload>, скачанный из [Конечная точка FASTA от UniProt](https://rest.uniprot.org/uniprotkb/P04637.fasta). Осмотрите присоединение/организм/ген в заголовке `>` и последовательность ниже него. Нативный рендерер сохраняет исходный текст; Это не приложение для выравнивания последовательности или редактирования.
 
-![Реальный UniProt FASTA в предварительном просмотре источника](/img/open-science/capabilities-walkthrough/31-fasta-preview.jpg)
+![Реальный UniProt FASTA в предварительном просмотре источника](/img/open-science/capabilities-walkthrough/31-fasta-preview.webp)
 
 Чтобы использовать последовательность в разговоре, прикрепите текущий файл к **+ → Attach files** и попросите агента прочитать файл, а не сделать вывод из его имени. Для этого ввода P04637 проверьте заголовок `P53_HUMAN`, **аминокислоты 393** и начальную последовательность **MEEPQSDPSV**. Сравните отчетную контрольную сумму с файлом, который вы предоставили, когда имеет значение личность.
 
@@ -51,7 +51,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 Попросите Molecule Connector запустить `preview_molecule` с `smiles: "CC(=O)Oc1ccccc1C(=O)O"` и `filename: "aspirin"`. Откройте созданную карту **аспирин.мол** и полноэкранный предварительный просмотр.
 
-![Аспирин, представленный встроенным зрителем OpenChemLib](/img/open-science/capabilities-walkthrough/16-aspirin-viewer.jpg)
+![Аспирин, представленный встроенным зрителем OpenChemLib](/img/open-science/capabilities-walkthrough/16-aspirin-viewer.webp)
 
 В этом примере вызов возвращал действительную структуру, формулу **C9H8O4**, молекулярную массу **180.15852** и **Тяжелые атомы 13** и сохранял <ExampleDownload path="/examples/capabilities/aspirin.mol">аспирин.мол</ExampleDownload>. Зритель был вручную открыт и осмотрен. Это офлайн-рендеринг структуры; Он не предсказывает связывающее сродство, стыковочные позы или терапевтическую активность.
 

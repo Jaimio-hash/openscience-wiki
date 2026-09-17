@@ -17,7 +17,7 @@ Verwenden Sie den angezeigten Zeitraum und die Metrik, um jedes Diagramm zu inte
 3. Vergleichen Sie die vier Token-Felder und die New / Total Aktivitätszähler.
 4. Überprüfen Sie das eigene Periodenlabel des Diagramms, bevor Sie es mit der Zusammenfassung vergleichen.
 
-![Heute Zusammenfassung mit den separaten Tages-Charts](/img/open-science/guides-walkthrough/13-usage-today.png)
+![Heute Zusammenfassung mit den separaten Tages-Charts](/img/open-science/guides-walkthrough/13-usage-today.webp)
 
 | Feld | Auslegung |
 | --- | --- |

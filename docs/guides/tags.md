@@ -16,7 +16,7 @@ After assigning a tag, open its detail and select a listed resource to return to
 2. Select **Create**. Check the new row and zero-resource state.
 3. Choose **Edit Tag** to revisit the current values. **Save** commits an edit; **Cancel** discards the draft.
 
-![Transcriptomics tag form](/img/open-science/guides-walkthrough/30-tag-create.png)
+![Transcriptomics tag form](/img/open-science/guides-walkthrough/30-tag-create.webp)
 
 | Field/control | Options and behavior |
 | --- | --- |
@@ -40,19 +40,19 @@ A tag name alone does not connect a service, grant permission or add a Skill to 
 
 Assign **Transcriptomics** to **Omics Archives**, then open the tag detail. In this example, it shows **1 resource**; searching `Omics` keeps that Connector visible, and selecting it opens its detail. Use your own tag and resource names when repeating these steps. Removing the assignment leaves the resource intact.
 
-![Assigned Omics Archives resource found through its tag](/img/open-science/guides-walkthrough/35-tagged-connector.png)
+![Assigned Omics Archives resource found through its tag](/img/open-science/guides-walkthrough/35-tagged-connector.webp)
 
 ## Order the tag list
 
 **Favorites** stays first. Drag **Reorder [name]**, or focus the handle and use the arrow keys, to move a custom tag. Check its new position in the list.
 
-![Tag ordering and empty resource view](/img/open-science/guides-walkthrough/31-tag-reorder.png)
+![Tag ordering and empty resource view](/img/open-science/guides-walkthrough/31-tag-reorder.webp)
 
 ## Remove a tag
 
 Select **Delete Tag** and inspect **Assignments to remove**. Deleting the tag removes those assignments but keeps the resources. **Cancel** retains both the tag and its assignments.
 
-![Deletion scope, canceled in this walkthrough](/img/open-science/guides-walkthrough/32-tag-delete-boundary.png)
+![Deletion scope, canceled in this walkthrough](/img/open-science/guides-walkthrough/32-tag-delete-boundary.webp)
 
 If your purpose is only to remove one assignment, do that on the resource rather than deleting the tag everywhere. Use [Literature library](./library.md) for organizing papers into collections; tags and collections serve different purposes.
 

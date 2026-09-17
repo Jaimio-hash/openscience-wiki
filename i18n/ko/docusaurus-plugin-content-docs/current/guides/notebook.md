@@ -30,7 +30,7 @@ Python 또는 R, [호환 실행 시간 활성화](runtimes.md)를 실행하기 �
 
 <PlatformContent platform="macos">
 
-![Python 실행 및 출력 Notebook](/img/open-science/guides-walkthrough/46-notebook-result.png)
+![Python 실행 및 출력 Notebook](/img/open-science/guides-walkthrough/46-notebook-result.webp)
 
 </PlatformContent>
 
@@ -83,7 +83,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![name에 의해 변수 목록 필터링](/img/open-science/guides-walkthrough/47-notebook-variable-filter.png)
+![name에 의해 변수 목록 필터링](/img/open-science/guides-walkthrough/47-notebook-variable-filter.webp)
 
 </PlatformContent>
 
@@ -107,7 +107,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![R 표본 QC 산출은 신청에서 열었습니다](/img/open-science/guides-walkthrough/76-r-qc-table.jpg)
+![R 표본 QC 산출은 신청에서 열었습니다](/img/open-science/guides-walkthrough/76-r-qc-table.webp)
 
 </PlatformContent>
 
@@ -119,7 +119,7 @@ cat("R home:", R.home(), "\n")
 
 <PlatformContent platform="macos">
 
-![R 결과 캡처 환경](/img/open-science/guides-walkthrough/77-r-environment-evidence.jpg)
+![R 결과 캡처 환경](/img/open-science/guides-walkthrough/77-r-environment-evidence.webp)
 
 </PlatformContent>
 
@@ -138,7 +138,7 @@ Runtimes 패키지 재고는 설치 된 환경을 설명합니다. Provenance은
 
 <PlatformContent platform="macos">
 
-![배경 작업 상태 및 개방 제어](/img/open-science/v0.27.0/13-background-task-completed.png)
+![배경 작업 상태 및 개방 제어](/img/open-science/v0.27.0/13-background-task-completed.webp)
 
 </PlatformContent>
 
@@ -164,7 +164,7 @@ Runtimes 패키지 재고는 설치 된 환경을 설명합니다. Provenance은
 
 <PlatformContent platform="macos">
 
-![저장된 결과에 대해 캡처 한 Producer 코드](/img/open-science/provenance-code.png)
+![저장된 결과에 대해 캡처 한 Producer 코드](/img/open-science/provenance-code.webp)
 
 </PlatformContent>
 
@@ -213,7 +213,7 @@ Runtimes 패키지 재고는 설치 된 환경을 설명합니다. Provenance은
 3. 저장된 파일을 열고 표시된 코드와 비교합니다. PowerShell에서 동일한 Python 해석기로 실행하십시오; `&` 호출 연산자를 사용하여 인용된 실행 가능한 경로 전에.
 4. Notebook 및 저장된 보고서로 출력 비교. 코드를 따라 필요한 입력 파일을 유지하십시오.
 
-<Screenshot src="/img/open-science/windows/captured-code-download.png" alt="Windows 캡처 프로듀서 코드 및 다운로드 컨트롤" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.png" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
+<Screenshot src="/img/open-science/windows/captured-code-download.webp" alt="Windows 캡처 프로듀서 코드 및 다운로드 컨트롤" width={1920} height={1017} windowBounds={[1157, 0, 763, 416]} href="/docs/img/open-science/windows/captured-code-download.webp" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
 
 이것은 기록 된 코드를 다운로드합니다. **Generate script**은 별도의 재건축 작업입니다. 세대가 실패하면 전체 오류를 유지하십시오. 캡처 된 코드를 다운로드하면 재건축이 성공하지 않습니다.
 
@@ -230,7 +230,7 @@ Runtimes 패키지 재고는 설치 된 환경을 설명합니다. Provenance은
 
 <PlatformContent platform="macos">
 
-![Generated script 미리보기 및 다운로드 컨트롤](/img/open-science/priority-completion/19-generated-script.png)
+![Generated script 미리보기 및 다운로드 컨트롤](/img/open-science/priority-completion/19-generated-script.webp)
 
 </PlatformContent>
 

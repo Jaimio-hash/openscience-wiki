@@ -115,7 +115,7 @@ HTTP 狀態碼來自模型服務、Connector 服務、本地瀏覽器服務或�
 
 如果啟動頁只顯示 **Quit**，先退出應用，排除報錯指出的原因後再重新啟動；不要尋找頁面未提供的 Retry 按鈕。恢復後確認原專案和檔案可開啟。
 
-![資料庫無法開啟時的啟動提示](/img/open-science/local-acceptance/startup-database-error.png)
+![資料庫無法開啟時的啟動提示](/img/open-science/local-acceptance/startup-database-error.webp)
 
 ### 恢復提示 {/* #恢复提示 */}
 
@@ -199,7 +199,7 @@ Agent 框架 / Provider / 模型（如相关）：
 4. 勾選公開分享確認，啟用 **Open GitHub issue**。修改錯誤文字後，需要重新閱讀並確認更新後的內容。
 5. 開啟 GitHub 表單，檢查預填欄位，補充有效的復現步驟，準備好後再提交。僅開啟報告預覽不會提交 Issue。
 
-![可編輯的錯誤詳情及公開分享確認](/img/open-science/sept11-completion/report-preview.png)
+![可編輯的錯誤詳情及公開分享確認](/img/open-science/sept11-completion/report-preview.webp)
 
 ## 常見問題 {/* #常见问题 */}
 

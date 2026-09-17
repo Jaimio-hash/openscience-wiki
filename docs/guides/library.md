@@ -27,7 +27,7 @@ Open **Library** from Home or the workspace. **Back to Home** returns to project
 | Project | References linked to that project | Keep the bibliography relevant to a research question |
 | Collection | A thematic group, including nested collections | Reuse a reading set across projects |
 
-![Three accepted papers in the real PRISMA collection](/img/open-science/guides-walkthrough/51-library-collection.png)
+![Three accepted papers in the real PRISMA collection](/img/open-science/guides-walkthrough/51-library-collection.webp)
 
 ## Add or import a record
 
@@ -60,11 +60,11 @@ Select **Add** and choose the source. Selecting one PDF opens its metadata edito
 
 The batch can show **Pending**, **Reading…**, **Ready**, **Importing…**, **Completed**, **Failed** or **Skipped**. Selection, metadata readiness and import completion are separate states. If the app reports **PDF upload cancelled. The reference was kept.**, check that retained record's attachments; cancelling the upload did not remove the bibliography entry.
 
-![Two real PRISMA PDFs ready for import](/img/open-science/v0.27.0/02-pdf-batch-ready.png)
+![Two real PRISMA PDFs ready for import](/img/open-science/v0.27.0/02-pdf-batch-ready.webp)
 
 With **Reuse existing reference**, a PDF whose extracted title or DOI does not match can still create a separate record. After import, open each paper and confirm its title and DOI. Correct mismatches before [merging duplicates](#resolve-duplicates-and-recover-references). **Completed** confirms import, not accurate identification.
 
-![Completed batch and per-file results](/img/open-science/v0.27.0/03-pdf-batch-completed.png)
+![Completed batch and per-file results](/img/open-science/v0.27.0/03-pdf-batch-completed.webp)
 
 
 </ToolOperationGroup>
@@ -76,7 +76,7 @@ With **Reuse existing reference**, a PDF whose extracted title or DOI does not m
 
 A **Stop** request allows the current item to finish. Inspect every row: **Completed** items are retained and cannot be selected again; select remaining **Ready** rows and use **Import selected** to continue. If failures expose **Retry unfinished**, correct the reported cause before retrying and check that completed records were not duplicated.
 
-![Stopped PDF import retains its completed row](/img/open-science/local-todo-batch/09-pdf-import-stopped.png)
+![Stopped PDF import retains its completed row](/img/open-science/local-todo-batch/09-pdf-import-stopped.webp)
 
 **The reference was kept. Retry to finish adding its PDF.** means the bibliography entry was saved but its attachment is unfinished. Check that the original PDF is still available at the selected location and opens normally, then select **Retry unfinished**. After retrying, return to the destination collection and open the PDF to check its content. If the result could not be confirmed, inspect your library before starting another import.
 
@@ -100,9 +100,9 @@ Open the destination collection first, then choose **Import references** and a `
 
 Click **Import references**, wait for **Import complete**, inspect Created/Reused/Skipped/Failed, then select **Done**. Reopen the record: an import count alone does not establish correct metadata. Filling empty fields can add identifiers and an abbreviated journal name without replacing the full journal title.
 
-![BibTeX import with an explicit duplicate policy](/img/open-science/local-todo-batch/02-bibtex-import.png)
+![BibTeX import with an explicit duplicate policy](/img/open-science/local-todo-batch/02-bibtex-import.webp)
 
-![NBIB import fills missing bibliographic fields](/img/open-science/local-todo-batch/05-nbib-fill-fields.png)
+![NBIB import fills missing bibliographic fields](/img/open-science/local-todo-batch/05-nbib-fill-fields.webp)
 
 
 </ToolOperationGroup>
@@ -113,7 +113,7 @@ Click **Import references**, wait for **Import complete**, inspect Created/Reuse
 
 Open the candidate title or **View details**. Inspect its provider, source link and DOI/other identifiers, then compare year, author order and publication with the publisher. **Accept** promotes it into the Library; **Dismiss** removes it from the review queue. Check the row selection before batch actions.
 
-![Three genuine PRISMA candidates awaiting review](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![Three genuine PRISMA candidates awaiting review](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 In this example, the three candidates were accepted individually, and Inbox became clear. A provider match is a starting record, not complete bibliographic validation. The 2020 statement's publication year is **2021**. The two 2009 papers have distinct DOIs and author lists.
 
@@ -121,7 +121,7 @@ In this example, the three candidates were accepted individually, and Inbox beca
 
 Open a reference, then **More actions → Edit metadata**. Review the current values before using **Complete metadata**, which performs a lookup rather than a purely local edit.
 
-![Saved organization-author field reopened](/img/open-science/v0.27.0/04-organization-author.png)
+![Saved organization-author field reopened](/img/open-science/v0.27.0/04-organization-author.webp)
 
 | Field/control | Input and effect |
 | --- | --- |
@@ -144,7 +144,7 @@ Open a reference, then **More actions → Edit metadata**. Review the current va
 
 To add **The PRISMA Group**, select **Add creator → Creator role: Author → Name type: Organization**, enter the full name and **Save**. Reopen the record and check that the organization follows its four personal authors. Compare the generated citation with the [publisher's author list](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097).
 
-![APA reference preserves the organization author](/img/open-science/v0.27.0/05-organization-citation.png)
+![APA reference preserves the organization author](/img/open-science/v0.27.0/05-organization-citation.webp)
 
 v0.30.2 corrects PubMed author-name parsing, including surnames, initials and suffixes. When importing or completing metadata, inspect the creator fields and generated citation against the linked source. Do not assume that installing the update rewrites metadata already stored in your Library.
 
@@ -176,7 +176,7 @@ Clear search and filters before concluding a record has disappeared. Project/col
 
 If **Add attachment** fails after a source is found, download the publicly available PDF from the publisher and use **Add PDF** on the same record. Open the attached PDF and compare its title and DOI with the publisher record. In this example, **Preview prisma-2020-statement.pdf** shows the matching PRISMA 2020 paper: **806.1 KB and 15 pages**.
 
-![Successfully attached publisher PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![Successfully attached publisher PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 A source result is not a saved attachment. An attached PDF is not proof of agent reading. **Read with agent** supplies context for a subsequent request. A Composer `@` reference can select an exact record, a project Library or a Collection: a collection grants retrieval scope, not automatic inclusion of every paper's full text. PDF reading controls are in [Previews](previews.md).
 
@@ -194,11 +194,11 @@ If no public copy is found, retain the checked metadata and use a legitimately a
 5. Downloading also supports pause and **Continue download**. Inspect the final **Added / Failed / Skipped** states and reopen any successfully added attachment.
 6. To discard an unwanted review-ready task, use **Remove task** in **Background tasks**. After removal, confirm that the task is gone and that its references and attachments still open. Removing the task does not delete them.
 
-![Search paused after the current item, retaining the pending records](/img/open-science/priority-completion/14-literature-batch-paused.png)
+![Search paused after the current item, retaining the pending records](/img/open-science/priority-completion/14-literature-batch-paused.webp)
 
 A paused search retains its checked and pending records. After continuing or reopening the task, inspect the final counts and each item’s outcome. Candidate discovery and successful PDF attachment are separate results.
 
-![Reopening the completed five-record search from background tasks](/img/open-science/priority-completion/15-literature-batch-resumed.png)
+![Reopening the completed five-record search from background tasks](/img/open-science/priority-completion/15-literature-batch-resumed.webp)
 
 
 </ToolOperationGroup>
@@ -230,7 +230,7 @@ Open **More actions → Citation**. Select **Citation style**, inspect the refer
 
 In **Library → Settings → Import CSL**, choose the independent `plos.csl` file from the [CSL styles repository](https://github.com/citation-style-language/styles/blob/master/plos.csl). In this example, **Imported styles** increased from zero to one and showed **Public Library of Science**. Return to the real PRISMA record's **Citation** panel and select that style under **Citation style**. Check the numbered reference and `[1]` in-text citation. The style-management preview uses a sample article; inspect your actual record before copying a citation.
 
-![Imported PLOS style applied to the real PRISMA record](/img/open-science/v0.27.0/06-imported-csl-citation.png)
+![Imported PLOS style applied to the real PRISMA record](/img/open-science/v0.27.0/06-imported-csl-citation.webp)
 
 
 </ToolOperationGroup>
@@ -251,7 +251,7 @@ The four Citation copy buttons write different representations to the clipboard.
 | Copy BibTeX | An `@article` entry with the organization author enclosed in braces |
 | Copy RIS | A `TY  - JOUR` record with author, title, year and DOI fields |
 
-![Citation copy controls for the real PRISMA record](/img/open-science/local-todo-batch/01-citation-copy.png)
+![Citation copy controls for the real PRISMA record](/img/open-science/local-todo-batch/01-citation-copy.webp)
 
 For a file, close Citation, select the required table rows and choose **Export → BibTeX** or **RIS**. Choose the location in the system save dialog and wait for **Saved**. These files contain bibliographic records, not a PDF attachment bundle. Reimport the saved file into a test collection with **Reuse existing reference** and check its match count. Both exported PRISMA files were reimported and reused the existing DOI without creating another record.
 
@@ -275,11 +275,11 @@ BibTeX stores year and month here, so its round trip returned `2009-7`; RIS reta
 4. Read **After merging** and its attachment, collection and project counts. Only then select **Merge references**; **Cancel** leaves the records separate.
 5. Reopen the survivor and verify metadata, links and PDF contents. The merged-away record appears in Trash as **Merged duplicate**.
 
-![Compare the survivor and conflicting publication dates](/img/open-science/local-todo-batch/03-merge-bibtex.png)
+![Compare the survivor and conflicting publication dates](/img/open-science/local-todo-batch/03-merge-bibtex.webp)
 
 A PDF with an extracted filename in place of its title may not enter a duplicate group. Correct its title and DOI using the publisher record, then review the matching group. After merging, confirm the retained PDF opens and collection/project associations are still present.
 
-![The merged record retains its PDF and organizational links](/img/open-science/local-todo-batch/06-merged-attachment-links.png)
+![The merged record retains its PDF and organizational links](/img/open-science/local-todo-batch/06-merged-attachment-links.webp)
 
 
 </ToolOperationGroup>
@@ -291,7 +291,7 @@ A PDF with an extracted filename in place of its title may not enter a duplicate
 
 Use the row's **More actions → Move to Trash**. It disappears from active Library, project and collection views. In **Trash**, search by title or identifier, open its row menu and choose **Restore**. Restore before editing, previewing or exporting: these controls are disabled in Trash. Reopen the original project and collections to verify the restored links. In this example, restoring the PRISMA record retained its PDF and all three links.
 
-![Restore a reference from its Trash row menu](/img/open-science/local-todo-batch/07-trash-restore.png)
+![Restore a reference from its Trash row menu](/img/open-science/local-todo-batch/07-trash-restore.webp)
 
 
 </ToolOperationGroup>
@@ -305,7 +305,7 @@ In Trash, choose **More actions → Delete permanently** and read the confirmati
 
 After deletion, check that the selected record has left Trash and that the retained reference still opens with its attachments. Removing a collection link, moving a record to Trash and permanently deleting it have different scopes.
 
-![Read the precise permanent-deletion scope](/img/open-science/local-todo-batch/08-reference-delete-scope.png)
+![Read the precise permanent-deletion scope](/img/open-science/local-todo-batch/08-reference-delete-scope.webp)
 
 
 </ToolOperationGroup>

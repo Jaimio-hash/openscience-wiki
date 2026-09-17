@@ -28,7 +28,7 @@ Choose a tool by the result you need: retrieve a record, inspect a file, execute
 
 The local examples include real GSE60450 RNA-seq counts, a custom read-only QC server, an aspirin molecule artifact and public sequence/structure inputs. They use English application screenshots in both language editions. Remote GPU/SSH execution and credentials unavailable on this device remain explicitly distinguished from completed local operations.
 
-![Custom QC Connector connected in the application](/img/open-science/capabilities-walkthrough/09-mcp-connected.jpg)
+![Custom QC Connector connected in the application](/img/open-science/capabilities-walkthrough/09-mcp-connected.webp)
 
 ## Give the agent a bounded request
 

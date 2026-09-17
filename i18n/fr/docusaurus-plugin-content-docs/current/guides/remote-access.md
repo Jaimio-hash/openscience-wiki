@@ -20,7 +20,7 @@ Ouvrez **Settings → Remote** sur l'ordinateur d'accueil. Installez et connecte
 | Accès aux applications | Connectez-vous à travers l'application mobile signée et effectuez une vérification en deux étapes. |
 | Accès au navigateur | Utilisez un lien de navigateur HTTPS persistant et effectuez une vérification en deux étapes. |
 
-![Accès à distance inspecté en dehors de l'état](/img/open-science/walkthrough-2026-09-08/63-remote-off.png)
+![Accès à distance inspecté en dehors de l'état](/img/open-science/walkthrough-2026-09-08/63-remote-off.webp)
 
 Les paramètres du mode d'accès peuvent être modifiés depuis la fenêtre du bureau de l'ordinateur d'accueil. Un navigateur connecté peut gérer l'appariement ou la confiance lorsqu'il est autorisé, mais il n'est pas un substitut à ce contrôle de mode de bureau seulement.
 

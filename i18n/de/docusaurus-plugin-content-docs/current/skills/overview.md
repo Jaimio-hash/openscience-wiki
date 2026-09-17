@@ -28,7 +28,7 @@ Beginnen Sie mit [Skill Verzeichnis](./directory.md), um eine Methode zu finden,
 4. Öffnen Sie das Ergebnis. Lesen Sie die Beschreibung, Anweisungen, **Files**, Lizenz und **Availability**. Ein Anzeigename kann von der Paket-ID abweichen.
 5. Kehren Sie zur Liste zurück und inspizieren Sie **Used by**. Es identifiziert, welche Agenten das Paket verwenden können; Er führt keine abgeschlossenen Läufe auf.
 
-![Durchsuchen des gespeicherten RNA-seq Skill](/img/open-science/capabilities-walkthrough/02-skill-search.jpg)
+![Durchsuchen des gespeicherten RNA-seq Skill](/img/open-science/capabilities-walkthrough/02-skill-search.webp)
 
 | Kontrolle | Was sich ändert |
 | --- | --- |
@@ -51,7 +51,7 @@ Das Verzeichnis enthält immer noch 23 public bundled Skills. Interne Unterstüt
 
 Der Screenshot zeigt die Erklärung für **Customize**. Diese erforderlichen Skills bleiben aktiviert, auch wenn Sie andere optionale Methoden deaktivieren.
 
-![Customize bleibt aktiviert und erklärt, warum](/img/open-science/v0.27.0/08-always-enabled-skill.png)
+![Customize bleibt aktiviert und erklärt, warum](/img/open-science/v0.27.0/08-always-enabled-skill.webp)
 
 ## Verwenden Sie es in einem Gespräch {/* #use-it-in-a-conversation */}
 

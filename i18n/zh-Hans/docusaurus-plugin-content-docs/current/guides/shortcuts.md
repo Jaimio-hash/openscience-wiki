@@ -45,12 +45,12 @@ import Screenshot from '@site/src/components/Screenshot';
 在 Windows 桌面应用中，先点击 Composer 草稿区域，再用 **Ctrl+Z** 撤销、**Ctrl+Shift+Z** 重做。确认文字变化后，再继续输入或发送。使用 **Tab / Shift+Tab** 时，查看当前控件的焦点边框，下图以附件按钮为例。打开面板或改变控件状态后应重新确认焦点，不要按固定次数推算位置。
 
 <Screenshot
-  src="/img/open-science/windows/keyboard-attachment-focus.png"
+  src="/img/open-science/windows/keyboard-attachment-focus.webp"
   alt="Windows 输入框中的附件按钮显示键盘焦点边框"
   width={1916}
   height={1014}
   windowBounds={[215, 850, 920, 150]}
-  href="/docs/img/open-science/windows/keyboard-attachment-focus.png"
+  href="/docs/img/open-science/windows/keyboard-attachment-focus.webp"
   linkLabel="打开显示附件按钮焦点的完整 Windows 截图"
 />
 

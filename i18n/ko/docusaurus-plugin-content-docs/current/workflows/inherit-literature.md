@@ -24,13 +24,13 @@ last_update:
 4. 수입 결과를 검사합니다. 이 예제는 **20** 레코드를 생성, **0** 재사용, 건너 뛰거나 실패 기록.
 5. 컬렉션을 열고, 레코드를 선택하고 **Add to project**을 사용하여 프로젝트에 연결하십시오.
 
-![완료된 수입은 20에 의하여 창조된 참고를 보고합니다](/img/open-science/research-workflows/perovskite-import-complete.png)
+![완료된 수입은 20에 의하여 창조된 참고를 보고합니다](/img/open-science/research-workflows/perovskite-import-complete.webp)
 
 수출이 중복되거나 불완전 식별자가 있다면, 최종 재고를 수용하기 전에 해당 레코드를 해결하십시오. 수입 참조는 전체 텍스트를 첨부하지 않습니다. 이미 가지고있는 PDF에 대한 참조의 **Add PDF** 제어를 사용하여 PDF 제목과 DOI 레코드를 비교하십시오. [도서관 및 인용](../guides/library.md) 참조.
 
 수집을 열고 Footer의 **20 참조** 카운트를 확인하십시오. 합성을 요구하기 전에 **첨부파일** 열을 검사합니다. 이 예제에서는 전체 텍스트에서 발견하는 것보다, 다음 단계는 bibliographic 재고를 요청합니다.
 
-![실제 첨부 파일 상태를 가진 수입된 20가지 설정 컬렉션](/img/open-science/research-workflows/perovskite-collection.png)
+![실제 첨부 파일 상태를 가진 수입된 20가지 설정 컬렉션](/img/open-science/research-workflows/perovskite-collection.webp)
 
 ## 자주 묻는 질문 {/* #ask-for-a-usable-handover */}
 
@@ -53,11 +53,11 @@ Finish after saving the files; I will open them to check the results.
 
 응답이 완료되면 생성된 파일에서 **perovskite-handover.csv**을 엽니다. 이 예에서 저장된 테이블에는 **20 행 및 6 열**이 있습니다. 모든 20 DOIs는 수입한 세트 일치합니다; DOI 또는 출판 연도가 누락되지 않습니다. 모든 전체 텍스트 항목은 PDF이 첨부되지 않습니다.
 
-![견적 요청 20-row perovskite handover 재고 있음 Open-Science](/img/open-science/research-workflows/perovskite-handover-table.png)
+![견적 요청 20-row perovskite handover 재고 있음 Open-Science](/img/open-science/research-workflows/perovskite-handover-table.webp)
 
 **perovskite-handover.md**을 열고 다음 연구자에 대한 판독 시퀀스가 유용합니다. 그것은 구조체, 재료 개입 및 분석 접근법에 따라, 먼저 넓은 안정성 종이를 건의합니다. 이 컬렉션을 기반으로 한 제안은 실험에 대해 결론을 확인하지 않습니다.
 
-![저장된 판독 계획은 소스 가용성 및 다음 작업을 볼 수 있습니다.](/img/open-science/research-workflows/perovskite-reading-plan.png)
+![저장된 판독 계획은 소스 가용성 및 다음 작업을 볼 수 있습니다.](/img/open-science/research-workflows/perovskite-reading-plan.webp)
 
 파일 미리보기의 확장 버튼을 사용하여 계획을 읽을 수 있으며 **Download**은 CSV과 함께 유지하십시오. 모든 제안 된 다음 행동은 공급 된 자료에서 feasible이다. 건의된 독서 순서는 종이가 읽은 것을 증명하지 않습니다.
 

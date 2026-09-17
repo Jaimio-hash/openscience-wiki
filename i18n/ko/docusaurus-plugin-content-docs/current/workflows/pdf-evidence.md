@@ -22,7 +22,7 @@ last_update:
 
 **두 개의 파일명**이 전송된 요청을 위함으로 나타낸다. filename을 클릭하면 미리보기를 엽니다. 두 개의 사이에 전환하면 인용된 페이지가 속한다는 것을 확인할 수 있습니다.
 
-![기사와 보충제 모두 실제 증거 검사 요청에 첨부됩니다.](/img/open-science/research-workflows/catalyst-two-inputs.png)
+![기사와 보충제 모두 실제 증거 검사 요청에 첨부됩니다.](/img/open-science/research-workflows/catalyst-two-inputs.webp)
 
 ## 특정 증거 질문 {/* #ask-a-specific-evidence-question */}
 
@@ -44,7 +44,7 @@ delegate. This is a source check, not an experimental replication.
 
 PDF 미리보기에서 **페이지 6**을 열고, **그림 6** 및 관련 결과를 포함하는 페이지 제어를 사용합니다. 텍스트와 그림 캡션 비교. 그림 **51–53**에 대 한 권장 보충 페이지 **47–49**.
 
-![Open-Science의 원본 문서의 그림 6 및 실험 조건](/img/open-science/research-workflows/catalyst-figure6-source.png)
+![Open-Science의 원본 문서의 그림 6 및 실험 조건](/img/open-science/research-workflows/catalyst-figure6-source.webp)
 
 소스는 Ni-SAC-2.5의 **−1.2 V versus RHE에 CO에 98.9% Faradaic 효율성**을 보여줍니다. 내구성 실험은 **20 시간 동안 −0.8 V**을 사용합니다. 이러한 조건은 분리되어야한다 : 후자는 피크 선택성 잠재력에서 20 시간 내구성을 설정하지 않습니다. Faradaic 효율성은 제품에 할당된 책임을 설명합니다; 그것은 에너지 효율과 동일하지 않습니다 또는 들어오는 CO2 변환의 분수.
 
@@ -52,12 +52,12 @@ PDF 미리보기에서 **페이지 6**을 열고, **그림 6** 및 관련 결과
 
 페이지로 이동하려면 PDF 미리보기를 확장하고 페이지 카운터를 클릭하고 전체 번호를 입력하고 **Enter**을 누릅니다. 읽기 전에 결과 카운터를 검증합니다. 관련 기사 47 의 특징 **보충 그림 51**, 그의 축선은 입니다 **H2 Faradaic 효율성**; ; ; ; ; ; ; ; ; 주요 CO 결과에 실수가 없습니다.
 
-![관련 자료 51 실제에 PDF ᄋᄋᄋ 47 의 특징 52](/img/open-science/research-workflows/catalyst-supplement-47.png)
+![관련 자료 51 실제에 PDF ᄋᄋᄋ 47 의 특징 52](/img/open-science/research-workflows/catalyst-supplement-47.webp)
 
 ## 자주 묻는 질문 {/* #check-and-save-the-report */}
 
 답변이 완료되면 **catalyst-claim-check.md**을 엽니다. 소스 정체성, 페이지 번호, 그림 라벨 및 결론의 단어를 확인합니다. 특히, 보고서는 **결과 보고**을 유지하고 실험 재생산의 청구로 문학 검사를 피해야합니다.
 
-![저장된 청구, 증거, 조건 및 제한 보고서](/img/open-science/research-workflows/catalyst-claim-report.png)
+![저장된 청구, 증거, 조건 및 제한 보고서](/img/open-science/research-workflows/catalyst-claim-report.webp)
 
 <a href="/docs/examples/research-workflows/catalyst-claim-check.md" download>예, 예</a> 다운로드 자신의 일에 과학적인 결론을 사용하기 전에, 인용한 본래 증거 및 어떤 발행인 개정을 검사하십시오. 별도의 파일에 그림이나 테이블 증거를 추출하려면 [PDF 추출](../guides/previews.md#pdf-extraction)을 참조하십시오.

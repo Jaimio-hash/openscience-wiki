@@ -25,7 +25,7 @@ NASA 文件在表头前还有一行说明，用 `***` 表示不可用值，不�
 
 打开项目，通过 **+ → Attach files** 附加两份 CSV。在 **Settings → Runtimes** 中确认 Python 为 **Ready** 且已启用。本次环境为 Python 3.12.14、NumPy 2.5.3、pandas 2.3.3、Matplotlib 3.11.1、Pillow 12.3.0。
 
-![两份来源 CSV 已附加到比较任务](/img/open-science/workflow-extensions/temperature-input.png)
+![两份来源 CSV 已附加到比较任务](/img/open-science/workflow-extensions/temperature-input.webp)
 
 ## 2. 先要求对齐，再解释差异
 
@@ -52,7 +52,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 打开 **temperature-aligned.csv**。本例比较 **45 个共同年份**；两个来源各自都有参考期所需的 **30 个完整年度点估计**，没有用零填补年度缺失值。
 
-![保存后的逐年对齐值和差值](/img/open-science/workflow-extensions/temperature-table.png)
+![保存后的逐年对齐值和差值](/img/open-science/workflow-extensions/temperature-table.webp)
 
 减去的参考均值分别为 NASA **0.61266667 °C**、HadCRUT **0.53799554 °C**。每个数据集减去自己的均值，不是对两份数据减去同一个数。比较前核对单位、年份与相减方向。
 
@@ -60,7 +60,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 打开 **temperature-comparison.png**。第一幅保留各自原参考期，第二幅展示以相同时间段重新定基准后的曲线。
 
-![Open-Science 中的原参考期与共同参考期温度曲线](/img/open-science/workflow-extensions/temperature-plot.png)
+![Open-Science 中的原参考期与共同参考期温度曲线](/img/open-science/workflow-extensions/temperature-plot.webp)
 
 | 本例结果，NASA 减 HadCRUT | 数值 |
 | --- | --- |
@@ -74,7 +74,7 @@ claim the sources are independent or either is ground truth. Use English.
 
 打开 **temperature-crosscheck.md**，核对来源定义、指标与 CSV、代码是否一致。表格保留 HadCRUT 原置信区间及其机械平移后的数值，但此次比较**没有**传播所估计参考均值的不确定性，也没有处理两个来源间的依赖关系。
 
-![保存后的报告记录实际指标与解释边界](/img/open-science/workflow-extensions/temperature-report.png)
+![保存后的报告记录实际指标与解释边界](/img/open-science/workflow-extensions/temperature-report.webp)
 
 下载<ExampleDownload path="/examples/workflow-extensions/temperature-aligned.csv">对齐 CSV</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/temperature-comparison.png">图形</ExampleDownload>、<ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.py">Python 脚本</ExampleDownload>和<ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.md">报告</ExampleDownload>。准备好两份输入，在具有上述依赖的 Python 环境中运行：
 

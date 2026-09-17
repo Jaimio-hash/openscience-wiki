@@ -18,7 +18,7 @@ Ein Connector stellt die Tools eines Dienstes einem Agenten zur Verfügung. Ein 
 
 Öffnen Sie **Settings → Connectors**, suchen Sie **Omics-Archive** und öffnen Sie seine Details. Diese integrierte Familie umfasst GEO, ArrayExpress, MetaboLights, MGnify und PRIDE Tools. Erweitern Sie eine Werkzeugzeile, bevor Sie sie auswählen.
 
-![GEO Metadaten Tool und seine explizite Download-Grenze](/img/open-science/guides-walkthrough/36-omics-tools.png)
+![GEO Metadaten Tool und seine explizite Download-Grenze](/img/open-science/guides-walkthrough/36-omics-tools.webp)
 
 `geo_get_series` gibt Metadaten, Samples, Plattformen und URLs für ergänzende Dateien der GEO-Serie zurück. Laden Sie die erforderliche Datentabelle aus der zurückgegebenen Quelle herunter und fügen Sie sie Ihrem Projekt bei, bevor Sie eine Berechnung anfordern.
 
@@ -50,7 +50,7 @@ Verwenden Sie **Filter connectors by group**, **Filter Connectors by agent** und
 3. Wählen Sie **Require approval**, **Block** oder **Always allow** für den Zugriff, den Sie zulassen möchten. Genehmigungsanzeigen benötigen **Ask when no Session, Project, or Global permission applies.**
 4. PubMed aktivieren und **Used by** inspizieren. Die Verfügbarkeit für Main wird als **Main only** angezeigt; Die deaktivierte Verfügbarkeit zeigt **Not in use** an.
 
-![PubMed Tool Beschreibung und Genehmigungskontrollen](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.png)
+![PubMed Tool Beschreibung und Genehmigungskontrollen](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.webp)
 
 Die Detaillisten `search_articles`, `get_article_metadata`, `find_related_articles`, `lookup_article_by_citation`, `convert_article_ids`, `get_full_text_article` und `get_copyright_status`. Wählen Sie **Always allow**, **Require approval** oder **Block** pro Werkzeug. Überprüfen Sie den separaten Connector-weiten **Skip approvals**-Switch, bevor Sie ihn aktivieren. Das Öffnen einer Beschreibung zeigt nur die Anweisungen des Tools an.
 
@@ -69,7 +69,7 @@ Das Verzeichnis platziert PubMed unter **Directory**, während das Detail ein **
 4. Überprüfen Sie das tatsächliche Ergebnis. Überprüfen Sie für diesen Beitritt die zurückgegebenen **GSE60450**, **Musculus musculus**, **12 Proben** und den Titel "Transkriptomanalyse von luminalen und basalen Zellsubpopulationen in der Laktation im Vergleich zur schwangeren Brustdrüse".
 5. Bewahren Sie die zurückgegebenen GSM-Identifikatoren mit ihren Eigenschaften auf. Schließen Sie eine Zuordnung zu den MCL1-Spaltennamen der Matrix nicht allein aus der Ähnlichkeit.
 
-![Tatsächliche GEO-Probemerkmale, die über den Connector zurückgegeben wurden](/img/open-science/guides-walkthrough/59-geo-sample-metadata.png)
+![Tatsächliche GEO-Probemerkmale, die über den Connector zurückgegeben wurden](/img/open-science/guides-walkthrough/59-geo-sample-metadata.webp)
 
 Der zurückgegebene Probenbereich war **GSM1480291–GSM1480302**, der luminale/basale Populationen und jungfräuliche, 18.5-Tage-Schwangerschaft und 2-Tage-Laktationsstadien abdeckte. Dies sind zurückgegebene Metadaten, nicht Etiketten, die aus den Zählsummen abgeleitet werden. Die vollständige zwölfreihige Antworttabelle wurde als <a href="/docs/examples/gse60450/geo-sample-metadata.csv" download>geo-sample-metadata.csv</a> heruntergeladen. Dies ist ein Gesprächstabellenexport, getrennt von den verwalteten QC-Artefakten.
 
@@ -105,7 +105,7 @@ Wenn die Connector-Anweisungsdatei nicht gelesen werden kann, behalten Sie den E
 | Felder/Text | Geben Sie Namen als strukturierte Zeilen oder eine ein `KEY=` pro Linie; Geheimwerte leben in Credentials. |
 | Befehlsvorschau | Inspizieren Sie den Launcher, der nach den Bindungen gezeigt wird. |
 
-![Lokaler Befehlseditor und Credential-gebundene Umgebungsvariablen](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.png)
+![Lokaler Befehlseditor und Credential-gebundene Umgebungsvariablen](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.webp)
 
 Ein Launcher-Eintrag allein beweist nicht, dass seine ausführbare Datei oder sein Dienst betriebsbereit ist. Verwenden Sie den Aufruf unten, um den importierten lokalen Befehl zu überprüfen.
 
@@ -125,13 +125,13 @@ Der aktuelle Editor bindet benannte Anmeldeinformationen; Es handelt sich nicht 
 4. Verwenden Sie **Add header** für eine andere Zeile oder **Remove header**, um eine Zeile zu verwerfen.
 5. **Felder/Text** ändert, wie Namen eingegeben werden. Textmodus erwartet einen Headernamen pro Zeile als `Name:`; Anmeldewerte werden separat verwaltet.
 
-![Statischer Headername und Anmelder](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.png)
+![Statischer Headername und Anmelder](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.webp)
 
 #### OAuth bindend {/* #oauth-binding */}
 
 Wählen Sie ein **OAuth credential**, das der Ressourcen-URL, dem Transport und der Registrierung entspricht. **New credential** öffnet den [Credential Editor](../tools/credentials.md#new-credential). In diesem leeren Profil meldete das Formular **No OAuth credential matches this Connector's resource URL, transport, and registration.** Die letzte Aktion ändert sich in **Add and sign in**.
 
-![OAuth Credential Matching](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.png)
+![OAuth Credential Matching](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.webp)
 
 ## Import-, Export- und Anschlusstests {/* #import-export-and-connection-tests */}
 
@@ -142,7 +142,7 @@ Wählen Sie **Add connector → Import configuration** und wählen Sie eine JSON
 3. Wählen Sie **Use configuration**, um den vorgefüllten Editor zu öffnen. Überprüfen Sie jedes Feld, binden Sie die erforderlichen lokalen Anmeldeinformationen und wählen Sie **I trust this connector** aus.
 4. Wählen Sie **Add connector**, prüfen Sie den Verbindungszustand in der Liste und rufen Sie dann ein kleines Nur-Lese-Tool auf.
 
-![Auswahl eines Servers und Überprüfung der erforderlichen Anmeldeinformationen](/img/open-science/local-todo-batch/23-mcp-multi-server.png)
+![Auswahl eines Servers und Überprüfung der erforderlichen Anmeldeinformationen](/img/open-science/local-todo-batch/23-mcp-multi-server.webp)
 
 Wenn ein importierter Server auf eine Umgebungsvariable wie `QC_EXAMPLE_TOKEN` verweist, binden Sie diesen Namen an ein auf diesem Gerät gespeichertes Berechtigungsnachweis. **Add** bleibt solange nicht verfügbar, bis die erforderlichen Bindungen abgeschlossen sind. Überprüfen Sie nach dem Hinzufügen **Connected** und führen Sie das beabsichtigte Werkzeug aus; Eine gespeicherte Bindung allein validiert keine Fernauthentifizierung.
 
@@ -152,13 +152,13 @@ Rufen Sie `get_dataset_summary` an und übergeben Sie dann eine zurückgegebene 
 
 Wählen Sie **Actions → Export** der Zeile, wählen Sie **Open Science Connector** oder **MCP client config**, prüfen Sie die Vorschau und wählen Sie **Save configuration**.
 
-![Ausfuhr mit Anmeldekennzeichen und Meldung lokaler Trassen](/img/open-science/local-todo-batch/24-mcp-export-binding.png)
+![Ausfuhr mit Anmeldekennzeichen und Meldung lokaler Trassen](/img/open-science/local-todo-batch/24-mcp-export-binding.webp)
 
 Die tatsächlich exportierte Datei behielt den Variablennamen in `required_secrets.environment` bei. Es enthielt keinen Nachweisnachweis, kein lokales Vertrauen oder Berechtigungen. Reimport erfordert wieder lokale Auswahl und Vertrauen.
 
 Wenn die gleiche ID bereits vorhanden ist, meldet die Vorschau **Ein benutzerdefiniertes Connector mit ID ... ist bereits installiert** und **Use configuration** ist nicht verfügbar. Verwenden Sie **Edit**, um eine bestehende Verbindung zu ändern; Import ist keine Überschreiboperation.
 
-![Eine vorhandene ID blockiert Duplicate Import](/img/open-science/local-todo-batch/26-mcp-reimport-collision.png)
+![Eine vorhandene ID blockiert Duplicate Import](/img/open-science/local-todo-batch/26-mcp-reimport-collision.webp)
 
 Überprüfen Sie beim Wiederherstellen einer exportierten Verbindung die vorab ausgefüllten Felder und binden Sie die erforderlichen benannten Anmeldeinformationen erneut. Komplettes Vertrauen und testen Sie einen begrenzten Anruf, bevor Sie ihn in der Forschung verwenden. Import überschreibt kein bestehendes Connector mit der gleichen ID.
 

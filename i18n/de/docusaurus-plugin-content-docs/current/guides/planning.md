@@ -17,9 +17,9 @@ Verwenden Sie **Plan first**, um Eingaben, Methoden, Ausgaben und Akzeptanzkrite
 3. Warten Sie auf die Planung. Wenn eine **Plan control**-Berechtigungskarte angezeigt wird, prüfen Sie sie und lassen Sie den beabsichtigten Umfang zu oder verweigern Sie sie. Dies autorisiert Planerstellung / Entscheidungsaufzeichnung, nicht alle zukünftigen Ausführung.
 4. Warten Sie auf **Plan ready for review**. Behandeln Sie keinen normalen Absatz mit der Aufschrift "Hier ist mein Plan" als Beweis dafür, dass eine strukturierte Genehmigungskarte existiert.
 
-![Planen Sie zuerst im Sendemenü](/img/open-science/guides-walkthrough/21-plan-first-entry.png)
+![Planen Sie zuerst im Sendemenü](/img/open-science/guides-walkthrough/21-plan-first-entry.webp)
 
-![Separate Berechtigung zum Erstellen und Aufzeichnen eines Plans](/img/open-science/guides-walkthrough/22-plan-permission.png)
+![Separate Berechtigung zum Erstellen und Aufzeichnen eines Plans](/img/open-science/guides-walkthrough/22-plan-permission.webp)
 
 Die Aufgabe spezifizierte unveränderte Rohzählungen, separate ID/Längen-Metadaten, pro Stichprobe QC, drei verwaltete Ausgänge und keine Differenzausdrucksansprüche. Eine genaue erste Anfrage macht den Plan leichter zu beurteilen.
 
@@ -27,7 +27,7 @@ Die Aufgabe spezifizierte unveränderte Rohzählungen, separate ID/Längen-Metad
 
 Wählen Sie **Open**, um den strukturierten Plan neben der Konversation anzuzeigen. Prüfen Sie Phasen, Schrittreihenfolge, Ausführungsbesitzer, gewünschte Ausgaben und Machbarkeitshinweise. Verwenden Sie **Enter full screen**, um einen langen Plan zu lesen, und **Download Plan**, um ihn beizubehalten. Das Konfidenzlabel ist die Bewertung des Plans, kein Beweis dafür, dass der Code bereits ausgeführt wurde.
 
-![Strukturierter Plan mit Phasen und gewünschten Outputs](/img/open-science/guides-walkthrough/23-plan-review.png)
+![Strukturierter Plan mit Phasen und gewünschten Outputs](/img/open-science/guides-walkthrough/23-plan-review.webp)
 
 | Kontrolle/Zustand | Was zu tun ist |
 | --- | --- |
@@ -42,7 +42,7 @@ Wählen Sie **Open**, um den strukturierten Plan neben der Konversation anzuzeig
 
 Geben Sie in **Respond to Plan** genau an, was sich ändern muss. Fordern Sie beispielsweise eine Input-Integritätsprüfung an, öffnen Sie jede Ausgabe erneut und erstellen Sie eine Zuordnung zwischen verkürzten Plot-Etiketten und ursprünglichen Identifikatoren. Wählen Sie **Send Plan feedback** aus, warten Sie auf den Ersatz und überprüfen Sie dann, ob jede angeforderte Änderung vorhanden ist.
 
-![Feedback vor der Einreichung](/img/open-science/guides-walkthrough/24-plan-feedback.png)
+![Feedback vor der Einreichung](/img/open-science/guides-walkthrough/24-plan-feedback.webp)
 
 Lesen Sie den Ersatz und verwenden Sie den **Approve**-Button. Die bereits geöffnete alte Vorschau kann mit einer Warnung sichtbar bleiben, dass sie ersetzt wurde; Die angezeigten Schritte sind nicht der letzte Fortschritt des aktiven Plans. Öffnen Sie den aktiven Plan erneut, anstatt einen alten Screenshot zu genehmigen.
 

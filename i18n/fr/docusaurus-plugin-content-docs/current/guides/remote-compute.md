@@ -39,9 +39,9 @@ Sélectionnez **Add SSH host**. Choisissez un alias existant ou tapez l'identifi
 | **Cancel** | Laisser sans enregistrer le formulaire |
 | **Add** | Soumettre une connexion valide; l'authentification par mot de passe doit passer son test de connexion avant l'ajout de l'hôte |
 
-![Franchissements de la configuration SSH en anglais](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.png)
+![Franchissements de la configuration SSH en anglais](/img/open-science/walkthrough-2026-09-08/53-ssh-advanced.webp)
 
-![Authentification du mot de passe et Slurm sélectionnés dans le formulaire réel](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.png)
+![Authentification du mot de passe et Slurm sélectionnés dans le formulaire réel](/img/open-science/walkthrough-2026-09-08/52-ssh-password-slurm.webp)
 
 Le mode mot de passe dépend de la capacité d'authentification par mot de passe et de stockage sécurisé de l'application. S'il n'est pas disponible, vérifier la raison indiquée dans le formulaire. Entrez les identifiants dans ce champ, pas dans les notes d'hôte ou une demande d'agent.
 
@@ -57,7 +57,7 @@ Pour un hôte de configuration SSH, l'application crée l'enregistrement, ouvre 
 
 L'exemple anglais montre une sonde authentifiée par mot de passe : CPU 256, RAM 504 GB, un PCIe NVIDIA A100 80GB et un programmeur Slurm détecté. Le mode configuré reste **Direct SSH** jusqu'à ce que vous le modifiiez explicitement. Ce sont les ressources de ce serveur login-host, pas les exigences minimales ou une allocation programmée. Les identifiants d'hôte et de compte sont masqués dans la capture d'écran.
 
-![Authentification du mot de passe et sonde de ressources de l'hôte](/img/open-science/remote-compute/03-host-probe.png)
+![Authentification du mot de passe et sonde de ressources de l'hôte](/img/open-science/remote-compute/03-host-probe.webp)
 
 ## Inspecter et tenir à jour les détails de l'hôte {/* #inspect-and-maintain-host-details */}
 
@@ -133,9 +133,9 @@ Exemple de demande :
 
 Après **succès** et le code de sortie **0**, confirmez que l'application recueille les deux sorties et que la table sauvegardée et le rapport rouvrent. Comparer les identifiants et les paramètres complets de l'échantillon avec le [niveau de référence partagé](../reference/example-data.md), et vérifier le hash d'entrée avant et après le calcul à distance. Cet exemple Direct SSH a réussi ces vérifications.
 
-![Fonction Direct SSH terminée avec son ID et son répertoire de travail](/img/open-science/remote-compute/05-direct-job-completed.png)
+![Fonction Direct SSH terminée avec son ID et son répertoire de travail](/img/open-science/remote-compute/05-direct-job-completed.webp)
 
-![Table à distance RNA-seq QC réouverte avec les douze échantillons](/img/open-science/remote-compute/06-remote-qc-table.png)
+![Table à distance RNA-seq QC réouverte avec les douze échantillons](/img/open-science/remote-compute/06-remote-qc-table.webp)
 
 Télécharger les exemples <a href="/docs/examples/gse60450/remote-rnaseq-qc.csv" download>Tableau QC</a> et <a href="/docs/examples/gse60450/remote-rnaseq-qc-report.md" download>rapport sur les méthodes</a>. Ces vérifications du nombre brut ne remplacent pas la normalisation, l'examen de la conception expérimentale ou l'analyse de l'expression différentielle. La médiane du nombre positif exclut les zéros.
 
@@ -145,7 +145,7 @@ Ouvrez le même projet et la même conversation, puis utilisez **Compute** ou l'
 
 Le point de contrôle de préparation séparé ci-dessous était en marche lorsque l'application locale a redémarré. L'application a récupéré le même ID de travail et a ensuite recueilli son journal d'achèvement. L'attente s'est terminée normalement; cette capture d'écran démontre la récupération, pas l'annulation ou un calcul scientifique.
 
-![Même travail de préparation récupéré après un redémarrage de l'application](/img/open-science/remote-compute/07-job-recovered-after-restart.png)
+![Même travail de préparation récupéré après un redémarrage de l'application](/img/open-science/remote-compute/07-job-recovered-after-restart.webp)
 
 ### Annuler un emploi à distance {/* #cancel-one-remote-job */}
 
@@ -153,7 +153,7 @@ Ouvrez **Background tasks**, sélectionnez la tâche prévue et comparez sa **Jo
 
 Le point de contrôle de préparation ci-dessous a été annulé grâce à ce contrôle. Le processus à distance a été confirmé de façon indépendante par la suite. Son journal existant est resté lisible. Cela ne signifie pas qu'une analyse annulée a produit un résultat complet; inspecter les dossiers conservés avant de les utiliser.
 
-![Annulation confirmée pour l'emploi de préparation sélectionné](/img/open-science/remote-compute/09-job-cancelled.png)
+![Annulation confirmée pour l'emploi de préparation sélectionné](/img/open-science/remote-compute/09-job-cancelled.webp)
 
 
 </ToolOperationGroup>
@@ -177,7 +177,7 @@ Utilisez la partition de votre site plutôt que de copier `local` sans condition
 5. Comparer les ressources demandées avec l'allocation réelle. L'exemple demandait un CPU par tâche et 1 GiB; Slurm a enregistré une tâche et deux processeurs logiques attribués. Utilisez le dossier d'allocation du planificateur pour expliquer l'utilisation des ressources.
 6. Attendez un état terminal confirmé et les fichiers collectés avant de publier le résultat. Un fichier de sortie côté serveur n'établit pas que l'application l'a récolté.
 
-![Slurm sélectionné explicitement en mode exécution de l'hôte](/img/open-science/remote-compute/10-slurm-execution-mode.png)
+![Slurm sélectionné explicitement en mode exécution de l'hôte](/img/open-science/remote-compute/10-slurm-execution-mode.webp)
 
 ### Lorsque le serveur complète mais que l'application continue d'attendre {/* #when-the-server-completes-but-the-app-keeps-waiting */}
 
@@ -189,7 +189,7 @@ slurm_poll_failed: Slurm accounting storage is disabled
 
 Si le programmeur affiche **COMPLÈTE / Code de sortie 0:0** mais que l'application affiche toujours **présenté**, **result_final faux** ou aucun fichier collecté, conservez les deux ID de travail et inspectez l'erreur de vote. Traiter l'achèvement du calendrier et la collecte des résultats de l'application comme des étapes distinctes.
 
-![L'application attend toujours le statut de terminal pour une charge de travail complète de Slurm](/img/open-science/remote-compute/11-slurm-accounting-unavailable.png)
+![L'application attend toujours le statut de terminal pour une charge de travail complète de Slurm](/img/open-science/remote-compute/11-slurm-accounting-unavailable.webp)
 
 Demandez à l'administrateur du cluster de fournir la comptabilité de travail `sacct` pour le compte et l'emploi. `squeue` n'énumère plus d'emploi, ce qui ne prouve pas le succès. Conservez le répertoire de travail existant et les ID de travail pendant que la comptabilité est réparée, puis inspectez à nouveau le même travail. Ne pas soumettre à nouveau une analyse complète pour éliminer une erreur de surveillance. L'annulation de Slurm, la récupération et la récolte d'applications demeurent en attente jusqu'à ce que cette exigence environnementale soit résolue.
 

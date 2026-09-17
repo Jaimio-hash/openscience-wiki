@@ -24,7 +24,7 @@ Utilisez **Agent controls** pour choisir comment la conversation actuelle demand
 
 Ouvrez **Agent controls** à côté du compositeur et lisez le mode sélectionné. Vérifiez tout message de compatibilité montrant comment le cadre l'implémente. Le contrôle d'accès complet a sa propre confirmation. **Auto-review** est un contrôle différent pour l'examen des résultats et ne signifie pas l'approbation automatique des modifications.
 
-![Le sélecteur de mode d'autorisation en anglais](/img/open-science/walkthrough-2026-09-08/57-permission-modes.png)
+![Le sélecteur de mode d'autorisation en anglais](/img/open-science/walkthrough-2026-09-08/57-permission-modes.webp)
 
 Vérifiez le mode effectif affiché pour votre Agent; Le comportement d'approbation soutenu peut différer par cadre. Tous les modes n'ont pas été appliqués dans les quatre cadres.
 
@@ -34,7 +34,7 @@ Vérifiez le mode effectif affiché pour votre Agent; Le comportement d'approbat
 
 Lisez l'opération, l'environnement sélectionné et le code proposé avant d'approuver. Pour une vérification des données, confirmez qu'il lit l'entrée prévue et n'écrit que les sorties demandées. Installer une dépendance manquante est une opération séparée avec un but et un effet différents.
 
-![Approbation d'exécution Python du dossier public GSE60450](/img/open-science/guides-walkthrough/25-python-permission.png)
+![Approbation d'exécution Python du dossier public GSE60450](/img/open-science/guides-walkthrough/25-python-permission.webp)
 
 | Contrôle ou information | Que faire ou que inspecter |
 | --- | --- |
@@ -87,7 +87,7 @@ Inspecter le qualificatif Connector/tool, **Global / Projet / Session** et **Tou
 
 La révocation a une incidence sur l'autorisation future. Il n'inverse pas les modifications complétées ou les demandes de réseau, et une subvention plus large peut encore autoriser l'exploitation.
 
-![Une nouvelle demande d'exécution après la révocation du groupe Session](/img/open-science/local-todo-batch/40-permission-request-renewed.png)
+![Une nouvelle demande d'exécution après la révocation du groupe Session](/img/open-science/local-todo-batch/40-permission-request-renewed.webp)
 
 Si l'inventaire est incomplet, attendez qu'il charge ou réessaye la demande échouée avant d'utiliser la révocation du groupe. Revérifier le champ sélectionné après la révocation.
 

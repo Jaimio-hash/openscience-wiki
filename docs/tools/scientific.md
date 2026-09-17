@@ -97,7 +97,7 @@ If the built-in model Skill fails package path validation, report that error thr
 
 ### Check the designed sequences
 
-![Completed local CPU run and reopened comparison report](/img/open-science/local-todo-batch/42-cpu-model-comparison.png)
+![Completed local CPU run and reopened comparison report](/img/open-science/local-todo-batch/42-cpu-model-comparison.webp)
 
 The saved outputs in this example contained the following results:
 

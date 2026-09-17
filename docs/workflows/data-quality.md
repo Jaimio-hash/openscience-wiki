@@ -43,7 +43,7 @@ Do not perform differential-expression testing or delegate.
 
 Before sending, click the attachment to check its header: two metadata columns followed by twelve sample columns. The text preview loads only part of a large file; the Notebook must read the entire matrix. This run sent the calculation directly. If you want to agree on a plan first, use the separate [Planning](../guides/planning.md) flow.
 
-![The actual attached matrix and its column definitions](/img/open-science/research-workflows/rnaseq-qc-input.png)
+![The actual attached matrix and its column definitions](/img/open-science/research-workflows/rnaseq-qc-input.webp)
 
 ## 2. Keep metadata out of sample calculations
 
@@ -59,7 +59,7 @@ Read the Python permission request, including the input file and output names, t
 
 If the input Version ID cannot be resolved, ask the Agent to use the input mounted from this conversation's attachment and retry. This run used that recovery. Do not treat the failed attempt as a completed calculation or silently substitute another file.
 
-![Successful Notebook output with dimensions, hashes and calculated sample metrics](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.png)
+![Successful Notebook output with dimensions, hashes and calculated sample metrics](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.webp)
 
 The completed rerun validated **27,179 gene rows and 12 sample columns** with no malformed rows, duplicate IDs, missing entries or invalid counts. All three requested files appeared under **Generated**. Open each file there; a working file that was never saved as an artifact is not yet a deliverable.
 
@@ -69,7 +69,7 @@ Open `rnaseq-sample-qc.csv` and check **12 rows · 6 columns**. It retains each 
 
 Compare all sample metrics with the [baseline table](../reference/example-data.md#sample-qc-baseline), matching rows by the complete sample identifier.
 
-![The reopened twelve-row table from the completed rerun](/img/open-science/research-workflows/rnaseq-qc-rerun-table.png)
+![The reopened twelve-row table from the completed rerun](/img/open-science/research-workflows/rnaseq-qc-rerun-table.webp)
 
 For this input, zero-count plus detected genes in each row should equal **27,179**. Compare the **48** sample metrics with the independent baseline. Agreement checks these calculations for the supplied input; downstream assumptions still need their own assessment.
 
@@ -77,7 +77,7 @@ For this input, zero-count plus detected genes in each row should equal **27,179
 
 Open `rnaseq-library-sizes.png` and enlarge it. Check all twelve sample labels, the raw-count axis and the note that values are not normalized. Total counts range from **20,015,386** to **24,723,827** in this matrix.
 
-![The saved raw library-size plot from the same rerun](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.png)
+![The saved raw library-size plot from the same rerun](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.webp)
 
 A larger library total does not by itself mean that a gene is differentially expressed. Before a separate downstream analysis, match sample characteristics to the GEO metadata and specify the design, contrasts, normalization and filtering rules. A separate Connector follow-up retrieved the twelve samples’ GEO characteristics; the GSM-to-matrix-column mapping, analysis design and statistical steps were not validated here. See [Connectors](../guides/connectors.md).
 

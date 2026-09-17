@@ -31,11 +31,11 @@ air-report-v1.md. The script must accept one or more CSV paths plus
 input/script hashes. Stop after this baseline. Use English.
 ```
 
-![第一周附件与基线计算任务](/img/open-science/workflow-extensions/air-input-v1.png)
+![第一周附件与基线计算任务](/img/open-science/workflow-extensions/air-input-v1.webp)
 
 检查文件读取和计算内容后授权。在 **Notebook** 中确认执行完成，再打开 **air-daily-v1.csv**。基线包含 **168 行小时数据、7 行日汇总**，PM2.5 没有缺失。
 
-![保存后的七天基线与有效小时数](/img/open-science/workflow-extensions/air-baseline-table.png)
+![保存后的七天基线与有效小时数](/img/open-science/workflow-extensions/air-baseline-table.webp)
 
 ## 2. 增加观测，保持方法不变
 
@@ -53,7 +53,7 @@ Reopen the saved results. This is a historical replay, not live data.
 Use English and do not make health or causal claims.
 ```
 
-![在原分析会话中附加第二周数据](/img/open-science/workflow-extensions/air-update-input.png)
+![在原分析会话中附加第二周数据](/img/open-science/workflow-extensions/air-update-input.webp)
 
 确认代理运行原脚本，保留同一缺失值与完整性规则。若数据和方法同时改变，就难以判断结果变化来自哪里。
 
@@ -61,7 +61,7 @@ Use English and do not make health or causal claims.
 
 打开 **air-daily-v2.png** 和 **air-daily-v2.csv**。合并输入有 **336 行小时数据**，**没有重复或缺失时间戳**，但 **1 月 11 日有一个 PM2.5 值缺失**。日汇总为 **14 天**，均达到本例设置的至少 18 个有效小时要求。
 
-![Open-Science 中扩展后的十四天结果](/img/open-science/workflow-extensions/air-update-plot.png)
+![Open-Science 中扩展后的十四天结果](/img/open-science/workflow-extensions/air-update-plot.webp)
 
 1 月 11 日均值为 **11.652 µg/m³**，由 **23 个有效小时**计算。不能把缺失值当成零参与分母。时间戳完整也不代表测量值全部存在。
 
@@ -69,17 +69,17 @@ Use English and do not make health or causal claims.
 
 打开 **air-update-check.csv**。原来的 **7 个共同日期**在所有输出字段上完全一致，新增的只有 1 月 8—14 日。更新前后原脚本的 SHA-256 一致。
 
-![逐行比较显示基线日期的结果保持不变](/img/open-science/workflow-extensions/air-update-check.png)
+![逐行比较显示基线日期的结果保持不变](/img/open-science/workflow-extensions/air-update-check.webp)
 
 打开 **air-update-notes.md**，核对输入身份、缺失观测和保留的 v1 文件。本次还独立计算了全部 14 天的均值与有效小时数，与保存输出在其显示精度内一致。
 
-![更新说明保留了代码未变、基线文件与数据检查信息](/img/open-science/workflow-extensions/air-update-notes.png)
+![更新说明保留了代码未变、基线文件与数据检查信息](/img/open-science/workflow-extensions/air-update-notes.webp)
 
 ## 5. 交付前核对报告日期
 
 检查报告标题是否跟随实际输入范围变化。初始脚本在两周报告中仍保留第一周标题，这个展示错误已在 **air-analysis-reviewed.py** 中修正，只改变标题模板。随后用这一份修订脚本分别运行第一周和两周数据，保留全部旧文件。
 
-![修正后的报告标题显示完整两周日期](/img/open-science/workflow-extensions/air-reviewed-report.png)
+![修正后的报告标题显示完整两周日期](/img/open-science/workflow-extensions/air-reviewed-report.webp)
 
 保存的 **air-daily-baseline.csv** 与 **air-daily-updated.csv** 在每个字段上分别与原 v1/v2 CSV 一致。**air-update-verification.md** 记录同一修订脚本在两次运行前后的相同哈希，并核对两个报告标题，区分了标签修正和计算方法变化。
 

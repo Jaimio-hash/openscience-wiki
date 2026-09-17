@@ -43,7 +43,7 @@ Do not perform differential-expression testing or delegate.
 
 Antes de enviar, haga clic en el accesorio para comprobar su encabezado: dos columnas de metadatos seguidas por doce columnas de muestra. El texto previsualiza cargas sólo parte de un archivo grande; el Notebook debe leer toda la matriz. Esta ejecución envió el cálculo directamente. Si quieres estar de acuerdo en un plan primero, usa el flujo [Planificación](../guides/planning.md) separado.
 
-![La matriz adjunta real y sus definiciones de columna](/img/open-science/research-workflows/rnaseq-qc-input.png)
+![La matriz adjunta real y sus definiciones de columna](/img/open-science/research-workflows/rnaseq-qc-input.webp)
 
 ## 2. Mantener los metadatos fuera de los cálculos de muestras {/* #2-keep-metadata-out-of-sample-calculations */}
 
@@ -59,7 +59,7 @@ Lea la solicitud de permiso Python, incluyendo el archivo de entrada y los nombr
 
 Si el ID de la versión de entrada no puede ser resuelto, pídale al agente que use la entrada montada del apego y la reingresación de esta conversación. Esta carrera usó esa recuperación. No trate el intento fallido como un cálculo completado o sustituya silenciosamente otro archivo.
 
-![Salida Notebook exitosa con dimensiones, hashes y métricas de muestra calculadas](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.png)
+![Salida Notebook exitosa con dimensiones, hashes y métricas de muestra calculadas](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.webp)
 
 La repetición completa validada **filas de genes 27,179 y columnas de muestra 12** sin filas malformadas, IDs duplicadas, entradas faltantes o conteos inválidos. Los tres archivos solicitados aparecieron bajo **Generated**. Abra cada archivo allí; un archivo de trabajo que nunca fue guardado como un artefacto no es todavía un entregable.
 
@@ -69,7 +69,7 @@ Abra `rnaseq-sample-qc.csv` y compruebe **filas 12 · columnas 6**. Retiene cada
 
 Compare todas las métricas de muestra con el [Cuadro de referencia](../reference/example-data.md#sample-qc-baseline), hileras coincidentes por el identificador de muestra completo.
 
-![La tabla de doce hojas reabierto de la repetición completa](/img/open-science/research-workflows/rnaseq-qc-rerun-table.png)
+![La tabla de doce hojas reabierto de la repetición completa](/img/open-science/research-workflows/rnaseq-qc-rerun-table.webp)
 
 Para esta entrada, los genes detectados de cero cuenta más en cada fila deben igualar **27,179**. Compare las métricas de la muestra **48** con la base de referencia independiente. El acuerdo comprueba estos cálculos para la entrada suministrada; Las hipótesis de abajo todavía necesitan su propia evaluación.
 
@@ -77,7 +77,7 @@ Para esta entrada, los genes detectados de cero cuenta más en cada fila deben i
 
 Abra `rnaseq-library-sizes.png` y agrandarla. Revise las doce etiquetas de muestra, el eje de cuenta cruda y la nota de que los valores no se normalizan. Los recuentos totales van desde **20,015,386** a **24,723,827** en esta matriz.
 
-![La trama de tamaño libre guardado de la misma repetición](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.png)
+![La trama de tamaño libre guardado de la misma repetición](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.webp)
 
 Un total de biblioteca más grande no significa por sí mismo que un gen se expresa de manera diferencial. Antes de un análisis de aguas abajo separadas, se combinan las características de la muestra con los metadatos GEO y se especifican el diseño, los contrastes, la normalización y las reglas de filtrado. Un seguimiento Connector separado recuperó las características GEO de las doce muestras; no se validaron las cartografías, el diseño de análisis y los pasos estadísticos de GSM a Mactrix. Ver [Conectores](../guides/connectors.md).
 

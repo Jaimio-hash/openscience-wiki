@@ -45,12 +45,12 @@ Abrir búsqueda de aplicaciones con el acceso directo para su plataforma e intro
 En la aplicación de escritorio Windows, haga clic en el borrador de Composer antes de usar **Ctrl+Z** para deshacer o **Ctrl+Shift+Z** para rehacer. Revise el texto resultante antes de continuar o enviar. Al utilizar **Tab / Shift+Tab**, busque el esquema de control enfocado, como el botón de acceso a continuación. Confirme el enfoque de nuevo después de abrir un panel o cambiar el estado del control; no confía en un número fijo de pulsaciones.
 
 <Screenshot
-  src="/img/open-science/windows/keyboard-attachment-focus.png"
+  src="/img/open-science/windows/keyboard-attachment-focus.webp"
   alt="El botón adjunto tiene un esquema de enfoque de teclado visible en el Compositor Windows"
   width={1916}
   height={1014}
   windowBounds={[215, 850, 920, 150]}
-  href="/docs/img/open-science/windows/keyboard-attachment-focus.png"
+  href="/docs/img/open-science/windows/keyboard-attachment-focus.webp"
   linkLabel="Abra la pantalla Windows completa que muestra el enfoque adjunto-buttón"
 />
 

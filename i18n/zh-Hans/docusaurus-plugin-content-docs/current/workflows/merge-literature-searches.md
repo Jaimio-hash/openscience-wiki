@@ -39,7 +39,7 @@ Write in English and reopen the saved files.
 
 在 **Generated** 中打开 **electrolyte-merged.csv**，对照两个 RIS 文件与候选审核表，核对保留的标题、DOI 和来源。本例合并表为 15 行；DOI **10.1007/s41918-024-00212-1** 在两批中均出现，来源标为 **A|B**。
 
-![保存后的合并表保留了各条记录的检索来源](/img/open-science/workflow-extensions/batches-merged.png)
+![保存后的合并表保留了各条记录的检索来源](/img/open-science/workflow-extensions/batches-merged.webp)
 
 比较 DOI 时去掉首尾空格和可选的 DOI 网址前缀，忽略大小写；来源记录仍保留原始标识。仅凭相似标题不能认定为同一条记录，标识符冲突需要进一步核查。
 
@@ -52,7 +52,7 @@ Write in English and reopen the saved files.
 3. 选择 `electrolyte-batch-a.ris`，确认 **Import to** 是目标集合。
 4. 保持 **When identifiers match → Reuse existing reference**，检查 **View details**，再点击 **Import references**。
 
-![第一批导入预览：目标集合中将新增八条文献](/img/open-science/workflow-extensions/batches-import-a.png)
+![第一批导入预览：目标集合中将新增八条文献](/img/open-science/workflow-extensions/batches-import-a.webp)
 
 本次第一批实际完成 **8 Created、0 Reused、0 Skipped、0 Failed**。点击 **Done** 后查看集合。如果你的文献库已经有匹配记录，新增与复用的数量可能不同。
 
@@ -60,16 +60,16 @@ Write in English and reopen the saved files.
 
 保持同一集合选中，导入 `electrolyte-batch-b.ris`。导入前先看重复识别结果：本例显示 **7 New references、1 Existing、0 Skipped**。
 
-![第二批导入预览中，共同论文被识别为 Existing](/img/open-science/workflow-extensions/batches-import-b.png)
+![第二批导入预览中，共同论文被识别为 Existing](/img/open-science/workflow-extensions/batches-import-b.webp)
 
 保持 **Reuse existing reference**，核对共同论文的标题后导入。实际完成结果为 **7 Created、1 Reused、0 Skipped、0 Failed**。复用保留已有元数据，并将匹配记录加入目标集合；它不会新建第二份记录，也不会下载 PDF。
 
-![第二批完成后实际新增七篇、复用一篇](/img/open-science/workflow-extensions/batches-import-result.png)
+![第二批完成后实际新增七篇、复用一篇](/img/open-science/workflow-extensions/batches-import-result.webp)
 
 ## 5. 检查最终集合
 
 点击 **Done**，集合中应有 **15 篇**，与 DOI 合并表一致。保留原始两批 RIS 与来源 CSV，便于同事追溯每条候选来自哪次检索。
 
-![最终集合包含十五篇文献](/img/open-science/workflow-extensions/batches-collection.png)
+![最终集合包含十五篇文献](/img/open-science/workflow-extensions/batches-collection.webp)
 
 数量一致只是检查的一部分，还需核对重复 DOI 和代表性标题。要在保留基线的前提下加入后续年份文献，继续阅读[更新已有文献集合](update-literature.md)。

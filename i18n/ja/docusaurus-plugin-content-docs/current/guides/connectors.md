@@ -18,7 +18,7 @@ Connector は、サービスのツールをエージェントに利用できる�
 
 **Settings → Connectors**を開き、**Omics アーカイブ**を検索し、詳細を開きます。 このビルトインファミリーには、GEO、ArrayExpress、MetaboLights、MGnify、PRIDEツールが含まれています。 選択する前にツールの行を拡大します。
 
-![GEOメタデータツールとその明示的なダウンロード境界](/img/open-science/guides-walkthrough/36-omics-tools.png)
+![GEOメタデータツールとその明示的なダウンロード境界](/img/open-science/guides-walkthrough/36-omics-tools.webp)
 
 `geo_get_series` は、GEO シリーズのメタデータ、サンプル、プラットフォーム、および補足ファイル URL を返します。 返されたソースから必要なデータテーブルをダウンロードし、計算を要求する前にプロジェクトに添付してください。
 
@@ -50,7 +50,7 @@ Connector は、サービスのツールをエージェントに利用できる�
 3. **Require approval**、**Block**、**Always allow** を選択して、許可するアクセス権を取得します。 承認の表示 **Ask when no Session, Project, or Global permission applies.** を要求して下さい
 4. PubMed を有効にし、**Used by** を検査します。 Main の可用性は **Main only** として示されます; 無効な空室状況は、**Not in use**を示しています。
 
-![PubMed ツールの説明と承認制御](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.png)
+![PubMed ツールの説明と承認制御](/img/open-science/walkthrough-2026-09-08/64-pubmed-tool-policy.webp)
 
 `search_articles`、`get_article_metadata`、`find_related_articles`、`lookup_article_by_citation`、`convert_article_ids`、`get_full_text_article`、`get_copyright_status`の詳しいリストです。 ツールごとに**Always allow**、**Require approval**、**Block**を選択してください。 Connector-ワイド**Skip approvals**スイッチを別々に見直し、有効化します。 説明を開くだけで、ツールの指示が表示されます。
 
@@ -69,7 +69,7 @@ Connector は、サービスのツールをエージェントに利用できる�
 4. 実際の結果を確認します。 このアクセスについては、返された**GSE60450**、**ムスカルス**、**12サンプル**、および「乳食対妊娠中の哺乳類の腹部および血管細胞サブポピーションのトランスクリプト分析」のタイトルを確認してください。
 5. 返されたGSM識別子を特性に保ちます。 行列の MCL1 列名を単独で囲む必要はありません。
 
-![Connectorで返された実際のGEOサンプル特性](/img/open-science/guides-walkthrough/59-geo-sample-metadata.png)
+![Connectorで返された実際のGEOサンプル特性](/img/open-science/guides-walkthrough/59-geo-sample-metadata.webp)
 
 返されたサンプル範囲は、Luminal/basalの人口と処女、18.5日妊娠および2日授乳段階をカバーした**GSM1480291-GSM1480302**でした。 これらは、カウント合計から推論されるラベルではなく、メタデータを返します。 <a href="/docs/examples/gse60450/geo-sample-metadata.csv" download>地理サンプルメタデータ.csv</a>として全12列応答テーブルをダウンロードしました。 これは、管理されたQCのアーティファクトから分離された会話テーブルのエクスポートです。
 
@@ -105,7 +105,7 @@ Connector 命令ファイルが見つからない場合は、EPERM エラーを�
 | フィールド/テキスト | 名前を構造化された行または 1 つとして入力して下さい `KEY=` ラインごとの; 秘密の値は、クレデンシャルに住んでいます。 |
 | コマンドプレビュー | 結合の後で示される進水器を点検して下さい。 |
 
-![ローカルコマンドエディタとクレデンシャル・バウンド環境変数](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.png)
+![ローカルコマンドエディタとクレデンシャル・バウンド環境変数](/img/open-science/walkthrough-2026-09-08/67-connector-local-command.webp)
 
 ランチャーエントリーだけでは、その実行可能またはサービスが運用されていることを証明しません。 インポートされたローカルコマンドをチェックするには、下の呼び出しを使用してください。
 
@@ -125,13 +125,13 @@ Connector 命令ファイルが見つからない場合は、EPERM エラーを�
 4. **Add header** は、別の行または **Remove header** で行を破棄します。
 5. **フィールド/テキスト** は、名前の入力を変更します。 テキスト モードは、`Name:` として 1 行につき 1 つのヘッダー名を期待します。 クレデンシャル値が別途管理されます。
 
-![静的ヘッダー名とクレデンシャルセレクター](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.png)
+![静的ヘッダー名とクレデンシャルセレクター](/img/open-science/walkthrough-2026-09-08/65-connector-static-headers.webp)
 
 #### OAuthバインディング {/* #oauth-binding */}
 
 リソースURL、トランスポート、登録に一致する**OAuth credential**を選択します。 **New credential** は [クレデンシャルエディタ](../tools/credentials.md#new-credential) を開きます。 この空のプロファイルでは、フォームは**No OAuth credential matches this Connector's resource URL, transport, and registration.**を報告しました。最終的なアクションは**Add and sign in**に変わります。
 
-![OAuth 認証マッチング](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.png)
+![OAuth 認証マッチング](/img/open-science/walkthrough-2026-09-08/66-connector-oauth-binding.webp)
 
 ## インポート、エクスポート、接続テスト {/* #import-export-and-connection-tests */}
 
@@ -142,7 +142,7 @@ Connector 命令ファイルが見つからない場合は、EPERM エラーを�
 3. **Use configuration** を選択して、プレフィルドエディタを開きます。 すべてのフィールドを見直し、必要なローカル資格情報を結合し、**I trust this connector**を選択します。
 4. **Add connector**を選択し、リスト内の接続状態を調べ、小さな読み取り専用ツールを呼び出します。
 
-![サーバーを選択し、必要な資格情報を確認する](/img/open-science/local-todo-batch/23-mcp-multi-server.png)
+![サーバーを選択し、必要な資格情報を確認する](/img/open-science/local-todo-batch/23-mcp-multi-server.webp)
 
 インポートされたサーバが `QC_EXAMPLE_TOKEN` などの環境変数を参照する場合、このデバイスに保存されているクレデンシャルにその名前をバインドします。 **Add**は、必要なバインディングが完了するまでは利用できません。 追加後、**Connected** を確認し、意図したツールを実行します。 保存された結合は、リモート認証を検証しません。
 
@@ -152,13 +152,13 @@ Connector 命令ファイルが見つからない場合は、EPERM エラーを�
 
 行の**Actions → Export**を選択し、**Open Science Connector**または**MCP client config**を選択し、プレビューを調べ、**Save configuration**を選択します。
 
-![認証名を保持し、ローカルパスを報告するエクスポート](/img/open-science/local-todo-batch/24-mcp-export-binding.png)
+![認証名を保持し、ローカルパスを報告するエクスポート](/img/open-science/local-todo-batch/24-mcp-export-binding.webp)
 
 実際のエクスポートされたファイルは、`required_secrets.environment` の変数名を保持しました。 デモのクレデンシャル値、ローカルの信頼、または許可は含まれていません。 Reimport はローカルの資格選択を要求し、再度信頼します。
 
 同一のIDが既に存在する場合、プレビューは**IDでカスタムConnector ...既にインストールされています**、**Use configuration**は利用できません。 既存の接続を変更するには、**Edit** を使用します。 インポートは上書き操作ではありません。
 
-![既存のIDブロックの重複インポート](/img/open-science/local-todo-batch/26-mcp-reimport-collision.png)
+![既存のIDブロックの重複インポート](/img/open-science/local-todo-batch/26-mcp-reimport-collision.webp)
 
 エクスポートされた接続を復元するときは、プレフィルドフィールドを調べて、再び必須の認証情報を結合します。 完全な信頼と研究でそれを使用する前に境界された呼出しをテストして下さい。 インポートは、同じIDで既存のConnectorを上書きしません。
 

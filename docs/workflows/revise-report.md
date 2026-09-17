@@ -29,11 +29,11 @@ read and flag unavailable figure inspection. Do not invent measurements.
 Save and reopen the draft. Do not overwrite it in later revisions.
 ```
 
-![The source PDFs and initial briefing request in Open-Science](/img/open-science/workflow-extensions/report-input.png)
+![The source PDFs and initial briefing request in Open-Science](/img/open-science/workflow-extensions/report-input.webp)
 
 Approve the relevant file reads when requested. Open **catalyst-brief-v1.md** from **Generated** or **Files** and read the saved draft. An answer in the conversation is not a substitute for inspecting the actual file.
 
-![The saved first draft before editorial revision](/img/open-science/workflow-extensions/report-draft.png)
+![The saved first draft before editorial revision](/img/open-science/workflow-extensions/report-draft.webp)
 
 ## 2. Make the feedback actionable
 
@@ -64,7 +64,7 @@ The actual revision read the attached comment file and produced both requested k
 
 Open **catalyst-brief-v2.md**. This run produced a **117-word summary**, a two-row operating-point table and three labelled follow-up proposals.
 
-![The revised summary and the table separating selectivity from durability](/img/open-science/workflow-extensions/report-revised.png)
+![The revised summary and the table separating selectivity from durability](/img/open-science/workflow-extensions/report-revised.webp)
 
 The key distinction is **98.9% CO Faradaic efficiency at −1.2 V vs RHE** versus a separate **20 h current-retention test at −0.8 V vs RHE**. Do not combine them into “98.9% for 20 h.” Main PDF p. 6, Fig. 6b–d, and p. 7, Fig. 6e, identify the relevant evidence; p. 8 describes the H-cell measurements. Supplementary PDF pp. 47–48, Figs. 51–52, concern hydrogen selectivity and NMR product checks.
 
@@ -74,7 +74,7 @@ In this run, the Agent could read the full-text passages and figure captions, bu
 
 Open **catalyst-brief-v2-response.md**. Locate C1–C6, open each named revised section and confirm that it actually contains the promised change. A “Resolved” label alone is insufficient.
 
-![The saved response table maps all six comments to revised sections](/img/open-science/workflow-extensions/report-response.png)
+![The saved response table maps all six comments to revised sections](/img/open-science/workflow-extensions/report-response.webp)
 
 Check that the proposals remain labelled as proposals, the DOI remains **10.1038/s41467-019-12510-0**, and **catalyst-brief-v1.md** still exists unchanged. The response should state any evidence that remains unavailable.
 

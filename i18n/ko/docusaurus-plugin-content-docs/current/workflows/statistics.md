@@ -22,7 +22,7 @@ outcome `re78` 및 기본 변수 `re74` 및 `re75`는 **천 달러**에서 실�
 
 지정된 CSV을 클릭하여 계산 요청을 전송하기 전에 미리 볼 수 있습니다. `train`, `re78`, `re74` 및 `re75`를 확인하여 0의 수입을 가진 행을 포함합니다. 미리보기는 100 행만 보여줄 수 있습니다; Notebook은 전체 파일을 계산해야 합니다.
 
-![첨부된 입력 CSV 및 그 원래 열](/img/open-science/research-workflows/job-training-input.png)
+![첨부된 입력 CSV 및 그 원래 열](/img/open-science/research-workflows/job-training-input.webp)
 
 ## prespecified 비교를 실행 {/* #run-the-prespecified-comparison */}
 
@@ -42,7 +42,7 @@ Run the calculations; do not invent results or delegate.
 
 대화에서 **Notebook**을 선택하여 실행된 Python 셀을 열고 출력을 검사합니다. 회귀 요약 전에 행과 그룹 카운트를 찾습니다. 첨부된 버전이 해결될 수 없는 경우, 이 대화의 첨부 파일과 재스트에서 첨부된 파일을 읽으려면 에이전트를 요청하십시오. 실패한 세포는 결과가 아닙니다. 성공적인 세포를 유지하고 저장된 파일로 출력합니다.
 
-![기록된 Notebook 산출은 실제적인 표본 체크 및 회귀 견적을 포함합니다](/img/open-science/research-workflows/job-training-notebook.png)
+![기록된 Notebook 산출은 실제적인 표본 체크 및 회귀 견적을 포함합니다](/img/open-science/research-workflows/job-training-notebook.webp)
 
 ## 저장된 결과 검사 {/* #inspect-the-saved-result */}
 
@@ -55,13 +55,13 @@ Run the calculations; do not invent results or delegate.
 
 계수 및 간격은 **천 달러**에 있습니다. 이 예제의 계산의 결과는 원본 용지에서 견적을 인용하지 않습니다.
 
-![샘플 검사 및 견적을 가진 저장된 영어 회귀 보고서](/img/open-science/research-workflows/job-training-report.png)
+![샘플 검사 및 견적을 가진 저장된 영어 회귀 보고서](/img/open-science/research-workflows/job-training-report.webp)
 
 응답이 완료된 후 생성된 파일을 모두 엽니다. CSV의 `train` 행을 보고서와 Notebook와 비교합니다. 이 실행의 <a href="/docs/examples/research-workflows/job-training-regression.csv" download>계수 테이블</a> 및 <a href="/docs/examples/research-workflows/job-training-report.md" download>- 연혁</a>을 다운로드 할 수 있습니다.
 
 **Generated**에서 CSV을 열고 미리보기를 확장합니다. 저장된 계수 테이블에는 **12 행 · 9 열**가 있습니다: 조정한 모형을 위한 2개의 줄 및 조정한 모형을 위한 10. 각 모델의 `train` 행을 찾아 견적, 견고한 표준 오류, 간격, `n` 및 단위를 비교하십시오. 소스 사전이 국가가 아닌 inflation base year를 추가하지 마십시오. 미리보기의 **Download** 버튼을 사용하여 체크된 버전을 유지합니다.
 
-![두 모델과 일관된 단위를 가진 reopened 계수 CSV](/img/open-science/research-workflows/job-training-coefficients.png)
+![두 모델과 일관된 단위를 가진 reopened 계수 CSV](/img/open-science/research-workflows/job-training-coefficients.webp)
 
 ## 비교 지원이 무엇인지 결정하십시오. {/* #decide-what-the-comparison-supports */}
 

@@ -45,7 +45,7 @@ Do not perform differential-expression testing or delegate.
 
 发送前点击附件检查表头：两个元数据列，后接十二个样本列。大文件预览只加载部分内容，完整矩阵必须由 Notebook 读取。本次直接发送计算请求；如果需要先确定计划，可另用[规划任务](../guides/planning.md)流程。
 
-![实际附加的矩阵及其列定义](/img/open-science/research-workflows/rnaseq-qc-input.png)
+![实际附加的矩阵及其列定义](/img/open-science/research-workflows/rnaseq-qc-input.webp)
 
 ## 2. 元数据不参与样本计算
 
@@ -61,7 +61,7 @@ Do not perform differential-expression testing or delegate.
 
 如果输入 Version ID 无法解析，要求 Agent 使用本会话附件挂载的输入重试。本次通过这一方式继续计算。失败的尝试不能记为完成，也不能悄悄替换成另一个文件。
 
-![成功的 Notebook 输出包含维度、校验值和实际计算的样本指标](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.png)
+![成功的 Notebook 输出包含维度、校验值和实际计算的样本指标](/img/open-science/research-workflows/rnaseq-qc-rerun-notebook.webp)
 
 本次重跑检查了 **27,179 个基因行、12 个样本列**，没有行宽异常、重复 ID、缺失值或无效计数。三个结果均出现在 **Generated** 中，应逐一打开；只存在于工作目录、尚未保存为产物的文件还不算交付结果。
 
@@ -71,7 +71,7 @@ Do not perform differential-expression testing or delegate.
 
 按完整样本标识与[基准表](../reference/example-data.md#样本-qc-基准)逐行比较全部指标。
 
-![重新打开本次重跑的十二行样本表](/img/open-science/research-workflows/rnaseq-qc-rerun-table.png)
+![重新打开本次重跑的十二行样本表](/img/open-science/research-workflows/rnaseq-qc-rerun-table.webp)
 
 对于本例输入，每行零计数基因数加检出基因数应等于 **27,179**。将 **48** 项样本指标与独立基准对照。一致性检查针对该输入的这些计算；下游分析假设仍需另行评估。
 
@@ -79,7 +79,7 @@ Do not perform differential-expression testing or delegate.
 
 打开并放大 `rnaseq-library-sizes.png`，核对十二标签、原始计数轴与未归一化说明。矩阵总计数范围为 **20,015,386–24,723,827**。
 
-![同一次重跑保存的原始计数总量图](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.png)
+![同一次重跑保存的原始计数总量图](/img/open-science/research-workflows/rnaseq-qc-rerun-plot.webp)
 
 总计数较大不能证明某基因差异表达。继续下游分析前，从 GEO 核对样本特征，明确 GSM 与矩阵列名映射、研究设计、对比、归一化及过滤规则。元数据获取见[连接器](../guides/connectors.md)。
 

@@ -23,9 +23,9 @@ La entrada es el R público de [Conjunto de datos de Theoph](https://www.stat.et
 
 **Versión del ejemplo:** Las capturas y resultados siguientes se registraron en v0.30.1. En esa configuración, seleccionar solo el rol devolvía `Unknown skill`; había que seleccionar el Skill explícitamente en cada mensaje. v0.30.2 corrige la preparación de los Skills vinculados a Specialists, incluidas las tareas delegadas. En la nueva versión, selecciona primero el Specialist y comprueba la carga real; selecciona el Skill explícitamente si hace falta. Este ejemplo todavía no se ha vuelto a ejecutar en v0.30.2. El procedimiento anterior no es un requisito general, y la corrección no demuestra que este ejemplo haya superado una nueva prueba.
 
-![Instalación de Farmacometría Specialist y sus capacidades](/img/open-science/theoph-specialist/installed.jpg)
+![Instalación de Farmacometría Specialist y sus capacidades](/img/open-science/theoph-specialist/installed.webp)
 
-![Seleccionar el Skill de modelado pkpd genuino para el mensaje actual](/img/open-science/theoph-specialist/skill-selection.jpg)
+![Seleccionar el Skill de modelado pkpd genuino para el mensaje actual](/img/open-science/theoph-specialist/skill-selection.webp)
 
 ## 2. Compruebe los datos y dibujar las curvas de concentración {/* #2-check-the-data-and-draw-the-concentration-curves */}
 
@@ -49,9 +49,9 @@ Abra el CSV generado y la trama. Los sujetos 1, 7 y 10 tienen concentraciones no
 
 La vista previa del CSV muestra las primeras 100 filas; el archivo guardado contiene las 132 observaciones.
 
-![La tabla de entrada guardada en Open-Science](/img/open-science/theoph-specialist/input.jpg)
+![La tabla de entrada guardada en Open-Science](/img/open-science/theoph-specialist/input.webp)
 
-![La base de referencia ejecutada y doce curvas de tiempo de concentración](/img/open-science/theoph-specialist/baseline.jpg)
+![La base de referencia ejecutada y doce curvas de tiempo de concentración](/img/open-science/theoph-specialist/baseline.webp)
 
 Archivo de referencia: <ExampleDownload path="/examples/theoph/theoph-input.csv">entrada CSV</ExampleDownload>, <ExampleDownload path="/examples/theoph/theoph-concentration-time.png">compostura de concentración</ExampleDownload>, <ExampleDownload path="/examples/theoph/theoph-data-check.md">Verificación de datos</ExampleDownload>.
 
@@ -83,7 +83,7 @@ Aprobar el archivo lee y el cálculo R después de inspeccionarlos. Si falta un 
 
 Abra **theoph-nca-summary.csv** de los archivos generados. Debe haber una fila para cada uno de los doce sujetos. Compruebe las unidades y el tiempo de última observación, así como los valores métricos.
 
-![Metrices de exposición a nivel de sujeto ahorradas](/img/open-science/theoph-specialist/results.jpg)
+![Metrices de exposición a nivel de sujeto ahorradas](/img/open-science/theoph-specialist/results.webp)
 
 | Asunto | Cmax (mg/L) | Tmax (h) | AUC0-last (mg·h/L) | Última observación h) |
 | --- | --- | --- | --- | --- |

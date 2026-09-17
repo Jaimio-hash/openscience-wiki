@@ -45,12 +45,12 @@ import Screenshot from '@site/src/components/Screenshot';
 В настольном приложении Windows нажмите на проект Composer, прежде чем использовать **Ctrl+Z** для отмены или **Ctrl+Shift+Z** для переделки. Проверьте полученный текст перед продолжением или отправкой. При использовании **Tab/Shift+Tab** ищите контур сфокусированного управления, например, кнопку вложения ниже. Подтвердить фокусировку снова после открытия панели или изменения состояния управления; Не полагайтесь на фиксированное количество клавишных.
 
 <Screenshot
-  src="/img/open-science/windows/keyboard-attachment-focus.png"
+  src="/img/open-science/windows/keyboard-attachment-focus.webp"
   alt="Кнопка вложения имеет видимый контур клавиатуры-фокуса в Windows Composer"
   width={1916}
   height={1014}
   windowBounds={[215, 850, 920, 150]}
-  href="/docs/img/open-science/windows/keyboard-attachment-focus.png"
+  href="/docs/img/open-science/windows/keyboard-attachment-focus.webp"
   linkLabel="Откройте полный скриншот Windows, показывающий фокус кнопок вложения"
 />
 

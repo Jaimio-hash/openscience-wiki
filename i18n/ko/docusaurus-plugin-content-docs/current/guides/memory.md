@@ -20,11 +20,11 @@ last_update:
 4. **Create**을 선택하면 **Add**을 선택합니다. 노트를 입력하고 **Save**을 선택합니다.
 5. 이 페이지는 자동으로 번역 되었다. 원문 언어: How to check its content and count.
 
-![범주 이름, 지도 및 자동 호출](/img/open-science/guides-walkthrough/17-memory-category.png)
+![범주 이름, 지도 및 자동 호출](/img/open-science/guides-walkthrough/17-memory-category.webp)
 
 저장된 메모는 읽습니다 : "Keep the original GEO count matrix unchanged. Preserve Entrez Gene IDs as text, 샘플 개수에서 별도의 유전자 길이를 유지하고, 각 파생 된 테이블에 입력 SHA-256을 기록합니다. 이것은 작업 협약이며 분석 결과에 대한 주장이 아닙니다.
 
-![메모리가 꺼져있는 동안 수동으로 저장된 메모](/img/open-science/guides-walkthrough/18-memory-note.png)
+![메모리가 꺼져있는 동안 수동으로 저장된 메모](/img/open-science/guides-walkthrough/18-memory-note.webp)
 
 | (주) | 효과 및 경계 |
 | --- | --- |
@@ -47,7 +47,7 @@ last_update:
 3. 승인이 필요할 때 **Save memory** 요청을 검사합니다. **Allow once**을 선택하기 전에 제안된 내용, 범주 및 프로젝트 범위를 확인하십시오. **Deny**을 선택하면 동의한 규칙을 나타내지 않습니다.
 4. 카테고리를 엽니다. 참고가 존재한다는 것을 확인하고, 의도한 텍스트를 가지고 있고 의도한 프로젝트 아래에 나타납니다. **auto** 라벨은 에이전트 생성 노트를 식별합니다. 그것은 관행을 확인한 계산을 의미하지 않습니다.
 
-![수동 source-preservation note와 함께 하는 대리인 창조된 보고 규칙](/img/open-science/non-workflow-completion/05-memory-note-category.png)
+![수동 source-preservation note와 함께 하는 대리인 창조된 보고 규칙](/img/open-science/non-workflow-completion/05-memory-note-category.webp)
 
 ## 새로운 대화에서 리콜을 확인 {/* #check-recall-in-a-new-conversation */}
 
@@ -65,7 +65,7 @@ last_update:
 
 OpenCode이 컨텍스트 팝업에서 **Compact**을 제공 할 때 **Context compacted**를 선택하고 대기하십시오. 원래 메시지는 요약에서 백엔드가 계속되는 동안 볼 수 있습니다. 계속하기 전에 유지 된 제약을 나열하고 요구 사항을 비교하기 위해 에이전트를 요청하십시오. 다음 작업을 시작하기 전에 모든 누락 또는 잘못된 제약을 재 상태. Compaction는 무손실 유지를 보장하지 않습니다; 공급자 측정은 지역 추정과 다를 수 있습니다.
 
-![Compaction 및 공급자 허가된 컨텍스트 측정 완료](/img/open-science/non-workflow-completion/11-context-compacted.png)
+![Compaction 및 공급자 허가된 컨텍스트 측정 완료](/img/open-science/non-workflow-completion/11-context-compacted.webp)
 
 윤곽을 위해, 현재 목표, 받아들여진 결정, 정확한 입력/출력 파일, 검증은 이미 하고 해결한 질문을 던졌습니다. 기억에 의존하지 않고 저장된 증거를 연결하십시오. [세션 및 지점](./sessions.md) 을 사용하여 분기/수출 및 [사용량](./usage.md) 을 위한 cumulative 토큰 볼륨.
 

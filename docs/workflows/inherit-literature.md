@@ -24,13 +24,13 @@ Download the <a href="/docs/examples/research-workflows/perovskite-stability.ris
 4. Inspect the import result. This example created **20** records, with **0** reused, skipped or failed records.
 5. Open the collection, select its records and use **Add to project** to link them to your project.
 
-![The completed import reports 20 created references](/img/open-science/research-workflows/perovskite-import-complete.png)
+![The completed import reports 20 created references](/img/open-science/research-workflows/perovskite-import-complete.webp)
 
 If your export has duplicates or incomplete identifiers, resolve those records before accepting a final inventory. Importing references does not attach their full text. Use the reference's **Add PDF** control for PDFs you already have, then compare the PDF title and DOI with its record. See [Library and citations](../guides/library.md).
 
 Reopen the collection and check the footer’s **20 references** count. Inspect the **Attachment** column before asking for a synthesis. In this example it is empty throughout, so the next step requests a bibliographic inventory rather than findings from full text.
 
-![The imported twenty-reference collection with its actual attachment state](/img/open-science/research-workflows/perovskite-collection.png)
+![The imported twenty-reference collection with its actual attachment state](/img/open-science/research-workflows/perovskite-collection.webp)
 
 ## Ask for a usable handover
 
@@ -53,11 +53,11 @@ For a larger collection, ask for an inventory before requesting a synthesis. Mis
 
 After the response completes, open **perovskite-handover.csv** from the generated files. In this example, the saved table has **20 rows and 6 columns**. All 20 DOIs match the imported set; no DOI or publication year is missing. Every full-text entry correctly says that no PDF is attached.
 
-![The saved 20-row perovskite handover inventory in Open-Science](/img/open-science/research-workflows/perovskite-handover-table.png)
+![The saved 20-row perovskite handover inventory in Open-Science](/img/open-science/research-workflows/perovskite-handover-table.webp)
 
 Open **perovskite-handover.md** and check that the reading sequence is useful to the next researcher. It suggests broad stability papers first, followed by mechanisms, materials interventions and analytical approaches. These are reading suggestions based on the collection, not verified conclusions about the experiments.
 
-![The saved reading plan keeps source availability and next actions visible](/img/open-science/research-workflows/perovskite-reading-plan.png)
+![The saved reading plan keeps source availability and next actions visible](/img/open-science/research-workflows/perovskite-reading-plan.webp)
 
 Use the file preview’s expand button to read the plan, then **Download** to retain it alongside the CSV. Check that every proposed next action is feasible from the supplied material. A suggested reading sequence is not evidence that the papers have been read.
 

@@ -37,7 +37,7 @@ last_update:
 3. 12 個のサンプル行を確認します。 全サンプル識別子と全数の列、ゼロカウント遺伝子、検出遺伝子、および中央正数を調べます。
 4. プレビューを閉じて、コンポーザーに戻ります。 リクエストに添付ファイルを保存してください。
 
-![適用で開くサンプルQCのテーブル](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![適用で開くサンプルQCのテーブル](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 プレビューが空であるか、列が切り離されていない場合は、HTMLのダウンロードページではなくCSVを添付してください。 区切り文字とプレビューコントロールの[テーブル](../tools/tables.md)を参照してください。
 

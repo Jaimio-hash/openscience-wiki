@@ -20,11 +20,11 @@ last_update:
 4. **Create** を選択し、**Add** を選択します。 ノートを入力し、**Save**を選択します。
 5. コンテンツとカウントを検証するためにカテゴリを離れ、再開します。
 
-![カテゴリー名、案内、オートリコール](/img/open-science/guides-walkthrough/17-memory-category.png)
+![カテゴリー名、案内、オートリコール](/img/open-science/guides-walkthrough/17-memory-category.webp)
 
 保存されたノートは「元の GEO カウント行列を変更しない」と読みます。 Entrez Gene IDをテキストとして保存し、遺伝子の長さをサンプルカウントから分離し、すべての派生テーブルで入力 SHA-256 を記録します。これは、分析結果に関する主張ではなく、作業慣行です。
 
-![記憶が消えている間手動で保存されたノート](/img/open-science/guides-walkthrough/18-memory-note.png)
+![記憶が消えている間手動で保存されたノート](/img/open-science/guides-walkthrough/18-memory-note.webp)
 
 | コントロール | 効果と境界 |
 | --- | --- |
@@ -47,7 +47,7 @@ last_update:
 3. 承認が必要な場合は、**Save memory**リクエストを調べます。 **Allow once**を選択する前に、提案されたコンテンツ、カテゴリ、およびプロジェクトスコープを確認してください。 合意された慣習を表さない場合は、**Deny** を選択します。
 4. カテゴリを再オープンします。 ノートが存在することを確認し、意図したテキストを持ち、意図したプロジェクトの下に表示されます。 **auto** ラベルはエージェント作成ノートを識別します。 条約が検証された計算は意味しません。
 
-![マニュアルのソース保存ノートと一緒にエージェント作成の報告規則](/img/open-science/non-workflow-completion/05-memory-note-category.png)
+![マニュアルのソース保存ノートと一緒にエージェント作成の報告規則](/img/open-science/non-workflow-completion/05-memory-note-category.webp)
 
 ## 新しい会話でリコールをチェックする {/* #check-recall-in-a-new-conversation */}
 
@@ -65,7 +65,7 @@ last_update:
 
 OpenCode がコンテキストポップアップで **Compact** を提供したら、それを選択して **Context compacted** を待ちます。 バックエンドがサマリーから続く間、元のメッセージは表示され続けることができます。 続行する前に、エージェントは保持された制約をリストし、要件とそれらを比較するように依頼します。 次の操作を開始する前に、欠落または誤った制約を再ステートします。 コンパクト化は、損失のない保持を保証するものではありません。 提供者の測定は、現地見積と異なることができます。
 
-![完全コンパクト化とプロバイダが報告したコンテキスト測定](/img/open-science/non-workflow-completion/11-context-compacted.png)
+![完全コンパクト化とプロバイダが報告したコンテキスト測定](/img/open-science/non-workflow-completion/11-context-compacted.webp)
 
 継続のために、現在の目標、承認された決定、正確な入力/出力ファイル、検証は既に完了し、未解決の質問を述べます。 保存された証拠を、メモリに依存して再構築するのではなくリンクします。 [セッションとブランチ](./sessions.md) は、分岐/エクスポートおよび [使用量](./usage.md) で、累積トークンのボリュームに使用します。
 

@@ -37,7 +37,7 @@ Confirme el nombre del proyecto por encima de la lista de sesiones. Estos son no
 3. Confirme doce hileras de muestra. Inspeccione el identificador de muestras completas y las columnas para los recuentos totales, genes de cuenta cero, genes detectados y el recuento positivo mediana.
 4. Cierra la vista previa para volver al compositor. Mantenga el apego en la solicitud.
 
-![Muestra de la tabla QC abierta en la aplicación](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![Muestra de la tabla QC abierta en la aplicación](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 Si la vista previa está vacía o las columnas no están separadas, confirme que adjunta la página de descarga CSV en lugar de una página de descarga HTML. Ver [Cuadros](../tools/tables.md) para los controles de delimitador y vista previa.
 

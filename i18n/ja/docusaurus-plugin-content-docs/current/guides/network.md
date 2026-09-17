@@ -33,7 +33,7 @@ last_update:
 5. 新しいドラフトの行を確認します。 **&#91;ホスト名&#93; を削除** を使用して、それをやり直します。
 6. **Save changes** を選択して、意図したリストを主張します。
 
-![Exact-hostname バリデーションはワイルドカードを拒否します。](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.png)
+![Exact-hostname バリデーションはワイルドカードを拒否します。](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.webp)
 
 スキーム、パス、ポート、ワイルドカード、IPアドレスがない場合、`data.example.org`などのホスト名を入力します。 **Enter a hostname only, without a scheme, path, port, or wildcard.** では、これらの部品を削除し、ホスト名を保存します。
 
@@ -89,7 +89,7 @@ deny network-outbound pypi.org:443
 | **Save** | その後のパッケージ操作のための設定を保存します。 |
 | **Cancel** | 草案を破棄 |
 
-![パッケージ ミラーおよびCA字の入力](/img/open-science/walkthrough-2026-09-08/56-package-mirror.png)
+![パッケージ ミラーおよびCA字の入力](/img/open-science/walkthrough-2026-09-08/56-package-mirror.webp)
 
 パッケージミラーはパッケージのソースを変更します。 選択したランタイムで、ミラーの必要なroot/index形式、保存、および小さなパッケージ操作を再試行してください。 モデルproviderプロキシ設定は別々です。
 

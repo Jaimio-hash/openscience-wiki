@@ -45,12 +45,12 @@ Open app search with the shortcut for your platform and enter a phrase, title or
 In the Windows desktop app, click inside the Composer draft before using **Ctrl+Z** to undo or **Ctrl+Shift+Z** to redo. Check the resulting text before continuing or sending. When using **Tab / Shift+Tab**, look for the focused control's outline, such as the attachment button below. Confirm focus again after opening a panel or changing a control's state; do not rely on a fixed number of keypresses.
 
 <Screenshot
-  src="/img/open-science/windows/keyboard-attachment-focus.png"
+  src="/img/open-science/windows/keyboard-attachment-focus.webp"
   alt="The attachment button has a visible keyboard-focus outline in the Windows Composer"
   width={1916}
   height={1014}
   windowBounds={[215, 850, 920, 150]}
-  href="/docs/img/open-science/windows/keyboard-attachment-focus.png"
+  href="/docs/img/open-science/windows/keyboard-attachment-focus.webp"
   linkLabel="Open the complete Windows screenshot showing attachment-button focus"
 />
 

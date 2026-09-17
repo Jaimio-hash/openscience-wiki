@@ -23,9 +23,9 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 **Версия примера:** Снимки экрана и результаты ниже получены в v0.30.1. В той конфигурации выбор одной лишь роли приводил к `Unknown skill`; Skill нужно было явно выбирать для каждого сообщения. v0.30.2 исправляет подготовку Skills, связанных со Specialist, в том числе в делегированных задачах. В новой версии сначала выберите Specialist и проверьте фактическую загрузку; при необходимости выберите Skill явно. Пример ещё не запускался повторно в v0.30.2. Старый обходной путь не является общим требованием, а наличие исправления не означает успешной повторной проверки этого примера.
 
-![Установка фармакометрии Specialist и ее возможности](/img/open-science/theoph-specialist/installed.jpg)
+![Установка фармакометрии Specialist и ее возможности](/img/open-science/theoph-specialist/installed.webp)
 
-![Выбор подлинного pkpd-моделирования Skill для текущего сообщения](/img/open-science/theoph-specialist/skill-selection.jpg)
+![Выбор подлинного pkpd-моделирования Skill для текущего сообщения](/img/open-science/theoph-specialist/skill-selection.webp)
 
 ## 2. Проверьте данные и нарисуйте кривые концентрации {/* #2-check-the-data-and-draw-the-concentration-curves */}
 
@@ -49,9 +49,9 @@ Do not install packages or delegate. Keep everything in English.
 
 Предпросмотр CSV показывает первые 100 строк; сохранённый входной файл содержит все 132 наблюдения.
 
-![Сохраненная таблица ввода в Open-Science](/img/open-science/theoph-specialist/input.jpg)
+![Сохраненная таблица ввода в Open-Science](/img/open-science/theoph-specialist/input.webp)
 
-![Выполненная базовая линия и двенадцать кривых концентрационного времени](/img/open-science/theoph-specialist/baseline.jpg)
+![Выполненная базовая линия и двенадцать кривых концентрационного времени](/img/open-science/theoph-specialist/baseline.webp)
 
 Справочные файлы: <ExampleDownload path="/examples/theoph/theoph-input.csv">Входной вход CSV</ExampleDownload>, <ExampleDownload path="/examples/theoph/theoph-concentration-time.png">концентрационный участок</ExampleDownload>, <ExampleDownload path="/examples/theoph/theoph-data-check.md">проверка данных</ExampleDownload>.
 
@@ -83,7 +83,7 @@ Do not install packages, change permissions or delegate. Use English.
 
 Откройте **theoph-nca-summary.csv** из сгенерированных файлов Для каждого из двенадцати предметов должна быть одна строка. Проверьте единицы и время последнего наблюдения, а также метрические значения.
 
-![Сохраненные метрики экспозиции на уровне субъекта](/img/open-science/theoph-specialist/results.jpg)
+![Сохраненные метрики экспозиции на уровне субъекта](/img/open-science/theoph-specialist/results.webp)
 
 | Тема | Cmax (мг/л) | Tmax (h) | AUC0-last (мг·ч/л) | Последнее наблюдение (h) |
 | --- | --- | --- | --- | --- |

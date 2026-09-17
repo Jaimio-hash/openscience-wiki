@@ -27,7 +27,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 | プロジェクト | そのプロジェクトにリンクされている参照 | 研究の質問に関連した伝記を保って下さい |
 | コレクション | ネストコレクションを含むテーマグループ | プロジェクトを横断した読み取りセットを再利用 |
 
-![実際のPRISMAコレクションの3つの受け入れられた紙](/img/open-science/guides-walkthrough/51-library-collection.png)
+![実際のPRISMAコレクションの3つの受け入れられた紙](/img/open-science/guides-walkthrough/51-library-collection.webp)
 
 ## レコードの追加またはインポート {/* #add-or-import-a-record */}
 
@@ -60,11 +60,11 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 バッチは**Pending**、**Reading…**、**Ready**、**Importing…**、**Completed**、**Failed**または**Skipped**を示すことができます。 選択、メタデータの読みやインポート完了は別々の状態です。 アプリケーションが **PDF upload cancelled. The reference was kept.** を報告する場合、保存されたレコードの添付ファイルを確認してください。 アップロードをキャンセルすると、伝記エントリを削除しませんでした。
 
-![インポートのための2つの実際のPRISMA PDF](/img/open-science/v0.27.0/02-pdf-batch-ready.png)
+![インポートのための2つの実際のPRISMA PDF](/img/open-science/v0.27.0/02-pdf-batch-ready.webp)
 
 **Reuse existing reference**では、タイトルやDOIを抽出したPDFは、まだ別のレコードを作成することはできません。 インポート後、各用紙を開き、タイトルとDOIを確認します。 [重複をマージする](#resolve-duplicates-and-recover-references)以前の正しい不一致。 **Completed**は輸入を、正確な同一証明確認しません確認します。
 
-![完全なバッチとファイルごとの結果](/img/open-science/v0.27.0/03-pdf-batch-completed.png)
+![完全なバッチとファイルごとの結果](/img/open-science/v0.27.0/03-pdf-batch-completed.webp)
 
 
 </ToolOperationGroup>
@@ -76,7 +76,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 **Stop** リクエストは、現在の項目を終了することを可能にします。 すべての行を調べる: **Completed** アイテムは保持され、再び選択できません。 残りの**Ready**行を選択し、**Import selected**を使用して続行します。 失敗が**Retry unfinished**を暴露した場合, 再試行する前に、報告された原因を修正し、完了したレコードが複製されていないことを確認します.
 
-![PDFのインポートを停止すると、完了した行が保持されます。](/img/open-science/local-todo-batch/09-pdf-import-stopped.png)
+![PDFのインポートを停止すると、完了した行が保持されます。](/img/open-science/local-todo-batch/09-pdf-import-stopped.webp)
 
 **The reference was kept. Retry to finish adding its PDF.**は、伝記エントリが保存されたことを意味しますが、その添付ファイルは未完成です。 元の PDF が選択された場所にまだ利用でき、通常開くことを確認し、**Retry unfinished** を選択します。 再試行後、目的地のコレクションに戻り、PDFを開き、コンテンツを確認します。 結果が確認できない場合は、別のインポートを開始する前にライブラリを調べてください。
 
@@ -100,9 +100,9 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 **Import references** をクリックし、**Import complete** を待ち、作成/再利用/スキャッピング/失敗を調べて、**Done** を選択します。 レコードの再開: インポートのカウントだけは正しいメタデータを確立しません。 空のフィールドを充填すると、全ジャーナルのタイトルを交換することなく、識別子と省略されたジャーナル名を追加できます。
 
-![BibTeX は、明示的な重複ポリシーでインポートします](/img/open-science/local-todo-batch/02-bibtex-import.png)
+![BibTeX は、明示的な重複ポリシーでインポートします](/img/open-science/local-todo-batch/02-bibtex-import.webp)
 
-![NBIBの輸入は欠けているbibliographic分野を満たします](/img/open-science/local-todo-batch/05-nbib-fill-fields.png)
+![NBIBの輸入は欠けているbibliographic分野を満たします](/img/open-science/local-todo-batch/05-nbib-fill-fields.webp)
 
 
 </ToolOperationGroup>
@@ -113,7 +113,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 候補者のタイトルまたは**View details**を開きます。 プロバイダー、ソースリンク、DOI/その他識別子を調べ、発行者と年、著者の注文と出版物を比較します。 **Accept**はライブラリにそれを促進します。 **Dismiss** は、レビューキューから削除します。 バッチアクション前の行選択をチェックします。
 
-![3つの本物PRISMAの候補者はレビューを待っています](/img/open-science/prisma-walkthrough/04-inbox-three-papers.png)
+![3つの本物PRISMAの候補者はレビューを待っています](/img/open-science/prisma-walkthrough/04-inbox-three-papers.webp)
 
 この例では、個別に3つの候補が受け入れられ、受信トレイはクリアになりました。 プロバイダーのマッチは、バイブリグラフィカルなバリデーションを完了しない、スタートレコードです。 2020文の出版物年は**2021**です。 2つの2009紙は、異なるDOIと著者リストを持っています。
 
@@ -121,7 +121,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 参照を開き、**More actions → Edit metadata** を開きます。 **Complete metadata** を使用する前に現在の値を確認します。これは、純粋にローカル編集ではなく、ルックアップを実行します。
 
-![保存された組織権限フィールドを再オープン](/img/open-science/v0.27.0/04-organization-author.png)
+![保存された組織権限フィールドを再オープン](/img/open-science/v0.27.0/04-organization-author.webp)
 
 | フィールド/コントロール | 入力および効果 |
 | --- | --- |
@@ -144,7 +144,7 @@ import ToolOperationGroup from '@site/src/components/ToolOperationGroup';
 
 **PRISMAグループ**を追加するには、**Add creator → Creator role: Author → Name type: Organization**を選択し、フルネームと**Save**を入力します。 記録を再開し、組織が4人の個人的な作者に従うことを確認して下さい。 生成された引用を [出版社の著者リスト](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097) と比較します。
 
-![APA 参照は組織の作者を維持します](/img/open-science/v0.27.0/05-organization-citation.png)
+![APA 参照は組織の作者を維持します](/img/open-science/v0.27.0/05-organization-citation.webp)
 
 v0.30.2 は、PubMed の作者の名前の解析を修正しました。例えば、姓、イニシャル、サフィックスなどです。 メタデータをインポートまたはコンパイルする際に、クリエイターのフィールドを調べ、リンクされたソースに対する生成された引用を調べます。 既に保存したメタデータをライブラリに書き換える更新をインストールすることを想定しないでください。
 
@@ -176,7 +176,7 @@ v0.30.2 は、PubMed の作者の名前の解析を修正しました。例え�
 
 **Add attachment**がソースが見つかったら、公開されているPDFをパブリッシャーからダウンロードし、同じレコードで**Add PDF**を使用します。 付属のPDFを開き、そのタイトルとDOIをパブリッシャーレコードと比較します。 この例では、**プレビューprisma-2020-statement.pdf** は、PRISMA 2020 紙: **806.1 KBと15ページ** のマッチングを示しています。
 
-![著名な出版社 PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.png)
+![著名な出版社 PDF](/img/open-science/prisma-walkthrough/10-publisher-pdf-preview.webp)
 
 ソース結果は保存された添付ファイルではありません。 付属のPDFはエージェントの読み込みの証明ではありません。 **Read with agent** は、その後のリクエストに対してコンテキストを供給します。 Composer `@` リファレンスは、すべての論文のフルテキストの自動含入ではなく、コレクションの助成金検索範囲を、正確なレコード、プロジェクトライブラリ、またはコレクションを選ぶことができます。 PDF読書制御は[プレビュー](previews.md)にあります。
 
@@ -194,11 +194,11 @@ v0.30.2 は、PubMed の作者の名前の解析を修正しました。例え�
 5. ダウンロードは一時停止と**Continue download**にも対応しています。 最終的な**追加 / 失敗 / スキップ**の状態を点検し、首尾よく加えられた付属品を再開して下さい。
 6. 不要なレビュー準備タスクを破棄するには、**Background tasks**で**Remove task**を使用します。 削除後、タスクがなくなり、その参照と添付ファイルがまだ開いていることを確認します。 タスクを削除しても削除しません。
 
-![保留記録を保持する現在の項目の後に一時停止を検索する](/img/open-science/priority-completion/14-literature-batch-paused.png)
+![保留記録を保持する現在の項目の後に一時停止を検索する](/img/open-science/priority-completion/14-literature-batch-paused.webp)
 
 悪用された検索は、そのチェックとペンディングレコードを保持します。 タスクを継続または再開した後、最終カウントと各アイテムの結果を調べます。 PDF 添付ファイルの表示と成功は別々の結果です。
 
-![背景タスクから完了した5レコード検索を再開](/img/open-science/priority-completion/15-literature-batch-resumed.png)
+![背景タスクから完了した5レコード検索を再開](/img/open-science/priority-completion/15-literature-batch-resumed.webp)
 
 
 </ToolOperationGroup>
@@ -230,7 +230,7 @@ PDF ソースが `198.18.x.x` などの予約アドレスに解決した場合�
 
 **Library → Settings → Import CSL**では、[CSLスタイルリポジトリ](https://github.com/citation-style-language/styles/blob/master/plos.csl)から独立した`plos.csl`ファイルを選択します。 この例では、**Imported styles** はゼロから1つに増加し、**公立科学図書館** を示しました。 PRISMA レコードの **Citation** パネルに戻り、**Citation style** でそのスタイルを選択します。 番号付き参照と`[1]`のテキスト引用をチェックします。 スタイル管理プレビューでは、サンプル記事を使用します。 引用をコピーする前に、実際の記録を調べてください。
 
-![実際のPRISMAレコードに適用されるPLOSスタイルをインポート](/img/open-science/v0.27.0/06-imported-csl-citation.png)
+![実際のPRISMAレコードに適用されるPLOSスタイルをインポート](/img/open-science/v0.27.0/06-imported-csl-citation.webp)
 
 
 </ToolOperationGroup>
@@ -251,7 +251,7 @@ PDF ソースが `198.18.x.x` などの予約アドレスに解決した場合�
 | BibTeXをコピー | サインイン `@article` 括弧で囲まれた組織の作者へのエントリ |
 | RISをコピー | とりあえず `TY  - JOUR` 著者、タイトル、年、DOI フィールドでレコード |
 
-![実際のPRISMAレコードのシテーションコピーコントロール](/img/open-science/local-todo-batch/01-citation-copy.png)
+![実際のPRISMAレコードのシテーションコピーコントロール](/img/open-science/local-todo-batch/01-citation-copy.webp)
 
 ファイルのシテーションを閉じ、必要なテーブル行を選択し、**Export → BibTeX**または**RIS**を選択します。 システム保存ダイアログの場所を選択し、**Saved**を待ちます。 これらのファイルは、PDFアタッチメントバンドルではなく、バイブリグラフレコードが含まれています。 保存したファイルを**Reuse existing reference**でテストコレクションにインポートし、マッチ数を確認します。 PRISMAファイルがエクスポートされ、別のレコードを作成せずに既存のDOIを再使用しました。
 
@@ -275,11 +275,11 @@ BibTeX は、ここの年と月を格納するので、その往復は `2009-7` 
 4. **After merging** とその添付ファイル、コレクション、プロジェクト数を読みます。 それから**Merge references**を選んで下さい; **Cancel**はレコードを別々に残します。
 5. 生存者を再オープンし、メタデータ、リンク、PDF コンテンツを検証します。 **Merged duplicate** としてゴミ箱にマージアウトレコードが現れます。
 
-![生存者と競合する出版物の日付を比較する](/img/open-science/local-todo-batch/03-merge-bibtex.png)
+![生存者と競合する出版物の日付を比較する](/img/open-science/local-todo-batch/03-merge-bibtex.webp)
 
 そのタイトルの代わりに抽出されたファイル名を持つPDFは、重複したグループを入力することはできません。 発行者レコードを使用してタイトルとDOIを修正し、マッチンググループを確認します。 合併後、保持されたPDFが開き、コレクション/プロジェクト協会がまだ存在していることを確認します。
 
-![合併されたレコードは、PDFおよび組織リンクを保持します](/img/open-science/local-todo-batch/06-merged-attachment-links.png)
+![合併されたレコードは、PDFおよび組織リンクを保持します](/img/open-science/local-todo-batch/06-merged-attachment-links.webp)
 
 
 </ToolOperationGroup>
@@ -291,7 +291,7 @@ BibTeX は、ここの年と月を格納するので、その往復は `2009-7` 
 
 行の **More actions → Move to Trash** を使用します。 アクティブなライブラリ、プロジェクト、およびコレクションビューから消えます。 **Trash**では、タイトルまたは識別子で検索し、行メニューを開き、**Restore**を選択します。 編集、プレビュー、またはエクスポート前の復元: これらの制御はゴミ箱で無効になっています。 元のプロジェクトとコレクションを再オープンし、復元されたリンクを確認します。 この例では、PRISMAレコードの復元はPDFと3つのリンクをすべて保持しました。
 
-![ゴミ箱のメニューから参照を復元する](/img/open-science/local-todo-batch/07-trash-restore.png)
+![ゴミ箱のメニューから参照を復元する](/img/open-science/local-todo-batch/07-trash-restore.webp)
 
 
 </ToolOperationGroup>
@@ -305,7 +305,7 @@ BibTeX は、ここの年と月を格納するので、その往復は `2009-7` 
 
 削除後、選択したレコードがゴミ箱を残し、保持された参照が添付ファイルでまだ開いていることを確認してください。 収集リンクを削除し、記録をゴミ箱に移動し、永久に削除すると、異なるスコープがあります。
 
-![精密な永久削除の規模を読んで下さい](/img/open-science/local-todo-batch/08-reference-delete-scope.png)
+![精密な永久削除の規模を読んで下さい](/img/open-science/local-todo-batch/08-reference-delete-scope.webp)
 
 
 </ToolOperationGroup>

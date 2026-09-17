@@ -95,7 +95,7 @@ Open-Science을 통해 실행하려면 **Your files → Grant folder…**을 사
 
 ### 설계한 순서 확인 {/* #check-the-designed-sequences */}
 
-![로컬 CPU 실행 및 재개된 비교 보고서 완료](/img/open-science/local-todo-batch/42-cpu-model-comparison.png)
+![로컬 CPU 실행 및 재개된 비교 보고서 완료](/img/open-science/local-todo-batch/42-cpu-model-comparison.webp)
 
 이 예제에서 저장된 출력은 다음과 같습니다.
 

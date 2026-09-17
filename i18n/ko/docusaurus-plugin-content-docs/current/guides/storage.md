@@ -10,7 +10,7 @@ last_update:
 
 ## 디스크 사용법을 읽고 새로 고침 {/* #read-and-refresh-disk-usage */}
 
-![연구 예 후 실제 관리 된 저장](/img/open-science/local-acceptance/storage-installed-location.png)
+![연구 예 후 실제 관리 된 저장](/img/open-science/local-acceptance/storage-installed-location.webp)
 
 **Data location**을 백업하거나 누락 된 파일을 진단하기 전에 읽어보십시오. 이것은 프로젝트에 부여 된 외부 소스 폴더에서 분리 된 앱의 관리 루트입니다. **Refresh** rescans 사용법; 측정을 비교하기 전에 마지막 스캔 시간을 확인합니다.
 
@@ -43,7 +43,7 @@ Disk 사용은 파일 및 실행 시간과 함께 변경됩니다. 관리 제어
 4. 소스, 목적지, 사용 가능한 공간 및 재건 통지를 확인하십시오.
 5. **Change location**는 유효한 이동을 제출합니다; **Cancel**는 현재 위치를 변경하지 않았습니다.
 
-![runtime rebuild 필요조건을 가진 이전 모양](/img/open-science/local-acceptance/storage-destination-form.png)
+![runtime rebuild 필요조건을 가진 이전 모양](/img/open-science/local-acceptance/storage-destination-form.webp)
 
 앱은 기존 연구 데이터를 이동합니다. Python/R 환경은 **다시 시작 후에 재건해, copied**입니다. 공유 런타임 패키지 캐시는 오프라인 재건을 지원하기 위해 복사되지만 pip- 또는 CRAN-only 패키지는 복원되지 않습니다. 추가 재건 공간은 믿을 수 없을 것으로 예측할 수 없습니다. 실제 이동 전에 환경/패키지 필요조건을 기록하고 필요한 가동 시간을 후에 시험하십시오.
 
@@ -65,7 +65,7 @@ Disk 사용은 파일 및 실행 시간과 함께 변경됩니다. 관리 제어
 
 반환 후, 기존 프로젝트, 입력 및 저장된 보고서를 다시 엽니다. 관리 실행 시간을 확인 한 다음 작은 계산을 실행하고 새로운 결과를 저장합니다. 기본 데이터 위치가 사용중인지 확인하기 위해 다시 엽니다.
 
-![저장 R 결과가 기본 위치로 돌아가기 후에 다시 열었습니다.](/img/open-science/local-acceptance/r-default-chart.png)
+![저장 R 결과가 기본 위치로 돌아가기 후에 다시 열었습니다.](/img/open-science/local-acceptance/r-default-chart.webp)
 
 **OpenScience라는 다른 폴더는 여기에 있습니다. 다른 위치를 선택하십시오.**이 나타나면 앱 블록이 겹쳐집니다. 그 디렉토리를 취소하고 보존합니다. 분쟁 해결하기 전에 소유권, 내용 및 백업을 설치하십시오. 같은 이름의 폴더를 삭제하지 마십시오. 목적지 유효성 통과 후 재입국 만.
 
@@ -78,7 +78,7 @@ Disk 사용은 파일 및 실행 시간과 함께 변경됩니다. 관리 제어
 3. **Finish move**는 기존 사본을 완료하려고 시도합니다. **Discard copy**은 원본 위치를 유지하면서 완성된 복사본을 포기합니다. 확인 범위를 먼저 읽으십시오.
 4. **Conversation storage needs attention**이 나타나면, 불완전한 움직임을 해결하고 **Retry**을 선택하고, 원래 프로젝트와 보고서를 다시 열 수 있습니다.
 
-![unfinished 저장 이동을 위한 회복 선택](/img/open-science/local-todo-batch/46-storage-recovery-choice.png)
+![unfinished 저장 이동을 위한 회복 선택](/img/open-science/local-todo-batch/46-storage-recovery-choice.webp)
 
 반복적으로 실패한 마지막 스위치를 재시동하는 경우에, 활동적인 일을 끝내고, 종료하고 앱을 재개하고, 그 후에 움직임을 재시동하십시오. 오류가 발생하면 원래 위치를 유지하고 다른 변경을하기 전에 실패 세부 정보를 수집합니다.
 
@@ -104,7 +104,7 @@ Disk 사용은 파일 및 실행 시간과 함께 변경됩니다. 관리 제어
 4. **Restore project**을 선택하십시오.
 5. 프로젝트, 대화 및 저장된 보고서를 다시 엽니다.
 
-![아카이브 GSE60450 프로젝트 관리](/img/open-science/local-todo-batch/34-archived-project-manage.png)
+![아카이브 GSE60450 프로젝트 관리](/img/open-science/local-todo-batch/34-archived-project-manage.webp)
 
 저장 된 보고서와 복원 후의 개정을 엽니다. 프로젝트 구성; 분석이 중단되지 않거나 보고서의 버전 기록을 제거하지 않습니다.
 
@@ -114,7 +114,7 @@ Disk 사용은 파일 및 실행 시간과 함께 변경됩니다. 관리 제어
 
 **Delete project**은 영구 삭제 확인을 엽니다. 확인하기 전에 범위를 읽으십시오: 관리된 artifacts 및 업로드는 삭제되지 않는 외부 작업 폴더 파일에서 분리됩니다. 작업 및 커널이 중지되고 관리되는 세션 작업 공간은 저장소에 남아 있습니다. 건축과 deleting에는 다른 outcomes가 있습니다.
 
-![별도의 빈 프로젝트를 위한 Deletion 범위](/img/open-science/local-todo-batch/35-disposable-project-delete.png)
+![별도의 빈 프로젝트를 위한 Deletion 범위](/img/open-science/local-todo-batch/35-disposable-project-delete.webp)
 
 삭제 흐름을 학습하는 경우 빈 일회용 프로젝트를 사용합니다. 연구가 포함 된 프로젝트를 삭제하기 전에 확인의 영향을받는 레코드를 검사합니다.
 

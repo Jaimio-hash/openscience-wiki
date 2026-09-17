@@ -12,7 +12,7 @@ last_update:
 
 **Settings → Agent**을 엽니다. 페이지는 **Available**에서 **Installed**을 분리합니다. 모든 것을 바꾸기 전에 설치된 카드에 버전, 경로 및 **Active** 감적을 읽으십시오.
 
-![앱 관리 Codex 탐지](/img/open-science/local-acceptance/agent-codex-active.png)
+![앱 관리 Codex 탐지](/img/open-science/local-acceptance/agent-codex-active.webp)
 
 | 통제/status | 의미와 행동 |
 | --- | --- |
@@ -63,11 +63,11 @@ Codex의 경우, 기본 런타임 및 ACP 어댑터는 호환 쌍으로 탐지�
 4. **Install OpenCode → App-managed download (recommended)**을 선택하십시오. **Installed** 카드의 경우 **Switch**을 선택하고 확인하십시오.
 5. **Active**, 런타임 경로 및 호환 모델 선택 확인. 백엔드 제거는 모델 공급자를 구성하지 않습니다.
 
-![앱 관리 OpenCode 제거의 범위](/img/open-science/priority-completion/01-opencode-uninstall.png)
+![앱 관리 OpenCode 제거의 범위](/img/open-science/priority-completion/01-opencode-uninstall.webp)
 
 백엔드를 제거하기 전에, 다른 유효한 배경으로 전환하십시오; 활성 백엔드는 이 컨트롤을 통해 제거 할 수 없습니다. 재설치, 재검출 및 활성화 후 기존 프로젝트를 열고 연결을 확인하기 위해 작은 요청을 실행합니다.
 
-![OpenCode는 다시 설치하고 선정했습니다](/img/open-science/priority-completion/03-opencode-reinstalled.png)
+![OpenCode는 다시 설치하고 선정했습니다](/img/open-science/priority-completion/03-opencode-reinstalled.webp)
 
 작업이 비활성화되면 진행중인 다른 설치 / 스위치를 확인하고 명시된 prerequisite 오류를 확인하십시오. 감지가 성공하지만 요청이 실패하면 모델 인증 및 프레임 워크 / API 호환성을 별도로 검사합니다.
 

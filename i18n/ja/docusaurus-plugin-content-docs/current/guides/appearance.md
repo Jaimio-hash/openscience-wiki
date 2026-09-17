@@ -23,13 +23,13 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![一般的な外観設定](/img/open-science/v0.27.0/07-general-appearance.png)
+![一般的な外観設定](/img/open-science/v0.27.0/07-general-appearance.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-<Screenshot src="/img/open-science/windows/general-settings.png" alt="Windowsのテーマと言語制御全般の設定" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.png" linkLabel="完全なWindowsの一般的な設定のスクリーンショットを開く" />
+<Screenshot src="/img/open-science/windows/general-settings.webp" alt="Windowsのテーマと言語制御全般の設定" width={1920} height={1017} windowBounds={[480, 165, 960, 690]} href="/docs/img/open-science/windows/general-settings.webp" linkLabel="完全なWindowsの一般的な設定のスクリーンショットを開く" />
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 同じレポートは、より大きなスケールで読みやすくなります。 水平スクロールバーを使用して、現在のテーブルビューポートの外側の列を見ることができます。 表示スケールは、保存されたデータではなく、ビューを変更します。
 
-![125でのOpen-Scienceは、テーブルプレビューの水平スクロールバーでスケーリングする割合](/img/open-science/windows/app-scale-125.png)
+![125でのOpen-Scienceは、テーブルプレビューの水平スクロールバーでスケーリングする割合](/img/open-science/windows/app-scale-125.webp)
 
 </PlatformContent>
 
@@ -104,7 +104,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 <PlatformContent platform="macos">
 
-![タスクの詳細を隠した英語システム完了アラート](/img/open-science/priority-completion/07-system-completion-notification.png)
+![タスクの詳細を隠した英語システム完了アラート](/img/open-science/priority-completion/07-system-completion-notification.webp)
 
 </PlatformContent>
 **Show task content in system notifications**をオフにして、一般的なアラートを使用します。 完了または承認アラートを選択して、会話を再開します。 アプリ内の承認に対応。

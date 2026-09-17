@@ -111,7 +111,7 @@ HTTP 상태는 모델 공급자, Connector 서비스, 로컬 브라우저 서비
 
 시작 화면만 **Quit**을 제공한다면, 앱을 종료하고, 보고한 원인을 해결하고 다시 시작하십시오. **Retry**을 사용하시면 페이지가 제공될 때만 사용할 수 있습니다. 복구 후, 예상된 프로젝트와 파일을 다시 열 수 있습니다.
 
-![데이터베이스가 열릴 때의 시작지도](/img/open-science/local-acceptance/startup-database-error.png)
+![데이터베이스가 열릴 때의 시작지도](/img/open-science/local-acceptance/startup-database-error.webp)
 
 ### 복구 메시지 {/* #recovery-messages */}
 
@@ -197,7 +197,7 @@ Relevant log excerpt or screenshot:
 4. **Open GitHub issue**을 활성화하려면 public-sharing acknowledgment를 확인하십시오. 오류 텍스트 편집은 다시 수정 된 내용을 검토하고 acknowledging해야합니다.
 5. GitHub 양식을 열고, 사전 작성된 필드를 검사하고, 유용한 재생산 단계를 추가하고, 준비 할 때 제출하십시오. 보고서를 열어 혼자서 문제를 제출하지 않습니다.
 
-![편집 가능한 오류 세부 사항 및 public-sharing 확인](/img/open-science/sept11-completion/report-preview.png)
+![편집 가능한 오류 세부 사항 및 public-sharing 확인](/img/open-science/sept11-completion/report-preview.webp)
 
 ## 자주 묻는 질문 {/* #common-questions */}
 

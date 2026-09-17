@@ -29,11 +29,11 @@ read and flag unavailable figure inspection. Do not invent measurements.
 Save and reopen the draft. Do not overwrite it in later revisions.
 ```
 
-![Источник PDF-файлов и первоначальный запрос на брифинг в Open-Science](/img/open-science/workflow-extensions/report-input.png)
+![Источник PDF-файлов и первоначальный запрос на брифинг в Open-Science](/img/open-science/workflow-extensions/report-input.webp)
 
 Утвердить соответствующий файл считывает при запросе. Откройте **catalyst-brief-v1.md** от **Generated** или **Files** и прочитайте сохраненный черновик. Ответ в разговоре не заменяет проверку фактического файла.
 
-![Сохраненный первый проект перед редакционной редакцией](/img/open-science/workflow-extensions/report-draft.png)
+![Сохраненный первый проект перед редакционной редакцией](/img/open-science/workflow-extensions/report-draft.webp)
 
 ## 2. Сделайте обратную связь действенной {/* #2-make-the-feedback-actionable */}
 
@@ -64,7 +64,7 @@ Reopen both saved files and check them against the comments. Use English.
 
 Открыть **catalyst-brief-v2.md**. В ходе этого запуска был подготовлен **Резюме 117-слова**, двухрядная таблица рабочих точек и три маркированных последующих предложения.
 
-![Пересмотренное резюме и таблица, отделяющие избирательность от долговечности](/img/open-science/workflow-extensions/report-revised.png)
+![Пересмотренное резюме и таблица, отделяющие избирательность от долговечности](/img/open-science/workflow-extensions/report-revised.webp)
 
 Ключевое отличие **98.9% CO Фарадная эффективность при −1.2 V против RHE** от отдельного **Тест на удержание тока 20 h при −0.8 V против RHE**. Не объединяйте их в 98.9% для 20 h. Main PDF p. 6, Фиг. 6b-d и p. 7, Фиг. 6е, выявить соответствующие доказательства; П. 8 описывает измерения H-клеток. Дополнительный PDF pp. 47-48, рис. 51-52, касается селективности водорода и проверки продуктов ЯМР.
 
@@ -74,7 +74,7 @@ Reopen both saved files and check them against the comments. Use English.
 
 Открыть **catalyst-brief-v2-response.md**. Найдите C1-C6, откройте каждый названный пересмотренный раздел и подтвердите, что он действительно содержит обещанное изменение. Одного лишь «решенного» ярлыка недостаточно.
 
-![Сохраненная таблица ответов отображает все шесть комментариев к пересмотренным разделам.](/img/open-science/workflow-extensions/report-response.png)
+![Сохраненная таблица ответов отображает все шесть комментариев к пересмотренным разделам.](/img/open-science/workflow-extensions/report-response.webp)
 
 Проверяйте, что предложения остаются маркированными как предложения, DOI остается **10.1038/s41467-019-12510-0**, а **catalyst-brief-v1.md** все еще существует без изменений. В ответе должны быть указаны любые доказательства, которые остаются недоступными.
 

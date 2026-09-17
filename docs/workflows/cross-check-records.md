@@ -25,7 +25,7 @@ The NASA file starts with a descriptive line before its header and uses `***` fo
 
 Open a project and attach both CSVs with **+ → Attach files**. In **Settings → Runtimes**, ensure Python is **Ready** and enabled. This run used Python 3.12.14, NumPy 2.5.3, pandas 2.3.3, Matplotlib 3.11.1 and Pillow 12.3.0.
 
-![The two source CSVs attached to the comparison request](/img/open-science/workflow-extensions/temperature-input.png)
+![The two source CSVs attached to the comparison request](/img/open-science/workflow-extensions/temperature-input.webp)
 
 ## 2. Ask for alignment before interpretation
 
@@ -52,7 +52,7 @@ Inspect the proposed file reads and Python code before approving. Open **Noteboo
 
 Open **temperature-aligned.csv**. The recorded comparison contains **45 shared years**. Each source has all **30** annual point estimates required for its 1991–2020 reference mean; no missing annual value was filled with zero.
 
-![The saved year-aligned values and differences](/img/open-science/workflow-extensions/temperature-table.png)
+![The saved year-aligned values and differences](/img/open-science/workflow-extensions/temperature-table.webp)
 
 The subtracted means are **0.61266667 °C** for NASA and **0.53799554 °C** for HadCRUT. Subtract each dataset's own mean, not a single offset from both. Check the unit, year and subtraction direction before comparing numerical differences.
 
@@ -60,7 +60,7 @@ The subtracted means are **0.61266667 °C** for NASA and **0.53799554 °C** for 
 
 Open **temperature-comparison.png**. The first panel retains the different original baselines; the second compares the two series after common-period rebasing.
 
-![Original-baseline and common-baseline temperature curves in Open-Science](/img/open-science/workflow-extensions/temperature-plot.png)
+![Original-baseline and common-baseline temperature curves in Open-Science](/img/open-science/workflow-extensions/temperature-plot.webp)
 
 | Recorded result, NASA minus HadCRUT | Value |
 | --- | --- |
@@ -74,7 +74,7 @@ The figures are results for these downloaded snapshots. Remaining differences ca
 
 Open **temperature-crosscheck.md** and compare its source definitions and metrics with the CSV and code. The table retains the original HadCRUT confidence limits and their mechanically shifted values, but the comparison does **not** propagate uncertainty in the estimated baseline or between-source dependence.
 
-![The saved report documents the actual metrics and limitations](/img/open-science/workflow-extensions/temperature-report.png)
+![The saved report documents the actual metrics and limitations](/img/open-science/workflow-extensions/temperature-report.webp)
 
 Download the <ExampleDownload path="/examples/workflow-extensions/temperature-aligned.csv">aligned CSV</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/temperature-comparison.png">figure</ExampleDownload>, <ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.py">Python script</ExampleDownload> and <ExampleDownload path="/examples/workflow-extensions/temperature-crosscheck.md">report</ExampleDownload>. With the two input files available, rerun in a Python environment containing the listed libraries:
 

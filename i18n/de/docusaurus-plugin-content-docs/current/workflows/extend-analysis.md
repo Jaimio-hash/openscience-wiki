@@ -23,9 +23,9 @@ Die Eingabe ist R öffentlichen [Theoph-Datensatz](https://www.stat.ethz.ch/R-ma
 
 **Version des Beispiels:** Die folgenden Screenshots und Ergebnisse stammen aus v0.30.1. Dort führte die Auswahl der Rolle allein zu `Unknown skill`; der Skill musste für jede Nachricht ausdrücklich ausgewählt werden. v0.30.2 korrigiert die Vorbereitung der an Specialists gebundenen Skills, auch für delegierte Aufgaben. Wählen Sie in der neuen Version zunächst den Specialist und prüfen Sie das tatsächliche Laden. Wählen Sie den Skill bei Bedarf ausdrücklich aus. Dieses Beispiel wurde noch nicht mit v0.30.2 wiederholt. Der alte Umweg ist keine allgemeine Voraussetzung; die Korrektur belegt auch keinen erfolgreichen erneuten Test dieses Beispiels.
 
-![Installierte Pharmakometik Specialist und seine Fähigkeiten](/img/open-science/theoph-specialist/installed.jpg)
+![Installierte Pharmakometik Specialist und seine Fähigkeiten](/img/open-science/theoph-specialist/installed.webp)
 
-![Auswählen der echten pkpd-Modellierung Skill für die aktuelle Nachricht](/img/open-science/theoph-specialist/skill-selection.jpg)
+![Auswählen der echten pkpd-Modellierung Skill für die aktuelle Nachricht](/img/open-science/theoph-specialist/skill-selection.webp)
 
 ## 2. Überprüfen Sie die Daten und zeichnen Sie die Konzentrationskurven {/* #2-check-the-data-and-draw-the-concentration-curves */}
 
@@ -49,9 +49,9 @@ Do not install packages or delegate. Keep everything in English.
 
 Die CSV-Vorschau zeigt die ersten 100 Zeilen; die gespeicherte Eingabedatei enthält alle 132 Beobachtungen.
 
-![Die gespeicherte Eingabetabelle in Open-Science](/img/open-science/theoph-specialist/input.jpg)
+![Die gespeicherte Eingabetabelle in Open-Science](/img/open-science/theoph-specialist/input.webp)
 
-![Die ausgeführte Baseline und zwölf Konzentrations-Zeit-Kurven](/img/open-science/theoph-specialist/baseline.jpg)
+![Die ausgeführte Baseline und zwölf Konzentrations-Zeit-Kurven](/img/open-science/theoph-specialist/baseline.webp)
 
 Referenzdateien: <ExampleDownload path="/examples/theoph/theoph-input.csv">Eingang CSV</ExampleDownload>, <ExampleDownload path="/examples/theoph/theoph-concentration-time.png">Konzentrationskurve</ExampleDownload>, <ExampleDownload path="/examples/theoph/theoph-data-check.md">Datenkontrolle</ExampleDownload>.
 
@@ -83,7 +83,7 @@ Genehmigen Sie die Datei liest und R Berechnung nach der Inspektion. Wenn eine u
 
 Öffnen Sie **theoph-nca-summary.csv** aus den generierten Dateien. Es sollte eine Reihe für jedes der zwölf Themen geben. Überprüfen Sie die Einheiten und die letzte Beobachtungszeit sowie die metrischen Werte.
 
-![Gespeicherte Maßzahlen für die Exposition auf der Ebene des Subjekts](/img/open-science/theoph-specialist/results.jpg)
+![Gespeicherte Maßzahlen für die Exposition auf der Ebene des Subjekts](/img/open-science/theoph-specialist/results.webp)
 
 | Thema | Cmax (mg/l) | Tmax (h) | AUC0–last (mg·h/L) | Letzte Beobachtung (h) |
 | --- | --- | --- | --- | --- |

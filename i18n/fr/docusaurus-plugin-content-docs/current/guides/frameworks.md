@@ -12,7 +12,7 @@ Choisissez un framework Agent pour exécuter les conversations et les outils. Ap
 
 Ouvrez **Settings → Agent**. La page sépare **Installed** de **Available**. Lisez la version, le chemin et le marqueur **Active** sur la carte installée avant de changer quoi que ce soit.
 
-![Détecté Codex géré par une application](/img/open-science/local-acceptance/agent-codex-active.png)
+![Détecté Codex géré par une application](/img/open-science/local-acceptance/agent-codex-active.webp)
 
 | Contrôle/statut | Signification et action |
 | --- | --- |
@@ -63,11 +63,11 @@ Utiliser le flux de réparation de l'application pour un temps d'exécution gér
 4. Choisissez **Install OpenCode → App-managed download (recommended)**. Attendez la carte **Installed**, puis sélectionnez-la et validez **Switch**.
 5. Vérifiez **Active**, le chemin d'exécution et la sélection du modèle compatible. Réinstaller le moteur ne configure pas un fournisseur de modèle pour lui.
 
-![Portée de l'application gérée OpenCode désinstaller](/img/open-science/priority-completion/01-opencode-uninstall.png)
+![Portée de l'application gérée OpenCode désinstaller](/img/open-science/priority-completion/01-opencode-uninstall.webp)
 
 Avant d'enlever un moteur, passer à un autre moteur disponible; le moteur actif ne peut pas être retiré par ce contrôle. Après avoir réinstallé, redétecté et activé, ouvrez ensuite un projet existant et lancez une petite demande pour vérifier la connexion.
 
-![OpenCode installé à nouveau et sélectionné](/img/open-science/priority-completion/03-opencode-reinstalled.png)
+![OpenCode installé à nouveau et sélectionné](/img/open-science/priority-completion/03-opencode-reinstalled.webp)
 
 Si les actions d'installation sont désactivées, vérifiez une autre installation/switch en cours et l'erreur préalable indiquée. Si la détection réussit mais que les requêtes échouent, inspectez séparément l'authentification du modèle et la compatibilité framework/API.
 

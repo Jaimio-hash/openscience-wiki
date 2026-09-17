@@ -38,7 +38,7 @@ import Screenshot from '@site/src/components/Screenshot';
 
 기존 폴더의 경우 **Files**을 열고 **Artifacts** 드롭다운을 선택한 다음 **This computer → Add folder…**를 선택합니다. 앱의 **Grant folder access** 대화 상자에서 특정 하위 폴더와 **Read-only**을 선택하고 **Grant this folder**를 선택합니다. user-profile root는 사용할 수 없습니다; 대신 연구 subfolder를 선택하십시오. Notebook-kernel 충격 확인을 읽으십시오. 파일로 돌아가면 선택한 폴더와 파일을 확인합니다.
 
-<Screenshot src="/img/open-science/windows/granted-folder-files.png" alt="공개 스크립트와 CSV을 보여주는 Windows 폴더 부여" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.png" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
+<Screenshot src="/img/open-science/windows/granted-folder-files.webp" alt="공개 스크립트와 CSV을 보여주는 Windows 폴더 부여" width={1920} height={1017} windowBounds={[1157, 0, 763, 237]} href="/docs/img/open-science/windows/granted-folder-files.webp" linkLabel="완전한 Windows 스크린 샷을 엽니 다" />
 
 Windows **Attach files** 대화 상자에서 중국 문자 또는 공백을 포함하는 경로에서 파일을 선택하거나 **File name** 필드의 전체 경로에 입력하고 엽니 다. 앱에서 첨부된 이름을 확인하고 테이블 크기와 내용을 미리 볼 수 있습니다. 선택을 포기하려면 **Cancel**을 선택하고 새 첨부 파일을 초안에 추가하지 확인하십시오.
 
@@ -55,7 +55,7 @@ Windows **Attach files** 대화 상자에서 중국 문자 또는 공백을 포�
 
 <PlatformContent platform="macos">
 
-![file library에서 실제 RNA-seq 결과 필터링](/img/open-science/guides-walkthrough/56-files-search.png)
+![file library에서 실제 RNA-seq 결과 필터링](/img/open-science/guides-walkthrough/56-files-search.webp)
 
 </PlatformContent>
 카운트는 현재 필터를 설명합니다. 일치하지 않는 검색은 파일을 삭제하지 않습니다. **No more**은 그룹이 로딩을 완료했습니다. 그룹을 머리로 움직입니다. modal, 또는 **오픈 ... 세션 옆에 분할보기**에 대한 파일 몸의 미리보기 작업을 사용하여 대화를 유지하십시오. 그 표면에 의해 선택된 파일 / 버전에 대한 다운로드 행위.
@@ -85,7 +85,7 @@ Windows **Attach files** 대화 상자에서 중국 문자 또는 공백을 포�
 
 <PlatformContent platform="macos">
 
-![원본 버전과 비교된 v2 보고](/img/open-science/guides-walkthrough/55-report-version-diff.png)
+![원본 버전과 비교된 v2 보고](/img/open-science/guides-walkthrough/55-report-version-diff.webp)
 
 </PlatformContent>
 | 통제/상태 편집 | 무엇을 할 것인가? |
@@ -111,7 +111,7 @@ Windows **Attach files** 대화 상자에서 중국 문자 또는 공백을 포�
 
 <PlatformContent platform="macos">
 
-![다른 버전이 존재하기 때문에 차단 된 저장](/img/open-science/local-todo-batch/37-file-save-conflict.png)
+![다른 버전이 존재하기 때문에 차단 된 저장](/img/open-science/local-todo-batch/37-file-save-conflict.webp)
 
 </PlatformContent>
 저장 후, 최신 개정은 다른 작가의 변경과 유지 된 초안을 모두 포함합니다. Earlier 파일 개정은 버전 통제를 통해 유효합니다; 이러한 대화의 개정에서 분리됩니다.

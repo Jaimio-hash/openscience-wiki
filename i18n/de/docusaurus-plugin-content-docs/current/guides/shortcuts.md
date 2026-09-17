@@ -45,12 +45,12 @@ Tastatur-Aktionen hängen vom Fokus ab. Ein Schlüssel, der Text im Composer bea
 Klicken Sie in der Windows-Desktop-App auf den Composer-Entwurf, bevor Sie **Strg+Z** zum Rückgängigmachen oder **Strg+Umschalt+Z** zum Wiederholen verwenden. Überprüfen Sie den resultierenden Text, bevor Sie fortfahren oder senden. Wenn Sie **Tab / Shift + Tab** verwenden, suchen Sie nach dem Umriss des fokussierten Steuerelements, z. B. nach der unten stehenden Anlagetaste. Bestätigen Sie den Fokus erneut nach dem Öffnen eines Panels oder Ändern des Status eines Steuerelements; Verlassen Sie sich nicht auf eine feste Anzahl von Tastendrücken.
 
 <Screenshot
-  src="/img/open-science/windows/keyboard-attachment-focus.png"
+  src="/img/open-science/windows/keyboard-attachment-focus.webp"
   alt="Der Attachment-Button hat eine sichtbare Tastatur-Fokussierung im Windows Composer"
   width={1916}
   height={1014}
   windowBounds={[215, 850, 920, 150]}
-  href="/docs/img/open-science/windows/keyboard-attachment-focus.png"
+  href="/docs/img/open-science/windows/keyboard-attachment-focus.webp"
   linkLabel="Öffnen Sie den kompletten Windows-Screenshot mit Attachment-Button-Fokus"
 />
 

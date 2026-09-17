@@ -12,7 +12,7 @@ last_update:
 
 **Settings → General → Appearance** を使用して、アプリの言語やテーマを変更します。 [設定センター](../settings/overview.md)グループは、目的に応じてパネルを置き、独自の検索を行います。
 
-![遺伝子発現と文献プロジェクト](/img/open-science/v0.27.0/01-home.png)
+![遺伝子発現と文献プロジェクト](/img/open-science/v0.27.0/01-home.webp)
 
 | エントリーフォーム | アクション | 開封後確認 |
 | --- | --- | --- |

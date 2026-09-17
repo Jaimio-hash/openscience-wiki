@@ -21,7 +21,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 3. 按畫布提示拖動旋轉、滾動縮放、**Shift + 拖動**平移。
 4. 按需下載原檔案，關閉全屏返回對話。
 
-![實際 1UBQ Cartoon 檢視](/img/open-science/capabilities-walkthrough/26-pdb-cartoon.jpg)
+![實際 1UBQ Cartoon 檢視](/img/open-science/capabilities-walkthrough/26-pdb-cartoon.webp)
 
 | 樣式 | 重點 |
 | --- | --- |
@@ -39,7 +39,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 開啟從 [UniProt FASTA 介面](https://rest.uniprot.org/uniprotkb/P04637.fasta)下載的 <ExampleDownload path="/examples/capabilities/P04637.fa">P04637 FASTA</ExampleDownload>，核對 `>` 標題中的編號、物種、基因及後續序列。原生介面保留源文字，不是序列比對或編輯軟體。
 
-![實際 UniProt FASTA 源文字預覽](/img/open-science/capabilities-walkthrough/31-fasta-preview.jpg)
+![實際 UniProt FASTA 源文字預覽](/img/open-science/capabilities-walkthrough/31-fasta-preview.webp)
 
 要在對話中使用序列，透過 **+ → Attach files** 附加當前檔案，並要求 Agent 讀取檔案，而不是根據檔名推斷。本例 P04637 輸入可核對 `P53_HUMAN` 標題、**393 個氨基酸**和起始序列 **MEEPQSDPSV**。需要確認檔案身份時，再比較返回的校驗值與提供的原始檔。
 
@@ -51,7 +51,7 @@ import ExampleDownload from '@site/src/components/ExampleDownload';
 
 請求 Molecule Connector 使用 `preview_molecule`，輸入 `smiles: "CC(=O)Oc1ccccc1C(=O)O"`、`filename: "aspirin"`。開啟生成的 **aspirin.mol** 卡片和全屏。
 
-![內建 OpenChemLib 渲染的阿司匹林](/img/open-science/capabilities-walkthrough/16-aspirin-viewer.jpg)
+![內建 OpenChemLib 渲染的阿司匹林](/img/open-science/capabilities-walkthrough/16-aspirin-viewer.webp)
 
 本例返回合法結構、**C9H8O4**、分子量 **180.15852**、**13 個重原子**，儲存了 <ExampleDownload path="/examples/capabilities/aspirin.mol">aspirin.mol</ExampleDownload>，並已人工開啟檢查。這是離線結構渲染，不預測結合親和力、對接姿勢或藥效。
 

@@ -33,7 +33,7 @@ Network 顯示 **Ready** 但工具失敗時，展開該工具的錯誤。狀態�
 5. 檢查新增草稿行，使用 **Remove &#91;hostname&#93;** 撤銷。
 6. 選擇 **Save changes** 儲存預期清單。
 
-![萬用字元被域名校驗拒絕](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.png)
+![萬用字元被域名校驗拒絕](/img/open-science/walkthrough-2026-09-08/54-network-domain-validation.webp)
 
 填寫 `data.example.org` 這樣的主機名，不帶協議、路徑、埠、萬用字元或 IP 地址。若顯示 **Enter a hostname only, without a scheme, path, port, or wildcard.**，去掉這些部分後再儲存。
 
@@ -89,7 +89,7 @@ deny network-outbound pypi.org:443
 | **Save** | 儲存，供後續軟體包操作使用 |
 | **Cancel** | 放棄草稿 |
 
-![映象與 CA bundle 欄位](/img/open-science/walkthrough-2026-09-08/56-package-mirror.png)
+![映象與 CA bundle 欄位](/img/open-science/walkthrough-2026-09-08/56-package-mirror.webp)
 
 包映象改變軟體包來源。核對映象所需的根地址或索引格式，儲存後在所選環境中重試小規模安裝。模型提供方代理需單獨配置。
 

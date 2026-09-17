@@ -21,7 +21,7 @@ Die Demonstration verwendet das Original [RCSB 1UBQ Ubiquitin-Struktur](https://
 3. Ziehen Sie zum Drehen, scrollen Sie zum Zoom oder **Shift + Drag** zum Schwenken, wie unter der Leinwand angegeben.
 4. Laden Sie die Originaldatei bei Bedarf herunter. Schließen Sie den Vollbildschirm, um zur Konversation zurückzukehren.
 
-![Die aktuelle 1UBQ Cartoon Ansicht](/img/open-science/capabilities-walkthrough/26-pdb-cartoon.jpg)
+![Die aktuelle 1UBQ Cartoon Ansicht](/img/open-science/capabilities-walkthrough/26-pdb-cartoon.webp)
 
 | Stil | Was es betont |
 | --- | --- |
@@ -39,7 +39,7 @@ Representation steuert das Rendering bei Beibehaltung der Koordinaten. Vergleich
 
 Öffnen Sie <ExampleDownload path="/examples/capabilities/P04637.fa">P04637 FASTA</ExampleDownload>, heruntergeladen von [FASTA-Endpunkt von UniProt](https://rest.uniprot.org/uniprotkb/P04637.fasta). Inspizieren Sie den Beitritt/Organismus/Gen im `>`-Header und die Sequenz darunter. Der native Renderer bewahrt den Quelltext; Es handelt sich nicht um eine Sequenz-Alignment- oder Editing-Anwendung.
 
-![Die eigentliche UniProt FASTA in der Quellvorschau](/img/open-science/capabilities-walkthrough/31-fasta-preview.jpg)
+![Die eigentliche UniProt FASTA in der Quellvorschau](/img/open-science/capabilities-walkthrough/31-fasta-preview.webp)
 
 Um die Sequenz in einer Konversation zu verwenden, fügen Sie die aktuelle Datei mit **+ → Attach files** an und bitten Sie den Agenten, die Datei zu lesen, anstatt aus ihrem Namen zu schließen. Überprüfen Sie für diese P04637-Eingabe den `P53_HUMAN`-Header, **393 Aminosäuren** und die Anfangssequenz **MEEPQSDPSV**. Vergleichen Sie die gemeldete Prüfsumme mit der von Ihnen gelieferten Datei, wenn Identität von Bedeutung ist.
 
@@ -51,7 +51,7 @@ Wenn eine Modellanforderung **Verwaltete Datei oder deren Sitzung wird gelöscht
 
 Bitten Sie das Molekül Connector, `preview_molecule` mit `smiles: "CC(=O)Oc1ccccc1C(=O)O"` und `filename: "aspirin"` auszuführen. Öffnen Sie die generierte **Aspirin.mol**-Karte und Vollbildvorschau.
 
-![Aspirin gerendert vom eingebauten OpenChemLib Viewer](/img/open-science/capabilities-walkthrough/16-aspirin-viewer.jpg)
+![Aspirin gerendert vom eingebauten OpenChemLib Viewer](/img/open-science/capabilities-walkthrough/16-aspirin-viewer.webp)
 
 In diesem Beispiel gab der Aufruf eine gültige Struktur zurück, Formel **C9H8O4**, Molekulargewicht **180.15852** und **13 schwere Atome** und speicherte <ExampleDownload path="/examples/capabilities/aspirin.mol">Aspirin.mol</ExampleDownload>. Der Betrachter wurde manuell geöffnet und inspiziert. Dies ist Offline-Struktur-Rendering; Es sagt keine Bindungsaffinität, Andockposen oder therapeutische Aktivität voraus.
 

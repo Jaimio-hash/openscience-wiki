@@ -23,7 +23,7 @@ Unser Beispielprojekt ist **PRISMA - Systematic review reading pack**. Es verwen
 3. Wählen Sie **Create project**. Bestätigen Sie, dass in der linken Seitenleiste der Projektname angezeigt wird und das Hauptfeld **New conversation** öffnet.
 4. Öffnen Sie das Menü Projektname und **Project settings**, um die gespeicherten Werte zu überprüfen. Ein erfolgreiches Projekt sparen ist getrennt von der Modellbereitschaft.
 
-![PRISMA Projekt mit explizitem Forschungszweck und Agent Context](/img/open-science/local-acceptance/prisma-project-form.png)
+![PRISMA Projekt mit explizitem Forschungszweck und Agent Context](/img/open-science/local-acceptance/prisma-project-form.webp)
 
 | Feld oder Button | Beispiel oder Maßnahme | Was sich ändert |
 | --- | --- | --- |

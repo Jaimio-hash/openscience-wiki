@@ -40,7 +40,7 @@ Side Chat 对话、私人[阅读书签](bookmarks.md)及备注不会包含在研
 
 以下截图使用汇总 [GSE60450 样本质控表](../reference/example-data.md)的会话。在导出预览中比较 **Essential export** 和 **Full export**，查看预计大小，再选择 **Export**。具体内容和大小取决于你的会话。
 
-![研究包导出预览，包含 Essential export、Full export 和 Customize contents](/img/open-science/feature-guides-2026-09/research-package-export.png)
+![研究包导出预览，包含 Essential export、Full export 和 Customize contents](/img/open-science/feature-guides-2026-09/research-package-export.webp)
 
 ## 导入到项目 {/* #import-and-inspect-a-package */}
 

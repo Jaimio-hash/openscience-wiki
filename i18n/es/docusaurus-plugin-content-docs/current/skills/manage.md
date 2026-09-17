@@ -25,11 +25,11 @@ Para la navegación por catálogo, instalación y actualizaciones, siga el [Guí
 5. Cerrar vista previa, seleccione el candidato y elija **Importación seleccionada (1)**.
 6. Busque la fila importada e inspeccione su nombre final y fuente.
 
-![Inspección del paquete completo antes de importar](/img/open-science/capabilities-walkthrough/11-skill-package-preview.jpg)
+![Inspección del paquete completo antes de importar](/img/open-science/capabilities-walkthrough/11-skill-package-preview.webp)
 
 En este ejemplo, el Skill personal original ya existía. La vista previa muestra **Name exists**, e importación creó un **Importado `rnaseq-count-qc-2`**. El original y su unión Specialist permanecieron. No asuma todas las actualizaciones de importación del paquete existente; inspeccionar la fuente del candidato y actualizar/reemplazar el diagnóstico.
 
-![La copia importada y el original Personal Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.jpg)
+![La copia importada y el original Personal Skill](/img/open-science/capabilities-walkthrough/12-skill-imported-copy.webp)
 
 | Control de importación | Propósito |
 | --- | --- |
@@ -53,9 +53,9 @@ Una carga de marcado necesita YAML `name` y `description`; un paquete ZIP/`.skil
 4. Volver a Skills, buscar `peer-review` e inspeccionar la fila Importada. La carpeta fuente permanece en su lugar; Open-Science utiliza una copia importada.
 5. Utilice **Rescan** después de cambiar las carpetas instaladas. Revisar el origen, la selección y el estado antes de importar de nuevo.
 
-![Previsualizar el paquete de revisión de pares instalado localmente](/img/open-science/local-todo-batch/12-installed-skill-preview.png)
+![Previsualizar el paquete de revisión de pares instalado localmente](/img/open-science/local-todo-batch/12-installed-skill-preview.webp)
 
-![Encontrar el paquete importado en la lista Skills](/img/open-science/local-todo-batch/13-installed-skill-imported.png)
+![Encontrar el paquete importado en la lista Skills](/img/open-science/local-todo-batch/13-installed-skill-imported.webp)
 
 Después de importar, inspeccione la plantilla y los archivos de referencia en el detalle Skill. Antes de utilizar un método de otro asistente, compruebe que sus herramientas y características de tiempo de ejecución necesarias están disponibles en esta sesión.
 
@@ -69,7 +69,7 @@ Después de importar, inspeccione la plantilla y los archivos de referencia en e
 4. Cerrar vista previa, seleccione el candidato indicado y elija **Importación seleccionada (1)**. Espera el resultado y revisa su nombre bajo **Imported skills**.
 5. Vuelve a Skills y busca ese nombre. Inspeccione su fuente y disponibilidad antes de utilizarla.
 
-![Revise un GitHub Skill y su fuente encendida antes de importar](/img/open-science/local-todo-batch/15-github-skill-preview.png)
+![Revise un GitHub Skill y su fuente encendida antes de importar](/img/open-science/local-todo-batch/15-github-skill-preview.webp)
 
 Importar `fair-esm2` del repositorio de productos creó **`fair-esm2-2`** porque el nombre incorporado ya existía. El paquete incorporado se mantuvo. Importar instrucciones no instala pesos modelo o establece que la inferencia funciona.
 
@@ -77,7 +77,7 @@ Importar `fair-esm2` del repositorio de productos creó **`fair-esm2-2`** porque
 
 Escanee el mismo repositorio con el nuevo ref. El candidato existente puede mostrar **Update available**. Seleccione sólo ese candidato e importarlo; inspeccionar la fila importada existente y previsualizar después. En el cheque ESM-2, se actualizó la misma copia `fair-esm2-2` y el escaneo que ref mostró de nuevo **Imported**. El cuerpo de instrucción actualizado coincidió con la fuente del repositorio. El importador reescribe la primera y el nombre seguro de colisión, por lo que los bytes de archivo entero no deben coincidir con el original SKILL.md.
 
-![Se puede solicitar una revisión preliminar para la copia importada](/img/open-science/local-todo-batch/16-github-update-available.png)
+![Se puede solicitar una revisión preliminar para la copia importada](/img/open-science/local-todo-batch/16-github-update-available.webp)
 
 ### Recover from GitHub rate limiting {/* #recover-from-github-rate-limiting */}
 
@@ -87,7 +87,7 @@ Para **GitHub request was rate-limited**, abra **Manage GitHub credential**, int
 
 Abrir **Manage**, filtrar por fuente/estadio, y buscar un método específico. Seleccione el resultado antes de aplicar una acción. **Seleccionado (n)** muestra la selección; **Clear selection** lo vacía. Revise el conjunto completo seleccionado cuando los filtros cambian.
 
-![La copia importada discapacitada en la gestión a granel](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.jpg)
+![La copia importada discapacitada en la gestión a granel](/img/open-science/capabilities-walkthrough/13-skill-bulk-disabled.webp)
 
 Después de cambiar la disponibilidad, vuelva a abrir el detalle Skill para confirmar su estado. Mantenga una exportación de un método que necesita antes de eliminarlo.
 

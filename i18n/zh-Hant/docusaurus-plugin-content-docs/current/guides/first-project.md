@@ -37,7 +37,7 @@ last_update:
 3. 確認有十二行樣本。檢查完整樣本標識，以及總計數、零計數基因數、檢出基因數和正計數中位數等列。
 4. 關閉預覽返回輸入框，保留請求中的附件。
 
-![在應用中開啟樣本 QC 表](/img/open-science/guides-walkthrough/42-rnaseq-table.png)
+![在應用中開啟樣本 QC 表](/img/open-science/guides-walkthrough/42-rnaseq-table.webp)
 
 若預覽為空或列沒有分開，請確認附加的是 CSV，而非下載失敗後儲存的網頁。分隔符與預覽控制元件見[表格](../tools/tables.md)。
 

@@ -10,7 +10,7 @@ last_update:
 
 ## ディスク使用量を読み取り、リフレッシュ {/* #read-and-refresh-disk-usage */}
 
-![実際の管理された貯蔵は研究の例の後で要します](/img/open-science/local-acceptance/storage-installed-location.png)
+![実際の管理された貯蔵は研究の例の後で要します](/img/open-science/local-acceptance/storage-installed-location.webp)
 
 欠落したファイルをバックアップまたは診断する前に、**Data location**を読みます。 これは、プロジェクトに付与された外部ソースフォルダから分離されたアプリの管理されたルートです。 **Refresh**は使用を再スキャンします; 測定を比較する前に、最後のスキャンした時間を確認してください。
 
@@ -43,7 +43,7 @@ last_update:
 4. ソース、目的地、利用可能なスペース、および再構築通知をチェックしてください。
 5. **Change location**は有効な動きを提出します; **Cancel**は、現在の位置を変更しないままにします。
 
-![ランタイム再構築の要件とリロケーションフォーム](/img/open-science/local-acceptance/storage-destination-form.png)
+![ランタイム再構築の要件とリロケーションフォーム](/img/open-science/local-acceptance/storage-destination-form.webp)
 
 アプリケーションは、既存の研究データを移動します。 Python/R環境は**再構築後の再構築、コピー不可**です。 共有ランタイムパッケージのキャッシュはオフラインの再構築をサポートするためにコピーされますが、 pip- または CRAN のみのパッケージは復元される保証はありません。 再建スペースの追加は確実に予測できません。 実際の移動前の環境/パッケージの要件を記録し、必要なランタイムをテストします。
 
@@ -65,7 +65,7 @@ last_update:
 
 返送後、既存のプロジェクトを再オープンし、レポートを入力および保存します。 管理されたランタイムが準備完了したら、小さな計算を実行し、新しい結果を保存します。 デフォルトデータの場所が使用中であることを確認するために再オープンします。
 
-![保存された R 結果はデフォルト位置に戻った後に再オープンしました](/img/open-science/local-acceptance/r-default-chart.png)
+![保存された R 結果はデフォルト位置に戻った後に再オープンしました](/img/open-science/local-acceptance/r-default-chart.webp)
 
 **OpenScienceという名前の異なるフォルダがここに存在しています。 別の場所を選択します。** が表示された場合、アプリブロックは上書きします。 そのディレクトリをキャンセルして保存します。 競合を解決する前に、所有権、コンテンツ、バックアップを確立する。 同じ名前のフォルダーを削除しないでください。 目的地のバリデーションパスの後にのみ移行を再試行します。
 
@@ -78,7 +78,7 @@ last_update:
 3. **Finish move** は既存のコピーを完了しようとします。 **Discard copy**は、元の場所を保持しながら、コピーを未完成させた放棄します。 確認のスコープを最初に読みます。
 4. **Conversation storage needs attention**が現れた場合は、未完成の移動を解決し、**Retry**を選択し、元のプロジェクトとレポートを再開します。
 
-![未完成のストレージの移動のための回復の選択肢](/img/open-science/local-todo-batch/46-storage-recovery-choice.png)
+![未完成のストレージの移動のための回復の選択肢](/img/open-science/local-todo-batch/46-storage-recovery-choice.webp)
 
 最終的なスイッチを再試行すると繰り返し失敗し、アクティブな作業を終了し、アプリを終了し、その後、移動を再試行します。 エラーが主張するならば、元の場所を保ち、別の変更を加える前に失敗の細部を集めて下さい。
 
@@ -104,7 +104,7 @@ last_update:
 4. **Restore project** を選択します。
 5. プロジェクト、会話、保存されたレポートを再開します。
 
-![アーカイブされたGSE60450プロジェクトを管理する](/img/open-science/local-todo-batch/34-archived-project-manage.png)
+![アーカイブされたGSE60450プロジェクトを管理する](/img/open-science/local-todo-batch/34-archived-project-manage.webp)
 
 保存されたレポートと復元後のリビジョンを再開します。 Archivingはプロジェクトを整理します。 解析を繰り返したり、レポートのバージョン履歴を削除したりすることはありません。
 
@@ -114,7 +114,7 @@ last_update:
 
 **Delete project**は、恒久的な削除確認を開きます。 確認する前にスコープを読みます: 管理されたアーティファクトとアップロードは、削除されていない外部の作業フォルダファイルから分離されます。 タスクとカーネルが停止し、セッションのワークスペースがストレージに残っていることを確認します。 アーカイブと削除には異なる結果があります。
 
-![別々に作成された空のプロジェクトのための削除スコープ](/img/open-science/local-todo-batch/35-disposable-project-delete.png)
+![別々に作成された空のプロジェクトのための削除スコープ](/img/open-science/local-todo-batch/35-disposable-project-delete.webp)
 
 削除フローを学習している場合は、空の使い捨てプロジェクトを使用してください。 研究を含むプロジェクトを削除する前に、確認の影響を受けたレコードを調べます。
 

@@ -22,7 +22,7 @@ Utilisez [*Une méthode universelle médiée par le ligand pour la synthèse à 
 
 Vérifiez que **les deux noms de fichiers** apparaît au-dessus de la requête envoyée. Cliquer sur un nom de fichier ouvre son aperçu; la commutation entre les deux vous permet de vérifier à quel document une page citée appartient.
 
-![L'article et le supplément sont joints à la demande de vérification des preuves.](/img/open-science/research-workflows/catalyst-two-inputs.png)
+![L'article et le supplément sont joints à la demande de vérification des preuves.](/img/open-science/research-workflows/catalyst-two-inputs.webp)
 
 ## Poser une question spécifique sur la preuve {/* #ask-a-specific-evidence-question */}
 
@@ -44,7 +44,7 @@ Approuver les demandes de lecture prévues lorsqu'elles sont demandées. Si le l
 
 Dans l'aperçu PDF, utilisez le contrôle de page pour ouvrir **page 6**, qui contient **Figure 6** et les résultats pertinents. Comparez la légende avec le texte. Ouvrir les pages de supplément **47–49** pour les figures **51–53**.
 
-![Figure 6 de l'article original et conditions expérimentales dans Open-Science](/img/open-science/research-workflows/catalyst-figure6-source.png)
+![Figure 6 de l'article original et conditions expérimentales dans Open-Science](/img/open-science/research-workflows/catalyst-figure6-source.webp)
 
 La source rapporte **98.9% Efficacité Faradaic au CO à −1.2 V versus RHE** pour Ni-SAC-2.5. L'expérience de durabilité utilise **−0.8 V pour 20 heures**. Ces conditions doivent rester distinctes: ces dernières n'établissent pas la durabilité de 20-heure au potentiel de sélectivité maximale. L'efficacité Faradaic décrit la charge attribuée à un produit; il n'est pas le même que l'efficacité énergétique ou la fraction du CO2 entrant converti.
 
@@ -52,12 +52,12 @@ Ce supplément fournit les chiffres du produit hydrogène, de la RMN et de l'éc
 
 Pour passer à une page, élargissez l'aperçu PDF, cliquez sur son compteur de page, entrez le numéro complet et appuyez sur **Entrez**. Vérifier le compteur qui en résulte avant de lire. La page supplémentaire 47 contient **Figure supplémentaire 51**, dont l'axe est **H2 Efficacité Faradaique**; il ne doit pas être confondu avec le résultat principal du CO.
 
-![Figure supplémentaire 51 sur la page réelle PDF 47 de 52](/img/open-science/research-workflows/catalyst-supplement-47.png)
+![Figure supplémentaire 51 sur la page réelle PDF 47 de 52](/img/open-science/research-workflows/catalyst-supplement-47.webp)
 
 ## Vérifiez et enregistrez le rapport {/* #check-and-save-the-report */}
 
 Après la réponse complète, ouvrez **catalyst-claim-check.md**. Vérifiez l'identité de la source, les numéros de page, les étiquettes des figures et le libellé de la conclusion. En particulier, le rapport devrait conserver **résultat communiqué** et éviter de transformer une vérification de la littérature en allégation de reproduction expérimentale.
 
-![Rapport sur la réclamation, la preuve, les conditions et les limites sauvegardées](/img/open-science/research-workflows/catalyst-claim-report.png)
+![Rapport sur la réclamation, la preuve, les conditions et les limites sauvegardées](/img/open-science/research-workflows/catalyst-claim-report.webp)
 
 Téléchargez le <a href="/docs/examples/research-workflows/catalyst-claim-check.md" download>exemple de rapport</a> pour sa structure. Avant d'utiliser une conclusion scientifique dans votre propre travail, inspectez les preuves originales citées et toute correction d'éditeur. Pour extraire des éléments de preuve de figure ou de table dans un fichier distinct, voir [Extraction de PDF](../guides/previews.md#pdf-extraction).

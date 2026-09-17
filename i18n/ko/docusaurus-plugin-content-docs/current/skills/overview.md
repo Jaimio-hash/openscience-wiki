@@ -28,7 +28,7 @@ Skill는 에이전트를 반복 가능한 방법을 제공합니다: 그것을 �
 4. 결과 열기. 설명, 지침, **Files**, 라이센스 및 **Availability**을 읽으십시오. 표시 이름은 패키지 ID와 다를 수 있습니다.
 5. 목록으로 돌아와 **Used by**을 검사합니다. 그것은 어떤 대리인이 포장을 사용할 수 있는지 식별합니다; 완료된 실행을 나열하지 않습니다.
 
-![저장된 RNA-seq Skill 검색](/img/open-science/capabilities-walkthrough/02-skill-search.jpg)
+![저장된 RNA-seq Skill 검색](/img/open-science/capabilities-walkthrough/02-skill-search.webp)
 
 | (주) | 어떤 변화 |
 | --- | --- |
@@ -51,7 +51,7 @@ Skill는 에이전트를 반복 가능한 방법을 제공합니다: 그것을 �
 
 스크린 샷은 **Customize**에 대한 설명을 보여줍니다. 이 필요한 Skills은 다른 옵션 방법을 비활성화 할 때도 활성화됩니다.
 
-![숙박을 사용자 정의하고 이유를 설명](/img/open-science/v0.27.0/08-always-enabled-skill.png)
+![숙박을 사용자 정의하고 이유를 설명](/img/open-science/v0.27.0/08-always-enabled-skill.webp)
 
 ## 대화에서 사용 {/* #use-it-in-a-conversation */}
 

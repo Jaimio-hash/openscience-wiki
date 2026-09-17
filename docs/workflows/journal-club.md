@@ -32,7 +32,7 @@ Stage verified candidates in Literature Inbox for my review; do not accept
 them automatically. Stop before downloading PDFs. Keep everything in English.
 ```
 
-![The actual search log with candidate identities and retrieval status](/img/open-science/research-workflows/literature-topic-results.png)
+![The actual search log with candidate identities and retrieval status](/img/open-science/research-workflows/literature-topic-results.webp)
 
 The <a href="/docs/examples/research-workflows/single-atom-search-log.md" download>initial search log</a> records eight candidates found through web search and Crossref metadata. These were not yet downloaded papers. If a source requires credentials, configure [Connectors](../guides/connectors.md) or ask the Agent to use an available source and name the gap.
 
@@ -54,7 +54,7 @@ Keep the old collection unchanged. Keep everything in English.
 
 Review the <a href="/docs/examples/research-workflows/single-atom-open-access-selection.md" download>replacement selection log</a>, then select the four intended Inbox rows and choose **Accept**. An open-access source link still needs to be tested by saving and opening its PDF.
 
-![Four replacement candidates selected for manual acceptance](/img/open-science/research-workflows/journal-open-access-inbox.png)
+![Four replacement candidates selected for manual acceptance](/img/open-science/research-workflows/journal-open-access-inbox.webp)
 
 Create **Single-Atom Catalysis - Full-Text Journal Club** using **New collection**. In **All references**, select these four accepted records plus Lang, then choose **Add to collection**. Use **Add to project** to link the set to the project containing your conversation.
 
@@ -73,15 +73,15 @@ Create **Single-Atom Catalysis - Full-Text Journal Club** using **New collection
 3. Open that attachment. Compare its title and DOI with the record, and check the page count.
 4. Repeat for all five references, then reopen the collection. Each row should now show an attachment icon.
 
-![Full-text sources offered for the Lang paper](/img/open-science/research-workflows/literature-topic-fulltext.png)
+![Full-text sources offered for the Lang paper](/img/open-science/research-workflows/literature-topic-fulltext.webp)
 
 In this run, Lang's PDF was added through Europe PMC. The other four were saved from publisher sources discovered through Unpaywall. An alternative source can succeed when another source cannot be added. If necessary, use **Open source** to obtain a copy you are entitled to access and attach it with **Add PDF**. If no readable copy is available, replace the selection or mark it missing before requesting full-text findings.
 
-![An actually downloaded paper opens in the English PDF preview](/img/open-science/research-workflows/journal-qi-pdf.png)
+![An actually downloaded paper opens in the English PDF preview](/img/open-science/research-workflows/journal-qi-pdf.webp)
 
 The final collection contains five saved PDFs, with page counts **10, 9, 11, 10 and 11** in the table's order. An attachment icon confirms a saved file; opening it confirms that it is readable and matches the record.
 
-![The final five-paper collection with an attachment on every record](/img/open-science/research-workflows/journal-five-fulltexts.png)
+![The final five-paper collection with an attachment on every record](/img/open-science/research-workflows/journal-five-fulltexts.webp)
 
 <span id="draft-the-reading-plan-then-deepen-it-with-full-text" />
 
@@ -108,17 +108,17 @@ During the response, expand the **Literature library** reading activity to inspe
 
 After completion, open **single-atom-fulltext-reading-pack.md** from **Generated**. Check the five-paper verification table, each finding and its locator, limitations, questions and agenda. The agenda should total 60 minutes.
 
-![The saved full-text pack, with the same five papers and source checks](/img/open-science/research-workflows/journal-fulltext-pack.png)
+![The saved full-text pack, with the same five papers and source checks](/img/open-science/research-workflows/journal-fulltext-pack.webp)
 
 ## Check the paper map against the original PDFs
 
 Open **single-atom-fulltext-paper-map.csv** and use its expand button for a full-screen view. This run contains **5 rows · 12 columns**. Compare the DOI set with the collection; a pack from a different set is not this workflow's result. Scroll horizontally or download the CSV to read long cells in full.
 
-![The actual five-row, twelve-column paper map](/img/open-science/research-workflows/journal-fulltext-paper-map.png)
+![The actual five-row, twelve-column paper map](/img/open-science/research-workflows/journal-fulltext-paper-map.webp)
 
 Return to **Library**, open a cited PDF, click its page counter, type the requested page and press **Enter**. Check the figure or table together with its caption and surrounding text. For example, He et al.'s Figure 5 is on **PDF page 7**; the production-line description is on page 3. They support different parts of the summary.
 
-![He et al.'s Figure 5 opened on PDF page 7 for comparison](/img/open-science/research-workflows/journal-he-figure5.png)
+![He et al.'s Figure 5 opened on PDF page 7 for comparison](/img/open-science/research-workflows/journal-he-figure5.webp)
 
 Ask for a saved revision when a locator or condition is wrong, then reopen the revised file. The checked pack also retains a conflict in Sun et al.: page 2 and the Figure 5 caption give different feed compositions. It records both descriptions instead of choosing one silently. This is a useful meeting question, not a resolved experimental detail.
 

@@ -35,19 +35,19 @@ Lesen Sie die Erklärung jedes Schecks neben seinem Status. Wenn ein Agent berei
 
 <PlatformContent platform="macos">
 
-![Umweltprüfungen, die während der erstmaligen Einrichtung von macOS abgeschlossen wurden](/img/open-science/macos/setup-environment.png)
+![Umweltprüfungen, die während der erstmaligen Einrichtung von macOS abgeschlossen wurden](/img/open-science/macos/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="windows">
 
-![Umgebungsprüfungen während der erstmaligen Einrichtung von Windows](/img/open-science/windows/setup-environment.png)
+![Umgebungsprüfungen während der erstmaligen Einrichtung von Windows](/img/open-science/windows/setup-environment.webp)
 
 </PlatformContent>
 
 <PlatformContent platform="linux">
 
-![Alle vier Umgebungsprüfungen wurden während der erstmaligen Einrichtung von Linux bestanden](/img/open-science/linux/setup-environment.png)
+![Alle vier Umgebungsprüfungen wurden während der erstmaligen Einrichtung von Linux bestanden](/img/open-science/linux/setup-environment.webp)
 
 </PlatformContent>
 
@@ -55,7 +55,7 @@ Lesen Sie die Erklärung jedes Schecks neben seinem Status. Wenn ein Agent berei
 
 <PlatformContent platform="macos">
 
-![Datenspeicherort vor der Auswahl eines Ordners](/img/open-science/walkthrough-2026-09-08/02-data-location.png)
+![Datenspeicherort vor der Auswahl eines Ordners](/img/open-science/walkthrough-2026-09-08/02-data-location.webp)
 
 </PlatformContent>
 Wählen Sie den Speicherort für große Dateien, bevor Sie Laufzeiten installieren. Artefakte, Notizbücher und Umgebungen verwenden den Datenstandort; Einstellungen und Historie verbleiben am Konfigurationsstandort. Der angezeigte Pfad ist eine schreibgeschützte Zusammenfassung, kein Textfeld.
@@ -73,14 +73,14 @@ Wählen Sie den Speicherort für große Dateien, bevor Sie Laufzeiten installier
 
 <PlatformContent platform="macos">
 
-![Benutzerdefinierte Eltern ausgewählt und endgültiger app-verwalteter Pfad angezeigt](/img/open-science/local-acceptance/data-location-selected.png)
+![Benutzerdefinierte Eltern ausgewählt und endgültiger app-verwalteter Pfad angezeigt](/img/open-science/local-acceptance/data-location-selected.webp)
 
 </PlatformContent>
 Wählen Sie **Browse…** aus, wählen Sie einen leeren übergeordneten Ordner auf einer Festplatte mit genügend Speicherplatz aus und prüfen Sie den gesamten vom Assistenten angezeigten verwalteten Pfad. Wählen Sie **Continue** und lesen Sie die Neustartbestätigung. Verwenden Sie einen stabilen Standort für Forschungsdaten anstelle eines temporären Ordners.
 
 <PlatformContent platform="macos">
 
-![Neustartbestätigung für den ausgewählten Datenstandort](/img/open-science/local-acceptance/data-location-confirm.png)
+![Neustartbestätigung für den ausgewählten Datenstandort](/img/open-science/local-acceptance/data-location-confirm.webp)
 
 </PlatformContent>
 | Bestätigungskontrolle | Ergebnis |
@@ -105,7 +105,7 @@ Wenn die Seite **Konnte den Speicher nicht beenden: EACCES: Erlaubnis verweigert
 
 <PlatformContent platform="macos">
 
-![Tatsächliche Konfigurations-Schreibfehler- und Wiederherstellungskontrollen](/img/open-science/local-todo-batch/56-onboarding-config-write-error.png)
+![Tatsächliche Konfigurations-Schreibfehler- und Wiederherstellungskontrollen](/img/open-science/local-todo-batch/56-onboarding-config-write-error.webp)
 
 </PlatformContent>
 Wenn der Neustart fehlschlägt, bevor sich der Standort ändert, stellen Sie den Konfigurationsschreibzugriff wieder her und öffnen Sie den Assistenten erneut. Überprüfen Sie den aktiven Pfad und die vorhandenen Dateien, bevor Sie eine Bewegung erneut versuchen; siehe [Speicher](storage.md).
@@ -116,7 +116,7 @@ Wählen Sie das Coding-Agent-Backend, das Sitzungen ausführen soll. Wählen Sie
 
 <PlatformContent platform="macos">
 
-![Codex Installationsquellmenü](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.png)
+![Codex Installationsquellmenü](/img/open-science/walkthrough-2026-09-08/05-agent-install-menu.webp)
 
 </PlatformContent>
 1. Öffnen Sie **Installieren Codex**.
@@ -127,7 +127,7 @@ Wählen Sie das Coding-Agent-Backend, das Sitzungen ausführen soll. Wählen Sie
 
 <PlatformContent platform="macos">
 
-![Codex installiert und als aktive Laufzeit ausgewählt](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.png)
+![Codex installiert und als aktive Laufzeit ausgewählt](/img/open-science/walkthrough-2026-09-08/06-agent-codex-ready.webp)
 
 </PlatformContent>
 Die Versionsetiketten identifizieren den installierten Agent oder Adapter, nicht das ausgewählte Modell. Überprüfen Sie die installierten Werte, anstatt die genauen Versionen des Screenshots zu erwarten.
@@ -136,7 +136,7 @@ Die Versionsetiketten identifizieren den installierten Agent oder Adapter, nicht
 
 Wenn bereits ein kompatibler Agent installiert ist, wählen Sie seine Karte aus und bestätigen Sie **Active**, bevor Sie fortfahren. Der Windows-Bildschirm unten verwendet eine bestehende Codex-Installation; Es ist unnötig, es neu zu installieren, nur um durch den zauberer zu gehen.
 
-![Ein vorhandener Codex-Agent, der im Windows-Setup-Assistenten als aktiv ausgewählt wurde](/img/open-science/windows/setup-agent-active.jpg)
+![Ein vorhandener Codex-Agent, der im Windows-Setup-Assistenten als aktiv ausgewählt wurde](/img/open-science/windows/setup-agent-active.webp)
 
 </PlatformContent>
 
@@ -158,14 +158,14 @@ Das Formular ändert sich gemäß **Provider type**, dem ausgewählten Agenten u
 
 <PlatformContent platform="macos">
 
-![Englisches Codex-Abonnementformular vor Authentifizierung](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.png)
+![Englisches Codex-Abonnementformular vor Authentifizierung](/img/open-science/walkthrough-2026-09-08/07-model-codex-subscription.webp)
 
 </PlatformContent>
 Wählen Sie für einen API-Provider dessen Typ aus, geben Sie die von diesem Provider benötigten Endpunkt- und Modelldetails ein und verwenden Sie **Test & continue**. Der Wizard validiert die erforderlichen Felder, bevor er einen Test sendet. Ein erfolgreicher Test bringt den Assistenten voran; ein Validierungs- oder Verbindungsfehler zur Korrektur sichtbar bleibt.
 
 <PlatformContent platform="macos">
 
-![Benutzerdefiniertes Gateway mit erforderlichen Feldfehlern](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.png)
+![Benutzerdefiniertes Gateway mit erforderlichen Feldfehlern](/img/open-science/walkthrough-2026-09-08/08-model-required-fields.webp)
 
 </PlatformContent>
 Siehe [Provider-Einrichtung](providers.md) für Authentifizierungsoptionen, erweiterte Felder und Wiederherstellung von Verbindungsfehlern.
@@ -189,7 +189,7 @@ Nach **Finish**, bestätigen Home öffnet, dann verwenden Sie [Erstes Projekt](f
 
 Die Windows **Notebook runtime** Seite kann auch **Local Shell · WSL2 Bash Preview** anzeigen. Lesen Sie **Optional — nothing here is required to finish setup.** Sie können **Finish** wählen, während Python / R Setup verschoben wird und WSL2 nicht verfügbar ist. Bereiten Sie die erforderliche Laufzeit vor, bevor Sie die Codeausführung anfordern; Durch das Ausführen des Assistenten werden diese optionalen Umgebungen nicht installiert.
 
-![Windows optionale Notebook und WSL2 Einstellungen mit Finish verfügbar](/img/open-science/windows/setup-optional-runtimes.jpg)
+![Windows optionale Notebook und WSL2 Einstellungen mit Finish verfügbar](/img/open-science/windows/setup-optional-runtimes.webp)
 
 </PlatformContent>
 

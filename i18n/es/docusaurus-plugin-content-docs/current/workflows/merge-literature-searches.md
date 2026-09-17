@@ -39,7 +39,7 @@ Inspeccione la actividad Connector real para las consultas, fechas y recuentos d
 
 Open **electrolyte-merged.csv** bajo **Generated**. Revise los títulos retenidos, los DOIs y la membresía de origen contra las dos exportaciones de RIS y la auditoría de candidatos. La unión real tiene filas 15; DOI **10.1007/s41918-024-00212-1** ocurre en ambos lotes y se etiqueta **AtenciónB**.
 
-![La unión salvada de ambos lotes de búsqueda, conservando la membresía de fuente](/img/open-science/workflow-extensions/batches-merged.png)
+![La unión salvada de ambos lotes de búsqueda, conservando la membresía de fuente](/img/open-science/workflow-extensions/batches-merged.webp)
 
 Para la comparación, trim DOI whitespace, retire un prefijo opcional de URL DOI y compare caso-insensiblemente. Preserve los identificadores originales en el registro de origen. Los títulos similares por sí solos son pruebas insuficientes de que dos registros son idénticos; Los conflictos de identificadores no resueltos necesitan revisión.
 
@@ -52,7 +52,7 @@ Descargar <ExampleDownload path="/examples/workflow-extensions/electrolyte-batch
 3. Elige `electrolyte-batch-a.ris`. Comprueba que **Import to** nombra la colección prevista.
 4. Deje **When identifiers match → Reuse existing reference** seleccionado. Inspeccione **View details**, luego elija **Import references**.
 
-![Previsualización de importación de primer nivel: ocho nuevas referencias en la colección seleccionada](/img/open-science/workflow-extensions/batches-import-a.png)
+![Previsualización de importación de primer nivel: ocho nuevas referencias en la colección seleccionada](/img/open-science/workflow-extensions/batches-import-a.webp)
 
 En la biblioteca registrada, la primera importación completada con **8 Creado, 0 Reutilizado, 0 Omitido, 0 Failed**. Haga clic en **Done** y compruebe la colección. Si su biblioteca ya contiene registros coincidentes, su división creada/reutilizada puede diferir.
 
@@ -60,16 +60,16 @@ En la biblioteca registrada, la primera importación completada con **8 Creado, 
 
 Con la misma colección seleccionada, importa `electrolyte-batch-b.ris`. La vista previa debe identificar los registros existentes antes de comprometer la importación. En esta carrera mostró **7 Nuevas referencias, 1 Existing, 0 Saltar**.
 
-![Previsualización de la segunda parte identifica el papel compartido como Existing](/img/open-science/workflow-extensions/batches-import-b.png)
+![Previsualización de la segunda parte identifica el papel compartido como Existing](/img/open-science/workflow-extensions/batches-import-b.webp)
 
 Mantener **Reuse existing reference**, inspeccionar el título compartido, luego importar. Lea el resumen de la terminación real: **7 Creado, 1 Reutilizado, 0 Omitido, 0 Failed**. Reuse mantiene los metadatos existentes y añade la referencia coincidente al destino; no crea una segunda copia o descarga un PDF.
 
-![Segunda importación completa con siete creado y uno reutilizado](/img/open-science/workflow-extensions/batches-import-result.png)
+![Segunda importación completa con siete creado y uno reutilizado](/img/open-science/workflow-extensions/batches-import-result.webp)
 
 ## 5. Compruebe la colección resultante {/* #5-check-the-resulting-collection */}
 
 Haga clic en **Done**. La colección contiene **Referencias 15**, coincidiendo con el sindicato DOI. Mantenga las dos exportaciones originales y la procedencia CSV para que un colega pueda reconstruir de donde vino cada candidato.
 
-![La colección final con quince referencias](/img/open-science/workflow-extensions/batches-collection.png)
+![La colección final con quince referencias](/img/open-science/workflow-extensions/batches-collection.webp)
 
 Un partido de cuenta es un cheque útil, no un reemplazo para inspeccionar el DOI superpuesto y títulos representativos. Para añadir una ventana de publicación posterior, preservando la base de referencia, continúe con [actualizar una colección de literatura existente](update-literature.md).

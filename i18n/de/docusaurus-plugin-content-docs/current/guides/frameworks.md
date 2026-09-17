@@ -12,7 +12,7 @@ Wählen Sie ein Agent-Framework für Gespräche und Werkzeuge und richten Sie an
 
 Öffnen Sie **Settings → Agent**. Die Seite trennt **Installed** von **Available**. Lesen Sie die Version, den Pfad und den **Active**-Marker auf der installierten Karte, bevor Sie etwas ändern.
 
-![App-verwalteter Codex](/img/open-science/local-acceptance/agent-codex-active.png)
+![App-verwalteter Codex](/img/open-science/local-acceptance/agent-codex-active.webp)
 
 | Kontrolle/Status | Sinn und Handlung |
 | --- | --- |
@@ -63,11 +63,11 @@ Verwenden Sie den Reparaturfluss der App für eine defekte verwaltete Laufzeit; 
 4. Wählen Sie **Install OpenCode → App-managed download (recommended)**. Warten Sie auf die **Installed**-Karte, wählen Sie sie aus und bestätigen Sie **Switch**.
 5. Überprüfen Sie **Active**, den Laufzeitpfad und die kompatible Modellauswahl. Durch die Neuinstallation des Backends wird kein Modellanbieter dafür konfiguriert.
 
-![Umfang der App-verwalteten OpenCode-Deinstallation](/img/open-science/priority-completion/01-opencode-uninstall.png)
+![Umfang der App-verwalteten OpenCode-Deinstallation](/img/open-science/priority-completion/01-opencode-uninstall.webp)
 
 Wechseln Sie vor dem Entfernen eines Backends zu einem anderen verfügbaren Backend; das aktive Backend kann durch diese Steuerung nicht entfernt werden. Nach der Neuinstallation, Neuerkennung und Aktivierung öffnen Sie dann ein bestehendes Projekt und führen Sie eine kleine Anforderung aus, um die Verbindung zu überprüfen.
 
-![OpenCode erneut installiert und ausgewählt](/img/open-science/priority-completion/03-opencode-reinstalled.png)
+![OpenCode erneut installiert und ausgewählt](/img/open-science/priority-completion/03-opencode-reinstalled.webp)
 
 Wenn Installationsaktionen deaktiviert sind, überprüfen Sie auf eine andere Installation/einen anderen laufenden Switch und den angegebenen Anforderungsfehler. Wenn die Erkennung erfolgreich ist, aber die Anforderungen fehlschlagen, prüfen Sie die Modellauthentifizierung und die Framework/API-Kompatibilität separat.
 
