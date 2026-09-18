@@ -63,10 +63,13 @@
     "message": "Skill-Marktplatz"
   },
   "homepage.meta.title": {
-    "message": "Open-Science Dokumentation"
+    "message": "AIPOCH Open-Science Dokumentation"
   },
   "homepage.meta.description": {
-    "message": "Bedienungs-, Konfigurations- und Reproduzierbarkeitshandbücher für AIPOCH Open-Science"
+    "message": "Dokumentation für AIPOCH Open-Science: Installation, Einrichtung von Arbeitsbereich und Modellen, Reproduzierbarkeit, Forschung-Workflows, Skills, Tools, CLI und API-Referenz."
+  },
+  "homepage.lead": {
+    "message": "AIPOCH Open-Science ist eine Open-Source-Forschungsumgebung mit KI und lokalem Vorrang. Sie führt Agenten-Workflows aus, führt Python und R aus, bindet wissenschaftliche Datenquellen an und schreibt jedes Ergebnis in einen prüfbaren Projektdatensatz zurück. Die Wahl des Modells bleibt bei den Forschenden: Open-Science arbeitet mit integrierten Anbietern, einem eigenen Gateway, einem lokalen Modells wie Ollama oder einem bestehenden Abonnement, und der Projektzustand bleibt auf dem Rechner, der ihn erzeugt hat. Jedes erzeugte Artefakt behält einen Herkunftsnachweis, sodass eine Tabelle oder Abbildung bis zur Sitzung, zum Code und zu den Dateien zurückverfolgt werden kann, die sie erzeugt haben. Diese Dokumentation behandelt die Installation unter macOS, Windows und Linux; die Einrichtung von Arbeitsbereich und Modellanbietern; Berechtigungen und Laufzeitumgebungen; Projekte, Unterhaltungen, Dateien und Artefakte; Forschung-Workflows auf Basis realer Datensätze; Werkzeuge, Fähigkeiten und Spezialisten; sowie Referenzmaterial zu Bedienelementen, Dateiformaten, CLI und APIs. Die Seiten werden mit der aktuellen Version gepflegt, damit die hier beschriebenen Schritte zur installierten Version passen."
   },
   "homepage.eyebrow": {
     "message": "Dokumentation"

@@ -18,6 +18,15 @@ const config = {
   // Same file aipoch.com serves at /favicon.ico — 16/32/48 PNG-in-ICO.
   favicon: 'img/aipoch-favicon.ico',
 
+  // Docusaurus emits og:title/description/image/url and twitter:card/image by
+  // default. These are the site-level tags it does not derive on its own.
+  // twitter:title/description are page-level and live in src/pages/index.js.
+  head: [
+    ['meta', {property: 'og:type', content: 'website'}],
+    ['meta', {property: 'og:site_name', content: 'Open-Science Wiki'}],
+    ['meta', {name: 'twitter:site', content: '@AIPOCH_AI'}],
+  ],
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
