@@ -21,10 +21,10 @@ const config = {
   // Docusaurus emits og:title/description/image/url and twitter:card/image by
   // default. These are the site-level tags it does not derive on its own.
   // twitter:title/description are page-level and live in src/pages/index.js.
-  head: [
-    ['meta', {property: 'og:type', content: 'website'}],
-    ['meta', {property: 'og:site_name', content: 'Open-Science Wiki'}],
-    ['meta', {name: 'twitter:site', content: '@AIPOCH_AI'}],
+  headTags: [
+    {tagName: 'meta', attributes: {property: 'og:type', content: 'website'}},
+    {tagName: 'meta', attributes: {property: 'og:site_name', content: 'Open-Science Wiki'}},
+    {tagName: 'meta', attributes: {name: 'twitter:site', content: '@AIPOCH_AI'}},
   ],
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
