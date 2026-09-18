@@ -1,5 +1,7 @@
 import Link from '@docusaurus/Link';
 import Translate, {translate} from '@docusaurus/Translate';
+import Head from '@docusaurus/Head';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import SectionIcon from '../components/DocumentationNavigation/SectionIcon';
@@ -14,6 +16,76 @@ function Arrow() {
 }
 
 export default function Home() {
+  const {i18n: {currentLocale}} = useDocusaurusContext();
+  const docsHomeUrl =
+    currentLocale === 'en'
+      ? 'https://aipoch.com/docs/'
+      : `https://aipoch.com/docs/${currentLocale}/`;
+  const pageTitle = translate({
+    id: 'homepage.meta.title',
+    message: 'AIPOCH Open-Science Documentation',
+  });
+  const pageDescription = translate({
+    id: 'homepage.meta.description',
+    message: "Documentation for AIPOCH Open-Science: installation, workspace and model setup, reproducibility, research workflows, skills, tools, CLI and API reference.",
+  });
+  const documentationSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': 'https://aipoch.com/#organization',
+        name: 'AIPOCH',
+        url: 'https://aipoch.com',
+        logo: 'https://statics.aipoch.com/public/f/image/og-bfe41bdd.webp',
+        sameAs: [
+          'https://github.com/aipoch',
+          'https://www.linkedin.com/company/pochai/',
+          'https://www.youtube.com/@AIPOCH_AI',
+          'https://x.com/aipoch_ai',
+        ],
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://aipoch.com/docs/#website',
+        url: 'https://aipoch.com/docs/',
+        name: 'Open-Science Wiki',
+        inLanguage: currentLocale,
+        publisher: {'@id': 'https://aipoch.com/#organization'},
+        about: {'@id': 'https://aipoch.com/#open-science'},
+      },
+      {
+        '@type': 'CollectionPage',
+        '@id': 'https://aipoch.com/docs/#webpage',
+        url: docsHomeUrl,
+        name: pageTitle,
+        description: pageDescription,
+        inLanguage: currentLocale,
+        isPartOf: {'@id': 'https://aipoch.com/docs/#website'},
+        about: {'@id': 'https://aipoch.com/#open-science'},
+        publisher: {'@id': 'https://aipoch.com/#organization'},
+        breadcrumb: {'@id': 'https://aipoch.com/docs/#breadcrumb'},
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://aipoch.com/docs/#breadcrumb',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'AIPOCH',
+            item: 'https://aipoch.com',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Documentation',
+            item: docsHomeUrl,
+          },
+        ],
+      },
+    ],
+  };
   const steps = [
     {
       title: translate({id: 'homepage.steps.install.title', message: 'Install Open-Science'}),
@@ -76,12 +148,15 @@ export default function Home() {
   ];
 
   return (
-    <Layout
-      title={translate({id: 'homepage.meta.title', message: 'Open-Science documentation'})}
-      description={translate({
-        id: 'homepage.meta.description',
-        message: 'Operating, configuration, and research reproducibility guides for AIPOCH Open-Science',
-      })}>
+    <Layout title={pageTitle} description={pageDescription}>
+      <Head>
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{__html: JSON.stringify(documentationSchema)}}
+        />
+      </Head>
       <main className={styles.home}>
         <header className={styles.hero}>
           <div>
@@ -89,10 +164,15 @@ export default function Home() {
               <span className={styles.marker} aria-hidden="true" />
               <Translate id="homepage.eyebrow">Documentation</Translate>
             </p>
-            <Heading as="h1" className={styles.title}>Open-Science</Heading>
+            <Heading as="h1" className={styles.title}>AIPOCH Open-Science Documentation</Heading>
             <p className={styles.description}>
               <Translate id="homepage.introduction">
                 Set up your workspace, work with research data, and check and share your results.
+              </Translate>
+            </p>
+            <p className={styles.description}>
+              <Translate id="homepage.lead">
+                AIPOCH Open-Science is an open-source, local-first AI research workbench. It runs agent workflows, executes Python and R, connects to scientific data sources, and writes every result back into an inspectable project record. Model choice stays with the researcher: Open-Science works with built-in providers, a custom gateway, a local model server such as Ollama, or an existing subscription, and project state stays on the machine that produced it. Every generated artifact keeps a provenance record, so a table or figure can be traced back to the session, the code, and the files that produced it. This documentation covers installation for macOS, Windows, and Linux; workspace and model-provider setup; permissions and runtimes; projects, conversations, files, and artifacts; research workflows built on real datasets; tools, skills, and specialists; and reference material for controls, file formats, the CLI, and APIs. Pages are kept in step with the current release, so the steps described here match the version you installed.
               </Translate>
             </p>
             <div className={styles.actions}>
