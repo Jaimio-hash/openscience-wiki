@@ -27,7 +27,7 @@ export default function Home() {
   });
   const pageDescription = translate({
     id: 'homepage.meta.description',
-    message: "Documentation for AIPOCH Open-Science: installation, workspace and model setup, reproducibility, research workflows, skills, tools, CLI and API reference.",
+    message: 'Documentation for AIPOCH Open-Science: installation, workspace and model setup, reproducibility, research workflows, skills, tools, CLI and API reference.',
   });
   const documentationSchema = {
     '@context': 'https://schema.org',
